@@ -1,22 +1,22 @@
 <!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content="."><title>School of Rock · De geschiedenis van popmuziek in mixtapes</title><link rel="icon" href="./assets/cassette.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="./assets/site.css"></head><body><header class="sitenav"><a class="brand" href="./index.html"><img src="./assets/cassette.png" alt=""><span>School of Rock</span></a><nav aria-label="Hoofdmenu"><a href="./index.html#mixtapes" aria-current="page">Mixtapes</a><a href="./kaart.html">Genrekaart</a><a href="./begrippen.html">Begrippen</a><a href="./pdf/school-of-rock-reader.pdf">Reader (pdf)</a></nav></header><main><style>
-  .hero { position: relative; overflow: hidden; background: var(--red); color: var(--white); padding: 72px 0 64px; }
-  .hero::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 14px; background: var(--yellow); }
-  .hero .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: end; }
+  .hero { position: relative; overflow: hidden; background: var(--ink); color: var(--white); min-height: min(78vh, 680px); display: flex; align-items: flex-end; padding: 120px 0 56px; }
+  .hero .mosaic { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(4, 1fr); grid-auto-flow: dense; }
+  .hero .mosaic i { background-size: cover; background-position: center; filter: grayscale(1) contrast(1.1); }
+  .hero .mosaic i:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+  .hero .mosaic i:nth-child(4) { grid-row: span 2; }
+  .hero .mosaic i:nth-child(8), .hero .mosaic i:nth-child(11), .hero .mosaic i:nth-child(13) { grid-column: span 2; }
+  .hero .wash { position: absolute; inset: 0; background-color: rgba(214,58,49,.78); }
+  .hero .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 60%; background: linear-gradient(to top, rgba(28,27,25,.62), rgba(28,27,25,0)); }
+  .hero .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 14px; background: var(--yellow); z-index: 1; }
+  .hero .top-kicker { position: absolute; top: 28px; left: max(36px, calc((100vw - 1180px) / 2 + 20px)); font: 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--yellow); margin: 0; z-index: 1; }
+  .hero .cassette { position: absolute; top: 18px; right: 22px; width: clamp(80px, 10vw, 128px); height: auto; z-index: 1; }
+  .hero .wrap { position: relative; z-index: 1; width: 100%; }
   .hero h1 { font: 700 clamp(56px, 11vw, 132px)/.9 var(--display); margin: 0; letter-spacing: -.01em; text-wrap: balance; }
   .hero .sub { font: 500 clamp(20px, 3vw, 28px)/1.2 var(--display); color: var(--yellow); margin: 18px 0 0; }
   .hero .by { font: 13px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; margin: 22px 0 0; color: #FFE9E7; }
   .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
   .hero .btn { color: var(--white); }
-  .tape { justify-self: end; width: min(100%, 420px); aspect-ratio: 1.6; background: var(--ink); border-radius: 18px; position: relative; box-shadow: 0 30px 60px rgba(0,0,0,.25); transform: rotate(-4deg); }
-  .tape .label { position: absolute; left: 7%; right: 7%; top: 9%; height: 46%; background: var(--yellow); border-radius: 6px; padding: 12px 16px; color: var(--ink); display: grid; align-content: start; gap: 4px; }
-  .tape .label b { font: 700 clamp(18px, 2.4vw, 26px)/1 var(--display); }
-  .tape .label span { font: 11px/1.3 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
-  .tape .reels { position: absolute; left: 22%; right: 22%; bottom: 14%; height: 22%; background: #3A3833; border-radius: 999px; display: flex; justify-content: space-between; align-items: center; padding: 0 6%; }
-  .tape .reels i { width: 22%; aspect-ratio: 1; border-radius: 50%; background: var(--white); border: 6px solid #1C1B19; box-shadow: 0 0 0 3px var(--white); animation: spin 4s linear infinite; background-image: repeating-conic-gradient(#1C1B19 0 20deg, #fff 20deg 60deg); }
-  .tape .base { position: absolute; left: 26%; right: 26%; bottom: 0; height: 9%; background: var(--red); clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%); }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  @media (max-width: 820px) { .hero .wrap { grid-template-columns: 1fr; } .tape { justify-self: start; width: 70%; } }
-
+  @media (max-width: 820px) { .hero .mosaic { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, 1fr); } .hero .mosaic i { grid-column: auto !important; grid-row: auto !important; } .hero .mosaic i:nth-child(1) { grid-column: span 2 !important; grid-row: span 2 !important; } .hero .mosaic i:nth-child(n+9) { display: none; } .hero { min-height: 0; padding-top: 110px; } .hero .top-kicker { left: 30px; max-width: 55%; } }
   .ways { padding: 64px 0 8px; }
   .ways .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
   .way { display: grid; gap: 10px; align-content: start; padding: 24px; background: var(--white); border-radius: 4px; text-decoration: none; border-top: 5px solid var(--ink); min-height: 220px; }
@@ -56,21 +56,18 @@
 </style>
 
 <section class="hero">
+  <div class="mosaic" aria-hidden="true"><i style="background-image:url('https://lh3.googleusercontent.com/j6IjZIFBQOra2tCNG2TXaBB2TIjAnNK5kmSaL0XD1s1g9h4ROm5CRdPX13AmtuMsBGLU00dEG-bRR-Z2U7psShDjVs1FGYk6lPgZB3E')"></i><i style="background-image:url('https://lh3.googleusercontent.com/h3FcBTnlgB9h26n08V9iJg7ZckN3PHbeMdIFF1teNFl1CuNzh4teSy8ypM8cJTwtVts2JejTlWuVNlbjWd7sqBtvp4r5FX7YHRHAtKE')"></i><i style="background-image:url('https://lh3.googleusercontent.com/XB8obBximmshGetiS4Yktt3yJ6lgYqpf6N85s1lAqOtAT5LYP3NuE7bIl5J1DHt_2pPST80LXWW1jY6AqCEzk81Dcz7Atja1P_wcWXg')"></i><i style="background-image:url('https://lh3.googleusercontent.com/0qapWZGoyPv_W5Ej3Eb1XJZoYYmKQenUJFTJOHltNeLzwV-0z88R34jw3v4yKVVlAVKw7Gp181m8nXFbv6Y0nyj8Ze_3Kj6RuVo35ss')"></i><i style="background-image:url('https://lh3.googleusercontent.com/49IG4Hshf03XIuz2cS2AgWBIDTSdQ33DL2PagFE3VrPhyay0zfNdzcwaBZSBNWTBPy5Gy5oFaP20iVbEMmYm9B6eWjJ_bgqvOmDv5K4')"></i><i style="background-image:url('https://lh3.googleusercontent.com/hGa1tTQj-8bDnkcEFOPpI3pc3IqPfc5qsFTWdJ0qU2dQmRVJ0Ud3OO2OH2HRezVu-pstqjE-XRixueWGCiAhTtiAK5PbycTmAyWx7w')"></i><i style="background-image:url('https://lh3.googleusercontent.com/_wo8OaLWH1ukPRdQ9QUR9vn1e0qIWRfZDr7o84iHsNuLJZdOnTCK_vs55KT1cjKgrD3DSfKCZvPbSGfxybDrSWwTabI1GcsHPxhyyes')"></i><i style="background-image:url('https://lh3.googleusercontent.com/1ODCxpzfGi1VysxwmWZJztormTTXaVn0izvGxV0u_YJqrlnbsCaYdbrrzR_wAhqdVGQH6h-kTz_G-ZQFzNBibEuQ7POgBAoF20Mny3s')"></i><i style="background-image:url('https://lh3.googleusercontent.com/j_5p2OovgbGEKyQ2Vz1XHw9JbrYJovWBmVaRY8dgVCPX8cU2gskZdqbZhyVzvIRwNO9G3vk0oDIucYOCVCydX_9KAfa3eP8lE9dyG78l')"></i><i style="background-image:url('https://lh3.googleusercontent.com/ESmbn_A_kZUd84ikQW1QnQUofVVgD6Q_XDh73E9NH4V-uFuYwgXWfHsdG1RG1UEECGCF_76A16TewugECA5YkZTRolZOHWHEthG1ytY')"></i><i style="background-image:url('https://lh3.googleusercontent.com/PZ4xHUYNhf-XpMJ8t2WOZ2lE6f_mZK2TNJWqBk2v6KjZOnzt_8nCBoadFPoGNi0MWFxDnFOze-FWGWEs7bzUlhzBdnaiktZ4vh0H0WI')"></i><i style="background-image:url('https://lh3.googleusercontent.com/OXR3Cbj2YeLgLHNq5Slr6_l5MGWPf04AasV2S4qT7ojPAkPaQ2sOMxPYTEgIsH_53JgwZRdHjrNW02vhYsW5_R2fJoYhIl6RN3w7AzA')"></i><i style="background-image:url('https://lh3.googleusercontent.com/tQm3AkTBCVqs2hiGZsDWSXdIXg2xJ_goRH3eoKIstgrMbJz7sa_-x_g7ivUWNiHlP7EhFnuSH_BKudacj6pzImZimsz60gK2jNn5D6qo')"></i></div>
+  <div class="wash"></div><div class="shade"></div><div class="bar"></div>
+  <p class="top-kicker">Popgeschiedenis · ArtEZ University of the Arts</p>
+  <img class="cassette" src="assets/cassette.png" alt="">
   <div class="wrap">
-    <div>
-      <h1>School of Rock</h1>
-      <p class="sub">De geschiedenis van popmuziek in mixtapes</p>
-      <p class="by">Jan-Wolter Smit · ArtEZ University of the Arts</p>
-      <div class="actions">
-        <a class="btn solid" href="kaart.html">Open de genrekaart</a>
-        <a class="btn" href="#mixtapes">Naar de mixtapes</a>
-        <a class="btn" href="pdf/school-of-rock-reader.pdf" download>Reader (pdf)</a>
-      </div>
-    </div>
-    <div class="tape" aria-hidden="true">
-      <div class="label"><b>School of Rock</b><span>Side A · Side B</span></div>
-      <div class="reels"><i></i><i></i></div>
-      <div class="base"></div>
+    <h1>School of Rock</h1>
+    <p class="sub">De geschiedenis van popmuziek in mixtapes</p>
+    <p class="by">Jan-Wolter Smit</p>
+    <div class="actions">
+      <a class="btn solid" href="kaart.html">Open de genrekaart</a>
+      <a class="btn" href="#mixtapes">Naar de mixtapes</a>
+      <a class="btn" href="pdf/school-of-rock-reader.pdf" download>Reader (pdf)</a>
     </div>
   </div>
 </section>

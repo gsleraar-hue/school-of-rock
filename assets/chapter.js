@@ -62,6 +62,7 @@
     if (btn.dataset.target === 'lu') {
       const full = document.querySelector('.deck-full');
       if (full) full.hidden = frame.hidden;
+      const help = document.querySelector('.deck-help'); if (help) help.hidden = frame.hidden;
       if (!frame.hidden) frame.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
   }));

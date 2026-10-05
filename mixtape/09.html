@@ -151,6 +151,9 @@
   .deck-embed iframe { border-radius: 8px; display: block; }
   .deck-embed.lu { position: relative; aspect-ratio: 16 / 10; max-height: 85vh; background: #000; border-radius: 8px; overflow: hidden; }
   .deck-embed.lu[hidden] { display: none; }
+  .deck-help { margin: -4px 0 0; font: 12px/1.4 "Space Mono", monospace; color: #9C978D; }
+  .deck-help a { color: #F2D500; }
+  .deck-help[hidden] { display: none; }
   .deck-embed.lu:fullscreen { aspect-ratio: auto; max-height: none; border-radius: 0; }
   .deck-embed.lu iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0; }
   .deck-genres { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -179,6 +182,7 @@
   <div class="deck-embed" data-name="sp" hidden></div>
   <div class="deck-row"><span class="lbl">Les</span><a class="btn solid deck-toggle" href="https://www.lessonup.com/nl/lesson/MremjepXwzTzhZEPx" data-embed="https://www.lessonup.com/app/teach-v2/searchembed/MremjepXwzTzhZEPx?lang=nl" data-target="lu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Start de les</a><button class="btn ghost deck-full" type="button" hidden>Volledig scherm</button><span class="lesson">Mixtape 9: Het instrument</span></div>
   <div class="deck-embed lu" data-name="lu" hidden></div>
+  <p class="deck-help" hidden>Laadt de les niet, of zie je een foutmelding? Sluit de les in andere tabbladen, of <a href="https://www.lessonup.com/app/teach-v2/searchembed/MremjepXwzTzhZEPx?lang=nl" target="_blank" rel="noopener">open hem in een nieuw tabblad</a>.</p>
   <div class="deck-row"><span class="lbl">Op de kaart</span><div class="deck-genres"></div></div>
 </div>
 
