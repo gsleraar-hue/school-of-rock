@@ -149,6 +149,16 @@
   .deck .btn.ghost { color: #fff; border-color: #55524C; }
   .deck-embed { margin: 0; }
   .deck-embed iframe { border-radius: 8px; display: block; }
+  .lu-modal { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 16px; background: rgba(18,17,16,.82); }
+  .lu-modal[hidden] { display: none; }
+  .lu-box { position: relative; width: min(1280px, 100%, calc((100vh - 110px) * 1.6)); display: grid; gap: 10px; }
+  .lu-bar { display: flex; align-items: center; gap: 10px; color: #fff; }
+  .lu-bar b { font: 600 18px/1.2 "Oswald", sans-serif; margin-right: auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lu-bar button { font: 12px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #fff; background: #2A2825; border: 1px solid #55524C; border-radius: 4px; padding: 9px 12px; cursor: pointer; }
+  .lu-bar .lu-close { background: #F2D500; color: #1C1B19; border-color: #F2D500; font-weight: 700; }
+  .lu-frame { position: relative; aspect-ratio: 16 / 10; background: #000; border-radius: 8px; overflow: hidden; }
+  .lu-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .lu-frame:fullscreen { border-radius: 0; }
   .deck-embed.lu { position: relative; aspect-ratio: 16 / 10; max-height: 85vh; background: #000; border-radius: 8px; overflow: hidden; }
   .deck-embed.lu[hidden] { display: none; }
   .deck-help { margin: -4px 0 0; font: 12px/1.4 "Space Mono", monospace; color: #9C978D; }
@@ -168,7 +178,15 @@
   .pager .next { text-align: right; }
   .pager small { font: 11px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #D63A31; }
   .pager b { font: 600 18px/1.15 "Oswald", sans-serif; }
-  @media print { .sitenav, .deck, .pager, .sitefoot { display: none !important; } }
+  .mt-step { position: fixed; top: 50%; z-index: 40; display: flex; align-items: center; gap: 10px; text-decoration: none; transform: translateY(-50%); }
+  .mt-step.prev { left: 14px; } .mt-step.next { right: 14px; flex-direction: row-reverse; }
+  .mt-step i { flex: none; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: #1C1B19; color: #F2D500; font: 700 22px/1 "Oswald", sans-serif; font-style: normal; box-shadow: 0 6px 18px rgba(0,0,0,.18); transition: transform .15s; }
+  .mt-step span { background: #1C1B19; color: #fff; border-radius: 4px; padding: 8px 10px; font: 600 14px/1.2 "Oswald", sans-serif; max-width: 220px; opacity: 0; pointer-events: none; transition: opacity .15s; }
+  .mt-step span small { display: block; font: 10px/1.2 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #F2D500; margin-bottom: 3px; }
+  .mt-step:hover i, .mt-step:focus-visible i { transform: scale(1.08); }
+  .mt-step:hover span, .mt-step:focus-visible span { opacity: 1; }
+  @media (max-width: 1100px) { .mt-step { top: auto; bottom: 14px; transform: none; } body:has(.sor-player:not([hidden])) .mt-step { bottom: 96px; } .mt-step span { display: none; } .mt-step i { width: 42px; height: 42px; } }
+  @media print { .sitenav, .deck, .pager, .sitefoot, .mt-step { display: none !important; } }
 </style></head><body class="chapter" data-mixtape="1"><header class="sitenav"><a class="brand" href="../index.html"><img src="../assets/cassette.png" alt=""><span>School of Rock</span></a><nav aria-label="Hoofdmenu"><a href="../index.html#mixtapes" aria-current="page">Mixtapes</a><a href="../kaart.html">Genrekaart</a><a href="../begrippen.html">Begrippen</a><a href="../pdf/school-of-rock-reader.pdf">Reader (pdf)</a></nav></header><div class="book">
 
 <header class="opener cover" style="background-image:url('https://lh3.googleusercontent.com/j6IjZIFBQOra2tCNG2TXaBB2TIjAnNK5kmSaL0XD1s1g9h4ROm5CRdPX13AmtuMsBGLU00dEG-bRR-Z2U7psShDjVs1FGYk6lPgZB3E')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
@@ -178,11 +196,9 @@
   <p class="sub">Van work songs en ragtime tot Rocket 88: de wortels van alles wat daarna komt (tot 1955).</p></div>
 </header>
 <div class="deck" aria-label="Bij dit hoofdstuk">
-  <div class="deck-row"><span class="lbl">Luisteren</span><a class="btn solid deck-toggle" data-target="sp" href="https://open.spotify.com/playlist/7N2uEAg6SMOE3nLWw7wFv3" data-embed="https://open.spotify.com/embed/playlist/=generator" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Spotify-playlist</a><a class="btn ghost" href="https://open.spotify.com/playlist/7N2uEAg6SMOE3nLWw7wFv3" target="_blank" rel="noopener">Open in Spotify</a><a class="btn ghost" href="../pdf/mixtape-01.pdf" download>Download pdf</a></div>
+  <div class="deck-row"><span class="lbl">Luisteren</span><a class="btn solid deck-toggle" data-target="sp" href="https://open.spotify.com/playlist/7N2uEAg6SMOE3nLWw7wFv3" data-embed="https://open.spotify.com/embed/playlist/7N2uEAg6SMOE3nLWw7wFv3?utm_source=generator" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Spotify-playlist</a><a class="btn ghost" href="https://open.spotify.com/playlist/7N2uEAg6SMOE3nLWw7wFv3" target="_blank" rel="noopener">Open in Spotify</a><a class="btn ghost" href="../pdf/mixtape-01.pdf" download>Download pdf</a></div>
   <div class="deck-embed" data-name="sp" hidden></div>
-  <div class="deck-row"><span class="lbl">Les</span><a class="btn solid deck-toggle" href="https://www.lessonup.com/nl/lesson/yvWQTcJZXwEd6dzJM" data-embed="https://www.lessonup.com/app/teach-v2/searchembed/yvWQTcJZXwEd6dzJM?lang=nl" data-target="lu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Start de les</a><button class="btn ghost deck-restart" type="button" hidden>Opnieuw</button><button class="btn ghost deck-full" type="button" hidden>Volledig scherm</button><span class="lesson">Mixtape 1: Het ontstaan van popmuziek</span></div>
-  <div class="deck-embed lu" data-name="lu" hidden></div>
-  <p class="deck-help" hidden>Stoppen? Gebruik de knop Sluit de les hierboven: de knop Sluiten in de LessonUp-speler werkt niet binnen deze site. Laadt de les niet? Sluit de les in andere tabbladen of klik op Opnieuw.</p>
+  <div class="deck-row"><span class="lbl">Les</span><a class="btn solid deck-toggle" href="https://www.lessonup.com/nl/lesson/yvWQTcJZXwEd6dzJM" data-embed="https://www.lessonup.com/app/teach-v2/searchembed/yvWQTcJZXwEd6dzJM?lang=nl" data-target="lu" data-title="Mixtape 1: Het ontstaan van popmuziek" aria-haspopup="dialog"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Start de les</a><span class="lesson">Mixtape 1: Het ontstaan van popmuziek</span></div>
   <div class="deck-row"><span class="lbl">Op de kaart</span><div class="deck-genres"></div></div>
 </div>
 
@@ -357,6 +373,6 @@
     <p>School of Rock · De geschiedenis van popmuziek · ArtEZ University of the Arts</p>
   </footer>
 </section>
-<nav class="pager" aria-label="Andere mixtapes"><span></span><a class="next" href="02.html"><small>Mixtape 2 →</small><b>Jeugdculturen 1950-1980</b></a></nav>
+<nav class="pager" aria-label="Andere mixtapes"><span></span><a class="next" href="02.html"><small>Mixtape 2 →</small><b>Jeugdculturen 1950-1980</b></a></nav><a class="mt-step next" href="02.html" rel="next" aria-label="Volgende: Mixtape 2, Jeugdculturen 1950-1980"><i aria-hidden="true">&rarr;</i><span><small>Mixtape 2</small>Jeugdculturen 1950-1980</span></a>
 
-</div><footer class="sitefoot"><div class="wrap"><p>School of Rock · De geschiedenis van popmuziek in mixtapes · Jan-Wolter Smit · ArtEZ University of the Arts</p><p><a href="../pdf/school-of-rock-reader.pdf">Download de reader (pdf)</a></p></div></footer><script src="../assets/player.js"></script><script src="../assets/chapter.js"></script><script>document.querySelectorAll('.qr[data-url]').forEach(function(el){if(typeof QRCode==='undefined'){return;}new QRCode(el,{text:el.dataset.url,width:256,height:256,colorDark:'#1C1B19',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.M});});</script></body></html>
+</div><footer class="sitefoot"><div class="wrap"><p>School of Rock · De geschiedenis van popmuziek in mixtapes · Jan-Wolter Smit · ArtEZ University of the Arts</p><p><a href="../pdf/school-of-rock-reader.pdf">Download de reader (pdf)</a></p></div></footer><script src="../assets/player.js"></script><script src="../assets/anchor-notes.js"></script><script src="../assets/chapter.js"></script><script>document.querySelectorAll('.qr[data-url]').forEach(function(el){if(typeof QRCode==='undefined'){return;}new QRCode(el,{text:el.dataset.url,width:256,height:256,colorDark:'#1C1B19',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.M});});</script></body></html>
