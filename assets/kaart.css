@@ -126,3 +126,5 @@ body.kaart .sitefoot { display: none; }
 .k-speed button { font: 600 13px/1 var(--mono); border: 0; background: none; color: #CFCAC0; padding: 7px 9px; border-radius: 3px; cursor: pointer; min-width: 36px; }
 .k-speed button[aria-pressed="true"] { background: var(--yellow); color: var(--ink); }.kp-track.nocover { grid-template-columns: 30px 1fr; }
 .kp-track:has(> button + div) { grid-template-columns: 30px 1fr; }
+.k-app { -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+.k-app input, .k-app select, .k-panel .kp-body { -webkit-user-select: text; user-select: text; }

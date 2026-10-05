@@ -149,8 +149,9 @@
   .deck .btn.ghost { color: #fff; border-color: #55524C; }
   .deck-embed { margin: 0; }
   .deck-embed iframe { border-radius: 8px; display: block; }
-  .deck-embed.lu { position: relative; aspect-ratio: 16 / 10; max-height: 80vh; background: #000; border-radius: 8px; overflow: hidden; }
+  .deck-embed.lu { position: relative; aspect-ratio: 16 / 10; max-height: 85vh; background: #000; border-radius: 8px; overflow: hidden; }
   .deck-embed.lu[hidden] { display: none; }
+  .deck-embed.lu:fullscreen { aspect-ratio: auto; max-height: none; border-radius: 0; }
   .deck-embed.lu iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0; }
   .deck-genres { display: flex; flex-wrap: wrap; gap: 6px; }
   .gchip { --c: #999; display: inline-flex; align-items: center; gap: 7px; text-decoration: none; font: 13px/1 "Inter", sans-serif; padding: 7px 10px; border-radius: 999px; background: #2A2825; color: #fff; }
@@ -176,7 +177,7 @@
 <div class="deck" aria-label="Bij dit hoofdstuk">
   <div class="deck-row"><span class="lbl">Luisteren</span><a class="btn solid deck-toggle" data-target="sp" href="https://open.spotify.com/playlist/6nbbhf5CoUiKs4WHz6v0th" data-embed="https://open.spotify.com/embed/playlist/=generator" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Spotify-playlist</a><a class="btn ghost" href="https://open.spotify.com/playlist/6nbbhf5CoUiKs4WHz6v0th" target="_blank" rel="noopener">Open in Spotify</a><a class="btn ghost" href="../pdf/mixtape-09.pdf" download>Download pdf</a></div>
   <div class="deck-embed" data-name="sp" hidden></div>
-  <div class="deck-row"><span class="lbl">Les</span><a class="btn solid deck-toggle" href="https://www.lessonup.com/nl/lesson/MremjepXwzTzhZEPx" data-embed="https://www.lessonup.com/nl/embed/MremjepXwzTzhZEPx" data-target="lu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Bekijk de les</a><a class="btn ghost" href="https://www.lessonup.com/nl/lesson/MremjepXwzTzhZEPx" target="_blank" rel="noopener">Open in LessonUp</a><span class="lesson">Mixtape 9: Het instrument</span></div>
+  <div class="deck-row"><span class="lbl">Les</span><a class="btn solid deck-toggle" href="https://www.lessonup.com/nl/lesson/MremjepXwzTzhZEPx" data-embed="https://www.lessonup.com/app/teach-v2/searchembed/MremjepXwzTzhZEPx?lang=nl" data-target="lu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Start de les</a><button class="btn ghost deck-full" type="button" hidden>Volledig scherm</button><span class="lesson">Mixtape 9: Het instrument</span></div>
   <div class="deck-embed lu" data-name="lu" hidden></div>
   <div class="deck-row"><span class="lbl">Op de kaart</span><div class="deck-genres"></div></div>
 </div>

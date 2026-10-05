@@ -59,6 +59,12 @@
     if (!frame.innerHTML) frame.innerHTML = `<iframe title="${k.title}" src="${btn.dataset.embed}" width="100%"${k.h ? ` height="${k.h}"` : ''} frameborder="0" allow="${k.allow}" allowfullscreen></iframe>`;
     frame.hidden = !frame.hidden;
     btn.setAttribute('aria-expanded', String(!frame.hidden));
-    if (!frame.hidden && btn.dataset.target === 'lu') frame.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (btn.dataset.target === 'lu') {
+      const full = document.querySelector('.deck-full');
+      if (full) full.hidden = frame.hidden;
+      if (!frame.hidden) frame.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   }));
+  const full = document.querySelector('.deck-full');
+  if (full) full.addEventListener('click', () => { const f = document.querySelector('.deck-embed.lu'); if (f && f.requestFullscreen) f.requestFullscreen(); });
 })();
