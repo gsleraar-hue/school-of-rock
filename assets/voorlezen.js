@@ -117,7 +117,7 @@
   function partsOf(el) {
     // Splits een alinea in stukken: cursieve Engelse titels krijgen een Engelse stem.
     const clone = el.cloneNode(true);
-    clone.querySelectorAll('aside, figure, .label, .letter, .kicker, img, .qr').forEach(n => n.remove());
+    clone.querySelectorAll('aside, figure, .label, .letter, .kicker, img, .qr, .tts-here').forEach(n => n.remove());
     const out = [];
     function push(text, en) { text = text.replace(/\s+/g, ' '); if (!text.trim()) return; const last = out[out.length - 1]; if (last && last.en === en) last.text += text; else out.push({ text, en }); }
     (function walk(n) {
@@ -183,7 +183,7 @@
   function speakItem() {
     const my = ++token;
     if (idx >= items.length) { stop(); return; }
-    const it = items[idx]; mark(it.el);
+    const it = items[idx]; mark(it.el); savePos(it.el);
     const chunks = sentences(it.parts);
     let c = 0;
     const rate = parseFloat($('.tts-rate').value) || 1;
@@ -207,17 +207,54 @@
     synth.cancel(); token++;
     items = collect();
     if (typeof from === 'number') idx = Math.max(0, Math.min(items.length - 1, from));
-    playing = true; bar.hidden = false; setPlayIcon(); speakItem();
+    playing = true; bar.hidden = false; document.body.classList.add('tts-on'); setPlayIcon(); speakItem();
   }
   function pause() { playing = false; token++; synth.cancel(); setPlayIcon(); }
-  function stop() { playing = false; token++; synth.cancel(); mark(null); bar.hidden = true; setPlayIcon(); }
+  function stop() { playing = false; token++; synth.cancel(); mark(null); bar.hidden = true; document.body.classList.remove('tts-on'); setPlayIcon(); startLabel(); }
+  // ---------- plek onthouden per hoofdstuk ----------
+  const posKey = 'pos-' + location.pathname.replace(/.*\//, '');
+  const anchors = () => [...book.querySelectorAll('.opener.cover, .flow > .opener.part, .flow > .head, .flow > p')];
+  function savePos(el) { const host = el.closest('.flow > p') || el; const i = anchors().indexOf(host); if (i > 0) store.set(posKey, String(i)); }
+  function savedIndex() {
+    const i = parseInt(store.get(posKey, '0'), 10); const el = anchors()[i]; if (!i || !el) return -1;
+    const list = collect(); return list.findIndex(it => it.el === el);
+  }
+  function startLabel() {
+    const i = savedIndex();
+    startBtn.lastChild.textContent = i > 0 ? 'Verder lezen' : 'Lees dit hoofdstuk voor';
+    fromStart.hidden = !(i > 0);
+  }
+  const fromStart = document.createElement('button');
+  fromStart.type = 'button'; fromStart.className = 'btn ghost tts-fromstart'; fromStart.textContent = 'Vanaf het begin';
+  startBtn.after(fromStart);
+  fromStart.addEventListener('click', () => { store.set(posKey, '0'); play(0); });
+
+  // ---------- afspeelknopje bij elke alinea en tussenkop ----------
+  anchors().forEach(el => {
+    if (el.matches('.opener')) return;
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'tts-here'; b.title = 'Lees vanaf hier voor'; b.setAttribute('aria-label', 'Lees vanaf hier voor');
+    b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>';
+    b.addEventListener('click', e => { e.stopPropagation(); const list = collect(); const i = list.findIndex(it => it.el === el); if (i >= 0) play(i); });
+    el.classList.add('tts-anchor'); el.insertBefore(b, el.firstChild);
+  });
+
   function firstVisible() {
     const list = collect();
-    const i = list.findIndex(it => it.el.getBoundingClientRect().bottom > 80);
+    const i = list.findIndex(it => it.el.getBoundingClientRect().bottom > 110);
     return i < 0 ? 0 : i;
   }
 
-  startBtn.addEventListener('click', () => { if (window.SOR && SOR.pause) try { SOR.pause(); } catch (e) {} play(firstVisible()); });
+  startBtn.addEventListener('click', () => { if (window.SOR && SOR.pause) try { SOR.pause(); } catch (e) {} const s = savedIndex(); play(s > 0 ? s : firstVisible()); });
+  startLabel();
+  // zwevende knop: voorlezen vanaf wat je nu ziet, zonder terug te scrollen
+  const fab = document.createElement('button');
+  fab.type = 'button'; fab.className = 'tts-fab';
+  fab.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg><span>Voorlezen vanaf hier</span>';
+  document.body.appendChild(fab);
+  fab.addEventListener('click', () => play(firstVisible()));
+  const deckObs = new IntersectionObserver(es => { fab.classList.toggle('show', !es[0].isIntersecting); });
+  deckObs.observe(deck);
   $('.tts-play').addEventListener('click', () => (playing ? pause() : play(idx)));
   $('.tts-prev').addEventListener('click', () => play(idx - 1));
   $('.tts-next').addEventListener('click', () => play(idx + 1));
@@ -226,7 +263,7 @@
   $('.tts-voice').addEventListener('change', e => { store.set('voice', e.target.value); nlVoice = voices.find(v => v.name === e.target.value) || nlVoice; if (playing) play(idx); });
   $('.tts-notes').addEventListener('change', e => { store.set('notes', e.target.checked ? '1' : '0'); if (playing) { const cur = items[idx] && items[idx].el; const list = collect(); const i = list.findIndex(it => it.el === cur); play(i < 0 ? idx : i); } });
   // Klik op een alinea terwijl er wordt voorgelezen: daar verder lezen.
-  book.addEventListener('dblclick', e => { if (bar.hidden) return; const p = e.target.closest('.flow > p, .flow > .head, aside.side-note'); if (!p) return; const list = collect(); const i = list.findIndex(it => it.el === p || it.el.contains(p)); if (i >= 0) play(i); });
+  book.addEventListener('click', e => { if (bar.hidden || e.target.closest('a, button, .rec, input, select, audio') || (window.getSelection && String(window.getSelection()).length)) return; const p = e.target.closest('.flow > p, .flow > .head, aside.side-note'); if (!p) return; const list = collect(); const i = list.findIndex(it => it.el === p || it.el.contains(p)); if (i >= 0) play(i); });
   document.addEventListener('keydown', e => { if (bar.hidden || e.target.closest('input, select, textarea')) return; if (e.key === ' ' && !e.target.closest('button')) { e.preventDefault(); playing ? pause() : play(idx); } });
   window.addEventListener('beforeunload', () => synth.cancel());
 })();

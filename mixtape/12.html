@@ -198,6 +198,17 @@
   .tts-bar .tts-vwrap[hidden] { display: none; }
   body:has(.sor-player:not([hidden])) .tts-bar { bottom: 96px; }
   .tts-hint { font: 12px/1.4 "Inter", sans-serif; color: #CFCAC0; }
+  .tts-fab { position: fixed; left: 50%; bottom: 16px; z-index: 55; transform: translate(-50%, 140%); display: inline-flex; align-items: center; gap: 8px; border: 2px solid #F2D500; background: #1C1B19; color: #fff; border-radius: 999px; padding: 10px 16px 10px 12px; font: 600 14px/1 "Oswald", sans-serif; letter-spacing: .03em; text-transform: uppercase; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.25); transition: transform .25s; }
+  .tts-fab svg { width: 16px; height: 16px; fill: #F2D500; }
+  .tts-fab.show { transform: translate(-50%, 0); }
+  body.tts-on .tts-fab { display: none; }
+  body:has(.sor-player:not([hidden])) .tts-fab { bottom: 96px; }
+  .tts-anchor { position: relative; }
+  .tts-here { position: absolute; left: -40px; top: .1em; width: 28px; height: 28px; border-radius: 50%; border: 0; background: #F2D500; color: #1C1B19; display: grid; place-items: center; cursor: pointer; opacity: 0; transition: opacity .15s; padding: 0; }
+  .tts-here svg { width: 14px; height: 14px; fill: currentColor; }
+  .tts-anchor:hover > .tts-here, .tts-here:focus-visible { opacity: 1; }
+  @media (hover: none), (max-width: 760px) { .tts-here { display: none; } }
+  @media print { .tts-here { display: none !important; } }
   .tts-now { background: rgba(242,213,0,.28); box-shadow: 0 0 0 6px rgba(242,213,0,.28); border-radius: 2px; transition: background .2s; }
   @media print { .tts-bar { display: none !important; } }
   @media print { .sitenav, .deck, .pager, .sitefoot, .mt-step { display: none !important; } }
