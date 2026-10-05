@@ -1006,7 +1006,8 @@
                                        "british-beat",
                                        "folk-rock",
                                        "elektronische-studio",
-                                       "raga-rock"
+                                       "raga-rock",
+                                       "surfrock"
                                    ],
                        "text":  "Rond 1966 en 1967 lieten bands zich inspireren door Indiase muziek, de klassieke avant-garde en lsd. Je hoort drones, modale klanken en studio-effecten; de Beatles gebruikten bandlussen en achterstevoren afgespeelde klanken. San Francisco, met de Summer of Love van 1967, en Londen waren de centra.",
                        "listen":  "Hoor in White Rabbit het marsritme dat steeds luider wordt, met een Spaanse, Frygische klank.",
@@ -1421,7 +1422,8 @@
                                  },
                        "parents":  [
                                        "rock-n-roll",
-                                       "art-rock"
+                                       "art-rock",
+                                       "garagerock"
                                    ],
                        "text":  "Punk was het antwoord op rock die groot, duur en ingewikkeld was geworden: korte, snelle, luide nummers met weinig akkoorden en het idee dat iedereen een band kan beginnen. The Ramones speelden in de New Yorkse club CBGB, in Londen waren er de Sex Pistols en The Clash. Bands brachten platen uit op kleine labels en fans maakten fanzines.",
                        "listen":  "Hoor in Anarchy in the UK de muur van gitaren die meerdere keren over elkaar zijn opgenomen.",
@@ -1560,7 +1562,7 @@
                        "parents":  [
                                        "postpunk"
                                    ],
-                       "text":  "Uit de postpunk groeide gothic rock: donker, galmend en traag. The Cure staat met A Forest op het album Seventeen Seconds (1980). De zwarte kleding en het donkere haar van zanger Robert Smith werden het uniform van een nieuwe jeugdcultuur, de gothics.",
+                       "text":  "Uit de postpunk groeide gothic rock: donker, galmend en traag. Bauhaus uit Northampton nam in 1979 Bela Lugosi\u0027s Dead op, negen minuten lang, genoemd naar de acteur die Dracula speelde. The Cure staat met A Forest op het album Seventeen Seconds (1980). De zwarte kleding en het donkere haar van zanger Robert Smith werden het uniform van een nieuwe jeugdcultuur, de gothics.",
                        "listen":  "Let in A Forest op de gitaar met chorus-effect en de bas die steeds hetzelfde motief herhaalt.",
                        "tracks":  [
                                       {
@@ -1569,6 +1571,13 @@
                                           "year":  1980,
                                           "audio":  "https://api.lessonup.com/v1/media/mz66YT6vAzfuuvPf2",
                                           "cover":  "https://lh3.googleusercontent.com/l2g0nJ6poFMR-VI0gWsfYXroWSploOSFxzQ8iRn8XgQsvJn6UtzaAnKCyRiZtFS6pALlQiG-HvqIm0rn1DfFHTqfgiBVZ90Re10df9dK"
+                                      },
+                                      {
+                                          "artist":  "Bauhaus",
+                                          "title":  "Bela Lugosi\u0027s Dead",
+                                          "year":  1979,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/95/83/46/95834682-fe4d-c75c-60c3-2527f306d1bd/mzaf_16282298977821139714.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/3a/a8/2e/3aa82e19-163a-416a-a745-34d9c665081c/1381.jpg/600x600bb.jpg"
                                       }
                                   ],
                        "mixtapes":  [
@@ -1859,7 +1868,8 @@
                        "parents":  [
                                        "punk",
                                        "hard-rock",
-                                       "alternative-rock"
+                                       "alternative-rock",
+                                       "hardcore-punk"
                                    ],
                        "text":  "Rond het kleine label Sub Pop in Seattle ontstond eind jaren tachtig een scène die punk en heavy metal mengde tot een rauw, zwaar geluid. In januari 1992 verdrong Nevermind van Nirvana Dangerous van Michael Jackson van de eerste plaats in de Amerikaanse albumlijst. Pearl Jam en Soundgarden kwamen ook uit Seattle.",
                        "listen":  "Let in Smells Like Teen Spirit op de stil-luid-dynamiek: zachte coupletten en luide refreinen op vier powerchords.",
@@ -1963,7 +1973,8 @@
                        "parents":  [
                                        "heavy-metal-80s",
                                        "golden-age-hiphop",
-                                       "grunge"
+                                       "grunge",
+                                       "industrial"
                                    ],
                        "text":  "Nu metal is metal gecombineerd met hiphop en elektronica. Korn uit Bakersfield bracht in 1994 het eerste album in deze stijl uit; rond 2000 werd nu metal populair. Linkin Park uit Los Angeles had twee zangers: Chester Bennington zong en schreeuwde, Mike Shinoda rapte. Dat rock zich met hiphop mengde, was een teken van wat ging komen.",
                        "listen":  "Hoor in Numb hoe zware gitaren samengaan met een elektronische beat en synthesizers.",
@@ -2957,7 +2968,8 @@
                                  },
                        "parents":  [
                                        "funk",
-                                       "soul"
+                                       "soul",
+                                       "philly-soul"
                                    ],
                        "text":  "Disco ontstond rond 1970 in New Yorkse clubs voor zwarte, latino en homoseksuele bezoekers, zoals The Loft en later de Paradise Garage, waar de dj platen naadloos liet overlopen. Het ritme is four-on-the-floor: een bassdrum op elke tel, rond 120 bpm, met strijkers en blazers erboven. Na de Disco Demolition Night in 1979 leefde disco voort als garage en house.",
                        "listen":  "Hoor in Le Freak de korte \u0027chucking\u0027-akkoorden van Nile Rodgers en de bas van Bernard Edwards die steeds beweegt.",
@@ -3349,7 +3361,8 @@
                                  },
                        "parents":  [
                                        "hiphop",
-                                       "electro"
+                                       "electro",
+                                       "southern-hiphop"
                                    ],
                        "text":  "In Atlanta groeide vanaf begin jaren 2000 trap, een hiphopstijl uit het zuiden van de Verenigde Staten, genoemd naar het trap house waar drugs werden verkocht. T.I., Young Jeezy en Gucci Mane waren de eerste namen. De basis zijn lange, glijdende 808-bassdrums en snelle hi-hat-roffels, en Auto-Tune werd een gewoon onderdeel van de stem. Old Town Road (2018) liet horen hoe trap zich met country kon mengen.",
                        "listen":  "Hoor in What You Know de diepe 808-bas en de hihats die in snelle roffels ratelen.",
@@ -3583,7 +3596,8 @@
                                  },
                        "parents":  [
                                        "kraftwerk",
-                                       "new-wave"
+                                       "new-wave",
+                                       "northern-soul"
                                    ],
                        "text":  "Synthpop is de meest poppy tak van de new wave: Kraftwerk was het voorbeeld voor Gary Numan, OMD en The Human League, en later voor de Pet Shop Boys. Vaak is het een duo van een zanger en iemand achter de synthesizers. Eurythmics nam Sweet Dreams grotendeels zelf op, in een zolderstudio in Noord-Londen, met een drumcomputer die ook de baslijn aanstuurde, en Bronski Beat zong openlijk over het leven als homo.",
                        "listen":  "Hoor in Tainted Love hoe een soulnummer uit 1964 een koude, elektronische versie krijgt.",
@@ -3996,7 +4010,8 @@
                                  },
                        "parents":  [
                                        "rave",
-                                       "detroit-techno"
+                                       "detroit-techno",
+                                       "trance"
                                    ],
                        "text":  "Rond 2000 werd trance een Nederlands exportproduct. Dj\u0027s als Tiësto, Armin van Buuren en Ferry Corsten draaiden over de hele wereld, en Tiësto draaide in 2004 bij de opening van de Olympische Spelen in Athene. ID\u0026T organiseerde Sensation in de Amsterdam ArenA.",
                        "listen":  "Let op de lange opbouw naar het moment waarop de beat weer invalt.",
@@ -4246,7 +4261,8 @@
                        "parents":  [
                                        "moog",
                                        "elektronische-studio",
-                                       "krautrock"
+                                       "krautrock",
+                                       "minimal-music"
                                    ],
                        "text":  "Jean-Michel Jarre, die bij Pierre Schaeffer had gewerkt, nam in 1976 in een thuisstudio in Parijs Oxygène op. Vangelis maakte vanuit Londen filmmuziek zoals Chariots of Fire, en Kitaro in Japan muziek zonder beat voor de serie Silk Road. Tangerine Dream en Klaus Schulze in Berlijn gingen hen voor, en Brian Eno gaf het genre in 1978 met Music for Airports de naam ambient.",
                        "listen":  "Hoor in Oxygène het goedkope Korg-ritmekastje onder eenvoudige melodieën die blijven hangen.",
@@ -5568,7 +5584,8 @@
                        "parents":  [
                                        "detroit-techno",
                                        "acid-house",
-                                       "ambient"
+                                       "ambient",
+                                       "minimal-music"
                                    ],
                        "text":  "IDM, intelligent dance music, is elektronische muziek om naar te luisteren in plaats van op te dansen. Het label Warp uit Sheffield bracht in 1992 de verzamelaar Artificial Intelligence uit, en Aphex Twin, Autechre en Boards of Canada maakten muziek met ingewikkelde ritmes, ongewone klanken en ambient-achtige melodieën.",
                        "listen":  "Hoor in Xtal de zachte akkoorden en een stem zonder woorden boven een eenvoudige beat.",
@@ -5601,7 +5618,8 @@
                                  },
                        "parents":  [
                                        "dub",
-                                       "jungle-dnb"
+                                       "jungle-dnb",
+                                       "uk-garage"
                                    ],
                        "text":  "Dubstep ontstond begin jaren 2000 in Zuid-Londen, rond Croydon, uit UK garage, jungle en dub: een tempo rond 140 bpm, een ritme met de snare op de derde tel, zodat het half zo snel lijkt, en een zware sub-bas. In Amerika maakte Skrillex rond 2010 dubstep hard en luid, met een vervormde wobble bass die zelf de melodie wordt.",
                        "listen":  "Hoor in Midnight Request Line de ruimte in het trage ritme en de diepe bas eronder.",
@@ -6540,6 +6558,529 @@
                                           "year":  2023,
                                           "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/71/0c/2a/710c2ae4-895d-5b4e-7d1b-f0edca56b826/mzaf_14740219819116157680.plus.aac.p.m4a",
                                           "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2a/cc/48/2acc48c7-e092-6b83-ce65-ff80ac6eb51c/196872520118.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "surfrock",
+                       "name":  "Surfrock",
+                       "family":  "rock",
+                       "year":  1961,
+                       "place":  {
+                                     "name":  "Zuid-Californië",
+                                     "lat":  33.65,
+                                     "lon":  "-117.95"
+                                 },
+                       "parents":  [
+                                       "rock-n-roll"
+                                   ],
+                       "text":  "Begin jaren zestig maakten jonge muzikanten in Zuid-Californië surfrock: instrumentale gitaarmuziek met veel galm, waarin snelle, herhaalde noten het geraas van de golven nabootsen. Dick Dale speelde in Misirlou (1962) een oude melodie uit het Midden-Oosten op die manier. The Beach Boys maakten er zangmuziek van, met meerstemmige harmonieën; Brian Wilson ontwikkelde daaruit later de studioplaten waarmee hij The Beatles uitdaagde.",
+                       "listen":  "Hoor in Misirlou de galmende gitaar en de snelle, herhaalde noten op één snaar.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Dick Dale \u0026 His Del-Tones",
+                                          "title":  "Misirlou",
+                                          "year":  1962,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6e/63/0a/6e630a91-01b5-940b-d636-4d55d47aee02/mzaf_6389313930870160.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/56/91/87/5691875a-253d-f00c-a4e1-6ce10450659f/888608917094.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  3,
+                                            "track":  "Track 01",
+                                            "heading":  "Sgt. Pepper\u0027s Lonely Hearts Club Band"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "garagerock",
+                       "name":  "Garagerock",
+                       "family":  "rock",
+                       "year":  1965,
+                       "place":  {
+                                     "name":  "Verenigde Staten",
+                                     "lat":  47.25,
+                                     "lon":  "-122.44"
+                                 },
+                       "parents":  [
+                                       "british-beat",
+                                       "surfrock",
+                                       "rhythm-and-blues"
+                                   ],
+                       "text":  "Na de British Invasion begonnen in heel Amerika tieners een band, oefenden in de garage en namen ruwe singles op met een paar akkoorden, een schreeuwende zanger en een goedkoop orgel. The Kingsmen hadden al in 1963 een hit met Louie Louie, The Sonics uit Tacoma speelden harder dan wie ook, en ? and the Mysterians scoorden met 96 Tears (1966). De verzamelaar Nuggets (1972) bracht deze platen opnieuw onder de aandacht, en de punk bouwde erop voort.",
+                       "listen":  "Hoor in Psycho de vervormde gitaar, de schreeuw van de zanger en de bonkende drums: punk, tien jaar te vroeg.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "The Sonics",
+                                          "title":  "Psycho",
+                                          "year":  1965,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/10/37/ba/1037ba17-20f2-a7aa-2282-d7adaf474b96/mzaf_5181323464467393211.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music/5b/b2/6d/mzi.tuzcoxch.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "hardcore-punk",
+                       "name":  "Hardcore punk",
+                       "family":  "rock",
+                       "year":  1980,
+                       "place":  {
+                                     "name":  "Los Angeles en Washington",
+                                     "lat":  38.9,
+                                     "lon":  "-77.03"
+                                 },
+                       "parents":  [
+                                       "punk"
+                                   ],
+                       "text":  "Rond 1980 maakten Amerikaanse bands de punk korter, sneller en harder: hardcore. Black Flag uit Los Angeles, Minor Threat en Bad Brains uit Washington speelden nummers van nog geen twee minuten in kleine zalen. Ze brachten hun platen zelf uit, op labels als SST en Dischord, en organiseerden hun eigen tournees: doe het zelf. Uit die scene kwamen later de grunge en de emo voort.",
+                       "listen":  "Hoor in Straight Edge het razende tempo, het korte nummer en de tekst die meer geroepen dan gezongen wordt.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Minor Threat",
+                                          "title":  "Straight Edge",
+                                          "year":  1981,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4d/ca/2b/4dca2b01-b52d-4994-97bf-9e431083b58f/mzaf_942625344205746627.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/76/c4/f8/76c4f8e0-86e7-c83c-071b-3c5dbe64d532/643859012024.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "poppunk",
+                       "name":  "Poppunk",
+                       "family":  "rock",
+                       "year":  1994,
+                       "place":  {
+                                     "name":  "Berkeley (Californië)",
+                                     "lat":  37.87,
+                                     "lon":  "-122.27"
+                                 },
+                       "parents":  [
+                                       "punk",
+                                       "powerpop",
+                                       "hardcore-punk"
+                                   ],
+                       "text":  "Poppunk combineert de snelheid en de gitaren van punk met popmelodieën en meezingbare refreinen. In 1994 braken Green Day uit Berkeley met Dookie en The Offspring met Smash door bij een groot publiek. Rond 2000 volgden Blink-182 en vele anderen, met video\u0027s vol humor op MTV.",
+                       "listen":  "Hoor in Basket Case de snelle powerchords onder een melodie die je na één keer kunt meezingen.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Green Day",
+                                          "title":  "Basket Case",
+                                          "year":  1994,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/6a/09/32/6a09328d-cafc-9db5-c340-2df4d3967fd0/mzaf_5105960406016408206.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Features/1e/17/05/dj.rpihtiig.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  4,
+                                            "track":  "Track 01",
+                                            "heading":  "De jaren 90: grunge en de rest"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "indie-shoegaze",
+                       "name":  "Indiepop en shoegaze",
+                       "family":  "rock",
+                       "year":  1986,
+                       "place":  {
+                                     "name":  "Londen",
+                                     "lat":  51.55,
+                                     "lon":  "-0.06"
+                                 },
+                       "parents":  [
+                                       "postpunk",
+                                       "alternative-rock",
+                                       "psychedelic-rock"
+                                   ],
+                       "text":  "Vanaf eind jaren zeventig brachten kleine Britse labels als Rough Trade en Creation gitaarmuziek uit buiten de grote platenmaatschappijen: indie, van independent. In 1986 bundelde het muziekblad NME een cassette met jonge bands, C86, die de naam gaf aan de lieflijke indiepop. Rond 1990 ontstond shoegaze: bands als My Bloody Valentine en Slowdive bouwden muren van vervormde, zwevende gitaren, en keken op het podium vooral naar hun effectpedalen, naar hun schoenen.",
+                       "listen":  "Hoor in Only Shallow hoe de gitaren tot één golvende klankwolk worden, met de zang er half in verborgen.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "My Bloody Valentine",
+                                          "title":  "Only Shallow",
+                                          "year":  1991,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2f/d4/ea/2fd4ea6b-2078-3738-28ed-d2580e2beb48/mzaf_13066659795984277716.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4c/e1/51/4ce15131-7ac5-daf5-bf62-0202f27d691d/887830015998.png/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "emo",
+                       "name":  "Emo",
+                       "family":  "rock",
+                       "year":  1985,
+                       "place":  {
+                                     "name":  "Washington",
+                                     "lat":  38.92,
+                                     "lon":  "-77.0"
+                                 },
+                       "parents":  [
+                                       "hardcore-punk"
+                                   ],
+                       "text":  "Emo begon halverwege de jaren tachtig in Washington, toen bands als Rites of Spring hardcore speelden met persoonlijke, emotionele teksten: emotional hardcore. In de jaren negentig werd de stijl melodieuzer. Rond 2000 werd emo groot, met Jimmy Eat World, Dashboard Confessional en My Chemical Romance, en met een eigen jeugdcultuur van zwart haar, smalle broeken en eyeliner.",
+                       "listen":  "Hoor in The Middle de heldere gitaren en de zang die geruststelt: het komt goed.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Jimmy Eat World",
+                                          "title":  "The Middle",
+                                          "year":  2001,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e8/5f/f4/e85ff4ea-5d1d-7a6e-02c8-273aef1ca5c6/mzaf_12404103951306051212.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/8c/28/1b/8c281bbb-daad-c473-6adb-1b4ca33a5a44/00602577027420.rgb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "philly-soul",
+                       "name":  "Philly soul",
+                       "family":  "soul",
+                       "year":  1968,
+                       "place":  {
+                                     "name":  "Philadelphia",
+                                     "lat":  39.95,
+                                     "lon":  "-75.16"
+                                 },
+                       "parents":  [
+                                       "soul",
+                                       "motown"
+                                   ],
+                       "text":  "In Philadelphia maakten songwriters en producers Kenneth Gamble en Leon Huff vanaf eind jaren zestig hun eigen soul, en in 1971 richtten ze Philadelphia International Records op. In de Sigma Sound Studio nam de huisband MFSB weelderige soul op, met strijkers, blazers en een strakke, dansbare groove. The O\u0027Jays scoorden met Love Train (1972), en TSOP (1974) van MFSB werd de tune van het tv-programma Soul Train. Het Philly-geluid werd een van de bouwstenen van de disco.",
+                       "listen":  "Hoor in Love Train de strijkers en de blazers boven een groove die blijft doorlopen.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "The O\u0027Jays",
+                                          "title":  "Love Train",
+                                          "year":  1972,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/69/34/e969342e-8a6c-2b40-532c-b9a8ee5f621f/mzaf_15281004096488613753.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music/14/ed/ce/mzi.llnkxrtu.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "northern-soul",
+                       "name":  "Northern soul",
+                       "family":  "soul",
+                       "year":  1970,
+                       "place":  {
+                                     "name":  "Wigan",
+                                     "lat":  53.55,
+                                     "lon":  "-2.63"
+                                 },
+                       "parents":  [
+                                       "soul",
+                                       "motown"
+                                   ],
+                       "text":  "In clubs in het noorden van Engeland, zoals de Twisted Wheel in Manchester en het Wigan Casino (1973-1981), dansten jongeren hele nachten op snelle Amerikaanse soul uit de jaren zestig, vaak obscure singles die in Amerika weinig verkochten. Dj\u0027s zochten fanatiek naar zeldzame platen. Journalist Dave Godin bedacht in 1970 de naam northern soul. Tainted Love van Gloria Jones (1964) was zo\u0027n plaat; Soft Cell maakte er later een synthpophit van.",
+                       "listen":  "Hoor in Tainted Love het snelle tempo en de handklappen waarop in de clubs werd gedanst.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Gloria Jones",
+                                          "title":  "Tainted Love",
+                                          "year":  1964,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/2e/34/54/2e3454f0-b739-5176-a037-b0fe28d3c863/mzaf_5938440137370608590.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/e7/79/d2/e779d227-fcd1-ee87-4501-1880f225e87f/842474150429.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "berlin-techno",
+                       "name":  "Berlijnse techno",
+                       "family":  "electronic",
+                       "year":  1991,
+                       "place":  {
+                                     "name":  "Berlijn",
+                                     "lat":  52.51,
+                                     "lon":  13.39
+                                 },
+                       "parents":  [
+                                       "detroit-techno",
+                                       "acid-house"
+                                   ],
+                       "text":  "Na de val van de Muur in 1989 stonden in Oost-Berlijn veel gebouwen leeg. Daar ontstonden clubs als Tresor (1991), in de kluis van een voormalig warenhuis, waar techno uit Detroit en Berlijn samenkwam. De Love Parade groeide in de jaren negentig uit tot een straatfeest met honderdduizenden bezoekers, en Berghain (2004) werd een van de bekendste clubs ter wereld. Berlijnse techno is vaak kaal, donker en hypnotisch, met lange opbouwen.",
+                       "listen":  "Hoor in Sky and Sand de lange, langzame opbouw boven een strakke beat, het geluid van een Berlijnse nacht.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Paul Kalkbrenner",
+                                          "title":  "Sky and Sand",
+                                          "year":  2008,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f4/04/24/f404248d-4d70-ee3a-0f90-640d0a3bc4b8/mzaf_3853582188293817245.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music/26/b6/6a/mzi.gslxogsb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "trance",
+                       "name":  "Trance",
+                       "family":  "electronic",
+                       "year":  1990,
+                       "place":  {
+                                     "name":  "Frankfurt en Berlijn",
+                                     "lat":  50.11,
+                                     "lon":  8.68
+                                 },
+                       "parents":  [
+                                       "rave",
+                                       "acid-house",
+                                       "detroit-techno"
+                                   ],
+                       "text":  "Trance ontstond rond 1990 in Duitsland, vooral in Frankfurt en Berlijn: elektronische dansmuziek met lange opbouwen, zwevende synthesizerakkoorden en melodieën die steeds terugkomen. The Age of Love (1990) geldt als een van de eerste tracks. Dj\u0027s als Sven Väth en Paul van Dyk maakten het genre groot, en eind jaren negentig werd trance in Nederland een exportproduct.",
+                       "listen":  "Hoor in For an Angel de arpeggio\u0027s die steeds verder opbouwen naar het moment waarop de melodie volledig inzet.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Paul van Dyk",
+                                          "title":  "For an Angel",
+                                          "year":  1994,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/62/3f/09/623f0976-1ab2-5ed1-e3d3-2962e64aacd0/mzaf_878090914364933440.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/c3/b1/74/c3b1749a-7fd1-5c7a-d806-b83bdcd26b9c/cover.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  8,
+                                            "track":  "Track 02",
+                                            "heading":  "Nederland danst"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "uk-garage",
+                       "name":  "UK garage",
+                       "family":  "electronic",
+                       "year":  1997,
+                       "place":  {
+                                     "name":  "Londen",
+                                     "lat":  51.49,
+                                     "lon":  "-0.09"
+                                 },
+                       "parents":  [
+                                       "garage-house",
+                                       "jungle-dnb"
+                                   ],
+                       "text":  "Eind jaren negentig maakten Londense dj\u0027s en producers van Amerikaanse garage en house een eigen, snellere stijl met invloeden uit jungle: UK garage, en later 2-step, met een verspringend ritme waarin de bassdrum niet op elke tel valt. Piratenradio en clubs speelden het, en Craig David scoorde met Artful Dodger met Re-Rewind (1999). Uit UK garage groeiden grime en dubstep.",
+                       "listen":  "Hoor in Re-Rewind het huppelende 2-step-ritme, de diepe bas en de soepele zang van Craig David.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Artful Dodger feat. Craig David",
+                                          "title":  "Re-Rewind the Crowd Say Bo Selecta",
+                                          "year":  1999,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cc/8d/62/cc8d6231-35f2-e067-3cff-9a5921c8835b/mzaf_17631990761429396539.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/35/26/42/35264262-8e47-effe-0634-a8cd4c34e451/cover.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "southern-hiphop",
+                       "name":  "Southern hiphop en crunk",
+                       "family":  "hiphop",
+                       "year":  1990,
+                       "place":  {
+                                     "name":  "Atlanta, Houston en Memphis",
+                                     "lat":  33.72,
+                                     "lon":  "-84.38"
+                                 },
+                       "parents":  [
+                                       "gangsta-rap",
+                                       "electro"
+                                   ],
+                       "text":  "Vanaf eind jaren tachtig kreeg ook het zuiden van de Verenigde Staten een eigen hiphop: Geto Boys in Houston, Three 6 Mafia in Memphis en OutKast in Atlanta, dat in 1994 debuteerde. DJ Screw in Houston vertraagde platen tot een stroperig geluid, chopped and screwed. Rond 2000 maakte Lil Jon van crunk feestmuziek met geschreeuwde refreinen en zware 808-bassen. Uit deze zuidelijke hiphop groeide de trap.",
+                       "listen":  "Hoor in Get Low de kale beat met de zware 808, de geschreeuwde regels en de oproep aan het publiek.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Lil Jon \u0026 The East Side Boyz",
+                                          "title":  "Get Low",
+                                          "year":  2003,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/56/e8/c656e85a-8158-2542-e047-72a5cd90ea12/mzaf_13058955461615605342.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/29/a4/4d/29a44d02-ce1b-601d-095f-aa9ea083f1d9/mzi.jjkpiqil.tif/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  6,
+                                            "track":  "Track 03",
+                                            "heading":  "Moderne R\u0026B"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "grime",
+                       "name":  "Grime",
+                       "family":  "hiphop",
+                       "year":  2003,
+                       "place":  {
+                                     "name":  "Oost-Londen",
+                                     "lat":  51.53,
+                                     "lon":  "-0.02"
+                                 },
+                       "parents":  [
+                                       "uk-garage",
+                                       "dancehall",
+                                       "jungle-dnb"
+                                   ],
+                       "text":  "Begin jaren 2000 ontstond in Oost-Londen grime: rap in een Londens accent over snelle, kale, elektronische beats rond 140 bpm, met invloeden uit UK garage, jungle en dancehall. MC\u0027s namen het tegen elkaar op via piratenradio. Dizzee Rascal won in 2003 met zijn debuut Boy in da Corner de Mercury Prize, en later werden Skepta en Stormzy grote sterren.",
+                       "listen":  "Hoor in I Luv U de koude, schurende synthesizers en de snelle, nerveuze flow van Dizzee Rascal.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Dizzee Rascal",
+                                          "title":  "I Luv U",
+                                          "year":  2003,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/1e/8c/8a/1e8c8adb-6f85-691b-edd3-24396c7abfd5/mzaf_10222008768737333170.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0e/22/ca/0e22ca6c-c603-e0e4-1e08-fd79b732ce2e/634904116521.png/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "drill",
+                       "name":  "Drill",
+                       "family":  "hiphop",
+                       "year":  2012,
+                       "place":  {
+                                     "name":  "Chicago en Londen",
+                                     "lat":  41.86,
+                                     "lon":  "-87.66"
+                                 },
+                       "parents":  [
+                                       "trap",
+                                       "grime"
+                                   ],
+                       "text":  "Drill ontstond rond 2011 in Chicago: harde, duistere rap over het geweld in de wijk, met Chief Keef als bekendste naam. In Londen maakten jongeren er vanaf ongeveer 2014 een eigen variant van, UK drill, met glijdende 808-baslijnen, een verspringend ritme en teksten die vaak tot discussie leidden. Daarna verspreidde drill zich over de wereld, ook naar Nederland.",
+                       "listen":  "Hoor in Love Sosa de dreigende synthesizers, de zware 808 en de herhaalde, bijna gescandeerde regels.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Chief Keef",
+                                          "title":  "Love Sosa",
+                                          "year":  2012,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3d/c5/08/3dc50869-d6bd-ef4c-1e77-08a1c8783544/mzaf_2659196068499875111.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/0a/4c/c2/0a4cc286-d3fa-9782-ec88-6f36be8e6750/12UMGIM59937.rgb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "minimal-music",
+                       "name":  "Minimal music",
+                       "family":  "avantgarde",
+                       "year":  1964,
+                       "place":  {
+                                     "name":  "New York en San Francisco",
+                                     "lat":  40.72,
+                                     "lon":  "-74.01"
+                                 },
+                       "parents":  [
+                                       "elektronische-studio",
+                                       "europese-kunstmuziek",
+                                       "indiase-klassiek"
+                                   ],
+                       "text":  "In de jaren zestig maakten Amerikaanse componisten muziek uit korte patronen die eindeloos herhaald worden en langzaam veranderen. Terry Riley schreef In C (1964), Steve Reich liet in It\u0027s Gonna Rain (1965) twee tapelussen langzaam uit de pas lopen, en Philip Glass werkte met herhaalde arpeggio\u0027s; hij en Riley lieten zich inspireren door Indiase muziek. Minimal music werd een bron voor ambient, techno en elektronische muziek, en voor bands als The Velvet Underground.",
+                       "listen":  "Hoor in Music for 18 Musicians hoe korte patronen steeds herhaald worden en stap voor stap veranderen.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Steve Reich",
+                                          "title":  "Music for 18 Musicians",
+                                          "year":  1978,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/13/91/a7/1391a757-6169-c1bc-004b-632d1343d601/mzaf_10681049488023628079.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3f/f3/1f/3ff31f10-a505-440f-4639-1d5640b529e5/00042282141729.rgb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "industrial",
+                       "name":  "Industrial",
+                       "family":  "avantgarde",
+                       "year":  1977,
+                       "place":  {
+                                     "name":  "Londen, Sheffield en Berlijn",
+                                     "lat":  51.54,
+                                     "lon":  "-0.06"
+                                 },
+                       "parents":  [
+                                       "elektronische-studio",
+                                       "punk",
+                                       "krautrock"
+                                   ],
+                       "text":  "Eind jaren zeventig maakte Throbbing Gristle uit Londen muziek van lawaai, tapelussen en elektronica, uitgebracht op hun eigen label Industrial Records: industrial. Cabaret Voltaire uit Sheffield werkte op dezelfde manier. Einstürzende Neubauten uit Berlijn sloegen vanaf 1980 op metalen platen en gebruikten boormachines als instrument. Eind jaren tachtig bracht Nine Inch Nails, met Pretty Hate Machine (1989) en The Downward Spiral (1994), industrial naar de rock en de hitlijsten.",
+                       "listen":  "Hoor in Head Like a Hole hoe harde, machinale elektronica samengaat met rockgitaren en een geschreeuwd refrein.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Nine Inch Nails",
+                                          "title":  "Head Like a Hole",
+                                          "year":  1989,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b9/37/f8/b937f852-50fa-cd86-cd70-8a28203a122e/mzaf_18139407304487563617.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ca/12/6a/ca126ae1-0019-7c93-c5d4-6fbd49230e6b/14CMGIM00979.rgb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  7,
+                                            "track":  "Track 01",
+                                            "heading":  "Rock"
+                                        },
+                                        {
+                                            "n":  13,
+                                            "track":  "Track 02",
+                                            "heading":  "TikTok en het einde van genres"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "hyperpop",
+                       "name":  "Hyperpop",
+                       "family":  "pop",
+                       "year":  2019,
+                       "place":  {
+                                     "name":  "Londen en internet",
+                                     "lat":  51.52,
+                                     "lon":  "-0.12"
+                                 },
+                       "parents":  [
+                                       "tiktok-pop",
+                                       "edm",
+                                       "synthpop"
+                                   ],
+                       "text":  "Hyperpop overdrijft alles aan pop: hoge, vervormde stemmen met Auto-Tune, felle synthesizers, harde bassen en plotselinge wendingen. De wortels liggen bij het Londense label PC Music van A. G. Cook en bij producer SOPHIE, vanaf 2013. De naam kwam in 2019 in gebruik via een Spotify-playlist, met 100 gecs als bekende act, en Charli XCX bracht de stijl in 2024 met Brat naar het grote publiek.",
+                       "listen":  "Hoor in Immaterial de metaalachtige synthesizers, de hoge stemmen en de vrolijke overdrijving.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "SOPHIE",
+                                          "title":  "Immaterial",
+                                          "year":  2018,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9a/27/3d/9a273d86-5a71-308f-5608-4b2de6ea2280/mzaf_16123125323331436510.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/b5/d3/b7/b5d3b7c4-2be0-d0a8-5695-ba3af5ea3351/cover.jpg/600x600bb.jpg"
                                       }
                                   ],
                        "mixtapes":  [
