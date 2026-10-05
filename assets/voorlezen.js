@@ -56,6 +56,62 @@
   // ---------- tekst verzamelen ----------
   const EN = /\b(the|of|and|you|your|my|me|love|i|in|on|is|it|to|a|be|all|girl|baby|man|night|life|time|blues|rock|song|for|with|we|this|that|don't|can't|it's|what|like|stop|go|got|get|heart|dance|world|day|way|no|yes)\b/gi;
   const NL = /\b(de|het|een|van|en|ik|je|jij|mijn|niet|maar|voor|met|zijn|wat|die|dat|naar|ook|nog|uit|als|om|op|we|wij|ze|zij|over|bij|aan|al|is|er)\b/gi;
+  // Engelse namen en termen: artiesten en titels uit de gegevens van de site, plus vaste begrippen.
+  let nameRe = null;
+  const TERMS = ["rock-'n-roll", 'rhythm-and-blues', 'rhythm and blues', 'call and response', 'big band', 'cool jazz', 'hard bop', 'free jazz', 'new wave', 'heavy metal', 'hard rock', 'glam rock', 'soft rock', 'drum-and-bass', 'acid house', 'hip-hop', 'girl group', 'boy band', 'singer-songwriter', 'Tin Pan Alley', 'Brill Building', 'British Invasion', 'Summer of Love', 'Wall of Sound', 'Grand Ole Opry', 'field holler', 'field hollers', 'work song', 'work songs', 'spirituals', 'gospel', 'Billboard Hot 100', 'Top 40'];
+  const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  function buildNames(list) {
+    const seen = new Set();
+    const clean = list.map(s => (s || '').replace(/\s*\((?:met|feat\.?|with)[^)]*\)/gi, '').replace(/\s+/g, ' ').trim())
+      .filter(s => s.length >= 4 && !seen.has(s.toLowerCase()) && seen.add(s.toLowerCase()));
+    clean.sort((a, b) => b.length - a.length);
+    nameRe = clean.length ? new RegExp('(?<![\\p{L}\\d])(' + clean.map(esc).join('|') + ')(?![\\p{L}\\d])', 'giu') : null;
+  }
+  (function loadNames() {
+    const root = (document.querySelector('meta[name=sor-root]') || {}).content || '..';
+    const dutch = /^(De |Het |Doe Maar|Normaal|Osdorp|Extince|Typhoon|Froukje|Klein Orkest|Frank Boeijen|Boudewijn|Acda|BLØF|Golden Earring|Shocking Blue|Cuby|Tielman|Anneke|André Hazes|Johnny Jordaan|Heideroosjes|The Scene|Het Goede Doel|Q65|De Dijk|Wim Sonneveld|Toon Hermans|Jules de Corte|Herman van Veen|Ramses Shaffy|Doe|Armin|Tiësto|Ferry Corsten|Within Temptation|Epica|Rotterdam Termination|Charly Lownoise)/i;
+    Promise.all([fetch(root + '/data/genres.json').then(r => r.json()).catch(() => null), fetch(root + '/data/tracks.json').then(r => r.json()).catch(() => [])]).then(([g, t]) => {
+      const out = TERMS.slice();
+      const nlPlace = /Nederland|Amsterdam|Rotterdam|Den Haag|Achterhoek|Oosterhout|Grolloo|Jordaan/i;
+      if (g) g.genres.forEach(x => { (x.tracks || []).forEach(tr => { if (!nlPlace.test(x.place.name)) { out.push(tr.artist); out.push(tr.title); } }); });
+      (t || []).forEach(tr => { if (tr.mixtape !== 11) { out.push(tr.artist); out.push(tr.title); } });
+      book.querySelectorAll('aside.side-note .who').forEach(w => out.push(w.textContent));
+      buildNames(out.filter(s => s && !dutch.test(s)));
+    });
+  })();
+  window.SOR_TTS_TEST = t => { const v = enVoice; enVoice = enVoice || { lang: 'en' }; const r = splitNames(t); enVoice = v; return r; };
+  // Reeksen van twee of meer woorden met een hoofdletter (Jimi Hendrix, Led Zeppelin) zijn bijna altijd Engelse namen.
+  const NL_CAPS = /^(Verenigde|Staten|Tweede|Eerste|Wereldoorlog|Koude|Oorlog|Noord|Zuid|Oost|West|Den|Haag|Nederland|Nederlandse|Nederlanders|Engeland|Engelse|Amerika|Amerikaanse|Europa|Europese|Duitsland|Duitse|Frankrijk|Franse|Londen|Parijs|Brussel|Sint|Mixtape|Kant|Amerikaan|Amerikanen|Brit|Britten|Brits|Britse|Engelsman|Ier|Ierse|Schot|Schotse|Indische|Indonesië|Suriname|Antillen|Caribisch|Afrika|Afrikaanse|Azië|Latijns|Midden|Oosten|Grote|Kleine|Nieuwe|Oude|In|Op|De|Het|Een|Van|Na|Toen|Daarna|Ook|Met|Bij|Voor|Uit|Over|Zo|Dat|Die|Deze|Dit|Er|Hij|Zij|Ze|Je|Ik|We|Wie|Wat|Waar|Hoe|Maar|En|Of|Als|Om|Aan|Door|Tot|Naar|Hun|Zijn|Haar|Alle|Veel|Elke|Geen|Pas|Toch|Nu|Hier|Daar|Later|Eerst|Tijdens|Sinds|Vanaf|Rond|Begin|Eind|Halverwege|Volgens|Omdat|Terwijl|Want|Dus|Wel|Niet|Nog|Al|Zanger|Zangeres|Gitarist|Bassist|Drummer|Toetsenist|Producer|Producers|Componist|Saxofonist|Trompettist|Pianist|Album|Albums|Plaat|Platen|B-kant|A-kant|Groep|Hitlijst|Volgens|Fotograaf|Regisseur|Schrijver|Journalist|Dj|Dj's|Rapper|Rappers|Zo|Daarom)$/;
+  const CAPS = /(?<![\p{L}\d])(?:The |De La )?\p{Lu}[\p{L}'’.-]+(?:\s+(?:&\s+|and\s+|of\s+|the\s+|’n\s+|'n\s+)?\p{Lu}[\p{L}'’.-]+)+/gu;
+  const capsOn = document.body.dataset.mixtape !== '11';
+  function splitCaps(text) {
+    if (!capsOn) return [{ text, en: false }];
+    const res = []; let last = 0; CAPS.lastIndex = 0; let m;
+    while ((m = CAPS.exec(text))) {
+      // niet over een zinseinde heen, en Nederlandse woorden aan de randen eraf
+      let s = m.index, str = m[0];
+      const cut = str.search(/[.!?]\s/); if (cut >= 0) { str = str.slice(0, cut + 1); CAPS.lastIndex = s + cut + 1; }
+      let ws = str.split(/(\s+)/);
+      const isNl = w => NL_CAPS.test(w.replace(/[.,'’]+$/, ''));
+      while (ws.length && (isNl(ws[0]) || !ws[0].trim())) { s += ws[0].length; ws.shift(); }
+      while (ws.length && (isNl(ws[ws.length - 1]) || !ws[ws.length - 1].trim())) ws.pop();
+      str = ws.join('').replace(/[.]$/, (x) => /\p{Lu}\.$/u.test(ws.join('')) ? x : '');
+      const caps = str.split(/\s+/).filter(w => /^\p{Lu}/u.test(w));
+      if (caps.length < 2 || caps.some(isNl)) continue;
+      if (s > last) res.push({ text: text.slice(last, s), en: false });
+      res.push({ text: str, en: true }); last = s + str.length;
+    }
+    if (last < text.length) res.push({ text: text.slice(last), en: false });
+    return res;
+  }
+  function splitNames(text) {
+    if (!enVoice) return [{ text, en: false }];
+    if (!nameRe) return splitCaps(text);
+    const res = []; let last = 0; nameRe.lastIndex = 0; let m;
+    while ((m = nameRe.exec(text))) { if (m.index > last) res.push(...splitCaps(text.slice(last, m.index))); res.push({ text: m[0], en: true }); last = m.index + m[0].length; }
+    if (last < text.length) res.push(...splitCaps(text.slice(last)));
+    return res;
+  }
   function isEnglish(t) { const e = (t.match(EN) || []).length, n = (t.match(NL) || []).length; return e > n && e > 0; }
   function partsOf(el) {
     // Splits een alinea in stukken: cursieve Engelse titels krijgen een Engelse stem.
@@ -65,8 +121,8 @@
     function push(text, en) { text = text.replace(/\s+/g, ' '); if (!text.trim()) return; const last = out[out.length - 1]; if (last && last.en === en) last.text += text; else out.push({ text, en }); }
     (function walk(n) {
       n.childNodes.forEach(c => {
-        if (c.nodeType === 3) push(c.textContent, false);
-        else if (c.nodeName === 'EM' || c.nodeName === 'I') push(c.textContent, !!enVoice && isEnglish(c.textContent));
+        if (c.nodeType === 3) splitNames(c.textContent).forEach(s => push(s.text, s.en));
+        else if (c.nodeName === 'EM' || c.nodeName === 'I') { const tx = c.textContent; if (enVoice && isEnglish(tx)) push(tx, true); else splitNames(tx).forEach(s => push(s.text, s.en)); }
         else walk(c);
       });
     })(clone);
@@ -77,7 +133,8 @@
     let title = ''; if (box) { let seen = false; box.childNodes.forEach(n => { if (seen) title += n.textContent; if (n.nodeName === 'BR') seen = true; }); }
     const clone = a.cloneNode(true); clone.querySelectorAll('.tag, .rec, .qr').forEach(n => n.remove());
     const rest = clone.textContent.replace(/\s+/g, ' ').trim();
-    return [{ text: 'Luistertip: ' + (who ? who.textContent + ', ' : ''), en: false }, { text: title.trim() + '. ', en: !!enVoice && isEnglish(title) }, { text: rest, en: false }];
+    const nameParts = who ? splitNames(who.textContent + ', ') : [];
+    return [{ text: 'Luistertip: ', en: false }].concat(nameParts, [{ text: title.trim() + '. ', en: !!enVoice && (isEnglish(title) || splitNames(title).some(s => s.en)) }], splitNames(rest));
   }
   function collect() {
     const items = [];
