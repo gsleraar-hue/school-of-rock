@@ -65,8 +65,10 @@
 
   let W = 0, H = 0;
   // ---------- Stamboom: tijd horizontaal, families als banen ----------
-  const PX_PER_YEAR = 15, ROW = 22, LANE_PAD = 14, LEFT = 175;
-  const tx = y => LEFT + (y - YMIN) * PX_PER_YEAR;
+  const PX_PER_YEAR = 15, ROW = 22, LANE_PAD = 14, LEFT = 290;
+  // vóór 1880 gaat de tijd vier keer zo snel, anders wordt de stamboom te breed
+  const SPLIT = Math.max(YMIN, 1880), EARLY = PX_PER_YEAR / 4;
+  const tx = y => LEFT + (y < SPLIT ? (y - YMIN) * EARLY : (SPLIT - YMIN) * EARLY + (y - SPLIT) * PX_PER_YEAR);
   let lanes = [];
   function layoutTree() {
     let y = 40;
@@ -136,13 +138,13 @@
     root.classed('world', state.mode === 'world');
     if (state.mode === 'tree') {
       gBack.selectAll('rect').data(lanes).join('rect').attr('class', d => 'lane-bg' + (d.alt ? ' alt' : '')).attr('x', -4000).attr('width', treeW + 8000).attr('y', d => d.y).attr('height', d => d.h);
-      const decades = d3.range(Math.ceil(YMIN / 10) * 10, YMAX, 10);
+      const decades = d3.range(Math.ceil(YMIN / 10) * 10, YMAX, 10).filter(d => d >= SPLIT || d % 50 === 0);
       const dg = gGrid.selectAll('g').data(decades).join('g').attr('class', 'decade');
       dg.append('line');
       dg.append('text').attr('y', 16).text(d => d);
       updateGrid();
       const ln = gLaneNames.selectAll('g').data(lanes).join('g');
-      ln.append('rect').attr('class', 'bg').attr('x', 0).attr('width', LEFT - 20).attr('fill', '#121110').attr('opacity', .92);
+      ln.append('rect').attr('class', 'bg').attr('x', 0).attr('width', 158).attr('fill', '#121110').attr('opacity', .92);
       ln.append('rect').attr('class', 'bar').attr('x', 0).attr('width', 5).attr('fill', d => d.f.color);
       ln.append('text').attr('class', 'lane-name').attr('x', 14).attr('y', d => d.y + 22).attr('fill', d => d.f.color).text(d => d.f.name);
       stickLaneNames(d3.zoomTransform(svg.node()));
@@ -216,8 +218,9 @@
   function fitTransform() {
     let t;
     if (state.mode === 'tree') {
-      const kk = Math.max(Math.min(1, (H - 20) / (treeH + 10)), Math.min(1, (W - 20) / treeW));
-      t = d3.zoomIdentity.translate(Math.min(0, (W - treeW * kk) / 2), 0).scale(kk);
+      // de tijdlijn begint rechts van de kolom met familienamen
+      const kk = Math.max(Math.min(1, (H - 20) / (treeH + 10)), Math.min(1, (W - 190) / (treeW - LEFT + 40)));
+      t = d3.zoomIdentity.translate(170 - LEFT * kk, 0).scale(kk);
     } else {
       const xs = G.map(g => g.world.x), ys = G.map(g => g.world.y);
       const x0 = d3.min(xs) - 60, x1 = d3.max(xs) + 60, y0 = d3.min(ys) - 50, y1 = d3.max(ys) + 50;

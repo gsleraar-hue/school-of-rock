@@ -46,6 +46,11 @@
                          "color":  "#2FA552"
                      },
                      {
+                         "id":  "wereld",
+                         "name":  "Afrika \u0026 Azië",
+                         "color":  "#D9A441"
+                     },
+                     {
                          "id":  "avantgarde",
                          "name":  "Avant-garde \u0026 studio",
                          "color":  "#8E9AAF"
@@ -866,7 +871,8 @@
                        "parents":  [
                                        "rock-n-roll",
                                        "country",
-                                       "rockabilly"
+                                       "rockabilly",
+                                       "krontjong"
                                    ],
                        "text":  "Indische Nederlanders brachten na 1949 krontjong en de Hawaïaanse gitaar mee; met Amerikaanse country en rock-\u0027n-roll smolt dat in Nederland samen tot indorock. Het is snelle, vaak instrumentale gitaarmuziek met veel echo en een wilde show. De Tielman Brothers speelden vanaf 1959 in Duitse clubs, een jaar voordat de Beatles in 1960 naar Hamburg kwamen.",
                        "listen":  "Hoor in Rock Little Baby of Mine hoe een echo-apparaat elke snelle gitaarnoot laat nagalmen.",
@@ -2505,7 +2511,8 @@
                                      "lon":  5.29
                                  },
                        "parents":  [
-                                       "folk-revival"
+                                       "folk-revival",
+                                       "chanson"
                                    ],
                        "text":  "Kleinkunst is het Nederlandstalige lied uit cabaret en theater, met de tekst centraal en een kleine begeleiding; in de jaren vijftig waren Wim Sonneveld, Toon Hermans en Jules de Corte de grote namen. Rond 1965 schoof die traditie richting pop, toen Boudewijn de Groot liedjes zong op teksten van Lennaert Nijgh, geïnspireerd door Amerikaanse folk en Bob Dylan. Klein Orkest bracht in de jaren tachtig kleinkunst met een popband.",
                        "listen":  "Hoor in Over de muur hoe een verhalend lied over Oost- en West-Berlijn uitkomt bij een refrein dat iedereen meezingt.",
@@ -2673,7 +2680,10 @@
                                  },
                        "parents":  [
                                        "trap",
-                                       "country"
+                                       "country",
+                                       "reggaeton",
+                                       "afrobeats",
+                                       "amapiano"
                                    ],
                        "text":  "Streamingpop is pop die is gemaakt voor de manier waarop sinds de jaren 2010 wordt geluisterd: via Spotify, YouTube en TikTok. Nummers zijn gemiddeld korter geworden, beginnen vaak meteen met de hook en mengen genres vrij. In december 2018 zette Lil Nas X uit Atlanta Old Town Road online, op een beat die hij voor 30 dollar had gekocht. Het nummer werd groot via TikTok, waar duizenden gebruikers er filmpjes bij maakten, en stond negentien weken op 1 in de Billboard Hot 100. De discussie of het country was, liet zien hoe genres in het streamingtijdperk door elkaar lopen.",
                        "listen":  "Hoor de banjo uit de country boven een trapbeat met diepe 808-bas en ratelende hihats.",
@@ -3453,8 +3463,8 @@
                                           "artist":  "Emerson, Lake \u0026 Palmer",
                                           "title":  "Lucky Man",
                                           "year":  1970,
-                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/57/a8/3e/57a83e74-e6c4-5569-6b3e-b1536d7c09d7/mzaf_6303048359236341984.plus.aac.p.m4a",
-                                          "cover":  "https://lh3.googleusercontent.com/zWzMqVYMenS8E7-S09YYs8FffJKaNqIL3iLvOvjykWqieOV1ulkZkF2ziKhWCVdmeH-wCVehP8ZWVpgx4GcGZri__NHrN6d95FF8JA"
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/11/85/e4/1185e4ef-8505-0670-c2d8-e829484bb7bd/mzaf_8574767046008063829.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/95/12/17/9512173a-eaf5-175c-3a7a-ff51ff98fab3/4050538184686.jpg/600x600bb.jpg"
                                       }
                                   ],
                        "mixtapes":  [
@@ -4291,7 +4301,8 @@
                                      "lon":  -76.79
                                  },
                        "parents":  [
-                                       "rhythm-and-blues"
+                                       "rhythm-and-blues",
+                                       "mento"
                                    ],
                        "text":  "In Kingston draaiden sound systems Amerikaanse rhythm-and-blues; toen die platen schaars werden, gingen Jamaicaanse producers zelf opnemen. Zo ontstonden achter elkaar ska, rocksteady en rond 1968 reggae, met drums en bas als riddim en de skank van de gitaar op 2 en 4. Bob Marley werd een van de eerste wereldsterren uit wat toen de Derde Wereld heette, en producers als King Tubby maakten er dub van.",
                        "listen":  "Hoor in Stir It Up de one drop: de bassdrum valt op de derde tel en de eerste tel blijft leeg.",
@@ -5313,7 +5324,8 @@
                                  },
                        "parents":  [
                                        "british-beat",
-                                       "folk-rock"
+                                       "folk-rock",
+                                       "indiase-klassiek"
                                    ],
                        "text":  "Halverwege de jaren zestig gingen westerse bands Indiase instrumenten en toonladders gebruiken: raga rock. George Harrison speelde sitar op Norwegian Wood (1965) van The Beatles en nam later les bij Ravi Shankar; ook The Byrds en The Rolling Stones, met Paint It Black (1966), gebruikten de klank. Lange drones en modale melodieën werden een kenmerk van de psychedelische rock.",
                        "listen":  "Hoor in Norwegian Wood hoe de sitar de melodie van de akoestische gitaar volgt.",
@@ -5684,7 +5696,7 @@
                    {
                        "id":  "k-pop",
                        "name":  "K-pop",
-                       "family":  "pop",
+                       "family":  "wereld",
                        "year":  1992,
                        "place":  {
                                      "name":  "Seoel",
@@ -5962,6 +5974,576 @@
                                             "track":  "Track 01",
                                             "heading":  "Country en folk"
                                         }
+                                    ]
+                   },
+                   {
+                       "id":  "krontjong",
+                       "name":  "Krontjong",
+                       "family":  "wereld",
+                       "year":  1920,
+                       "place":  {
+                                     "name":  "Batavia (Jakarta)",
+                                     "lat":  "-6.2",
+                                     "lon":  106.82
+                                 },
+                       "parents":  [
+                                       "europese-kunstmuziek"
+                                   ],
+                       "text":  "Krontjong ontstond in Batavia, het huidige Jakarta, uit liederen die Portugese zeelieden vanaf de zestiende eeuw meebrachten. Kleine snaarinstrumenten, die lijken op de ukelele, spelen een golvend ritme onder een zangstem met veel versieringen, met daarbij fluit, viool en cello. In de jaren twintig en dertig werd krontjong via radio en film populair in heel Indonesië; Bengawan Solo (1940) van Gesang werd een klassieker. Indische Nederlanders namen de muziek na 1949 mee naar Nederland, waar ze een van de wortels van de indorock werd.",
+                       "listen":  "Hoor in Bengawan Solo de golvende begeleiding van de kleine snaarinstrumenten onder de rustige zang.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Gesang",
+                                          "title":  "Bengawan Solo",
+                                          "year":  1940,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b1/5f/be/b15fbe0a-2c4c-a38c-e670-9b8729550d59/mzaf_13056788282501145633.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/cc/95/be/cc95bef3-03d1-dcf6-1494-736b9be96f18/cover.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  11,
+                                            "track":  "Track 01",
+                                            "heading":  "Indorock"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "indiase-klassiek",
+                       "name":  "Indiase klassieke muziek",
+                       "family":  "wereld",
+                       "year":  1700,
+                       "place":  {
+                                     "name":  "Noord-India",
+                                     "lat":  25.32,
+                                     "lon":  82.97
+                                 },
+                       "parents":  [
+
+                                   ],
+                       "text":  "De klassieke muziek van Noord-India is gebouwd op de raga, een toonladder met vaste melodische wendingen en een eigen stemming, en de tala, een ritmische cyclus. Een uitvoering begint vaak traag en vrij, boven een aanhoudende grondtoon, de drone, en versnelt daarna samen met de tabla. In de jaren zestig bracht sitarspeler Ravi Shankar deze muziek naar het westen: hij gaf George Harrison les en speelde op de festivals van Monterey (1967) en Woodstock (1969).",
+                       "listen":  "Hoor in de alap van Raga Malkauns hoe de sitar boven de aanhoudende drone vrij en zonder vaste maat begint: de raga wordt toon voor toon opgebouwd.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Ravi Shankar",
+                                          "title":  "Raga Malkauns (alap)",
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e5/88/41/e58841dc-044e-2125-7173-ec0a6725cfc5/mzaf_9534901955483371395.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/3f/5a/49/3f5a496c-926a-3709-fe25-a47434a33e4d/00724356730953.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  2,
+                                            "track":  "Track 01",
+                                            "heading":  "Hippies"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "highlife",
+                       "name":  "Highlife",
+                       "family":  "wereld",
+                       "year":  1950,
+                       "place":  {
+                                     "name":  "Accra",
+                                     "lat":  5.6,
+                                     "lon":  "-0.19"
+                                 },
+                       "parents":  [
+                                       "west-afrika",
+                                       "swing"
+                                   ],
+                       "text":  "Highlife groeide in de eerste helft van de twintigste eeuw in Ghana uit West-Afrikaanse ritmes, liederen van de kerk en de muziek van militaire orkesten en zeelieden. In de jaren vijftig maakte trompettist E.T. Mensah, de King of Highlife, er dansorkestmuziek van met blazers en jazzinvloeden. Daarnaast bestond de gitaarband-highlife, met meerdere gitaren die korte patronen door elkaar spelen. Uit highlife en jazz groeide later in Nigeria de afrobeat.",
+                       "listen":  "Hoor in Queen\u0027s Visit de blazers en de gitaren die korte, herhaalde patronen door elkaar spelen boven een lichte, dansbare groove.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "E.T. Mensah \u0026 The Tempos",
+                                          "title":  "Queen\u0027s Visit",
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/5b/db/7b/5bdb7b0e-1a11-6136-232c-8fd883e6157b/mzaf_1508211481979430042.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/e7/f1/45/e7f145ee-7ed5-3dd2-cb54-aacfdef07f38/5055373527567.png/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "afrobeat",
+                       "name":  "Afrobeat",
+                       "family":  "wereld",
+                       "year":  1970,
+                       "place":  {
+                                     "name":  "Lagos",
+                                     "lat":  6.52,
+                                     "lon":  3.38
+                                 },
+                       "parents":  [
+                                       "highlife",
+                                       "funk",
+                                       "hard-bop"
+                                   ],
+                       "text":  "Rond 1970 mengde Fela Kuti in Lagos highlife met jazz en de funk van James Brown: afrobeat. Met zijn band Africa 70 en drummer Tony Allen speelde hij lange nummers van tien minuten en meer, met herhaalde gitaarpatronen, blazers en een stuwend ritme. In zijn teksten viel Fela de Nigeriaanse legerregering aan, wat hem arrestaties en geweld opleverde. Zombie (1976) is een spotlied op soldaten die zonder nadenken bevelen opvolgen.",
+                       "listen":  "Hoor in Zombie hoe drums, bas en gitaren een lange groove opbouwen voordat de blazers en de stem van Fela invallen.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Fela Kuti \u0026 Africa 70",
+                                          "title":  "Zombie",
+                                          "year":  1976,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ab/df/41/abdf4117-b40f-516d-5768-81302ef6d26b/mzaf_6626101972221395364.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/fa/2b/9c/fa2b9c66-f249-a9cd-3bef-804f28174410/859700676738.png/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "rai",
+                       "name":  "Raï",
+                       "family":  "wereld",
+                       "year":  1980,
+                       "place":  {
+                                     "name":  "Oran",
+                                     "lat":  35.7,
+                                     "lon":  "-0.63"
+                                 },
+                       "parents":  [
+                                       "synthpop"
+                                   ],
+                       "text":  "Raï komt uit Oran in Algerije, waar zangers in cafés en op feesten volksliederen zongen over liefde, drank en het leven, onderwerpen die niet in de traditionele muziek pasten. In de jaren tachtig kwamen er synthesizers, drumcomputers en elektrische gitaren bij: pop-raï. Zangers kregen de titel Cheb, jongen; Cheb Khaled werd de bekendste en scoorde met Didi (1992) ook in Europa een hit.",
+                       "listen":  "Hoor in Didi de synthesizers en de drumcomputer onder de Arabische zang met zijn lange versieringen.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Khaled",
+                                          "title":  "Didi",
+                                          "year":  1992,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/Music5/v4/c4/db/76/c4db760d-8945-c295-ed8c-c621904c5343/mzaf_5393038628637433601.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music/8c/5f/2f/mzi.koeprowb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "afrobeats",
+                       "name":  "Afrobeats",
+                       "family":  "wereld",
+                       "year":  2010,
+                       "place":  {
+                                     "name":  "Lagos, Accra en Londen",
+                                     "lat":  6.45,
+                                     "lon":  3.4
+                                 },
+                       "parents":  [
+                                       "afrobeat",
+                                       "dancehall",
+                                       "modern-rnb"
+                                   ],
+                       "text":  "Afrobeats is de West-Afrikaanse popmuziek van de jaren 2010: dansbare nummers met een ontspannen ritme, zang in het Engels, Pidgin en Yoruba, en invloeden uit dancehall, R\u0026B en hiphop. Het is iets anders dan de afrobeat van Fela Kuti, al eert de naam die voorloper. Wizkid, Davido en Burna Boy werden wereldsterren; Wizkid zong mee op One Dance (2016) van Drake, en Burna Boy won in 2021 een Grammy.",
+                       "listen":  "Hoor in Essence het trage, wiegende ritme met de lichte percussie en de zang die er ontspannen overheen ligt.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Wizkid feat. Tems",
+                                          "title":  "Essence",
+                                          "year":  2020,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/dc/4b/ea/dc4bea17-b383-0692-dce2-b07589252ccd/mzaf_13211833600120954201.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/52/bf/2a/52bf2ad2-877b-de71-9078-a103230956c4/886449403936.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "calypso",
+                       "name":  "Calypso",
+                       "family":  "jamaica",
+                       "year":  1930,
+                       "place":  {
+                                     "name":  "Trinidad",
+                                     "lat":  10.65,
+                                     "lon":  "-61.5"
+                                 },
+                       "parents":  [
+                                       "west-afrika"
+                                   ],
+                       "text":  "Calypso komt uit Trinidad, waar zangers tijdens het carnaval met humor en spot commentaar gaven op politiek en het dagelijks leven. Vanaf de jaren dertig werd calypso opgenomen en ook in Amerika bekend. Lord Kitchener zong in 1948 bij aankomst in Engeland, met het schip Empire Windrush, London Is the Place for Me, dat hij twee jaar later opnam. Calypso beïnvloedde de muziek van het hele Caribisch gebied, ook die van Jamaica.",
+                       "listen":  "Hoor in London Is the Place for Me hoe de zang bijna praat, met een tekst vol details en een swingende band eronder.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Lord Kitchener",
+                                          "title":  "London Is the Place for Me",
+                                          "year":  1951,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/05/13/23/051323ec-2c34-3c03-602e-4df1bbbcbf1f/mzaf_3866419602074078966.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/7f/0d/c2/7f0dc28c-68c5-93bc-bee0-f6924042181d/889845193241.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "mento",
+                       "name":  "Mento",
+                       "family":  "jamaica",
+                       "year":  1950,
+                       "place":  {
+                                     "name":  "Jamaica",
+                                     "lat":  18.1,
+                                     "lon":  "-77.3"
+                                 },
+                       "parents":  [
+                                       "calypso",
+                                       "west-afrika"
+                                   ],
+                       "text":  "Mento is de volksmuziek van het Jamaicaanse platteland, gespeeld op banjo, gitaar en de rumba box, een grote duimpiano waarop de bas klinkt. In de jaren vijftig werd mento voor het eerst op plaat gezet, vaak met dubbelzinnige teksten. Mento werd soms calypso genoemd, maar is een eigen stijl. Hij is een van de wortels van de ska.",
+                       "listen":  "Hoor de banjo, de gitaar en de diepe tonen van de rumba box in het lichte, huppelende ritme.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "The Jolly Boys",
+                                          "title":  "Touch Me Tomato",
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/44/6f/9e/446f9e50-0852-b7a0-2911-b0a13bfc86a8/mzaf_10751478232888678913.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/6d/0c/90/6d0c904c-eefa-8e49-9d07-50565b2febb2/JollyBoys_PopNMento_3000.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "tango",
+                       "name":  "Tango",
+                       "family":  "jamaica",
+                       "year":  1890,
+                       "place":  {
+                                     "name":  "Buenos Aires",
+                                     "lat":  "-34.6",
+                                     "lon":  "-58.38"
+                                 },
+                       "parents":  [
+                                       "habanera",
+                                       "europese-kunstmuziek"
+                                   ],
+                       "text":  "Tango ontstond eind negentiende eeuw in de havenwijken van Buenos Aires en Montevideo, waar Europese immigranten, Afro-Argentijnen en mensen van het platteland samenkwamen. Het ritme heeft wortels in de habanera, en de bandoneón, een trekharmonica uit Duitsland, werd het belangrijkste instrument. Zanger Carlos Gardel maakte tango in de jaren twintig en dertig wereldberoemd; vanaf de jaren vijftig vernieuwde Astor Piazzolla hem met invloeden uit jazz en klassieke muziek.",
+                       "listen":  "Hoor in Por una Cabeza de bandoneón en de violen, en het ritme dat telkens even inhoudt en weer doorzet.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Carlos Gardel",
+                                          "title":  "Por una Cabeza",
+                                          "year":  1935,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f1/79/dc/f179dc49-90cc-11cc-da10-50351634e01f/mzaf_17038335220369106058.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/fc/2c/89/fc2c89a3-c573-2318-11f9-0a6b46e115cb/888003888036.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "reggaeton",
+                       "name":  "Reggaeton",
+                       "family":  "jamaica",
+                       "year":  1995,
+                       "place":  {
+                                     "name":  "San Juan (Puerto Rico)",
+                                     "lat":  18.47,
+                                     "lon":  "-66.11"
+                                 },
+                       "parents":  [
+                                       "dancehall",
+                                       "golden-age-hiphop"
+                                   ],
+                       "text":  "Reggaeton groeide in de jaren negentig in Panama en Puerto Rico uit Jamaicaanse dancehall en hiphop, in het Spaans. De basis is het dembow-ritme, genoemd naar Dem Bow (1990) van Shabba Ranks: een stampende bassdrum met een snare die net voor en op de tel valt. Daddy Yankee scoorde in 2004 een wereldhit met Gasolina, en Despacito (2017) van Luis Fonsi en Daddy Yankee werd een van de meest gestreamde nummers ooit.",
+                       "listen":  "Hoor in Gasolina het dembow-ritme: de bassdrum op elke tel en de snare die er telkens net voor valt.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Daddy Yankee",
+                                          "title":  "Gasolina",
+                                          "year":  2004,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/80/a6/9f/80a69fdc-b334-a648-6efc-6f57a60782c0/mzaf_18210801488139650311.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3f/73/4c/3f734c5a-1e3a-9238-3210-9561864bc022/24CRGIM47068.rgb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "indopop",
+                       "name":  "Indopop",
+                       "family":  "pop",
+                       "year":  1960,
+                       "place":  {
+                                     "name":  "Nederland",
+                                     "lat":  51.95,
+                                     "lon":  4.55
+                                 },
+                       "parents":  [
+                                       "indorock",
+                                       "krontjong",
+                                       "rock-n-roll"
+                                   ],
+                       "text":  "Naast de snelle indorock maakten Indische muzikanten in Nederland ook zachte, melodieuze pop, met tweestemmige zang in de stijl van de Everly Brothers. De broers Riem en Ruud de Wolff, The Blue Diamonds, hadden in 1960 met Ramona een nummer 1-hit in Duitsland en Nederland. Anneke Grönloh, geboren in Indonesië, scoorde in 1962 met Brandend zand.",
+                       "listen":  "Hoor in Ramona de tweestemmige zang en de rustige gitaarbegeleiding.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "The Blue Diamonds",
+                                          "title":  "Ramona",
+                                          "year":  1960,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/Music3/v4/cd/77/6c/cd776c54-a3a2-2052-757d-480790550374/mzaf_7543264198655249085.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/8b/cb/90/8bcb90a0-4207-f904-04cc-d6e222ca2fe0/cover.jpg/600x600bb.jpg"
+                                      },
+                                      {
+                                          "artist":  "Anneke Grönloh",
+                                          "title":  "Brandend zand",
+                                          "year":  1962,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/d8/c1/1d/d8c11d2a-b390-27e7-5372-4d6325ada237/mzaf_5472109872298682489.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/67/98/9d/67989d08-af74-3929-660c-c2534f8fd96b/TE00261917.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  11,
+                                            "track":  "Track 01",
+                                            "heading":  "Indorock"
+                                        },
+                                        {
+                                            "n":  2,
+                                            "track":  "Track 02",
+                                            "heading":  "Indorock"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "city-pop",
+                       "name":  "City pop",
+                       "family":  "wereld",
+                       "year":  1978,
+                       "place":  {
+                                     "name":  "Tokio",
+                                     "lat":  35.68,
+                                     "lon":  139.69
+                                 },
+                       "parents":  [
+                                       "softrock-aor",
+                                       "funk",
+                                       "disco"
+                                   ],
+                       "text":  "City pop is de gladde, zonnige Japanse pop van eind jaren zeventig en de jaren tachtig, gemaakt voor een land dat rijk werd: invloeden uit Amerikaanse softrock, funk en disco, met strakke sessiemuzikanten. Tatsuro Yamashita en Mariya Takeuchi waren de grote namen. Rond 2017 werd Plastic Love (1984) van Takeuchi via YouTube een internethit, en city pop kreeg een nieuw, wereldwijd publiek.",
+                       "listen":  "Hoor in Plastic Love de funky baslijn, de blazers en de koele, heldere productie.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Mariya Takeuchi",
+                                          "title":  "Plastic Love",
+                                          "year":  1984,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/64/ac/8e/64ac8e18-6229-2d19-ec7e-894ea3fac7b4/mzaf_4049677654337797391.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c9/8c/a6/c98ca691-2006-6116-81f6-52ec22f5e25c/825646183807.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "j-pop",
+                       "name":  "J-pop",
+                       "family":  "wereld",
+                       "year":  1990,
+                       "place":  {
+                                     "name":  "Tokio",
+                                     "lat":  35.66,
+                                     "lon":  139.7
+                                 },
+                       "parents":  [
+                                       "city-pop",
+                                       "modern-rnb"
+                                   ],
+                       "text":  "Eind jaren tachtig kwam in Japan de term J-pop in gebruik voor moderne Japanse popmuziek, los van de oudere schlagerachtige kayōkyoku. In de jaren negentig werden producers en zangeressen sterren, en Hikaru Utada maakte met het album First Love (1999) de best verkochte Japanse plaat ooit, met R\u0026B-invloeden. J-pop is nauw verbonden met anime, games en idolgroepen.",
+                       "listen":  "Hoor in Automatic hoe R\u0026B-ritmes en een zachte stem samengaan met een Japanse tekst.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Hikaru Utada",
+                                          "title":  "Automatic",
+                                          "year":  1998,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ee/ab/ed/eeabed15-977b-2b0d-649f-3b47ed93e621/mzaf_7034308982607205149.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/1f/86/e6/1f86e623-66fb-f17a-0d64-9ae0528972a4/00600406550644.rgb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "bollywood",
+                       "name":  "Filmmuziek uit Bollywood",
+                       "family":  "wereld",
+                       "year":  1950,
+                       "place":  {
+                                     "name":  "Mumbai",
+                                     "lat":  19.08,
+                                     "lon":  72.88
+                                 },
+                       "parents":  [
+                                       "indiase-klassiek"
+                                   ],
+                       "text":  "In de Hindi-films uit Mumbai, Bollywood, zijn liedjes een vast onderdeel van het verhaal. De acteurs zingen niet zelf: playbacksangers nemen de liedjes op, en de acteurs bewegen hun lippen mee. Lata Mangeshkar en haar zus Asha Bhosle zongen samen duizenden filmliedjes. De muziek mengt Indiase klassieke en volksmuziek met westerse orkesten, jazz, rock en later disco en elektronica.",
+                       "listen":  "Hoor de hoge, heldere stem van de playbacksangeres boven een orkest waarin Indiase en westerse instrumenten samenspelen.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Asha Bhosle",
+                                          "title":  "Dum Maro Dum",
+                                          "year":  1971,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b9/9f/3b/b99f3b3f-8647-4635-17af-f938dabacb85/mzaf_18374778901468197908.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/1e/0e/4c/1e0e4ca8-d09e-4ca7-efec-f3537c068466/191773203849.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "bhangra",
+                       "name":  "Bhangra",
+                       "family":  "wereld",
+                       "year":  1980,
+                       "place":  {
+                                     "name":  "Birmingham en Punjab",
+                                     "lat":  52.49,
+                                     "lon":  "-1.89"
+                                 },
+                       "parents":  [
+                                       "indiase-klassiek",
+                                       "disco"
+                                   ],
+                       "text":  "Bhangra is van oorsprong een oogstdans uit de Punjab, met de diepe slagen van de dhol, een grote trommel. In de jaren tachtig maakten Brits-Aziatische bands in Birmingham en Londen er moderne dansmuziek van, met synthesizers en drumcomputers. Panjabi MC combineerde bhangra met hiphop: Mundian To Bach Ke werd in 2002 een hit in heel Europa.",
+                       "listen":  "Hoor in Mundian To Bach Ke de dhol-ritmes en de Punjabi zang boven een hiphopbeat met de baslijn uit Knight Rider.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Panjabi MC",
+                                          "title":  "Mundian To Bach Ke",
+                                          "year":  2002,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d2/87/3c/d2873c27-86f0-b349-be98-cdab1429fc7e/mzaf_9981002874427167582.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/99/5a/97/995a9720-0aa4-19a9-8922-87c6c6c0a938/8718274959611.png/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "chanson",
+                       "name":  "Chanson",
+                       "family":  "pop",
+                       "year":  1930,
+                       "place":  {
+                                     "name":  "Parijs",
+                                     "lat":  48.87,
+                                     "lon":  2.33
+                                 },
+                       "parents":  [
+                                       "europese-kunstmuziek"
+                                   ],
+                       "text":  "Het Franse chanson is het lied waarin de tekst centraal staat, gezongen met veel expressie, vaak met een klein orkest of alleen een piano of accordeon. Édith Piaf werd met La vie en rose (1947) wereldberoemd, en de Belg Jacques Brel en Charles Aznavour schreven in de jaren vijftig en zestig liederen die over de hele wereld werden vertaald. Scott Walker en David Bowie namen liedjes van Brel op, en ook de Nederlandse kleinkunst keek naar het chanson.",
+                       "listen":  "Hoor in La vie en rose hoe de stem van Piaf de tekst draagt, met het orkest op de achtergrond.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Édith Piaf",
+                                          "title":  "La vie en rose",
+                                          "year":  1947,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/1c/54/96/1c549685-6208-ffe8-5d2b-bf7f67ac3d83/mzaf_6334446039485070240.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music/6e/b5/67/mzi.irgypuei.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "cumbia",
+                       "name":  "Cumbia",
+                       "family":  "jamaica",
+                       "year":  1950,
+                       "place":  {
+                                     "name":  "Colombia (Caribische kust)",
+                                     "lat":  10.4,
+                                     "lon":  "-75.5"
+                                 },
+                       "parents":  [
+                                       "west-afrika",
+                                       "europese-kunstmuziek"
+                                   ],
+                       "text":  "Cumbia komt van de Caribische kust van Colombia, waar Afrikaanse trommels, inheemse fluiten en Spaanse liedvormen samenkwamen. In de jaren veertig en vijftig maakten dansorkesten er populaire muziek van, met blazers en accordeon. Daarna verspreidde cumbia zich over heel Latijns-Amerika, met eigen varianten in Mexico, Peru en Argentinië.",
+                       "listen":  "Hoor in La Pollera Colorá het rustige, wiegende ritme met het schrapende geluid van de guacharaca en de blazers.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Pedro Salcedo y Su Orquesta",
+                                          "title":  "La Pollera Colorá",
+                                          "year":  1960,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/84/ed/c6/84edc69e-c522-d6ae-efc8-ef85ff5e1697/mzaf_121588520803933088.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/90/9b/91/909b91bb-76d8-581f-c3d7-9473c4f34a5d/15117.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "rumba-congolaise",
+                       "name":  "Congolese rumba en soukous",
+                       "family":  "wereld",
+                       "year":  1955,
+                       "place":  {
+                                     "name":  "Kinshasa",
+                                     "lat":  "-4.32",
+                                     "lon":  15.31
+                                 },
+                       "parents":  [
+                                       "son",
+                                       "west-afrika"
+                                   ],
+                       "text":  "Cubaanse platen met son en rumba waren in de jaren veertig populair in Congo. Muzikanten in Kinshasa maakten er hun eigen muziek van, met in elkaar grijpende gitaarpartijen en zang in het Lingala: de Congolese rumba. Le Grand Kallé schreef in 1960 Indépendance Cha Cha, het lied van de onafhankelijkheid, en Franco leidde decennialang OK Jazz. In de jaren tachtig werd een snellere variant, soukous, populair in heel Afrika en in Parijs.",
+                       "listen":  "Hoor in Indépendance Cha Cha de Cubaanse ritmes, de gitaren en de zang die de onafhankelijkheid van Congo viert.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Le Grand Kallé \u0026 L\u0027African Jazz",
+                                          "title":  "Indépendance Cha Cha",
+                                          "year":  1960,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/24/23/5c/24235cf7-cad7-3f81-2d1f-6c0893fcce94/mzaf_3533093709858900382.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/c3/dc/39c3dce6-c01d-41b6-3e33-1623a52c76aa/5017742301727.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
+                                    ]
+                   },
+                   {
+                       "id":  "amapiano",
+                       "name":  "Amapiano",
+                       "family":  "wereld",
+                       "year":  2015,
+                       "place":  {
+                                     "name":  "Pretoria en Johannesburg",
+                                     "lat":  "-25.75",
+                                     "lon":  28.19
+                                 },
+                       "parents":  [
+                                       "chicago-house",
+                                       "garage-house"
+                                   ],
+                       "text":  "Amapiano ontstond halverwege de jaren 2010 in de townships rond Pretoria en Johannesburg uit Zuid-Afrikaanse house en jazz. Kenmerkend is de log drum, een diepe, rubberachtige bas die als melodie werkt, onder rustige pianoakkoorden en een trage housebeat. In de jaren 2020 ging amapiano de wereld over; Water (2023) van Tyla won een Grammy.",
+                       "listen":  "Hoor in Water de log drum: de diepe, rollende bas onder het trage ritme en de zachte zang.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Tyla",
+                                          "title":  "Water",
+                                          "year":  2023,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/71/0c/2a/710c2ae4-895d-5b4e-7d1b-f0edca56b826/mzaf_14740219819116157680.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2a/cc/48/2acc48c7-e092-6b83-ce65-ff80ac6eb51c/196872520118.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+
                                     ]
                    }
                ]
