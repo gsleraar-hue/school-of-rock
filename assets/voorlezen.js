@@ -79,7 +79,7 @@
       buildNames(out.filter(s => s && !dutch.test(s)));
     });
   })();
-  window.SOR_TTS_SAY = el => collect().filter(it => it.el === el).map(it => it.parts.map(p => say(p.text, p.en)).join('')).join(' ');
+  window.SOR_TTS_SAY = el => collect().filter(it => it.el === el).map(it => sayParts(it.parts)).join(" ");
   window.SOR_TTS_TEST = t => { const v = enVoice; enVoice = enVoice || { lang: 'en' }; const r = splitNames(t); enVoice = v; return r; };
   // Reeksen van twee of meer woorden met een hoofdletter (Jimi Hendrix, Led Zeppelin) zijn bijna altijd Engelse namen.
   const NL_CAPS = /^(Verenigde|Staten|Tweede|Eerste|Wereldoorlog|Koude|Oorlog|Noord|Zuid|Oost|West|Den|Haag|Nederland|Nederlandse|Nederlanders|Engeland|Engelse|Amerika|Amerikaanse|Europa|Europese|Duitsland|Duitse|Frankrijk|Franse|Londen|Parijs|Brussel|Sint|Mixtape|Kant|Amerikaan|Amerikanen|Brit|Britten|Brits|Britse|Engelsman|Ier|Ierse|Schot|Schotse|Indische|Indonesië|Suriname|Antillen|Caribisch|Afrika|Afrikaanse|Azië|Latijns|Midden|Oosten|Grote|Kleine|Nieuwe|Oude|In|Op|De|Het|Een|Van|Na|Toen|Daarna|Ook|Met|Bij|Voor|Uit|Over|Zo|Dat|Die|Deze|Dit|Er|Hij|Zij|Ze|Je|Ik|We|Wie|Wat|Waar|Hoe|Maar|En|Of|Als|Om|Aan|Door|Tot|Naar|Hun|Zijn|Haar|Alle|Veel|Elke|Geen|Pas|Toch|Nu|Hier|Daar|Later|Eerst|Tijdens|Sinds|Vanaf|Rond|Begin|Eind|Halverwege|Volgens|Omdat|Terwijl|Want|Dus|Wel|Niet|Nog|Al|Zanger|Zangeres|Gitarist|Bassist|Drummer|Toetsenist|Producer|Producers|Componist|Saxofonist|Trompettist|Pianist|Album|Albums|Plaat|Platen|B-kant|A-kant|Groep|Hitlijst|Volgens|Fotograaf|Regisseur|Schrijver|Journalist|Dj|Dj's|Rapper|Rappers|Zo|Daarom)$/;
@@ -118,14 +118,14 @@
   function partsOf(el) {
     // Splits een alinea in stukken: cursieve Engelse titels krijgen een Engelse stem.
     const clone = el.cloneNode(true);
-    clone.querySelectorAll('aside, figure, .label, .letter, .kicker, img, .qr, .tts-here').forEach(n => n.remove());
+    clone.querySelectorAll('aside, figure, .label, .letter, .kicker, img, .qr, .tts-here, .note-play, button').forEach(n => n.remove());
     const out = [];
-    function push(text, en) { text = text.replace(/\s+/g, ' '); if (!text.trim()) return; const last = out[out.length - 1]; if (last && last.en === en) last.text += text; else out.push({ text, en }); }
+    function push(text, en) { text = text.replace(/\s+/g, ' '); if (!text) return; if (!text.trim()) { const l = out[out.length - 1]; if (l && !/\s$/.test(l.text)) l.text += ' '; return; } const last = out[out.length - 1]; if (last && last.en === en) last.text += text; else out.push({ text, en }); }
     (function walk(n) {
       n.childNodes.forEach(c => {
         if (c.nodeType === 3) splitNames(c.textContent).forEach(s => push(s.text, s.en));
         else if (c.nodeName === 'EM' || c.nodeName === 'I') { const tx = c.textContent; if (!isDutch(tx)) push(tx, true); else splitNames(tx).forEach(s => push(s.text, s.en)); }
-        else walk(c);
+        else { walk(c); if (/^(DIV|H[1-6]|P|LI)$/.test(c.nodeName)) { const l = out[out.length - 1]; if (l && !/[.!?:]\s*$/.test(l.text)) push('. ', false); } }
       });
     })(clone);
     return out;
@@ -133,7 +133,7 @@
   function noteText(a) {
     const who = a.querySelector('.who'); const box = who ? who.parentNode : null;
     let title = ''; if (box) { let seen = false; box.childNodes.forEach(n => { if (seen) title += n.textContent; if (n.nodeName === 'BR') seen = true; }); }
-    const clone = a.cloneNode(true); clone.querySelectorAll('.tag, .rec, .qr').forEach(n => n.remove());
+    const clone = a.cloneNode(true); clone.querySelectorAll('.tag, .rec, .qr, .note-play, button').forEach(n => n.remove());
     const rest = clone.textContent.replace(/\s+/g, ' ').trim();
     const nameParts = who ? splitNames(who.textContent + ', ') : [];
     return [{ text: 'Luistertip: ', en: false }].concat(nameParts, [{ text: title.trim() + '. ', en: !isDutch(title) }], splitNames(rest));
@@ -170,6 +170,9 @@
   })();
   function applyLex(t, l) { return l.re ? t.replace(l.re, m => l.map[m] !== undefined ? l.map[m] : m) : t; }
   const say = (t, en) => { let s = t; if (en) s = applyLex(s, lexes.engels); return applyLex(s, lexes.overal); };
+  // engels per stuk (alleen in namen en titels), daarna overal over de hele alinea, zodat ook "Roland TR-" + "808" samen worden gevonden
+  const sayParts = parts => applyLex(parts.map(p => p.en ? applyLex(p.text, lexes.engels) : p.text).join(""), lexes.overal);
+  window.SOR_TTS_DUMP = () => { const n = $('.tts-notes'), was = n.checked; n.checked = true; const r = collect().map(it => [{ t: it.parts.map(p => p.text).join(""), en: false, s: sayParts(it.parts) }]); n.checked = was; return r; };
   // ---------- afspelen ----------
   let items = [], idx = 0, playing = false, token = 0;
   function sentences(parts) {
@@ -190,7 +193,7 @@
     const my = ++token;
     if (idx >= items.length) { stop(); return; }
     const it = items[idx]; mark(it.el); savePos(it.el);
-    const full = it.parts.map(p => say(p.text, p.en)).join('').replace(/\s+/g, ' ');
+    const full = sayParts(it.parts).replace(/\s+/g, ' ');
     const chunks = sentences([{ text: full, en: false }]);
     let c = 0;
     const rate = parseFloat($('.tts-rate').value) || 1;
