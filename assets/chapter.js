@@ -51,21 +51,38 @@
 
   // Spotify-speler en LessonUp-les in de pagina openen.
   const kinds = { sp: { title: 'Spotify-playlist', h: 380, allow: 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' }, lu: { title: 'LessonUp-les', allow: 'autoplay; fullscreen; clipboard-write' } };
-  document.querySelectorAll('.deck-toggle').forEach(btn => btn.addEventListener('click', e => {
-    const frame = document.querySelector(`.deck-embed[data-name="${btn.dataset.target}"]`);
-    if (!frame) return;
-    e.preventDefault();
-    const k = kinds[btn.dataset.target];
-    if (!frame.innerHTML) frame.innerHTML = `<iframe title="${k.title}" src="${btn.dataset.embed}" width="100%"${k.h ? ` height="${k.h}"` : ''} frameborder="0" allow="${k.allow}" allowfullscreen></iframe>`;
-    frame.hidden = !frame.hidden;
-    btn.setAttribute('aria-expanded', String(!frame.hidden));
-    if (btn.dataset.target === 'lu') {
-      const full = document.querySelector('.deck-full');
-      if (full) full.hidden = frame.hidden;
-      const help = document.querySelector('.deck-help'); if (help) help.hidden = frame.hidden;
-      if (!frame.hidden) frame.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-  }));
+  const lblPlay = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>';
+  const lblStop = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 6h12v12H6z"/></svg>';
+  function frameHtml(kind, src) {
+    const k = kinds[kind];
+    return `<iframe title="${k.title}" src="${src}" width="100%"${k.h ? ` height="${k.h}"` : ''} frameborder="0" allow="${k.allow}" allowfullscreen></iframe>`;
+  }
+  document.querySelectorAll('.deck-toggle').forEach(btn => {
+    btn.dataset.label = btn.innerHTML;
+    btn.addEventListener('click', e => {
+      const kind = btn.dataset.target;
+      const frame = document.querySelector(`.deck-embed[data-name="${kind}"]`);
+      if (!frame) return;
+      e.preventDefault();
+      const open = frame.hidden;
+      if (kind === 'lu') {
+        // De les krijgt bij elk openen een verse speler; sluiten haalt hem weg, zodat LessonUp niet blijft hangen.
+        frame.innerHTML = open ? frameHtml('lu', btn.dataset.embed) : '';
+        btn.innerHTML = open ? lblStop + 'Sluit de les' : btn.dataset.label;
+        document.querySelectorAll('.deck-full, .deck-restart, .deck-help').forEach(el => { el.hidden = !open; });
+      } else if (!frame.innerHTML) {
+        frame.innerHTML = frameHtml(kind, btn.dataset.embed);
+      }
+      frame.hidden = !open;
+      btn.setAttribute('aria-expanded', String(open));
+      if (open && kind === 'lu') frame.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  });
+  const restart = document.querySelector('.deck-restart');
+  if (restart) restart.addEventListener('click', () => {
+    const btn = document.querySelector('.deck-toggle[data-target="lu"]');
+    const f = document.querySelector('.deck-embed.lu');
+    if (btn && f) f.innerHTML = frameHtml('lu', btn.dataset.embed);
+  });
   const full = document.querySelector('.deck-full');
-  if (full) full.addEventListener('click', () => { const f = document.querySelector('.deck-embed.lu'); if (f && f.requestFullscreen) f.requestFullscreen(); });
-})();
+  if (full) full.addEventListener('click', () => { const f = document.querySelector('.deck-embed.lu'); if (f && f.requestFullscreen) f.requestFullscreen(); });})();
