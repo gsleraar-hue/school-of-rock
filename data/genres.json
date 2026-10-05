@@ -1,0 +1,4544 @@
+{
+ "families": [
+  {
+   "id": "roots",
+   "name": "Wortels",
+   "color": "#9A6B45"
+  },
+  {
+   "id": "jazz",
+   "name": "Jazz",
+   "color": "#2F6BD6"
+  },
+  {
+   "id": "country",
+   "name": "Country & folk",
+   "color": "#8F9A2C"
+  },
+  {
+   "id": "rock",
+   "name": "Rock",
+   "color": "#7A4FC4"
+  },
+  {
+   "id": "pop",
+   "name": "Pop & songwriting",
+   "color": "#E0529C"
+  },
+  {
+   "id": "soul",
+   "name": "R&B, soul & funk",
+   "color": "#EE8A2A"
+  },
+  {
+   "id": "hiphop",
+   "name": "Hiphop",
+   "color": "#11A39E"
+  },
+  {
+   "id": "electronic",
+   "name": "Elektronisch & dance",
+   "color": "#3DB2EE"
+  },
+  {
+   "id": "jamaica",
+   "name": "Jamaica & Caribisch",
+   "color": "#2FA552"
+  },
+  {
+   "id": "avantgarde",
+   "name": "Avant-garde & studio",
+   "color": "#8E9AAF"
+  }
+ ],
+ "genres": [
+  {
+   "id": "gospel",
+   "name": "Spirituals en gospel",
+   "family": "roots",
+   "year": 1890,
+   "place": {
+    "name": "Zuid-VS",
+    "lat": 32.5,
+    "lon": -89.5
+   },
+   "parents": [],
+   "text": "In de zwarte kerken in het zuiden van de Verenigde Staten ontstonden spirituals en later gospel: meerstemmige religieuze liederen met roep en antwoord. Sister Rosetta Tharpe nam vanaf 1938 gospelliederen op met het ritme en de swing van de jazz, en speelde in de jaren veertig al solo's op een elektrische gitaar. Via zangers die in de kerk leerden zingen, werd gospel een van de wortels van soul.",
+   "listen": "Strange Things Happening Every Day is een gospelnummer, maar wie niet op de tekst let, hoort een stuwende piano en een gitaarsolo zoals in rhythm-and-blues.",
+   "tracks": [
+    {
+     "artist": "Sister Rosetta Tharpe",
+     "title": "Strange Things Happening Every Day",
+     "year": 1944,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview62/v4/57/ea/b9/57eab9ff-983c-a4c0-48cf-36d34f4a45be/mzaf_400753221715790823.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/UIbDpGpuEiVPD9ZRsEMqGm0rabOY3CxyewHFqk4B6t_xmGhn0NW2Jq0SZE3RiwvKDUriXcy_RBCNxwev5RLnjaAokjERtiOqR2sXmys"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 1,
+     "track": "Track 01",
+     "heading": "Een smeltkroes van stijlen"
+    },
+    {
+     "n": 10,
+     "track": "Track 02",
+     "heading": "Sister Rosetta Tharpe"
+    }
+   ]
+  },
+  {
+   "id": "delta-blues",
+   "name": "Delta-blues",
+   "family": "roots",
+   "year": 1890,
+   "place": {
+    "name": "Mississippi Delta",
+    "lat": 33.8,
+    "lon": -90.6
+   },
+   "parents": [],
+   "text": "De blues groeide rond 1890 uit de work songs, hollers en spirituals van de zwarte bevolking op het platteland van het zuiden, met de Mississippi Delta als belangrijk gebied. Kenmerken zijn het 12-matenschema met een AAB-tekst, blue notes en de slidegitaar. Robert Johnson nam in 1936 en 1937 in totaal 29 nummers op.",
+   "listen": "Tel in Cross Road Blues de maten mee: Johnson volgt de tekst en rekt het schema op of gaat eerder naar het volgende akkoord.",
+   "tracks": [
+    {
+     "artist": "Robert Johnson",
+     "title": "Cross Road Blues",
+     "year": 1936,
+     "audio": "https://api.lessonup.com/v1/media/iEHdtPCxvpHxgT7DP",
+     "cover": "https://lh3.googleusercontent.com/QCNj24pk7VgEJfGa4oatlGoKWAtvcX-9i4PbFcWNWCmOXFbpRNELF8y2wWrNjIR9UPieaup2pmCOP2rWMGFMm8TZ6nhpkdXRw59pWGwY"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 1,
+     "track": "Track 02",
+     "heading": "Blues"
+    }
+   ]
+  },
+  {
+   "id": "ragtime",
+   "name": "Ragtime",
+   "family": "roots",
+   "year": 1895,
+   "peak": [
+    1899,
+    1917
+   ],
+   "place": {
+    "name": "Sedalia (Missouri)",
+    "lat": 38.7,
+    "lon": -93.23
+   },
+   "parents": [],
+   "text": "Ragtime was de eerste Afro-Amerikaanse muziek die gecomponeerd, genoteerd en als bladmuziek verkocht werd. De linkerhand speelt een mars-bas, de rechterhand syncopen tegen de tel in, en de vorm bestaat uit strains van zestien maten. Scott Joplins Maple Leaf Rag werd in 1899 in Sedalia, Missouri, uitgegeven.",
+   "listen": "Luister naar het verschil tussen de strakke mars-bas in de linkerhand en de syncopen in de rechterhand.",
+   "tracks": [
+    {
+     "artist": "Scott Joplin",
+     "title": "The Entertainer",
+     "year": 1902,
+     "audio": "https://api.lessonup.com/v1/media/ko9oPfWoGzT4RwrXe",
+     "cover": "https://lh3.googleusercontent.com/iuKHgVzn2KyKX7CDwu10QQ_eXg4zqUKFHs6HFcDJY757rAQv4P3BlOlHgW2bAFeEyRr-2cw6i7df6rhkMXV-Z54KXbRHjp8edXrI5MU"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 1,
+     "track": "Track 03",
+     "heading": "Ragtime"
+    }
+   ]
+  },
+  {
+   "id": "appalachian-folk",
+   "name": "Appalachian folk (mountain music)",
+   "family": "roots",
+   "year": 1900,
+   "place": {
+    "name": "Appalachen",
+    "lat": 37.5,
+    "lon": -81
+   },
+   "parents": [],
+   "text": "Immigranten uit Schotland, Engeland en Ierland brachten vanaf de achttiende eeuw ballads en dansmuziek mee naar de Appalachen. De fiddle speelt jigs in 6/8 en reels in 4/4, met daarnaast de banjo, die Afro-Amerikaans van oorsprong is. Liederen gingen mondeling van zanger op zanger: het folkproces.",
+   "listen": "Hoor in de Swallowtail Jig de twee zware tellen per maat, die elk in drieën zijn verdeeld.",
+   "tracks": [
+    {
+     "artist": "Traditional",
+     "title": "Swallowtail Jig",
+     "audio": "https://api.lessonup.com/v1/media/HLjYfT8qwh98fs5hQ",
+     "cover": ""
+    },
+    {
+     "artist": "Clarence Ashley & Gwen Foster",
+     "title": "House of the Rising Sun",
+     "year": 1933,
+     "audio": "https://api.lessonup.com/v1/media/jtgmipEipauKktyBF",
+     "cover": ""
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 1,
+     "track": "Track 01",
+     "heading": "Country en folk"
+    },
+    {
+     "n": 1,
+     "track": "Track 01",
+     "heading": "House of the Rising Sun: zes versies"
+    }
+   ]
+  },
+  {
+   "id": "classic-blues",
+   "name": "Classic blues",
+   "family": "roots",
+   "year": 1920,
+   "peak": [
+    1920,
+    1930
+   ],
+   "place": {
+    "name": "New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "parents": [
+    "delta-blues"
+   ],
+   "text": "In de jaren twintig waren de best verkochte bluesplaten van vrouwen. Classic blues is stedelijke blues, gezongen door zangeressen uit het theater en de tentshows, met een band van piano, blazers en soms een banjo. Bessie Smith, de Empress of the Blues, nam in 1923 Downhearted Blues op.",
+   "listen": "Let op de AAB-vorm van de tekst en hoe de zangeres, niet de gitarist, het middelpunt van de opname is.",
+   "tracks": [
+    {
+     "artist": "Bessie Smith",
+     "title": "Downhearted Blues",
+     "year": 1923,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/db/03/6c/db036c9a-fd9d-9318-b218-61e8c6e8b22d/mzaf_13434939308771919081.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/yr17UyujwtGmgxDfR0lKVsi76I8q0NfKurjuZsly3wvbLOXoeyGGAiiHhIGik9xkWN_cP20EN_zBPflARRJdrzSVGx0CzqRu0asALlBG"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 10,
+     "track": "Track 01",
+     "heading": "Bessie Smith, Empress of the Blues"
+    }
+   ]
+  },
+  {
+   "id": "new-orleans-jazz",
+   "name": "New Orleans-jazz",
+   "family": "jazz",
+   "year": 1900,
+   "peak": [
+    1900,
+    1920
+   ],
+   "place": {
+    "name": "New Orleans",
+    "lat": 29.95,
+    "lon": -90.07
+   },
+   "parents": [
+    "ragtime",
+    "delta-blues",
+    "gospel"
+   ],
+   "text": "In New Orleans groeide rond 1900 uit de brassbands de jazz, later ook Dixieland of hot jazz genoemd. Cornet, klarinet en trombone improviseren tegelijk boven banjo, tuba en drums: collectieve improvisatie. In 1917 verscheen de eerste jazzplaat, van de witte Original Dixieland Jass Band.",
+   "listen": "Volg de rolverdeling: de cornet speelt de melodie, de klarinet versiert erboven en de trombone glijdt eronder.",
+   "tracks": [
+    {
+     "artist": "Brassband, New Orleans",
+     "title": "When the Saints Go Marching In",
+     "audio": "https://api.lessonup.com/v1/media/2jnJS2Tbis2NwxxNo",
+     "cover": ""
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 1,
+     "track": "Track 04",
+     "heading": "Back to New Orleans"
+    },
+    {
+     "n": 1,
+     "track": "Track 05",
+     "heading": "Jass"
+    },
+    {
+     "n": 1,
+     "track": "Track 06",
+     "heading": "1917: jazz gaat op reis"
+    }
+   ]
+  },
+  {
+   "id": "swing",
+   "name": "Swing en big band",
+   "family": "jazz",
+   "year": 1930,
+   "peak": [
+    1930,
+    1945
+   ],
+   "place": {
+    "name": "New York",
+    "lat": 40.81,
+    "lon": -73.95
+   },
+   "parents": [
+    "new-orleans-jazz",
+    "tin-pan-alley"
+   ],
+   "text": "In de jaren dertig groeide de New Orleans-band uit tot de big band van vijftien of meer muzikanten, met een arrangeur die riffs voor de secties schreef. De achtsten worden lang-kort gespeeld en de bas loopt op alle vier de tellen. Duke Ellington leidde het orkest van de Cotton Club in Harlem; de witte Benny Goodman werd de 'King of Swing'.",
+   "listen": "Hoor in Take the 'A' Train de AABA-vorm en hoe saxofoons en koper elkaar beantwoorden.",
+   "tracks": [
+    {
+     "artist": "Duke Ellington Orchestra",
+     "title": "Take the “A” Train",
+     "year": 1941,
+     "audio": "https://api.lessonup.com/v1/media/NzGnvRWEWBWvbTrrb",
+     "cover": "https://lh3.googleusercontent.com/NoZYNMXmbABgs4mqavwbBvHiFl-puAfzlf0PCzV6GuDsRctXlOs4ansKUKYvNCWiPm9SlHQfcVS6Bp16SfX6rPOyKSsD2iphIxQ_Bky5"
+    },
+    {
+     "artist": "Benny Goodman Sextet met Charlie Christian",
+     "title": "Solo Flight",
+     "year": 1941,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/66/1e/f2/661ef2d4-c415-c369-c8d1-6c504e6cd4c2/mzaf_11805984302156862327.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/SrR2wCIDFbGcsh7e5ElChve-G3HodXylEarRLztcWyhvcS1Bycvn4y9TkRQBubw9x9An9OzombLO1kkGo8jvX1h50-3cskkEO9FhlnI"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 1,
+     "track": "Track 07",
+     "heading": "Swing en de big band"
+    },
+    {
+     "n": 9,
+     "track": "Track 01",
+     "heading": "Eindelijk hoorbaar"
+    }
+   ]
+  },
+  {
+   "id": "tin-pan-alley",
+   "name": "Tin Pan Alley",
+   "family": "pop",
+   "year": 1885,
+   "peak": [
+    1900,
+    1950
+   ],
+   "place": {
+    "name": "New York",
+    "lat": 40.75,
+    "lon": -73.99
+   },
+   "parents": [],
+   "text": "Rond 1885 vestigden muziekuitgevers zich aan West 28th Street in Manhattan. Songwriters schreven liedjes, uitgevers verkochten ze als bladmuziek en song pluggers speelden ze voor; de standaard was het lied van 32 maten in AABA-vorm. Irving Berlin, George Gershwin en Cole Porter waren de grote namen.",
+   "listen": "Hoor in White Christmas hoe Bing Crosby zacht en dichtbij zingt, dankzij de microfoon: crooning.",
+   "tracks": [
+    {
+     "artist": "Bing Crosby",
+     "title": "White Christmas (Irving Berlin)",
+     "audio": "https://api.lessonup.com/v1/media/6w3tYkskwYM9PJuuG",
+     "cover": "https://lh3.googleusercontent.com/KdY30U_07iNA7cQ2hyYEgw6gFq5-jbzdB_zDT5QkeeNO2Ya28PuS5PZ3vVuhCEXdNy8MdQjrbfGAqhaa6V_ie0AvRoOCg9SaoEKhzhU"
+    },
+    {
+     "artist": "Louis Armstrong and His Orchestra",
+     "title": "Alexander’s Ragtime Band",
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e3/5e/5d/e35e5dc7-5daf-be3e-cc69-677236e14318/mzaf_372825538017847223.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/DIc0THB0SP4C4vJflWK6muMWKPTVAJNyzXdvelyelIZxZYbmVAOv1VisS44uHCqwhDFFrhI7ZKgWuhklEs1gDD6CXs53-L-wY4x-9no"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 1,
+     "track": "Track 03",
+     "heading": "Tin Pan Alley"
+    },
+    {
+     "n": 12,
+     "track": "Track 01",
+     "heading": "Tin Pan Alley"
+    }
+   ]
+  },
+  {
+   "id": "country",
+   "name": "Country",
+   "family": "country",
+   "year": 1927,
+   "place": {
+    "name": "Nashville",
+    "lat": 36.16,
+    "lon": -86.78
+   },
+   "parents": [
+    "appalachian-folk",
+    "delta-blues",
+    "tin-pan-alley"
+   ],
+   "text": "In de jaren twintig werd mountain music via radio en grammofoonplaat tot country. De opnames van Ralph Peer in Bristol in 1927, met de Carter Family en Jimmie Rodgers, gelden als het begin; de Grand Ole Opry maakte Nashville tot hoofdstad van het genre. Hank Williams werd de blauwdruk van de country-singer-songwriter.",
+   "listen": "In Lovesick Blues hoor je drie tradities: een Tin Pan Alley-lied, een jodel uit de country en een bluesbreak.",
+   "tracks": [
+    {
+     "artist": "Hank Williams",
+     "title": "Lovesick Blues",
+     "year": 1949,
+     "audio": "https://api.lessonup.com/v1/media/NvFK3pRWomJwax9XT",
+     "cover": "https://lh3.googleusercontent.com/D5NWjUoXkaovhUb9WDPE24at49Un-a_YwAZFPUoJca3KDo5yGg_10UkrtoNipkTqVc9AXkxAqTSLtF9phEN9H--7-ddlba8mz4QpfNM"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 1,
+     "track": "Track 02",
+     "heading": "Made in America"
+    }
+   ]
+  },
+  {
+   "id": "rhythm-and-blues",
+   "name": "Rhythm-and-blues",
+   "family": "soul",
+   "year": 1947,
+   "peak": [
+    1947,
+    1956
+   ],
+   "place": {
+    "name": "Memphis",
+    "lat": 35.15,
+    "lon": -90.05
+   },
+   "parents": [
+    "swing",
+    "delta-blues",
+    "gospel"
+   ],
+   "text": "Na de Tweede Wereldoorlog waren big bands te duur om mee te toeren. Kleine bezettingen met elektrische gitaar, bas, drums en één saxofoon maakten luide, dansbare muziek voor een stedelijk zwart publiek: rhythm-and-blues. Leiber en Stoller schreven in 1952 Hound Dog voor Big Mama Thornton, zeven weken nummer 1 in de r&b-hitlijst.",
+   "listen": "Hoor hoe Big Mama Thornton in Hound Dog een man rauw en krachtig de deur wijst.",
+   "tracks": [
+    {
+     "artist": "Big Mama Thornton",
+     "title": "Hound Dog",
+     "year": 1952,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/5a/63/2e/5a632e8a-14c0-27a5-47ad-15e95c50908e/mzaf_12504766670836716224.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/O-TOIkzySDrv4nyHUShoD5YyMdZY_SYIFg_uGrPf0ME5V3t4Sw-R0ogrSvAo4SaW2JHId34Jx-cU5ohEhpX1y1h5NXpO-TzvOueaxA"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 1,
+     "track": "Track 04",
+     "heading": "Van zwarte rock-'n-roll…"
+    },
+    {
+     "n": 10,
+     "track": "Track 03",
+     "heading": "Hound Dog: wiens liedje?"
+    }
+   ]
+  },
+  {
+   "id": "rock-n-roll",
+   "name": "Rock-'n-roll",
+   "family": "rock",
+   "year": 1951,
+   "peak": [
+    1954,
+    1959
+   ],
+   "place": {
+    "name": "Memphis",
+    "lat": 35.15,
+    "lon": -90.05
+   },
+   "parents": [
+    "rhythm-and-blues",
+    "country",
+    "gospel"
+   ],
+   "text": "Rock-'n-roll groeide uit rhythm-and-blues, met invloeden uit jump blues, boogie-woogie, gospel en country. Herkenbaar zijn de backbeat op tel 2 en 4 en een gitaarriff als hook. Rocket 88 (1951) wordt vaak de eerste rock-'n-roll-plaat genoemd; Rock Around the Clock bracht de stijl in 1955 bij het grote publiek.",
+   "listen": "Let op de luide snaredrum op 2 en 4 en, in Rocket 88, de vervormde gitaar uit een kapotte luidspreker.",
+   "tracks": [
+    {
+     "artist": "Jackie Brenston & his Delta Cats",
+     "title": "Rocket 88",
+     "year": 1951,
+     "audio": "https://api.lessonup.com/v1/media/LNLPup5ACqcda6YGo",
+     "cover": "https://lh3.googleusercontent.com/OJ6XNvikJMcCmiZvZSSepYI_3D2YPyCnyXDhWP2k9MG6OWLLFWz3yZC-l1WntvkPZS_s54sWFLlYw-ghWRs80seifDnjW5WbDqjRTZZM"
+    },
+    {
+     "artist": "Bill Haley & His Comets",
+     "title": "Rock Around the Clock",
+     "year": 1954,
+     "audio": "https://api.lessonup.com/v1/media/Puv5iode2xxrh7gzX",
+     "cover": "https://lh3.googleusercontent.com/6hpiwObm9ddT4boZJga9BNn1JW_rKVlFSTwtIOR-OdKvU8iJnNAY-HFnn99L1KqnaM5VOIuwj2WIc_lQbBSJK5hYbTewRcYCRkbaPpo"
+    },
+    {
+     "artist": "Chuck Berry",
+     "title": "Johnny B. Goode",
+     "year": 1958,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e5/e3/7d/e5e37d79-825b-5412-c7d3-17e0c0858e97/mzaf_2407643628638675650.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/sftcz7nsVQ40IzeWGOiaDaiM-C-5CKtHwv7MzAnDYWv0xq70EAqa-mcQlOWWvOigl8fCIAuM82NbtZ0HtFQ7FNl5N61gnTHogoLCOjI"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 1,
+     "track": "Track 04",
+     "heading": "Van zwarte rock-'n-roll…"
+    },
+    {
+     "n": 1,
+     "track": "Track 05",
+     "heading": "…naar witte rock-'n-roll"
+    },
+    {
+     "n": 9,
+     "track": "Track 02",
+     "heading": "De solid body"
+    }
+   ]
+  },
+  {
+   "id": "rockabilly",
+   "name": "Rockabilly",
+   "family": "rock",
+   "year": 1954,
+   "place": {
+    "name": "Memphis",
+    "lat": 35.14,
+    "lon": -90.04
+   },
+   "parents": [
+    "rock-n-roll",
+    "country"
+   ],
+   "text": "Rockabilly is de snelle, kale variant van rock-'n-roll waarin country en rhythm-and-blues samenkomen. Je herkent hem aan de slapback-echo op de stem, die het geluid van Sun Records in Memphis bepaalde, de geslagen contrabas en de metalige twang van de gitaar. Elvis Presley, Gene Vincent en Eddie Cochran waren de idolen van de rockers.",
+   "listen": "Hoor in C'mon Everybody de stop-time-riff: de band valt stil en in die stilte zingt Cochran zijn regel.",
+   "tracks": [
+    {
+     "artist": "Eddie Cochran",
+     "title": "C’mon Everybody",
+     "year": 1958,
+     "audio": "https://api.lessonup.com/v1/media/c56QzpmbWk2RqMNij",
+     "cover": "https://lh3.googleusercontent.com/PRyLoR7XU9k-F406qUGEjrcpjc3pL4e6T0Mm6Eq4lXnMuD2mgCEaKiQj3x7tYzZEAB6fJqFPpVqHxL0M5NS5kzJ_pRbeT6hPRcRJ0u8"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 2,
+     "track": "Track 06",
+     "heading": "Rockers"
+    }
+   ]
+  },
+  {
+   "id": "skiffle",
+   "name": "Skiffle",
+   "family": "rock",
+   "year": 1956,
+   "place": {
+    "name": "Groot-Brittannië",
+    "lat": 53,
+    "lon": -2
+   },
+   "parents": [
+    "appalachian-folk",
+    "delta-blues"
+   ],
+   "text": "Halverwege de jaren vijftig ging skiffle als rage door Groot-Brittannië, met wortels in Amerikaanse folk en blues; Lonnie Donegan had in 1956 een hit met Rock Island Line. Je had alleen een goedkope gitaar, een wasbord en een theekistbas nodig. Duizenden tieners begonnen zo een band, onder wie John Lennon met The Quarrymen.",
+   "listen": "Let op de eenvoudige bezetting en de ruwe opname: muziek die iedereen kon nadoen.",
+   "tracks": [
+    {
+     "artist": "The Quarrymen",
+     "title": "In Spite of All the Danger",
+     "year": 1958,
+     "audio": "https://api.lessonup.com/v1/media/ri989NJQg7bt6b8Zu",
+     "cover": "https://lh3.googleusercontent.com/Yjx_Y7608kfS2ecj8wm3J_AMI-puaAUZDE317J_0NPlRbX-ruRtdXSZ8f68Mr31xuR1ME0MrznNVX3hTrEHXOKPoM6Shfc1jZIFxsBY"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 3,
+     "track": "Track 01",
+     "heading": "The Quarrymen"
+    }
+   ]
+  },
+  {
+   "id": "british-beat",
+   "name": "Britse beat en British Invasion",
+   "family": "rock",
+   "year": 1962,
+   "peak": [
+    1962,
+    1966
+   ],
+   "place": {
+    "name": "Liverpool",
+    "lat": 53.41,
+    "lon": -2.98
+   },
+   "parents": [
+    "skiffle",
+    "rock-n-roll",
+    "rhythm-and-blues"
+   ],
+   "text": "Na honderden uren in de clubs van Hamburg werden The Beatles in 1962 en 1963 de grootste band van Groot-Brittannië. Vanaf 1964 veroverden zij, The Rolling Stones, The Animals en The Kinks de Amerikaanse hitlijsten: de British Invasion. Bij de mods in Londen hoorden bands als The Who.",
+   "listen": "Hoor in Please Please Me hoe George Martin een langzame ballad liet versnellen tot een opgewekte popsong.",
+   "tracks": [
+    {
+     "artist": "The Beatles",
+     "title": "Please Please Me",
+     "year": 1963,
+     "audio": "https://api.lessonup.com/v1/media/7wAQwjYdKa2kGJ9jT",
+     "cover": "https://lh3.googleusercontent.com/Ywm28AuKQjJcHxcXlEtWgA5gTeIJvch57uWl88sC_vUabs1Bhaa3VAH9pYZnqQszIkLiuXQtcruKo2bylVLQWbwvemXdeuNKEOWHY-4"
+    },
+    {
+     "artist": "The Animals",
+     "title": "House of the Rising Sun",
+     "year": 1964,
+     "audio": "https://api.lessonup.com/v1/media/F3vq3rxgoqZMc3DRn",
+     "cover": ""
+    },
+    {
+     "artist": "The Who",
+     "title": "My Generation",
+     "year": 1965,
+     "audio": "https://api.lessonup.com/v1/media/Lpksi76v3mSkA6odb",
+     "cover": "https://lh3.googleusercontent.com/FMRIyzUXRBLpjSm6ChaOzoA5HfrUN5NR4LveY9NmUScYeuMBKQdpqFf5wwcC89VW7KWKWsmhO3GaOYVuEyjd42ePyTm_ULV7mqLEGEY"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 3,
+     "track": "Track 02",
+     "heading": "Hamburg: 800 uur op het podium"
+    },
+    {
+     "n": 3,
+     "track": "Track 04",
+     "heading": "Beatlemania"
+    },
+    {
+     "n": 3,
+     "track": "Track 01",
+     "heading": "De British Invasion"
+    },
+    {
+     "n": 2,
+     "track": "Track 01",
+     "heading": "Mods"
+    }
+   ]
+  },
+  {
+   "id": "folk-revival",
+   "name": "Folk revival",
+   "family": "country",
+   "year": 1955,
+   "peak": [
+    1958,
+    1965
+   ],
+   "place": {
+    "name": "Greenwich Village, New York",
+    "lat": 40.73,
+    "lon": -74
+   },
+   "parents": [
+    "appalachian-folk",
+    "delta-blues"
+   ],
+   "text": "In de jaren vijftig en zestig herontdekten jonge witte muzikanten in Greenwich Village, New York, de oude volksmuziek: de folk revival. Dave Van Ronk maakte er een nieuw arrangement van House of the Rising Sun, dat Bob Dylan in 1962 op zijn debuutalbum zette. Dylans protestliedjes inspireerden later ook Boudewijn de Groot.",
+   "listen": "Vergelijk de dalende baslijn en de mineurakkoorden van Van Ronk en Dylan met de modale versie uit 1933.",
+   "tracks": [
+    {
+     "artist": "Dave Van Ronk",
+     "title": "House of the Rising Sun",
+     "audio": "https://api.lessonup.com/v1/media/FcCHityaKKQuN2j42",
+     "cover": ""
+    },
+    {
+     "artist": "Bob Dylan",
+     "title": "House of the Rising Sun",
+     "year": 1962,
+     "audio": "https://api.lessonup.com/v1/media/2Mnm2hbkjPB36i79H",
+     "cover": ""
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 1,
+     "track": "Track 01",
+     "heading": "House of the Rising Sun: zes versies"
+    }
+   ]
+  },
+  {
+   "id": "folk-rock",
+   "name": "Folkrock",
+   "family": "country",
+   "year": 1965,
+   "place": {
+    "name": "Californië",
+    "lat": 36.78,
+    "lon": -119.42
+   },
+   "parents": [
+    "folk-revival",
+    "british-beat"
+   ],
+   "text": "In folkrock worden folkmelodieën op elektrische gitaren gespeeld. Het hoorde bij de hippies van de late jaren zestig; Crosby, Stills, Nash & Young brachten de folkrock van Californië, met drie en vier stemmen in close harmony. In 2009 bracht Mumford & Sons banjo en akoestische gitaar terug op het formaat van een arena.",
+   "listen": "Hoor in Our House hoe de stemmen dicht op elkaar liggen: close harmony.",
+   "tracks": [
+    {
+     "artist": "Crosby, Stills, Nash & Young",
+     "title": "Our House",
+     "year": 1970,
+     "audio": "https://api.lessonup.com/v1/media/9YXXWDmbfA8vP2LSy",
+     "cover": "https://lh3.googleusercontent.com/h_4pPFo7IEl5dDLk9y7bx54zGUxrN9AQc3CC7kpiP3d6u2A30WNxwZhf_RACxElMH_njBV5FKyj9c4FsEiLaAYZ7ZIRHaR__u91DNTM"
+    },
+    {
+     "artist": "Mumford & Sons",
+     "title": "Little Lion Man",
+     "year": 2009,
+     "audio": "https://api.lessonup.com/v1/media/N6d2dgX2bLBPYrC5K",
+     "cover": "https://lh3.googleusercontent.com/dP1mxrFjPUpqzy2ClWviHFPYQtMfGtuPnW0JryLWhgz5n_plOvKFbyUCkKU7BPcQxjlHQWdhqo-pPW9NYai3xk325QqO51J6ajX6qOO1"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 2,
+     "track": "Track 01",
+     "heading": "Hippies"
+    },
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "Van roots tot heavy metal"
+    },
+    {
+     "n": 4,
+     "track": "Track 03",
+     "heading": "De laatste grote rockhits"
+    }
+   ]
+  },
+  {
+   "id": "country-rock",
+   "name": "Countryrock",
+   "family": "country",
+   "year": 1970,
+   "place": {
+    "name": "Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+   },
+   "parents": [
+    "country",
+    "folk-rock"
+   ],
+   "text": "Begin jaren zeventig keerde een deel van de rockmuzikanten terug naar de wortels van de Amerikaanse muziek. The Rolling Stones namen Wild Horses op met countryinvloed van Gram Parsons, en Eagles uit Los Angeles mengden rock met country. Hotel California (1977) eindigt met twee gitaren die samen een solo spelen.",
+   "listen": "Luister naar het slot van Hotel California, waar twee gitaren dezelfde solo in harmonie spelen.",
+   "tracks": [
+    {
+     "artist": "Eagles",
+     "title": "Hotel California",
+     "year": 1977,
+     "audio": "https://api.lessonup.com/v1/media/KABSDXqo8tzwGZjkA",
+     "cover": "https://lh3.googleusercontent.com/M4_LNREXlSB_fhfbcWkTZUcWBXMwU-xujQ8TmL_4YwNuh-yttbLLi-mNG2y1nYnAyZ76seuV90dyXnEO4bduPkXwQQ40DHJ9vZVV_nc"
+    },
+    {
+     "artist": "The Rolling Stones",
+     "title": "Wild Horses",
+     "year": 1971,
+     "audio": "https://api.lessonup.com/v1/media/GwwSxZ6AKmqkEpR6j",
+     "cover": "https://lh3.googleusercontent.com/0QSGESDzbCfrNebBNl111o5loFABgur6EBMlJ4SZZ3y3A1SRabB_0Tjn1xOzzVDUxEb0HirOTswNzVF4GTVMUcalOMyub0x6aeQSg-A"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "Van roots tot heavy metal"
+    }
+   ]
+  },
+  {
+   "id": "indorock",
+   "name": "Indorock",
+   "family": "rock",
+   "year": 1957,
+   "peak": [
+    1957,
+    1964
+   ],
+   "place": {
+    "name": "Den Haag",
+    "lat": 52.08,
+    "lon": 4.3
+   },
+   "parents": [
+    "rock-n-roll",
+    "country"
+   ],
+   "text": "Indische Nederlanders brachten na 1949 krontjong en de Hawaïaanse gitaar mee; met Amerikaanse country en rock-'n-roll smolt dat in Nederland samen tot indorock. Het is snelle, vaak instrumentale gitaarmuziek met veel echo en een wilde show. De Tielman Brothers speelden al in Duitse clubs voordat de Beatles in 1960 naar Hamburg kwamen.",
+   "listen": "Hoor in Rock Little Baby of Mine hoe een echo-apparaat elke snelle gitaarnoot laat nagalmen.",
+   "tracks": [
+    {
+     "artist": "Tielman Brothers",
+     "title": "Rock Little Baby of Mine",
+     "year": 1958,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/bd/2e/db/bd2edb1d-d198-1b40-d7ac-77d38bd888bb/mzaf_1859842815652091040.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/gu8FUM-4GOeW5K81Oxt1QgEWoCJ75_Gy_xSQ6ZDOaiDb0jWMX2IL9kH47ExTDcU75-hln5fJdDShfRUXnCrbpORE3VYS9RlqfYbWLeA"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 2,
+     "track": "Track 02",
+     "heading": "Indorock"
+    },
+    {
+     "n": 11,
+     "track": "Track 01",
+     "heading": "Indorock"
+    }
+   ]
+  },
+  {
+   "id": "nederbeat",
+   "name": "Nederbeat",
+   "family": "rock",
+   "year": 1964,
+   "peak": [
+    1964,
+    1971
+   ],
+   "place": {
+    "name": "Den Haag",
+    "lat": 52.07,
+    "lon": 4.31
+   },
+   "parents": [
+    "british-beat",
+    "indorock"
+   ],
+   "text": "Na het bezoek van de Beatles in juni 1964 ontstonden overal in Nederland beatbands, met Den Haag als centrum: de Golden Earrings, Q65, de Motions en Shocking Blue. Vrijwel allemaal zongen ze in het Engels; Cuby + Blizzards speelde vanuit Grolloo zware blues. Venus van Shocking Blue stond in februari 1970 als eerste Nederlandse plaat op 1 in de Billboard Hot 100.",
+   "listen": "Let op de eenvoudige gitaarriff van Venus en het refrein dat je na één keer kunt meezingen.",
+   "tracks": [
+    {
+     "artist": "Shocking Blue",
+     "title": "Venus",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/29/9f/cf/299fcf68-0d02-334b-db08-b67af8638b07/mzaf_16609887307113101536.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/MbbmbLS8gB5yMPvs2VU_xHkizvzfq3S_QszY3I9_dJlyjhMHUu0i2xHfn0m34izYGex-Bjx1uUaUF0izAxPb4FYAJy4XJwa0-AvYmdQ"
+    },
+    {
+     "artist": "Cuby + Blizzards",
+     "title": "Appleknockers Flophouse",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/1d/ff/11/1dff1164-e2a8-53bf-baf7-1e7c5f7271d8/mzaf_14735619638945755880.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/lVezBITdVZBNrSsUDL0fkjW36Vb1mkIUn3JoSvWnzi89BWvOGppA4dT98YHpSMSsP6nERwAN6FlvG-HOu9El8EAalmzzu19Jtev4ik8"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 11,
+     "track": "Track 03",
+     "heading": "Nederbeat en de wereld"
+    }
+   ]
+  },
+  {
+   "id": "blues-rock",
+   "name": "Bluesrock",
+   "family": "rock",
+   "year": 1966,
+   "place": {
+    "name": "Londen",
+    "lat": 51.51,
+    "lon": -0.13
+   },
+   "parents": [
+    "delta-blues",
+    "british-beat"
+   ],
+   "text": "Cream, het trio van Eric Clapton, Jack Bruce en Ginger Baker, bracht de blues naar de grote zalen, met lange solo's en harde versterkers; Clapton speelde Robert Johnsons Cross Road Blues als Crossroads. Ook Janis Joplin zong blues met harde, scheurende rockgitaren. Bluesrock werd de basis van de hardrock van de jaren zeventig.",
+   "listen": "Hoor in White Room het intro in vijfkwartsmaat en het wah-wahpedaal dat de gitaar laat 'praten'.",
+   "tracks": [
+    {
+     "artist": "Cream",
+     "title": "White Room",
+     "year": 1968,
+     "audio": "https://api.lessonup.com/v1/media/vr4fiCktoteRLyFpw",
+     "cover": "https://lh3.googleusercontent.com/0aXEvSyCi87tTlyHU_NFyK3hxe-VRqTNyq38Rlrs3TMq0k3wiDY-3Y-5tlYEh94DeNOOAlEFXVOOURNWcBYMteT02kjSUp6qV9Q-cNs"
+    },
+    {
+     "artist": "Big Brother & the Holding Company",
+     "title": "Piece of My Heart",
+     "year": 1968,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/49/86/35/49863580-0c43-c844-296e-9c9ff7bd144f/mzaf_6930752732352551146.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/oLU-RZ4C1cqydQibTfvwV0vnk5FE6KcTqcwdWhJRlGx3U2xZvKhAKw04qvoAViGeSkmLW48d13YwjB3FQ-6RluTDKXWUy4wCrSyy3UI"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "De jaren 60: psychedelisch, acid en art"
+    },
+    {
+     "n": 10,
+     "track": "Track 03",
+     "heading": "Rauw en eigenzinnig"
+    }
+   ]
+  },
+  {
+   "id": "psychedelic-rock",
+   "name": "Psychedelische rock",
+   "family": "rock",
+   "year": 1966,
+   "peak": [
+    1966,
+    1970
+   ],
+   "place": {
+    "name": "San Francisco",
+    "lat": 37.77,
+    "lon": -122.42
+   },
+   "parents": [
+    "british-beat",
+    "folk-rock",
+    "elektronische-studio"
+   ],
+   "text": "Rond 1966 en 1967 lieten bands zich inspireren door Indiase muziek, de klassieke avant-garde en lsd. Je hoort drones, modale klanken en studio-effecten; de Beatles gebruikten bandlussen en achterstevoren afgespeelde klanken. San Francisco, met de Summer of Love van 1967, en Londen waren de centra.",
+   "listen": "Hoor in White Rabbit het marsritme dat steeds luider wordt, met een Spaanse, Frygische klank.",
+   "tracks": [
+    {
+     "artist": "Jefferson Airplane",
+     "title": "White Rabbit",
+     "year": 1967,
+     "audio": "https://api.lessonup.com/v1/media/naCqKykr8XhQFyRrY",
+     "cover": "https://lh3.googleusercontent.com/K1IpAj7fxKUHNkyltlKkj_Hmh5H9FFFSJU8WoOphc0wS08UDgsPR9EN78waI69YamNWZL0_DqNngMg2epmSLBSWFd2Q3HxCtqTxlnuo"
+    },
+    {
+     "artist": "Pink Floyd",
+     "title": "Astronomy Domine",
+     "year": 1967,
+     "audio": "https://api.lessonup.com/v1/media/gDKLnTtwYczGBQXEL",
+     "cover": "https://lh3.googleusercontent.com/lfTQXaIwwLP_YKHC6KgqvS5wlApP3KegLHeyoIJzc43Asz2HKRSnrYe-huPPF8Xpo4N70WOMQQtSHTDo0pzmS-ugDV2A4kTNCdc_jZI"
+    },
+    {
+     "artist": "The Beatles",
+     "title": "Lucy in the Sky with Diamonds",
+     "audio": "https://api.lessonup.com/v1/media/mnLHqnK2eBm6MuEjL",
+     "cover": "https://lh3.googleusercontent.com/7QlZdpmT2IBMp6thnBpg9BH4NxFB97L0LdozanvFNlgBYu1SPMUZNR1_aOWhJxBd0DIwcPvOMPnqGTQB6Y01mV1T17bcJrPc90U7FuY"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "De jaren 60: psychedelisch, acid en art"
+    },
+    {
+     "n": 2,
+     "track": "Track 01",
+     "heading": "Hippies"
+    },
+    {
+     "n": 3,
+     "track": "Track 03",
+     "heading": "Revolver: vijf primeurs"
+    },
+    {
+     "n": 3,
+     "track": "Track 01",
+     "heading": "Sgt. Pepper's Lonely Hearts Club Band"
+    }
+   ]
+  },
+  {
+   "id": "art-rock",
+   "name": "Art rock (The Velvet Underground)",
+   "family": "rock",
+   "year": 1967,
+   "place": {
+    "name": "New York",
+    "lat": 40.73,
+    "lon": -73.99
+   },
+   "parents": [
+    "rock-n-roll"
+   ],
+   "text": "The Velvet Underground van Lou Reed en John Cale werkte in New York samen met kunstenaar Andy Warhol, die de hoes met de banaan ontwierp. Cale had bij componist La Monte Young gewerkt met lange, aangehouden tonen. Het debuut uit 1967 verkocht eerst slecht, maar beïnvloedde punk, postpunk en alternatieve rock.",
+   "listen": "Hoor in Venus in Furs de elektrische altviool van Cale: een drone vol dissonanten.",
+   "tracks": [
+    {
+     "artist": "The Velvet Underground",
+     "title": "Venus in Furs",
+     "year": 1967,
+     "audio": "https://api.lessonup.com/v1/media/DgnGSvKwPCcJ4ohm5",
+     "cover": "https://lh3.googleusercontent.com/dXP3YRPBg-E88MvFBtain6gdhn4mr4C1t8BYjBb97v_RQ2kfwrNxRwsjV-u1k7qG0oEx3rZGCtdB-3jKs1beHSIilEbtBs3fmx-MtyTU"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "De jaren 60: psychedelisch, acid en art"
+    }
+   ]
+  },
+  {
+   "id": "prog-rock",
+   "name": "Progressieve rock",
+   "family": "rock",
+   "year": 1970,
+   "peak": [
+    1970,
+    1979
+   ],
+   "place": {
+    "name": "Londen",
+    "lat": 51.52,
+    "lon": -0.12
+   },
+   "parents": [
+    "psychedelic-rock"
+   ],
+   "text": "Progressieve rock maakte van het album een compositie, met lange nummers, klassieke invloeden en ingewikkelde maatsoorten. Close to the Edge (1972) van Yes vult een hele albumkant, en The Dark Side of the Moon (1973) van Pink Floyd is één doorlopend werk. In Nederland brak Focus door met progrock met humor.",
+   "listen": "Tel mee in Money: het nummer staat in zeven tellen, met een tapelus van kassageluiden als ritme.",
+   "tracks": [
+    {
+     "artist": "Pink Floyd",
+     "title": "Money",
+     "year": 1973,
+     "audio": "https://api.lessonup.com/v1/media/SWc4NJbBfNqidutj6",
+     "cover": "https://lh3.googleusercontent.com/mPBVWqB19yXRQ8p18DhV4x2YH-4_uWBwrc3CTBU0ufbM4vsFW9S30WzSHQpzrT-lQCwUApMjJ5wwDLF4xOzBBo8Uxd5xFSWwcIeOmwo"
+    },
+    {
+     "artist": "Yes",
+     "title": "Close to the Edge",
+     "year": 1972,
+     "audio": "https://api.lessonup.com/v1/media/JL3FkhQKYkCW52hGr",
+     "cover": "https://lh3.googleusercontent.com/wGKl5lBAIJz2rvZvz5tXzlbsJYSa_q1BZb_V93tuRvuquIrd9lVjtfZS2Mp69raiJY5RyQxEPKIRuNMWlkALhs4j7br6fg59ABfnSA"
+    },
+    {
+     "artist": "Focus",
+     "title": "Hocus Pocus",
+     "year": 1971,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0a/c9/b7/0ac9b728-41d4-bf74-8f04-02540ebe9680/mzaf_1230630221925848850.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/p45PQIjlHAwuRAa_1aqDtOBuW5JA-Cq1qKOK0Wig0zOUExx2HZKLjWuiOHbegSGnLyjiNv3OF-x7Pd7focjGFZRNFWAeiiOqG_HjKqk"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "Van roots tot heavy metal"
+    },
+    {
+     "n": 4,
+     "track": "Track 02",
+     "heading": "Glam, prog, kraut en punk"
+    },
+    {
+     "n": 11,
+     "track": "Track 01",
+     "heading": "Wereldspelers"
+    },
+    {
+     "n": 9,
+     "track": "Track 02",
+     "heading": "Mellotron en Rhodes"
+    }
+   ]
+  },
+  {
+   "id": "hard-rock",
+   "name": "Hardrock en heavy metal",
+   "family": "rock",
+   "year": 1968,
+   "peak": [
+    1968,
+    1980
+   ],
+   "place": {
+    "name": "Londen",
+    "lat": 51.5,
+    "lon": -0.14
+   },
+   "parents": [
+    "blues-rock"
+   ],
+   "text": "De hardrock kwam voort uit de bluesrock van Cream. Led Zeppelin werd in 1968 in Londen opgericht, en Deep Purple en Black Sabbath legden de basis voor heavy metal. De gitaar klinkt vervormd: wat voor een technicus een fout was, werd voor gitaristen een klankkeuze.",
+   "listen": "Speel het riff van Smoke on the Water na: kwarten op g, bes en c, het eerste wat beginnende gitaristen leren.",
+   "tracks": [
+    {
+     "artist": "Deep Purple",
+     "title": "Smoke on the Water",
+     "year": 1972,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/08/3f/1b/083f1b23-decd-8fe6-2bad-0437d1c5d959/mzaf_9991776491763640927.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/vFLfW6rDRQ4Nx3h9ukR8G0zSRlB1FsBbGdpF9OUXMJRiIfvHmP5Ma0YY4IdFSYIl9DDfqXQxOOsejHwie6nxOQZ7Pgzn5dkZfP7d2k2a"
+    },
+    {
+     "artist": "Led Zeppelin",
+     "title": "Stairway to Heaven",
+     "year": 1971,
+     "audio": "https://api.lessonup.com/v1/media/FAMsx6fYLWSzsarvB",
+     "cover": "https://lh3.googleusercontent.com/Rrw-Dczu7uAQQMYr2-yCY7o6qWCDf0jPvfN3k6UedgAUx2fTgcUwyJSAQPtB4UeKdRfdxFvi0gai3ERtDaAdiokgEBEbTZSAvCccS54"
+    },
+    {
+     "artist": "Golden Earring",
+     "title": "Radar Love",
+     "year": 1973,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/46/52/64/465264fe-8153-ab4c-c875-2eb087092d1c/mzaf_9996538824650952262.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/kT1MkpFgRpRfXUKZj1eJwD6DlZIDg5FxENVbPBmdgFhrL5lFj2yTorAncrIE26InrsJxERLnh6uxGqWgqFrcKM-2EYrwoOEyFP6HuNg"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "Van roots tot heavy metal"
+    },
+    {
+     "n": 9,
+     "track": "Track 03",
+     "heading": "Vervorming als klank"
+    },
+    {
+     "n": 11,
+     "track": "Track 01",
+     "heading": "Wereldspelers"
+    }
+   ]
+  },
+  {
+   "id": "glam-rock",
+   "name": "Glamrock",
+   "family": "rock",
+   "year": 1972,
+   "place": {
+    "name": "Londen",
+    "lat": 51.49,
+    "lon": -0.16
+   },
+   "parents": [
+    "psychedelic-rock",
+    "rock-n-roll"
+   ],
+   "text": "Rond 1972 kreeg rock een theatrale kant: kostuums, make-up en een podiumpersonage werden net zo belangrijk als de muziek. David Bowie bedacht Ziggy Stardust, een rockster uit de ruimte, en werd dat personage op het podium en daarbuiten. De New Romantics van rond 1980 leunden sterk op de glamrock.",
+   "listen": "Luister hoe Bowie in Ziggy Stardust zingt over een personage in plaats van over zichzelf.",
+   "tracks": [
+    {
+     "artist": "David Bowie",
+     "title": "Ziggy Stardust",
+     "year": 1972,
+     "audio": "https://api.lessonup.com/v1/media/6GK4huxBWGDsjMggh",
+     "cover": "https://lh3.googleusercontent.com/kOqRF3gdwpW80bU_Rk7Gzrfm9SvjP90Vt0uEAo6GedP5Nkvhvr3rgaADGQU60BZ_EHszV3ju-Bo_3ZWSJ5B54GjxzJipjtrWYZlWk-wM"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 02",
+     "heading": "Glam, prog, kraut en punk"
+    }
+   ]
+  },
+  {
+   "id": "krautrock",
+   "name": "Krautrock",
+   "family": "rock",
+   "year": 1970,
+   "peak": [
+    1970,
+    1977
+   ],
+   "place": {
+    "name": "Düsseldorf",
+    "lat": 51.23,
+    "lon": 6.77
+   },
+   "parents": [
+    "psychedelic-rock"
+   ],
+   "text": "In West-Duitsland zochten bands als Can, Neu! en Kraftwerk een eigen geluid, los van de Amerikaanse en Britse rock; Engelse journalisten noemden dat krautrock. Neu! werd opgericht door Michael Rother en Klaus Dinger, die kort bij Kraftwerk hadden gespeeld. Hun motorik-beat kwam later terug in postpunk, elektronische muziek en bij Radiohead.",
+   "listen": "Hoor in Hallogallo hoe de drums minutenlang hetzelfde 4/4-ritme zonder fills houden, als een auto met constante snelheid.",
+   "tracks": [
+    {
+     "artist": "NEU!",
+     "title": "Hallogallo",
+     "year": 1972,
+     "audio": "https://api.lessonup.com/v1/media/N7SrwpY5zLFKq4j2h",
+     "cover": "https://lh3.googleusercontent.com/hYlaNkbnJ2g1oRo42zs_dZieqiD7Y_QMz5ydGrJEpMgJ4ncjmQvTkPLDn_Hxr9CiVF6aRcb4U3azMqPL5xWQejazqrWdUIwsGdxSHOLb"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 02",
+     "heading": "Glam, prog, kraut en punk"
+    }
+   ]
+  },
+  {
+   "id": "southern-rock",
+   "name": "Southern rock",
+   "family": "rock",
+   "year": 1974,
+   "place": {
+    "name": "Jacksonville (Florida)",
+    "lat": 30.33,
+    "lon": -81.66
+   },
+   "parents": [
+    "blues-rock",
+    "country"
+   ],
+   "text": "In het zuiden van de Verenigde Staten ontstond southern rock. Lynyrd Skynyrd uit Jacksonville, Florida, maakte met Sweet Home Alabama (1974) een antwoord op twee nummers van Neil Young. Kings of Leon begon dertig jaar later in die lijn en scoorde met Sex on Fire (2008).",
+   "listen": "Hoor het riff D-C-G van Sweet Home Alabama, steeds beginnend op de vierde trap: dat geeft de mixolydische klank van blues en country.",
+   "tracks": [
+    {
+     "artist": "Lynyrd Skynyrd",
+     "title": "Sweet Home Alabama",
+     "year": 1974,
+     "audio": "https://api.lessonup.com/v1/media/dbap7QG4DteRLWNBi",
+     "cover": "https://lh3.googleusercontent.com/6DuUDkVpO6h3gGYckA269_LI07_g6oW0MZz2K2kuaYz5GybuxeyXqEzhPVVcCPMUtYDa9hLxjfAAqKiX23zdjKq8bPk-rncNNqZ5ZiQq"
+    },
+    {
+     "artist": "Kings of Leon",
+     "title": "Sex on Fire",
+     "year": 2008,
+     "audio": "https://api.lessonup.com/v1/media/t2Ht7MJ3Qp5FxcbwB",
+     "cover": "https://lh3.googleusercontent.com/VsTxLs-YtBv2vM_jdaDgmznn3QW2AH9gR9gt-nNOA7rrtR-peXO8lenqNrfiBqvkOpF4uoma3FEmaH3rAweHSNWFOoHwCw7KYRuvnh0"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "Van roots tot heavy metal"
+    },
+    {
+     "n": 4,
+     "track": "Track 03",
+     "heading": "De laatste grote rockhits"
+    }
+   ]
+  },
+  {
+   "id": "heartland-rock",
+   "name": "Heartland rock",
+   "family": "rock",
+   "year": 1975,
+   "place": {
+    "name": "New Jersey",
+    "lat": 40.22,
+    "lon": -74.01
+   },
+   "parents": [
+    "rock-n-roll",
+    "brill-building"
+   ],
+   "text": "Bruce Springsteen uit New Jersey maakte rock over gewone mensen, werk, auto's en de droom om weg te komen. Voor Born to Run (1975) bouwde hij een muur van klank naar voorbeeld van de Wall of Sound van Phil Spector. Born in the U.S.A. (1984) klinkt als een volkslied, maar gaat over een Vietnamveteraan die geen werk vindt.",
+   "listen": "Probeer in Born to Run de lagen te onderscheiden: gitaren, piano, orgel, saxofoon en glockenspiel.",
+   "tracks": [
+    {
+     "artist": "Bruce Springsteen",
+     "title": "Born to Run",
+     "year": 1975,
+     "audio": "https://api.lessonup.com/v1/media/AzecBdTZC7j66oQ8N",
+     "cover": "https://lh3.googleusercontent.com/m1Nn91s_hXxGqAVR395DV4EV_81NyZJeGGzg6wtEflgdza6UfZynDGslrnL6EZ794NDigkBosiS31XC6f6aCfAuVNkn9qyG_jesFghg"
+    },
+    {
+     "artist": "Bruce Springsteen",
+     "title": "Born in the U.S.A.",
+     "year": 1984,
+     "audio": "https://api.lessonup.com/v1/media/su7xkg6pWhqi4muTZ",
+     "cover": "https://lh3.googleusercontent.com/fcNZHJea2H-0Yd7JKR-Yl7a1pIAHmtKv5HMvIFYXLUTgQS_f7avmiE2e37vM_HbyokaH1MqXq5o9WA5eKyI3v_HcwCKES58KtRgMXGw"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 02",
+     "heading": "Glam, prog, kraut en punk"
+    },
+    {
+     "n": 7,
+     "track": "Track 01",
+     "heading": "Rock"
+    }
+   ]
+  },
+  {
+   "id": "punk",
+   "name": "Punk",
+   "family": "rock",
+   "year": 1975,
+   "peak": [
+    1976,
+    1979
+   ],
+   "place": {
+    "name": "Londen",
+    "lat": 51.49,
+    "lon": -0.17
+   },
+   "parents": [
+    "rock-n-roll",
+    "art-rock"
+   ],
+   "text": "Punk was het antwoord op rock die groot, duur en ingewikkeld was geworden: korte, snelle, luide nummers met weinig akkoorden en het idee dat iedereen een band kan beginnen. The Ramones speelden in de New Yorkse club CBGB, in Londen waren er de Sex Pistols en The Clash. Bands brachten platen uit op kleine labels en fans maakten fanzines.",
+   "listen": "Hoor in Anarchy in the UK de muur van gitaren die meerdere keren over elkaar zijn opgenomen.",
+   "tracks": [
+    {
+     "artist": "Sex Pistols",
+     "title": "Anarchy in the UK",
+     "year": 1976,
+     "audio": "https://api.lessonup.com/v1/media/iwEhxCTEpd3PhMfaq",
+     "cover": "https://lh3.googleusercontent.com/tgkFtQgzv9YW9HHP1VWy8gLkfFo0sEJ__oNha3HaOsrPu2USB7eTLkAQZSmAHinLWXjKdN3rH77rVJQvhfvI3ZZW2chWEP6w8YCHdEY"
+    },
+    {
+     "artist": "The Clash",
+     "title": "London Calling",
+     "year": 1979,
+     "audio": "https://api.lessonup.com/v1/media/BqYvoJ3CtaZqor7Ww",
+     "cover": "https://lh3.googleusercontent.com/Dor5bYIYXm_EC30A3YRtysZPuJ834jzN-suLXYflUWitCVvWjZ65hnIxZ5rkJK04tZ6bvqcgqapTZACywoFkG-FS6CQNZx9mjL5bWfw"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 2,
+     "track": "Track 02",
+     "heading": "Punk"
+    },
+    {
+     "n": 4,
+     "track": "Track 02",
+     "heading": "Glam, prog, kraut en punk"
+    }
+   ]
+  },
+  {
+   "id": "postpunk",
+   "name": "Postpunk",
+   "family": "rock",
+   "year": 1978,
+   "place": {
+    "name": "Manchester",
+    "lat": 53.48,
+    "lon": -2.24
+   },
+   "parents": [
+    "punk",
+    "krautrock",
+    "art-rock"
+   ],
+   "text": "Postpunk hield de energie en de doe-het-zelfhouding van punk, maar liet de drie akkoorden los. Joy Division uit Manchester bracht zijn platen uit op het lokale label Factory; in New York liet Talking Heads horen dat rock nerveus, ironisch en dansbaar kon zijn. Na de dood van Ian Curtis in 1980 ging Joy Division verder als New Order.",
+   "listen": "Hoor in She's Lost Control hoe de bas de melodie speelt en de drums droog en bijna mechanisch klinken.",
+   "tracks": [
+    {
+     "artist": "Joy Division",
+     "title": "She’s Lost Control",
+     "year": 1979,
+     "audio": "https://api.lessonup.com/v1/media/Luf3HBjZy8nwLPA5x",
+     "cover": "https://lh3.googleusercontent.com/YUitLXj67cevoZDuuBvGbGcm6cXCpM4hxfHKoY_YL59PNB0xbxAV7XslyqFXFTSS7b0AFlBPmxhqe1oi_TwaOT46G5TC6TEVxsox1LxZ"
+    },
+    {
+     "artist": "Talking Heads",
+     "title": "Psycho Killer",
+     "year": 1977,
+     "audio": "https://api.lessonup.com/v1/media/x22tMrsNKBJXEFMFC",
+     "cover": "https://lh3.googleusercontent.com/ZdpUHWZaeyvh-HsesZ8hC24Lok2GlW2OKaJWmsOoSjuQoSKTRy512F3_nuP_IEDkerub-DhXLeXiy8BhfIgNXDyj48FC-aP7MR5qolX1"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 03",
+     "heading": "Disco-rock en postpunk"
+    }
+   ]
+  },
+  {
+   "id": "new-wave",
+   "name": "New wave",
+   "family": "rock",
+   "year": 1977,
+   "peak": [
+    1977,
+    1988
+   ],
+   "place": {
+    "name": "Londen",
+    "lat": 51.53,
+    "lon": -0.1
+   },
+   "parents": [
+    "punk",
+    "krautrock",
+    "disco"
+   ],
+   "text": "New wave is een verzamelnaam voor muzikanten die na punk verder wilden, met meer aandacht voor sfeer, melodie en klank. De wortels liggen bij punk, maar ook bij disco en krautrock. De stroming loopt van gitaarbands als The Cure, The Police en The Smiths tot synthbands als Tubeway Army en Depeche Mode.",
+   "listen": "Hoor in Are 'Friends' Electric? de Minimoog en Polymoog: de eerste Britse nummer 1 waarin de synthesizer de hoofdrol speelt.",
+   "tracks": [
+    {
+     "artist": "Tubeway Army (Gary Numan)",
+     "title": "Are “Friends” Electric?",
+     "year": 1979,
+     "audio": "https://api.lessonup.com/v1/media/dpFkERe8qbZt7dixr",
+     "cover": "https://lh3.googleusercontent.com/WFio2g4ZZHDHVsPU6Le4zEQJoktw5ETQQiZDsAERQpVmixIBEtX76N5WSMhwKH4xIh3SwZCfQOY3sSLJnuCTcwO6WIgYEZwZzu_0NXI"
+    },
+    {
+     "artist": "The Police",
+     "title": "Every Breath You Take",
+     "year": 1983,
+     "audio": "https://api.lessonup.com/v1/media/PrwaGdExCpEk8iYyf",
+     "cover": "https://lh3.googleusercontent.com/u9tlF0g0RQApCI8CWqjNCvgH30gcR9t3vPAI2CVwn8QibaVvNgucI131G1xLoFqYDllBgmpsW3PoYY_hU_x7Tab_DPYz2EDvPrJPR2w"
+    },
+    {
+     "artist": "The Smiths",
+     "title": "Panic",
+     "year": 1986,
+     "audio": "https://api.lessonup.com/v1/media/M8XPXJqmv5jEmwQzF",
+     "cover": "https://lh3.googleusercontent.com/AUcyUYzCASm0L6-zKL427ZMphmUt4S5MbsgByvELVnuivSrxItYSpIC2Rf_h6Cl6Oj9W3_dp0f70ETE-fkArvIb8Da1aA2bgTqeHwro"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 7,
+     "track": "Track 01",
+     "heading": "New wave"
+    }
+   ]
+  },
+  {
+   "id": "gothic-rock",
+   "name": "Gothic rock",
+   "family": "rock",
+   "year": 1980,
+   "place": {
+    "name": "Engeland",
+    "lat": 51.75,
+    "lon": -0.5
+   },
+   "parents": [
+    "postpunk"
+   ],
+   "text": "Uit de postpunk groeide gothic rock: donker, galmend en traag. The Cure staat met A Forest op het album Seventeen Seconds (1980). De zwarte kleding en het donkere haar van zanger Robert Smith werden het uniform van een nieuwe jeugdcultuur, de gothics.",
+   "listen": "Let in A Forest op de gitaar met chorus-effect en de bas die steeds hetzelfde motief herhaalt.",
+   "tracks": [
+    {
+     "artist": "The Cure",
+     "title": "A Forest",
+     "year": 1980,
+     "audio": "https://api.lessonup.com/v1/media/mz66YT6vAzfuuvPf2",
+     "cover": "https://lh3.googleusercontent.com/l2g0nJ6poFMR-VI0gWsfYXroWSploOSFxzQ8iRn8XgQsvJn6UtzaAnKCyRiZtFS6pALlQiG-HvqIm0rn1DfFHTqfgiBVZ90Re10df9dK"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "Stadions en de underground"
+    }
+   ]
+  },
+  {
+   "id": "softrock-aor",
+   "name": "Softrock en AOR",
+   "family": "rock",
+   "year": 1977,
+   "peak": [
+    1977,
+    1989
+   ],
+   "place": {
+    "name": "Los Angeles",
+    "lat": 34.06,
+    "lon": -118.3
+   },
+   "parents": [
+    "folk-rock",
+    "country-rock",
+    "hard-rock"
+   ],
+   "text": "Radiostations op de FM-band draaiden vanaf eind jaren zestig hele albumkanten: album-oriented rock. Softrock, met gladde productie en sterke zangmelodieën, lag dicht bij pop; Rumours (1977) van Fleetwood Mac werd een van de best verkochte albums ooit. In de jaren tachtig klonk AOR glad en verzorgd, met Toto en de powerballads van Foreigner.",
+   "listen": "Hoor in Africa de lichte, huppelende shuffle van drummer Jeff Porcaro.",
+   "tracks": [
+    {
+     "artist": "Fleetwood Mac",
+     "title": "Go Your Own Way",
+     "year": 1977,
+     "audio": "https://api.lessonup.com/v1/media/4B7KGGWsuDcjJexpL",
+     "cover": "https://lh3.googleusercontent.com/JU2UmWQxTAWAbXryt1sowc9BM6e1Iw-M_YFSUmZnmdANGgctY_87lJ8a6J2PDzw5LIHUkTQvtd4yOLmEQ-Us8slAJCFuAG07MkMDZEc"
+    },
+    {
+     "artist": "Toto",
+     "title": "Africa",
+     "year": 1982,
+     "audio": "https://api.lessonup.com/v1/media/eprxguLdjTFaC4hpi",
+     "cover": "https://lh3.googleusercontent.com/98AQSi1U0K9VcP1oMccFq-mkLZI1CuXM7bNN2JvBXLKxPM3uUHRycZzvLnzVrgSHZwxBvUB9q2SB-RaddAExGHRbxZJhK-iAm9dZ120"
+    },
+    {
+     "artist": "Foreigner",
+     "title": "I Want to Know What Love Is",
+     "year": 1984,
+     "audio": "https://api.lessonup.com/v1/media/RY5NRiZ5rp99TpcEh",
+     "cover": "https://lh3.googleusercontent.com/L-tiX041g8KXXuXAXvqvqdwCuiynLYVTjqUuOOs-U5AHUj5bSFvfcTVmYEENlI8KFhrcT1qEydNfH4NpRMgJrmS9nSVU_T-kEInmKgU"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Liner notes",
+     "heading": "Album-oriented rock"
+    },
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "Van roots tot heavy metal"
+    },
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "Stadions en de underground"
+    }
+   ]
+  },
+  {
+   "id": "glam-metal",
+   "name": "Glam metal en stadionrock",
+   "family": "rock",
+   "year": 1981,
+   "peak": [
+    1981,
+    1991
+   ],
+   "place": {
+    "name": "Los Angeles",
+    "lat": 34.1,
+    "lon": -118.33
+   },
+   "parents": [
+    "hard-rock",
+    "glam-rock"
+   ],
+   "text": "Na de start van MTV in 1981 moest een rockband er ook goed uitzien. Glam metal combineerde hardrock met haarlak, make-up en strakke broeken: popsongs in hardrockkleren, met refreinen voor stadions. Bon Jovi en Van Halen scoorden grote hits; Guns N' Roses bracht in 1987 de rauwheid terug.",
+   "listen": "Hoor in Livin' on a Prayer de gitaar door een talkbox en de toonsoortwissel in het laatste refrein.",
+   "tracks": [
+    {
+     "artist": "Bon Jovi",
+     "title": "Livin’ on a Prayer",
+     "year": 1986,
+     "audio": "https://api.lessonup.com/v1/media/YPEhh4gSYzHfL8WwC",
+     "cover": "https://lh3.googleusercontent.com/Y-2Ra85CLuO-qLXd0vWdPKWfbBFKGqHtVrLpLvjjHjG2WK_kt3P9TX7UfrHsjiBDs3IyDWMUUFKLeewadARVoFUG7ipX7_G9jSO-Qg"
+    },
+    {
+     "artist": "Van Halen",
+     "title": "Jump",
+     "year": 1984,
+     "audio": "https://api.lessonup.com/v1/media/csXa97M6267vXjP26",
+     "cover": "https://lh3.googleusercontent.com/pUCpFl-0ROvP-8Br3Pwf4tPRqgvUlayPw3DsGu7MGQmXqili40sA_RCTVedn4VdPlMl9oXp0oMBmolWcqDnUeqDpN97LLl8zISIwhTo"
+    },
+    {
+     "artist": "Guns N’ Roses",
+     "title": "Sweet Child O’ Mine",
+     "year": 1987,
+     "audio": "https://api.lessonup.com/v1/media/qpXnL9F5kobA34F3d",
+     "cover": "https://lh3.googleusercontent.com/JEmc-ouCYkDWfVctiapfURqez9RQXpT5ImkCFCVF6q314n3pqj-yqcCvDHs8ybzi9DhxtU0ykMtoffOmb4WyxsmFD2M1a3-wGwBBlw"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "Stadions en de underground"
+    },
+    {
+     "n": 7,
+     "track": "Track 01",
+     "heading": "Rock"
+    },
+    {
+     "n": 11,
+     "track": "Track 03",
+     "heading": "Export en infrastructuur"
+    }
+   ]
+  },
+  {
+   "id": "heavy-metal-80s",
+   "name": "NWOBHM en thrash metal",
+   "family": "rock",
+   "year": 1980,
+   "peak": [
+    1980,
+    1991
+   ],
+   "place": {
+    "name": "Londen",
+    "lat": 51.55,
+    "lon": 0
+   },
+   "parents": [
+    "hard-rock"
+   ],
+   "text": "Heavy metal werd in de jaren tachtig harder en sneller. In Engeland ontstond rond 1980 de New Wave of British Heavy Metal, met Iron Maiden als bekendste band; in Californië maakte Metallica thrash metal, met downpicking. Met producer Bob Rock werd Metallica in 1991 radiovriendelijk.",
+   "listen": "Hoor in Run to the Hills het galopritme van bas en drums en de twee gitaren die in tertsen naast elkaar spelen.",
+   "tracks": [
+    {
+     "artist": "Iron Maiden",
+     "title": "Run to the Hills",
+     "year": 1982,
+     "audio": "https://api.lessonup.com/v1/media/mew8fjqCynR5bc2on",
+     "cover": "https://lh3.googleusercontent.com/1G5unASFyEgMh1wrhMGcdHOY6tqXAeRUGBV03kgzX-D7vdzW-VEcvRIUYzmkiNSrEfoHiY7rslNLvSxWxWvOQ6JJCoqtMGLGLiRCKg-z"
+    },
+    {
+     "artist": "Metallica",
+     "title": "Master of Puppets",
+     "year": 1986,
+     "audio": "https://api.lessonup.com/v1/media/vuY5CWopL6RjeKWsJ",
+     "cover": "https://lh3.googleusercontent.com/vdJ6NJHNHGxkmzEKj1xVeJUWEmxmklqoHequU_lfmMGxBtApz-efLrPi0q4T_TPgzdbBFsdKgkaylEFfo2EDXMMRKuJ78hC9uPRtRQ"
+    },
+    {
+     "artist": "Metallica",
+     "title": "Enter Sandman",
+     "year": 1991,
+     "audio": "https://api.lessonup.com/v1/media/LpHatjvDPnEwWWDAX",
+     "cover": "https://lh3.googleusercontent.com/tgqdp_USqbwx0GwcH1WjO6glGJ-1qD4Gv40_Ul1CrqKdh-x5mKdF7y64EyG1j9lWaAdgkfpQU7cGTz4nDe-3InWovAUrATQMSPhNQjWf"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "Stadions en de underground"
+    },
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "De jaren 90: grunge en de rest"
+    }
+   ]
+  },
+  {
+   "id": "alternative-rock",
+   "name": "Alternatieve rock",
+   "family": "rock",
+   "year": 1983,
+   "place": {
+    "name": "Athens (Georgia)",
+    "lat": 33.96,
+    "lon": -83.38
+   },
+   "parents": [
+    "postpunk",
+    "punk"
+   ],
+   "text": "Naast de stadions groeide in de jaren tachtig een rockwereld van kleine labels, clubs en universiteitsradio: alternatieve rock, in Amerika college rock. Minder virtuoze solo's, een minder gladde productie en eigen nummers. R.E.M. uit Athens, Georgia, werd groot via universiteitsradio; U2 uit Dublin groeide uit tot stadionband.",
+   "listen": "Hoor in Sunday Bloody Sunday het militaire patroon op de snaredrum en de viool.",
+   "tracks": [
+    {
+     "artist": "R.E.M.",
+     "title": "It’s the End of the World…",
+     "year": 1987,
+     "audio": "https://api.lessonup.com/v1/media/wwFcG3Aht767rtdK7",
+     "cover": "https://lh3.googleusercontent.com/X3ZuC5NwnV5G_eckA3690WVd07DCt_b3g2UuwikmUsjxm833xZCNqPom0b0MVC8KXgAKUzQbidcJrbvRXaC4GSAYgs7m5BvltzIkbJQ"
+    },
+    {
+     "artist": "U2",
+     "title": "Sunday Bloody Sunday",
+     "year": 1983,
+     "audio": "https://api.lessonup.com/v1/media/YxFppLrujGSPpXRc2",
+     "cover": "https://lh3.googleusercontent.com/p4kKUADXvL_78XZihXY90OOt-yu1wch-L8rEXkiJsBtIoR1h6W8gRgLLn2V2bvQFd1n6J3q9BlFhlMSutjULPxWhhoKoWMhfUW1Nzg"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 02",
+     "heading": "Alternatief, college en funk"
+    }
+   ]
+  },
+  {
+   "id": "funk-rock",
+   "name": "Funkrock",
+   "family": "rock",
+   "year": 1988,
+   "place": {
+    "name": "New York",
+    "lat": 40.72,
+    "lon": -73.98
+   },
+   "parents": [
+    "funk",
+    "hard-rock"
+   ],
+   "text": "Living Colour uit New York mengde in Cult of Personality (1988) hardrock met funk; gitarist Vernon Reid hoorde bij de Black Rock Coalition. De Red Hot Chili Peppers uit Los Angeles combineerden funk met punk en rock. Het was een terugkeer naar de wortels: rock-'n-roll kwam uit zwarte muziek.",
+   "listen": "Hoor in Give It Away hoe bassist Flea op zijn snaren slapt en Anthony Kiedis meer rapt dan zingt.",
+   "tracks": [
+    {
+     "artist": "Living Colour",
+     "title": "Cult of Personality",
+     "year": 1988,
+     "audio": "https://api.lessonup.com/v1/media/fKYFfAA5hDEBHTh7z",
+     "cover": "https://lh3.googleusercontent.com/yx3uTTb2vyDI6UJp83zv23Q2Y4-ea4JG4izMbJdH8X5jYGEprsK0Ynjp5PxXJaRoo_YD0XVwiHiHV7YGMFy-PcdJem5c7tokl4R8RK8N"
+    },
+    {
+     "artist": "Red Hot Chili Peppers",
+     "title": "Give It Away",
+     "year": 1991,
+     "audio": "https://api.lessonup.com/v1/media/LyCdRcZvGteAJpige",
+     "cover": "https://lh3.googleusercontent.com/O0jHswf1XF43mmFDQ8toKMpJ-m4QttHUkgvR3EDnrcyUjWsi_K46_IiXK1QwdkZ2AEyy8XqioBFjGVkoBTUoARuBDOpWsymlDIFEK7g"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 02",
+     "heading": "Alternatief, college en funk"
+    },
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "De jaren 90: grunge en de rest"
+    }
+   ]
+  },
+  {
+   "id": "grunge",
+   "name": "Grunge",
+   "family": "rock",
+   "year": 1989,
+   "peak": [
+    1991,
+    1994
+   ],
+   "place": {
+    "name": "Seattle",
+    "lat": 47.61,
+    "lon": -122.33
+   },
+   "parents": [
+    "punk",
+    "hard-rock",
+    "alternative-rock"
+   ],
+   "text": "Rond het kleine label Sub Pop in Seattle ontstond eind jaren tachtig een scène die punk en heavy metal mengde tot een rauw, zwaar geluid. In januari 1992 verdrong Nevermind van Nirvana Dangerous van Michael Jackson van de eerste plaats in de Amerikaanse albumlijst. Pearl Jam en Soundgarden kwamen ook uit Seattle.",
+   "listen": "Let in Smells Like Teen Spirit op de stil-luid-dynamiek: zachte coupletten en luide refreinen op vier powerchords.",
+   "tracks": [
+    {
+     "artist": "Nirvana",
+     "title": "Smells Like Teen Spirit",
+     "year": 1991,
+     "audio": "https://api.lessonup.com/v1/media/KD5BkAnTdp6KCjAmB",
+     "cover": "https://lh3.googleusercontent.com/kPO8Ir5cErsU_H8YB7v9GOE63WVr8BgWEm3HbHotIh1K2GaducWDWPZZA7nFe7wA2h16mPbRMuqAEf_09YjC-C0pkEpWjfI6KqNyG4A"
+    },
+    {
+     "artist": "Pearl Jam",
+     "title": "Alive",
+     "year": 1991,
+     "audio": "https://api.lessonup.com/v1/media/7dhxuBin5nyFBGiT3",
+     "cover": "https://lh3.googleusercontent.com/MJKBugTVVATkAjyZHBhKG3N-d8qcRX44Nd1qcCdmS3b3Ao5M8aWJ5dhIZeblqIFZzxbB679Qk5cZcfXUHyWyY59wKNMFXRg_YjucVA"
+    },
+    {
+     "artist": "Soundgarden",
+     "title": "Jesus Christ Pose",
+     "year": 1991,
+     "audio": "https://api.lessonup.com/v1/media/X2KDAexTmPgh4kQo7",
+     "cover": "https://lh3.googleusercontent.com/VNB6K3t-S5Y-NeSQpvSqUXqZyX5adGoxZc6K-zB45ZYGZSFbR8llHMekVOoZ0nfQJvTb7t1wo9-yt4r9uqKIKNMRBwBihjBq2SPx-X4"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 01",
+     "heading": "De jaren 90: grunge en de rest"
+    }
+   ]
+  },
+  {
+   "id": "britpop",
+   "name": "Britpop",
+   "family": "rock",
+   "year": 1993,
+   "peak": [
+    1994,
+    1997
+   ],
+   "place": {
+    "name": "Londen",
+    "lat": 51.51,
+    "lon": -0.09
+   },
+   "parents": [
+    "british-beat",
+    "alternative-rock"
+   ],
+   "text": "Rond 1993 kozen Britse bands bewust een andere kant op dan de Amerikaanse grunge: terug naar de Beatles, The Kinks, The Who en de mods. In augustus 1995 brachten Blur uit Londen en Oasis uit Manchester op dezelfde dag een single uit. Blur won de strijd om de eerste plaats, Oasis die om de albumverkoop.",
+   "listen": "Hoor dat Don't Look Back in Anger de akkoordenreeks van Pachelbels Canon gebruikt en dat het pianointro Imagine citeert.",
+   "tracks": [
+    {
+     "artist": "Oasis",
+     "title": "Don’t Look Back in Anger",
+     "year": 1995,
+     "audio": "https://api.lessonup.com/v1/media/dYWz9qv6kbZsPHDx7",
+     "cover": "https://lh3.googleusercontent.com/0iW2Rdq_g9ubW7uUtdM--TV9JwB3DIqNUC0MfcM1lc6Pcchzgj1ZBjkFU63h7OvGybfUuofU8ogzE0he-Yq5uM-wyKpmQAaQzgC-uA"
+    },
+    {
+     "artist": "Blur",
+     "title": "Parklife",
+     "year": 1994,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/14/dd/2e/14dd2e83-9f0e-09e2-042d-1d4fa64a0cf2/mzaf_11489968558484438497.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/L8_B4L1FTCDjCZE_y2esF7QMllnthFwTw-xniMB79ZsesYbD4xzMIx_6ws3hzPibSBUlqOpunwmThxq1dwI8Cl3mZb7eOh-ASd11ZAc"
+    },
+    {
+     "artist": "Oasis",
+     "title": "Wonderwall",
+     "year": 1995,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/df/75/0b/df750b0f-09d9-c70b-90fa-de70377438e7/mzaf_4128779391919478657.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/HpqnnCjlxaJwQPpjmC7hHbX3MGNBI6F4S3_xdbTte6MKL7yQrd-3Rwh3FbiWp6YoRUYr5Hh530SIHgwb59pHWC90rKIVVmtZ1oIAvLg"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 02",
+     "heading": "Britpop, art rock en nu metal"
+    },
+    {
+     "n": 13,
+     "track": "Track 01",
+     "heading": "Britpop: Blur tegen Oasis"
+    }
+   ]
+  },
+  {
+   "id": "nu-metal",
+   "name": "Nu metal",
+   "family": "rock",
+   "year": 2000,
+   "place": {
+    "name": "Los Angeles",
+    "lat": 34.02,
+    "lon": -118.4
+   },
+   "parents": [
+    "heavy-metal-80s",
+    "golden-age-hiphop",
+    "grunge"
+   ],
+   "text": "Rond 2000 werd nu metal populair: metal gecombineerd met hiphop en elektronica. Linkin Park uit Los Angeles had twee zangers: Chester Bennington zong en schreeuwde, Mike Shinoda rapte. Dat rock zich met hiphop mengde, was een teken van wat ging komen.",
+   "listen": "Hoor in Numb hoe zware gitaren samengaan met een elektronische beat en synthesizers.",
+   "tracks": [
+    {
+     "artist": "Linkin Park",
+     "title": "Numb",
+     "year": 2003,
+     "audio": "https://api.lessonup.com/v1/media/yfJw5Yoj75NdMiDhF",
+     "cover": "https://lh3.googleusercontent.com/cxkeAIDoSIwKzZKIcl0Ct2UKlP_2FE4fNW6txd_gRGwAvGNm7IFzRsZj3hCW1yWudogtCFwbCVSOP9XLydoPCLMLLGBiwYLdJ7w65Ji_"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 4,
+     "track": "Track 02",
+     "heading": "Britpop, art rock en nu metal"
+    }
+   ]
+  },
+  {
+   "id": "boerenrock",
+   "name": "Boerenrock",
+   "family": "rock",
+   "year": 1975,
+   "place": {
+    "name": "Achterhoek",
+    "lat": 51.97,
+    "lon": 6.5
+   },
+   "parents": [
+    "hard-rock",
+    "rock-n-roll"
+   ],
+   "text": "Normaal werd in 1975 in de Achterhoek opgericht rond zanger Bennie Jolink en zong in het Achterhoeks. Oerend hard (1977) is een liefdeslied voor een brommer. De band trad op in boerenkiel en op klompen; deze muziek kreeg de naam boerenrock.",
+   "listen": "Leg Oerend hard naast Radar Love van Golden Earring: twee rocknummers over de weg die niemand met elkaar verwart.",
+   "tracks": [
+    {
+     "artist": "Normaal",
+     "title": "Oerend hard",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/eb/cd/52/ebcd527f-3b21-aaaa-5a8e-6a2ca0d56d84/mzaf_12679563105688191607.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/jI362BV3r3VeNKo1XRghsNT5My8r8e6bs_PqwowImgzR3Me4J48SUJtuobJYx_dg7kDYFsQT2LCobFxdSJo-x7B3-3hQWdcplhYqBdw"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 11,
+     "track": "Track 01",
+     "heading": "Wereldspelers"
+    }
+   ]
+  },
+  {
+   "id": "nederlandstalige-rock",
+   "name": "Rock in het Nederlands",
+   "family": "rock",
+   "year": 1984,
+   "peak": [
+    1984,
+    1999
+   ],
+   "place": {
+    "name": "Nederland",
+    "lat": 52.37,
+    "lon": 4.9
+   },
+   "parents": [
+    "nederpop",
+    "new-wave",
+    "punk",
+    "soul"
+   ],
+   "text": "Na Doe Maar werd het Nederlands ook de taal van de rock. De Frank Boeijen Groep maakte new wave in eigen taal, De Dijk soul en rhythm-and-blues met blazers, The Scene stevige gitaarrock en de Heideroosjes punk. Ze vulden de nieuwe poppodia met een publiek dat de teksten woord voor woord kende.",
+   "listen": "Hoor in Mag het licht uit hoe De Dijk de warmte van een soulballad gebruikt voor een Nederlandse tekst.",
+   "tracks": [
+    {
+     "artist": "De Dijk",
+     "title": "Mag het licht uit",
+     "year": 1987,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/00/00/39/00003974-3185-7370-b607-170a6643079f/mzaf_13824258837524668700.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/-aUjG0qYDdE1qZJpPB5lDtbu3XGCIgEMMc4cs0XaO3YZ-sePUQnVO5iUv_heU-WCDfIdF2GQYs4gILdwwdpeD5xsS7jHKD3WnuXT8kU"
+    },
+    {
+     "artist": "The Scene",
+     "title": "Iedereen is van de wereld",
+     "year": 1990,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/23/dd/eb/23ddebef-c1ad-9930-5a02-fe81d2ade071/mzaf_18340760216972578857.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/_PCcKE3wB5685E9B_O1IZM0LqP09pQLl2QiJt4lPGBMYkkn9OSx230AxJXi76bFPDPfpZx7PdE-0K4nob65UHoG1Pjo6Qp2vlVWO-h-I"
+    },
+    {
+     "artist": "Heideroosjes",
+     "title": "Iedereen is gek",
+     "year": 1999,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b2/90/b8/b290b841-9fbe-e331-2ae8-7c7a7068a58d/mzaf_6436501600816981166.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/WIL7AmXcThYdLqHR2yMfYyj6BuMszwP_KhQGn7QpXVcdjRr4uubDI4LKab4UgkpqV7LLBt19ojKkegzdmi4hGToAT1f88oYJvCfjUg"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 11,
+     "track": "Track 04",
+     "heading": "Rock in het Nederlands"
+    }
+   ]
+  },
+  {
+   "id": "riot-grrrl",
+   "name": "Riot grrrl",
+   "family": "rock",
+   "year": 1991,
+   "place": {
+    "name": "Olympia (Washington)",
+    "lat": 47.04,
+    "lon": -122.9
+   },
+   "parents": [
+    "punk"
+   ],
+   "text": "Begin jaren negentig ontstond in Olympia, in de staat Washington, een feministische punkbeweging: riot grrrl. Bands als Bikini Kill en Bratmobile vonden de punkscene een mannenwereld; zangeres Kathleen Hanna riep 'girls to the front'. De bands maakten fanzines en brachten hun platen uit op kleine, onafhankelijke labels.",
+   "listen": "Rebel Girl is eenvoudig gehouden: een paar akkoorden, een harde drum en een tekst om mee te schreeuwen.",
+   "tracks": [
+    {
+     "artist": "Bikini Kill",
+     "title": "Rebel Girl",
+     "year": 1993,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/67/aa/cc/67aaccb8-1bea-6b0e-12ce-1cab07e59879/mzaf_2387918149861156571.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/yabQPxYIPFOCTvvKporlg_JMkppBx3dd1wNKy_1GzvpGT6vUfp3kkgcPh5ud4rbDLJSakx_PZ716H0ieb9gRCK2B76L7tBvB0fsrAbs"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 10,
+     "track": "Track 02",
+     "heading": "Zelf de regie"
+    }
+   ]
+  },
+  {
+   "id": "brill-building",
+   "name": "Brill Building en girlgroups",
+   "family": "pop",
+   "year": 1958,
+   "peak": [
+    1958,
+    1965
+   ],
+   "place": {
+    "name": "New York (Broadway)",
+    "lat": 40.76,
+    "lon": -73.98
+   },
+   "parents": [
+    "tin-pan-alley",
+    "rhythm-and-blues"
+   ],
+   "text": "Eind jaren vijftig werkten in het Brill Building aan Broadway jonge schrijversduo's in kamertjes met een piano, zoals Carole King en Gerry Goffin, en schreven over wat tieners bezighield. Will You Love Me Tomorrow van The Shirelles werd in 1961 de eerste nummer 1 van een zwarte meidengroep. Producer Phil Spector nam in Los Angeles op met zijn Wall of Sound.",
+   "listen": "Hoor in Be My Baby de Wall of Sound: instrumenten die dubbel en driedubbel spelen, in veel galm.",
+   "tracks": [
+    {
+     "artist": "The Shirelles",
+     "title": "Will You Love Me Tomorrow",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/38/bb/23/38bb2371-6310-c7ec-ea80-bee140a22cc0/mzaf_7728268075408233820.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/Jk_Y13V7aZ2xKulakSB0tWVzP69cK-CGmPS3ArIqrzX-K7iJ1gby7IHgOIg6A-p8AGqhf3YXV-we0eVLKfjwNk0JO6dVQ2JEe-mCGw"
+    },
+    {
+     "artist": "Little Eva",
+     "title": "The Loco-Motion",
+     "year": 1962,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/67/ed/e8/67ede8e0-c965-edc3-73cf-0e6d78d37f51/mzaf_4724350515614740775.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/dO6TG6IeJOUYtPYAiaW6xY0oqzxKqYlhk6g-k_zeJeDpld5BbKoKUamy67WuXB2oDW8smnH69KWsIfR6oN_ngv5glZlXRBpKVgG1cg"
+    },
+    {
+     "artist": "The Ronettes",
+     "title": "Be My Baby",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d5/54/d7/d554d723-0518-a447-603b-a8fd52b70d8d/mzaf_1392428010167942483.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/O0gW7H8DsdYkcl1YTQ8ZgEecqfMfpUlyHb_e4qmmrpe93Cv-DZs8ArjpQQZpZTnUiJmpQK0rzc8QIc-Lzvf0_750rYm-po9jK5PXkkRH"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 12,
+     "track": "Track 02",
+     "heading": "Het Brill Building"
+    }
+   ]
+  },
+  {
+   "id": "singer-songwriter",
+   "name": "Singer-songwriters",
+   "family": "pop",
+   "year": 1967,
+   "peak": [
+    1967,
+    1975
+   ],
+   "place": {
+    "name": "Los Angeles",
+    "lat": 34.09,
+    "lon": -118.36
+   },
+   "parents": [
+    "folk-revival",
+    "brill-building"
+   ],
+   "text": "Singer-songwriters schreven hun eigen liedjes, zongen ze zelf en vertelden in de eerste persoon over hun eigen leven. Carole King verhuisde van het Brill Building naar Los Angeles; haar Tapestry (1971) werd een van de best verkochte albums van de jaren zeventig. Joni Mitchell stemde haar gitaar in tientallen open stemmingen.",
+   "listen": "Hoor in Big Yellow Taxi de huppelende gitaar in open stemming onder een tekst over het milieu.",
+   "tracks": [
+    {
+     "artist": "Joni Mitchell",
+     "title": "Big Yellow Taxi",
+     "year": 1970,
+     "audio": "https://api.lessonup.com/v1/media/4tCkqbuu4x5p3eeyb",
+     "cover": "https://lh3.googleusercontent.com/CYKDJbiDEjbikezRrTegljmkyqDwGnpYfJVnRciVrXpamK_r0NPnMeOcgW1DHqJ5wRyVPUcN6LYyOfcdfq7N_vSTnlwpEZDI3hb6JA"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 10,
+     "track": "Track 01",
+     "heading": "Singer-songwriters"
+    },
+    {
+     "n": 2,
+     "track": "Track 01",
+     "heading": "Hippies"
+    }
+   ]
+  },
+  {
+   "id": "zweedse-pop",
+   "name": "Zweedse pop (ABBA)",
+   "family": "pop",
+   "year": 1974,
+   "place": {
+    "name": "Stockholm",
+    "lat": 59.33,
+    "lon": 18.07
+   },
+   "parents": [
+    "brill-building",
+    "british-beat"
+   ],
+   "text": "ABBA won in april 1974 het Eurovisiesongfestival met Waterloo. Benny Andersson maakte vooral de muziek, Björn Ulvaeus de Engelse teksten, en de stemmen van Agnetha en Frida werden meerdere keren over elkaar opgenomen. Zweden bouwde vanaf de jaren zeventig een eigen hitindustrie.",
+   "listen": "Dancing Queen begint niet met een couplet maar met een stuk van het refrein: het sterkste moment komt meteen.",
+   "tracks": [
+    {
+     "artist": "ABBA",
+     "title": "Dancing Queen",
+     "year": 1976,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9a/c1/a4/9ac1a457-6b2d-91f2-a74a-5e2ee7241d69/mzaf_15132640738584640960.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/dixpmhmBJ4Xam90W9uKJHVGpFf3VT_rhF751Upr9VpWyxBnMJdqE1X4efiafgu4h19iRZKG2D2CrqDhvM6MZCIwLXs53jWJFe-0flKs"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 12,
+     "track": "Track 01",
+     "heading": "ABBA"
+    }
+   ]
+  },
+  {
+   "id": "new-romantic",
+   "name": "New Romantic",
+   "family": "pop",
+   "year": 1979,
+   "peak": [
+    1979,
+    1983
+   ],
+   "place": {
+    "name": "Londen",
+    "lat": 51.51,
+    "lon": -0.12
+   },
+   "parents": [
+    "new-wave",
+    "glam-rock"
+   ],
+   "text": "In de Londense club Blitz kwam je eind jaren zeventig alleen binnen als je er opvallend uitzag. Uit die scene ontstond New Romantic, een stroming binnen new wave die leunt op de glamrock, met make-up, historische kostuums en gender bending. Duran Duran draaide dure clips en stond aan het begin van de Second British Invasion via MTV.",
+   "listen": "Hoor in Fade to Grey de gefluisterde Franse zinnen boven een pulserende sequencerbas.",
+   "tracks": [
+    {
+     "artist": "Visage",
+     "title": "Fade to Grey",
+     "year": 1980,
+     "audio": "https://api.lessonup.com/v1/media/Ego3etH4hnnXmERXA",
+     "cover": "https://lh3.googleusercontent.com/g-ReBvKBPWjZlsPsNB_Ny4oChg3HIyeoamOkEMWYgbIPk_ZdFsSc_vZAdFnhylo1Owr59JVtzjmrrubseeVgX0sk7vcnQW6_TqwhUGY"
+    },
+    {
+     "artist": "Duran Duran",
+     "title": "Planet Earth",
+     "year": 1981,
+     "audio": "https://api.lessonup.com/v1/media/KnwDNa3sgiXLj9ngC",
+     "cover": "https://lh3.googleusercontent.com/rDV5Jw4wXlnWfjVb0rK3hO3jZkxamxH_KYtzbNMjmORSMvzLJOkPAqh65IwZxGAiPoys1_9L7dIowPfd0bnZpDbLHfelqGcJhSXXny_m"
+    },
+    {
+     "artist": "ABC",
+     "title": "The Look of Love",
+     "year": 1982,
+     "audio": "https://api.lessonup.com/v1/media/sAzrDA8W4Dzwdg5Lf",
+     "cover": "https://lh3.googleusercontent.com/bnZuIziH1fBGQIrk18_BxMrSjz_sDhz23j1f8QiywLLQMhVrCrqdWgmI7sJdv-1EBigvOVtse7GrXp4GdRTOm8bg0edOXgBc7MXjt4g"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 7,
+     "track": "Track 02",
+     "heading": "New Romantic"
+    }
+   ]
+  },
+  {
+   "id": "neue-deutsche-welle",
+   "name": "Neue Deutsche Welle",
+   "family": "pop",
+   "year": 1979,
+   "peak": [
+    1979,
+    1985
+   ],
+   "place": {
+    "name": "West-Duitsland",
+    "lat": 51,
+    "lon": 9.5
+   },
+   "parents": [
+    "punk",
+    "new-wave"
+   ],
+   "text": "Rond 1979 ontstond in West-Duitsland uit punk en new wave een golf Duitstalige rock en pop, die journalist Alfred Hilsberg Neue Deutsche Welle noemde. Het begon in de avant-garde bij DAF en Einstürzende Neubauten en belandde binnen een paar jaar in de hitparade. Rond 1985 was het genre verdwenen.",
+   "listen": "Hoor hoe 99 Luftballons vrolijk klinkt en toch een protestlied tegen de Koude Oorlog is.",
+   "tracks": [
+    {
+     "artist": "Nena",
+     "title": "99 Luftballons",
+     "year": 1983,
+     "audio": "https://api.lessonup.com/v1/media/mcyBFQxsSdYzeHayi",
+     "cover": "https://lh3.googleusercontent.com/QHwauknhwW_WLL3msdoL1wjvimq8ZoztwLBiuJqbPrgua_-W9I3-EURE2QXAT4KXUtYkq6WP8KqO1fLUhenU_rU5Sw14voDnyD3vPO8"
+    },
+    {
+     "artist": "Falco",
+     "title": "Der Kommissar",
+     "year": 1981,
+     "audio": "https://api.lessonup.com/v1/media/cYCGjXbKRH8R8KCKa",
+     "cover": "https://lh3.googleusercontent.com/hI5M06dvb12bAP7UBvRrT4EmaIBRQinCuNhQu38x9OSqXAqmTDtfz2r9Ki3dhSDS029sW8ymQGlu2-2qALsSt9rLlVGOQlPEm5gdxZg"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 7,
+     "track": "Track 02",
+     "heading": "Neue Deutsche Welle"
+    }
+   ]
+  },
+  {
+   "id": "british-eurobeat",
+   "name": "British Eurobeat (Stock Aitken Waterman)",
+   "family": "pop",
+   "year": 1984,
+   "peak": [
+    1984,
+    1990
+   ],
+   "place": {
+    "name": "Londen",
+    "lat": 51.5,
+    "lon": -0.09
+   },
+   "parents": [
+    "italo-disco",
+    "hi-nrg"
+   ],
+   "text": "Halverwege de jaren tachtig ontstond in Engeland uit Italo disco en Hi-NRG een nieuw popgeluid: British Eurobeat. Het producerstrio Stock Aitken Waterman werkte als een fabriek: dezelfde studio, dezelfde muzikanten, alleen de zangers wisselden. Vanuit hun studio in Londen kwamen meer dan honderd Top 40-hits.",
+   "listen": "Hoor in You Spin Me Round de Hi-NRG-bas in achtste noten.",
+   "tracks": [
+    {
+     "artist": "Dead or Alive",
+     "title": "You Spin Me Round",
+     "year": 1984,
+     "audio": "https://api.lessonup.com/v1/media/CE4ENydkSqQW69JTW",
+     "cover": "https://lh3.googleusercontent.com/S_hZuWbJ8wVr5yfDMkdHKuYJ8LebyFzLPRdZpwWrIz-vuJnbg3yh8TGXY6azX5mU4My5eOo7rbd1Zrxdc8egjqTMwz5VT1A36GoL0Ykr"
+    },
+    {
+     "artist": "Rick Astley",
+     "title": "Never Gonna Give You Up",
+     "year": 1987,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f4/df/d0/f4dfd0bf-357f-558c-07b3-7b59400fff62/mzaf_11202855818963280395.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/PULEj3wffpwlAC2Aab1lda_mXqBOclDFR4N6VKontbxANDwKtu86nDLDQKqP1b7Vs9ix5NqYEopypghwN3S6MWtgC2-U5pORok5rbght"
+    },
+    {
+     "artist": "Kylie Minogue",
+     "title": "I Should Be So Lucky",
+     "year": 1987,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/46/b9/26/46b9264a-09d8-5961-e01a-635ca46f278d/mzaf_11360184267331293781.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/uQ6yKDfUVN3dgfjCuRaC6xpeZYSjIydSRN_DvLbCD9fQ64KjchJlwdwgnyTRCdqj0q9zWi4wBxkqdhY8P9c9XN9W7MeIydLkzUu1rdY"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 7,
+     "track": "Track 04",
+     "heading": "British Eurobeat en Stock Aitken Waterman"
+    },
+    {
+     "n": 12,
+     "track": "Track 02",
+     "heading": "Stock Aitken Waterman"
+    }
+   ]
+  },
+  {
+   "id": "boybands-girlbands",
+   "name": "Boybands en girlbands",
+   "family": "pop",
+   "year": 1990,
+   "peak": [
+    1994,
+    2000
+   ],
+   "place": {
+    "name": "Londen",
+    "lat": 51.52,
+    "lon": -0.14
+   },
+   "parents": [
+    "motown",
+    "british-eurobeat"
+   ],
+   "text": "Elk decennium heeft zijn tieneridool, met een herkenbaar gezicht, een eenvoudige hook en een productie die past bij het medium; in de jaren negentig kwam de gecaste boyband en girlband. De Spice Girls werden in 1994 samengesteld via audities na een advertentie, en werden een merk. Wannabe stond in 1996 op 1 in Engeland en in 1997 in de Verenigde Staten.",
+   "listen": "Hoor hoe in Wannabe de stemmen elkaar afwisselen, zodat elk lid een eigen rol krijgt.",
+   "tracks": [
+    {
+     "artist": "Spice Girls",
+     "title": "Wannabe",
+     "year": 1996,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/76/15/ef/7615ef0c-0db4-93ec-992b-05fa55745c4a/mzaf_2018813520783989466.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/-9Lk9xoGxCRbM7zNdb64WehH0oTcDv1RKwTV3DRFO9iMa2V3HT4H4XxLt3oUHmUAlnu4p78unTmxAEMXAy1n0EL4_cocHFhnWIFTUZIt"
+    },
+    {
+     "artist": "Take That",
+     "title": "Back for Good",
+     "year": 1995,
+     "audio": "https://api.lessonup.com/v1/media/LBGeZ7RXgaqbFGRBk",
+     "cover": ""
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 2,
+     "track": "Track 02",
+     "heading": "Tieneridolen door de decennia"
+    },
+    {
+     "n": 13,
+     "track": "Track 02",
+     "heading": "Eurodance en girl power"
+    }
+   ]
+  },
+  {
+   "id": "pop-stockholm",
+   "name": "Pop uit Stockholm (Max Martin)",
+   "family": "pop",
+   "year": 1998,
+   "peak": [
+    1998,
+    2014
+   ],
+   "place": {
+    "name": "Stockholm",
+    "lat": 59.34,
+    "lon": 18.06
+   },
+   "parents": [
+    "zweedse-pop",
+    "british-eurobeat",
+    "modern-rnb"
+   ],
+   "text": "In de Cheiron Studio in Stockholm schreven en produceerden Max Martin en zijn collega's eind jaren negentig de hits van de Backstreet Boys, *NSYNC en Britney Spears. Martin werkt met 'melodic math': regels met evenveel lettergrepen, goed zingende klinkers op de hoge noten en een hook die vaak terugkomt. Later schreef hij voor onder anderen Taylor Swift en The Weeknd.",
+   "listen": "...Baby One More Time opent met drie zware pianotonen en dan meteen de stem: de hook zit in de eerste seconden.",
+   "tracks": [
+    {
+     "artist": "Britney Spears",
+     "title": "...Baby One More Time",
+     "year": 1998,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/49/2d/12/492d127a-ae83-a0cd-97b6-10d34d4a56f5/mzaf_694336938043858459.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/OQzz5Y2MjJl6vyEBaO-PmenYdAjAATa-4jcDDB-t2N43cRNtkqdxQXpn4221zPJLgAtT0SND7Fe5SDdFwhwTfiS9a5MOYvSMMNSZqw"
+    },
+    {
+     "artist": "Backstreet Boys",
+     "title": "I Want It That Way",
+     "year": 1999,
+     "audio": "https://api.lessonup.com/v1/media/LomdARpbjCfse25iw",
+     "cover": ""
+    },
+    {
+     "artist": "The Weeknd",
+     "title": "Blinding Lights",
+     "year": 2019,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0c/c5/03/0cc503b5-9299-b207-a13c-ba5358733c56/mzaf_18217607061023109918.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/wTuXuizw6C1OkyhytFdNRW1Uq-2tBwoY06dhUjYsu7OdPBXg0vUCyJoLgHkAJMTOIgNAEXPf9zfN4_Hk0htdN7L8tIcJvEPxk4P_4LQ"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 12,
+     "track": "Track 03",
+     "heading": "Max Martin"
+    },
+    {
+     "n": 13,
+     "track": "Track 03",
+     "heading": "De cd-boom"
+    },
+    {
+     "n": 12,
+     "track": "Track 03",
+     "heading": "Het schrijfkamp"
+    }
+   ]
+  },
+  {
+   "id": "kleinkunst",
+   "name": "Kleinkunst",
+   "family": "pop",
+   "year": 1965,
+   "peak": [
+    1965,
+    1974
+   ],
+   "place": {
+    "name": "Nederland",
+    "lat": 52.13,
+    "lon": 5.29
+   },
+   "parents": [
+    "folk-revival"
+   ],
+   "text": "Kleinkunst is het Nederlandstalige lied uit cabaret en theater, met de tekst centraal en een kleine begeleiding; in de jaren vijftig waren Wim Sonneveld, Toon Hermans en Jules de Corte de grote namen. Rond 1965 schoof die traditie richting pop, toen Boudewijn de Groot liedjes zong op teksten van Lennaert Nijgh, geïnspireerd door Amerikaanse folk en Bob Dylan. Klein Orkest bracht in de jaren tachtig kleinkunst met een popband.",
+   "listen": "Hoor in Over de muur hoe een verhalend lied over Oost- en West-Berlijn uitkomt bij een refrein dat iedereen meezingt.",
+   "tracks": [
+    {
+     "artist": "Klein Orkest",
+     "title": "Over de muur",
+     "year": 1984,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a4/0d/42/a40d4253-5bf2-7e5b-6d21-0d20d26243f2/mzaf_2000300573408700218.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/iCSNz7LIpvwnQuXCp-bcMTsNRMrYGdopf-2uSmXYm_biX9ngWqN9JvhmakZcIL2Pw_HGb5ycgdWzV8iKDwSZtCVfhVDFSukxVg5psw"
+    },
+    {
+     "artist": "Klein Orkest",
+     "title": "Laat mij maar alleen",
+     "audio": "https://api.lessonup.com/v1/media/H2NfAtHCDckJzb7cC",
+     "cover": "https://lh3.googleusercontent.com/iCSNz7LIpvwnQuXCp-bcMTsNRMrYGdopf-2uSmXYm_biX9ngWqN9JvhmakZcIL2Pw_HGb5ycgdWzV8iKDwSZtCVfhVDFSukxVg5psw"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 11,
+     "track": "Track 02",
+     "heading": "De kleinkunst kantelt"
+    },
+    {
+     "n": 7,
+     "track": "Track 05",
+     "heading": "De Koude Oorlog"
+    }
+   ]
+  },
+  {
+   "id": "nederpop",
+   "name": "Nederpop",
+   "family": "pop",
+   "year": 1981,
+   "peak": [
+    1981,
+    1985
+   ],
+   "place": {
+    "name": "Nederland",
+    "lat": 52.09,
+    "lon": 5.12
+   },
+   "parents": [
+    "two-tone",
+    "reggae",
+    "new-wave",
+    "kleinkunst"
+   ],
+   "text": "Begin jaren tachtig braken in Nederland bands door die in hun eigen taal zongen, de Nederlandse tegenhanger van de Neue Deutsche Welle. Doe Maar speelde ska en reggae met Nederlandse teksten en brak in 1981 door; Het Goede Doel maakte synthpop en de Frank Boeijen Groep new wave. Nederlands zingen was ineens geen schlager of cabaret meer, maar pop.",
+   "listen": "Hoor in Sinds 1 dag of 2 (32 jaar) het skaritme met de gitaar op de offbeat.",
+   "tracks": [
+    {
+     "artist": "Doe Maar",
+     "title": "Sinds 1 dag of 2 (32 jaar)",
+     "year": 1981,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5f/da/2e/5fda2eca-0856-cfe8-695d-89aab0e2121c/mzaf_11941174568980458064.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/-JRy6xnmMh17cZuzofJqjpSjR2sS9yJk0L90lA9LnZ2DDd4lpw_NHCYkJ6P28l_YLeP9i_UVXdyMwfiuCeCitj9GavvHW5_jvU9vcdY"
+    },
+    {
+     "artist": "Het Goede Doel",
+     "title": "België",
+     "year": 1982,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b5/10/77/b5107795-d915-d9d6-8deb-582686d59511/mzaf_14366799843030049239.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/OU9M7kjQrRxZc1QXRrY8A5Z1XpPR6LTpwQ_C406QF6LNZ5NRpXfp2T5BUbNNOgsGY8K_JVR9nxTW94N3mH9XxLl4U6tMp6Rxnwv9tQ"
+    },
+    {
+     "artist": "Doe Maar",
+     "title": "De bom",
+     "year": 1983,
+     "audio": "https://api.lessonup.com/v1/media/J66AuhRzGJEdWSekQ",
+     "cover": "https://lh3.googleusercontent.com/yyo51DApkD_ckRBAaUd8Hr05PezYsLHj-H7WaOig9lL6Q5FNtrO7P4Xkznnu_D0zS9Fu1MAc1mGQwMaoVN9zFCZOVvGaCT0zDg9EVOo"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 7,
+     "track": "Track 03",
+     "heading": "Nederpop"
+    },
+    {
+     "n": 11,
+     "track": "Track 02",
+     "heading": "Doe Maar en de taalwissel"
+    },
+    {
+     "n": 7,
+     "track": "Track 05",
+     "heading": "De Koude Oorlog"
+    }
+   ]
+  },
+  {
+   "id": "nederlandstalig-lied",
+   "name": "Het Nederlandstalige lied",
+   "family": "pop",
+   "year": 1994,
+   "peak": [
+    1994,
+    2020
+   ],
+   "place": {
+    "name": "Nederland",
+    "lat": 51.95,
+    "lon": 5.5
+   },
+   "parents": [
+    "kleinkunst",
+    "nederpop"
+   ],
+   "text": "In de jaren negentig groeide het Nederlandstalige lied voor een groot publiek: Marco Borsato had vanaf 1994 hit na hit met ballads. Acda en de Munnik zetten de lijn van de kleinkunst voort, en BLØF maakte met Geike Arnaert Zoutelande (2017), een van de grootste hits ooit in Nederland. Rond 2020 vonden Snelle en Froukje hun publiek via TikTok en YouTube.",
+   "listen": "Hoor in Zoutelande een rustig duet over een strand in Zeeland.",
+   "tracks": [
+    {
+     "artist": "BLØF ft. Geike",
+     "title": "Zoutelande",
+     "year": 2017,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d2/5e/ac/d25eac6f-e2c5-9fe5-ec6f-b9a347789ead/mzaf_4193979898510667842.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/2m-D5V8bNXkWXQcWTsBCeD1Qc0LEm6uGiu5Mdu1dZG0qtZPkje-aTsrMmrJ1iKDl0gg0NEBTQNXOAET5vH8XqnScnDvjpbHyB-HjHrwD"
+    },
+    {
+     "artist": "Acda en de Munnik",
+     "title": "Het regent zonnestralen",
+     "year": 1998,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f2/ec/e8/f2ece8c0-0c84-cfe4-c808-9c7fb617c98f/mzaf_14520752649223895165.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/dJnpwDMLetyyBFn8nsQFZJ1GzhhI808KICC2_puX4ieCBWG7OHuD4m9-vMEKY0Gcp8QcSVxXBU4SfqT4SR164saf0wcRe4YOZevg9A"
+    },
+    {
+     "artist": "Froukje",
+     "title": "Groter dan ik",
+     "year": 2020,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/32/df/ef/32dfef69-bae5-46ae-1984-0d75ae84f3a4/mzaf_14827037374094664133.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/vpkwLFfS7OlXFdP9ShgwlPBI2LkpGlZ5dD2Sgg-1Jj0P-Ca_BvftH1tnOZ5vx0E577lWMugQ1CfZgauUud2HU8IiealLD90YlAT6Ukw"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 11,
+     "track": "Track 02",
+     "heading": "Het Nederlandstalige lied leeft"
+    }
+   ]
+  },
+  {
+   "id": "tiktok-pop",
+   "name": "Streaming en TikTok",
+   "family": "pop",
+   "year": 2018,
+   "place": {
+    "name": "Internet (Lil Nas X, Atlanta)",
+    "lat": 33.76,
+    "lon": -84.4
+   },
+   "parents": [
+    "trap",
+    "country"
+   ],
+   "text": "In december 2018 zette Lil Nas X uit Atlanta Old Town Road online, op een beat die hij voor 30 dollar had gekocht. Het nummer werd groot via TikTok, waar duizenden gebruikers er filmpjes bij maakten, en stond negentien weken op 1 in de Billboard Hot 100. De discussie of het country was, liet zien hoe genres in het streamingtijdperk door elkaar lopen.",
+   "listen": "Hoor de banjo uit de country boven een trapbeat met diepe 808-bas en ratelende hihats.",
+   "tracks": [
+    {
+     "artist": "Lil Nas X",
+     "title": "Old Town Road",
+     "year": 2018,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/47/7d/fd/477dfdf3-9261-cb11-d14f-b7eb454d2c5d/mzaf_4800633009593423692.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/S_Pm8DLOQ0C1M56NZbReHAfJTkrUrPLSlyfo1HT7fGzpDLLhq2sCn-Z1j8685kCq_R0fFLxIwfhmEQI1dJQ_k6LbD-rUvDivxrbbvm8"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 13,
+     "track": "Track 02",
+     "heading": "TikTok en het einde van genres"
+    }
+   ]
+  },
+  {
+   "id": "soul",
+   "name": "Soul",
+   "family": "soul",
+   "year": 1955,
+   "peak": [
+    1955,
+    1972
+   ],
+   "place": {
+    "name": "Zuid-VS",
+    "lat": 33.2,
+    "lon": -87.5
+   },
+   "parents": [
+    "gospel",
+    "rhythm-and-blues"
+   ],
+   "text": "Soul ontstond in de tweede helft van de jaren vijftig uit gospel, jazz en rhythm-and-blues. Ray Charles zette in 1954 met I Got a Woman de stap van kerk naar hitparade, op de melodie van een gospel. Soul werd de soundtrack van de burgerrechtenbeweging; Respect van Aretha Franklin werd een lied voor burgerrechten en vrouwenrechten tegelijk.",
+   "listen": "Let op het melisma en op de roep en het antwoord tussen zangeres en koor, de vorm van de kerkdienst.",
+   "tracks": [
+    {
+     "artist": "Aretha Franklin",
+     "title": "Respect",
+     "year": 1967,
+     "audio": "https://api.lessonup.com/v1/media/AdzEA4YTmLet7TERy",
+     "cover": "https://lh3.googleusercontent.com/cmtzOFz0g8ZM0xZatQudV-lZyrnNX012GVcKuKsgeirIrQMT_urDwMmarn4w1TJWB-CRLZY1lFqsd8vrQyEWnF8dV4nN_0Pxa5q4Og"
+    },
+    {
+     "artist": "Ray Charles",
+     "title": "I Got a Woman",
+     "year": 1954,
+     "audio": "https://api.lessonup.com/v1/media/4DBkg4vkZ5xBpSaZF",
+     "cover": "https://lh3.googleusercontent.com/g-8tsDbdTfe1qOfdfVlQW0JMh9I7NiWz6E28u0R_yuy2s9MSuSEXHIoN5SwMA7X0RGvUqZlrzaeQ1OhvnYP6vq136BRFl6Wi8NJ9isI"
+    },
+    {
+     "artist": "James Brown",
+     "title": "I Got You (I Feel Good)",
+     "year": 1965,
+     "audio": "https://api.lessonup.com/v1/media/G2RdKTvDKnkdnxep2",
+     "cover": "https://lh3.googleusercontent.com/F9mbiy-r3N-xgdMGuCxj4ESSlF8KDJz5LNi-e6iS4k61Id7o_Cg2VR0f8qMlua6wJPjdasd4qTfI9VZbV2eYIaOVZ-h0Ri2F47SnlUE"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 6,
+     "track": "Track 01",
+     "heading": "Soul: de kerk gaat de straat op"
+    },
+    {
+     "n": 10,
+     "track": "Track 02",
+     "heading": "Respect"
+    }
+   ]
+  },
+  {
+   "id": "motown",
+   "name": "Motown",
+   "family": "soul",
+   "year": 1959,
+   "peak": [
+    1959,
+    1972
+   ],
+   "place": {
+    "name": "Detroit",
+    "lat": 42.37,
+    "lon": -83.08
+   },
+   "parents": [
+    "soul",
+    "tin-pan-alley"
+   ],
+   "text": "Berry Gordy begon in 1959 in Detroit een label dat hij organiseerde als een autofabriek, met vaste songwriters, de huisband The Funk Brothers en een wekelijkse keuring. Het doel was zwarte muziek die ook het witte publiek kocht: 'The Sound of Young America'. The Supremes scoorden twaalf nummer-1-hits; in 1972 verhuisde Motown naar Los Angeles.",
+   "listen": "Hoor de tamboerijn op de tel en de beweeglijke baslijn van James Jamerson.",
+   "tracks": [
+    {
+     "artist": "The Supremes",
+     "title": "Where Did Our Love Go",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b9/d6/3f/b9d63f22-1337-9cc2-f8b2-8f848f84835f/mzaf_8186183896381355945.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/VC7jDODQCXfD7jLfz7HXMcpKe_INsrgEfkX6menMuE7VWmTXpEMBHwDGl3riVt6LbLuZvN-yZl-57ab1hEtUmWnQzWPYJQSWpZAeq5g"
+    },
+    {
+     "artist": "Smokey Robinson & The Miracles",
+     "title": "The Tracks of My Tears",
+     "year": 1965,
+     "audio": "https://api.lessonup.com/v1/media/RoTsyuLTLdQgAE8qy",
+     "cover": "https://lh3.googleusercontent.com/ZECvMrxKLIbhKCD4yLFSxOA_guPPKP6XAE31HFIQksjUCaSUqKZnR9zjiRxhyBfX6iYJuUrZ_1wSmV4yPiyw2L46uKnktRgEX8N5FTdU"
+    },
+    {
+     "artist": "The Jackson 5",
+     "title": "I Want You Back",
+     "year": 1969,
+     "audio": "https://api.lessonup.com/v1/media/sowKbn3NSJkLXq3yF",
+     "cover": "https://lh3.googleusercontent.com/xuRy-o1kdjmEt7vcrFu9SsfKpOZbDYsbNzJkaNxPB4R895tJbnRKxqk0YOGff2FLmtHQdTIoO_8VZdlRDVUqTeFFvoUoK7jVz0c7qnuq"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 6,
+     "track": "Track 02",
+     "heading": "Motown: Hitsville U.S.A."
+    },
+    {
+     "n": 12,
+     "track": "Track 03",
+     "heading": "Motown: de lopende band"
+    }
+   ]
+  },
+  {
+   "id": "stax",
+   "name": "Stax en Memphis-soul",
+   "family": "soul",
+   "year": 1957,
+   "peak": [
+    1961,
+    1975
+   ],
+   "place": {
+    "name": "Memphis",
+    "lat": 35.12,
+    "lon": -90.03
+   },
+   "parents": [
+    "soul",
+    "rhythm-and-blues"
+   ],
+   "text": "In Memphis begonnen Jim Stewart en Estelle Axton in 1957 het label dat vanaf 1961 Stax heette. Er werd live opgenomen in een oude bioscoop, en het geluid was rauwer en zuidelijker dan Motown: een zware bas, droge drums en de Memphis Horns. Huisband Booker T. & the MG's bestond uit zwarte en witte muzikanten.",
+   "listen": "Green Onions is een 12-maten blues in F: hoor het herhaalde figuur op het Hammondorgel en de scherpe gitaarakkoorden ertegenin.",
+   "tracks": [
+    {
+     "artist": "Booker T. & the MG’s",
+     "title": "Green Onions",
+     "year": 1962,
+     "audio": "https://api.lessonup.com/v1/media/biAGAhKyxvGgAteiA",
+     "cover": "https://lh3.googleusercontent.com/1t7ZfUr67sU5Pdt2Q5PE03Tbiwu77Dsi3VeKyF_fbuBYKNaglEt3KJ68sGyF5EjVMnKMazP8ShcC3pZ6GrVTQQiOEW1EQrIeXZNGDaM"
+    },
+    {
+     "artist": "Otis Redding",
+     "title": "(Sittin’ On) The Dock of the Bay",
+     "year": 1968,
+     "audio": "https://api.lessonup.com/v1/media/rNZiPTdL6qnjwrdy4",
+     "cover": "https://lh3.googleusercontent.com/ZtsT42IPdJyN-KwCcNP_b516FpodxPD6Qb4IEuOWxPy9uBw1uGlXwZ31ZA5IvyFm-d8yQhRHSfGQ9UZkk7_Uyn-tCyP3p0Dyvlol3g4"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 6,
+     "track": "Track 03",
+     "heading": "Stax: Soulsville U.S.A."
+    }
+   ]
+  },
+  {
+   "id": "funk",
+   "name": "Funk",
+   "family": "soul",
+   "year": 1965,
+   "peak": [
+    1965,
+    1980
+   ],
+   "place": {
+    "name": "Verenigde Staten",
+    "lat": 39.5,
+    "lon": -98.35
+   },
+   "parents": [
+    "soul",
+    "rhythm-and-blues"
+   ],
+   "text": "Funk groeide in de tweede helft van de jaren zestig uit jazz, rhythm-and-blues en soul, met James Brown in de hoofdrol. Alle instrumenten komen samen op de eerste tel, 'on the one', en ritme gaat boven harmonie: een nummer blijft vaak minutenlang op één akkoord. George Clinton met P-Funk, Stevie Wonder en Earth, Wind & Fire bouwden erop voort.",
+   "listen": "Hoor in Sex Machine de korte, gedempte gitaarslag, de bas van Bootsy Collins en de roep en het antwoord tussen Brown en Bobby Byrd.",
+   "tracks": [
+    {
+     "artist": "James Brown",
+     "title": "Get Up (I Feel Like Being a) Sex Machine",
+     "year": 1970,
+     "audio": "https://api.lessonup.com/v1/media/FxECT45jqHXAgr6bD",
+     "cover": "https://lh3.googleusercontent.com/zX26G03Y3Mdo-mLkdD4tlacmnhdppPWzGvq9VS8qeiD2fzfM3ioUdffGCJ431OQ3gDsVmqm1qTtnYP1GeODPviU8cZMwLWydac8gIUk"
+    },
+    {
+     "artist": "Parliament",
+     "title": "Give Up the Funk",
+     "year": 1975,
+     "audio": "https://api.lessonup.com/v1/media/wLfMvc6qjFsze5SJb",
+     "cover": "https://lh3.googleusercontent.com/QbOGX-X4i0JCUMQJF8F9BYJxvQAOqA1gG3FCcTnK3IXclvXuQafP994FootntpXMYKdKrbFpwo1fLehkzf2kaHzAA-fx4vvF6S3FBtA"
+    },
+    {
+     "artist": "Stevie Wonder",
+     "title": "Superstition",
+     "year": 1972,
+     "audio": "https://api.lessonup.com/v1/media/6wo993G6c78kkGfGm",
+     "cover": "https://lh3.googleusercontent.com/Ic24QJcUyyAUfI6KVXoqL5MvKoXHzodP1xf0RatnUrcLx_IMfY7xy3SJMsXndMX_3SCY7hsIwPpNLKoT09JTT3LGBBpB10xnP864-3s"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 6,
+     "track": "Track 01",
+     "heading": "Funk: alles op de één"
+    }
+   ]
+  },
+  {
+   "id": "disco",
+   "name": "Disco",
+   "family": "soul",
+   "year": 1970,
+   "peak": [
+    1974,
+    1980
+   ],
+   "place": {
+    "name": "New York",
+    "lat": 40.74,
+    "lon": -74
+   },
+   "parents": [
+    "funk",
+    "soul"
+   ],
+   "text": "Disco ontstond rond 1970 in New Yorkse clubs voor zwarte, latino en homoseksuele bezoekers, zoals The Loft en later de Paradise Garage, waar de dj platen naadloos liet overlopen. Het ritme is four-on-the-floor: een bassdrum op elke tel, rond 120 bpm, met strijkers en blazers erboven. Na de Disco Demolition Night in 1979 leefde disco voort als garage en house.",
+   "listen": "Hoor in Le Freak de korte 'chucking'-akkoorden van Nile Rodgers en de bas van Bernard Edwards die steeds beweegt.",
+   "tracks": [
+    {
+     "artist": "Chic",
+     "title": "Le Freak",
+     "year": 1978,
+     "audio": "https://api.lessonup.com/v1/media/AZgvyzqarENwEMgX8",
+     "cover": "https://lh3.googleusercontent.com/hko1HceojhuL_D0yctDv7IYiIJaizK7FfJug9Hjdp-mh7g1lyYalqev571c7HlSjBliyRIbx_8wWNJYtiw6FlESW6jUX2rd0z_DlJoI"
+    },
+    {
+     "artist": "Bee Gees",
+     "title": "Stayin’ Alive",
+     "year": 1977,
+     "audio": "https://api.lessonup.com/v1/media/tYSeXzmS8Y9cnvKky",
+     "cover": "https://lh3.googleusercontent.com/H_bGJbcikPN1UiDyinSjlwz80DiR8OBQNEMJ2A170Ohrf3GmGP_AhmRcvuHSRDuh9oc6mLsaZvLoVN6H8PlAIn0-x84TFZnPqEYR0cc"
+    },
+    {
+     "artist": "Village People",
+     "title": "Y.M.C.A.",
+     "year": 1978,
+     "audio": "https://api.lessonup.com/v1/media/MoQooDvFdrSHfMNTp",
+     "cover": "https://lh3.googleusercontent.com/VNajp1n3A4qINGAPum-OvBsmhwuv9fJwfUBxy_Q9RFk-PbJd74VegGVbN0Di_CHwdt-L0Ibhnuw7QjHkcUrJW17Qco9jJlswyV98iMWM"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 6,
+     "track": "Track 03",
+     "heading": "Disco en Disco Demolition Night"
+    },
+    {
+     "n": 4,
+     "track": "Track 03",
+     "heading": "Disco-rock en postpunk"
+    }
+   ]
+  },
+  {
+   "id": "modern-rnb",
+   "name": "Moderne R&B",
+   "family": "soul",
+   "year": 1980,
+   "place": {
+    "name": "Verenigde Staten",
+    "lat": 38.5,
+    "lon": -96
+   },
+   "parents": [
+    "soul",
+    "funk",
+    "disco"
+   ],
+   "text": "De term rhythm-and-blues kwam terug als R&B: zang, productie en drumcomputers staan centraal, en de producer wordt een ster. Het begin ligt bij Michael Jackson en Quincy Jones; Jimmy Jam en Terry Lewis maakten de Minneapolis-sound voor Janet Jackson. Via new jack swing en hiphopsoul werden R&B en hiphop na 2000 de kern van de mainstream.",
+   "listen": "Hoor in I Wanna Dance with Somebody een gospelstem in een synthpopproductie.",
+   "tracks": [
+    {
+     "artist": "Whitney Houston",
+     "title": "I Wanna Dance with Somebody",
+     "year": 1987,
+     "audio": "https://api.lessonup.com/v1/media/xjYExJ8xDhuQ9PAp8",
+     "cover": "https://lh3.googleusercontent.com/hbUb-va0D-RLAG5dkDe8NHWa6dQH5ppU3GD7yIg1XSfcR4JRuO6FX86ViuUf3WWrsZfpOqXXCR4RePqGnzLjdu3ETYXCDzayXxqLFIQ"
+    },
+    {
+     "artist": "Janet Jackson",
+     "title": "When I Think of You",
+     "year": 1986,
+     "audio": "https://api.lessonup.com/v1/media/nnQo7p3CGteNMNpXH",
+     "cover": "https://lh3.googleusercontent.com/MuyNGpDwGpwpsmNm91AMJ_YQ5Ezms5Tg9Reeqy1hoPEV_AGm8wy1yxRRb0AwXF5DacRqRRMpbq-7-BkaNb5Hc5TdvJluxCpVIU4K3l0"
+    },
+    {
+     "artist": "Beyoncé",
+     "title": "Halo",
+     "year": 2008,
+     "audio": "https://api.lessonup.com/v1/media/neyRZSiW7rxXQYRXG",
+     "cover": "https://lh3.googleusercontent.com/Dripzzr4eSkwAiVl4kv_H2R7yjkAA0vKskdt_oxLOuyC-1EI_Aa8b5CgTRCHUeJYD_KVKmilojyav8ALgPwvUknoszo1XC0x94mvQjnn"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 6,
+     "track": "Track 03",
+     "heading": "Moderne R&B"
+    },
+    {
+     "n": 7,
+     "track": "Track 06",
+     "heading": "Megasterren"
+    },
+    {
+     "n": 10,
+     "track": "Track 03",
+     "heading": "Van Anouk tot Billie"
+    }
+   ]
+  },
+  {
+   "id": "neo-soul",
+   "name": "Neo-soul",
+   "family": "soul",
+   "year": 1997,
+   "place": {
+    "name": "Verenigde Staten",
+    "lat": 37,
+    "lon": -92
+   },
+   "parents": [
+    "soul",
+    "modern-rnb",
+    "golden-age-hiphop"
+   ],
+   "text": "Neo-soul is R&B die teruggreep op de soul van de jaren zeventig, met onder anderen Erykah Badu en D'Angelo. Badu nam Tyrone (1997) live op, met harmonieën uit de jazz, en ook de warme klank van de Rhodes-piano dook weer op. Lauryn Hill combineerde op haar soloalbum (1998) doo-wopkoortjes, een soulgroove en rap.",
+   "listen": "Hoor dat Tyrone live is opgenomen, met jazzharmonieën onder de stem.",
+   "tracks": [
+    {
+     "artist": "Erykah Badu",
+     "title": "Tyrone",
+     "year": 1997,
+     "audio": "https://api.lessonup.com/v1/media/Tz7wwP5bF9bXF2k6q",
+     "cover": ""
+    },
+    {
+     "artist": "Lauryn Hill",
+     "title": "Doo Wop (That Thing)",
+     "year": 1998,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/2c/70/d92c708f-1a4a-d022-e188-a75ecd762b75/mzaf_926740419110213225.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/0O1gQQZ6lrjVYvFUbI7jh__Mg2R2Eih5v8zFvhCsZjPbP0OWFXIOQPRxL3IGvrOjrd71LldkZW2txtdVwcKnNVVef0JpmxXHSW6W4w"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 6,
+     "track": "Track 03",
+     "heading": "Moderne R&B"
+    },
+    {
+     "n": 9,
+     "track": "Track 02",
+     "heading": "Mellotron en Rhodes"
+    },
+    {
+     "n": 10,
+     "track": "Track 02",
+     "heading": "Zelf de regie"
+    }
+   ]
+  },
+  {
+   "id": "hiphop",
+   "name": "Vroege hiphop",
+   "family": "hiphop",
+   "year": 1973,
+   "peak": [
+    1979,
+    1986
+   ],
+   "place": {
+    "name": "The Bronx, New York",
+    "lat": 40.84,
+    "lon": -73.87
+   },
+   "parents": [
+    "funk",
+    "disco",
+    "reggae"
+   ],
+   "text": "Op 11 augustus 1973 draaide Kool Herc, die de sound systems uit Kingston kende, op een feest aan Sedgwick Avenue in The Bronx. Met twee exemplaren van dezelfde plaat verlengde hij de break, en MC's gingen daaroverheen rappen. De eerste rap-hit was Rapper's Delight (1979); The Message (1982) beschreef als eerste rap-hit het leven in het getto.",
+   "listen": "Hoor in The Message het lage tempo, de dreigende stemming en de synthesizerlijn die steeds terugkeert.",
+   "tracks": [
+    {
+     "artist": "Grandmaster Flash & The Furious Five",
+     "title": "The Message",
+     "year": 1982,
+     "audio": "https://api.lessonup.com/v1/media/fh5zehittwHAjT4Xg",
+     "cover": "https://lh3.googleusercontent.com/DK2EUt8EWvw9Rynb8JKyStJc2aFbTqHmgSh7oC8jkziGf3MefDpBV0X9J35f5d70MYJwbg3QNOjoOvcNCzBHUfRFFnxd_3TC4I-eask"
+    },
+    {
+     "artist": "The Sugarhill Gang",
+     "title": "Rapper’s Delight",
+     "year": 1979,
+     "audio": "https://api.lessonup.com/v1/media/zFHJpGona4ypPhaaa",
+     "cover": "https://lh3.googleusercontent.com/ikvA9RT6I1q1aJxmIqR_WFZQzEUqlcgYTyEfi2SKwXbdOOqT2k0_8hlTeoSBfAcub4bqeoCBLIF_n-6zAPOk9ruosYWhLeY1PlDzpEM"
+    },
+    {
+     "artist": "Run-DMC & Aerosmith",
+     "title": "Walk This Way",
+     "year": 1986,
+     "audio": "https://api.lessonup.com/v1/media/27GXxSfpkFkaxZ4Dy",
+     "cover": "https://lh3.googleusercontent.com/9RUfN5zZnQJnr__BORm-xA1Py62KUr9z2pY2wCcyRzxMEQHfmjiKoJFDaoyuLZtykLhkR1Sp0LlYKOQ_YQxBasKuIoTQqmyP7f3a1A"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 6,
+     "track": "Track 01",
+     "heading": "Hiphop: het begin"
+    },
+    {
+     "n": 7,
+     "track": "Track 02",
+     "heading": "Hiphop"
+    }
+   ]
+  },
+  {
+   "id": "electro",
+   "name": "Electro",
+   "family": "electronic",
+   "year": 1982,
+   "place": {
+    "name": "New York",
+    "lat": 40.82,
+    "lon": -73.9
+   },
+   "parents": [
+    "kraftwerk",
+    "hiphop"
+   ],
+   "text": "Afrika Bambaataa draaide op zijn feesten in The Bronx ook Kraftwerk. In 1982 nam hij met Arthur Baker en John Robie Planet Rock op: de melodie uit Trans-Europe Express, het ritme uit de Roland TR-808. Zo ontstond electro: koude Europese synthesizers met een Amerikaanse breakbeat.",
+   "listen": "Hoor de 808: een korte droge snare, een tikkende hi-hat en een diepe bassdrum die lang uitklinkt.",
+   "tracks": [
+    {
+     "artist": "Afrika Bambaataa & Soulsonic Force",
+     "title": "Planet Rock",
+     "year": 1982,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5a/ca/f6/5acaf69b-fa0e-3552-c28c-bc7e722f9415/mzaf_11389983388712002935.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/qNCfT1JxcSMNkKM_ySY0rdrQagG_ywQX0n4H25agFdB_VQhdI2597OikVl4ij9RexwrieWFtKmTf9hziyDrq6M8ZjFk8rOV16JgjAg"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 8,
+     "track": "Track 02",
+     "heading": "Electro: Kraftwerk in de Bronx"
+    },
+    {
+     "n": 9,
+     "track": "Track 01",
+     "heading": "De Roland TR-808"
+    }
+   ]
+  },
+  {
+   "id": "golden-age-hiphop",
+   "name": "Golden age-hiphop",
+   "family": "hiphop",
+   "year": 1987,
+   "peak": [
+    1987,
+    1996
+   ],
+   "place": {
+    "name": "New York",
+    "lat": 40.7,
+    "lon": -73.94
+   },
+   "parents": [
+    "hiphop",
+    "funk"
+   ],
+   "text": "Eind jaren tachtig werden samplers betaalbaar en bouwden producers beats uit stukjes bestaande opnames: de golden age van de hiphop. Public Enemy stapelde samples, sirenes en scratches, De La Soul koos een speelse toon en de Wu-Tang Clan lo-fi beats met samples uit kungfufilms. Na een rechtszaak in 1991 moest voor elke sample toestemming worden gevraagd.",
+   "listen": "Hoor in Night of the Living Baseheads hoe The Bomb Squad laag op laag stapelt: samples, sirenes, scratches en toespraken.",
+   "tracks": [
+    {
+     "artist": "Public Enemy",
+     "title": "Night of the Living Baseheads",
+     "year": 1988,
+     "audio": "https://api.lessonup.com/v1/media/GdFZyJanXeZirCRzj",
+     "cover": "https://lh3.googleusercontent.com/boehEYscLkPW0hT9RERDoSoHjnD3xxIczDpuOl0Sz6PGRcAnDKG5FPD1_DIPfydGHMCkDIxfFhIi5ZaErLWpL88mhlx0DTzqdJHh0g"
+    },
+    {
+     "artist": "De La Soul",
+     "title": "Me Myself and I",
+     "year": 1989,
+     "audio": "https://api.lessonup.com/v1/media/SGWXL7tdTioDaWi3u",
+     "cover": "https://lh3.googleusercontent.com/2J3HJnGTScokzYMu5ve6aLnAcCUavwTNf1_rQROsZ6jtCprvDHpDvqJknpHjAO8qf2XN1x5pBAJEmb6yXSaDMkW2ldtl4RFEBB3tJF4"
+    },
+    {
+     "artist": "Wu-Tang Clan",
+     "title": "Protect Ya Neck",
+     "year": 1993,
+     "audio": "https://api.lessonup.com/v1/media/7jvkA5sBRTbjHDXKN",
+     "cover": "https://lh3.googleusercontent.com/BLjHyFiYJvKbujV6sbWZ2dC1pHJMz-mXX-kdXx2Msx07GVNTMQdOrQbLhXL9DY6o6ZrsImzEmt5LWYW6vK13GDboEZAjvQIBj582BsA"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 6,
+     "track": "Track 02",
+     "heading": "Hiphop wordt groot"
+    },
+    {
+     "n": 9,
+     "track": "Track 03",
+     "heading": "De sampler: muziek uit muziek"
+    }
+   ]
+  },
+  {
+   "id": "gangsta-rap",
+   "name": "Gangsta rap",
+   "family": "hiphop",
+   "year": 1988,
+   "place": {
+    "name": "Compton (Los Angeles)",
+    "lat": 33.9,
+    "lon": -118.22
+   },
+   "parents": [
+    "hiphop",
+    "golden-age-hiphop"
+   ],
+   "text": "Aan de westkust ontstond gangsta rap. N.W.A. uit Compton, een voorstad van Los Angeles, bracht in 1988 Straight Outta Compton uit, met Fuck tha Police als aanklacht tegen politiegeweld. Teksten over geweld leidden tot ophef en tot een rivaliteit tussen East en West Coast die uit de hand liep.",
+   "listen": "Hoor hoe direct en expliciet de tekst de politie van Los Angeles aanklaagt.",
+   "tracks": [
+    {
+     "artist": "N.W.A.",
+     "title": "Fuck tha Police",
+     "year": 1988,
+     "audio": "https://cdn.lessonup.com/kpiL/kpiL3EEevnXifw2oJ/3142887a-c957-4ce3-a084-c66e4c7708c2/converted.mp3",
+     "cover": "https://lh3.googleusercontent.com/pYYi3BWLuc1UZoCbXDUA05YG2gzwMD4B5s-nk62LQYXNLy1mdynypIR7IgBY-YyksB7eakkWcxj1yT-MPLArsj0kZ-2BA8LqNtsl3i8"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 6,
+     "track": "Track 02",
+     "heading": "Hiphop wordt groot"
+    }
+   ]
+  },
+  {
+   "id": "g-funk",
+   "name": "G-funk",
+   "family": "hiphop",
+   "year": 1992,
+   "place": {
+    "name": "Los Angeles",
+    "lat": 33.98,
+    "lon": -118.25
+   },
+   "parents": [
+    "gangsta-rap",
+    "funk"
+   ],
+   "text": "Dr. Dre, voormalig lid van N.W.A., ontwikkelde met The Chronic (1992) de G-funk: trage funkgrooves met synthesizers en veel ruimte. Op California Love zingt Roger Troutman door een talkbox. Still D.R.E. (1999) draait om een minimale pianoriff van Scott Storch.",
+   "listen": "Hoor in Still D.R.E. hoeveel stilte er rond de pianoriff en de drums is.",
+   "tracks": [
+    {
+     "artist": "Dr. Dre feat. Snoop Dogg",
+     "title": "Still D.R.E.",
+     "year": 1999,
+     "audio": "https://api.lessonup.com/v1/media/pBZd3q38kQQQ4ZxGj",
+     "cover": "https://lh3.googleusercontent.com/A4IVzcAldx3qqWo1Fm4BPtkoDpS9fI7LdmJ8flizdmFQ1XLl5kFrVO7WFc8Orskmpz1vjqgtQhMiLr7f-zJnZEK1iytKWpU2CvuNhh4"
+    },
+    {
+     "artist": "2Pac feat. Dr. Dre",
+     "title": "California Love",
+     "year": 1995,
+     "audio": "https://api.lessonup.com/v1/media/FJHdaqTiTQbXqTt2r",
+     "cover": "https://lh3.googleusercontent.com/Tvjr2LmTuqH_wnDtZJihKbANpQfsZBHfw8daSFNR91N8vjfKqePuQ618nE_69kbd30XXQ6NcEQO6OzVkyeLTXIkdlDthGivF6iPb-A"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 6,
+     "track": "Track 02",
+     "heading": "Hiphop wordt groot"
+    }
+   ]
+  },
+  {
+   "id": "trap",
+   "name": "Trap",
+   "family": "hiphop",
+   "year": 2000,
+   "place": {
+    "name": "Atlanta",
+    "lat": 33.75,
+    "lon": -84.39
+   },
+   "parents": [
+    "golden-age-hiphop",
+    "electro"
+   ],
+   "text": "In Atlanta groeide vanaf de jaren 2000 trap, een hiphopstijl uit het zuiden van de Verenigde Staten. De basis zijn lange, glijdende 808-bassdrums en snelle hi-hat-roffels, en Auto-Tune werd een gewoon onderdeel van de stem. Old Town Road (2018) liet horen hoe trap zich met country kon mengen.",
+   "listen": "Hoor in Old Town Road de diepe 808-bas en de hihats die in snelle roffels ratelen.",
+   "tracks": [
+    {
+     "artist": "Lil Nas X",
+     "title": "Old Town Road",
+     "year": 2018,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/47/7d/fd/477dfdf3-9261-cb11-d14f-b7eb454d2c5d/mzaf_4800633009593423692.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/S_Pm8DLOQ0C1M56NZbReHAfJTkrUrPLSlyfo1HT7fGzpDLLhq2sCn-Z1j8685kCq_R0fFLxIwfhmEQI1dJQ_k6LbD-rUvDivxrbbvm8"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 9,
+     "track": "Track 01",
+     "heading": "De Roland TR-808"
+    },
+    {
+     "n": 9,
+     "track": "Track 04",
+     "heading": "Auto-Tune: correctie wordt effect"
+    }
+   ]
+  },
+  {
+   "id": "nederhop",
+   "name": "Nederhop",
+   "family": "hiphop",
+   "year": 1990,
+   "peak": [
+    1995,
+    2014
+   ],
+   "place": {
+    "name": "Amsterdam",
+    "lat": 52.37,
+    "lon": 4.8
+   },
+   "parents": [
+    "golden-age-hiphop"
+   ],
+   "text": "Osdorp Posse uit Amsterdam begon vanaf 1990 te rappen in plat Amsterdams: hardcore rap over de straat en de stad. Extince uit Oosterhout scoorde in 1995 met Spraakwater de eerste Nederlandstalige hiphophit. Na 2000 groeide Nederhop uit tot een van de belangrijkste genres van het land, met onder anderen De Jeugd van Tegenwoordig en Typhoon.",
+   "listen": "Hoor in Spraakwater hoe soepel het Nederlands rijmt en swingt op een ontspannen funkbeat.",
+   "tracks": [
+    {
+     "artist": "Extince",
+     "title": "Spraakwater",
+     "year": 1995,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c1/db/65/c1db65c6-c17d-91c1-3be3-a72bd20d11cc/mzaf_438409481925501255.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/heojB0rx8M2dw0N2zh3pU2kUb6mxC-n2vQ9Ev7jwIS_vHbOI0iW1nNhRJ34PzQWW62PCIBxdE0hivI0oyL9Nso90rOrCGLZixkcPIw"
+    },
+    {
+     "artist": "Osdorp Posse",
+     "title": "Origineel Amsterdams",
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/7f/19/fb/7f19fb14-5e57-cf5f-5708-b89048ee739d/mzaf_7510407540352587888.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/-hVzZD2aEiPtpZ8SSl0vEFgsvPR55b8EFx7e0uNZHtxHCuEXQ_CNSwW1NKIq13YgzVkkNRfm6J_x4PGPMJRqycVdLhNUqs2togyMmCY"
+    },
+    {
+     "artist": "Typhoon",
+     "title": "Hemel valt",
+     "year": 2014,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6c/94/9f/6c949f80-e4d8-66b2-5bb2-a77185d3e9d2/mzaf_14128947295391816207.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/jyieMvuEw1JnA_uNoGCctKR8voZ_kQAsIV_lRYPapW39iwht-NdtW-TU1l0oAZuh_SsvetYCw7rzzeFumF0rB_uMsraYtkJSg1jQKDub"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 11,
+     "track": "Track 01",
+     "heading": "Nederhop"
+    }
+   ]
+  },
+  {
+   "id": "moog",
+   "name": "Moog en de eerste synthesizerpop",
+   "family": "electronic",
+   "year": 1964,
+   "peak": [
+    1968,
+    1976
+   ],
+   "place": {
+    "name": "Trumansburg (New York)",
+    "lat": 42.54,
+    "lon": -76.66
+   },
+   "parents": [
+    "elektronische-studio"
+   ],
+   "text": "Vanaf 1964 bouwde Robert Moog in Trumansburg synthesizers die een muzikant zelf kon bespelen, met een gewoon pianoklavier. Wendy Carlos maakte het instrument bekend met Switched-On Bach (1968), en in 1970 kwam de draagbare Minimoog. Popcorn van Hot Butter (1972) werd een wereldhit, met de synthesizer als grappig geluid bovenop een gewone band.",
+   "listen": "Hoor dat de synthesizer in Popcorn maar één toon tegelijk speelt: de eerste synthesizers waren monofoon.",
+   "tracks": [
+    {
+     "artist": "Hot Butter",
+     "title": "Popcorn",
+     "year": 1972,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/fb/c5/6d/fbc56d95-d53e-f049-a922-028923f10d71/mzaf_17629893944753969255.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/jroJQrufzeeZ5GpudmPUzdHODLIZJYoMRg50M8xtAXpXYleWiEd3H-exno-ESBA3mPhAxpt7t9gnc5BfqyYQYSTN31au3nMtv6w4q_Q"
+    },
+    {
+     "artist": "Emerson, Lake & Palmer",
+     "title": "Lucky Man",
+     "year": 1970,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/57/a8/3e/57a83e74-e6c4-5569-6b3e-b1536d7c09d7/mzaf_6303048359236341984.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/zWzMqVYMenS8E7-S09YYs8FffJKaNqIL3iLvOvjykWqieOV1ulkZkF2ziKhWCVdmeH-wCVehP8ZWVpgx4GcGZri__NHrN6d95FF8JA"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 8,
+     "track": "Track 03",
+     "heading": "De Moog in de hitparade"
+    },
+    {
+     "n": 9,
+     "track": "Track 03",
+     "heading": "De Moog: klank als bouwpakket"
+    },
+    {
+     "n": 10,
+     "track": "Track 01",
+     "heading": "De eerste vrouwen achter de knoppen"
+    }
+   ]
+  },
+  {
+   "id": "kraftwerk",
+   "name": "Kraftwerk en de mens-machine",
+   "family": "electronic",
+   "year": 1974,
+   "peak": [
+    1974,
+    1981
+   ],
+   "place": {
+    "name": "Düsseldorf",
+    "lat": 51.22,
+    "lon": 6.79
+   },
+   "parents": [
+    "krautrock",
+    "moog"
+   ],
+   "text": "Kraftwerk werd in 1970 in Düsseldorf opgericht en liet gitaar en drumstel staan voor synthesizers, elektronische drums en de vocoder. Autobahn (1974) opent met een nummer van 22 minuten over een rit over de snelweg; Trans-Europe Express (1977) klinkt als wielen over de rails. De invloed reikte tot de hiphop in New York en de techno in Detroit.",
+   "listen": "Hoor in Trans-Europe Express het strakke ritme zonder swing, als een trein over de rails.",
+   "tracks": [
+    {
+     "artist": "Kraftwerk",
+     "title": "Trans-Europe Express",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a8/ca/67/a8ca67d8-de08-874a-3ffd-7820fa16ad36/mzaf_8423911619354970353.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/HnDQOp-91QxsAVwg3BI_FBS9-zkEKYVFIdqzCE0KbKbfT5p6Ss2TN1iDTyZg3_pBpwf5wnkxoXRfhPnsLOD0oGjTItOktfs5TmQ1vA"
+    },
+    {
+     "artist": "Kraftwerk",
+     "title": "Autobahn",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/59/76/f0/5976f0df-62c8-3c8b-d512-84dee6200c2e/mzaf_13420799019023363204.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/vnvfRyUunguHj4c3PRfPf9V_tKRxSMCKXg5GB3lxlVYdLHqtoRixxumkkBSS156dyznj-mIZlR9QHJ7ZMrQ3I8TKh8-oZLSYV7AmNw"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 8,
+     "track": "Track 04",
+     "heading": "Kraftwerk: de mens-machine"
+    }
+   ]
+  },
+  {
+   "id": "hi-nrg",
+   "name": "Synthdisco en Hi-NRG",
+   "family": "electronic",
+   "year": 1977,
+   "place": {
+    "name": "München",
+    "lat": 48.14,
+    "lon": 11.58
+   },
+   "parents": [
+    "disco",
+    "moog"
+   ],
+   "text": "In München maakte producer Giorgio Moroder in 1977 met Donna Summer I Feel Love, zonder band: de baslijn komt uit een Moog die door een sequencer wordt aangestuurd. Het nummer staat aan het begin van hi-NRG, Italo disco en later house. Hi-NRG is snelle, elektronische dansmuziek uit de clubs.",
+   "listen": "Hoor de baslijn die een sequencer eindeloos en precies op tijd herhaalt, met de hoge, lang aangehouden zang erboven.",
+   "tracks": [
+    {
+     "artist": "Donna Summer",
+     "title": "I Feel Love",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f6/f2/f0/f6f2f08a-a788-a354-b5ed-b4a71f8a58da/mzaf_11155681679719877923.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/ximHVwW6gB8tSJakpLC9W_sUHmgQCmnLD-fIgjUe619bq1M9RJMKawp_vfTszjyqN1nejd_iwWI-g3Dp7Q7kQYVG3ZrR_RosuswdAg"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 8,
+     "track": "Track 01",
+     "heading": "I Feel Love"
+    }
+   ]
+  },
+  {
+   "id": "synthpop",
+   "name": "Synthpop",
+   "family": "electronic",
+   "year": 1978,
+   "peak": [
+    1979,
+    1988
+   ],
+   "place": {
+    "name": "Engeland",
+    "lat": 52.48,
+    "lon": -1.9
+   },
+   "parents": [
+    "kraftwerk",
+    "new-wave"
+   ],
+   "text": "Synthpop is een poppy stroming binnen new wave: de lijn loopt van Kraftwerk via Gary Numan naar OMD en de Pet Shop Boys. Vaak is het een duo van een zanger en iemand achter de synthesizers. Eurythmics nam Sweet Dreams op met een goedkope drumcomputer op een zolder, en Bronski Beat zong openlijk over het leven als homo.",
+   "listen": "Hoor in Tainted Love hoe een soulnummer uit 1964 een koude, elektronische versie krijgt.",
+   "tracks": [
+    {
+     "artist": "Soft Cell",
+     "title": "Tainted Love",
+     "year": 1981,
+     "audio": "https://api.lessonup.com/v1/media/coDE3QohE2kfpJfrd",
+     "cover": "https://lh3.googleusercontent.com/Fo24lRbsw-mlRr399LjittXskQxxb9rhAjQekbGGtJxy_tl1e_o3xJ9o_Z_l72wxlUPgg2mMfCfd4879eo4bw_5bcyP-Cw2mCYCiAKs"
+    },
+    {
+     "artist": "Eurythmics",
+     "title": "Sweet Dreams",
+     "year": 1983,
+     "audio": "https://api.lessonup.com/v1/media/QrEng9hnNRepeEF4L",
+     "cover": "https://lh3.googleusercontent.com/vpEE7y3w45ZR01dpVh9UVXiWawHHsOFphLUCKsY_HoLukoKYkXSzAmmhkz2K1B3x5zOdXoKuc7qMkDSuCcvCEMyZhflZO1r9BNEBaQ"
+    },
+    {
+     "artist": "a-ha",
+     "title": "Take On Me",
+     "year": 1985,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c4/ed/28/c4ed2806-14ff-8a6c-b22f-fde872f8a5d8/mzaf_7191743939498691729.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/OGjWSjyYHK8njXGi2n-7JOSzHay0Yn2dIzw1eoQlSWoNA5o_XocNt9zfmjbUsviVIIpKcRCzQ2E6XIXmbSffUst6w3xPpooL4VD9LIY"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 7,
+     "track": "Track 03",
+     "heading": "Synthpop"
+    },
+    {
+     "n": 7,
+     "track": "Track 01",
+     "heading": "Take On Me: vijf jaar werk aan één riff"
+    },
+    {
+     "n": 9,
+     "track": "Track 04",
+     "heading": "De digitale jaren 80"
+    }
+   ]
+  },
+  {
+   "id": "italo-disco",
+   "name": "Italo disco",
+   "family": "electronic",
+   "year": 1980,
+   "peak": [
+    1980,
+    1988
+   ],
+   "place": {
+    "name": "Italië",
+    "lat": 43,
+    "lon": 12
+   },
+   "parents": [
+    "hi-nrg",
+    "synthpop"
+   ],
+   "text": "In Italië ontstond een eigen elektronische dansmuziek, een mengsel van synthpop en eurodisco, met Giorgio Moroder als grote voorganger. Producers brachten soloprojecten uit onder fantasienamen, met Engelse teksten met een Italiaans accent. Arpeggiators en vocoders bepalen het geluid.",
+   "listen": "Hoor in Dolce Vita de bas in achtste noten uit een arpeggiator, als een motor die nooit stopt.",
+   "tracks": [
+    {
+     "artist": "Ryan Paris",
+     "title": "Dolce Vita",
+     "year": 1983,
+     "audio": "https://api.lessonup.com/v1/media/MjDscrFASxhnBbYGa",
+     "cover": "https://lh3.googleusercontent.com/dkiXSD-5piJ_ioFeNTyPyHD60lSdrUjjSkqO36wXfHWFh7IpbmUHV068wlkOpX7huLZg5wf_uyiKOCqjg0_O_urIb1FJnnxfLA0oIiA"
+    },
+    {
+     "artist": "Righeira",
+     "title": "Vamos a la Playa",
+     "year": 1983,
+     "audio": "https://api.lessonup.com/v1/media/o8kRm6GGgkhbGCAh8",
+     "cover": "https://lh3.googleusercontent.com/QA-VRPSNQj2ksI7956cC0JA1dDk3_MfTZxZEheMhDQ6QRgzOrvYkkeXRcEvADEEue7Ykgkojc8jWNEPwJgXtV_HGc0o0gK-Q-XnOidY"
+    },
+    {
+     "artist": "Baltimora",
+     "title": "Tarzan Boy",
+     "year": 1985,
+     "audio": "https://api.lessonup.com/v1/media/WyBB6pZecy3ooHHMJ",
+     "cover": "https://lh3.googleusercontent.com/m7jHf1KKJj7uLjokxDeCd8qFUEIzXxVm_W4U8gDEbwB7pHyBigLD4OiArpUfWXIYS9678BJieOYSa-juLdf6bboyCcQCYiXiztLC5Gai"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 7,
+     "track": "Track 01",
+     "heading": "Italo disco"
+    }
+   ]
+  },
+  {
+   "id": "detroit-techno",
+   "name": "Detroit-techno",
+   "family": "electronic",
+   "year": 1981,
+   "peak": [
+    1985,
+    1995
+   ],
+   "place": {
+    "name": "Detroit",
+    "lat": 42.33,
+    "lon": -83.05
+   },
+   "parents": [
+    "kraftwerk",
+    "funk",
+    "synthpop"
+   ],
+   "text": "In Belleville bij Detroit groeiden Juan Atkins, Derrick May en Kevin Saunderson op met de radioshow van The Electrifying Mojo, die Parliament naast Kraftwerk draaide. Atkins begon in 1981 met Cybotron en bracht in 1985 als Model 500 No UFO's uit. Derrick May noemde techno George Clinton en Kraftwerk samen in een lift.",
+   "listen": "Hoor in Strings of Life de strijkers en piano uit een sampler, en het intro zonder bassdrum.",
+   "tracks": [
+    {
+     "artist": "Rhythim Is Rhythim (Derrick May)",
+     "title": "Strings of Life",
+     "year": 1987,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/74/66/a9/7466a931-cee5-e8e5-b327-66ff9c559187/mzaf_5214720034261436593.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/L7CkvCJrEP6e2_cXBwzm8aHLOAe_TVtJrt3gJipXtjznmiGfsFXXOz3L3UB5ctiZCeZlTl6vnJJdggfyOKtCfp4h82q81zyMkJPIS8o"
+    },
+    {
+     "artist": "Model 500 (Juan Atkins)",
+     "title": "No UFO’s",
+     "year": 1985,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/26/e4/ce/26e4ce7e-9e3c-33e6-ead7-e444b5565e78/mzaf_13260541276506300995.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/tL4NEjdgMptg7EE9-l-qhQ8-anC8j0Fyup454PrA75W5Rt-oRsO4vMoAkRd87x27RPicMTytVJ7mLiFwsmCZZGWj459bQhGF0fr_lrON"
+    },
+    {
+     "artist": "Inner City",
+     "title": "Big Fun",
+     "year": 1988,
+     "audio": "https://api.lessonup.com/v1/media/vKeZtbdXitbnebJkP",
+     "cover": "https://lh3.googleusercontent.com/3rkswBDA7prunBma4zXGMdPFM3LUFczIfFkgCM54k3fsc6lq6AgnM8qdfNkJ3plRUxKcZLRO9vt47QrEoNuCCYR6Tq7NCDiy-iEGyVo"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 8,
+     "track": "Track 03",
+     "heading": "Detroit-techno"
+    },
+    {
+     "n": 7,
+     "track": "Track 03",
+     "heading": "House"
+    }
+   ]
+  },
+  {
+   "id": "chicago-house",
+   "name": "House",
+   "family": "electronic",
+   "year": 1984,
+   "peak": [
+    1984,
+    1990
+   ],
+   "place": {
+    "name": "Chicago",
+    "lat": 41.88,
+    "lon": -87.63
+   },
+   "parents": [
+    "disco",
+    "hi-nrg",
+    "synthpop"
+   ],
+   "text": "Frankie Knuckles draaide vanaf 1977 in The Warehouse in Chicago, voor vooral zwarte en homoseksuele bezoekers, een mix van disco, soul en Europese synthpop. Vanaf 1984 maakten jonge producers in Chicago zelf tracks met een drumcomputer, een synthesizer en een bandrecorder. House is in de kern disco met een machine: four-on-the-floor rond 120 bpm.",
+   "listen": "Hoor in Your Love de bassdrum op elke tel onder een synthesizerlijn die steeds terugkomt.",
+   "tracks": [
+    {
+     "artist": "Frankie Knuckles",
+     "title": "Your Love",
+     "year": 1987,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ef/1e/76/ef1e760b-d9fa-9f98-6a76-001eb21cb0cc/mzaf_6202926362838529049.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/NBHyP4DQy7NvmTwb63APkvS43SFsf0yPrK15vSEnsKYtOjQeHpKJLJebP71nLkmhSkpUiAbO1HB1VFC8bmmvKott3ZK-5GB484TH6yM"
+    },
+    {
+     "artist": "Farley “Jackmaster” Funk",
+     "title": "Love Can’t Turn Around",
+     "year": 1986,
+     "audio": "https://api.lessonup.com/v1/media/HmMSQ924JAhTmboYA",
+     "cover": "https://lh3.googleusercontent.com/1uw06jKjmaL_-sTjOuw4TEI9LbD4NVwKOYK-f7Tkm9rB2zTbcPCzcq8BwehAN5SQFJmHp7Lj1HIltDB1x8p3NEVc5mCwMgKxRReYDm4"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 8,
+     "track": "Track 04",
+     "heading": "House"
+    },
+    {
+     "n": 7,
+     "track": "Track 03",
+     "heading": "House"
+    }
+   ]
+  },
+  {
+   "id": "acid-house",
+   "name": "Acid house",
+   "family": "electronic",
+   "year": 1987,
+   "place": {
+    "name": "Chicago",
+    "lat": 41.85,
+    "lon": -87.68
+   },
+   "parents": [
+    "chicago-house"
+   ],
+   "text": "Op Acid Tracks (1987) draaide de Chicagose groep Phuture tijdens het spelen aan de knoppen van een Roland TB-303, een geflopte baslijnmachine. Door de filter open en dicht te draaien piept, kraakt en jankt de baslijn: acid house. Het geluid ging de oceaan over en werd in Engeland de muziek van de eerste raves.",
+   "listen": "Volg in Acid Tracks hoe de baslijn verandert als de filter open- en dichtgedraaid wordt.",
+   "tracks": [
+    {
+     "artist": "Phuture",
+     "title": "Acid Tracks",
+     "year": 1987,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b6/12/38/b612389a-be83-25ea-ba69-1d0b39316f7a/mzaf_16166663817180313334.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/scJJmr-xnTLeGhK5IevX9UdpKfjRwUerPmmXlw0jL9inBwzykO33iTqZLMhPjg_HjLF3JplvQI1khKcRwWFyzB-PZhIdnWXZ1weoQos"
+    },
+    {
+     "artist": "Hardfloor",
+     "title": "Acperience 1",
+     "year": 1992,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b6/ab/29/b6ab2960-b400-0a61-5e92-d254242fa807/mzaf_9924453691037160278.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/1Mn5mr_71E4RUwLDVlAcGcBiZTuf3UGoRKzfPLabWKzy1KErAqbCSP4uxfFm6nyfNUgil-gBpPg4HU1RUsdCIuVabKQ95L-RBsYt1nA"
+    },
+    {
+     "artist": "S’Express",
+     "title": "Theme from S’Express",
+     "year": 1988,
+     "audio": "https://api.lessonup.com/v1/media/tvawPXYvCiCqKDfpX",
+     "cover": "https://lh3.googleusercontent.com/P-qSuxAAWAV0Ir36uQD1gU464UHPGE0aY61aQ12N9o1K6jpIqJisSz8Ke1DUmGD96ziCpj08RrWgFd4wrv66m1xCDnjT9ex88oK5OjI"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 8,
+     "track": "Track 04",
+     "heading": "House"
+    },
+    {
+     "n": 9,
+     "track": "Track 02",
+     "heading": "De TB-303: een flop wordt acid"
+    }
+   ]
+  },
+  {
+   "id": "rave",
+   "name": "Rave",
+   "family": "electronic",
+   "year": 1987,
+   "peak": [
+    1988,
+    1997
+   ],
+   "place": {
+    "name": "Engeland",
+    "lat": 53,
+    "lon": -1.5
+   },
+   "parents": [
+    "acid-house",
+    "detroit-techno"
+   ],
+   "text": "In 1987 kwamen Engelse dj's terug van Ibiza en begonnen clubs met acid house; de zomers van 1988 en 1989 werden de Second Summer of Love. Feesten verhuisden naar loodsen en weilanden, tot een wet in 1994 de politie het recht gaf ze te beëindigen. Uit de rave kwamen jungle, drum-and-bass, big beat en IDM.",
+   "listen": "Hoor in Pump Up the Volume hoe een track is opgebouwd uit tientallen samples van andere platen.",
+   "tracks": [
+    {
+     "artist": "M|A|R|R|S",
+     "title": "Pump Up the Volume",
+     "year": 1987,
+     "audio": "https://api.lessonup.com/v1/media/zcfr3MenWWGoHK5Rk",
+     "cover": "https://lh3.googleusercontent.com/v_7nH5zAZZ8jOeDkdG9dTKwRSa9OqUe6cC-3yrQ81aOOABdzLXZwXTg6JOGRwBW73CrhF_vPbwT0Z3XG_PWpnqHzqWX_UcuqiLa68gQ"
+    },
+    {
+     "artist": "808 State",
+     "title": "Pacific",
+     "year": 1989,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d5/d9/48/d5d948c8-9b3b-6d58-c049-66ce82cda82e/mzaf_16077696572587254814.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/Ln-Z-lnSjuRsy1cptL5cAc4qKZPUtu4wLjJx6sX7N5SQyWDjdC7H9LpwO_VmmpwTdUQiWfEKXEPLvlMg90Fr1AT2XUjz5GhHowuErUU"
+    },
+    {
+     "artist": "The Prodigy",
+     "title": "Firestarter",
+     "year": 1996,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/45/93/64/45936413-1ef6-988e-34ea-3e5ac6c727a0/mzaf_2838928443270353189.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/pGks-9KnQwoAljOMgCpACb4TSMF4H0WJzb3-mhUvvTApOAwzT36H9DAC93MAy82xPEerY8DJdjcumq1zUKuZG1bbgjg4go4VZ1IwIaYm"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 8,
+     "track": "Track 01",
+     "heading": "Rave"
+    },
+    {
+     "n": 7,
+     "track": "Track 03",
+     "heading": "House"
+    },
+    {
+     "n": 9,
+     "track": "Track 03",
+     "heading": "De sampler: muziek uit muziek"
+    }
+   ]
+  },
+  {
+   "id": "eurodance",
+   "name": "Eurodance",
+   "family": "electronic",
+   "year": 1991,
+   "peak": [
+    1992,
+    1996
+   ],
+   "place": {
+    "name": "België",
+    "lat": 51.22,
+    "lon": 4.4
+   },
+   "parents": [
+    "chicago-house",
+    "detroit-techno",
+    "british-eurobeat"
+   ],
+   "text": "Begin jaren negentig draaide op het Europese vasteland eurodance: een stevige housebeat, een gerapt couplet en een gezongen refrein. Producers in België, Nederland, Duitsland en Italië bouwden er korte popnummers mee. 2 Unlimited had Nederlandse gezichten en Belgische producers; No Limit stond in 1993 in een groot deel van Europa op 1.",
+   "listen": "Hoor in No Limit het bouwpakket: een terugkerende synthriff, een gerapt couplet, een refrein van bijna alleen de titel en een break.",
+   "tracks": [
+    {
+     "artist": "2 Unlimited",
+     "title": "No Limit",
+     "year": 1993,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/90/f7/5f/90f75f7b-1c8d-3b7f-b538-a9c3245a7398/mzaf_18045952777873120519.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/W02ib5pXhQUEnJww1HuihOiGI-Ut0if1TTG46Uqs-_MXgjTQcAOb1obc2qKme9ClJDKilRpJ094a2Adu4Tz36efln3_a7meB2m-opzs"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 13,
+     "track": "Track 02",
+     "heading": "Eurodance en girl power"
+    }
+   ]
+  },
+  {
+   "id": "gabber",
+   "name": "Gabber en happy hardcore",
+   "family": "electronic",
+   "year": 1992,
+   "peak": [
+    1992,
+    1998
+   ],
+   "place": {
+    "name": "Rotterdam",
+    "lat": 51.92,
+    "lon": 4.48
+   },
+   "parents": [
+    "rave",
+    "detroit-techno"
+   ],
+   "text": "Begin jaren negentig ontstond in Rotterdam gabber: hardcore van 160 tot meer dan 200 bpm, met een vervormde bassdrum die klinkt als een hamer. De Thunderdome-feesten van ID&T trokken vanaf 1992 duizenden bezoekers. Happy hardcore maakte het geluid lichter, met vrolijke melodieën en hoge stemmetjes, en scoorde hits in de Top 40.",
+   "listen": "Hoor in Wonderful Days het hoge tempo en de vrolijke melodie van happy hardcore.",
+   "tracks": [
+    {
+     "artist": "Charly Lownoise & Mental Theo",
+     "title": "Wonderful Days 2.08",
+     "year": 2008,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b5/3e/75/b53e7525-0e08-a8bf-18fb-b66d392a3829/mzaf_18039214329049740414.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/fV1TxAZa7bz56bYASXEU-i3jc5IsMq24cmlB1cYsrn6uyCGyfkMNVpOm1Rg3eFkExnt-H_kc66U84-wxYbKvHJxonz0c5j6-GJJApVE"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 8,
+     "track": "Track 02",
+     "heading": "Nederland danst"
+    }
+   ]
+  },
+  {
+   "id": "trance-nl",
+   "name": "Nederlandse trance",
+   "family": "electronic",
+   "year": 2000,
+   "peak": [
+    2000,
+    2010
+   ],
+   "place": {
+    "name": "Nederland",
+    "lat": 51.59,
+    "lon": 4.78
+   },
+   "parents": [
+    "rave",
+    "chicago-house"
+   ],
+   "text": "Rond 2000 werd trance een Nederlands exportproduct. Dj's als Tiësto, Armin van Buuren en Ferry Corsten draaiden over de hele wereld, en Tiësto draaide in 2004 bij de opening van de Olympische Spelen in Athene. ID&T organiseerde Sensation in de Amsterdam ArenA.",
+   "listen": "Let op de lange opbouw naar het moment waarop de beat weer invalt.",
+   "tracks": [
+    {
+     "artist": "Tiësto",
+     "title": "Adagio for Strings",
+     "year": 2004,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a4/49/cd/a449cd6c-1909-5589-24ad-fdf5c14f75f4/mzaf_6873707031600902325.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/m6km3WrXubWMv1NFI4U5q0R9E0OorJ-o_lW5bd1HfDZc-y29nvTOdkYRUp_o7nOajDpJWpxMW4g8HkVVg1ZoF5m4tMdqr6hvqOSQawM"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 8,
+     "track": "Track 02",
+     "heading": "Nederland danst"
+    }
+   ]
+  },
+  {
+   "id": "french-house",
+   "name": "French house",
+   "family": "electronic",
+   "year": 1997,
+   "place": {
+    "name": "Parijs",
+    "lat": 48.86,
+    "lon": 2.35
+   },
+   "parents": [
+    "chicago-house",
+    "disco",
+    "funk"
+   ],
+   "text": "In Frankrijk maakte het duo Daft Punk eind jaren negentig French house: housetracks met filters en samples uit oude disco en funk. Op Around the World (1997) wordt één zinnetje steeds opnieuw herhaald, terwijl de begeleiding om de stem heen verandert.",
+   "listen": "Hoor wat er in de begeleiding verandert terwijl de titel steeds opnieuw terugkomt.",
+   "tracks": [
+    {
+     "artist": "Daft Punk",
+     "title": "Around the World",
+     "year": 1997,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e3/09/76/e309766d-13ea-5393-dd2a-83e143e9faf4/mzaf_16510490203158507684.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/cEWXM-JTEDJRv9l7Av_g691TvDtnemkCAYtJs5sgVbgSCrsN0KMzhjGCJSN7-P-afMrdzoBDqnP_NLjnoeP9hbI7TMLRmcYjDrYGdg"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 8,
+     "track": "Track 03",
+     "heading": "Van Daft Punk tot EDM"
+    }
+   ]
+  },
+  {
+   "id": "edm",
+   "name": "EDM",
+   "family": "electronic",
+   "year": 2010,
+   "place": {
+    "name": "Verenigde Staten",
+    "lat": 36.17,
+    "lon": -115.14
+   },
+   "parents": [
+    "french-house",
+    "trance-nl",
+    "rave"
+   ],
+   "text": "Rond 2010 werd elektronische dansmuziek in de Verenigde Staten het grote nieuwe genre, onder de naam EDM. Festivals trokken honderdduizenden bezoekers en de dj werd een popster met een eigen lichtshow. Avicii bouwde Levels op een zangsample van Etta James, en Martin Garrix maakte Animals op een laptop in zijn slaapkamer.",
+   "listen": "Hoor de opbouw en de drop: het moment waarop de beat en de bas weer inzetten.",
+   "tracks": [
+    {
+     "artist": "Avicii",
+     "title": "Levels",
+     "year": 2011,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ed/6e/bd/ed6ebdf2-0a97-5dae-7fc6-583de355dca1/mzaf_10095989580213298663.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/ks4ycl9GiCDtdcKhA7QbsitNzZu0zZIOUQEJ3TDtf82uMghrGR_3NbNj9Z9VihoEwTi077URMkKvnR5H7vnNVShv0Lu3jGNWSJHI-T2c"
+    },
+    {
+     "artist": "Martin Garrix",
+     "title": "Animals",
+     "year": 2013,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8f/ca/53/8fca53bf-328f-4006-fb9c-eef2feee7790/mzaf_17242236602085711440.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/51M3uV5i8sdJZPM68MSJCueJlar9ioQ6Uaj4JXigIapFBvKhONaqCjSrh2XJt6BJXG4vkHhJSDFHH0V-aT-eawErFWcF-DkpQDkEg8kQ"
+    },
+    {
+     "artist": "Skrillex",
+     "title": "Scary Monsters and Nice Sprites",
+     "year": 2010,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/48/1d/f2/481df22a-e26c-8d82-df42-b245415f0e52/mzaf_17921545611228568896.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/MhMmBH3oRsMjjN5mpGM-1A1ZKxR7SIctsmJ4SiA5JfodIQxmAer_YDM0P3_mc88Ly6WLSRv88F1B0YSfjw_K0IVS-5vi8NJVeSlDimI"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 8,
+     "track": "Track 03",
+     "heading": "Van Daft Punk tot EDM"
+    },
+    {
+     "n": 8,
+     "track": "Track 02",
+     "heading": "Nederland danst"
+    }
+   ]
+  },
+  {
+   "id": "triphop",
+   "name": "Triphop",
+   "family": "electronic",
+   "year": 1991,
+   "place": {
+    "name": "Bristol",
+    "lat": 51.45,
+    "lon": -2.59
+   },
+   "parents": [
+    "golden-age-hiphop",
+    "reggae",
+    "soul"
+   ],
+   "text": "Triphop is een vorm van downtempo uit de producersscène van Bristol, waar soundsystems reggae, hiphop, soul en punk door elkaar draaiden. Massive Attack kwam voort uit het collectief The Wild Bunch. Trage, zware breakbeats, samples van oude platen, een diepe reggaebas en zang die meer sfeer dan verhaal is.",
+   "listen": "Hoor in Unfinished Sympathy de trage beat onder strijkers en een zangstem die sfeer schept.",
+   "tracks": [
+    {
+     "artist": "Massive Attack",
+     "title": "Unfinished Sympathy",
+     "year": 1991,
+     "audio": "https://api.lessonup.com/v1/media/njvG7zHNRxd8e8qDJ",
+     "cover": "https://lh3.googleusercontent.com/d1ghCyObivz8LC9APrhcHmWcRC2eL8P8_yy4AvS3JRs-q084bvxMbFgyivXdZkp41qubKef3gtUVRT7NXBlNBzFYbUz__6eRjmeDzzI"
+    },
+    {
+     "artist": "London Grammar",
+     "title": "Strong",
+     "year": 2013,
+     "audio": "https://api.lessonup.com/v1/media/EfLzNaPNkvjwJ6y2B",
+     "cover": "https://lh3.googleusercontent.com/qaPUyj2rumqZDvax9UbK06a0GXtnpeDJFXO_SGX7nMcJR7FIfGq-NWqhagqbNBKfaRF53jKqydmvB9GwdS7F5rN5CdflkgjKc26gFfQ"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 5,
+     "track": "Track 04",
+     "heading": "Triphop"
+    }
+   ]
+  },
+  {
+   "id": "elektronische-studio",
+   "name": "Elektronische studio en musique concrète",
+   "family": "avantgarde",
+   "year": 1951,
+   "peak": [
+    1948,
+    1958
+   ],
+   "place": {
+    "name": "Keulen",
+    "lat": 50.94,
+    "lon": 6.96
+   },
+   "parents": [],
+   "text": "In 1951 richtte de omroep WDR in Keulen een studio voor elektronische muziek in, met oscillatoren, filters en bandrecorders; Karlheinz Stockhausen componeerde er met schaar en plakband. In Parijs maakte Pierre Schaeffer muziek uit opgenomen geluiden, musique concrète, en bij Philips in Eindhoven werkten Dick Raaijmakers en Tom Dissevelt. Tien jaar later kwamen deze tapetechnieken in de popmuziek terecht.",
+   "listen": "Hoor in Gesang der Jünglinge hoe een jongensstem samensmelt met elektronische klanken.",
+   "tracks": [
+    {
+     "artist": "Karlheinz Stockhausen",
+     "title": "Gesang der Jünglinge",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/27/bd/77/27bd7799-b778-ce33-9802-c59147b59916/mzaf_6722444550309117277.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/9JLpbtiRwJqEE5NIOa3lKclcii7A3e93m-azuxWJzgZpekTcsugN6VRjIhzr0-Z_aT2sYIA7hs9zw0pQv19qyZ_HAeihO_BUCWc2Nwk"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 8,
+     "track": "Track 01",
+     "heading": "De studio als instrument"
+    }
+   ]
+  },
+  {
+   "id": "radiophonic",
+   "name": "Radiophonic Workshop",
+   "family": "avantgarde",
+   "year": 1958,
+   "place": {
+    "name": "Londen",
+    "lat": 51.51,
+    "lon": -0.22
+   },
+   "parents": [
+    "elektronische-studio"
+   ],
+   "text": "De BBC had vanaf 1958 een eigen afdeling voor elektronische klank, de Radiophonic Workshop, die geluiden en muziek maakte voor radio en televisie. Delia Derbyshire bouwde in 1963 de herkenningsmelodie van Doctor Who noot voor noot op uit oscillatoren, ruis en tapelussen. De medewerkers werkten anoniem.",
+   "listen": "De baslijn van Doctor Who is gemaakt uit één getokkelde snaar, steeds opnieuw geknipt op een andere toonhoogte.",
+   "tracks": [
+    {
+     "artist": "BBC Radiophonic Workshop",
+     "title": "Doctor Who",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a3/05/40/a30540fa-3917-5bc9-abcd-478bc0eb8ab6/mzaf_1642345256944083071.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/iH2_nj_hKZiQ6i7TJU6SHav-v-19y11V421Ij9QOw3Q8x91R-8DdaMHmsJxp7MDywE4_ZgM9stycW6hnnkJOXgceR90zM03OuV_KiA"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 8,
+     "track": "Track 02",
+     "heading": "Delia Derbyshire en Doctor Who"
+    },
+    {
+     "n": 10,
+     "track": "Track 01",
+     "heading": "De eerste vrouwen achter de knoppen"
+    }
+   ]
+  },
+  {
+   "id": "ambient",
+   "name": "Synthesizerorkest, ambient en new age",
+   "family": "avantgarde",
+   "year": 1976,
+   "peak": [
+    1976,
+    1982
+   ],
+   "place": {
+    "name": "Parijs",
+    "lat": 48.85,
+    "lon": 2.33
+   },
+   "parents": [
+    "moog",
+    "elektronische-studio"
+   ],
+   "text": "Jean-Michel Jarre, die bij Pierre Schaeffer had gewerkt, nam in 1976 in een thuisstudio in Parijs Oxygène op. Vangelis maakte vanuit Londen filmmuziek zoals Chariots of Fire, en Kitaro in Japan muziek zonder beat voor de serie Silk Road. Met Klaus Schulze en Tangerine Dream legden zij de basis voor ambient en new age.",
+   "listen": "Hoor in Oxygène het goedkope Korg-ritmekastje onder eenvoudige melodieën die blijven hangen.",
+   "tracks": [
+    {
+     "artist": "Jean-Michel Jarre",
+     "title": "Oxygène, Pt. 4",
+     "year": 1976,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c3/03/a9/c303a93a-1e1e-8d2a-e307-a7443aa612c2/mzaf_6067179997591795246.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/mCPdr6yFvqksoeBzQ_ehURvW4o3Qhk3oNqhqkIrixh3wHmtRYcJClCpjqvIlNgQp80lm-QHJ60zLPM1ObE1NN2sT4odhmU5jZW-oXXU"
+    },
+    {
+     "artist": "Kitaro",
+     "title": "Theme from Silk Road",
+     "year": 1980,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/73/45/eb/7345ebb8-9e8a-1eb8-6114-369dd831a057/mzaf_15172756346204810408.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/hKP5s1PqPBqK4fteW291StfX4bWNHek_pNLZRS8a7kNF0qDcM_sfUrBku4gers_Eqjpz1zfndT7Qvc41WeZiSLDVcUR7JlWAMMzYYII"
+    },
+    {
+     "artist": "Vangelis",
+     "title": "Chariots of Fire",
+     "year": 1981,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/81/77/85/8177852e-8340-6209-c57a-44403a06f7ab/mzaf_5748426747777002320.plus.aac.p.m4a",
+     "cover": "https://lh3.googleusercontent.com/o12K73n-BJlbbSZns7gV37nWsFtw4bM0d4jFwBvY_VmaFVWlZH_jwVSRmUcjDLiNst60-gjlb-JA8rNV6quXmNHthd2KJdlCxRrkpSiC"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 8,
+     "track": "Track 05",
+     "heading": "De synthesizer als orkest"
+    },
+    {
+     "n": 9,
+     "track": "Track 03",
+     "heading": "De Moog: klank als bouwpakket"
+    }
+   ]
+  },
+  {
+   "id": "reggae",
+   "name": "Ska, rocksteady en reggae",
+   "family": "jamaica",
+   "year": 1968,
+   "peak": [
+    1968,
+    1981
+   ],
+   "place": {
+    "name": "Kingston",
+    "lat": 17.97,
+    "lon": -76.79
+   },
+   "parents": [
+    "rhythm-and-blues"
+   ],
+   "text": "In Kingston draaiden sound systems Amerikaanse rhythm-and-blues; toen die platen schaars werden, gingen Jamaicaanse producers zelf opnemen. Zo ontstonden achter elkaar ska, rocksteady en rond 1968 reggae, met drums en bas als riddim en de skank van de gitaar op 2 en 4. Bob Marley werd de eerste wereldster uit wat toen de Derde Wereld heette, en producers als King Tubby maakten er dub van.",
+   "listen": "Hoor in Stir It Up de one drop: de bassdrum valt op de derde tel en de eerste tel blijft leeg.",
+   "tracks": [
+    {
+     "artist": "Bob Marley & The Wailers",
+     "title": "Stir It Up",
+     "year": 1973,
+     "audio": "https://api.lessonup.com/v1/media/ANgMwcBrEqRMNGRLb",
+     "cover": "https://lh3.googleusercontent.com/4qO9L90fxde0KEUDRlEyq5Mtj6-nDiyOLTpjEZHQvnMJ7V1Y1fOwwiKOFJXcDj9JPmg9g9KQnWEHrAc6OYLawL6DSDeItkN4XmWRCQ"
+    },
+    {
+     "artist": "Peter Tosh",
+     "title": "Johnny B. Goode",
+     "year": 1983,
+     "audio": "https://api.lessonup.com/v1/media/QgqquqaAeGXfy3oxc",
+     "cover": "https://lh3.googleusercontent.com/TXPd7qLFqBWaSUPK40f8Q382BA2jI-yTDMS__qwnkPXUXbgUcodBOni55sEYtTVq1ujtlvstV6wcmgrbaWuJZzTbghTPQoliANtXmA"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 6,
+     "track": "Track 02",
+     "heading": "Reggae: de riddim van Kingston"
+    }
+   ]
+  },
+  {
+   "id": "two-tone",
+   "name": "2 Tone",
+   "family": "jamaica",
+   "year": 1979,
+   "peak": [
+    1979,
+    1981
+   ],
+   "place": {
+    "name": "Coventry",
+    "lat": 52.41,
+    "lon": -1.51
+   },
+   "parents": [
+    "reggae",
+    "punk"
+   ],
+   "text": "Rond 1969 namen de eerste skinheads de ska en reggae van Jamaicaanse migranten over. In 1979 richtte Jerry Dammers in Coventry het label 2 Tone op, met bewust gemengde bands die ska speelden met de energie van punk: The Specials, Madness, The Selecter en The Beat. Ghost Town (1981) gaat over steden die leeglopen door werkloosheid.",
+   "listen": "Hoor in Ghost Town het trage ska-ritme op de offbeat, de mineurakkoorden en de blazers die aan het Midden-Oosten doen denken.",
+   "tracks": [
+    {
+     "artist": "The Specials",
+     "title": "Ghost Town",
+     "year": 1981,
+     "audio": "https://api.lessonup.com/v1/media/gW2jbeSewdgMhkSxi",
+     "cover": "https://lh3.googleusercontent.com/LxBt-FADmvDLBO8cvRCCUxwVaQvYiC8aU87yABSCOcWlRa1E5ZsZbqcgwxOiWsyCBxAz3P2oC7K8lgz3TDVqi4DAQrqdAzPgQ20WVag"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 2,
+     "track": "Track 03",
+     "heading": "Skinheads en 2 Tone"
+    }
+   ]
+  },
+  {
+   "id": "bebop",
+   "name": "Bebop",
+   "family": "jazz",
+   "year": 1940,
+   "peak": [
+    1945,
+    1955
+   ],
+   "place": {
+    "name": "Harlem, New York",
+    "lat": 40.81,
+    "lon": -73.95
+   },
+   "parents": [
+    "swing"
+   ],
+   "text": "Begin jaren veertig speelden jonge jazzmuzikanten na hun werk in de bigbands jamsessies in Minton's Playhouse in Harlem. Daar ontstond bebop: muziek voor muzikanten, met tempi boven de 250 bpm, snelle akkoordwisselingen en lange solo's. Charlie Parker en Dizzy Gillespie waren de voortrekkers; in Parijs en Amsterdam werd het de muziek van de artistiekelingen.",
+   "listen": "Anthropology is een contrafact: een nieuwe melodie op de akkoorden van I Got Rhythm.",
+   "tracks": [
+    {
+     "artist": "Charlie Parker",
+     "title": "Anthropology",
+     "audio": "https://api.lessonup.com/v1/media/zkHrYRCHTMGXakAWk",
+     "cover": "https://lh3.googleusercontent.com/49IG4Hshf03XIuz2cS2AgWBIDTSdQ33DL2PagFE3VrPhyay0zfNdzcwaBZSBNWTBPy5Gy5oFaP20iVbEMmYm9B6eWjJ_bgqvOmDv5K4"
+    },
+    {
+     "artist": "Dizzy Gillespie",
+     "title": "Hot House (met Parker)",
+     "audio": "https://api.lessonup.com/v1/media/mwtzQYaxWNtpMqfpW",
+     "cover": "https://lh3.googleusercontent.com/xNBfksZiJ-vA1gtpw4kapJVZH5-TeEiQz4aAdO3Y5Dst9EBwATArkZ4HSChjhUv6Rgk1PLhqnI9nA75GhIV-Sq1hgJBPg9G3MC2Nuv3-"
+    },
+    {
+     "artist": "John Coltrane",
+     "title": "Be-Bop",
+     "audio": "https://api.lessonup.com/v1/media/qAvyboTxEzECcNJXy",
+     "cover": ""
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 5,
+     "track": "Track 01",
+     "heading": "Bebop"
+    },
+    {
+     "n": 2,
+     "track": "Track 03",
+     "heading": "Artistiekelingen"
+    }
+   ]
+  },
+  {
+   "id": "latin-jazz",
+   "name": "Latin jazz",
+   "family": "jazz",
+   "year": 1947,
+   "place": {
+    "name": "New York",
+    "lat": 40.77,
+    "lon": -73.96
+   },
+   "parents": [
+    "bebop"
+   ],
+   "text": "Dizzy Gillespie haalde in 1947 de Cubaanse conguero Chano Pozo uit Havana in zijn bigband. Jazz swingt lang-kort, Afro-Cubaanse muziek is gebouwd op recht verdeelde noten en de clave; in latin jazz komen die twee samen. Vanaf 1958 maakten João Gilberto en Antônio Carlos Jobim in Rio de Janeiro de bossa nova.",
+   "listen": "Hoor in Manteca het conga-ostinato van Pozo en een bebop-brug in swing: twee ritmische werelden in één stuk.",
+   "tracks": [
+    {
+     "artist": "Dizzy Gillespie",
+     "title": "Manteca",
+     "year": 1947,
+     "audio": "https://api.lessonup.com/v1/media/fweTz4AHSidAqCyLy",
+     "cover": "https://lh3.googleusercontent.com/xNBfksZiJ-vA1gtpw4kapJVZH5-TeEiQz4aAdO3Y5Dst9EBwATArkZ4HSChjhUv6Rgk1PLhqnI9nA75GhIV-Sq1hgJBPg9G3MC2Nuv3-"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 5,
+     "track": "Track 02",
+     "heading": "Latin jazz"
+    }
+   ]
+  },
+  {
+   "id": "cool-jazz",
+   "name": "Cool jazz en modale jazz",
+   "family": "jazz",
+   "year": 1949,
+   "peak": [
+    1949,
+    1960
+   ],
+   "place": {
+    "name": "New York",
+    "lat": 40.75,
+    "lon": -73.97
+   },
+   "parents": [
+    "bebop"
+   ],
+   "text": "Miles Davis nam in 1949 en 1950 met een nonet de opnames op die later Birth of the Cool heetten, met hoorn en tuba naast de gewone blazers en arrangementen van onder anderen Gil Evans. Cool jazz is zacht, met weinig vibrato en veel ruimte. Met Kind of Blue (1959) zette Davis de stap naar modale jazz; het werd het best verkochte jazzalbum ooit.",
+   "listen": "Hoor in Blue in Green de zachte trompettoon met weinig vibrato en veel ruimte tussen de noten.",
+   "tracks": [
+    {
+     "artist": "Miles Davis",
+     "title": "Blue in Green",
+     "year": 1959,
+     "audio": "https://api.lessonup.com/v1/media/xfWqWbGKeZwrvdqqA",
+     "cover": "https://lh3.googleusercontent.com/Ekh0XprTklVlBnk6A9X9znPlGnRiNCvVeozmomTdge-ahDbp9nRUGumjQd8JMCgs-rSrQjBw4JOYqYu7hbUut3hFw780obN21gSwn8YV"
+    },
+    {
+     "artist": "Gil Evans",
+     "title": "Willow Tree",
+     "audio": "https://api.lessonup.com/v1/media/QAzu63wd72SmE8oSY",
+     "cover": "https://lh3.googleusercontent.com/DpY4rKoDZgXCubJY7pA1y03ioTBWkkFvCwK0PY8hoLC1-sKl_3Nex6exKdYtjyIeVwmIkc92HjPSduZUAucw0taoHlrmWAKn6-m7eQ"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 5,
+     "track": "Track 01",
+     "heading": "Cool jazz en modale jazz"
+    }
+   ]
+  },
+  {
+   "id": "west-coast-jazz",
+   "name": "West Coast jazz",
+   "family": "jazz",
+   "year": 1952,
+   "place": {
+    "name": "Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+   },
+   "parents": [
+    "cool-jazz"
+   ],
+   "text": "Cool jazz kreeg in de jaren vijftig een eigen variant in Californië, gespeeld door muzikanten die ook in de film- en televisiestudio's werkten. Gerry Mulligan begon in 1952 in Los Angeles een kwartet zonder piano met Chet Baker, zodat bariton en trompet in contrapunt spelen. Dave Brubeck nam in 1959 Time Out op, met Take Five.",
+   "listen": "Tel mee in Take Five: het staat in vijf tellen, verdeeld in drie plus twee.",
+   "tracks": [
+    {
+     "artist": "Dave Brubeck",
+     "title": "Take Five",
+     "year": 1959,
+     "audio": "https://api.lessonup.com/v1/media/hsNhoMcjtLqeHuCdu",
+     "cover": "https://lh3.googleusercontent.com/WQ-upll06m5hJtiR6rcbFS1Ct25v6aetoXQEHHDBsNkOYV1N6ZzCjcCx07k7FEqcQeHO5O1O0WgyR0i6kjcNMhCwqBzwDtNH2fwZZg"
+    },
+    {
+     "artist": "Gerry Mulligan",
+     "title": "My Funny Valentine (met Chet Baker)",
+     "audio": "https://api.lessonup.com/v1/media/QEsctLmcczBxeciKP",
+     "cover": "https://lh3.googleusercontent.com/DQ7m-ZyFUT-__GqZdTMk3d3nQdJvxDrF5Mb0sF80_7LOG7VFUhnX0DDPXhvlC0OJcNBGRasKrk5y1hJxZulLFPyeXOqc-JbiTJNe3RPy"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 5,
+     "track": "Track 02",
+     "heading": "West Coast jazz"
+    }
+   ]
+  },
+  {
+   "id": "hard-bop",
+   "name": "Hard bop",
+   "family": "jazz",
+   "year": 1954,
+   "peak": [
+    1954,
+    1965
+   ],
+   "place": {
+    "name": "New York",
+    "lat": 40.69,
+    "lon": -73.99
+   },
+   "parents": [
+    "bebop",
+    "rhythm-and-blues",
+    "gospel"
+   ],
+   "text": "Aan de oostkust vonden veel zwarte muzikanten cool jazz te beheerst. Hard bop gebruikt de harmonie en solotechniek van bebop, maar mengt die met rhythm-and-blues, gospel en blues, met een zwaardere groove. Veel ervan verscheen op het New Yorkse label Blue Note, zoals Blue Train (1957) van John Coltrane.",
+   "listen": "Let in Blue Train op de zware groove en het bluesachtige thema dat de blazers samen spelen.",
+   "tracks": [
+    {
+     "artist": "John Coltrane",
+     "title": "Blue Train",
+     "year": 1957,
+     "audio": "https://api.lessonup.com/v1/media/QYh2BhWQTrGXZkJm9",
+     "cover": "https://lh3.googleusercontent.com/Yz8kiFmd1cMltKizjiX-RK772rDFn3EIcsr4T483wk801AytOESh39VxOxwkkv8Vf5gtCWx8Gq589O8PkitUTwHjwGA9k8gxq-RnpqE"
+    },
+    {
+     "artist": "Freddie Hubbard",
+     "title": "Arietis",
+     "year": 1962,
+     "audio": "https://api.lessonup.com/v1/media/9mh4xiq6HJLWfpYKY",
+     "cover": "https://lh3.googleusercontent.com/IZXiFMUn3F6Br0v27ip5VfTp1apSydYFu7wMFOzMj3W-6seY9PletsAAv3wCaGiJJm-MMiH6SJLWzOiesE6steAu33pL-5IfbuWRA2GP"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 5,
+     "track": "Track 03",
+     "heading": "Hard bop"
+    }
+   ]
+  },
+  {
+   "id": "free-jazz",
+   "name": "Free jazz",
+   "family": "jazz",
+   "year": 1959,
+   "place": {
+    "name": "New York",
+    "lat": 40.73,
+    "lon": -73.98
+   },
+   "parents": [
+    "hard-bop",
+    "bebop"
+   ],
+   "text": "Free jazz liet de afspraken over thema, akkoordenschema, maatsoort en tempo los: muzikanten improviseren vaak tegelijk en dissonanten worden materiaal. De naam komt van een album van Ornette Coleman uit Texas, die eind jaren vijftig met een kwartet zonder piano naar New York kwam.",
+   "listen": "Hoor in Lonely Woman hoe de blazers zonder piano en zonder vast akkoordenschema samen de melodie spelen.",
+   "tracks": [
+    {
+     "artist": "Ornette Coleman",
+     "title": "Lonely Woman",
+     "year": 1959,
+     "audio": "https://api.lessonup.com/v1/media/8K92hNMFvmxQoWM8z",
+     "cover": "https://lh3.googleusercontent.com/VbN0Nb8uJry_Mbh43pUAuHDieV1sV1XlqedbBKoObYTap77ZzTF0d0eBaM0JRIuDMgJlYpgTkIu8vLMikjHT2pW6JoXKYZDwq5O18vY"
+    },
+    {
+     "artist": "Frank Wright",
+     "title": "The Earth",
+     "audio": "https://api.lessonup.com/v1/media/nJWnYqzfkR5Xp8DX9",
+     "cover": "https://lh3.googleusercontent.com/ervpEIZnHC6mzolS3d6QVAL_V4o-JCO5ZuLCCKSMLjeqZKXGUZisYG-dkDq9lK_uVJ3-an-Yy3uNox8hBCPrKEmJQQFazaDKInZ5lKI"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 5,
+     "track": "Track 04",
+     "heading": "Free jazz"
+    }
+   ]
+  },
+  {
+   "id": "fusion",
+   "name": "Fusion en jazzrock",
+   "family": "jazz",
+   "year": 1969,
+   "peak": [
+    1969,
+    1980
+   ],
+   "place": {
+    "name": "New York",
+    "lat": 40.76,
+    "lon": -73.99
+   },
+   "parents": [
+    "cool-jazz",
+    "funk",
+    "psychedelic-rock"
+   ],
+   "text": "Miles Davis luisterde naar Jimi Hendrix, Sly and the Family Stone en James Brown, en speelde op In a Silent Way (1969) en Bitches Brew (1970) met elektrische instrumenten en meerdere drummers. Fusion is de samensmelting van jazz en rock, waarin de swing grotendeels verdwijnt. Steely Dan gebruikte jazzakkoorden in popsongs, opgenomen met de beste sessiemuzikanten.",
+   "listen": "Hoor in Birdland hoe de groove recht loopt in plaats van te swingen.",
+   "tracks": [
+    {
+     "artist": "Weather Report",
+     "title": "Birdland",
+     "year": 1977,
+     "audio": "https://api.lessonup.com/v1/media/vuRBzcSPWPvTxDr4b",
+     "cover": "https://lh3.googleusercontent.com/BzCxvudv4P_jXtgi3c9fi7N_RyEEwukCdvGSl1XaZDEmfry9klGjNcPTQO2OrbsLu2MVLPVz1LBEYht_ydbJgavG0EJaNd-hpsS_l_A"
+    },
+    {
+     "artist": "Steely Dan",
+     "title": "Aja",
+     "year": 1977,
+     "audio": "https://api.lessonup.com/v1/media/TacdzdkRWAf8Ge63A",
+     "cover": "https://lh3.googleusercontent.com/8xbdreTPUsSxTvrxkDQI_Sjaq8Qtn9nOFqp_6Zzi5HyRis5M3xTNGzIkL6Kq5OEPnsNJUEo-KNd0AJgNu2k_eIeWawzE3xJ8rK1tFDk"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 5,
+     "track": "Track 01",
+     "heading": "Fusion en jazzrock"
+    },
+    {
+     "n": 4,
+     "track": "Track 02",
+     "heading": "Glam, prog, kraut en punk"
+    }
+   ]
+  },
+  {
+   "id": "smooth-jazz",
+   "name": "Smooth jazz",
+   "family": "jazz",
+   "year": 1975,
+   "peak": [
+    1976,
+    1990
+   ],
+   "place": {
+    "name": "Verenigde Staten",
+    "lat": 40.5,
+    "lon": -100
+   },
+   "parents": [
+    "fusion",
+    "soul",
+    "funk"
+   ],
+   "text": "Halverwege de jaren zeventig ontstond een zachtere variant van fusion, die in de jaren tachtig enorm populair werd. Smooth jazz leent van soul en funk: een rustige groove, warme akkoorden en een melodie op saxofoon, gitaar of elektrische piano, met een gladde productie. George Benson en Grover Washington Jr. waren bekende namen.",
+   "listen": "Hoor in Just the Two of Us de rustige groove onder de saxofoon en de stem van Bill Withers.",
+   "tracks": [
+    {
+     "artist": "Grover Washington Jr.",
+     "title": "Just the Two of Us (met Bill Withers)",
+     "year": 1980,
+     "audio": "https://api.lessonup.com/v1/media/ZWFpxmbfugCj2tp34",
+     "cover": "https://lh3.googleusercontent.com/7g5EXMmCeGboMw4W2ml5OscZaEyLOyHDhE4tE1eOFqcUKJELp4ikTo_SNG1tWRx6Wpk0RsmpnnAjIT7rjQETxbPP_yjkFAGiDSNNbLg"
+    },
+    {
+     "artist": "Al Jarreau",
+     "title": "Roof Garden",
+     "year": 1981,
+     "audio": "https://api.lessonup.com/v1/media/iS8vNYQbwbcE9ujn9",
+     "cover": "https://lh3.googleusercontent.com/YIEyNZj13LhsHgrp6bFzzEfUEB0dDB6v-ZlLarSsSuGF7r6FpnI91FK9PwkKRIx8f6y-wtClwBrXrv6wKw4x4oDmpM0WkJC8vrFnSQ"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 5,
+     "track": "Track 02",
+     "heading": "Smooth jazz"
+    }
+   ]
+  },
+  {
+   "id": "nu-jazz",
+   "name": "Nu jazz",
+   "family": "jazz",
+   "year": 1990,
+   "place": {
+    "name": "Londen",
+    "lat": 51.53,
+    "lon": -0.08
+   },
+   "parents": [
+    "hard-bop",
+    "golden-age-hiphop",
+    "chicago-house"
+   ],
+   "text": "Hiphopproducers zochten in oude jazz-, soul- en funkplaten naar breaks om te samplen; Us3 maakte in 1993 Cantaloop op een sample van Herbie Hancock. Uit die ontmoeting tussen jazz en clubcultuur kwam nu jazz: een elektronische vorm van jazz, gecombineerd met house, downtempo en breakbeat.",
+   "listen": "Hoor in So Flute hoe een jazzfluit over een housebeat speelt.",
+   "tracks": [
+    {
+     "artist": "St. Germain",
+     "title": "So Flute",
+     "year": 2000,
+     "audio": "https://api.lessonup.com/v1/media/cLSfukv5o3WvPtGGS",
+     "cover": "https://lh3.googleusercontent.com/eQHHkgSEjVSG9c_ad9YcuM_VK0n_2mdNKvIacltd9_UVHjuy0qDtY2st7OVyYCP9TWZXJT8NvvD9pxYLdUgW6ylmqn3gWF2VVvcQQa8"
+    },
+    {
+     "artist": "The Cinematic Orchestra",
+     "title": "To Build a Home",
+     "year": 2007,
+     "audio": "https://api.lessonup.com/v1/media/AmBbQLFYXgo7Gs4Lz",
+     "cover": "https://lh3.googleusercontent.com/TXUPc4BzCkV1tIZAYlGKjTF__tNxV9bcFtRlG2GVyOGP6rBr6tHSNcvJRscLQY1SOoGVdL_-YjOMgMi6FjBwl3QAV9mwI1IbJB2d3vs"
+    }
+   ],
+   "mixtapes": [
+    {
+     "n": 5,
+     "track": "Track 03",
+     "heading": "Nu jazz"
+    }
+   ]
+  }
+ ]
+}

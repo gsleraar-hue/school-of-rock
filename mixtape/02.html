@@ -1,0 +1,335 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content=".."><title>Mixtape 2 · Jeugdculturen 1950-1980 · School of Rock</title><link rel="icon" href="../assets/cassette.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="../assets/site.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><style>
+  /* Eén thema met opzet: een boek in de huisstijl van de lessen. */
+  :root {
+    color-scheme: light;
+    --page: #FFFFFF;
+    --ink: #1C1B19;
+    --ink-soft: #55524C;
+    --line: #DDD8CE;
+    --red: #D63A31;
+    --yellow: #F2D500;
+    --display: "Oswald", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "Space Mono", "Courier New", monospace;
+    --hand: "Caveat", "Comic Sans MS", cursive;
+    --text: 34rem;
+    --margin: 13rem;
+    --gap: 2.25rem;
+  }
+  html { background: var(--page); }
+  body { background: var(--page); color: var(--ink); font: 400 16px/1.65 var(--body); padding-inline: 16px; padding-block: 0 64px; }
+  .book { max-width: calc(var(--text) + var(--gap) + var(--margin)); margin: 0 auto; }
+  p { margin: 0; }
+  em { font-style: italic; }
+  a { color: inherit; text-decoration-color: var(--red); text-underline-offset: 2px; }
+
+  /* Hoofdstukopening en delen */
+  .opener { position: relative; overflow: hidden; color: #FFFFFF; box-sizing: border-box; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; }
+  .opener .wash { position: absolute; inset: 0; background-color: rgba(214,58,49,.62); }
+  .opener .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 55%; background-color: rgba(28,27,25,.38); }
+  .opener .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background: var(--yellow); }
+  .opener h1, .opener h2, .opener .sub, .part .kicker { position: relative; }
+  .opener .kicker { font: 12px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--yellow); }
+  .opener h1, .opener h2 { font-family: var(--display); font-weight: 600; line-height: 1.02; margin: 0; text-wrap: balance; }
+  .opener .sub { max-width: 36ch; line-height: 1.4; }
+  .cover { margin-inline: -16px; min-height: 420px; padding: 32px 28px 36px 44px; }
+  .cover h1 { font-size: clamp(44px, 9vw, 72px); max-width: 12ch; }
+  .cover .sub { font-size: 18px; }
+  .cover .kicker { position: absolute; top: 26px; left: 44px; }
+  .cover .cassette { position: absolute; top: 16px; right: 18px; width: 88px; height: auto; }
+  .part { margin: 64px calc(-1 * (var(--margin) + var(--gap))) 28px 0; min-height: 230px; padding: 24px 24px 24px 40px; clear: both; }
+  .part h2 { font-size: clamp(30px, 6vw, 44px); }
+  .part .sub { font-size: 15px; }
+  .part .letter { position: absolute; right: 18px; bottom: -12px; font: 600 150px/1 var(--display); color: var(--yellow); }
+
+  /* Tekstvak met kantlijn */
+  .flow { padding-right: calc(var(--margin) + var(--gap)); }
+  .flow > p { max-width: var(--text); }
+  .flow > p { text-indent: 1.4em; }
+  .flow > .intro, .flow > .head + p, .flow > .head + aside + p, .flow > .head + figure + p { text-indent: 0; }
+  .head { margin: 40px 0 10px; max-width: var(--text); }
+  .head .label { font: 11px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--red); margin: 0 0 4px; }
+  .head h3 { font: 600 22px/1.15 var(--display); margin: 0; text-wrap: balance; }
+  .intro { font-size: 18px; line-height: 1.6; }
+
+  /* Kantlijn: luistertips, beeld, citaten, QR */
+  .side-note, .side-fig, .side-quote { float: right; clear: right; width: var(--margin); margin: 6px calc(-1 * (var(--margin) + var(--gap))) 18px 0; }
+  .side-note { border-left: 2px solid var(--yellow); padding-left: 10px; font-size: 12.5px; line-height: 1.4; color: var(--ink-soft); }
+  .side-note .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .side-note .rec { display: grid; grid-template-columns: 40px 1fr; gap: 8px; align-items: center; margin-bottom: 6px; }
+  .side-note .rec img { width: 40px; height: 40px; border-radius: 2px; }
+  .side-note .who { color: var(--ink); font-weight: 600; }
+  .side-note .qr { width: 96px; height: 96px; margin: 4px 0 6px; }
+  .side-note .qr img, .side-note .qr canvas { width: 100% !important; height: 100% !important; }
+  .side-fig img { display: block; width: 100%; border: 4px solid #FFFFFF; box-shadow: 0 3px 12px rgba(0,0,0,.18); transform: rotate(2deg); }
+  .side-fig figcaption { font: 600 20px/1.05 var(--hand); color: var(--red); text-align: center; margin-top: 8px; }
+  .side-quote { font: 500 17px/1.25 var(--display); color: var(--red); border-top: 2px solid var(--red); padding-top: 8px; }
+  .side-quote span { display: block; font: 11px/1.4 var(--mono); color: var(--ink-soft); margin-top: 6px; }
+
+  /* Achterin */
+  .back { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 8px; }
+  h4.backhead { font: 600 22px/1.15 var(--display); margin: 28px 0 0; }
+  .terms { columns: 2 240px; column-gap: 32px; margin: 12px 0 0; }
+  .terms div { break-inside: avoid; margin: 0 0 10px; }
+  .terms dt { font-weight: 600; }
+  .terms dd { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.45; }
+  .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px 32px; margin-top: 14px; }
+  .link-card { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: start; }
+  .link-card .qr { width: 112px; height: 112px; }
+  .link-card.lesson { grid-template-columns: 1fr; }
+  .link-card .qr img, .link-card .qr canvas { width: 100% !important; height: 100% !important; }
+  .link-card .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .link-card p { font-size: 14px; line-height: 1.45; }
+  .link-card .url { font: 11px/1.4 var(--mono); color: var(--ink-soft); word-break: break-all; margin-top: 6px; }
+  .colofon { margin-top: 36px; font-size: 12px; line-height: 1.5; color: var(--ink-soft); display: grid; gap: 6px; max-width: var(--text); }
+
+  @media screen and (max-width: 760px) {
+    .part { margin-right: 0; }
+    .flow { padding-right: 0; }
+    .side-note, .side-fig, .side-quote { float: none; width: auto; margin: 16px 0; }
+    .side-fig { max-width: 220px; }
+  }
+
+  /* Boek op A4 */
+  @page { size: A4; margin: 20mm 18mm 22mm 20mm; }
+  @page cover { margin: 0; }
+  @media print {
+    html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root { --text: 112mm; --margin: 44mm; --gap: 8mm; }
+    body { padding: 0; font-size: 9.6pt; line-height: 1.55; }
+    .book { max-width: none; }
+    p { orphans: 3; widows: 3; }
+    .cover { page: cover; margin: 0; height: 296mm; padding: 0 22mm 32mm 26mm; break-after: page; }
+    .cover .kicker { top: 18mm; left: 26mm; font-size: 8pt; }
+    .cover .cassette { top: 14mm; right: 16mm; width: 28mm; }
+    .cover h1 { font-size: 56pt; }
+    .cover .sub { font-size: 14pt; }
+    .opener .bar { width: 5mm; }
+    .part { margin: 0 calc(-1 * (var(--margin) + var(--gap))) 6mm 0; height: 70mm; min-height: 0; padding: 0 50mm 8mm 12mm; break-before: page; break-after: avoid; }
+    .part .kicker { font-size: 7.5pt; }
+    .part h2 { font-size: 26pt; }
+    .part .sub { font-size: 10pt; }
+    .part .letter { font-size: 100pt; right: 8mm; bottom: -5mm; }
+    .first-part { break-before: auto; margin-top: 10mm; }
+    .head { margin: 8mm 0 2.5mm; break-after: avoid; break-inside: avoid; }
+    .head .label { font-size: 6.8pt; }
+    .head h3 { font-size: 14pt; }
+    .intro { font-size: 11pt; }
+    .side-note { font-size: 7.6pt; padding-left: 3mm; margin-top: 1mm; margin-bottom: 5mm; break-inside: avoid; }
+    .side-note .tag { font-size: 6.2pt; margin-bottom: 2mm; }
+    .side-note .rec { grid-template-columns: 11mm 1fr; gap: 2.5mm; margin-bottom: 1.5mm; }
+    .side-note .rec img { width: 11mm; height: 11mm; }
+    .side-note .qr { width: 24mm; height: 24mm; }
+    .side-fig { margin-bottom: 5mm; break-inside: avoid; }
+    .side-fig figcaption { font-size: 13pt; }
+    .side-quote { font-size: 11pt; break-inside: avoid; }
+    .side-quote span { font-size: 6.5pt; }
+    .back { break-before: page; margin-top: 0; }
+    h4.backhead { font-size: 14pt; margin-top: 8mm; }
+    .terms { columns: 2; column-gap: 10mm; }
+    .terms div { margin-bottom: 2.5mm; }
+    .terms dd { font-size: 8.6pt; }
+    .terms div { break-inside: avoid; }
+    .links { grid-template-columns: 1fr 1fr; gap: 8mm; break-inside: avoid; }
+    .link-card { grid-template-columns: 30mm 1fr; gap: 5mm; }
+    .link-card .qr { width: 30mm; height: 30mm; }
+    .link-card p { font-size: 8.8pt; }
+    .link-card .url { font-size: 6.8pt; }
+    .colofon { font-size: 7.5pt; margin-top: 10mm; }
+  }
+  .cover .cover-text { position: absolute; left: 44px; right: 28px; bottom: 36px; display: grid; gap: 10px; }
+  @media print { .cover { display: block !important; height: 294mm !important; } .cover .cover-text { left: 26mm; right: 22mm; bottom: 32mm; gap: 4mm; } }</style><style>
+  body.chapter { padding-top: 0; }
+  body.chapter .sitenav { margin-inline: -16px; }
+  .deck { margin: 0 -16px; background: #1C1B19; color: #fff; padding: 18px 20px 20px; display: grid; gap: 14px; }
+  .deck-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .deck .lbl { font: 11px/1.4 "Space Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: #F2D500; min-width: 7.5em; }
+  .deck .lesson { font: 500 16px/1.3 "Oswald", sans-serif; }
+  .deck .btn { padding: 10px 14px; font-size: 14px; }
+  .deck .btn.ghost { color: #fff; border-color: #55524C; }
+  .deck-embed { margin: 0; }
+  .deck-embed iframe { border-radius: 8px; display: block; }
+  .deck-genres { display: flex; flex-wrap: wrap; gap: 6px; }
+  .gchip { --c: #999; display: inline-flex; align-items: center; gap: 7px; text-decoration: none; font: 13px/1 "Inter", sans-serif; padding: 7px 10px; border-radius: 999px; background: #2A2825; color: #fff; }
+  .gchip i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+  .gchip span { color: #9C978D; font-family: "Space Mono", monospace; font-size: 11px; }
+  .gchip:hover { background: #3A3833; }
+  .note-play { display: flex; align-items: center; gap: 8px; margin: 2px 0 8px; font: 11px/1.2 "Space Mono", monospace; letter-spacing: .04em; text-transform: uppercase; color: #D63A31; }
+  .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 48px 0 0; }
+  .pager a { display: grid; gap: 4px; padding: 16px; border: 1px solid #DDD8CE; border-radius: 4px; text-decoration: none; }
+  .pager a:hover { border-color: #1C1B19; }
+  .pager .next { text-align: right; }
+  .pager small { font: 11px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #D63A31; }
+  .pager b { font: 600 18px/1.15 "Oswald", sans-serif; }
+  @media print { .sitenav, .deck, .pager, .sitefoot { display: none !important; } }
+</style></head><body class="chapter" data-mixtape="2"><header class="sitenav"><a class="brand" href="../index.html"><img src="../assets/cassette.png" alt=""><span>School of Rock</span></a><nav aria-label="Hoofdmenu"><a href="../index.html#mixtapes" aria-current="page">Mixtapes</a><a href="../kaart.html">Genrekaart</a><a href="../begrippen.html">Begrippen</a><a href="../pdf/school-of-rock-reader.pdf">Reader (pdf)</a></nav></header><div class="book">
+
+<header class="opener cover" style="background-image:url('https://lh3.googleusercontent.com/h3FcBTnlgB9h26n08V9iJg7ZckN3PHbeMdIFF1teNFl1CuNzh4teSy8ypM8cJTwtVts2JejTlWuVNlbjWd7sqBtvp4r5FX7YHRHAtKE')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+  <p class="kicker">School of Rock · Mixtape 2</p>
+  <img class="cassette" src="../assets/cassette.png" alt="School of Rock-cassette">
+  <div class="cover-text"><h1>Jeugdculturen 1950-1980</h1>
+  <p class="sub">Rockers, mods, indorockers, hippies, punks en skinheads, en de muziek die bij hun kleren hoorde.</p></div>
+</header>
+<div class="deck" aria-label="Bij dit hoofdstuk">
+  <div class="deck-row"><span class="lbl">Luisteren</span><a class="btn solid deck-spotify" href="https://open.spotify.com/playlist/5DSSW1HM4g5zAx7HpwwXyz" data-embed="https://open.spotify.com/embed/playlist/=generator" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Spotify-playlist</a><a class="btn ghost" href="https://open.spotify.com/playlist/5DSSW1HM4g5zAx7HpwwXyz" target="_blank" rel="noopener">Open in Spotify</a><a class="btn ghost" href="../pdf/mixtape-02.pdf" download>Download pdf</a></div>
+  <div class="deck-embed" hidden></div>
+  <div class="deck-row"><span class="lbl">Les</span><span class="lesson">LessonUp · Mixtape 2: Jeugdculturen 1950-1980</span></div>
+  <div class="deck-row"><span class="lbl">Op de kaart</span><div class="deck-genres"></div></div>
+</div>
+
+<section class="flow">
+  <aside class="side-note"><span class="tag">LUISTER MEE</span><div class="qr" data-url="https://open.spotify.com/playlist/5DSSW1HM4g5zAx7HpwwXyz"></div>Alle nummers uit dit hoofdstuk staan op volgorde in de Spotify-playlist bij Mixtape 2.</aside>
+  <p class="intro">Een jongen van zestien in Londen in 1958 droeg een lang jasje met een fluwelen kraag en vette kuif. Zijn jongere broer reed zes jaar later op een scooter met tien spiegels, in een maatpak onder een legerparka. Weer tien jaar later had een jongen uit dezelfde straat een hanenkam en een jack vol veiligheidsspelden. Alle drie hoorden ze bij een groep, en elke groep had haar eigen muziek.</p>
+  <p>Dat jongeren een eigen cultuur hebben, lijkt nu vanzelfsprekend. Toch is het een uitvinding van na de Tweede Wereldoorlog. Pas toen hadden jongeren genoeg geld, tijd en vrijheid om zich bewust af te zetten tegen hun ouders, en pas toen was er een industrie die hen daarbij wilde helpen. Kleding, kapsel, taal en muziek werden een manier om te laten zien bij wie je hoorde. Dat roept de vraag op die steeds terugkomt: <strong>waarom kiest een generatie een eigen geluid, en wat maakt dat geluid herkenbaar als "van ons"?</strong></p>
+  <p>Het antwoord zit voor een deel in de mode en de politiek, maar voor een groot deel ook in de muziek zelf: in een slapback-echo, een stotterende zanger, een Hawaïgitaar, een open gitaarstemming of een orgel boven een ska-ritme. Wie goed luistert, hoort de groep erin terug.</p>
+
+  <!-- SIDE A -->
+  <header class="opener part first-part" style="background-image:url('https://lh3.googleusercontent.com/h3FcBTnlgB9h26n08V9iJg7ZckN3PHbeMdIFF1teNFl1CuNzh4teSy8ypM8cJTwtVts2JejTlWuVNlbjWd7sqBtvp4r5FX7YHRHAtKE')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side A · 1945-1965</p>
+    <h2>Tijdgeest: de eerste tieners</h2>
+    <p class="sub">Idolen, welvaart en rock-'n-roll: hoe de tiener een eigen groep werd.</p>
+    <span class="letter" aria-hidden="true">A</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1842-1870 · Engeland en Amerika</p><h3>Het eerste idool: Charles Dickens</h3></div>
+  <p>Wie denkt dat gillende fans begonnen bij Elvis of de Beatles, moet een eeuw verder terugkijken. De Engelse schrijver Charles Dickens was in de negentiende eeuw de bekendste auteur van de Engelstalige wereld. Zijn romans verschenen in afleveringen in tijdschriften, zodat lezers maandenlang moesten wachten op het vervolg. Hele huishoudens lazen mee, en de afleveringen gingen van hand tot hand.</p>
+  <p>Dickens was meer dan een schrijver. Hij was een performer. Vanaf 1858 gaf hij betaalde voorleesavonden, waarbij hij in zijn eentje op een podium stond en zijn eigen personages speelde, met verschillende stemmen en gebaren. Hij trok met die voorstellingen door Engeland en Amerika, een tournee in de moderne zin van het woord.</p>
+  <p>Al bij zijn eerste bezoek aan Amerika, in 1842, liep het publiek uit de hand. Fans probeerden stukjes uit zijn bontjas te knippen als souvenir. Tijdens zijn tweede Amerikaanse tournee, in 1867 en 1868, sliepen mensen 's nachts op straat in de rij voor kaartjes. Wie geen kaartje had, kocht er een op de zwarte markt voor een veelvoud van de prijs. Dickens had een manager die de reizen en de kaartverkoop regelde.</p>
+  <p>Tournee, manager, fans, hysterie: alles wat later bij een popster hoort, was er al honderd jaar vóór Elvis. Dat laat zien wat een idool nodig heeft. In de eerste plaats een medium dat hem overal brengt: bij Dickens de tijdschriften en de spoorwegen, later de radio, de televisie en de streamingdienst. Verder een publiek met tijd en geld. En ten slotte een persoon met wie dat publiek zich kan identificeren. Die drie voorwaarden komen in de rest van dit hoofdstuk steeds terug.</p>
+
+  <div class="head"><p class="label">Track 02 · 1960-2022</p><h3>Tieneridolen door de decennia</h3></div>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">Elvis Presley</span><br>Are You Lonesome Tonight? (1960)</div></div>Een wals uit 1926 met een gesproken middenstuk: het idool als crooner.</aside>
+  <p>Elk decennium heeft zijn eigen tieneridool. Als je de fragmenten achter elkaar beluistert, van Elvis Presley in 1960 tot Harry Styles in 2022, hoor je vooral verschillen: andere instrumenten, een ander tempo, een andere productie. Maar onder die verschillen blijven drie dingen gelijk. Er is een herkenbaar gezicht. Er is een eenvoudige hook, een zinnetje of melodie dat na één keer blijft hangen. En de productie past precies bij het medium van dat moment.</p>
+  <p>Elvis Presley was in 1960 net terug uit militaire dienst in Duitsland. <em>Are You Lonesome Tonight?</em> is een wals uit 1926, met halverwege een gesproken stuk. De rebel van de rock-'n-roll was een crooner geworden, een zanger voor het hele gezin. Drie jaar later klonken de Beatles in <em>Please Please Me</em> heel anders: tweestemmige zang, een mondharmonica en een hoge "come on" als hook. Over hen gaat Mixtape 3.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">The Partridge Family / David Cassidy</span><br>I Think I Love You (1970)</div></div>Een tv-band met studiomuzikanten van de Wrecking Crew: het idool als product.</aside>
+  <p>Bij The Partridge Family was het idool een product van de televisie. De band bestond uit een gezin in een Amerikaanse tv-serie. Zanger David Cassidy werd een tieneridool, maar de muziek werd ingespeeld door studiomuzikanten uit Los Angeles, de Wrecking Crew. Fans kochten een plaat van een band die in werkelijkheid niet bestond.</p>
+  <p>In de jaren tachtig werd MTV het belangrijkste medium. Michael Jackson combineerde in <em>Beat It</em> (1983) pop met hardrock: de gitaarsolo is van Eddie Van Halen. Wham! verpakte in <em>Wake Me Up Before You Go-Go</em> (1984) een Motown-shuffle in een jaren-tachtigproductie. Madonna gebruikte in <em>Material Girl</em> (1984) een synthesizerbas en een drumcomputer, en bepaalde zelf haar imago. Het idool werd ook de regisseur van zijn of haar eigen beeld.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">Backstreet Boys</span><br>I Want It That Way (1999)</div></div>Geschreven door de Zweed Max Martin: melodie gaat vóór betekenis.</aside>
+  <p>In de jaren negentig kwam de gecaste boyband en girlband. Take That zong met <em>Back for Good</em> (1995) een klassieke ballad met strijkers. De Spice Girls waren in <em>Wannabe</em> (1996) vijf personages die samen één merk vormden. <em>I Want It That Way</em> (1999) van de Backstreet Boys werd geschreven door de Zweedse producer Max Martin. In zijn werkwijze gaat de melodie vóór de betekenis van de tekst: het klinkt goed, ook als je niet precies weet waar het over gaat. Over die manier van hits maken gaat Mixtape 12.</p>
+  <p>BTS bracht met <em>Dynamite</em> (2020) Koreaanse pop in het Engels, met disco-funk als retrogeluid: een idool voor een wereldwijd publiek dat via streaming en sociale media luistert. Harry Styles, ooit lid van de boyband One Direction, scoorde als soloartiest met <em>As It Was</em> (2022), een synthpopnummer met een gitaarriff op 174 bpm. De drie voorwaarden van Dickens gelden nog steeds. Alleen het medium is veranderd.</p>
+
+  <div class="head"><p class="label">Track 03 · 1950-1960</p><h3>De wereld na de oorlog</h3></div>
+  <p>Na 1945 brak in de Verenigde Staten een periode van grote welvaart aan. De fabrieken die in de oorlog wapens hadden gemaakt, produceerden nu auto's, koelkasten en televisies. Gezinnen kochten een huis in een voorstad en een auto om ermee naar de stad te rijden. Dit wordt de consumptiemaatschappij genoemd: een samenleving waarin kopen een belangrijk deel van het dagelijks leven is.</p>
+  <p>De techniek ontwikkelde zich snel. De televisie kwam in de jaren vijftig in miljoenen Amerikaanse huiskamers. Reclame werd een industrie. Twee uitvindingen waren voor de muziek extra belangrijk. In 1949 bracht platenmaatschappij RCA Victor de 45-toerensingle op de markt, een kleine, goedkope plaat met één nummer per kant. Midden jaren vijftig kwam de transistorradio, klein genoeg om mee te nemen. Een tiener kon nu op zijn eigen kamer, op straat of op het strand naar zijn eigen zender luisteren, buiten het bereik van zijn ouders.</p>
+  <p>De Verenigde Staten waren in West-Europa de bevrijder en de bondgenoot. De Amerikaanse cultuur werd het voorbeeld: Hollywoodfilms, spijkerbroeken, Coca-Cola, en de muziek die via de radio en de platen van Amerikaanse soldaten Europa binnenkwam.</p>
+  <p>Tegelijk veranderde de bevolking. Na de oorlog werden er in korte tijd veel kinderen geboren, de babyboom. In de jaren zestig was daardoor een groot deel van de bevolking jong. Die jongeren bleven langer op school dan hun ouders, kregen zakgeld of verdienden met een bijbaantje hun eigen geld, en hadden vrije tijd. Het Engelse woord <em>teenager</em> werd pas in de jaren veertig gangbaar. Voor het eerst was er een grote groep met eigen geld maar zonder de verantwoordelijkheden van volwassenen. Voor de industrie was dat een nieuwe markt.</p>
+
+  <div class="head"><p class="label">Track 04 · 1954-1960 · Verenigde Staten</p><h3>Rolmodellen</h3></div>
+  <p>Die nieuwe markt werd bediend door tijdschriften voor tieners, door films en door de radio. Idolen kwamen niet alleen uit de muziek. Filmacteurs als Marlon Brando en James Dean werden rolmodellen. Brando speelde in <em>The Wild One</em> (1953) de leider van een motorbende, in leren jack en met pet. James Dean speelde in <em>Rebel Without a Cause</em> (1955) een onbegrepen tiener die botst met zijn ouders. Dean kwam in datzelfde jaar om bij een auto-ongeluk, 24 jaar oud, en werd daardoor voor altijd de jonge rebel.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/6hpiwObm9ddT4boZJga9BNn1JW_rKVlFSTwtIOR-OdKvU8iJnNAY-HFnn99L1KqnaM5VOIuwj2WIc_lQbBSJK5hYbTewRcYCRkbaPpo" alt=""><div><span class="who">Bill Haley &amp; His Comets</span><br>Rock Around the Clock (1954)</div></div>Een 12-maten blues met een dansorkest-sound. Tel de maten van het couplet mee.</aside>
+  <p>Marketing en reclame verkochten een complete levensstijl: de kleren, het kapsel, de film en de plaat hoorden bij elkaar. De radio-dj speelde daarin een grote rol. Dj's als Alan Freed werden zelf sterren, omdat zij bepaalden welke platen het publiek hoorde. Dat maakte hen ook omkoopbaar. Platenmaatschappijen betaalden dj's en radiostations om bepaalde platen te draaien. Dat heet <em>payola</em>. In 1959 en 1960 kwam het schandaal naar buiten. Alan Freed verloor zijn carrière. Dick Clark, de presentator van het tv-programma <em>American Bandstand</em>, kwam er met een schrammetje vanaf. De vraag wie betaalt om gehoord te worden, speelt nog steeds, bijvoorbeeld in de discussies over playlists op streamingdiensten.</p>
+  <p>De eerste jeugdcultuur liep gelijk op met de witte rock-'n-roll. Bill Haley &amp; His Comets namen <em>Rock Around the Clock</em> op in 1954. Het nummer werd pas een grote hit toen het in 1955 onder de begintitels klonk van <em>Blackboard Jungle</em>, een film over een leraar op een ruige school in New York. In bioscopen gingen jongeren dansen in de gangpaden, stoelen sneuvelden en op verschillende plaatsen braken rellen uit. Voor veel volwassenen was dat het bewijs dat rock-'n-roll gevaarlijk was. Voor de jongeren was het de bevestiging dat dit hun muziek was.</p>
+  <p>Muzikaal is <em>Rock Around the Clock</em> minder wild dan zijn reputatie. Het is een 12-maten blues: een vast schema van twaalf maten met drie akkoorden, dat uit de zwarte bluesmuziek komt. Haley speelt het met de bezetting en het geluid van een dansorkest, met een saxofoon en een contrabas. Waar die blues vandaan komt en hoe rhythm-and-blues en country samen rock-'n-roll werden, staat in Mixtape 1.</p>
+
+  <div class="head"><p class="label">Track 05 · 1950-1960 · Verenigd Koninkrijk</p><h3>Een eigen groep</h3></div>
+  <p>Een jeugdcultuur is een groep jongeren die zich onderscheidt door kleding, kapsel, muziek en taal. Je laat aan de buitenkant zien bij wie je hoort, en dus ook bij wie niet. Die groepen ontstonden doordat jongeren meer tijd met elkaar doorbrachten: op school, in de bioscoop, in het café en op straat. Omdat ze vaak een hogere opleiding kregen dan hun ouders, kwamen ze ook in aanraking met nieuwe ideeën over kunst, politiek en vrijheid.</p>
+  <p>In Engeland was de eerste herkenbare groep die van de Teddy Boys. Ze ontstonden begin jaren vijftig in de arbeiderswijken van Londen. Hun naam komt van Edward, afgekort Teddy: ze droegen pakken in de stijl van de tijd van koning Edward VII, rond 1900. Een lang jasje met fluwelen kraag, een smalle broek, een smal stropdasje en schoenen met dikke zolen. Het haar werd met vet in een kuif gekamd. Het was dure kleding voor jongens zonder veel geld: een manier om te laten zien dat je je eigen geld uitgaf zoals je zelf wilde. Toen de rock-'n-roll uit Amerika overkwam, werden de Teddy Boys de eerste fans.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/-abxro5QqnMNGQuKBOOaZsX4RPaFi1y-bmcqsRohRpvFIKgQFz82t--truNImqFost4PJ47kjWM8WUvlWbzzQJSpEO7m1lTn_ZIk_PE" alt=""><div><span class="who">Cliff Richard &amp; The Shadows</span><br>Living Doll (1959)</div></div>Brits antwoord op Elvis, maar braver. Hoor je de invloed van country in de akoestische shuffle?</aside>
+  <p>Britse artiesten begonnen de Amerikanen na te doen. Cliff Richard werd het Engelse antwoord op Elvis. Zijn eerste single <em>Move It</em> (1958) wordt vaak gezien als de eerste echte Britse rock-'n-roll. Met <em>Living Doll</em> (1959) koos hij voor een braver geluid. Het nummer heeft een akoestische shuffle, een huppelend ritme dat uit de country komt, en een zachte, nette zang. Het werd een nummer 1-hit in Engeland. Zijn begeleidingsband The Shadows, met gitarist Hank Marvin, werd daarna zelf beroemd met instrumentale nummers.</p>
+  <p>Zo ging het vaker: de Britten namen een Amerikaans voorbeeld en maakten er iets eigens van. Een paar jaar later zou dat in het groot gebeuren, toen bands als de Beatles en de Rolling Stones Amerikaanse rhythm-and-blues terugstuurden naar Amerika.</p>
+
+  <div class="head"><p class="label">Track 06 · 1955-1965 · Engeland, Verenigde Staten, Nederland</p><h3>Rockers</h3></div>
+  <p>Uit de Teddy Boys ontstonden halverwege de jaren vijftig de rockers. Zij hadden verschillende namen. In Engeland heetten ze ook <em>ton-up boys</em>, naar de 'ton', de honderd mijl per uur die ze met hun motor wilden halen, of <em>café racers</em>, naar de wegcafés waar ze samenkwamen. In de Verenigde Staten heetten ze <em>greasers</em>, naar het vet in hun haar. In Nederland waren het de nozems, en in Amsterdam de dijkers, naar de Nieuwendijk.</p>
+  <p>De stijl was eenvoudig en stoer: een motor, een leren jack, een spijkerbroek en haar dat met Brylcreem naar achteren werd gekamd. Het voorbeeld was Marlon Brando in <em>The Wild One</em>. De rockers kwamen uit de arbeidersklasse en hadden vaak al jong een baan. Hun geld ging naar de motor.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/PRyLoR7XU9k-F406qUGEjrcpjc3pL4e6T0Mm6Eq4lXnMuD2mgCEaKiQj3x7tYzZEAB6fJqFPpVqHxL0M5NS5kzJ_pRbeT6hPRcRJ0u8" alt=""><div><span class="who">Eddie Cochran</span><br>C'mon Everybody (1958)</div></div>Stop-time-riff: de band valt stil en de stem vult het gat. Cochran speelde zelf gitaar én bas op veel opnames.</aside>
+  <p>Hun muziek was rock-'n-roll en rockabilly, de snelle, kale variant waarin country en rhythm-and-blues samenkomen. Je herkent die muziek aan een paar duidelijke kenmerken. De zang heeft een slapback-echo: één korte herhaling, kort na de stem, die het geluid van Sun Records in Memphis bepaalde. De contrabas wordt niet alleen getokkeld maar ook geslagen, zodat de snaren tegen de hals klappen en een tikkend ritme maken. En de elektrische gitaar heeft een scherpe, metalige klank: de <em>twang</em>.</p>
+  <p>De idolen van de rockers waren Elvis Presley, Gene Vincent en Eddie Cochran. Gene Vincent werd beroemd met <em>Be-Bop-A-Lula</em> (1956) en droeg op het podium altijd leer. Eddie Cochran was een vakkundig muzikant die in de studio vaak zelf de gitaar en de bas inspeelde. In <em>C'mon Everybody</em> (1958) gebruikt hij een stop-time-riff: de band speelt een kort motief en valt dan stil, en in die stilte zingt Cochran zijn regel. Daardoor krijgt de stem alle aandacht.</p>
+  <p>Cochran en Vincent waren in Engeland nog populairder dan in Amerika. In april 1960 waren ze daar samen op tournee. Op weg naar Londen verongelukte hun taxi. Cochran overleed, 21 jaar oud. Vincent raakte gewond. Voor de Britse rockers was Cochran daarna een held, net zoals James Dean dat was voor de Amerikaanse tieners.</p>
+
+  <!-- SIDE B -->
+  <header class="opener part" style="background-image:url('https://lh3.googleusercontent.com/2l_sULbu-S3E2md4S-EFeIwOvn9V3bkBGPcROdrXGOlRJ7L36-si-_Af07C3w6AN9Wm4E9eY7KmPbXP3YuJyLqQos4FcKRUr9c1I1Q')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side B · 1950-1966</p>
+    <h2>Mods, indorock en artistiekelingen</h2>
+    <p class="sub">Stijl als statement: scooters, Hawaïgitaar en bebop in rokerige cafés.</p>
+    <span class="letter" aria-hidden="true">B</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1958-1966 · Londen, Brighton</p><h3>Mods</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/t0VHucMqzKPwBiQEooZWsdj6RKDacFBstNQ49ou4wETmjbD5AnXJYiXm8x6XaFlLnuUstqT2_fpLoM8ARXzUPpuRwUcGXmCnglEjNVI" alt="The Who"><figcaption>The Who</figcaption></figure>
+  <p>Eind jaren vijftig ontstond in Londen een groep die er heel anders uitzag dan de rockers. De naam mod komt van <em>modernist</em>: de eerste mods waren fans van moderne jazz. Ze waren ook vaak afkomstig uit de arbeidersklasse, maar werkten liever op een kantoor of in een winkel dan in een fabriek. Hun geld gaven ze uit aan kleren. Een mod droeg een maatpak met smalle revers, een overhemd met knoopjes aan de kraag en puntige schoenen. Mods waren stijlbewust tot in het kleinste detail.</p>
+  <p>Ze reden op Italiaanse scooters, een Vespa of een Lambretta, versierd met veel spiegels en lampen. Over het pak droegen ze een legerparka, zodat het pak onderweg schoon bleef. Hun muziek was eerst moderne jazz, daarna Amerikaanse soul en rhythm-and-blues en ska uit Jamaica. Later kwamen daar de Britse beat en de psychedelische muziek bij. Mods dansten de hele nacht in clubs in Londen.</p>
+  <p>Mods en rockers waren elkaars tegenpolen: scooter tegen motor, pak tegen leer, soul tegen rock-'n-roll. In 1964 liep die rivaliteit uit de hand. Tijdens de feestdagen in het voorjaar trokken groepen mods en rockers naar badplaatsen aan de zuidkust, zoals Brighton en Margate, en daar kwam het tot vechtpartijen. De kranten stonden er vol mee. De berichtgeving maakte de groepen groter en bekender dan ze waren. De film <em>Quadrophenia</em> (1979), gebaseerd op het gelijknamige album van The Who, speelt zich in deze tijd af en eindigt in Brighton.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/FMRIyzUXRBLpjSm6ChaOzoA5HfrUN5NR4LveY9NmUScYeuMBKQdpqFf5wwcC89VW7KWKWsmhO3GaOYVuEyjd42ePyTm_ULV7mqLEGEY" alt=""><div><span class="who">The Who</span><br>My Generation (1965)</div></div>Luister naar de gestotterde zang, de baspartij als solo-instrument en de modulaties omhoog. Aan het eind: feedback als muziek.</aside>
+  <p>De bands van de mods waren The Who, de Small Faces en The Kinks. The Who bestond uit zanger Roger Daltrey, gitarist Pete Townshend, bassist John Entwistle en drummer Keith Moon. <em>My Generation</em> (1965) werd hun volkslied. In de tekst zingt Daltrey dat hij hoopt te sterven voordat hij oud wordt. Het is de eerste keer dat de generatiekloof zelf het onderwerp van een hit is.</p>
+  <p>Ook muzikaal valt er veel te horen. Daltrey stottert de tekst, alsof hij te opgewonden of te boos is om uit zijn woorden te komen. John Entwistle speelt korte solo's op de basgitaar, iets wat in 1965 ongewoon was: de bas was meestal een begeleidingsinstrument. Het nummer moduleert drie keer omhoog, van G naar A, naar B♭ en naar C. Bij elke modulatie gaat de spanning omhoog. Die truc werd later een pop-cliché en kreeg in het Engels een spottende naam: de <em>truck driver's gear change</em>, alsof een vrachtwagenchauffeur een versnelling hoger schakelt. Aan het eind laat Townshend zijn gitaar rondzingen in de versterker. Die feedback, eigenlijk een technische fout, wordt hier muziek. Op het podium sloeg Townshend zijn gitaar regelmatig kapot.</p>
+
+  <div class="head"><p class="label">Track 02 · 1957-1965 · Nederland, Duitsland</p><h3>Indorock</h3></div>
+  <p>Terwijl in Engeland mods en rockers tegenover elkaar stonden, ontstond in Nederland een eigen vorm van rock-'n-roll. Na de onafhankelijkheid van Indonesië in 1949 kwamen tienduizenden Indische Nederlanders en Molukkers naar Nederland. Onder hen waren jonge muzikanten die in Indië al Amerikaanse rock-'n-roll en country hadden gehoord, naast kroncong, een Indonesische muziekstijl met snaarinstrumenten, en Hawaïaanse muziek, die daar erg populair was.</p>
+  <p>Indorock was daarom meer een subcultuur dan een jeugdcultuur: het was de muziek van een gemeenschap met eigen wortels, die in Nederland opnieuw moest beginnen. De muziek was vaak instrumentaal. De gitaristen speelden razendsnelle licks en gebruikten de Hawaïgitaar, een gitaar die plat op schoot ligt en met een metalen staafje over de snaren wordt bespeeld. Daardoor kunnen tonen glijden en jammeren. Daarbij hoorde een flinke show: gitaar spelen met je tanden, achter je hoofd of liggend op de grond.</p>
+  <aside class="side-note"><span class="tag">KIJKTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">The Tielman Brothers</span><br>Bossa Nova Baby (live op tv)</div></div>Let op de gitaartechniek van Andy Tielman en op de showelementen.</aside>
+  <p>De bekendste groep was The Tielman Brothers, een familieband met Andy Tielman als zanger en gitarist. Ze speelden eind jaren vijftig al in Duitsland, onder meer in Hamburg, waar de Beatles pas in 1960 voor het eerst kwamen spelen. De Tielman Brothers worden daarom gezien als pioniers van de Europese rock. Indorock was de eerste Nederlandse popmuziek die Duitsland veroverde: tientallen Indische bands speelden in Duitse clubs. Op een tv-opname van <em>Bossa Nova Baby</em> zie je wat dat betekende. Andy Tielman speelt snelle loopjes, en de band brengt de show waar ze om bekend stond.</p>
+  <p>Begin jaren zestig ging de indorock langzaam over in indopop: rustiger, met meer zang en meer melodie. Het duo The Blue Diamonds, de broers Riem en Ruud de Wolff, had in 1960 een grote hit met <em>Ramona</em>, ook in Duitsland. Hun tweestemmige zang klonk zacht en verzorgd, een stuk braver dan de wilde shows van de Tielmans. Over de verdere geschiedenis van popmuziek uit Nederland gaat Mixtape 11.</p>
+
+  <div class="head"><p class="label">Track 03 · 1950-1965 · Amsterdam, Parijs</p><h3>Artistiekelingen</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/-4xcDpVh0H9w9MoT7sskXL6xIeCBulE01JUOTamOMwSDuRxq6GI76mq5SSFIo2s7Tsxv3IJQ_-XZm3sTDn9U2crJHmBD1n0ds8uRLEw" alt="John Coltrane"><figcaption>John Coltrane</figcaption></figure>
+  <p>Niet elke jeugdcultuur draaide om rock-'n-roll. In de jaren vijftig en begin jaren zestig was er ook een groep jongeren die zich met kunst, literatuur en filosofie bezighield. In Parijs waren dat de existentialisten, die in de cafés van de wijk Saint-Germain-des-Prés zaten en de ideeën van de filosoof Jean-Paul Sartre bespraken. In Amsterdam heetten ze de Pleiners, naar het Leidseplein, waar ze in de cafés bijeenkwamen.</p>
+  <p>Ze droegen zwarte, vaak tweedehands kleding en coltruien. Ze keken films van de Franse nouvelle vague, waarin jonge regisseurs met kleine budgetten en losse camera's de regels van de Hollywoodfilm braken. Ze waren tegen autoriteit en traditie en lazen schrijvers als Harry Mulisch, Simon Carmiggelt en Remco Campert, die zelf ook in de Amsterdamse cafés te vinden waren.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">John Coltrane</span><br>Be-Bop</div></div>Hoog tempo, snelle akkoordwisselingen, lange solo's: muziek om naar te luisteren, niet om op te dansen.</aside>
+  <p>Hun muziek was de moderne jazz, en vooral de bebop. Die stijl was in de jaren veertig in New York ontstaan, bij muzikanten als Charlie Parker en Dizzy Gillespie. Bebop heeft een hoog tempo, snelle akkoordwisselingen en lange, ingewikkelde solo's. Het is muziek om naar te luisteren, niet om op te dansen. Daarmee zetten de jazzmuzikanten zich af tegen de swing van de grote dansorkesten, en de artistiekelingen zich tegen de amusementsmuziek van hun ouders. Trompettist Miles Davis en saxofonist John Coltrane waren de helden. Bij het Franse deel van de groep hoorde ook het chanson, met zangeres Juliette Gréco als het gezicht van Saint-Germain-des-Prés.</p>
+  <p>Deze groep was kleiner dan de rockers of de mods, en minder zichtbaar op straat. Toch is haar invloed groot. De houding van de artistiekelingen, kritisch, intellectueel en tegen de gevestigde orde, komt in de jaren zestig terug bij de hippies. Meer over bebop en moderne jazz staat in Mixtape 5.</p>
+
+  <!-- SIDE C -->
+  <header class="opener part" style="background-image:url('https://lh3.googleusercontent.com/PCy7Se6nOUkq-r7SBiHF73zl4ltRIrqseAngAQ4wa57KRO82O31sEtrE3UOnTpBJCuGffvydrjaanCE7YDsLZwEylDhL_wnZxKFDYuI')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side C · 1965-1981</p>
+    <h2>Protest en provocatie</h2>
+    <p class="sub">Van flower power tot no future: hippies, punks en 2 Tone.</p>
+    <span class="letter" aria-hidden="true">C</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1965-1972 · San Francisco, Monterey, Woodstock</p><h3>Hippies</h3></div>
+  <p>Halverwege de jaren zestig waren de babyboomers volwassen. Een deel van hen keerde zich af van de welvaart waarin ze waren opgegroeid. De hippies waren tegen materialisme, tegen de oorlog in Vietnam en voor vrede, vrije liefde en een leven dichter bij de natuur. Hun motto werd <em>flower power</em>. Ze droegen lang haar, kralen en kleurige, vaak zelfgemaakte kleding. Het was een brede beweging, deels jeugdcultuur, deels subcultuur, met een centrum in de wijk Haight-Ashbury in San Francisco.</p>
+  <p>Deze tegencultuur wordt de <em>counterculture</em> genoemd. Muziek speelde er een hoofdrol in, net als experimenten met drugs als lsd, die de beleving van muziek en kleur veranderden. De zomer van 1967 werd de Summer of Love: tienduizenden jongeren trokken naar San Francisco. In juni van dat jaar vond het Monterey Pop Festival plaats, waar Jimi Hendrix zijn gitaar op het podium in brand stak. In augustus 1969 kwamen honderdduizenden mensen naar het festival van Woodstock, op een boerderij in de staat New York. Het festival werd het symbool van een hele generatie.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/CYKDJbiDEjbikezRrTegljmkyqDwGnpYfJVnRciVrXpamK_r0NPnMeOcgW1DHqJ5wRyVPUcN6LYyOfcdfq7N_vSTnlwpEZDI3hb6JA" alt=""><div><span class="who">Joni Mitchell</span><br>Big Yellow Taxi (1970)</div></div>Mitchell gebruikt open stemmingen op haar gitaar. Waar gaat de tekst over, en waarom klinkt het zo vrolijk?</aside>
+  <p>De muziek van de hippies was gevarieerd. Er waren singer-songwriters die met een akoestische gitaar persoonlijke en politieke liedjes zongen. Er was folkrock, waarin folkmelodieën met elektrische gitaren werden gespeeld. Er was psychedelische rock, met lange improvisaties, galm en vervorming, die de ervaring van een drugstrip probeerde na te bootsen. En er was raga rock, waarin westerse bands Indiase instrumenten en toonladders gebruikten, zoals de sitar die George Harrison bespeelde op <em>Norwegian Wood</em> (1965) van de Beatles. Bekende namen zijn Grateful Dead, Jimi Hendrix, Crosby, Stills, Nash &amp; Young, Joni Mitchell, de Beatles en Pink Floyd. Een deel van die rockmuziek komt terug in Mixtape 4.</p>
+  <p>De Canadese Joni Mitchell is een goed voorbeeld van de singer-songwriter. In <em>Big Yellow Taxi</em> (1970) zingt ze dat het paradijs is geplaveid om er een parkeerplaats van te maken. Het is een van de eerste popsongs over het milieu. Toch klinkt het nummer vrolijk, met een huppelende gitaar en een lachje aan het eind. Mitchell stemde haar gitaar vaak in een open stemming: de snaren klinken samen al als een akkoord als je ze los aanslaat. Zo vond ze klanken en akkoorden die op een gewoon gestemde gitaar lastig te spelen zijn. Over haar rol als vrouw in de popmuziek gaat Mixtape 10.</p>
+  <p>Mitchell schreef ook <em>Woodstock</em>, een lied over het festival, terwijl ze er zelf niet bij was. Het nummer werd door anderen bekend gemaakt. Crosby, Stills, Nash &amp; Young namen er in 1970 een stevige rockversie van op. De Britse groep Matthews Southern Comfort maakte er in hetzelfde jaar juist een rustige, zachte versie van. Wie de twee vergelijkt, hoort hoe één lied door tempo en arrangement een heel andere sfeer krijgt.</p>
+
+  <div class="head"><p class="label">Track 02 · 1975-1980 · Londen, New York</p><h3>Punk</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/i_fcJ0RFE-PuwNOt46FDuQfCg_aI_ZctH2w4me_fu1TOD8zeO-MWUxFe_gLB42iacM9SvV4vnXIDiBbWgaexR_Yz0RuGwHTZ1WDdAQ" alt="Sex Pistols"><figcaption>Sex Pistols</figcaption></figure>
+  <p>Halverwege de jaren zeventig was de rock groot, duur en ingewikkeld geworden. Progrockbands speelden lange nummers met virtuoze solo's, in grote zalen, ver van hun publiek. In de clubs klonk gladde disco. In Engeland was de economie slecht en de werkloosheid onder jongeren hoog. Voor een nieuwe generatie was de vrede-en-liefdeboodschap van de hippies niet meer geloofwaardig. Zij hadden geen idealen meer, maar woede.</p>
+  <p>Punk was tegen elke vorm van autoriteit. Het belangrijkste idee was <em>do it yourself</em>: iedereen kan een band beginnen, ook als je nauwelijks kunt spelen. De mode was bewust lelijk en provocerend: leren jacks, gescheurde kleding, hanenkammen en veiligheidsspelden. Een deel van die stijl kwam uit <em>SEX</em>, de winkel van ontwerpster Vivienne Westwood en Malcolm McLaren aan King's Road in Londen. McLaren werd ook de manager van de Sex Pistols.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/tgkFtQgzv9YW9HHP1VWy8gLkfFo0sEJ__oNha3HaOsrPu2USB7eTLkAQZSmAHinLWXjKdN3rH77rVJQvhfvI3ZZW2chWEP6w8YCHdEY" alt=""><div><span class="who">Sex Pistols</span><br>Anarchy in the UK (1976)</div></div>Niet zo simpel als het lijkt: dubbel opgenomen gitaarpartijen van Steve Jones maken de muur van geluid.</aside>
+  <p>De muziek was een reactie op de progrock: kort, snel, luid en met weinig akkoorden. Geen gitaarsolo's van vijf minuten, maar nummers van twee à drie minuten. Toch klopt het beeld van punks die niet konden spelen maar half. Op <em>Anarchy in the UK</em> (1976) van de Sex Pistols nam gitarist Steve Jones zijn partijen meerdere keren over elkaar op. Zo ontstaat een muur van gitaargeluid. Daarboven sneert zanger Johnny Rotten dat hij een antichrist en een anarchist is. In december 1976 vloekten de bandleden in een live tv-interview. Daarna was punk landelijk nieuws, en in 1977 werd hun single <em>God Save the Queen</em> door de BBC geweerd.</p>
+  <p>Andere bands waren The Damned, The Stranglers en The Clash in Londen, en The Ramones in New York, waar punk rond dezelfde tijd ontstond. The Ramones speelden korte, snelle nummers in de club CBGB en waren een voorbeeld voor de Britse bands.</p>
+  <p>Punk was ook een manier van produceren. Bands namen goedkoop op en brachten hun platen uit op kleine, onafhankelijke labels zoals Stiff en Rough Trade. Fans maakten fanzines: gekopieerde blaadjes met interviews en recensies. Die eigen infrastructuur, buiten de grote platenmaatschappijen om, werd de basis van de latere indiescene.</p>
+
+  <div class="head"><p class="label">Track 03 · 1969-1981 · Engeland</p><h3>Skinheads en 2 Tone</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/08rOdbKIa6hFJx_YsMllzUZ07akYmZWnni3IGa8R9_m5EczH4EVs9Jb0Z-drvWTkT_SNwL2JAT7Oi3fxqH5eshWZvnViTSp2sFJ5ZVk" alt="The Specials"><figcaption>The Specials</figcaption></figure>
+  <p>Het woord skinhead roept nu vaak beelden op van extreemrechts geweld. Maar de eerste skinheads, rond 1969, hadden daar niets mee te maken. Het waren neo-mods uit de Engelse arbeiderswijken, die de verfijnde stijl van de mods verruilden voor iets ruigers: kaalgeschoren hoofd, jeans, bretels en Dr. Martens-schoenen. Het was de kleding van een werkende jongen.</p>
+  <p>In diezelfde arbeiderswijken woonden Jamaicaanse migranten en hun kinderen. De Jamaicaanse jongeren hadden hun eigen straatcultuur, de <em>rude boys</em>, en hun eigen muziek: ska, rocksteady en reggae. Ska heeft een snel ritme waarin de gitaar en de piano telkens op de tweede en vierde tel spelen, de offbeat. De skinheads namen die muziek over. Desmond Dekker had in 1969 een hit in Engeland met <em>Israelites</em>, en er ontstond een stroming die skinhead reggae werd genoemd.</p>
+  <p>Pas later, eind jaren zeventig, kaapte extreemrechts het imago van de skinheads. Groepen als het National Front zochten nieuwe leden onder werkloze jongeren. Daartegen ontstond verzet. In 1979 richtte toetsenist Jerry Dammers in Coventry het label 2 Tone op. De naam verwijst naar zwart en wit samen. De bands op het label waren bewust gemengd, met zwarte en witte muzikanten, en speelden een nieuwe versie van ska, sneller en met de energie van punk. De bekendste waren The Specials, Madness, The Selecter en The Beat. Madness ontleende zijn naam aan een nummer van de Jamaicaanse ska-zanger Prince Buster.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/LxBt-FADmvDLBO8cvRCCUxwVaQvYiC8aU87yABSCOcWlRa1E5ZsZbqcgwxOiWsyCBxAz3P2oC7K8lgz3TDVqi4DAQrqdAzPgQ20WVag" alt=""><div><span class="who">The Specials</span><br>Ghost Town (1981)</div></div>Mineur, verminderde akkoorden en een spookachtig orgel over een ska/reggae-offbeat. Nummer 1 tijdens de rellen van 1981.</aside>
+  <p><em>Ghost Town</em> (1981) van The Specials is het hoogtepunt van 2 Tone. Het nummer gaat over Engelse steden die leeglopen door werkloosheid, in de tijd van premier Margaret Thatcher. De clubs zijn dicht, de jongeren hebben niets te doen en het geweld neemt toe. In de zomer van 1981 stond het nummer op 1 in de Britse hitlijst, terwijl er in verschillende Engelse steden rellen uitbraken.</p>
+  <p>Muzikaal is <em>Ghost Town</em> ongewoon voor een hit. Het staat in mineur, gebruikt verminderde akkoorden en chromatiek, en de blazers spelen een lijn die aan muziek uit het Midden-Oosten doet denken. Daaronder ligt een traag ska- en reggaeritme met de offbeat. Een spookachtig orgel en gehuil van stemmen maken het beeld van een verlaten stad compleet. Zo vertelt de muziek hetzelfde verhaal als de tekst.</p>
+  <p>Met 2 Tone komt dit hoofdstuk rond. De jongens met de kuif, de scooter, de hanenkam en het kaalgeschoren hoofd zochten elk een eigen geluid. Dat geluid was nooit helemaal nieuw. Het was een Amerikaans voorbeeld met een Brits accent, een Indonesische traditie met een elektrische gitaar, of Jamaicaanse ska met de woede van punk. Wat het "van ons" maakte, was de keuze die een groep maakte uit wat er al was, en de manier waarop ze die keuze droeg, danste en verdedigde.</p>
+</section>
+
+<section class="back">
+  <h4 class="backhead">Begrippen</h4>
+  <dl class="terms">
+    <div><dt>Jeugdcultuur</dt><dd>Groep jongeren met een eigen kleding, taal, gedrag en muziek</dd></div>
+    <div><dt>Subcultuur</dt><dd>Kleinere groep binnen een cultuur met afwijkende normen, niet per se jong</dd></div>
+    <div><dt>Babyboom</dt><dd>Geboortegolf na 1945</dd></div>
+    <div><dt>Payola</dt><dd>Betalen aan dj's of radiostations om platen te laten draaien</dd></div>
+    <div><dt>Counterculture</dt><dd>De tegencultuur van de jaren 60, tegen oorlog en materialisme</dd></div>
+    <div><dt>DIY</dt><dd>Do it yourself: zelf opnemen, uitbrengen en organiseren</dd></div>
+    <div><dt>Rude boys</dt><dd>Jamaicaanse straatcultuur, verbonden met ska en rocksteady</dd></div>
+    <div><dt>2 Tone</dt><dd>Brits label en beweging voor ska-revival en tegen racisme (1979)</dd></div>
+    <div><dt>Modulatie</dt><dd>Overgang naar een andere toonsoort</dd></div>
+  </dl>
+
+  <h4 class="backhead">Verder luisteren en kijken</h4>
+  <div class="links">
+    <div class="link-card"><div class="qr" data-url="https://open.spotify.com/playlist/5DSSW1HM4g5zAx7HpwwXyz"></div>
+      <div><span class="tag">SPOTIFY · PLAYLIST</span><p>Alle nummers uit dit hoofdstuk, in de volgorde van de tekst. Scan de code met je telefoon.</p><p class="url">open.spotify.com/playlist/5DSSW1HM4g5zAx7HpwwXyz</p></div></div>
+    <div class="link-card lesson"><div><span class="tag">LESSONUP · LES</span><p><strong>Mixtape 2: Jeugdculturen 1950-1980</strong></p><p>De les bij dit hoofdstuk, met beeld en fragmenten.</p></div></div>
+  </div>
+
+  <footer class="colofon">
+    <p>Platenhoezen: Apple Music.</p>
+    <p>School of Rock · De geschiedenis van popmuziek · ArtEZ University of the Arts</p>
+  </footer>
+</section>
+<nav class="pager" aria-label="Andere mixtapes"><a href="01.html"><small>← Mixtape 1</small><b>Het ontstaan van popmuziek</b></a><a class="next" href="03.html"><small>Mixtape 3 →</small><b>The Beatles</b></a></nav>
+
+</div><footer class="sitefoot"><div class="wrap"><p>School of Rock · De geschiedenis van popmuziek in mixtapes · Jan-Wolter Smit · ArtEZ University of the Arts</p><p><a href="../pdf/school-of-rock-reader.pdf">Download de reader (pdf)</a></p></div></footer><script src="../assets/player.js"></script><script src="../assets/chapter.js"></script><script>document.querySelectorAll('.qr[data-url]').forEach(function(el){if(typeof QRCode==='undefined'){return;}new QRCode(el,{text:el.dataset.url,width:256,height:256,colorDark:'#1C1B19',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.M});});</script></body></html>

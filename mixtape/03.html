@@ -1,0 +1,415 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content=".."><title>Mixtape 3 · The Beatles · School of Rock</title><link rel="icon" href="../assets/cassette.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="../assets/site.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><style>
+  /* Eén thema met opzet: een boek in de huisstijl van de lessen. */
+  :root {
+    color-scheme: light;
+    --page: #FFFFFF;
+    --ink: #1C1B19;
+    --ink-soft: #55524C;
+    --line: #DDD8CE;
+    --red: #D63A31;
+    --yellow: #F2D500;
+    --display: "Oswald", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "Space Mono", "Courier New", monospace;
+    --hand: "Caveat", "Comic Sans MS", cursive;
+    --text: 34rem;
+    --margin: 13rem;
+    --gap: 2.25rem;
+  }
+  html { background: var(--page); }
+  body { background: var(--page); color: var(--ink); font: 400 16px/1.65 var(--body); padding-inline: 16px; padding-block: 0 64px; }
+  .book { max-width: calc(var(--text) + var(--gap) + var(--margin)); margin: 0 auto; }
+  p { margin: 0; }
+  em { font-style: italic; }
+  a { color: inherit; text-decoration-color: var(--red); text-underline-offset: 2px; }
+
+  /* Hoofdstukopening en delen */
+  .opener { position: relative; overflow: hidden; color: #FFFFFF; box-sizing: border-box; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; }
+  .opener .wash { position: absolute; inset: 0; background-color: rgba(214,58,49,.62); }
+  .opener .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 55%; background-color: rgba(28,27,25,.38); }
+  .opener .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background: var(--yellow); }
+  .opener h1, .opener h2, .opener .sub, .part .kicker { position: relative; }
+  .opener .kicker { font: 12px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--yellow); }
+  .opener h1, .opener h2 { font-family: var(--display); font-weight: 600; line-height: 1.02; margin: 0; text-wrap: balance; }
+  .opener .sub { max-width: 36ch; line-height: 1.4; }
+  .cover { margin-inline: -16px; min-height: 420px; padding: 32px 28px 36px 44px; }
+  .cover h1 { font-size: clamp(44px, 9vw, 72px); max-width: 12ch; }
+  .cover .sub { font-size: 18px; }
+  .cover .kicker { position: absolute; top: 26px; left: 44px; }
+  .cover .cassette { position: absolute; top: 16px; right: 18px; width: 88px; height: auto; }
+  .part { margin: 64px calc(-1 * (var(--margin) + var(--gap))) 28px 0; min-height: 230px; padding: 24px 24px 24px 40px; clear: both; }
+  .part h2 { font-size: clamp(30px, 6vw, 44px); }
+  .part .sub { font-size: 15px; }
+  .part .letter { position: absolute; right: 18px; bottom: -12px; font: 600 150px/1 var(--display); color: var(--yellow); }
+
+  /* Tekstvak met kantlijn */
+  .flow { padding-right: calc(var(--margin) + var(--gap)); }
+  .flow > p { max-width: var(--text); }
+  .flow > p { text-indent: 1.4em; }
+  .flow > .intro, .flow > .head + p, .flow > .head + aside + p, .flow > .head + figure + p { text-indent: 0; }
+  .head { margin: 40px 0 10px; max-width: var(--text); }
+  .head .label { font: 11px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--red); margin: 0 0 4px; }
+  .head h3 { font: 600 22px/1.15 var(--display); margin: 0; text-wrap: balance; }
+  .intro { font-size: 18px; line-height: 1.6; }
+
+  /* Kantlijn: luistertips, beeld, citaten, QR */
+  .side-note, .side-fig, .side-quote { float: right; clear: right; width: var(--margin); margin: 6px calc(-1 * (var(--margin) + var(--gap))) 18px 0; }
+  .side-note { border-left: 2px solid var(--yellow); padding-left: 10px; font-size: 12.5px; line-height: 1.4; color: var(--ink-soft); }
+  .side-note .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .side-note .rec { display: grid; grid-template-columns: 40px 1fr; gap: 8px; align-items: center; margin-bottom: 6px; }
+  .side-note .rec img { width: 40px; height: 40px; border-radius: 2px; }
+  .side-note .who { color: var(--ink); font-weight: 600; }
+  .side-note .qr { width: 96px; height: 96px; margin: 4px 0 6px; }
+  .side-note .qr img, .side-note .qr canvas { width: 100% !important; height: 100% !important; }
+  .side-fig img { display: block; width: 100%; border: 4px solid #FFFFFF; box-shadow: 0 3px 12px rgba(0,0,0,.18); transform: rotate(2deg); }
+  .side-fig figcaption { font: 600 20px/1.05 var(--hand); color: var(--red); text-align: center; margin-top: 8px; }
+  .side-quote { font: 500 17px/1.25 var(--display); color: var(--red); border-top: 2px solid var(--red); padding-top: 8px; }
+  .side-quote span { display: block; font: 11px/1.4 var(--mono); color: var(--ink-soft); margin-top: 6px; }
+
+  /* Achterin */
+  .back { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 8px; }
+  h4.backhead { font: 600 22px/1.15 var(--display); margin: 28px 0 0; }
+  .terms { columns: 2 240px; column-gap: 32px; margin: 12px 0 0; }
+  .terms div { break-inside: avoid; margin: 0 0 10px; }
+  .terms dt { font-weight: 600; }
+  .terms dd { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.45; }
+  .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px 32px; margin-top: 14px; }
+  .link-card { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: start; }
+  .link-card .qr { width: 112px; height: 112px; }
+  .link-card.lesson { grid-template-columns: 1fr; }
+  .link-card .qr img, .link-card .qr canvas { width: 100% !important; height: 100% !important; }
+  .link-card .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .link-card p { font-size: 14px; line-height: 1.45; }
+  .link-card .url { font: 11px/1.4 var(--mono); color: var(--ink-soft); word-break: break-all; margin-top: 6px; }
+  .colofon { margin-top: 36px; font-size: 12px; line-height: 1.5; color: var(--ink-soft); display: grid; gap: 6px; max-width: var(--text); }
+
+  @media screen and (max-width: 760px) {
+    .part { margin-right: 0; }
+    .flow { padding-right: 0; }
+    .side-note, .side-fig, .side-quote { float: none; width: auto; margin: 16px 0; }
+    .side-fig { max-width: 220px; }
+  }
+
+  /* Boek op A4 */
+  @page { size: A4; margin: 20mm 18mm 22mm 20mm; }
+  @page cover { margin: 0; }
+  @media print {
+    html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root { --text: 112mm; --margin: 44mm; --gap: 8mm; }
+    body { padding: 0; font-size: 9.6pt; line-height: 1.55; }
+    .book { max-width: none; }
+    p { orphans: 3; widows: 3; }
+    .cover { page: cover; margin: 0; height: 296mm; padding: 0 22mm 32mm 26mm; break-after: page; }
+    .cover .kicker { top: 18mm; left: 26mm; font-size: 8pt; }
+    .cover .cassette { top: 14mm; right: 16mm; width: 28mm; }
+    .cover h1 { font-size: 56pt; }
+    .cover .sub { font-size: 14pt; }
+    .opener .bar { width: 5mm; }
+    .part { margin: 0 calc(-1 * (var(--margin) + var(--gap))) 6mm 0; height: 70mm; min-height: 0; padding: 0 50mm 8mm 12mm; break-before: page; break-after: avoid; }
+    .part .kicker { font-size: 7.5pt; }
+    .part h2 { font-size: 26pt; }
+    .part .sub { font-size: 10pt; }
+    .part .letter { font-size: 100pt; right: 8mm; bottom: -5mm; }
+    .first-part { break-before: auto; margin-top: 10mm; }
+    .head { margin: 8mm 0 2.5mm; break-after: avoid; break-inside: avoid; }
+    .head .label { font-size: 6.8pt; }
+    .head h3 { font-size: 14pt; }
+    .intro { font-size: 11pt; }
+    .side-note { font-size: 7.6pt; padding-left: 3mm; margin-top: 1mm; margin-bottom: 5mm; break-inside: avoid; }
+    .side-note .tag { font-size: 6.2pt; margin-bottom: 2mm; }
+    .side-note .rec { grid-template-columns: 11mm 1fr; gap: 2.5mm; margin-bottom: 1.5mm; }
+    .side-note .rec img { width: 11mm; height: 11mm; }
+    .side-note .qr { width: 24mm; height: 24mm; }
+    .side-fig { margin-bottom: 5mm; break-inside: avoid; }
+    .side-fig figcaption { font-size: 13pt; }
+    .side-quote { font-size: 11pt; break-inside: avoid; }
+    .side-quote span { font-size: 6.5pt; }
+    .back { break-before: page; margin-top: 0; }
+    h4.backhead { font-size: 14pt; margin-top: 8mm; }
+    .terms { columns: 2; column-gap: 10mm; }
+    .terms div { margin-bottom: 2.5mm; }
+    .terms dd { font-size: 8.6pt; }
+    .terms div { break-inside: avoid; }
+    .links { grid-template-columns: 1fr 1fr; gap: 8mm; break-inside: avoid; }
+    .link-card { grid-template-columns: 30mm 1fr; gap: 5mm; }
+    .link-card .qr { width: 30mm; height: 30mm; }
+    .link-card p { font-size: 8.8pt; }
+    .link-card .url { font-size: 6.8pt; }
+    .colofon { font-size: 7.5pt; margin-top: 10mm; }
+  }
+  .cover .cover-text { position: absolute; left: 44px; right: 28px; bottom: 36px; display: grid; gap: 10px; }
+  @media print { .cover { display: block !important; height: 294mm !important; } .cover .cover-text { left: 26mm; right: 22mm; bottom: 32mm; gap: 4mm; } }</style><style>
+  body.chapter { padding-top: 0; }
+  body.chapter .sitenav { margin-inline: -16px; }
+  .deck { margin: 0 -16px; background: #1C1B19; color: #fff; padding: 18px 20px 20px; display: grid; gap: 14px; }
+  .deck-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .deck .lbl { font: 11px/1.4 "Space Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: #F2D500; min-width: 7.5em; }
+  .deck .lesson { font: 500 16px/1.3 "Oswald", sans-serif; }
+  .deck .btn { padding: 10px 14px; font-size: 14px; }
+  .deck .btn.ghost { color: #fff; border-color: #55524C; }
+  .deck-embed { margin: 0; }
+  .deck-embed iframe { border-radius: 8px; display: block; }
+  .deck-genres { display: flex; flex-wrap: wrap; gap: 6px; }
+  .gchip { --c: #999; display: inline-flex; align-items: center; gap: 7px; text-decoration: none; font: 13px/1 "Inter", sans-serif; padding: 7px 10px; border-radius: 999px; background: #2A2825; color: #fff; }
+  .gchip i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+  .gchip span { color: #9C978D; font-family: "Space Mono", monospace; font-size: 11px; }
+  .gchip:hover { background: #3A3833; }
+  .note-play { display: flex; align-items: center; gap: 8px; margin: 2px 0 8px; font: 11px/1.2 "Space Mono", monospace; letter-spacing: .04em; text-transform: uppercase; color: #D63A31; }
+  .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 48px 0 0; }
+  .pager a { display: grid; gap: 4px; padding: 16px; border: 1px solid #DDD8CE; border-radius: 4px; text-decoration: none; }
+  .pager a:hover { border-color: #1C1B19; }
+  .pager .next { text-align: right; }
+  .pager small { font: 11px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #D63A31; }
+  .pager b { font: 600 18px/1.15 "Oswald", sans-serif; }
+  @media print { .sitenav, .deck, .pager, .sitefoot { display: none !important; } }
+</style></head><body class="chapter" data-mixtape="3"><header class="sitenav"><a class="brand" href="../index.html"><img src="../assets/cassette.png" alt=""><span>School of Rock</span></a><nav aria-label="Hoofdmenu"><a href="../index.html#mixtapes" aria-current="page">Mixtapes</a><a href="../kaart.html">Genrekaart</a><a href="../begrippen.html">Begrippen</a><a href="../pdf/school-of-rock-reader.pdf">Reader (pdf)</a></nav></header><div class="book">
+
+<header class="opener cover" style="background-image:url('https://lh3.googleusercontent.com/XB8obBximmshGetiS4Yktt3yJ6lgYqpf6N85s1lAqOtAT5LYP3NuE7bIl5J1DHt_2pPST80LXWW1jY6AqCEzk81Dcz7Atja1P_wcWXg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+  <p class="kicker">School of Rock · Mixtape 3</p>
+  <img class="cassette" src="../assets/cassette.png" alt="School of Rock-cassette">
+  <div class="cover-text"><h1>The Beatles</h1>
+  <p class="sub">Van skiffleband uit Liverpool tot de band die de popstudio uitvond (1957-1970).</p></div>
+</header>
+<div class="deck" aria-label="Bij dit hoofdstuk">
+  <div class="deck-row"><span class="lbl">Luisteren</span><a class="btn solid deck-spotify" href="https://open.spotify.com/playlist/7CGEdXegFEQV1RNap3CsLN" data-embed="https://open.spotify.com/embed/playlist/=generator" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Spotify-playlist</a><a class="btn ghost" href="https://open.spotify.com/playlist/7CGEdXegFEQV1RNap3CsLN" target="_blank" rel="noopener">Open in Spotify</a><a class="btn ghost" href="../pdf/mixtape-03.pdf" download>Download pdf</a></div>
+  <div class="deck-embed" hidden></div>
+  <div class="deck-row"><span class="lbl">Les</span><span class="lesson">LessonUp · Mixtape 3: The Beatles</span></div>
+  <div class="deck-row"><span class="lbl">Op de kaart</span><div class="deck-genres"></div></div>
+</div>
+
+<section class="flow">
+  <aside class="side-note"><span class="tag">LUISTER MEE</span><div class="qr" data-url="https://open.spotify.com/playlist/7CGEdXegFEQV1RNap3CsLN"></div>Alle nummers uit dit hoofdstuk staan op volgorde in de Spotify-playlist bij Mixtape 3.</aside>
+  <p class="intro">Op 6 juli 1957 speelde een groepje schooljongens skiffle op een kerkfeest in Woolton, een voorstad van Liverpool. Dertien jaar later, in april 1970, las de wereld in de krant dat The Beatles uit elkaar waren. Tussen hun eerste en hun laatste album zitten zeven jaar. In die zeven jaar maakten ze dertien albums, en veranderde de manier waarop popmuziek werd gemaakt.</p>
+  <p>In februari 1963 nam de band een compleet album op in één dag, bijna zoals ze op het podium speelden. Vier jaar later werkten ze maandenlang aan één plaat, met orkesten, tapeloops en geluiden die alleen op band konden bestaan. Daartussen stopten ze met optreden. De studio in Abbey Road, Londen, werd hun instrument, en producer George Martin en de technici van EMI bedachten er technieken die nog steeds worden gebruikt. Het verhaal van The Beatles is daarom ook het verhaal van de popstudio. De vraag die steeds terugkomt: <strong>hoe veranderde één band in acht jaar wat een popplaat kan zijn?</strong></p>
+
+  <!-- SIDE A -->
+  <header class="opener part first-part" style="background-image:url('https://lh3.googleusercontent.com/XB8obBximmshGetiS4Yktt3yJ6lgYqpf6N85s1lAqOtAT5LYP3NuE7bIl5J1DHt_2pPST80LXWW1jY6AqCEzk81Dcz7Atja1P_wcWXg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side A · 1957-1963</p>
+    <h2>Van Liverpool naar Beatlemania</h2>
+    <p class="sub">Skiffle in Woolton, nachtelijke sets in Hamburg en de eerste nummer 1-hits.</p>
+    <span class="letter" aria-hidden="true">A</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1957-1959 · Liverpool</p><h3>The Quarrymen</h3></div>
+  <p>Halverwege de jaren vijftig ging er een rage door Groot-Brittannië: skiffle. De muziek had haar wortels in Amerikaanse folk en blues en werd in Engeland bekend door Lonnie Donegan, die in 1956 een hit had met <em>Rock Island Line</em>. Voor skiffle had je weinig nodig: een goedkope gitaar, een wasbord als slagwerk en een bas van een theekist, een bezemsteel en een touw. Duizenden Britse tieners begonnen zo een band. Skiffle was de doe-het-zelfmuziek van de jaren vijftig, zoals punk dat twintig jaar later zou zijn.</p>
+  <aside class="side-quote">"We were four guys… I met Paul, said, 'Do you wanna join me band?', and then George joined and then Ringo joined. We were just a band who made it very, very big, that's all."<span>John Lennon, 1971</span></aside>
+  <p>Een van die bands was The Quarrymen, opgericht door John Lennon en genoemd naar zijn middelbare school, Quarry Bank. Op 6 juli 1957 speelde de groep op het kerkfeest van St Peter's Church in Woolton. Na afloop werd Lennon voorgesteld aan de vijftienjarige Paul McCartney. McCartney liet zien dat hij een gitaar kon stemmen én bespelen, en zong <em>Twenty Flight Rock</em> van Eddie Cochran. Twee weken later was hij bandlid.</p>
+  <p>In 1958 nam McCartney zijn vriend George Harrison mee. Harrison was pas veertien en Lennon vond hem eigenlijk te jong, maar hij speelde goed genoeg gitaar om te mogen blijven. Datzelfde jaar betaalde de groep een paar pond om in een kleine studio in Liverpool één acetaatplaatje op te nemen. Een acetaat is een zachte proefplaat die na een paar keer afspelen slijt. Op de ene kant staat <em>That'll Be the Day</em> van Buddy Holly, op de andere <em>In Spite of All the Danger</em>.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/Yjx_Y7608kfS2ecj8wm3J_AMI-puaAUZDE317J_0NPlRbX-ruRtdXSZ8f68Mr31xuR1ME0MrznNVX3hTrEHXOKPoM6Shfc1jZIFxsBY" alt=""><div><span class="who">The Quarrymen</span><br>In Spite of All the Danger (1958)</div></div>Het enige nummer op naam van McCartney-Harrison. Een doo-wop-ballad in 12/8, zoals Elvis ze zong.</aside>
+  <p>Dat tweede nummer is het enige dat ooit op naam van McCartney en Harrison is verschenen. Het is een doo-wop-ballad in 12/8: elke tel is verdeeld in drie, wat een langzaam, wiegend ritme geeft. Zulke ballads zong Elvis Presley ook. Je hoort een groep tieners die hun Amerikaanse voorbeelden zo goed mogelijk nadoet. Het plaatje bleef tientallen jaren bewaard en werd pas in 1995 uitgebracht, op <em>Anthology 1</em>. Waar de rock-'n-roll van Elvis en Buddy Holly zelf vandaan kwam, staat in Mixtape 1.</p>
+  <p>In 1960 kwam er een vierde gitarist bij. Stuart Sutcliffe, een vriend van Lennon van de kunstacademie, kocht een basgitaar. Hij kon er nauwelijks op spelen, maar hij zag er goed uit en hij was Lennons beste vriend. Een drummer had de groep op dat moment niet vast.</p>
+
+  <div class="head"><p class="label">Track 02 · 1960-1962 · Hamburg</p><h3>Hamburg: 800 uur op het podium</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/mkPXK_Okqg8qe9TUy1wjCtJ7N1NqlCHap9tT0G9YSyP9jwB7YSkXIDdr9yM6KdvTb1axgGt89yc2tCPdGxMmm59QOdsVpBYFb9VBFQ" alt="The Beatles in Hamburg, 1960"><figcaption>Hamburg, 1960</figcaption></figure>
+  <p>In augustus 1960 vertrok de band naar Hamburg. Een clubeigenaar in de Duitse havenstad zocht Britse bands voor zijn zaken aan de Reeperbahn, de uitgaansstraat in de wijk St. Pauli. De naam van de groep was in korte tijd een paar keer veranderd, via The Beatals en The Silver Beetles naar The Beatles: een woordspeling op kevers (<em>beetles</em>) en beat, naar het voorbeeld van The Crickets, de band van Buddy Holly. Vlak voor vertrek vonden ze een vaste drummer: Pete Best.</p>
+  <p>De omstandigheden waren slecht. De band sliep in een kamertje achter een bioscoopscherm en speelde in clubs als de Indra en de Kaiserkeller voor zeelui, toeristen en het uitgaanspubliek van de rosse buurt. Een set kon tot acht uur per nacht duren, met korte pauzes. Wie zo lang moet spelen, heeft een groot repertoire nodig: rock-'n-roll, rhythm-and-blues, ballads, Duitse schlagers en musicalnummers. En wie zijn publiek wil vasthouden, moet er een show van maken. Tussen 1960 en eind 1962 speelden The Beatles vijf periodes in Hamburg, honderden avonden bij elkaar.</p>
+  <p>De Amerikaanse schrijver Malcolm Gladwell gebruikte Hamburg in zijn boek <em>Outliers</em> (2008) als voorbeeld van wat hij de 10.000-urenregel noemt: wie ergens uitzonderlijk goed in wil worden, moet het heel lang en heel vaak doen. Je kunt over die regel twisten, maar het verschil tussen een oefenruimte en een podium is duidelijk. Op het podium moet je doorspelen als je moe bent, als er iets misgaat en als de zaal niet luistert. Je leert op elkaar te reageren zonder te praten. Toen ze uit Hamburg terugkwamen, waren The Beatles een strakke liveband.</p>
+  <p>In Hamburg ontmoette Stuart Sutcliffe de fotografe Astrid Kirchherr. Haar foto's van de band behoren tot de bekendste beelden uit deze periode. Sutcliffe werd verliefd, bleef in Hamburg en stopte met de band om weer kunst te maken. McCartney nam de bas van hem over. In april 1962 overleed Sutcliffe aan een hersenbloeding. Hij was 21 jaar.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/jl50O-e9qwul5pwIqRAKDRLvfM3NrJTVZQHilF9Ug-35F4gge6ZNOtI8updseCA-i2DN9Erkm-DlSBr1tVx4DPAyMNnSLA9Z_MSSrLI" alt=""><div><span class="who">Tony Sheridan &amp; The Beat Brothers</span><br>My Bonnie (1961)</div></div>Een Schots volksliedje als rock-'n-roll: langzaam intro, dan versnellen.</aside>
+  <p>In 1961 werkte de band als begeleidingsgroep van de Engelse zanger Tony Sheridan, die ook in Hamburg speelde. Voor het Duitse label Polydor namen ze met producer Bert Kaempfert <em>My Bonnie</em> op, een Schots volksliedje dat ze als rock-'n-roll speelden. Op de plaat heette de band The Beat Brothers. Het nummer begint langzaam en plechtig, en schakelt dan over naar een snel tempo. Het is niet de beste opname van de band, maar het plaatje had grote gevolgen: het bracht Brian Epstein naar The Cavern.</p>
+
+  <div class="head"><p class="label">Track 03 · 1961-1962 · Liverpool, Londen</p><h3>Epstein, Decca en George Martin</h3></div>
+  <p>Terug in Liverpool speelde de band vaak in The Cavern, een kelder in Mathew Street waar onder meer lunchconcerten werden gegeven. Niet ver daarvandaan had Brian Epstein een platenzaak, NEMS. Volgens het bekende verhaal vroegen klanten naar <em>My Bonnie</em>, en ging Epstein kijken wie die band was. Op 9 november 1961 zag hij The Beatles voor het eerst spelen in The Cavern. Kort daarna werd hij hun manager.</p>
+  <p>Epstein had geen ervaring als manager, maar hij was zakelijk, verzorgd en hij kende mensen bij de grote platenmaatschappijen. Hij veranderde het beeld van de band. De leren jasjes uit Hamburg maakten plaats voor nette pakken. Op het podium mochten ze niet meer eten, roken of vloeken, en na elk nummer bogen ze voor het publiek. Van rockers werden ze keurige jongens die ook op televisie en bij ouders konden worden vertoond.</p>
+  <aside class="side-quote">"Guitar groups are on the way out, Mr. Epstein."<span>Decca, 1962</span></aside>
+  <p>Op 1 januari 1962 deed de band auditie bij Decca in Londen. Ze speelden vijftien nummers, vooral covers. Epstein koos bewust voor een brede selectie, zodat het label kon horen dat ze meer konden dan rock-'n-roll. Een van die nummers was <em>Till There Was You</em> uit de Broadway-musical <em>The Music Man</em>, met een gitaarpartij in Latin-stijl. Decca wees hen af en contracteerde in plaats daarvan Brian Poole and the Tremeloes. Volgens Epstein kreeg hij te horen dat gitaargroepen uit de mode raakten. Het werd een van de bekendste vergissingen uit de muziekindustrie.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/Yjx_Y7608kfS2ecj8wm3J_AMI-puaAUZDE317J_0NPlRbX-ruRtdXSZ8f68Mr31xuR1ME0MrznNVX3hTrEHXOKPoM6Shfc1jZIFxsBY" alt=""><div><span class="who">The Beatles</span><br>Till There Was You (Decca-auditie, 1962)</div></div>Een musicalnummer met Latin-gitaar: Epstein wilde laten horen dat ze meer konden dan rock-'n-roll.</aside>
+  <p>In juni 1962 kregen ze een kans bij EMI, van George Martin, het hoofd van het kleine label Parlophone. Martin was geen rock-'n-rollman. Hij had klassieke muziek gestudeerd en hobo gespeeld, en hij had vooral klassieke platen en comedyplaten gemaakt, onder meer met Peter Sellers. Van de eigen nummers van de band was hij niet erg onder de indruk, wel van hun humor en hun persoonlijkheid.</p>
+  <p>Over de drummer was Martin minder tevreden. Hij wilde voor de opnames een sessiedrummer gebruiken. De band had zelf ook twijfels over Pete Best. In augustus 1962 werd Best ontslagen en vervangen door Ringo Starr, de drummer van Rory Storm and the Hurricanes, een andere band uit Liverpool die de Beatles kenden uit Hamburg. Daarmee was de bezetting compleet: Lennon, McCartney, Harrison en Starr.</p>
+  <p>Martins klassieke achtergrond bleek later van groot belang. Toen de band strijkers, blazers en tape-experimenten wilde, wist hij hoe hij die moest uitschrijven en opnemen. Lennon en McCartney konden geen noten lezen. Zij kwamen met ideeën, Martin maakte ze uitvoerbaar. Die samenwerking is de rode draad van de rest van dit verhaal.</p>
+
+  <div class="head"><p class="label">Track 04 · 1962-1963 · Londen</p><h3>Beatlemania</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/CcOAvBPGDndxSen3oYintWP2keRqnwqG83BdAJLA6h95l4fK81BKwDPTUGiPUPuwhUWkG5JmbjKwxp7ijq-7Jent6MEcpCCeev65DQ" alt="Hoes van Please Please Me"><figcaption>Please Please Me</figcaption></figure>
+  <p>In oktober 1962 verscheen de eerste single, <em>Love Me Do</em>. Het nummer is heel eenvoudig: een riff op twee akkoorden, G en C, een mondharmonica van Lennon en een tweestemmig refrein. Het werd een bescheiden hit en kwam tot plaats 17 in de Britse hitlijst. Van de opname bestaan twee versies. Op de ene drumt Ringo, op de andere sessiedrummer Andy White, die Martin voor de zekerheid had ingehuurd. Ringo speelt daarop alleen tamboerijn.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/Ywm28AuKQjJcHxcXlEtWgA5gTeIJvch57uWl88sC_vUabs1Bhaa3VAH9pYZnqQszIkLiuXQtcruKo2bylVLQWbwvemXdeuNKEOWHY-4" alt=""><div><span class="who">The Beatles</span><br>Love Me Do (1962)</div></div>Mondharmonica en een G-C-riff: nog heel eenvoudig.</aside>
+  <p>Lennon had de tweede single, <em>Please Please Me</em>, geschreven als langzaam nummer in de stijl van Roy Orbison. Martin liet het tempo flink omhoog gaan. Zo werd een ballad een opgewekte popsong, en die kwam begin 1963 op nummer 1 in de meeste Britse hitlijsten. Het is een vroeg voorbeeld van de rol van de producer: hij neemt op wat er gespeeld wordt en denkt mee over hoe een nummer moet klinken.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/Ywm28AuKQjJcHxcXlEtWgA5gTeIJvch57uWl88sC_vUabs1Bhaa3VAH9pYZnqQszIkLiuXQtcruKo2bylVLQWbwvemXdeuNKEOWHY-4" alt=""><div><span class="who">The Beatles</span><br>Please Please Me (1963)</div></div>Van Roy Orbison-ballad naar uptempo hit: George Martin liet het tempo verdubbelen.</aside>
+  <p>Na een nummer 1-hit moest er snel een album komen. Op 11 februari 1963 nam de band in de EMI-studio aan Abbey Road in één dag tien nummers op. Samen met de vier kanten van de twee singles werd dat het album <em>Please Please Me</em>. Ze speelden bijna alles live in de studio, het repertoire van hun optredens. Het laatste nummer van de dag was <em>Twist and Shout</em>. Lennon was verkouden en zijn stem was bijna op, en dat hoor je: hij schreeuwt het nummer meer dan dat hij het zingt. <em>Please Please Me</em> werd het eerste van elf Beatles-albums die in Engeland op nummer 1 kwamen.</p>
+  <p>In november 1963 volgde <em>With the Beatles</em>, met op de hoes een zwart-witfoto van vier half belichte gezichten. Inmiddels was er een woord voor wat er rond de band gebeurde: Beatlemania. Bij optredens gilden de fans zo hard dat de muziek nauwelijks te horen was. De band was het middelpunt van een nieuwe jeugdcultuur, met eigen kapsels, kleding en taal. Daarover gaat Mixtape 2 (Jeugdculturen 1950-1980).</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/5n_48jRmJkFFIyrxTwRnB8alboQjtN30sFV2J0Yi3_lxx6lv6xAJ9zuON96R5cIiXqTXGwxTVDXellH_MynK7UuXxoC78UEEPk3gXHo" alt=""><div><span class="who">The Beatles</span><br>All My Loving (1963)</div></div>Triolen op de ritmegitaar en een walking bass: jazz-technieken in een popsong.</aside>
+  <p>Hoe eenvoudig de liedjes ook lijken, er zit vakmanschap in. In <em>All My Loving</em> speelt Lennon op de ritmegitaar snelle triolen: drie aanslagen per tel, de hele tijd door. McCartney speelt een walking bass, een baslijn die in gelijke stappen door de akkoorden loopt, zoals een contrabassist in de jazz. Het zijn technieken uit jazz en rhythm-and-blues, verpakt in een popsong van twee minuten.</p>
+
+  <!-- SIDE B -->
+  <header class="opener part" style="background-image:url('https://lh3.googleusercontent.com/vMnmbhJSfvmKd3_nwvCgBV2AkBTCAbBWQ9D-KaM2cZux7g0oxx8cz8yxpfmFRMHbAwjMPbeRL-kQIauvCVgoFuZqpvGiYGD7PQTLj-U')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side B · 1964-1966</p>
+    <h2>De studio als instrument</h2>
+    <p class="sub">Van de Ed Sullivan Show tot Revolver: de band stopt met toeren en begint te experimenteren.</p>
+    <span class="letter" aria-hidden="true">B</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1964 · New York, Londen</p><h3>De British Invasion</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/rgdhad3pr00x1puRn_ECx27R1IJzsx0r0AqUyH6f2Hlz716XGdIHlnSrxTraBUmFmqwmFq8OW3dYjHWuolBYVuavmUTSRqL6KzOQyw" alt="Hoes van A Hard Day's Night"><figcaption>A Hard Day's Night</figcaption></figure>
+  <p>Tot 1964 hadden Britse popartiesten in de Verenigde Staten weinig succes. Dat veranderde in een paar weken. Begin 1964 stond <em>I Want to Hold Your Hand</em> op nummer 1 in de Amerikaanse hitlijst. Op 9 februari 1964 trad de band op in <em>The Ed Sullivan Show</em>, het populairste amusementsprogramma van de Amerikaanse televisie. Ongeveer 73 miljoen Amerikanen keken.</p>
+  <p>In april van dat jaar stonden The Beatles met vijf nummers tegelijk op de eerste vijf plaatsen van de Billboard Hot 100. Achter hen aan kwamen andere Britse bands: The Rolling Stones, The Animals, The Kinks, The Dave Clark Five. Die golf heet de British Invasion. Het is een opvallende omkering. Britse bands verkochten Amerikaanse muziek, rock-'n-roll en rhythm-and-blues, terug aan de Amerikanen, en lieten jonge Amerikanen kennismaken met zwarte muziek uit hun eigen land.</p>
+  <p>Epstein had een contract gesloten voor drie films. De eerste, <em>A Hard Day's Night</em> (1964), werd geregisseerd door Richard Lester. De film is in zwart-wit opgenomen en lijkt op een gespeelde documentaire over een paar drukke dagen uit het leven van de band. De titel kwam van een uitspraak van Ringo na een lange werkdag. Het bijbehorende album was het derde van de band, en het eerste met alleen eigen nummers, allemaal van Lennon en McCartney.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/_YR7nJ8s-kUXrbH-skLEg4Af_cPBR_AK_DXgjYISUIwCl_cuv1X4ri-_hYguWFpgHPIWgOSUEDCaRZ_yOkm9HDT3QmA5651UH3lTki0h" alt=""><div><span class="who">The Beatles</span><br>A Hard Day's Night (1964)</div></div>Het beroemdste openingsakkoord uit de pop. Welke noten zijn het precies?</aside>
+  <p>Het titelnummer begint met één gitaarakkoord, aangeslagen op de twaalfsnarige Rickenbacker van George Harrison. Over welke noten er precies klinken, wordt nog steeds gediscussieerd. Gitaristen, musicologen en zelfs een wiskundige hebben het akkoord ontleed, met uitkomsten als Fadd9 en G7sus4. Het probleem is dat er meer instrumenten tegelijk klinken: twee gitaren, een bas en een piano. Het akkoord werkt als een startschot: één klap, en het nummer is begonnen.</p>
+  <p>Het leven bestond nu uit toeren en opnemen, toeren en opnemen. Eind 1964 verscheen <em>Beatles for Sale</em>, het vierde album in twee jaar. Op de hoes zien de vier er moe uit, en de teksten zijn serieuzer en persoonlijker. Dat kwam deels door Bob Dylan, die ze in augustus 1964 in New York ontmoetten. Dylan liet horen dat een popsong over meer kon gaan dan verliefdheid.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/8gWQPm7Ycl2iy2Fr8kAdyl54k6Qy-uMpV3cOoylVJ3RPGa5mqFJhqY1XEr7Wi-NqYdpq-76GEYK7YR0DIPfwFpk6618VBcUrLsO5XdY" alt=""><div><span class="who">The Beatles</span><br>I Feel Fine (1964)</div></div>De zoemende toon aan het begin is feedback van Lennons gitaar tegen de versterker, bewust op de plaat gezet.</aside>
+  <p>Op de single <em>I Feel Fine</em> (eind 1964) staat een primeur. Het nummer begint met een zoemende, aanzwellende toon: feedback, het geluid dat ontstaat als het element van een elektrische gitaar het geluid van zijn eigen versterker oppikt en versterkt. Tot dan toe was feedback een fout die je zo snel mogelijk wegwerkte. Lennon zette het bewust aan het begin van een plaat. Een paar jaar later zouden gitaristen als Jimi Hendrix van feedback een eigen muzikale taal maken.</p>
+
+  <div class="head"><p class="label">Track 02 · 1965 · Londen, New York</p><h3>Help! en Rubber Soul</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/lvgO2l94GKrRH3H31nnC09QLMuQPMgbfGZaDmBIC0eEc44O_7rlYDoC4d3KKmaCoqLmP1NNlt9JxnM1Gym7GfEBlOJxmWD_Wq-rbcbUL" alt="Hoes van Rubber Soul"><figcaption>Rubber Soul</figcaption></figure>
+  <p>In 1965 volgde de tweede film, <em>Help!</em>, opnieuw van Richard Lester, nu in kleur en met opnames in de Oostenrijkse Alpen en op de Bahama's. Het titelnummer klinkt vrolijk, maar de tekst is een noodkreet. Lennon zei later dat het lied echt over hemzelf ging. Muzikaal valt op hoe de achtergrondstemmen werken: ze lopen vóór de hoofdmelodie uit en zingen de tekst al voordat Lennon hem zingt.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/_5APjrCyFhgHTDO5o208X11baPVayOsSLiCVlWBt8tEnu8QUSGlbXVb84nQicX4LLDJ7gz5rICOnSvTErCv7TT40ll4_ZU6d6q_JWA" alt=""><div><span class="who">The Beatles</span><br>Help! (1965)</div></div>Een vrolijk klinkend nummer met een wanhopige tekst. De tegenstemmen lopen vóór de hoofdmelodie uit.</aside>
+  <p>Op 15 augustus 1965 speelde de band in het Shea Stadium in New York voor ongeveer 55.600 mensen. Het was het eerste grote stadionconcert uit de popgeschiedenis. De band speelde over de geluidsinstallatie van het honkbalstadion, en het publiek gilde zo hard dat de muzikanten zichzelf nauwelijks konden horen. Als publiciteit was het een enorm succes. Als muziek stelde het weinig voor, en dat begon de band zelf ook te merken.</p>
+  <p>Op het album <em>Help!</em> staat ook <em>Yesterday</em>. McCartney had de melodie in zijn hoofd toen hij op een ochtend wakker werd, en was er een tijd van overtuigd dat hij hem ergens gehoord moest hebben. Zolang er geen tekst was, zong hij er 'Scrambled eggs' op. Hij nam het nummer alleen op, met akoestische gitaar; geen van de andere Beatles speelt mee. George Martin stelde voor er een strijkkwartet bij te zetten. McCartney vroeg om strijkers zonder vibrato, zodat het niet te zoet zou klinken.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/_5APjrCyFhgHTDO5o208X11baPVayOsSLiCVlWBt8tEnu8QUSGlbXVb84nQicX4LLDJ7gz5rICOnSvTErCv7TT40ll4_ZU6d6q_JWA" alt=""><div><span class="who">The Beatles</span><br>Yesterday (1965)</div></div>Een barok klinkend strijkkwartet, maar met een popvorm (AABA). Ooit het meest gecoverde lied ter wereld.</aside>
+  <p>Het arrangement klinkt barok, maar de vorm is pop: AABA, twee keer hetzelfde couplet, een contrasterend middendeel en dan het couplet nog een keer. Dat is de vorm van de Amerikaanse songschrijvers uit de eerste helft van de twintigste eeuw. <em>Yesterday</em> werd een van de meest gecoverde liedjes ooit. Voor het eerst stond er op een Beatles-plaat een nummer zonder band, en voor het eerst klonk er een klassiek ensemble.</p>
+  <p>In december 1965 verscheen <em>Rubber Soul</em>. Het album klinkt als een geheel, met meer aandacht voor klankkleur, harmonie en tekst. Het is een sprong in songwriting. In <em>Norwegian Wood</em> speelt Harrison sitar: het eerste gebruik van het Indiase snaarinstrument op een westerse popplaat. Harrison had een sitar gezien op de set van <em>Help!</em> en er daarna zelf een gekocht. Het nummer staat in 12/8 en gebruikt de mixolydische toonladder: een majeurtoonladder met een verlaagde zevende trap. Die klank, majeur maar zonder de 'oplossing' naar de grondtoon, hoor je vaak in folk.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/ElBc8EpGFx_ystRyUcXKOl8Mf-k4h2QQxLFEWLQ3nrxOvQtxLyXiNTXlXJ9rLMlACayL1XnEU0Vmy1KhwXOR1M8Y0AQZYvBdb29gSw" alt=""><div><span class="who">The Beatles</span><br>Norwegian Wood (1965)</div></div>Harrison speelt de sitar; het nummer is in 12/8 en mixolydisch (verlaagde septiem).</aside>
+
+  <div class="head"><p class="label">Track 03 · 1966 · Londen</p><h3>Revolver: vijf primeurs</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/yu4juGR9jun3OIzwLxdaSBgfaJMaJ0L-i1qRVZpmBT_btKBUXR5wnlqAjZYlOMF-oQSSXpP--LbG-KepDfpp8WPrVeUND92DaSnDyA" alt="Hoes van Revolver"><figcaption>Revolver</figcaption></figure>
+  <p>Begin 1966 namen de Beatles drie maanden vrij, hun eerste echte pauze in jaren. In april begonnen de opnames voor <em>Revolver</em>, dat in augustus 1966 verscheen. Er werkte een nieuwe geluidstechnicus mee, de jonge Geoff Emerick. EMI had strikte regels over hoe je microfoons plaatste en hoe hard een signaal mocht zijn. Emerick was bereid ze te breken: hij zette microfoons vlak bij de drums en stopte een trui in de bassdrum, zodat die droog en hard klonk. Op <em>Revolver</em> wordt de studio zelf een deel van de muziek. Bijna elk nummer heeft een techniek of klank die op een popplaat nog niet eerder te horen was. Vijf voorbeelden.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">The Beatles</span><br>Rain (B-kant, 1966)</div></div>De eerste popplaat met achterstevoren afgespeelde zang, aan het einde.</aside>
+  <p><em>Rain</em> verscheen in juni 1966 als B-kant van de single <em>Paperback Writer</em>, maar werd tijdens dezelfde sessies opgenomen. De band speelde de begeleiding sneller dan bedoeld en liet de band daarna langzamer afspelen. Daardoor klinkt alles lager, zwaarder en een beetje stroperig. Aan het einde klinkt Lennons stem achterstevoren: hij had een stuk van zijn zang omgekeerd in de recorder gelegd. Het is de eerste popplaat met achterstevoren afgespeelde zang.</p>
+  <p>In <em>Eleanor Rigby</em> speelt geen enkele Beatle een instrument. Je hoort alleen stemmen en acht strijkers, twee strijkkwartetten, in een arrangement van George Martin. De strijkers zijn heel dicht bij de microfoon opgenomen, zodat je de strijkstokken over de snaren hoort schuren. Daardoor klinkt het nummer hard en ritmisch in plaats van romantisch. De tekst gaat over eenzame mensen: een oude vrouw die rijst opraapt na een bruiloft, een priester die preken schrijft die niemand hoort.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">The Beatles</span><br>Eleanor Rigby (1966)</div></div>Geen enkele Beatle speelt een instrument: alleen stemmen en acht strijkers, dicht bij de microfoon opgenomen.</aside>
+  <p>Voor <em>I'm Only Sleeping</em> schreef Harrison een gitaarsolo uit, leerde hem achterstevoren spelen en nam hem zo op. Daarna werd de band omgedraaid. Het resultaat is een solo die vooruit loopt in de melodie, maar waarvan elke toon achterstevoren klinkt: eerst zacht, dan aanzwellend, en afgebroken. Het past bij het onderwerp van het lied: half slapen, half wakker.</p>
+  <p>In <em>For No One</em> speelt Alan Civil, een van de bekendste hoornisten van Engeland, een solo op de Franse hoorn. McCartney liet hem spelen tot boven het normale bereik van het instrument. Het is een voorbeeld van hoe de Beatles klassieke musici inzetten: niet als achtergrond, maar als solist.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">The Beatles</span><br>Tomorrow Never Knows (1966)</div></div>Eén akkoord als drone, tapeloops, zang door een Leslie-luidspreker en ADT.</aside>
+  <p>Het laatste nummer van het album, <em>Tomorrow Never Knows</em>, gaat het verst. Het hele nummer staat op één akkoord, C, dat als een drone onder de muziek blijft liggen. Ringo speelt een zwaar, steeds herhaald drumpatroon. Daaroverheen klinken tapeloops: korte stukjes band die rondlopen en zich eindeloos herhalen. De Beatles hadden ze thuis gemaakt met hun eigen bandrecorders. In de studio werden meerdere recorders tegelijk afgespeeld, en de technici schoven de loops tijdens de mix in en uit, als een instrument dat live wordt bespeeld. Lennon wilde dat zijn stem klonk alsof een monnik vanaf een bergtop zong. Daarom werd zijn zang door een Leslie-luidspreker gestuurd, de draaiende luidspreker die bij het Hammondorgel hoort. De tekst haalde Lennon uit een boek van Timothy Leary over het <em>Tibetaanse dodenboek</em>.</p>
+  <p>Voor dit album bedacht Abbey Road-technicus Ken Townsend ook ADT, <em>automatic double tracking</em>. Lennon had een hekel aan het twee keer inzingen van dezelfde partij om zijn stem voller te laten klinken. ADT verdubbelt een stem automatisch met een tweede bandrecorder die een fractie later afspeelt. Het effect werd daarna in studio's over de hele wereld gebruikt. <em>Tomorrow Never Knows</em> wordt vaak gezien als een beginpunt van sampling en elektronische pop. De tapetechnieken komen uit de experimentele muziek van de jaren vijftig, uit de studio's in Keulen en Parijs. Daarover gaat Mixtape 8 (Elektronische muziek).</p>
+
+  <div class="head"><p class="label">Track 04 · 1966 · Tokio, Manila, San Francisco</p><h3>Klaar met toeren</h3></div>
+  <p>In de zomer van 1966 werd toeren steeds onaangenamer. In Tokio speelde de band in de Nippon Budokan, een hal voor vechtsport, en dat zagen nationalisten als een belediging. In Manila kwam de band niet opdagen bij een ontvangst van Imelda Marcos, de vrouw van de Filipijnse president. Dat werd opgevat als een belediging, en de band moest het land haastig verlaten. In de Verenigde Staten ontstond ophef over een interview uit maart van dat jaar, waarin Lennon tegen een Londense journaliste had gezegd dat The Beatles 'populairder dan Jezus' waren. In Engeland viel niemand erover. Toen een Amerikaans tienerblad de uitspraak maanden later overnam, werden in het zuiden van de VS Beatles-platen verbrand.</p>
+  <p>Op 29 augustus 1966 gaf de band in Candlestick Park in San Francisco het laatste betaalde concert. Live konden ze hun nieuwe muziek niet eens spelen: <em>Tomorrow Never Knows</em> bestond alleen op band. Vanaf nu was de studio hun instrument. Er was geen deadline meer van een tournee, en geen reden om nummers te schrijven die vier man op een podium konden naspelen.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/2yF6SUQ7bziuW0BCD6ztxzVj2_5K-Cv8dBAjkVnz029CjabJcv7QB_RnnBgH26PPpKBwy_tnaCRNXaQgP-eTttbjg2pUNzNEOAWQQR8" alt=""><div><span class="who">The Beatles</span><br>Penny Lane (1967)</div></div>McCartney hoorde een piccolotrompet in Bachs Brandenburgs concert nr. 2 op tv en wilde er een. David Mason speelt de solo.</aside>
+  <p>In november 1966 begonnen de opnames voor een nieuw album. EMI wilde een nieuwe single, en zo verschenen de eerste twee nummers die klaar waren in februari 1967 als dubbele A-kant: <em>Strawberry Fields Forever</em> en <em>Penny Lane</em>. Allebei gaan ze over Liverpool en de jeugd van hun schrijver. Penny Lane is een straat en busknooppunt in Liverpool. Strawberry Field was een kindertehuis van het Leger des Heils in Woolton, vlak bij het huis waar Lennon opgroeide.</p>
+  <p>In <em>Penny Lane</em> beschrijft McCartney de kapper, de bankier en de brandweerman uit de buurt, helder en een beetje vreemd tegelijk. Hij had op televisie het Tweede Brandenburgse Concert van Bach gezien, waarin een piccolotrompet speelt: een kleine trompet die een octaaf hoger klinkt dan de gewone. Die klank wilde hij ook. De trompettist David Mason speelt de hoge, barokke solo. De single kwam in Engeland niet op nummer 1, voor het eerst sinds 1963: <em>Release Me</em> van Engelbert Humperdinck hield hem van de eerste plaats.</p>
+
+  <div class="head"><p class="label">Track 05 · november-december 1966 · Londen</p><h3>Strawberry Fields Forever: van demo tot plaat</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/0xoWB-eOUpJGY4Pr0Z-fGgxn5YzT-_QmIbH1xjsUo5AuLLxiFi3CJF898KD7mMrg2umCEeJqZT0_Kyx01J4sjBV9BZIbLrtlClok4Os" alt="Hoes van Strawberry Fields Forever"><figcaption>Strawberry Fields Forever</figcaption></figure>
+  <p>Lennon schreef <em>Strawberry Fields Forever</em> in het najaar van 1966 in Spanje, waar hij een rol speelde in de film <em>How I Won the War</em> van Richard Lester. Van dit nummer zijn veel opnames bewaard gebleven, en daardoor kun je stap voor stap volgen hoe een lied in de studio verandert. Het is een goed voorbeeld van wat 'de studio als instrument' betekent.</p>
+  <p>Het begint met een demo: Lennon alleen, met akoestische gitaar. Je hoort de kern van het lied, de melodie en de tekst over een plek waar niets echt is. In de studio nam de band eerst take 1 op. Daarin klinkt in het intro een mellotron met een fluitklank. Een mellotron is een toetsinstrument waarin onder elke toets een stukje geluidsband zit met een opname van een echt instrument. Het couplet is in deze versie nog anders. Take 4 is langzamer en dromeriger: de band zoekt nog naar de juiste sfeer. In take 7 heeft de band het nummer gevonden. Deze take wordt het begin van de uiteindelijke plaat.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">The Beatles</span><br>Strawberry Fields Forever: demo, take 1, take 4, take 7 en take 26</div></div>Luister in volgorde. Wat verandert er aan tempo, toonsoort, bezetting en sfeer?</aside>
+  <p>Lennon was nog niet tevreden. Hij vroeg George Martin om een zwaarder arrangement, en Martin schreef een partij voor trompetten en cello's. Met dat arrangement werd take 26 opgenomen: sneller, hoger en veel voller. Toen wist Lennon het: hij wilde het begin van take 7 en het einde van take 26. Het probleem was dat de twee opnames in een ander tempo stonden en een halve toon uit elkaar lagen.</p>
+  <p>Martin en Emerick losten het op met varispeed. Ze speelden take 7 iets sneller af en take 26 iets langzamer, tot tempo en toonhoogte ongeveer gelijk waren, rond B♭. Daarna knipten ze de twee banden aan elkaar. Wie goed luistert, hoort na ongeveer één minuut de las: de klank wordt plotseling voller en de stem klinkt net iets anders. Ook het einde is bijzonder. Het nummer lijkt uit te faden, maar komt dan terug met een rommelig coda van drums, mellotron en een mompelende Lennon.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">The Beatles</span><br>Strawberry Fields Forever (stereomix, 2015)</div></div>Na ongeveer één minuut gaat take 7 over in take 26. Luister naar de las.</aside>
+  <p>Dit nummer had nooit op een podium kunnen ontstaan. Dat komt niet doordat er veel instrumenten op staan: een orkest kun je ook live laten spelen. Het komt doordat de plaat geen registratie is van een uitvoering. Er is nooit een moment geweest waarop iemand het nummer van begin tot eind zo heeft gespeeld. De las tussen twee takes, het versnellen en vertragen van de banden, de overdubs van orkest en mellotron: de plaat is een compositie op tape.</p>
+
+  <!-- SIDE C -->
+  <header class="opener part" style="background-image:url('https://lh3.googleusercontent.com/wwRDjzsCZXlwVp0u0eVMn-ue5I14cpiU_0UJnCoOTiMrOxOi_msu1oyjom6KKPSVSxrhCIf4igiT0Cvgk4OtCV7eqYYAh21g2a7cwm8')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side C · 1967</p>
+    <h2>Sgt. Pepper en de Summer of Love</h2>
+    <p class="sub">Het album als kunstwerk, de eerste wereldwijde tv-uitzending en het einde van de manager.</p>
+    <span class="letter" aria-hidden="true">C</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · mei 1967 · Londen</p><h3>Sgt. Pepper's Lonely Hearts Club Band</h3></div>
+  <p>Zonder concerten in de agenda konden de Beatles zich zo lang in de studio opsluiten als ze wilden. Aan <em>Sgt. Pepper's Lonely Hearts Club Band</em> werkten ze ongeveer 700 uur. Ter vergelijking: <em>Please Please Me</em> was vier jaar eerder in één dag opgenomen. Het idee kwam van McCartney. De Beatles zouden doen alsof ze een andere band waren, een ouderwets Engels orkest met een eigen naam en eigen uniformen. Zo hoefden ze niet als The Beatles te klinken.</p>
+  <p>Het album verscheen eind mei 1967, aan het begin van de Summer of Love: de zomer waarin de hippiebeweging uit San Francisco wereldnieuws werd. Over die jeugdcultuur gaat Mixtape 2. <em>Sgt. Pepper</em> werd de soundtrack van die zomer.</p>
+  <p>Het album wordt vaak het eerste conceptalbum genoemd. Dat klopt niet. <em>Pet Sounds</em> van The Beach Boys en <em>Freak Out!</em> van Frank Zappa en The Mothers of Invention, allebei uit 1966, gingen voor, en McCartney heeft zelf gezegd dat <em>Pet Sounds</em> een belangrijke inspiratie was. Bovendien is het raamwerk van de fictieve band dun: na twee nummers laat het album het idee grotendeels los, tot de reprise van het titelnummer vlak voor het einde. Wat wel klopt: <em>Sgt. Pepper</em> is het album dat de lp bij het grote publiek vestigde als kunstwerk, in plaats van als een verzameling singles met wat opvulling. Er werd zelfs geen single van uitgebracht.</p>
+  <p>Ook de verpakking was nieuw. Voor het eerst stonden alle songteksten op de hoes, zodat je ze als tekst kon lezen. De voorkant, ontworpen door de kunstenaars Peter Blake en Jann Haworth, toont de band in kleurige uniformen tussen tientallen levensgrote kartonnen figuren van beroemdheden, onder wie Bob Dylan, Marilyn Monroe en de componist Karlheinz Stockhausen.</p>
+  <p>Muzikaal haalt het album alles door elkaar: Indiase muziek, music hall (het Britse variététheater van rond 1900), circusgeluiden en een orkest in vrije val. Voor de circussfeer in <em>Being for the Benefit of Mr. Kite!</em> knipten Martin en Emerick opnames van stoomorgels in stukken, gooiden die in de lucht en plakten ze in willekeurige volgorde weer aan elkaar. Toeval werd een compositietechniek.</p>
+
+  <div class="head"><p class="label">Track 02 · 1967 · Londen</p><h3>Sgt. Pepper in vijf tracks</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/7QlZdpmT2IBMp6thnBpg9BH4NxFB97L0LdozanvFNlgBYu1SPMUZNR1_aOWhJxBd0DIwcPvOMPnqGTQB6Y01mV1T17bcJrPc90U7FuY" alt="Hoes van Sgt. Pepper's Lonely Hearts Club Band"><figcaption>Sgt. Pepper's Lonely Hearts Club Band</figcaption></figure>
+  <p>Het titelnummer opent met publieksgeluid en een orkest dat stemt. Het album doet alsof het een concert is. Na een rockende gitaarriff klinken hoorns in de stijl van de music hall, en de 'band' kondigt een zanger aan: Billy Shears, gespeeld door Ringo. Zonder pauze gaat het nummer over in <em>With a Little Help from My Friends</em>. Dat overlopen van nummer naar nummer was nieuw, en het maakte van de plaat één doorlopend geheel.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">The Beatles</span><br>Lucy in the Sky with Diamonds (1967)</div></div>Het couplet in 3/4, het refrein in 4/4: de maatwisseling markeert de droom.</aside>
+  <p>In <em>Lucy in the Sky with Diamonds</em> staat het couplet in 3/4, een walsend ritme, en het refrein in 4/4. De maatwisseling markeert de overgang van droom naar werkelijkheid. De titel kwam volgens Lennon van een tekening van zijn zoontje Julian. Veel luisteraars lazen in de beginletters LSD, maar Lennon heeft altijd ontkend dat dat de bedoeling was.</p>
+  <p><em>Within You Without You</em> is een nummer van Harrison waarop de andere Beatles niet meespelen. Je hoort Indiase klassieke instrumenten, zoals sitar, tabla en dilruba, een strijkinstrument met een stok, gespeeld door Indiase musici uit Londen. Daaronder schreef Martin een partij voor een westers strijkensemble dat de glijdende tonen van de Indiase instrumenten volgt. Het is een van de eerste pogingen om Indiase en westerse muziek echt te mengen in plaats van een sitar als exotisch kleurtje te gebruiken.</p>
+  <p>In <em>Good Morning Good Morning</em> wisselt de maatsoort voortdurend: 5/4, 3/4, 4/4. Lennon kreeg het idee voor het refrein van een reclame voor cornflakes op televisie. Aan het einde klinken dierengeluiden, in een volgorde van groot naar klein. Volgens Lennon kon elk dier het vorige opeten. Het laatste geluid, een kakelende kip, gaat naadloos over in de eerste gitaartoon van de reprise van het titelnummer.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">The Beatles</span><br>A Day in the Life (1967)</div></div>Twee liedjes aan elkaar, verbonden door 40 orkestmusici die vrij van laag naar hoog glijden.</aside>
+  <p>Het album eindigt met <em>A Day in the Life</em>, eigenlijk twee liedjes aan elkaar. Lennon schreef de coupletten, met beelden uit de krant. McCartney had een los fragment over een gewone ochtend: opstaan, een kam door je haar, de bus halen. Tussen de twee stukken lieten ze een lege ruimte van 24 maten. Die werd gevuld door een orkest van 40 musici, die elk vrij van hun laagste naar hun hoogste toon glijden, zonder dat ze op elkaar hoefden te letten. Het resultaat is een orkest in vrije val. Het nummer eindigt op één E-majeurakkoord, tegelijk aangeslagen op meerdere piano's en zo lang mogelijk uitklinkend: ongeveer 40 seconden. De BBC weigerde het nummer te draaien, omdat de regel 'I'd love to turn you on' als een verwijzing naar drugs werd gezien.</p>
+
+  <div class="head"><p class="label">Track 03 · 1967 · Londen</p><h3>All You Need Is Love</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/TmpqiMl-TtjRbGv9DSrZCszmcwK6ROQSEWa-iSIaPLArbJC0NAbXl4I8YO3aN8tSu_FU5OFQya4vBgJn8FLbsQBMJvZj0PUOfNc7YmMD" alt="Hoes van Magical Mystery Tour"><figcaption>Magical Mystery Tour</figcaption></figure>
+  <p>Op 25 juni 1967 werd <em>Our World</em> uitgezonden, de eerste wereldwijde live-televisie-uitzending via satelliet. Een reeks landen leverde elk een bijdrage, en Groot-Brittannië koos voor The Beatles. Lennon schreef er een lied voor met een boodschap die iedereen ter wereld kon begrijpen: <em>All You Need Is Love</em>. Zo'n 350 miljoen mensen zagen de opnames in Abbey Road, met een klein orkest en bevriende muzikanten als Mick Jagger en Eric Clapton op de grond van de studio.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/4cvJLaN11CUuU-HGVXgfekRJKWv4v6mEgVRzHZI6v27fHVIdVBaEAwAQZVhrzyuwL3tccJ80z5eO8A0ErMHdw2a-6VZdDm9Io5ZjUmA" alt=""><div><span class="who">The Beatles</span><br>All You Need Is Love (1967)</div></div>Tel het couplet: maten van 7/4. Daarna volgen citaten uit Bach, Greensleeves en meer.</aside>
+  <p>Het lied klinkt eenvoudig, maar is het niet. Tel het couplet maar eens: de maten staan in 7/4. Die ongewone maatsoort valt de meeste luisteraars niet op, omdat de melodie zo natuurlijk loopt. Het nummer begint met de eerste maten van de Marseillaise, het Franse volkslied. Aan het eind volgen citaten uit onder meer Bach, het Engelse volksliedje <em>Greensleeves</em> en hun eigen <em>She Loves You</em>.</p>
+  <p>Twee maanden later, op 27 augustus 1967, overleed Brian Epstein aan een overdosis slaapmiddelen. De Beatles waren op dat moment in Wales bij de Indiase goeroe Maharishi Mahesh Yogi. Epstein had hun zaken geregeld vanaf 1961. Zonder hem ging het zakelijk mis. Het eerste project na zijn dood was <em>Magical Mystery Tour</em>, een idee van McCartney: de band in een bus, op reis door Engeland, gefilmd zonder echt script. De tv-film werd op tweede kerstdag 1967 door de BBC uitgezonden en door de critici afgekraakt. De muziek deed het wel goed.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/4cvJLaN11CUuU-HGVXgfekRJKWv4v6mEgVRzHZI6v27fHVIdVBaEAwAQZVhrzyuwL3tccJ80z5eO8A0ErMHdw2a-6VZdDm9Io5ZjUmA" alt=""><div><span class="who">The Beatles</span><br>I Am the Walrus (1967)</div></div>Strijkers, hoorns, een koor dat "everybody's got one" zingt, en King Lear op de radio in de mix.</aside>
+  <p>Een van de nummers uit de film is <em>I Am the Walrus</em>. De walrus komt uit een gedicht van Lewis Carroll, de schrijver van <em>Alice in Wonderland</em>. Lennon stapelde in de tekst onzinbeelden op elkaar. Martin schreef er een arrangement voor strijkers en hoorns bij, en een koor zingt 'everybody's got one' en lachende, hijgende geluiden. In de mix zit zelfs een stuk van een live radio-uitzending van Shakespeares <em>King Lear</em>, die toevallig op dat moment op de radio was. Weer een stukje toeval dat deel werd van de compositie.</p>
+
+  <!-- SIDE D -->
+  <header class="opener part" style="background-image:url('https://lh3.googleusercontent.com/ddxS9Csqb3ZjQpzr-QPQI_nB4bTIY_rOPtSf6chF2amhFa3b9B_VhFkG2GAyESYA5GBTcLRbBuzcd-Ze3kYz0Rb_5io7ZlR74mJrFwI')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side D · 1968-1970</p>
+    <h2>Uit elkaar</h2>
+    <p class="sub">India, Apple, het White Album, het dak van Savile Row en Abbey Road.</p>
+    <span class="letter" aria-hidden="true">D</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1968 · Rishikesh, Londen, Esher</p><h3>Rishikesh, Apple en Esher</h3></div>
+  <p>In februari 1968 reisden de Beatles naar de ashram van Maharishi Mahesh Yogi in Rishikesh, in het noorden van India, om te leren mediteren. Ze waren er niet de enige bekende gasten: ook de Schotse zanger Donovan, Mike Love van The Beach Boys en actrice Mia Farrow waren er. Ringo vertrok al na ongeveer tien dagen, McCartney na een maand; Lennon en Harrison bleven langer. Er was weinig te doen behalve mediteren en gitaar spelen. In een paar weken schreef de band tientallen nummers.</p>
+  <p>Donovan leerde Lennon en McCartney in Rishikesh een fingerpickingtechniek, waarbij je met losse vingers de snaren aanslaat in plaats van met een plectrum akkoorden te slaan. Die techniek hoor je terug in <em>Dear Prudence</em> en <em>Julia</em> op het volgende album.</p>
+  <p>Terug in Londen richtten ze Apple Corps op: een eigen bedrijf voor hun platen, films en andere projecten, dat ook jonge artiesten moest helpen. Er kwamen een platenlabel, Apple Records, een filmafdeling en zelfs een kledingwinkel. De eerste single op Apple, in augustus 1968, was <em>Hey Jude</em>. Het idee was idealistisch, maar zakelijk instinct had de band niet, en Epstein was er niet meer. Er verdween veel geld.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/tM1S_NZyI5IB0z6Cohebdhj8cjG466gbkmabyXEBc-FgNQWnnYNR9rmTLWVPjokexF6umYJm_kOLUdrw4P7kdHJsB8dP9vVoiUNy8eEm" alt=""><div><span class="who">The Beatles</span><br>While My Guitar Gently Weeps (Esher demo)</div></div>Vergelijk met de albumversie: hoe ver kan een arrangement een lied veranderen?</aside>
+  <p>In mei 1968 kwam de band samen in het huis van Harrison in Esher, ten zuidwesten van Londen. Daar namen ze akoestische demo's op van de nummers uit India: de Esher demos. Ze klinken los en ontspannen, met gitaren, handgeklap en samenzang. Lang waren ze alleen als bootleg te vinden; officieel verschenen ze in 2018 op de jubileumuitgave van het White Album.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/tM1S_NZyI5IB0z6Cohebdhj8cjG466gbkmabyXEBc-FgNQWnnYNR9rmTLWVPjokexF6umYJm_kOLUdrw4P7kdHJsB8dP9vVoiUNy8eEm" alt=""><div><span class="who">The Beatles</span><br>Child of Nature (Esher demo)</div></div>Lennon herschreef dit later tot Jealous Guy (1971).</aside>
+  <p>De demo's laten horen hoe ver een arrangement een lied kan veranderen. <em>While My Guitar Gently Weeps</em> is hier een klein, akoestisch lied van Harrison; op het album wordt het een zware rockballad. Andere nummers haalden het album niet. Lennons <em>Child of Nature</em>, over een reis naar India, herschreef hij later tot <em>Jealous Guy</em>, dat in 1971 op zijn soloalbum <em>Imagine</em> verscheen. Dezelfde melodie kreeg zo een heel andere tekst.</p>
+
+  <div class="head"><p class="label">Track 02 · november 1968 · Londen</p><h3>The Beatles ("The White Album")</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/txJSgjLfgrXtyAzogv6zfbaP3RqolDCnGwk7r_ERCedxzzHno4G7yqylsQSK5e3DQvUgQ_f68xUxwDBe8gBVo7U3kLQQI4_EQkYgJqgk" alt="Hoes van The Beatles (White Album)"><figcaption>The White Album</figcaption></figure>
+  <p>In november 1968 verscheen een dubbelalbum met dertig nummers en een helemaal witte hoes, ontworpen door de kunstenaar Richard Hamilton. Er stond alleen de naam van de band op, in reliëf, en elk exemplaar kreeg een eigen nummer. Het album heet officieel <em>The Beatles</em>, maar iedereen noemt het het White Album. Na de kleurige collage van <em>Sgt. Pepper</em> is dat lege wit een statement.</p>
+  <p>De sessies waren moeizaam. Yoko Ono, de nieuwe partner van Lennon, zat elke dag in de studio, iets wat de anderen niet gewend waren. De spanningen liepen op. In augustus stapte Ringo voor ongeveer twee weken uit de band; McCartney speelde in die tijd zelf drums op onder meer <em>Back in the U.S.S.R.</em> en <em>Dear Prudence</em>. Vaak werkten de leden tegelijk in verschillende studio's aan hun eigen nummers. Veel nummers zijn eigenlijk solonummers die door de hele band worden gespeeld, of soms juist niet. En toch is het album een van de rijkste uit de popgeschiedenis, juist door die enorme variatie.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">The Beatles</span><br>Dear Prudence (1968)</div></div>Fingerpicking in drop-D, met een baslijn die chromatisch daalt.</aside>
+  <p><em>Dear Prudence</em> gaat over Prudence Farrow, de zus van Mia Farrow, die in Rishikesh haar kamer niet meer uit wilde komen omdat ze alleen nog wilde mediteren. Lennon speelt het nummer met de fingerpicking die hij van Donovan leerde, in drop-D: de laagste snaar is een toon lager gestemd, van E naar D. Onder het steeds herhaalde gitaarpatroon daalt de baslijn chromatisch, in halve tonen.</p>
+  <p><em>Ob-La-Di, Ob-La-Da</em> van McCartney is een mengsel van ska, de Jamaicaanse voorloper van reggae, en music hall. Lennon haatte het nummer. Hoe anders de bandleden waren, hoor je in de nummers van Harrison. Voor de albumversie van <em>While My Guitar Gently Weeps</em> nodigde hij zijn vriend Eric Clapton uit om de gitaarsolo te spelen. Clapton wordt niet op de hoes genoemd. Met een gast in de studio gedroegen de anderen zich beter.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">The Beatles</span><br>Blackbird (1968)</div></div>Tweestemmige gitaar met een open G-snaar in het midden.</aside>
+  <p><em>Blackbird</em> nam McCartney alleen op, met akoestische gitaar. Het idee kwam van een Bourrée van Bach, die hij en Harrison als tieners speelden. Net als bij Bach speelt de gitaar twee stemmen tegelijk, een hoge en een lage, met in het midden steeds de open G-snaar die meeklinkt. Je hoort ook het tikken van zijn voet.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">The Beatles</span><br>Helter Skelter (1968)</div></div>McCartney wilde het luidste nummer ooit maken.</aside>
+  <p>Het andere uiterste is <em>Helter Skelter</em>. McCartney had gelezen dat Pete Townshend van The Who een nummer had gemaakt dat het hardste en ruwste ooit zou zijn. Hij wilde dat overtreffen. Het resultaat is een chaotisch, vervormd rocknummer dat wordt gezien als een voorloper van heavy metal. Aan het einde roept Ringo dat hij blaren op zijn vingers heeft. Hoe rock na de jaren zestig harder en zwaarder werd, staat in Mixtape 4 (Toen rock nog pop was).</p>
+
+  <div class="head"><p class="label">Track 03 · januari 1969 · Londen</p><h3>Get Back en het dak</h3></div>
+  <p>Na het White Album wilde McCartney terug naar de basis. Het plan heette Get Back: in een paar weken nieuwe nummers schrijven en repeteren, die live spelen voor publiek, en het hele proces filmen. Geen overdubs, geen studiotrucs, terug naar de band uit Hamburg. In januari 1969 begonnen ze in de Twickenham Film Studios, een kille filmhal waar 's ochtends vroeg al camera's draaiden. De spanningen liepen snel op. Op 10 januari stapte Harrison op.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/1kS_Ciwu7Dv5rewdfRV5E0p0abLu2cQpHrCrTR0PcjPFCzXkcLtOiPztP7qgCXittwdinVlfQQXPUH7SN4T-3CMn2yQUd-Wx8XzByew" alt=""><div><span class="who">The Beatles</span><br>Get Back (dakconcert, 1969)</div></div>Live, zonder overdubs: terug naar de band van Hamburg. Preston speelt Fender Rhodes.</aside>
+  <p>Hij kwam terug op twee voorwaarden: geen groot liveconcert, en de opnames moesten verhuizen naar de kelderstudio in het Apple-kantoor aan Savile Row. Daar haalde Harrison de toetsenist Billy Preston erbij, die de band kende uit Hamburg, waar hij in 1962 in de band van Little Richard speelde. Preston redde de sfeer. Met een gast in de kamer werden de vier vriendelijker tegen elkaar, en zijn spel op de Fender Rhodes en het orgel gaf de nummers lucht. De single <em>Get Back</em> verscheen op naam van 'The Beatles with Billy Preston'.</p>
+  <p>Op 30 januari 1969 klom de band op het dak van het Apple-gebouw en speelde ruim veertig minuten voor kantoorpersoneel en voorbijgangers in de straten eronder, tot de politie kwam vanwege klachten over het lawaai. Lennon sloot af met de opmerking dat hij hoopte dat ze geslaagd waren voor de auditie. Het dakconcert was het laatste optreden van The Beatles.</p>
+  <p>Lang gold Get Back als het sombere verhaal van een band die uit elkaar viel. De film <em>Let It Be</em> uit 1970 versterkte dat beeld. In 2021 maakte regisseur Peter Jackson uit hetzelfde filmmateriaal de documentaireserie <em>Get Back</em>, en die laat iets anders zien. Er is ruzie, maar er wordt ook veel gelachen, gespeeld en hard gewerkt. Je ziet bijvoorbeeld hoe McCartney het nummer <em>Get Back</em> in een paar minuten uit het niets op zijn basgitaar vindt. Het is een goed voorbeeld van hoe geschiedschrijving verandert als er nieuwe bronnen beschikbaar komen.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/4ztmxtk9m48BtPjrb56IOyev6qEZjQLnmy6PauYQmFykCUI3HlrCZ3TM6QJFP8Ze0r6GFyTzz--wnAQHN-vaey3cwLofHrxZofZ5gPlr" alt=""><div><span class="who">The Beatles</span><br>Hey Bulldog (Yellow Submarine, 1969)</div></div>Een pianoriff en een van hun zwaarste baspartijen.</aside>
+  <p>In januari 1969 verscheen ook de soundtrack van de tekenfilm <em>Yellow Submarine</em>. Er staan maar een paar nieuwe Beatles-nummers op; de B-kant bestaat uit filmmuziek van George Martin. Een van de nieuwe nummers is <em>Hey Bulldog</em>, al in februari 1968 opgenomen, nog voor de reis naar India. Het is gebouwd op een stevige pianoriff en heeft een van de zwaarste baspartijen van McCartney. Je hoort een band die gewoon samen speelt, met plezier.</p>
+
+  <div class="head"><p class="label">Track 04 · september 1969 · Londen</p><h3>Abbey Road: nog één keer zoals vroeger</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/DGOBRfmWs7YX9Nc0MExZOTyyOBqZAP5BMBbmzb519ucdZIpxZPPvXNEdpFeVVIwTiQk-xCbi3g7D0nGqYM2Xqj6-bYE66L7PkLbGq76T" alt="Hoes van Abbey Road"><figcaption>Abbey Road</figcaption></figure>
+  <p>Na Get Back lagen de banden op de plank; niemand had zin om ze af te maken. In de zomer van 1969 vroeg McCartney aan George Martin om nog één album te produceren. Martin deed mee op voorwaarde dat het zou gaan zoals vroeger, met hem als producer en een band die zich aan de discipline van de studio hield. Dat lukte. Zakelijk ging het intussen mis: Lennon, Harrison en Starr kozen de Amerikaan Allen Klein als manager, McCartney wilde de advocaten Lee en John Eastman, de vader en broer van zijn vrouw Linda. Toch klinkt <em>Abbey Road</em> als een band die samen speelt.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">The Beatles</span><br>Come Together (1969)</div></div>Een bas die het nummer draagt, en "shoot me" gefluisterd over de drums.</aside>
+  <p>Het album opent met <em>Come Together</em> van Lennon: een trage, broeierige groove, een basloopje van McCartney dat het hele nummer draagt, en 'shoot me', gefluisterd over de drums. Daarna volgt <em>Something</em> van Harrison. Frank Sinatra noemde het het mooiste liefdeslied van de afgelopen vijftig jaar. Het werd de eerste Beatles-single met een nummer van Harrison op de A-kant. Lennon en McCartney hadden jarenlang de toon gezet; nu bleek Harrison een songschrijver van hetzelfde niveau.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">The Beatles</span><br>Here Comes the Sun (1969)</div></div>Moog-synthesizer, en een brug met afwisselend 11/8, 4/4 en 7/8.</aside>
+  <p>Ook <em>Here Comes the Sun</em> is van Harrison. Hij schreef het in de tuin van Eric Clapton, op een dag dat hij een zakelijke vergadering bij Apple had overgeslagen. Op het nummer klinkt een Moog-synthesizer, een van de eerste keren dat dat instrument op een popplaat te horen was. Over de Moog gaat Mixtape 8. In de brug wisselen de maatsoorten elkaar af: 11/8, 4/4 en 7/8. Ook hier hoor je dat bijna niet, omdat het ritme de melodie volgt.</p>
+  <p>Kant 2 van de lp is een medley: acht songfragmenten die zonder pauze in elkaar overlopen. Veel ervan waren losse ideeën die nooit tot een volledig nummer waren uitgegroeid. Door ze aan elkaar te zetten, ontstond een soort suite. De medley eindigt met <em>The End</em>, waarin Ringo zijn enige drumsolo op een Beatles-plaat speelt en McCartney, Harrison en Lennon om beurten een korte gitaarsolo spelen. Daarna volgt de laatste regel.</p>
+  <aside class="side-quote">"And in the end, the love you take is equal to the love you make."<span>The End, The Beatles (1969)</span></aside>
+  <p>Na veertien seconden stilte komt er toch nog iets: <em>Her Majesty</em>, een liedje van 23 seconden van McCartney, oorspronkelijk uit de medley geknipt. Een technicus had het achter aan de band geplakt, en de band besloot het zo te laten. Het staat niet op de hoes: het eerste <em>hidden track</em> op een popalbum. De hoesfoto, de vier op het zebrapad voor de studio, werd in augustus 1969 gemaakt door fotograaf Iain Macmillan. De EMI-studio heet sindsdien Abbey Road Studios.</p>
+
+  <div class="head"><p class="label">Track 05 · 1969-1970 · Londen</p><h3>Het einde</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/NLNCOCCpUGZZ0gZ0aNlka2L_suC4gMwYAw_d3sXwr4lWGIBlcgHwCLLYqyjWKWKSC_DNPp4hHJcCVGDnHz78QWy4gRu3VsibU9be1a7n" alt="Hoes van Let It Be"><figcaption>Let It Be</figcaption></figure>
+  <p>In september 1969, rond de verschijning van <em>Abbey Road</em>, vertelde Lennon de anderen dat hij uit de band stapte. Dat werd geheim gehouden, onder meer omdat er nog zakelijke onderhandelingen liepen. Op 3 januari 1970 kwamen McCartney, Harrison en Starr nog één keer bijeen in Abbey Road om <em>I Me Mine</em> op te nemen, een nummer van Harrison dat nodig was voor het album bij de film <em>Let It Be</em>. Lennon was er niet bij.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/1kS_Ciwu7Dv5rewdfRV5E0p0abLu2cQpHrCrTR0PcjPFCzXkcLtOiPztP7qgCXittwdinVlfQQXPUH7SN4T-3CMn2yQUd-Wx8XzByew" alt=""><div><span class="who">The Beatles</span><br>I Me Mine (1970)</div></div>Een wals van Harrison, opgenomen zonder Lennon.</aside>
+  <p>In april 1970 bracht McCartney zijn eerste soloalbum uit, <em>McCartney</em>. Bij de perskopieën zat een tekst in vraag-en-antwoordvorm, waarin hij liet doorschemeren dat hij niet meer met de band werkte. De kranten maakten ervan: Paul verlaat The Beatles. Zo hoorde de wereld het. Formeel duurde het nog jaren: McCartney spande eind 1970 een rechtszaak aan om de samenwerking te ontbinden, en pas in december 1974 was de band ook juridisch opgeheven.</p>
+  <p>De opnames van Get Back gingen intussen naar Phil Spector, de Amerikaanse producer die in de jaren zestig bekend was geworden met zijn Wall of Sound: dikke lagen instrumenten en galm. Spector voegde aan een aantal nummers koor en orkest toe. <em>I Me Mine</em>, een wals, verlengde hij door een stuk van de opname te kopiëren en nog eens in te monteren. McCartney was woedend over wat Spector met zijn nummers had gedaan. In 2003 verscheen <em>Let It Be… Naked</em>, een versie van het album zonder de toevoegingen van Spector.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/1kS_Ciwu7Dv5rewdfRV5E0p0abLu2cQpHrCrTR0PcjPFCzXkcLtOiPztP7qgCXittwdinVlfQQXPUH7SN4T-3CMn2yQUd-Wx8XzByew" alt=""><div><span class="who">The Beatles</span><br>Let It Be (1970)</div></div>Gospel-ballad in C met een I–V–vi–IV-progressie.</aside>
+  <p>Het titelnummer <em>Let It Be</em> is een gospelballad van McCartney in C, gebouwd op de akkoordenreeks I–V–vi–IV: C, G, Am, F. Diezelfde vier akkoorden zitten onder talloze latere popnummers. Het album <em>Let It Be</em> verscheen in mei 1970 als laatste album van de band, hoewel de meeste nummers eerder waren opgenomen dan die van <em>Abbey Road</em>.</p>
+  <p>Tussen 1963 en 1970 brachten The Beatles in Engeland dertien albums uit. Twee daarvan zijn een geval apart. <em>Magical Mystery Tour</em> verscheen in Engeland als dubbele ep; de lp is de Amerikaanse uitgave, die later de officiële albumversie werd. Op de B-kant van <em>Yellow Submarine</em> staat filmmuziek van George Martin. De rest vormt een reeks waarin je de ontwikkeling van de band kunt volgen, van een liveband die in één dag een album opneemt tot een studioband die maanden werkt aan één plaat.</p>
+  <p>Wie de albums achter elkaar beluistert, hoort hoeveel er in die zeven jaar is veranderd: feedback als geluid, een sitar en een strijkkwartet op een popplaat, achterstevoren afgespeelde banden, tapeloops, ADT, varispeed, een album dat als één geheel is bedoeld, songteksten op de hoes en een verborgen nummer aan het eind. Lennon noemde de Beatles in 1971 'gewoon een band die het heel groot had gemaakt'. Dat is waar, maar het is niet het hele verhaal. Na The Beatles was een popplaat geen registratie van een optreden meer. Het was iets dat je in de studio bouwt.</p>
+</section>
+
+<section class="back">
+  <h4 class="backhead">Begrippen</h4>
+  <dl class="terms">
+    <div><dt>Skiffle</dt><dd>Britse doe-het-zelfmuziek met wasbord en theekistbas (jaren 50)</dd></div>
+    <div><dt>British Invasion</dt><dd>De golf Britse bands die vanaf 1964 de VS verovert</dd></div>
+    <div><dt>Overdub</dt><dd>Een extra partij over een bestaande opname heen opnemen</dd></div>
+    <div><dt>ADT</dt><dd>Automatic double tracking: een stem automatisch verdubbelen met een tweede bandrecorder</dd></div>
+    <div><dt>Tapeloop</dt><dd>Een stuk geluidsband dat rondloopt en zich eindeloos herhaalt</dd></div>
+    <div><dt>Drone</dt><dd>Een aangehouden toon of akkoord onder de muziek</dd></div>
+    <div><dt>Varispeed</dt><dd>Een band sneller of langzamer afspelen, waardoor tempo én toonhoogte veranderen</dd></div>
+    <div><dt>Conceptalbum</dt><dd>Album met een doorlopend idee, verhaal of raamwerk</dd></div>
+    <div><dt>Hidden track</dt><dd>Nummer dat niet op de hoes staat en na stilte volgt</dd></div>
+  </dl>
+
+  <h4 class="backhead">Verder luisteren en kijken</h4>
+  <div class="links">
+    <div class="link-card"><div class="qr" data-url="https://open.spotify.com/playlist/7CGEdXegFEQV1RNap3CsLN"></div>
+      <div><span class="tag">SPOTIFY · PLAYLIST</span><p>Alle nummers uit dit hoofdstuk, in de volgorde van de tekst. Scan de code met je telefoon.</p><p class="url">open.spotify.com/playlist/7CGEdXegFEQV1RNap3CsLN</p></div></div>
+    <div class="link-card lesson"><div><span class="tag">LESSONUP · LES</span><p><strong>Mixtape 3: The Beatles</strong></p><p>De les bij dit hoofdstuk, met beeld en fragmenten.</p></div></div>
+  </div>
+
+  <footer class="colofon">
+    <p>Hoezen: Parlophone / Apple Corps. Platenhoezen: Apple Music.</p>
+    <p>School of Rock · De geschiedenis van popmuziek · ArtEZ University of the Arts</p>
+  </footer>
+</section>
+<nav class="pager" aria-label="Andere mixtapes"><a href="02.html"><small>← Mixtape 2</small><b>Jeugdculturen 1950-1980</b></a><a class="next" href="04.html"><small>Mixtape 4 →</small><b>Toen rock nog pop was</b></a></nav>
+
+</div><footer class="sitefoot"><div class="wrap"><p>School of Rock · De geschiedenis van popmuziek in mixtapes · Jan-Wolter Smit · ArtEZ University of the Arts</p><p><a href="../pdf/school-of-rock-reader.pdf">Download de reader (pdf)</a></p></div></footer><script src="../assets/player.js"></script><script src="../assets/chapter.js"></script><script>document.querySelectorAll('.qr[data-url]').forEach(function(el){if(typeof QRCode==='undefined'){return;}new QRCode(el,{text:el.dataset.url,width:256,height:256,colorDark:'#1C1B19',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.M});});</script></body></html>

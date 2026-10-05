@@ -1,0 +1,327 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content=".."><title>Mixtape 11 · Nederpop · School of Rock</title><link rel="icon" href="../assets/cassette.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="../assets/site.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><style>
+  /* Eén thema met opzet: een boek in de huisstijl van de lessen. */
+  :root {
+    color-scheme: light;
+    --page: #FFFFFF;
+    --ink: #1C1B19;
+    --ink-soft: #55524C;
+    --line: #DDD8CE;
+    --red: #D63A31;
+    --yellow: #F2D500;
+    --display: "Oswald", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "Space Mono", "Courier New", monospace;
+    --hand: "Caveat", "Comic Sans MS", cursive;
+    --text: 34rem;
+    --margin: 13rem;
+    --gap: 2.25rem;
+  }
+  html { background: var(--page); }
+  body { background: var(--page); color: var(--ink); font: 400 16px/1.65 var(--body); padding-inline: 16px; padding-block: 0 64px; }
+  .book { max-width: calc(var(--text) + var(--gap) + var(--margin)); margin: 0 auto; }
+  p { margin: 0; }
+  em { font-style: italic; }
+  a { color: inherit; text-decoration-color: var(--red); text-underline-offset: 2px; }
+
+  /* Hoofdstukopening en delen */
+  .opener { position: relative; overflow: hidden; color: #FFFFFF; box-sizing: border-box; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; }
+  .opener .wash { position: absolute; inset: 0; background-color: rgba(214,58,49,.62); }
+  .opener .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 55%; background-color: rgba(28,27,25,.38); }
+  .opener .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background: var(--yellow); }
+  .opener h1, .opener h2, .opener .sub, .part .kicker { position: relative; }
+  .opener .kicker { font: 12px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--yellow); }
+  .opener h1, .opener h2 { font-family: var(--display); font-weight: 600; line-height: 1.02; margin: 0; text-wrap: balance; }
+  .opener .sub { max-width: 36ch; line-height: 1.4; }
+  .cover { margin-inline: -16px; min-height: 420px; padding: 32px 28px 36px 44px; }
+  .cover h1 { font-size: clamp(44px, 9vw, 72px); max-width: 12ch; }
+  .cover .sub { font-size: 18px; }
+  .cover .kicker { position: absolute; top: 26px; left: 44px; }
+  .cover .cassette { position: absolute; top: 16px; right: 18px; width: 88px; height: auto; }
+  .part { margin: 64px calc(-1 * (var(--margin) + var(--gap))) 28px 0; min-height: 230px; padding: 24px 24px 24px 40px; clear: both; }
+  .part h2 { font-size: clamp(30px, 6vw, 44px); }
+  .part .sub { font-size: 15px; }
+  .part .letter { position: absolute; right: 18px; bottom: -12px; font: 600 150px/1 var(--display); color: var(--yellow); }
+
+  /* Tekstvak met kantlijn */
+  .flow { padding-right: calc(var(--margin) + var(--gap)); }
+  .flow > p { max-width: var(--text); }
+  .flow > p { text-indent: 1.4em; }
+  .flow > .intro, .flow > .head + p, .flow > .head + aside + p, .flow > .head + figure + p { text-indent: 0; }
+  .head { margin: 40px 0 10px; max-width: var(--text); }
+  .head .label { font: 11px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--red); margin: 0 0 4px; }
+  .head h3 { font: 600 22px/1.15 var(--display); margin: 0; text-wrap: balance; }
+  .intro { font-size: 18px; line-height: 1.6; }
+
+  /* Kantlijn: luistertips, beeld, citaten, QR */
+  .side-note, .side-fig, .side-quote { float: right; clear: right; width: var(--margin); margin: 6px calc(-1 * (var(--margin) + var(--gap))) 18px 0; }
+  .side-note { border-left: 2px solid var(--yellow); padding-left: 10px; font-size: 12.5px; line-height: 1.4; color: var(--ink-soft); }
+  .side-note .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .side-note .rec { display: grid; grid-template-columns: 40px 1fr; gap: 8px; align-items: center; margin-bottom: 6px; }
+  .side-note .rec img { width: 40px; height: 40px; border-radius: 2px; }
+  .side-note .who { color: var(--ink); font-weight: 600; }
+  .side-note .qr { width: 96px; height: 96px; margin: 4px 0 6px; }
+  .side-note .qr img, .side-note .qr canvas { width: 100% !important; height: 100% !important; }
+  .side-fig img { display: block; width: 100%; border: 4px solid #FFFFFF; box-shadow: 0 3px 12px rgba(0,0,0,.18); transform: rotate(2deg); }
+  .side-fig figcaption { font: 600 20px/1.05 var(--hand); color: var(--red); text-align: center; margin-top: 8px; }
+  .side-quote { font: 500 17px/1.25 var(--display); color: var(--red); border-top: 2px solid var(--red); padding-top: 8px; }
+  .side-quote span { display: block; font: 11px/1.4 var(--mono); color: var(--ink-soft); margin-top: 6px; }
+
+  /* Achterin */
+  .back { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 8px; }
+  h4.backhead { font: 600 22px/1.15 var(--display); margin: 28px 0 0; }
+  .terms { columns: 2 240px; column-gap: 32px; margin: 12px 0 0; }
+  .terms div { break-inside: avoid; margin: 0 0 10px; }
+  .terms dt { font-weight: 600; }
+  .terms dd { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.45; }
+  .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px 32px; margin-top: 14px; }
+  .link-card { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: start; }
+  .link-card .qr { width: 112px; height: 112px; }
+  .link-card.lesson { grid-template-columns: 1fr; }
+  .link-card .qr img, .link-card .qr canvas { width: 100% !important; height: 100% !important; }
+  .link-card .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .link-card p { font-size: 14px; line-height: 1.45; }
+  .link-card .url { font: 11px/1.4 var(--mono); color: var(--ink-soft); word-break: break-all; margin-top: 6px; }
+  .colofon { margin-top: 36px; font-size: 12px; line-height: 1.5; color: var(--ink-soft); display: grid; gap: 6px; max-width: var(--text); }
+
+  @media screen and (max-width: 760px) {
+    .part { margin-right: 0; }
+    .flow { padding-right: 0; }
+    .side-note, .side-fig, .side-quote { float: none; width: auto; margin: 16px 0; }
+    .side-fig { max-width: 220px; }
+  }
+
+  /* Boek op A4 */
+  @page { size: A4; margin: 20mm 18mm 22mm 20mm; }
+  @page cover { margin: 0; }
+  @media print {
+    html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root { --text: 112mm; --margin: 44mm; --gap: 8mm; }
+    body { padding: 0; font-size: 9.6pt; line-height: 1.55; }
+    .book { max-width: none; }
+    p { orphans: 3; widows: 3; }
+    .cover { page: cover; margin: 0; height: 296mm; padding: 0 22mm 32mm 26mm; break-after: page; }
+    .cover .kicker { top: 18mm; left: 26mm; font-size: 8pt; }
+    .cover .cassette { top: 14mm; right: 16mm; width: 28mm; }
+    .cover h1 { font-size: 56pt; }
+    .cover .sub { font-size: 14pt; }
+    .opener .bar { width: 5mm; }
+    .part { margin: 0 calc(-1 * (var(--margin) + var(--gap))) 6mm 0; height: 70mm; min-height: 0; padding: 0 50mm 8mm 12mm; break-before: page; break-after: avoid; }
+    .part .kicker { font-size: 7.5pt; }
+    .part h2 { font-size: 26pt; }
+    .part .sub { font-size: 10pt; }
+    .part .letter { font-size: 100pt; right: 8mm; bottom: -5mm; }
+    .first-part { break-before: auto; margin-top: 10mm; }
+    .head { margin: 8mm 0 2.5mm; break-after: avoid; break-inside: avoid; }
+    .head .label { font-size: 6.8pt; }
+    .head h3 { font-size: 14pt; }
+    .intro { font-size: 11pt; }
+    .side-note { font-size: 7.6pt; padding-left: 3mm; margin-top: 1mm; margin-bottom: 5mm; break-inside: avoid; }
+    .side-note .tag { font-size: 6.2pt; margin-bottom: 2mm; }
+    .side-note .rec { grid-template-columns: 11mm 1fr; gap: 2.5mm; margin-bottom: 1.5mm; }
+    .side-note .rec img { width: 11mm; height: 11mm; }
+    .side-note .qr { width: 24mm; height: 24mm; }
+    .side-fig { margin-bottom: 5mm; break-inside: avoid; }
+    .side-fig figcaption { font-size: 13pt; }
+    .side-quote { font-size: 11pt; break-inside: avoid; }
+    .side-quote span { font-size: 6.5pt; }
+    .back { break-before: page; margin-top: 0; }
+    h4.backhead { font-size: 14pt; margin-top: 8mm; }
+    .terms { columns: 2; column-gap: 10mm; }
+    .terms div { margin-bottom: 2.5mm; }
+    .terms dd { font-size: 8.6pt; }
+    .terms div { break-inside: avoid; }
+    .links { grid-template-columns: 1fr 1fr; gap: 8mm; break-inside: avoid; }
+    .link-card { grid-template-columns: 30mm 1fr; gap: 5mm; }
+    .link-card .qr { width: 30mm; height: 30mm; }
+    .link-card p { font-size: 8.8pt; }
+    .link-card .url { font-size: 6.8pt; }
+    .colofon { font-size: 7.5pt; margin-top: 10mm; }
+  }
+  .cover .cover-text { position: absolute; left: 44px; right: 28px; bottom: 36px; display: grid; gap: 10px; }
+  @media print { .cover { display: block !important; height: 294mm !important; } .cover .cover-text { left: 26mm; right: 22mm; bottom: 32mm; gap: 4mm; } }</style><style>
+  body.chapter { padding-top: 0; }
+  body.chapter .sitenav { margin-inline: -16px; }
+  .deck { margin: 0 -16px; background: #1C1B19; color: #fff; padding: 18px 20px 20px; display: grid; gap: 14px; }
+  .deck-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .deck .lbl { font: 11px/1.4 "Space Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: #F2D500; min-width: 7.5em; }
+  .deck .lesson { font: 500 16px/1.3 "Oswald", sans-serif; }
+  .deck .btn { padding: 10px 14px; font-size: 14px; }
+  .deck .btn.ghost { color: #fff; border-color: #55524C; }
+  .deck-embed { margin: 0; }
+  .deck-embed iframe { border-radius: 8px; display: block; }
+  .deck-genres { display: flex; flex-wrap: wrap; gap: 6px; }
+  .gchip { --c: #999; display: inline-flex; align-items: center; gap: 7px; text-decoration: none; font: 13px/1 "Inter", sans-serif; padding: 7px 10px; border-radius: 999px; background: #2A2825; color: #fff; }
+  .gchip i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+  .gchip span { color: #9C978D; font-family: "Space Mono", monospace; font-size: 11px; }
+  .gchip:hover { background: #3A3833; }
+  .note-play { display: flex; align-items: center; gap: 8px; margin: 2px 0 8px; font: 11px/1.2 "Space Mono", monospace; letter-spacing: .04em; text-transform: uppercase; color: #D63A31; }
+  .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 48px 0 0; }
+  .pager a { display: grid; gap: 4px; padding: 16px; border: 1px solid #DDD8CE; border-radius: 4px; text-decoration: none; }
+  .pager a:hover { border-color: #1C1B19; }
+  .pager .next { text-align: right; }
+  .pager small { font: 11px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #D63A31; }
+  .pager b { font: 600 18px/1.15 "Oswald", sans-serif; }
+  @media print { .sitenav, .deck, .pager, .sitefoot { display: none !important; } }
+</style></head><body class="chapter" data-mixtape="11"><header class="sitenav"><a class="brand" href="../index.html"><img src="../assets/cassette.png" alt=""><span>School of Rock</span></a><nav aria-label="Hoofdmenu"><a href="../index.html#mixtapes" aria-current="page">Mixtapes</a><a href="../kaart.html">Genrekaart</a><a href="../begrippen.html">Begrippen</a><a href="../pdf/school-of-rock-reader.pdf">Reader (pdf)</a></nav></header><div class="book">
+
+<header class="opener cover" style="background-image:url('https://lh3.googleusercontent.com/PZ4xHUYNhf-XpMJ8t2WOZ2lE6f_mZK2TNJWqBk2v6KjZOnzt_8nCBoadFPoGNi0MWFxDnFOze-FWGWEs7bzUlhzBdnaiktZ4vh0H0WI')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+  <p class="kicker">School of Rock · Mixtape 11</p>
+  <img class="cassette" src="../assets/cassette.png" alt="School of Rock-cassette">
+  <div class="cover-text"><h1>Nederpop</h1>
+  <p class="sub">Van indorock en Nederbeat via Golden Earring, Normaal en Doe Maar naar Nederhop en de Nederlandstalige hits van nu.</p></div>
+</header>
+<div class="deck" aria-label="Bij dit hoofdstuk">
+  <div class="deck-row"><span class="lbl">Luisteren</span><a class="btn solid deck-spotify" href="https://open.spotify.com/playlist/2suVQVE1BGstOL2qCrvkmH" data-embed="https://open.spotify.com/embed/playlist/=generator" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Spotify-playlist</a><a class="btn ghost" href="https://open.spotify.com/playlist/2suVQVE1BGstOL2qCrvkmH" target="_blank" rel="noopener">Open in Spotify</a><a class="btn ghost" href="../pdf/mixtape-11.pdf" download>Download pdf</a></div>
+  <div class="deck-embed" hidden></div>
+  <div class="deck-row"><span class="lbl">Les</span><span class="lesson">LessonUp · Mixtape 11: Nederpop</span></div>
+  <div class="deck-row"><span class="lbl">Op de kaart</span><div class="deck-genres"></div></div>
+</div>
+
+<section class="flow">
+  <aside class="side-note"><span class="tag">LUISTER MEE</span><div class="qr" data-url="https://open.spotify.com/playlist/2suVQVE1BGstOL2qCrvkmH"></div>Alle nummers uit dit hoofdstuk staan op volgorde in de Spotify-playlist bij Mixtape 11.</aside>
+  <p class="intro">De eerste Nederlandse rock-'n-roll werd gespeeld door een groep broers die net uit Indonesië waren gekomen. Een van hen speelde gitaar met het instrument achter zijn hoofd, een ander klom tijdens het spelen op zijn bas. Zestig jaar later is een Nederlandstalig duet over een strand in Zeeland een van de meest gestreamde nummers in Nederland. Tussen die twee momenten ligt de geschiedenis van de Nederlandse popmuziek.</p>
+  <p>Nederland is een klein land, en zijn popmuziek kwam bijna altijd van buiten. Rock-'n-roll uit Amerika, beat uit Engeland, chansons uit Parijs, ska en reggae uit Jamaica, hiphop uit New York. Nederlandse muzikanten namen die stijlen over, pasten ze aan en stuurden ze soms terug naar het buitenland. Steeds weer moesten ze kiezen in welke taal ze zongen: Engels voor de wereld, Nederlands of dialect voor het publiek dichtbij. Die keuze is nooit definitief gemaakt. Ze schuift met elke generatie heen en weer, en daarmee ook de vraag die in dit hoofdstuk centraal staat: <strong>wanneer klinkt popmuziek Nederlands: door de taal, door de muzikanten of door iets anders?</strong></p>
+
+  <!-- SIDE A -->
+  <header class="opener part first-part" style="background-image:url('https://lh3.googleusercontent.com/PZ4xHUYNhf-XpMJ8t2WOZ2lE6f_mZK2TNJWqBk2v6KjZOnzt_8nCBoadFPoGNi0MWFxDnFOze-FWGWEs7bzUlhzBdnaiktZ4vh0H0WI')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side A · 1957-1971</p>
+    <h2>Van indorock tot Nederbeat</h2>
+    <p class="sub">Indische gitaristen, Haagse beatbands en een zangeres die Amerika veroverde: Nederland speelt mee.</p>
+    <span class="letter" aria-hidden="true">A</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1957-1964 · Den Haag</p><h3>Indorock</h3></div>
+  <p>In december 1949 erkende Nederland de onafhankelijkheid van Indonesië. In de jaren daarna vertrokken tienduizenden Indische Nederlanders, mensen met zowel Nederlandse als Indonesische wortels, naar een land dat veel van hen nooit hadden gezien. Ze kwamen terecht in pensions en eenvoudige huurwoningen, vaak in Den Haag, waar een grote Indische gemeenschap ontstond. Van de nieuwkomers werd verwacht dat ze zich snel aanpasten. Over wat ze hadden achtergelaten, werd weinig gesproken.</p>
+  <p>Hun muziek namen ze wel mee. In Indië hadden ze geluisterd naar krontjong, Indonesische volksmuziek met Portugese wortels, gespeeld op kleine snaarinstrumenten. Ook de Hawaiiaanse gitaar was er populair: een gitaar die plat op schoot ligt en met een stalen staafje wordt bespeeld, zodat de tonen in elkaar overglijden. Via de radio en via platen kwamen daar Amerikaanse country en rock-'n-roll bij. In Nederland smolt dat samen tot <strong>indorock</strong>: snelle, vaak instrumentale gitaarmuziek met strakke ritmes, veel echo en een technische vaardigheid die Nederlandse jongeren nog nooit hadden gezien.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/gu8FUM-4GOeW5K81Oxt1QgEWoCJ75_Gy_xSQ6ZDOaiDb0jWMX2IL9kH47ExTDcU75-hln5fJdDShfRUXnCrbpORE3VYS9RlqfYbWLeA" alt=""><div><span class="who">Tielman Brothers</span><br>Rock Little Baby of Mine (1958)</div></div>Snelle, heldere gitaarlijnen met veel echo: de echo-unit is het geluid van de indorock.</aside>
+  <p>De bekendste indorockband was de Tielman Brothers. De broers Andy, Reggy, Ponthon en Loulou Tielman kwamen in 1957 met hun familie naar Nederland en vestigden zich in Breda. Ze waren de eersten die in Nederland rock-'n-roll speelden, en ze deden dat met een show. Andy speelde gitaar met het instrument achter zijn hoofd, en de bas werd bespeeld alsof het een acrobatiektoestel was. Op de wereldtentoonstelling in Brussel in 1958 trokken ze al een groot publiek. In <em>Rock Little Baby of Mine</em> (1958) hoor je waar het om draait: korte, snelle gitaarlijnen die door een echo-apparaat worden verdubbeld, zodat elke noot nagalmt. Die echo werd het handelsmerk van de indorock.</p>
+  <p>In Nederland vonden veel volwassenen het lawaai. In Duitsland werden de Tielman Brothers sterren. Ze speelden er in clubs, ook in Hamburg, nog voordat de Beatles daar in 1960 hun eerste lange reeksen optredens gaven (zie Mixtape 3). Veel andere Indische bands volgden dezelfde route langs Duitse clubs en Nederlandse zalen. Andy Tielman (1936-2011) bleef tot op hoge leeftijd optreden.</p>
+  <p>Lang werd indorock gezien als iets aparts, als 'Indische' muziek die buiten de Nederlandse geschiedenis stond. Tegenwoordig geldt ze als het begin van de Nederpop. Dat zegt iets over de vraag van dit hoofdstuk. De eerste Nederlandse rock-'n-roll werd gemaakt door migranten, in het Engels, op basis van Amerikaanse en Aziatische muziek. Toch is dit het verhaal waarmee de Nederlandse popmuziek begint.</p>
+
+  <div class="head"><p class="label">Track 02 · 1965-1974</p><h3>De kleinkunst kantelt</h3></div>
+  <p>Wie in de jaren vijftig in het Nederlands zong, deed dat meestal niet in de popmuziek. Er was het levenslied, er was de schlager, en er was de <strong>kleinkunst</strong>: het Nederlandstalige lied uit het cabaret en het theater. Bij kleinkunst staat de tekst centraal. De begeleiding is klein, vaak alleen een piano of een gitaar, en het publiek zit stil in een schouwburg. Wim Sonneveld, Toon Hermans en Jules de Corte waren de grote namen. Zingen in eigen taal hoorde bij de theaterzaal, niet bij de dansvloer.</p>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/lwPCnVMCJnDf7dv8X0pG89m0s_r7L-y9czVcaswGSxPwqOakdtgoKbkhxS0TCGUXRBdnPjzTqfyK_txbCED7svcd081iraGkXJbAuVdd" alt="Boudewijn de Groot"><figcaption>Boudewijn de Groot</figcaption></figure>
+  <p>Rond 1965 schoof die traditie op richting de pop. Boudewijn de Groot begon liedjes te zingen op teksten van zijn vriend Lennaert Nijgh. Ze lieten zich inspireren door de Amerikaanse folk en de protestliedjes van Bob Dylan, maar schreven in het Nederlands. <em>Welterusten mijnheer de president</em> (1966) is een slaapliedje voor de Amerikaanse president Lyndon Johnson, die in die jaren steeds meer soldaten naar Vietnam stuurde. De toon is vriendelijk en de melodie lieflijk, maar de inhoud is scherp: de president slaapt rustig terwijl er elders mensen sterven. Het nummer verscheen op het album <em>Voor de overlevenden</em> (1966). Een jaar later had De Groot een grote hit met <em>Het land van Maas en Waal</em>.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/MJFVF6BS7fCQGGX4l4aqvViv70aBAwAef2IWl2cgQurMRFhtzG0JcNIXEJsyKhV5C8ft2UkLgBHyQhBlR9kkOIsc04aSFALcp2jOB-I" alt=""><div><span class="who">Boudewijn de Groot</span><br>Welterusten mijnheer de president (1966)</div></div>Een protestlied tegen de Vietnamoorlog, gericht aan president Johnson. Bob Dylan op z'n Hollands.</aside>
+  <p>Een tweede voorbeeld kwam uit Frankrijk, met chansonniers als Jacques Brel, Georges Brassens en Jean Ferrat. Hun liedjes vertelden een verhaal, hadden een sterke tekst en werkten in een zaal net zo goed als op de radio. Wim Sonneveld zong in 1974 <em>Het dorp</em>, een bewerking van <em>La montagne</em> (1964) van Jean Ferrat. De Nederlandse tekst is van Friso Wiegersma. Het lied gaat over een dorp dat verdwijnt: de weilanden worden bebouwd, de jongeren trekken weg, het oude leven is voorbij. Het is nostalgie, maar ook een beschrijving van wat de modernisering met het Nederlandse platteland deed.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/p20LmDf30CkaSvtYiWLUssfdXMsdZjmCsatwkW3O3M04WlIon8HY-oIkbaR1WhmdYwUGIOb5KG31Cj8sIKv3TVp2HS2s3zR2afk3y0M" alt=""><div><span class="who">Wim Sonneveld</span><br>Het dorp (1974)</div></div>Een bewerking van La montagne van Jean Ferrat. Nostalgie naar een dorp dat verdwijnt.</aside>
+  <p>De Nederlandstalige popliedjes van de jaren zestig komen dus meer uit Parijs dan uit Liverpool. Wie in het Nederlands zong, sloot aan bij het chanson en de kleinkunst: liedjes om naar te luisteren, met een tekst die ertoe deed. Die lijn loopt door tot vandaag. Klein Orkest in de jaren tachtig en Acda en de Munnik in de jaren negentig komen er rechtstreeks uit voort. De dansbare popmuziek met gitaren en drums werd in diezelfde jaren in Nederland vooral in het Engels gemaakt.</p>
+
+  <div class="head"><p class="label">Track 03 · 1964-1971 · Den Haag, Grolloo</p><h3>Nederbeat en de wereld</h3></div>
+  <p>In juni 1964 kwamen de Beatles naar Nederland. Ze maakten een rondvaart door de Amsterdamse grachten en speelden in een veilinghal in Blokker. Voor duizenden Nederlandse jongeren was dat het bewijs dat er iets nieuws aan de hand was. Overal ontstonden bandjes met twee gitaren, een bas en een drumstel. Het centrum lag in Den Haag. De stad had dankzij de indorock al een levendige scene, en daar groeide nu een generatie beatbands: de Golden Earrings, Q65, de Motions en later Shocking Blue. In Amsterdam speelden The Outsiders. Deze muziek kreeg later de naam <strong>Nederbeat</strong>.</p>
+  <p>Vrijwel al deze bands zongen in het Engels. Dat was de taal van de popmuziek, en een Nederlandse tekst klonk in die jaren al snel als schlager of cabaret. De bands verschilden onderling sterk. Q65 was rauw en ruig, de Motions waren melodieuzer. De Golden Earrings, in 1961 opgericht door George Kooymans en Rinus Gerritsen, hadden in 1965 hun eerste hit met <em>Please Go</em>. Het was het begin van een loopbaan die zestig jaar zou duren.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/lVezBITdVZBNrSsUDL0fkjW36Vb1mkIUn3JoSvWnzi89BWvOGppA4dT98YHpSMSsP6nERwAN6FlvG-HOu9El8EAalmzzu19Jtev4ik8" alt=""><div><span class="who">Cuby + Blizzards</span><br>Appleknockers Flophouse (1969)</div></div>Harry Muskee zingt de blues in Drenthe. Rauw en Engelstalig, met een Hammond.</aside>
+  <p>Niet alle Nederbeat kwam uit de Randstad. Cuby + Blizzards werkte vanuit Grolloo, een klein dorp in Drenthe. Zanger Harry Muskee en gitarist Eelco Gelling speelden blues: niet de vrolijke beat van de Beatles, maar de zware, rauwe muziek uit het zuiden van Amerika, die Engelse bands als de Rolling Stones ook speelden. Op <em>Appleknockers Flophouse</em> (1969) hoor je een Hammondorgel, een donkere stem en een gitaar die de tijd neemt. Dat zo'n geluid uit een Drents dorp kon komen, laat zien hoe ver de Amerikaanse en Britse invloed in een paar jaar was doorgedrongen.</p>
+  <p>Het grootste succes kwam uit Den Haag. Shocking Blue was een band rond gitarist en songschrijver Robbie van Leeuwen, met zangeres Mariska Veres. Van Leeuwen schreef <em>Venus</em>, een kort nummer met een eenvoudige gitaarriff en een refrein dat je na één keer kunt meezingen. Veres zong met een lage, krachtige stem en werd met haar zwarte haar en strakke blik het gezicht van de band. In februari 1970 stond <em>Venus</em> op nummer 1 in de Amerikaanse Billboard Hot 100. Het was de eerste keer dat een Nederlandse band daar bovenaan stond. In 1986 maakte de Britse groep Bananarama met een eigen versie opnieuw een nummer 1-hit van het lied.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/MbbmbLS8gB5yMPvs2VU_xHkizvzfq3S_QszY3I9_dJlyjhMHUu0i2xHfn0m34izYGex-Bjx1uUaUF0izAxPb4FYAJy4XJwa0-AvYmdQ" alt=""><div><span class="who">Shocking Blue</span><br>Venus (1969)</div></div>Gitarist Robbie van Leeuwen schreef het. Bananarama maakte er in 1986 opnieuw een nummer 1 van.</aside>
+  <p>Met de Nederbeat groeide het zelfvertrouwen. Nederlandse bands bleken internationaal mee te kunnen komen, en een Haagse groep kon de Amerikaanse hitlijst aanvoeren. Tegelijk roept dat succes de vraag van dit hoofdstuk op. Wat is er Nederlands aan <em>Venus</em>? De taal niet, de stijl ook niet. Alleen de muzikanten en de stad waar ze vandaan kwamen. Voor een Amerikaanse luisteraar was het gewoon een popnummer.</p>
+
+  <!-- SIDE B -->
+  <header class="opener part" style="background-image:url('https://lh3.googleusercontent.com/ZwlNInBJ1YVL_tJJ-a9LJjTQ9j8Koqo7QiH12YBFpShaK79l69pkFnXL9Mb3bs0JTdJpXdIs-Jpcfg7OCcufnNfM6CCjDaG54ozFBP0V')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side B · 1971-1999</p>
+    <h2>De jaren 70 en 80: prog, rock en Nederlands</h2>
+    <p class="sub">Golden Earring, Focus en Normaal zetten Nederland op de kaart, en dan zingt opeens iedereen in het Nederlands.</p>
+    <span class="letter" aria-hidden="true">B</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1971-1978</p><h3>Wereldspelers</h3></div>
+  <p>Begin jaren zeventig werd rock serieuzer en langer. Bands maakten albums in plaats van singles, en muzikanten lieten horen wat ze technisch konden. In Engeland ontstond de progressieve rock, met lange nummers, klassieke invloeden en ingewikkelde maatsoorten. Ook in Nederland waren er bands die die kant op gingen, en twee daarvan braken internationaal door.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/p45PQIjlHAwuRAa_1aqDtOBuW5JA-Cq1qKOK0Wig0zOUExx2HZKLjWuiOHbegSGnLyjiNv3OF-x7Pd7focjGFZRNFWAeiiOqG_HjKqk" alt=""><div><span class="who">Focus</span><br>Hocus Pocus (1971)</div></div>Een riff, een drumbreak, gejodel en een fluitsolo. Probeer het maar eens te spelen.</aside>
+  <p>Focus werd geleid door Thijs van Leer, die orgel en dwarsfluit speelde, en gitarist Jan Akkerman. Beiden waren technisch zeer sterke muzikanten. Toch werd hun bekendste nummer geen ernstig progrockstuk, maar een grap. <em>Hocus Pocus</em> (1971), van het album <em>Moving Waves</em>, wisselt een harde gitaarriff af met een drumbreak, gejodel, gefluit en een fluitsolo. Het nummer heeft nauwelijks tekst en klinkt alsof de band zelf moet lachen om wat ze doet. In 1973 werd het ook in Engeland en Amerika een hit. Progrock met humor: dat durfden Engelse bands zelden.</p>
+  <p>Golden Earring had de s inmiddels uit de naam laten vallen en was uitgegroeid tot een harde rockband. In 1973 verscheen <em>Radar Love</em>, van het album <em>Moontan</em>. Het nummer gaat over een man die 's nachts over de snelweg naar zijn geliefde rijdt. De bas van Rinus Gerritsen en de drums van Cesar Zuiderwijk zetten een groove neer die nooit stilvalt, en de gitaar van George Kooymans en de stem van Barry Hay rijden daaroverheen. Het nummer werd een hit in Europa en Amerika en klinkt nog altijd op autoradio's.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/kT1MkpFgRpRfXUKZj1eJwD6DlZIDg5FxENVbPBmdgFhrL5lFj2yTorAncrIE26InrsJxERLnh6uxGqWgqFrcKM-2EYrwoOEyFP6HuNg" alt=""><div><span class="who">Golden Earring</span><br>Radar Love (1973)</div></div>De bas en drums rijden de snelweg op: de groove is het nummer.</aside>
+  <p>Golden Earring bestond van 1961 tot 2021. Daarmee is het een van de langstlopende rockbands ter wereld. De band stopte pas toen bij gitarist George Kooymans in 2021 ALS werd vastgesteld. De foto bij het begin van deze side laat hem zien in 1974, op het hoogtepunt van het internationale succes.</p>
+  <p>Terwijl Focus en Golden Earring in het Engels de wereld veroverden, gebeurde in de Achterhoek iets heel anders. Normaal, in 1975 opgericht rond zanger Bennie Jolink, zong in het Achterhoeks. <em>Oerend hard</em> (1977) is een liefdeslied voor een brommer, het vervoermiddel van elke plattelandsjongere. De band trad op in boerenkiel en op klompen, en de concerten in feesttenten en zalen waren luid en wild. Critici in de Randstad keken er met enige spot naar. Het publiek op het platteland herkende er zichzelf in. Deze muziek kreeg de naam <strong>boerenrock</strong>.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/jI362BV3r3VeNKo1XRghsNT5My8r8e6bs_PqwowImgzR3Me4J48SUJtuobJYx_dg7kDYFsQT2LCobFxdSJo-x7B3-3hQWdcplhYqBdw" alt=""><div><span class="who">Normaal</span><br>Oerend hard (1977)</div></div>Een liefdeslied voor een brommer, in het Achterhoeks.</aside>
+  <p>Zo werd taal in de jaren zeventig een bewuste keuze. Engels was de taal voor de wereld en voor de radio. Dialect was de taal van de eigen identiteit, van een streek die zich niet liet vertegenwoordigen door Amsterdam of Hilversum. Wat <em>Oerend hard</em> Nederlands maakt, is daarom meer dan de taal. Het is het onderwerp, de humor, de houding en het publiek. Leg het nummer naast <em>Radar Love</em> en je hoort twee rocknummers over de weg, die niemand met elkaar zou verwarren. Herman Brood, die in 1978 met zijn band Wild Romance een hit had met <em>Saturday Night</em>, koos net als Golden Earring voor het Engels. Aan het eind van het decennium leek de verdeling vast te liggen: rock in het Engels, kleinkunst in het Nederlands, boerenrock in dialect. Een paar jaar later was die verdeling verdwenen.</p>
+
+  <div class="head"><p class="label">Track 02 · 1981-1984</p><h3>Doe Maar en de taalwissel</h3></div>
+  <p>Rond 1980 kwam er nieuwe energie in de Nederlandse popmuziek. Punk en new wave hadden laten zien dat je geen virtuoos hoefde te zijn om een band te beginnen. In Engeland hadden bands als The Specials en Madness de <strong>ska</strong> uit Jamaica nieuw leven ingeblazen: snelle muziek met de nadruk op de offbeat, de tel tussen de tellen in. Ook reggae was inmiddels wereldwijd bekend. Doe Maar speelde die muziek, maar dan met Nederlandse teksten.</p>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/VVI8zvg2EIKUTK5rHtiwCNHLqtLQFXFLimv_gl-IXg9D4_9lDDa4mCwN-hX4y0RZMc7ANqRx7BMgAvWo8hfJBCzPfKd2-w4j1TN3VQ" alt="Henny Vrienten"><figcaption>Henny Vrienten</figcaption></figure>
+  <p>De band bestond al sinds eind jaren zeventig, maar brak in 1981 door. De meeste nummers werden geschreven door Henny Vrienten (1948-2022) en Ernst Jansz. Hun teksten gingen over gewone dingen: verliefdheid, puberteit, ouders, verveling, maar ook de dreiging van de atoombom. Ze schreven in de taal waarin jongeren met elkaar praatten, zonder de plechtige toon van het cabaret of het sentiment van de schlager. <em>Sinds 1 dag of 2 (32 jaar)</em> (1981) gaat over een man van 32 die nog steeds bij zijn ouders woont. Onder die tekst ligt een ska-ritme, met de gitaar op de offbeat.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/-JRy6xnmMh17cZuzofJqjpSjR2sS9yJk0L90lA9LnZ2DDd4lpw_NHCYkJ6P28l_YLeP9i_UVXdyMwfiuCeCitj9GavvHW5_jvU9vcdY" alt=""><div><span class="who">Doe Maar</span><br>Sinds 1 dag of 2 (32 jaar) (1981)</div></div>Ska-ritme op de offbeat, en een tekst over een jongen van 32 die nog thuis woont.</aside>
+  <p>Wat daarna gebeurde, werd de <strong>Doe Maar-gekte</strong> genoemd. Tieners volgden de band zoals hun ouders de Beatles hadden gevolgd. Er waren gillende fans bij elk optreden, posters op slaapkamermuren en platen hoog in de hitparade. Voor het eerst stond een Nederlandstalige popgroep in het middelpunt van een echte jeugdcultuur (zie ook Mixtape 2). In 1984 stopte Doe Maar. De afscheidsconcerten in de Brabanthallen in Den Bosch werden een nationale gebeurtenis.</p>
+  <p>Het belangrijkste gevolg van Doe Maar was niet de gekte zelf, maar wat die met de taal deed. Ineens was Nederlands zingen geen schlager of cabaret meer, maar pop. Platenmaatschappijen gingen op zoek naar Nederlandstalige bands, en die waren er volop. Het Goede Doel, het Utrechtse duo van Henk Westbroek en Henk Temming, maakte synthpop in het Nederlands. <em>België</em> (1982) heeft het koele, elektronische geluid van de vroege jaren tachtig (zie Mixtape 7), met een tekst vol absurde vragen. Toontje Lager scoorde met <em>Stiekem gedanst</em>, en de Nijmeegse Frank Boeijen Groep maakte new wave in eigen taal.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/OU9M7kjQrRxZc1QXRrY8A5Z1XpPR6LTpwQ_C406QF6LNZ5NRpXfp2T5BUbNNOgsGY8K_JVR9nxTW94N3mH9XxLl4U6tMp6Rxnwv9tQ" alt=""><div><span class="who">Het Goede Doel</span><br>België (1982)</div></div>Synthpop in het Nederlands, met een refrein vol vragen die nergens over lijken te gaan.</aside>
+  <p>Zo ontstond in een paar jaar de <strong>Nederpop</strong> in de betekenis die het woord nu meestal heeft: Nederlandse popmuziek in eigen taal. Een generatie die met Engelstalige rock was opgegroeid, hoorde voor het eerst popmuziek in de taal waarin ze zelf dacht en praatte. Doe Maar bewees dat dat niet ouderwets of kneuterig hoefde te klinken.</p>
+
+  <div class="head"><p class="label">Track 03 · 1982-1986 · Amsterdam</p><h3>Export en infrastructuur</h3></div>
+  <p>Niet iedereen stapte over op het Nederlands. Een deel van de Nederlandse rockmuzikanten bleef juist op de internationale markt mikken, en had daar in de jaren tachtig succes. Golden Earring scoorde met <em>Twilight Zone</em> (1982) opnieuw een grote hit in Amerika, geholpen door een videoclip die op het nieuwe muziekkanaal MTV werd gedraaid.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/Yuu1Mr8JvF7_FGTIm4ydmNuU5cYD2oUGXh05f2E53c5aFugdsE8f6X0pGsjPtH_BgeaEW449SWXOzCmFJgzBhDpYgDALPR7Ovm2l2pY" alt=""><div><span class="who">Vandenberg</span><br>Burning Heart (1982)</div></div>Een powerballad met een Amerikaanse rockradio-sound, gemaakt door een Nederlandse band.</aside>
+  <p>Gitarist Adrian Vandenberg ging nog een stap verder. Met zijn band Vandenberg maakte hij hardrock die precies klonk zoals de Amerikaanse rockradio het wilde. <em>Burning Heart</em> (1982) is een powerballad: een rustig begin, een groot refrein en een gitaarsolo die het nummer naar een hoogtepunt tilt. Het werd een hit in de Verenigde Staten. Later in de jaren tachtig werd Vandenberg gitarist van de Britse band Whitesnake. Voor een Amerikaanse luisteraar was aan <em>Burning Heart</em> niets Nederlands te horen, en dat was precies de bedoeling.</p>
+  <p>Ondertussen veranderde er in Nederland zelf iets dat minder opviel, maar op lange termijn misschien belangrijker was. Er ontstond een <strong>infrastructuur</strong> voor popmuziek. Paradiso in Amsterdam, sinds 1968 een poppodium in een voormalige kerk, groeide uit tot een van de bekendste concertzalen van Europa. Even verderop opende in 1970 de Melkweg, in een oude melkfabriek. In datzelfde jaar werd in Geleen voor het eerst Pinkpop gehouden, het festival dat nog altijd bestaat. In de jaren tachtig kregen steeds meer steden een eigen <strong>poppodium</strong>, vaak met steun van de gemeente. Nederland ging popmuziek zien als cultuur die het waard was om te ondersteunen, net als theater en klassieke muziek.</p>
+  <p>Popmuziek werd ook een vak. Vanaf de jaren tachtig ontstonden opleidingen voor pop en jazz, onder meer aan het Conservatorium van Amsterdam, aan Codarts in Rotterdam en aan ArtEZ in Enschede. Bands konden in eigen land spelen, een publiek opbouwen en zich ontwikkelen, en muzikanten konden voor hun vak worden opgeleid. Dat netwerk van podia, festivals, subsidies en opleidingen is een van de redenen dat de Nederlandse popmuziek vanaf de jaren tachtig zo breed werd. Ook de opleiding waarvoor dit boek is geschreven, hoort bij die geschiedenis.</p>
+
+  <div class="head"><p class="label">Track 04 · 1984-1999</p><h3>Rock in het Nederlands</h3></div>
+  <p>Na Doe Maar werd het Nederlands ook de taal van de rock. In de tweede helft van de jaren tachtig verschenen bands die in eigen taal zongen over politiek, over de stad en over liefde, met gitaren en een volle band. Ze vulden de nieuwe poppodia en hadden een vast publiek dat hun teksten woord voor woord kende.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/iCSNz7LIpvwnQuXCp-bcMTsNRMrYGdopf-2uSmXYm_biX9ngWqN9JvhmakZcIL2Pw_HGb5ycgdWzV8iKDwSZtCVfhVDFSukxVg5psw" alt=""><div><span class="who">Klein Orkest</span><br>Over de muur (1984)</div></div>Een verhalend lied met een refrein dat iedereen meezingt; let op de vergelijking tussen Oost en West.</aside>
+  <p>Klein Orkest, de groep van zanger en tekstschrijver Harrie Jekkers, kwam uit de wereld van het cabaret. Dat hoor je aan <em>Over de muur</em> (1984). Het is een verhalend lied over Oost- en West-Berlijn, geschreven vijf jaar voordat de Muur viel. Het vergelijkt het leven aan beide kanten en stelt de vraag of het leven in het Westen echt zoveel vrijer is dan in het Oosten. Dat was in 1984 geen vanzelfsprekende vraag. Het refrein werd in heel Nederland meegezongen. Hier komen twee lijnen samen: de kleinkunst met haar sterke tekst, en de popmuziek met een band en een meezingrefrein.</p>
+  <p>De Frank Boeijen Groep uit Nijmegen maakte new wave in het Nederlands. <em>Zwart wit</em> (1984) heeft koele, heldere gitaren en een tekst over racisme. Waar Doe Maar vrolijk en herkenbaar was, klonk Boeijen donkerder en ernstiger, net als veel Engelse new wave uit die jaren.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/HdL7wLIdHeULzk3Hra1kyvsGEY498w-rwfEjArQ6nvruJAPMRyhtWssZIm77vLLf0XxgieSURjf6qHGOhKa9DWdmmrzuNs2EH0SZCtnP" alt=""><div><span class="who">Frank Boeijen Groep</span><br>Zwart wit (1984)</div></div>New wave in het Nederlands: koele gitaren en een tekst over racisme.</aside>
+  <p>De Dijk uit Amsterdam koos een andere bron: Amerikaanse soul en rhythm-and-blues, met blazers en een strakke ritmesectie. Zanger Huub van der Lubbe schreef teksten over Amsterdam en de mensen die er wonen. <em>Mag het licht uit</em> (1987) is een liefdeslied met de warmte van een soulballad. De Dijk werd een van de populairste liveacts van het land en bleef decennialang spelen. In 2010 nam de band zelfs een album op met de Amerikaanse soulzanger Solomon Burke.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/-aUjG0qYDdE1qZJpPB5lDtbu3XGCIgEMMc4cs0XaO3YZ-sePUQnVO5iUv_heU-WCDfIdF2GQYs4gILdwwdpeD5xsS7jHKD3WnuXT8kU" alt=""><div><span class="who">De Dijk</span><br>Mag het licht uit (1987)</div></div>Blazers en soul uit Amsterdam: Huub van der Lubbe als zanger van de stad.</aside>
+  <p>The Scene, de band van Thé Lau, maakte stevige gitaarrock. In 1990 verscheen <em>Iedereen is van de wereld</em>. Lau schreef het als een lied over gelijkheid, en het refrein heeft de eenvoud van een volkslied. Het nummer werd een meezinger op festivals en later het lied van de Nacht van de Vluchteling, een jaarlijkse sponsorloop voor vluchtelingen. Thé Lau overleed in 2015.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/_PCcKE3wB5685E9B_O1IZM0LqP09pQLl2QiJt4lPGBMYkkn9OSx230AxJXi76bFPDPfpZx7PdE-0K4nob65UHoG1Pjo6Qp2vlVWO-h-I" alt=""><div><span class="who">The Scene</span><br>Iedereen is van de wereld (1990)</div></div>Rock met een volksliedrefrein; Thé Lau schreef het als lied over gelijkheid.</aside>
+  <p>In de jaren negentig kwam er een jongere, snellere generatie bij. De Heideroosjes uit Horst, in Limburg, speelden punk: kort, hard en snel, en vaak in het Nederlands. <em>Iedereen is gek</em> (1999) duurt niet lang en neemt zichzelf niet al te serieus. Zo had in vijftien jaar bijna elk rockgenre een Nederlandstalige variant gekregen: van het verhalende lied van Klein Orkest tot de soul van De Dijk en de punk van de Heideroosjes.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/WIL7AmXcThYdLqHR2yMfYyj6BuMszwP_KhQGn7QpXVcdjRr4uubDI4LKab4UgkpqV7LLBt19ojKkegzdmi4hGToAT1f88oYJvCfjUg" alt=""><div><span class="who">Heideroosjes</span><br>Iedereen is gek (1999)</div></div>Limburgse punk: snel, kort en met humor.</aside>
+
+  <!-- SIDE C -->
+  <header class="opener part" style="background-image:url('https://lh3.googleusercontent.com/ItERDWdwVMDx_nfG_9HslIE5zocZqC3p5BQf9OkekZtxA61UwUQLLOIxuc7235_XDFdk5ca2ldd2JlZvtLcAIrbARG5MXjzNijzT9Vw')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side C · 1990-2020</p>
+    <h2>Van Osdorp Posse tot Froukje</h2>
+    <p class="sub">Nederhop, ballads en een nieuwe generatie: in de jaren 2010 wordt Nederlands weer de taal van de hitlijst.</p>
+    <span class="letter" aria-hidden="true">C</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1990-2014 · Amsterdam, Oosterhout, Zwolle</p><h3>Nederhop</h3></div>
+  <p>Hiphop ontstond in de jaren zeventig in New York (zie Mixtape 6) en bereikte Nederland in de jaren tachtig. De eerste Nederlandse rappers deden wat de Nederbeatbands twintig jaar eerder hadden gedaan: ze namen de Amerikaanse stijl over en rapten in het Engels. Rond 1990 veranderde dat.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/-hVzZD2aEiPtpZ8SSl0vEFgsvPR55b8EFx7e0uNZHtxHCuEXQ_CNSwW1NKIq13YgzVkkNRfm6J_x4PGPMJRqycVdLhNUqs2togyMmCY" alt=""><div><span class="who">Osdorp Posse</span><br>Origineel Amsterdams</div></div>Hardcore rap in plat Amsterdams. Geen Amerikaanse imitatie maar een eigen stem.</aside>
+  <p>Osdorp Posse, uit de Amsterdamse wijk Osdorp, begon vanaf 1990 te rappen in het Nederlands. Rapper Def P en zijn groep kozen niet voor beschaafd Nederlands, maar voor plat Amsterdams: rauw, boos en grof. Het was hardcore rap, met zware beats en teksten over de straat en de stad. Daarmee ontstond de <strong>Nederhop</strong>, de Nederlandstalige hiphop. Osdorp Posse deed in de hiphop wat Normaal in de rock had gedaan: de muziek kwam uit Amerika, maar de taal en de houding waren van hier.</p>
+  <p>De doorbraak naar een groot publiek kwam uit Brabant. Extince uit Oosterhout scoorde in 1995 met <em>Spraakwater</em> de eerste Nederlandstalige hiphophit. Het nummer rust op een ontspannen funkbeat, en Extince rapt soepel en met plezier in de taal. Hij liet horen dat het Nederlands, met zijn vele medeklinkers en lange woorden, prima kan rijmen en swingen. Wat met Doe Maar was gebeurd met ska, gebeurde nu met hiphop: een buitenlandse stijl werd in eigen taal een hit.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/heojB0rx8M2dw0N2zh3pU2kUb6mxC-n2vQ9Ev7jwIS_vHbOI0iW1nNhRJ34PzQWW62PCIBxdE0hivI0oyL9Nso90rOrCGLZixkcPIw" alt=""><div><span class="who">Extince</span><br>Spraakwater (1995)</div></div>Extince uit Oosterhout, op een funkbeat: het Nederlands blijkt prima te rijmen.</aside>
+  <p>Na 2000 groeide de Nederhop uit tot een van de belangrijkste genres in het land. De Jeugd van Tegenwoordig uit Amsterdam maakte van de taal een speeltuin, met verzonnen woorden, absurde grappen en elektronische beats; hun eerste hit <em>Watskeburt?!</em> kwam uit in 2005. In Zwolle ontstond rond de groep Opgezwolle een eigen scene. Daar kwam ook Typhoon vandaan, de artiestennaam van Glenn de Randamie. Op <em>Hemel valt</em> (2014) combineert hij hiphop met soul en een blazerssectie. In de Nederhop tellen de klank, het rijm en de straattaal net zo zwaar als de betekenis. In die straattaal klinken woorden mee uit het Sranantongo, het Papiamento en andere talen die in de Nederlandse steden worden gesproken.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/jyieMvuEw1JnA_uNoGCctKR8voZ_kQAsIV_lRYPapW39iwht-NdtW-TU1l0oAZuh_SsvetYCw7rzzeFumF0rB_uMsraYtkJSg1jQKDub" alt=""><div><span class="who">Typhoon</span><br>Hemel valt (2014)</div></div>Glenn de Randamie uit Zwolle: hiphop, soul en een blazerssectie.</aside>
+  <p>In dezelfde jaren ontwikkelde Nederland nog een heel ander exportproduct: elektronische dansmuziek. In Rotterdam ontstond begin jaren negentig gabber, en rond 2000 draaiden Nederlandse trance-dj's over de hele wereld. Dat verhaal staat in Mixtape 8. Opvallend is dat het grootste internationale succes van de Nederlandse popmuziek in die jaren muziek zonder Nederlandse tekst was, en vaak zonder tekst helemaal.</p>
+
+  <div class="head"><p class="label">Track 02 · 1998-2020</p><h3>Het Nederlandstalige lied leeft</h3></div>
+  <p>Naast hiphop en rock groeide in de jaren negentig het Nederlandstalige lied voor een groot publiek. Marco Borsato had vanaf 1994 de ene grote hit na de andere met Nederlandstalige ballads, en Guus Meeuwis vulde later stadions met meezingers. Het waren liedjes over liefde en gemis, met een groot refrein en een heldere productie.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/dJnpwDMLetyyBFn8nsQFZJ1GzhhI808KICC2_puX4ieCBWG7OHuD4m9-vMEKY0Gcp8QcSVxXBU4SfqT4SR164saf0wcRe4YOZevg9A" alt=""><div><span class="who">Acda en de Munnik</span><br>Het regent zonnestralen (1998)</div></div>Kleinkunst en pop: de lijn van Boudewijn de Groot loopt hier door.</aside>
+  <p>Acda en de Munnik, het duo van Thomas Acda en Paul de Munnik, kwam uit het theater. Ze speelden in schouwburgen, met gitaren en piano, en schreven persoonlijke liedjes met een tekst die je moest kunnen volgen. <em>Het regent zonnestralen</em> (1998) is daar een voorbeeld van. Hier loopt de lijn door die begon bij de kleinkunst en Boudewijn de Groot: zingbare, persoonlijke liedjes, met een gitaar, in eigen taal.</p>
+  <p>BLØF, in 1992 opgericht in Vlissingen, maakte popliedjes vanuit Zeeland. In 2017 nam de band samen met de Vlaamse zangeres Geike Arnaert, eerder zangeres van Hooverphonic, <em>Zoutelande</em> op. Het is een rustig duet over een strand in Zeeland. Het werd een van de grootste hits ooit in Nederland en jarenlang een van de meest gestreamde Nederlandstalige nummers. BLØF organiseert in Zeeland ook een eigen festival, Concert at SEA.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/2m-D5V8bNXkWXQcWTsBCeD1Qc0LEm6uGiu5Mdu1dZG0qtZPkje-aTsrMmrJ1iKDl0gg0NEBTQNXOAET5vH8XqnScnDvjpbHyB-HjHrwD" alt=""><div><span class="who">BLØF ft. Geike</span><br>Zoutelande (2017)</div></div>Een duet met de Vlaamse Geike Arnaert over een strand in Zeeland: jarenlang een van de meest gestreamde Nederlandstalige nummers.</aside>
+  <p>Rond 2020 kwam een nieuwe generatie op, die op een andere manier haar publiek vond. Snelle en Froukje werden bekend via TikTok en YouTube. Ze hadden geen platenmaatschappij nodig als poortwachter. Wie vroeger op de radio wilde komen, moest langs platenbazen en dj's; nu kon een nummer via sociale media en streaming direct een groot publiek bereiken. Snelle begon als rapper en werd popzanger. <em>Smoorverliefd</em> (2020) is een eenvoudig liefdesliedje dat via sociale media groot werd.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/PMxjhYKp1Vl6w2BBlrfs22ebBHy5maLhHn_7BkIrxUUI_x446jGREQsBksst1xp0BruoegyrcE4qf_dyg0K4OM94ZOvfKe6rx_FjEM4" alt=""><div><span class="who">Snelle</span><br>Smoorverliefd (2020)</div></div>Van rapper naar popzanger: een liefdesliedje dat via sociale media groot werd.</aside>
+  <p>Froukje maakt elektropop. <em>Groter dan ik</em> (2020) gaat over klimaatangst: over het gevoel dat de problemen van de wereld te groot zijn voor één mens. Het is een protestlied voor een nieuwe generatie. Leg het naast <em>Welterusten mijnheer de president</em>, en je hoort hoe de Nederlandstalige popmuziek in vijftig jaar rond is gegaan. Boudewijn de Groot zong in 1966 over de oorlog in Vietnam, Froukje zingt over de toekomst van de planeet. Beiden doen dat in eigen taal, voor een publiek van hun eigen leeftijd.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/vpkwLFfS7OlXFdP9ShgwlPBI2LkpGlZ5dD2Sgg-1Jj0P-Ca_BvftH1tnOZ5vx0E577lWMugQ1CfZgauUud2HU8IiealLD90YlAT6Ukw" alt=""><div><span class="who">Froukje</span><br>Groter dan ik (2020)</div></div>Elektropop met een tekst over klimaatangst: een protestlied voor een nieuwe generatie.</aside>
+  <p>In de jaren 2010 werd het Nederlands opnieuw de taal van de hitlijsten, net als begin jaren tachtig. Daar zijn verschillende verklaringen voor. Streaming liet zien wat mensen echt luisterden, en dat bleek vaak Nederlandstalig. De Nederhop had een generatie laten horen dat de eigen taal modern kon klinken. Sociale media maakten het makkelijk om zonder radio of platenmaatschappij een publiek te vinden. Festivals als Concert at SEA lieten zien hoe groot dat publiek was. En misschien speelde ook de behoefte aan muziek die dichtbij komt: liedjes over je eigen strand, je eigen stad, je eigen angst.</p>
+  <p>Er is nog veel meer Nederlandse popmuziek dan hier past: het levenslied en de smartlap, Nederlandse metal van bands als Within Temptation en Epica, Surinaamse en Antilliaanse muziek, liedjes in het Fries en het Limburgs. Al die muziek laat zien dat 'Nederlands' meer betekent dan één taal. De Tielman Brothers zongen Engels en maakten de eerste Nederlandse rock-'n-roll. Shocking Blue stond bovenaan in Amerika zonder één Nederlands woord. Normaal zong in dialect, Osdorp Posse in plat Amsterdams. Popmuziek klinkt Nederlands door de taal, door de muzikanten, en door iets wat moeilijker te benoemen is: het onderwerp, de humor, de houding en het publiek dat zichzelf erin herkent.</p>
+</section>
+
+<section class="back">
+  <h4 class="backhead">Begrippen</h4>
+  <dl class="terms">
+    <div><dt>Indorock</dt><dd>Rock-'n-roll van Indische Nederlanders, jaren 50 en 60</dd></div>
+    <div><dt>Kleinkunst</dt><dd>Nederlandstalig lied met nadruk op tekst, uit het cabaret</dd></div>
+    <div><dt>Nederbeat</dt><dd>Nederlandse beatmuziek uit de jaren 60, meestal in het Engels</dd></div>
+    <div><dt>Boerenrock</dt><dd>Rock in dialect, zoals Normaal</dd></div>
+    <div><dt>Nederpop</dt><dd>Nederlandse popmuziek, vooral in eigen taal</dd></div>
+    <div><dt>Nederhop</dt><dd>Nederlandstalige hiphop</dd></div>
+    <div><dt>Ska</dt><dd>Jamaicaanse muziek met accenten op de offbeat</dd></div>
+    <div><dt>Poppodium</dt><dd>Zaal voor popconcerten, zoals Paradiso</dd></div>
+  </dl>
+
+  <h4 class="backhead">Verder luisteren en kijken</h4>
+  <div class="links">
+    <div class="link-card"><div class="qr" data-url="https://open.spotify.com/playlist/2suVQVE1BGstOL2qCrvkmH"></div>
+      <div><span class="tag">SPOTIFY · PLAYLIST</span><p>Alle nummers uit dit hoofdstuk, in de volgorde van de tekst. Scan de code met je telefoon.</p><p class="url">open.spotify.com/playlist/2suVQVE1BGstOL2qCrvkmH</p></div></div>
+    <div class="link-card lesson"><div><span class="tag">LESSONUP · LES</span><p><strong>Mixtape 11: Nederpop</strong></p><p>De les bij dit hoofdstuk, met beeld en fragmenten.</p></div></div>
+  </div>
+
+  <footer class="colofon">
+    <p>Foto's via Wikimedia Commons: Majalah AKTUIL Edisi 11 Tahun 1968 (publiek domein), Marjolijn Hoogervorst (publiek domein), Jim Summaria (CC BY-SA 3.0), User:Eve (CC BY-SA 3.0), NPO 3FM (CC BY 3.0). Platenhoezen: Apple Music.</p>
+    <p>School of Rock · De geschiedenis van popmuziek · ArtEZ University of the Arts</p>
+  </footer>
+</section>
+<nav class="pager" aria-label="Andere mixtapes"><a href="10.html"><small>← Mixtape 10</small><b>Vrouwen in de popmuziek</b></a><a class="next" href="12.html"><small>Mixtape 12 →</small><b>De hitfabriek</b></a></nav>
+
+</div><footer class="sitefoot"><div class="wrap"><p>School of Rock · De geschiedenis van popmuziek in mixtapes · Jan-Wolter Smit · ArtEZ University of the Arts</p><p><a href="../pdf/school-of-rock-reader.pdf">Download de reader (pdf)</a></p></div></footer><script src="../assets/player.js"></script><script src="../assets/chapter.js"></script><script>document.querySelectorAll('.qr[data-url]').forEach(function(el){if(typeof QRCode==='undefined'){return;}new QRCode(el,{text:el.dataset.url,width:256,height:256,colorDark:'#1C1B19',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.M});});</script></body></html>

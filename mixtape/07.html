@@ -1,0 +1,400 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content=".."><title>Mixtape 7 · De jaren 80 · School of Rock</title><link rel="icon" href="../assets/cassette.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="../assets/site.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><style>
+  /* Eén thema met opzet: een boek in de huisstijl van de lessen. */
+  :root {
+    color-scheme: light;
+    --page: #FFFFFF;
+    --ink: #1C1B19;
+    --ink-soft: #55524C;
+    --line: #DDD8CE;
+    --red: #D63A31;
+    --yellow: #F2D500;
+    --display: "Oswald", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "Space Mono", "Courier New", monospace;
+    --hand: "Caveat", "Comic Sans MS", cursive;
+    --text: 34rem;
+    --margin: 13rem;
+    --gap: 2.25rem;
+  }
+  html { background: var(--page); }
+  body { background: var(--page); color: var(--ink); font: 400 16px/1.65 var(--body); padding-inline: 16px; padding-block: 0 64px; }
+  .book { max-width: calc(var(--text) + var(--gap) + var(--margin)); margin: 0 auto; }
+  p { margin: 0; }
+  em { font-style: italic; }
+  a { color: inherit; text-decoration-color: var(--red); text-underline-offset: 2px; }
+
+  /* Hoofdstukopening en delen */
+  .opener { position: relative; overflow: hidden; color: #FFFFFF; box-sizing: border-box; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; }
+  .opener .wash { position: absolute; inset: 0; background-color: rgba(214,58,49,.62); }
+  .opener .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 55%; background-color: rgba(28,27,25,.38); }
+  .opener .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background: var(--yellow); }
+  .opener h1, .opener h2, .opener .sub, .part .kicker { position: relative; }
+  .opener .kicker { font: 12px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--yellow); }
+  .opener h1, .opener h2 { font-family: var(--display); font-weight: 600; line-height: 1.02; margin: 0; text-wrap: balance; }
+  .opener .sub { max-width: 36ch; line-height: 1.4; }
+  .cover { margin-inline: -16px; min-height: 420px; padding: 32px 28px 36px 44px; }
+  .cover h1 { font-size: clamp(44px, 9vw, 72px); max-width: 12ch; }
+  .cover .sub { font-size: 18px; }
+  .cover .kicker { position: absolute; top: 26px; left: 44px; }
+  .cover .cassette { position: absolute; top: 16px; right: 18px; width: 88px; height: auto; }
+  .part { margin: 64px calc(-1 * (var(--margin) + var(--gap))) 28px 0; min-height: 230px; padding: 24px 24px 24px 40px; clear: both; }
+  .part h2 { font-size: clamp(30px, 6vw, 44px); }
+  .part .sub { font-size: 15px; }
+  .part .letter { position: absolute; right: 18px; bottom: -12px; font: 600 150px/1 var(--display); color: var(--yellow); }
+
+  /* Tekstvak met kantlijn */
+  .flow { padding-right: calc(var(--margin) + var(--gap)); }
+  .flow > p { max-width: var(--text); }
+  .flow > p { text-indent: 1.4em; }
+  .flow > .intro, .flow > .head + p, .flow > .head + aside + p, .flow > .head + figure + p { text-indent: 0; }
+  .head { margin: 40px 0 10px; max-width: var(--text); }
+  .head .label { font: 11px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--red); margin: 0 0 4px; }
+  .head h3 { font: 600 22px/1.15 var(--display); margin: 0; text-wrap: balance; }
+  .intro { font-size: 18px; line-height: 1.6; }
+
+  /* Kantlijn: luistertips, beeld, citaten, QR */
+  .side-note, .side-fig, .side-quote { float: right; clear: right; width: var(--margin); margin: 6px calc(-1 * (var(--margin) + var(--gap))) 18px 0; }
+  .side-note { border-left: 2px solid var(--yellow); padding-left: 10px; font-size: 12.5px; line-height: 1.4; color: var(--ink-soft); }
+  .side-note .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .side-note .rec { display: grid; grid-template-columns: 40px 1fr; gap: 8px; align-items: center; margin-bottom: 6px; }
+  .side-note .rec img { width: 40px; height: 40px; border-radius: 2px; }
+  .side-note .who { color: var(--ink); font-weight: 600; }
+  .side-note .qr { width: 96px; height: 96px; margin: 4px 0 6px; }
+  .side-note .qr img, .side-note .qr canvas { width: 100% !important; height: 100% !important; }
+  .side-fig img { display: block; width: 100%; border: 4px solid #FFFFFF; box-shadow: 0 3px 12px rgba(0,0,0,.18); transform: rotate(2deg); }
+  .side-fig figcaption { font: 600 20px/1.05 var(--hand); color: var(--red); text-align: center; margin-top: 8px; }
+  .side-quote { font: 500 17px/1.25 var(--display); color: var(--red); border-top: 2px solid var(--red); padding-top: 8px; }
+  .side-quote span { display: block; font: 11px/1.4 var(--mono); color: var(--ink-soft); margin-top: 6px; }
+
+  /* Achterin */
+  .back { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 8px; }
+  h4.backhead { font: 600 22px/1.15 var(--display); margin: 28px 0 0; }
+  .terms { columns: 2 240px; column-gap: 32px; margin: 12px 0 0; }
+  .terms div { break-inside: avoid; margin: 0 0 10px; }
+  .terms dt { font-weight: 600; }
+  .terms dd { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.45; }
+  .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px 32px; margin-top: 14px; }
+  .link-card { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: start; }
+  .link-card .qr { width: 112px; height: 112px; }
+  .link-card.lesson { grid-template-columns: 1fr; }
+  .link-card .qr img, .link-card .qr canvas { width: 100% !important; height: 100% !important; }
+  .link-card .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .link-card p { font-size: 14px; line-height: 1.45; }
+  .link-card .url { font: 11px/1.4 var(--mono); color: var(--ink-soft); word-break: break-all; margin-top: 6px; }
+  .colofon { margin-top: 36px; font-size: 12px; line-height: 1.5; color: var(--ink-soft); display: grid; gap: 6px; max-width: var(--text); }
+
+  @media screen and (max-width: 760px) {
+    .part { margin-right: 0; }
+    .flow { padding-right: 0; }
+    .side-note, .side-fig, .side-quote { float: none; width: auto; margin: 16px 0; }
+    .side-fig { max-width: 220px; }
+  }
+
+  /* Boek op A4 */
+  @page { size: A4; margin: 20mm 18mm 22mm 20mm; }
+  @page cover { margin: 0; }
+  @media print {
+    html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root { --text: 112mm; --margin: 44mm; --gap: 8mm; }
+    body { padding: 0; font-size: 9.6pt; line-height: 1.55; }
+    .book { max-width: none; }
+    p { orphans: 3; widows: 3; }
+    .cover { page: cover; margin: 0; height: 296mm; padding: 0 22mm 32mm 26mm; break-after: page; }
+    .cover .kicker { top: 18mm; left: 26mm; font-size: 8pt; }
+    .cover .cassette { top: 14mm; right: 16mm; width: 28mm; }
+    .cover h1 { font-size: 56pt; }
+    .cover .sub { font-size: 14pt; }
+    .opener .bar { width: 5mm; }
+    .part { margin: 0 calc(-1 * (var(--margin) + var(--gap))) 6mm 0; height: 70mm; min-height: 0; padding: 0 50mm 8mm 12mm; break-before: page; break-after: avoid; }
+    .part .kicker { font-size: 7.5pt; }
+    .part h2 { font-size: 26pt; }
+    .part .sub { font-size: 10pt; }
+    .part .letter { font-size: 100pt; right: 8mm; bottom: -5mm; }
+    .first-part { break-before: auto; margin-top: 10mm; }
+    .head { margin: 8mm 0 2.5mm; break-after: avoid; break-inside: avoid; }
+    .head .label { font-size: 6.8pt; }
+    .head h3 { font-size: 14pt; }
+    .intro { font-size: 11pt; }
+    .side-note { font-size: 7.6pt; padding-left: 3mm; margin-top: 1mm; margin-bottom: 5mm; break-inside: avoid; }
+    .side-note .tag { font-size: 6.2pt; margin-bottom: 2mm; }
+    .side-note .rec { grid-template-columns: 11mm 1fr; gap: 2.5mm; margin-bottom: 1.5mm; }
+    .side-note .rec img { width: 11mm; height: 11mm; }
+    .side-note .qr { width: 24mm; height: 24mm; }
+    .side-fig { margin-bottom: 5mm; break-inside: avoid; }
+    .side-fig figcaption { font-size: 13pt; }
+    .side-quote { font-size: 11pt; break-inside: avoid; }
+    .side-quote span { font-size: 6.5pt; }
+    .back { break-before: page; margin-top: 0; }
+    h4.backhead { font-size: 14pt; margin-top: 8mm; }
+    .terms { columns: 2; column-gap: 10mm; }
+    .terms div { margin-bottom: 2.5mm; }
+    .terms dd { font-size: 8.6pt; }
+    .terms div { break-inside: avoid; }
+    .links { grid-template-columns: 1fr 1fr; gap: 8mm; break-inside: avoid; }
+    .link-card { grid-template-columns: 30mm 1fr; gap: 5mm; }
+    .link-card .qr { width: 30mm; height: 30mm; }
+    .link-card p { font-size: 8.8pt; }
+    .link-card .url { font-size: 6.8pt; }
+    .colofon { font-size: 7.5pt; margin-top: 10mm; }
+  }
+  .cover .cover-text { position: absolute; left: 44px; right: 28px; bottom: 36px; display: grid; gap: 10px; }
+  @media print { .cover { display: block !important; height: 294mm !important; } .cover .cover-text { left: 26mm; right: 22mm; bottom: 32mm; gap: 4mm; } }</style><style>
+  body.chapter { padding-top: 0; }
+  body.chapter .sitenav { margin-inline: -16px; }
+  .deck { margin: 0 -16px; background: #1C1B19; color: #fff; padding: 18px 20px 20px; display: grid; gap: 14px; }
+  .deck-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .deck .lbl { font: 11px/1.4 "Space Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: #F2D500; min-width: 7.5em; }
+  .deck .lesson { font: 500 16px/1.3 "Oswald", sans-serif; }
+  .deck .btn { padding: 10px 14px; font-size: 14px; }
+  .deck .btn.ghost { color: #fff; border-color: #55524C; }
+  .deck-embed { margin: 0; }
+  .deck-embed iframe { border-radius: 8px; display: block; }
+  .deck-genres { display: flex; flex-wrap: wrap; gap: 6px; }
+  .gchip { --c: #999; display: inline-flex; align-items: center; gap: 7px; text-decoration: none; font: 13px/1 "Inter", sans-serif; padding: 7px 10px; border-radius: 999px; background: #2A2825; color: #fff; }
+  .gchip i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+  .gchip span { color: #9C978D; font-family: "Space Mono", monospace; font-size: 11px; }
+  .gchip:hover { background: #3A3833; }
+  .note-play { display: flex; align-items: center; gap: 8px; margin: 2px 0 8px; font: 11px/1.2 "Space Mono", monospace; letter-spacing: .04em; text-transform: uppercase; color: #D63A31; }
+  .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 48px 0 0; }
+  .pager a { display: grid; gap: 4px; padding: 16px; border: 1px solid #DDD8CE; border-radius: 4px; text-decoration: none; }
+  .pager a:hover { border-color: #1C1B19; }
+  .pager .next { text-align: right; }
+  .pager small { font: 11px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #D63A31; }
+  .pager b { font: 600 18px/1.15 "Oswald", sans-serif; }
+  @media print { .sitenav, .deck, .pager, .sitefoot { display: none !important; } }
+</style></head><body class="chapter" data-mixtape="7"><header class="sitenav"><a class="brand" href="../index.html"><img src="../assets/cassette.png" alt=""><span>School of Rock</span></a><nav aria-label="Hoofdmenu"><a href="../index.html#mixtapes" aria-current="page">Mixtapes</a><a href="../kaart.html">Genrekaart</a><a href="../begrippen.html">Begrippen</a><a href="../pdf/school-of-rock-reader.pdf">Reader (pdf)</a></nav></header><div class="book">
+
+<header class="opener cover" style="background-image:url('https://lh3.googleusercontent.com/_wo8OaLWH1ukPRdQ9QUR9vn1e0qIWRfZDr7o84iHsNuLJZdOnTCK_vs55KT1cjKgrD3DSfKCZvPbSGfxybDrSWwTabI1GcsHPxhyyes')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+  <p class="kicker">School of Rock · Mixtape 7</p>
+  <img class="cassette" src="../assets/cassette.png" alt="School of Rock-cassette">
+  <div class="cover-text"><h1>De jaren 80</h1>
+  <p class="sub">Synthesizers, MTV, megasterren en de Koude Oorlog: het decennium dat de popmuziek van nu vormde.</p></div>
+</header>
+<div class="deck" aria-label="Bij dit hoofdstuk">
+  <div class="deck-row"><span class="lbl">Luisteren</span><a class="btn solid deck-spotify" href="https://open.spotify.com/playlist/0nI0aGOy19mXram99stXoI" data-embed="https://open.spotify.com/embed/playlist/=generator" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Spotify-playlist</a><a class="btn ghost" href="https://open.spotify.com/playlist/0nI0aGOy19mXram99stXoI" target="_blank" rel="noopener">Open in Spotify</a><a class="btn ghost" href="../pdf/mixtape-07.pdf" download>Download pdf</a></div>
+  <div class="deck-embed" hidden></div>
+  <div class="deck-row"><span class="lbl">Les</span><span class="lesson">LessonUp · Mixtape 7: De jaren 80</span></div>
+  <div class="deck-row"><span class="lbl">Op de kaart</span><div class="deck-genres"></div></div>
+</div>
+
+<section class="flow">
+  <aside class="side-note"><span class="tag">LUISTER MEE</span><div class="qr" data-url="https://open.spotify.com/playlist/0nI0aGOy19mXram99stXoI"></div>Alle nummers uit dit hoofdstuk staan op volgorde in de Spotify-playlist bij Mixtape 7.</aside>
+  <p class="intro">Wie vandaag de radio aanzet, hoort de jaren tachtig overal. De diepe bassdrum van een Roland TR-808 zit onder bijna elk trapnummer. The Weeknd scoorde in 2019 een wereldhit met <em>Blinding Lights</em>, dat klinkt alsof het in 1984 is opgenomen. Series en films gebruiken hits uit dat decennium als soundtrack, en op TikTok worden nummers van veertig jaar oud opnieuw populair.</p>
+  <p>Het decennium zelf was een tijd van tegenstellingen. Er was meer geld dan ooit in de muziekindustrie, en tegelijk angst voor een kernoorlog. Nieuwe apparaten maakten het mogelijk om met een paar machines een complete plaat te maken, en een nieuwe televisiezender bepaalde welke artiesten beroemd werden. Uit punk groeide new wave, uit disco groeiden house en techno, en in New York ontstond hiphop. Steeds komt dezelfde vraag terug: <strong>waarom klinkt de popmuziek van nu nog steeds naar de jaren 80?</strong></p>
+
+  <!-- SIDE A -->
+  <header class="opener part first-part" style="background-image:url('https://lh3.googleusercontent.com/_wo8OaLWH1ukPRdQ9QUR9vn1e0qIWRfZDr7o84iHsNuLJZdOnTCK_vs55KT1cjKgrD3DSfKCZvPbSGfxybDrSWwTabI1GcsHPxhyyes')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side A · 1980-1985</p>
+    <h2>Tijdgeest: één riff, vijf versies</h2>
+    <p class="sub">Hoe een Noorse kauwgomdeun pas een wereldhit werd toen productie en videoclip klopten.</p>
+    <span class="letter" aria-hidden="true">A</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1980-1985 · Oslo, Londen</p><h3>Take On Me: vijf jaar werk aan één riff</h3></div>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">Bridges</span><br>Miss Eerie ("The Juicyfruit Song", ca. 1980)</div></div>Het riff bestaat al, als een deuntje dat klinkt als een kauwgomreclame.</aside>
+  <p>De bekendste synthesizerriff van de jaren tachtig bestond al voordat de band bestond die er beroemd mee werd. Rond 1980 speelden Pål Waaktaar en Magne Furuholmen in de Noorse band Bridges. In een van hun nummers, <em>Miss Eerie</em>, ook wel "The Juicyfruit Song" genoemd, zit het korte, springerige motief al. Het klinkt nog als een reclamedeuntje: vrolijk, licht en zonder veel richting.</p>
+  <p>Waaktaar en Furuholmen gingen verder met zanger Morten Harket, en zo ontstond a-ha. In het najaar van 1982 namen ze een demo op met de titel <em>Lesson One</em>. De tekst is anders, de titel is anders, maar het riff is hetzelfde. Harket zingt in die versie al de hoge noten die later zijn handelsmerk werden. Daarna kreeg het nummer de titel <em>Take On Me</em>, eerst nog als demo. De titel stond vast, maar over het arrangement waren nog veel keuzes te maken.</p>
+  <p>In 1984 verscheen de eerste officiële single, geproduceerd door Tony Mansfield. Die versie flopte. In Noorwegen kwam ze tot nummer 3, in de rest van de wereld gebeurde er niets. De platenmaatschappij gaf het nummer toch een tweede kans. In 1985 werd het opnieuw opgenomen met producer Alan Tarney. Wie de versies van 1984 en 1985 na elkaar beluistert, hoort de verschillen in tempo, in de klank van de drums en de synthesizers en in de manier waarop de zang in de mix ligt. De versie van 1985 is strakker en helderder, met meer ruimte rond de stem.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">a-ha</span><br>Take On Me (single, 1984 en 1985)</div></div>Luister de twee singles na elkaar. Let op tempo, drumklank, synthesizerklank en de plek van de zang in de mix.</aside>
+  <p>Het belangrijkste verschil zat echter niet in de muziek, maar in het beeld. Regisseur Steve Barron maakte een videoclip waarin een meisje in een café een stripverhaal leest en door de zanger in de getekende wereld wordt getrokken. Daarvoor gebruikte hij rotoscopie: tekenen over gefilmde beelden, frame voor frame. Dat kostte maanden werk. De clip werd veel gedraaid op MTV, en in oktober 1985 stond <em>Take On Me</em> op nummer 1 in de Verenigde Staten.</p>
+  <p>Het verhaal van dit ene nummer laat zien wat er in de jaren tachtig veranderde. Een goed lied was niet meer genoeg. De productie moest kloppen, en zonder videoclip had een nummer weinig kans. De vraag wat een hit maakt, het lied, de productie of de clip, komt in de rest van dit hoofdstuk steeds terug.</p>
+
+  <!-- SIDE B -->
+  <header class="opener part" style="background-image:url('https://lh3.googleusercontent.com/u1bGmLpE6t-5wm77Mzy22gNHsLmG9fIBbpJdSKk_YBikGefH1JmrHGeAja93txrO78SBX0UOllif86aL3xlSx4j69hz37g0HpWjYD6Ww')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side B · 1979-1990</p>
+    <h2>Geld, MTV en megasterren</h2>
+    <p class="sub">Kapitalisme, yuppies, nieuwe techniek en muziek als big business.</p>
+    <span class="letter" aria-hidden="true">B</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1980-1990</p><h3>De tijdgeest in vijf beelden</h3></div>
+  <aside class="side-quote">"Greed, for lack of a better word, is good. Greed is right. Greed works."<span>Gordon Gekko in de film Wall Street (1987)</span></aside>
+  <p>In 1979 werd Margaret Thatcher premier van het Verenigd Koninkrijk, in 1981 werd Ronald Reagan president van de Verenigde Staten. Beiden geloofden in een kleine overheid en een vrije markt. Bedrijven werden geprivatiseerd, belastingen voor de rijken gingen omlaag en vakbonden verloren macht. Wie slaagde, mocht dat laten zien. In de film <em>Wall Street</em> (1987) zegt de beurshandelaar Gordon Gekko dat hebzucht goed is. Hij was bedoeld als slechterik, maar veel kijkers zagen hem als voorbeeld.</p>
+  <p>Het woord <em>yuppie</em> (young urban professional) werd het symbool van die tijd: jonge mensen met een goedbetaalde baan in de stad, een dure auto en kleding van bekende merken. Status en materialisme waren geen schande meer. Dat zie je ook terug in de popmuziek: glanzende producties, dure videoclips en sterren die zich als merk presenteren.</p>
+  <p>Tegelijk was de Koude Oorlog tussen de Verenigde Staten en de Sovjet-Unie in de eerste helft van het decennium weer volop aanwezig. Beide supermachten plaatsten nieuwe kernraketten in Europa, en veel mensen waren bang voor een kernoorlog. Die angst klinkt door in tientallen popnummers, zoals je op side D zult zien. Aan het eind van het decennium veranderde alles: in november 1989 viel de Berlijnse Muur. De Verenigde Staten bleven over als enige supermacht, en de Amerikaanse cultuur, van films tot fastfood en popmuziek, was overal ter wereld te vinden.</p>
+  <p>Het vijfde beeld van het decennium is donkerder. Begin jaren tachtig werd aids voor het eerst beschreven. De ziekte trof vooral homoseksuele mannen, en het leidde tot angst, stigma en ook tot activisme. De muziekwereld werd hard geraakt. De zanger Klaus Nomi overleed in 1983 aan de gevolgen van aids, Freddie Mercury van Queen in 1991. Popmuziek werd ook een plek waar de ervaring van homoseksuele jongeren hoorbaar werd, bijvoorbeeld in <em>Smalltown Boy</em> van Bronski Beat (1984) en <em>It's a Sin</em> van de Pet Shop Boys (1987). Beide nummers komen terug op side C.</p>
+
+  <div class="head"><p class="label">Track 02 · 1979-1989</p><h3>Technische ontwikkelingen</h3></div>
+  <p>Geen decennium in de popgeschiedenis werd zo sterk bepaald door nieuwe apparaten als de jaren tachtig. Veel van die apparaten waren ineens betaalbaar voor gewone muzikanten, en dat veranderde de manier waarop muziek gemaakt werd.</p>
+  <p>Het begint bij het ritme. In 1980 bracht Roland de TR-808 uit, een drumcomputer die klonk als geen echt drumstel. Twee jaar later volgde de LinnDrum, die opnames van echte drums gebruikte. De LinnDrum is te horen op talloze hits uit die jaren, van Prince tot Michael Jackson. Drumcomputers maakten een drummer niet overbodig, maar ze veranderden wel wat een popnummer was: een ritme dat nooit versnelt of vertraagt.</p>
+  <p>In 1983 kwam de Yamaha DX7 op de markt. Het was de eerste digitale synthesizer die op grote schaal werd verkocht. De DX7 werkte met FM-synthese en klonk helderder en harder dan de analoge synthesizers van daarvoor. Veel muzikanten gebruikten gewoon de klanken die er bij levering al in zaten. Twee van die fabrieksklanken, E.PIANO 1 en BASS 1, zijn op honderden hits te horen. Wie eenmaal weet hoe ze klinken, herkent ze overal. Daarnaast werd de Roland Juno-106 een populaire, betaalbare analoge synthesizer.</p>
+  <p>Ook in 1983 werd MIDI ingevoerd: een standaard waarmee synthesizers, drumcomputers en computers met elkaar kunnen communiceren. Eén toetsenbord kon nu meerdere apparaten tegelijk aansturen, en een computer kon een heel arrangement onthouden en afspelen. Personal computers werden in dezelfde jaren gewone apparaten: de IBM PC kwam in 1981, de Apple Macintosh in 1984. De studio werd langzaam een computer.</p>
+  <p>Het vierde onderdeel was sampling. Met een sampler kun je een geluid opnemen en daarna op elke toonhoogte afspelen vanaf een toetsenbord. De Fairlight CMI uit Australië was duur en werd vooral door rijke producers en sterren gebruikt. De E-mu Emulator was kleiner en goedkoper. Een stoot van een heel orkest, een hond die blaft of een losse kreet kon nu een instrument worden. Over deze machines lees je meer in Mixtape 8 (Elektronische muziek) en Mixtape 9 (Het instrument).</p>
+  <p>Ook de manier van luisteren veranderde. Met de Sony Walkman (1979) nam je je muziek mee op straat, met een koptelefoon op. In 1982 kwam de cd, die geen ruis en geen krassen kende. En dan was er kabeltelevisie: in plaats van een paar zenders kregen kijkers er tientallen. Een daarvan zou de popmuziek ingrijpend veranderen.</p>
+
+  <div class="head"><p class="label">Track 03 · 1981 · New York</p><h3>MTV: I want my MTV</h3></div>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/uK9fzGrhBxvKGrsP0y08Ofneh-TYNc8WDUF08gayQzF8alBG8aw0IIPhVDQ_VNcHAbN4ybONkD_EAGZ20SB-EovRTinPWJy4v9C3DMn5" alt=""><div><span class="who">The Buggles</span><br>Video Killed the Radio Star (1979)</div></div>De eerste clip die MTV uitzond, op 1 augustus 1981.</aside>
+  <p>Op 1 augustus 1981 begon in de Verenigde Staten Music Television, kortweg MTV. Het was een kabelzender die de hele dag videoclips uitzond, gepresenteerd door een vj, een videojockey. De eerste clip was <em>Video Killed the Radio Star</em> van The Buggles uit 1979. Die keuze was een statement: het nummer gaat over een nieuw medium dat het oude verdringt.</p>
+  <p>Videoclips bestonden al voor 1981, maar er was geen zender die ze de hele dag liet zien. MTV veranderde dat, en daarmee veranderde ook wat een popster moest kunnen. Een artiest moest er vanaf nu ook goed uitzien en zich voor de camera kunnen presenteren. Britse bands met opvallende kleding en dure clips, zoals Duran Duran, hadden daar voordeel van. De zender maakte reclame met de slogan "I want my MTV". Dire Straits zette die zin in 1985 in het nummer <em>Money for Nothing</em>, gezongen door Sting.</p>
+  <p>MTV had in de eerste jaren een duidelijk probleem: de zender draaide bijna alleen witte rockmuziek. Zwarte artiesten moesten ervoor vechten om op de zender te komen. De doorbraak kwam in 1983, toen MTV de clips van Michael Jackson ging draaien, eerst <em>Billie Jean</em> en daarna <em>Beat It</em> en <em>Thriller</em>. Het succes van die clips maakte duidelijk dat de zender niet om zwarte muziek heen kon. Het verhaal van zwarte muziek en de manier waarop de industrie ermee omging, lees je ook in Mixtape 6 (Fear of a Black Planet).</p>
+
+  <div class="head"><p class="label">Track 04 · 1980-1990</p><h3>Muziek wordt big business</h3></div>
+  <p>In de jaren tachtig werd verkoop de maat van alles. Gouden en platina platen, onderscheidingen voor een bepaald aantal verkochte exemplaren, werden een manier om succes te meten en te laten zien. Platenmaatschappijen werden grote bedrijven die wereldwijd opereerden, en muziek moest in zoveel mogelijk landen tegelijk verkocht kunnen worden. Die globalisering beïnvloedde ook de muziek zelf: Engelstalige pop met een sterk beeld werkte overal.</p>
+  <p>Muziek werd bovendien marketing. Soundtracks van films verkochten miljoenen platen, en een hit uit een film was reclame voor de film en andersom. Videoclips, reclamespots, mode en gesponsorde tournees hoorden bij hetzelfde pakket. Het album <em>Thriller</em> van Michael Jackson (1982) werd het best verkochte album aller tijden. Zeven van de negen nummers werden als single uitgebracht.</p>
+  <p>Hoe ver dat ging, laat een reclame voor Pepsi uit 1984 zien. Michael Jackson zong daarin een aangepaste versie van <em>Billie Jean</em>. Bij de opnames ging er iets mis met het vuurwerk, en zijn haar vloog in brand. Het incident haalde het wereldnieuws, maar de boodschap van het filmpje was duidelijk: de popster was een merk geworden, en dat merk kon worden ingezet om frisdrank te verkopen.</p>
+
+  <div class="head"><p class="label">Track 05 · 1984-1988 · Londen, Philadelphia</p><h3>Muziek als politiek wapen</h3></div>
+  <p>Hetzelfde systeem van sterren, televisie en wereldwijde verkoop kon ook voor een goed doel worden ingezet. In 1984 zag de Ierse muzikant Bob Geldof op televisie beelden van de hongersnood in Ethiopië. Samen met Midge Ure van Ultravox schreef hij <em>Do They Know It's Christmas?</em>, dat werd opgenomen door een groep Britse en Ierse sterren onder de naam Band Aid. Het werd de best verkochte single van de jaren tachtig in het Verenigd Koninkrijk.</p>
+  <p>Een half jaar later volgde Live Aid. Op 13 juli 1985 werden in het Wembley Stadium in Londen en het JFK Stadium in Philadelphia tegelijk concerten gegeven, die wereldwijd op televisie te zien waren. Volgens de organisatie keken er 1,5 miljard mensen. Het optreden van Queen in Wembley geldt als een van de beste liveoptredens uit de rockgeschiedenis.</p>
+  <p>Er kwam ook kritiek. Band Aid bestond uit witte Britse sterren die over Afrika zongen, en de tekst gaat ervan uit dat Ethiopiërs geen idee hebben dat het Kerstmis is. In werkelijkheid is een groot deel van de Ethiopische bevolking christelijk. Wie spreekt hier voor wie? Die vraag wordt nog steeds gesteld bij liefdadigheidsprojecten in de popmuziek.</p>
+  <p>Muziek werd ook ingezet tegen de apartheid in Zuid-Afrika. The Special AKA bracht in 1984 <em>Free Nelson Mandela</em> uit, toen Mandela al meer dan twintig jaar gevangenzat. Onder leiding van gitarist Steven Van Zandt namen tientallen artiesten in 1985 als Artists United Against Apartheid het nummer <em>Sun City</em> op. Daarin beloven ze niet op te treden in het Zuid-Afrikaanse vakantieoord Sun City zolang de apartheid bestond. In 1988 volgde een groot concert voor Mandela's zeventigste verjaardag in Wembley. Twee jaar later werd hij vrijgelaten. Ook tegen kernwapens werd met muziek geprotesteerd. Dat verhaal volgt op side D.</p>
+
+  <div class="head"><p class="label">Track 06 · 1982-1987 · Gary, New York, Minneapolis</p><h3>Megasterren</h3></div>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/nMGbaPXlPkBf2NMyciJ5rpFrWuQDKVaX_kWZb95q6Jr6KnD-Y2xCQiprnwupyhRt7P7ePqok4SIrZE9Nu8d5jI3YoTrUz1o0Y2RKBA" alt=""><div><span class="who">Michael Jackson</span><br>Wanna Be Startin' Somethin' (1983)</div></div>Het slotrefrein "mama-se, mama-sa, ma-ma-coo-sa" komt uit <em>Soul Makossa</em> van Manu Dibango.</aside>
+  <p>Drie artiesten groeiden in de jaren tachtig uit tot sterren van een ongekende omvang: Michael Jackson, Madonna en Prince. Alle drie werden ze een merk, ver voorbij de muziek, en alle drie gebruikten ze MTV beter dan wie ook.</p>
+  <p>Michael Jackson stond al sinds zijn kindertijd op het podium, met de Jackson 5. Met producer Quincy Jones maakte hij <em>Thriller</em> (1982). Het album combineert funk, disco, pop en rock: op <em>Beat It</em> speelt hardrockgitarist Eddie Van Halen de solo. Jackson behandelde de videoclip als een korte film. De clip van <em>Thriller</em> duurt bijna veertien minuten en werd geregisseerd door filmregisseur John Landis. In 1983 deed Jackson tijdens een televisieshow voor het 25-jarig bestaan van Motown voor het eerst de moonwalk. Zijn manier van dansen, zingen en presenteren werd door een hele generatie nagedaan.</p>
+  <p>Madonna kwam uit Michigan en verhuisde eind jaren zeventig naar New York, waar ze in de clubscene haar eerste hits maakte. Wat haar onderscheidde, was de controle die ze hield over haar eigen imago. Ze veranderde steeds van uiterlijk en gebruikte provocatie als strategie: met religieuze beelden, met seksualiteit, met kleding die eerder als ondergoed gold. <em>Like a Virgin</em> (1984) werd geproduceerd door Nile Rodgers van Chic: een baslijn in Motown-stijl onder een laag synthesizers.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/WxCYNuR-CMqF_uD_4ikhlqRSS6lZKW-I7_oowBmoQW62YuPIuSN2FWIbGO_PtewvbEjs1dtuwE0gpHVi5OF7IUsyXWpx3sxwoCmsZoc" alt=""><div><span class="who">Prince</span><br>I Would Die 4 U (1984)</div></div>LinnDrum en synthbas, geen gitaar: de Minneapolis-sound.</aside>
+  <p>Prince kwam uit Minneapolis. Hij was multi-instrumentalist, zanger, songwriter en producer tegelijk, en speelde op zijn eerste albums bijna alle instrumenten zelf. Hij combineerde funk, rock, new wave en soul tot wat de Minneapolis-sound werd genoemd: een strak, elektronisch geluid met drumcomputer en synthesizers waar in de funk eerder blazers klonken. Met de film en het album <em>Purple Rain</em> (1984) werd hij wereldberoemd. Op <em>I Would Die 4 U</em> hoor je de LinnDrum en een synthesizerbas, en geen gitaar. Ook <em>When Doves Cry</em> van hetzelfde album heeft opvallend genoeg geen baslijn.</p>
+  <p>De drie hadden veel gemeen. Ze schreven en produceerden mee aan hun eigen muziek, ze dachten in beelden en ze lieten zien dat een popster in de jaren tachtig meer was dan een zanger. Zeker in het geval van Jackson en Prince ging het ook om zwarte artiesten die de grenzen van de industrie opzij duwden. Popsterren van nu, van Beyoncé tot Lady Gaga, werken nog steeds volgens het model dat deze drie neerzetten.</p>
+
+  <!-- SIDE C -->
+  <header class="opener part" style="background-image:url('https://lh3.googleusercontent.com/03bu-pnkl1TKQv4ZNhqJ7a_DTPF2FNSeWs4p89ZUcso2uV2BmQsKekvQZHedC3Ixr_ZjlgMj7sGJJ2eEQDwu7fB6gbNb8EVX-e4jab4')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side C · 1977-1988</p>
+    <h2>New wave en synthpop</h2>
+    <p class="sub">Na punk: donker, zweverig, androgyn, en steeds meer synthesizer.</p>
+    <span class="letter" aria-hidden="true">C</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1977-1988 · Londen, New York</p><h3>New wave</h3></div>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/WFio2g4ZZHDHVsPU6Le4zEQJoktw5ETQQiZDsAERQpVmixIBEtX76N5WSMhwKH4xIh3SwZCfQOY3sSLJnuCTcwO6WIgYEZwZzu_0NXI" alt=""><div><span class="who">Tubeway Army (Gary Numan)</span><br>Are "Friends" Electric? (1979)</div></div>Minimoog en Polymoog: de eerste synthesizer-nummer-1 in het Verenigd Koninkrijk.</aside>
+  <p>Punk had in 1976 en 1977 in Londen en New York alles omvergegooid wat de rock van de jaren zeventig groot had gemaakt: lange solo's, virtuositeit, dure concerten. Wat overbleef was de houding dat iedereen een band kon beginnen. Uit die ruimte ontstond new wave. De naam is een verzamelnaam voor muzikanten die na punk verder wilden, met meer aandacht voor sfeer, melodie en klank. De wortels liggen vooral bij punk, maar ook bij disco en bij de Duitse krautrock van bands als Kraftwerk en Neu!.</p>
+  <p>New wave is vaak donker, somber en zweverig. De synthesizer speelt een steeds grotere rol. Gary Numan stond in 1979 met zijn band Tubeway Army op nummer 1 in Engeland met <em>Are "Friends" Electric?</em>, gespeeld op een Minimoog en een Polymoog. Het was de eerste nummer-1-hit in het Verenigd Koninkrijk waarin de synthesizer de hoofdrol speelde. Numan zelf stond er koel en afstandelijk bij, als een machine.</p>
+  <p>Toch zijn lang niet alle new-wavebands synthbands. The Cure begon met droge, snelle gitaarpop, zoals <em>Boys Don't Cry</em> (1979), met een melancholische tekst over een jongen die zijn gevoelens niet durft te laten zien. The Police combineerde punkenergie met reggae. In <em>Every Breath You Take</em> (1983) speelt gitarist Andy Summers een figuur van gebroken add9-akkoorden. Het nummer wordt vaak op bruiloften gedraaid als liefdeslied, maar het gaat over iemand die een ander voortdurend in de gaten houdt. The Smiths uit Manchester zetten de gitaar juist weer centraal. In <em>Panic</em> (1986) roept Morrissey op de dj op te hangen: kritiek op de radio, op het ritme van een glamrocknummer, <em>Metal Guru</em> van T. Rex.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/KETS1bgkdRD6hzubKDx3fN1-DjN3N2sxr9dsdEisgb-aYw0UfAetqqdw-jkRKcABDmlcmGXNzcdJtLoNy-jgtKSWVOMcMSKzp8PMkH8" alt=""><div><span class="who">New Order</span><br>Blue Monday (1983)</div></div>Een Oberheim DMX met een stotterende bassdrum. De best verkochte 12-inch ooit.</aside>
+  <p>Aan de andere kant van het spectrum staan bands die het donkere van new wave met elektronica combineerden. Tears for Fears bouwde <em>Mad World</em> (1982) op twee akkoorden in mineur die steeds heen en weer gaan zonder ooit op te lossen. New Order, ontstaan uit Joy Division na de dood van zanger Ian Curtis in 1980, maakte met <em>Blue Monday</em> (1983) een brug tussen new wave en de dansvloer. Het ritme komt uit een Oberheim DMX-drumcomputer, met een stotterende bassdrum. <em>Blue Monday</em> werd de best verkochte 12-inch single ooit. Depeche Mode ten slotte begon als vrolijke synthpopband en werd steeds donkerder. Op <em>Never Let Me Down Again</em> (1987) klinken samples en synthesizers samen als een orkest. Talk Talk had in 1984 een hit met <em>It's My Life</em>, maar maakte later juist albums die bijna akoestisch en ambient klinken, zoals <em>Spirit of Eden</em>. Zo breed is new wave: van gitaarband tot synthband, van popsingle tot experiment.</p>
+
+  <div class="head"><p class="label">Track 02 · 1979-1983 · Londen, Birmingham</p><h3>New Romantic</h3></div>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/g-ReBvKBPWjZlsPsNB_Ny4oChg3HIyeoamOkEMWYgbIPk_ZdFsSc_vZAdFnhylo1Owr59JVtzjmrrubseeVgX0sk7vcnQW6_TqwhUGY" alt=""><div><span class="who">Visage</span><br>Fade to Grey (1980)</div></div>Gefluisterde Franse tekst over een sequencerbas.</aside>
+  <p>Eind jaren zeventig verzamelde zich in Londen een groep jongeren in de Blitz, een club in de wijk Covent Garden. Op de clubavonden van Steve Strange en Rusty Egan kwam je alleen binnen als je er opvallend uitzag. Mannen en vrouwen droegen make-up, historische kostuums, ruches en opgeknipte kleding. Er werd gedanst op Bowie, Roxy Music, Kraftwerk en elektronische dansmuziek. Uit die scene, en uit een vergelijkbare club in Birmingham, ontstond de New Romantic-beweging.</p>
+  <p>New Romantic is een stroming binnen new wave die sterk leunt op de glamrock van de jaren zeventig. David Bowie en Roxy Music hadden laten zien dat een rockster met zijn uiterlijk kon spelen. De New Romantics gingen verder: androgyn, opgemaakt, met <em>gender bending</em> als bewuste keuze. Steve Strange vormde met Rusty Egan en muzikanten van Ultravox en Magazine de groep Visage. Op <em>Fade to Grey</em> (1980) fluistert een vrouwenstem Franse zinnen over een pulserende sequencerbas.</p>
+  <p>Duran Duran uit Birmingham werd de grootste band van de stroming. Op <em>Planet Earth</em> (1981) hoor je de funky bas van John Taylor en een gitaar met chorus-effect. Duran Duran draaide dure clips op exotische locaties, en de band werd groot in de Verenigde Staten. Ze stonden aan het begin van de Second British Invasion: net als de Beatles in 1964 (zie Mixtape 3) veroverden Britse bands de Amerikaanse hitlijsten, nu via MTV. Ook Spandau Ballet, ABC en Culture Club hoorden daarbij.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/PQKepjZmcmRtaB4uawioR4aUs9jIL0H2q5LKiRD9PEplo3mJ3qWaiSwEupZ1M5KB7E2lIx45I5QHXb7WBYEW1qzvGb6bw_guQr9ShA" alt=""><div><span class="who">The Human League</span><br>Don't You Want Me (1981)</div></div>Een duet als minifilm, bijna volledig elektronisch.</aside>
+  <p>The Human League en ABC kwamen uit Sheffield. <em>Don't You Want Me</em> (1981) van The Human League is een duet tussen een man en een vrouw die elk hun kant van een gebroken relatie vertellen, als een kleine film. Het nummer is bijna volledig elektronisch. ABC liet met <em>The Look of Love</em> (1982) een ander geluid horen: producer Trevor Horn zette er strijkers en orkestrale stoten onder. Culture Club tot slot had in 1983 een wereldhit met <em>Karma Chameleon</em>. Zanger Boy George was met zijn make-up, vlechten en hoeden het gezicht van de gender bending van New Romantic. In het nummer klinkt een mondharmonica, een element uit de countrymuziek, in een popsong.</p>
+
+  <div class="head"><p class="label">Track 03 · 1978-1988</p><h3>Synthpop</h3></div>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/Fo24lRbsw-mlRr399LjittXskQxxb9rhAjQekbGGtJxy_tl1e_o3xJ9o_Z_l72wxlUPgg2mMfCfd4879eo4bw_5bcyP-Cw2mCYCiAKs" alt=""><div><span class="who">Soft Cell</span><br>Tainted Love (1981)</div></div>Een northern-soulnummer van Gloria Jones uit 1964, als synthpop.</aside>
+  <p>Synthpop is officieel een stroming binnen new wave, maar dan veel poppier. De lijn loopt van Kraftwerk via Gary Numan naar bands als Orchestral Manoeuvres in the Dark (OMD) en de Pet Shop Boys. Een kenmerk is de bezetting: vaak een duo, met een zanger en iemand achter de synthesizers. Synthpop heeft een hoog gehalte aan eendagsvliegen, maar veel van de bands bestaan nog steeds.</p>
+  <p>Soft Cell, het duo van zanger Marc Almond en Dave Ball, nam in 1981 <em>Tainted Love</em> op. Het origineel is een soulnummer van Gloria Jones uit 1964, populair in de northern-soulclubs in Noord-Engeland. Soft Cell maakte er een koude, elektronische versie van, en die werd een wereldhit. Ultravox liet met <em>Vienna</em> (1981) horen dat synthpop ook ambitieus kon zijn: langzaam, met piano en een altvioolsolo. OMD schreef met <em>Maid of Orleans</em> (1982) een wals in driekwartsmaat over Jeanne d'Arc, met een mellotronkoor.</p>
+  <p>Eurythmics, het duo van Annie Lennox en Dave Stewart, nam <em>Sweet Dreams (Are Made of This)</em> (1983) op met een goedkope drumcomputer en één synthesizerlijn in mineur, in een studio op een zolder. Het bewijst wat de nieuwe apparaten mogelijk maakten: een wereldhit zonder dure studio. In de clip draagt Lennox een mannenpak en kortgeknipt oranje haar.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/n0ry90S2zHcNBZvLOXCngmtHQZ9eADdkN6xFGhwKenqTP07aBQhbrw_yrCPtobLzzuvnUwPU1KZ5J4wcM16VHy_hVPvqHyjeT-bkkw" alt=""><div><span class="who">Bronski Beat</span><br>Smalltown Boy (1984)</div></div>Falsetzang over een homoseksuele jongen die zijn dorp ontvlucht.</aside>
+  <p>Synthpop werd ook een plek voor homoseksuele artiesten om openlijk over hun leven te zingen. Bronski Beat bracht in 1984 <em>Smalltown Boy</em> uit. Zanger Jimmy Somerville zingt in een hoge falsetstem over een jongen die door zijn familie wordt afgewezen en zijn dorp verlaat. In een tijd van aids en vooroordelen was dat een duidelijk statement. De Pet Shop Boys, Neil Tennant en Chris Lowe, maakten met <em>West End Girls</em> (1985) een nummer met een gesproken couplet dat bijna rap is: een invloed uit de hiphop die toen in New York ontstond. Erasure, het duo van Vince Clarke en Andy Bell, liet met <em>Sometimes</em> (1986) horen dat een akoestische gitaar prima samengaat met synthesizers. Clarke was eerder lid van Depeche Mode en Yazoo.</p>
+
+  <div class="head"><p class="label">Track 04 · 1979-1985 · Londen</p><h3>Trevor Horn: de man die de jaren 80 uitvond</h3></div>
+  <p>Achter veel van het geluid van de jaren tachtig zat een producer. Trevor Horn was zanger en bassist van The Buggles, het duo dat met <em>Video Killed the Radio Star</em> de eerste clip op MTV leverde. Daarna werd hij een superproducer: een producer wiens geluid belangrijker is dan dat van de artiest. Wie een plaat van Trevor Horn hoort, herkent hem meteen aan de enorme, glanzende productie.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/9_ioaqNbQbX8Fo4pqncnG6RLDYYf3_2a7DvqbyXMiAD8m5BCFGESlNo6w27EBCWabuE_s9icUqDNcJJsS6-zpQZ3Yp85cNmV7dBZdA" alt=""><div><span class="who">Yes</span><br>Owner of a Lonely Heart (1983)</div></div>Hoor je de orkeststoot (orchestra hit) uit de Fairlight?</aside>
+  <p>Horn was een van de eerste producers die de Fairlight CMI volop gebruikte. Met de sampler maakte hij orkeststoten, korte samples van een heel orkest dat één akkoord speelt, en gesamplede drums die harder en strakker klonken dan een drummer in een studio. Op <em>Owner of a Lonely Heart</em> (1983) van de progrockband Yes is die orkeststoot goed te horen. Het werd de grootste hit uit de geschiedenis van Yes, een band die in de jaren zeventig bekendstond om lange, complexe nummers.</p>
+  <p>In 1983 begon Horn het label ZTT, samen met zijn vrouw Jill Sinclair en muziekjournalist Paul Morley. Bij ZTT was de productie de hoofdrolspeler. Dat werd het duidelijkst bij Frankie Goes to Hollywood uit Liverpool. Op hun debuutsingle <em>Relax</em> (1983) speelde de band zelf nauwelijks mee. Horn nam bijna alles op met sessiemuzikanten en machines. Het nummer werd in januari 1984 door de BBC uit de ban gedaan vanwege de seksuele tekst. Daarna ging het naar nummer 1. De opvolger <em>Two Tribes</em> (1984) gaat over de Koude Oorlog. In de clip vechten twee acteurs die op Reagan en de Sovjetleider Konstantin Tsjernenko lijken in een worstelring.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/YGKkYOtEekwzcUO1I3iDz5u44utFaV4Jp7BKSE06X9B93QPtrlSWy2TWO4nUlIB5qnCpUprCEeHL4a8TNTwQAlDTwyz4Q8suNIh_--s" alt=""><div><span class="who">Frankie Goes to Hollywood</span><br>Relax (1983)</div></div>Horn nam bijna alles zelf op met sessiemuzikanten. De band speelde nauwelijks mee.</aside>
+  <p>Voor Grace Jones maakte Horn in 1985 <em>Slave to the Rhythm</em>, een album dat bestaat uit steeds andere bewerkingen van één song. Het idee dat een nummer geen vaste vorm heeft, maar materiaal is dat een producer kan blijven bewerken, wijst vooruit naar de remixcultuur van de dancemuziek. Horn bleef ook na de jaren tachtig actief, onder meer voor Seal en het Russische duo t.A.T.u. Hoe producers en studio's de popmuziek gingen bepalen, lees je in Mixtape 12 (De hitfabriek).</p>
+
+  <!-- SIDE D -->
+  <header class="opener part" style="background-image:url('https://lh3.googleusercontent.com/zBLVZvaYuhRiqjXWoOsvIlIGsuLKsFFMgErfocBV88E8gUyQhb_PVSHs1vMDY4zmwUATw7VRvrtrw06xRKM1e6Ykn6e2HR_GXMaz5w')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side D · 1977-1990</p>
+    <h2>Europa zingt mee</h2>
+    <p class="sub">Italo disco, Neue Deutsche Welle, nederpop, Stock Aitken Waterman en de angst voor de bom.</p>
+    <span class="letter" aria-hidden="true">D</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1977-1988 · Italië</p><h3>Italo disco</h3></div>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/dkiXSD-5piJ_ioFeNTyPyHD60lSdrUjjSkqO36wXfHWFh7IpbmUHV068wlkOpX7huLZg5wf_uyiKOCqjg0_O_urIb1FJnnxfLA0oIiA" alt=""><div><span class="who">Ryan Paris</span><br>Dolce Vita (1983)</div></div>Een arpeggiator-bas in achtsten: het motorritme van Italo.</aside>
+  <p>Terwijl in Engeland new wave en synthpop de toon zetten, ontstond in Italië een eigen soort elektronische dansmuziek: Italo disco. Het is een mengsel van synthpop en eurodisco, de Europese variant van disco. De grote voorganger was een Italiaan die in München werkte: Giorgio Moroder. Zijn <em>I Feel Love</em> met Donna Summer (1977) liet horen dat dansmuziek volledig met synthesizers en een sequencer gemaakt kon worden. Over dat nummer lees je meer in Mixtape 8 (Elektronische muziek).</p>
+  <p>Italo disco werd vaak gemaakt door producers die een soloproject onder een fantasienaam uitbrachten. Wie er zong of op de hoes stond, deed er minder toe. De teksten waren in het Engels, met een duidelijk Italiaans accent, en de muziek draaide om arpeggiators, die akkoorden automatisch in losse noten opbreken, en vocoders. Het genre had een nog hoger gehalte eendagsvliegen dan synthpop, en veel nummers werden zomerhits in heel Europa.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/QA-VRPSNQj2ksI7956cC0JA1dDk3_MfTZxZEheMhDQ6QRgzOrvYkkeXRcEvADEEue7Ykgkojc8jWNEPwJgXtV_HGc0o0gK-Q-XnOidY" alt=""><div><span class="who">Righeira</span><br>Vamos a la Playa (1983)</div></div>Een vrolijke zomerhit over een strand na een atoomexplosie.</aside>
+  <p><em>Dolce Vita</em> van Ryan Paris (1983) is een schoolvoorbeeld. Onder het hele nummer loopt een bas in achtste noten uit een arpeggiator, als een motor die nooit stopt. <em>Vamos a la Playa</em> van Righeira (1983) klinkt als een onschuldige zomerhit, maar de tekst gaat over een strand na een atoomexplosie. Ook hier zit de angst voor de bom verstopt in vrolijke dansmuziek. Bij Baltimora, bekend van <em>Tarzan Boy</em> (1985), stond een zanger op het podium die playbackte: de stem op de plaat was van iemand anders. <em>Boys (Summertime Love)</em> van Sabrina (1987) is laat-Italo, al bijna Hi-NRG: snelle, harde dansmuziek uit de clubs. Dat geluid zou een paar jaar later de basis vormen voor een Britse hitfabriek.</p>
+
+  <div class="head"><p class="label">Track 02 · 1979-1985 · Duitsland, Oostenrijk</p><h3>Neue Deutsche Welle</h3></div>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/QHwauknhwW_WLL3msdoL1wjvimq8ZoztwLBiuJqbPrgua_-W9I3-EURE2QXAT4KXUtYkq6WP8KqO1fLUhenU_rU5Sw14voDnyD3vPO8" alt=""><div><span class="who">Nena</span><br>99 Luftballons (1983)</div></div>Een protestlied tegen de Koude Oorlog, in het Duits. Nummer 2 in de Verenigde Staten.</aside>
+  <p>In West-Duitsland ontstond rond 1979 uit punk en new wave een golf van Duitstalige rock en pop. Journalist Alfred Hilsberg gaf het in 1979 in het muziektijdschrift <em>Sounds</em> een naam: Neue Deutsche Welle, de Duitse vertaling van new wave. Het was nieuw dat jonge Duitse bands in hun eigen taal zongen. Tot dan toe was Duitstalige popmuziek vooral schlager.</p>
+  <p>De Neue Deutsche Welle begon in de avant-garde. DAF (Deutsch Amerikanische Freundschaft) maakte harde elektronische muziek met sequencers, en Einstürzende Neubauten uit West-Berlijn speelde op metaal, boormachines en ander materiaal van de bouwplaats. Binnen een paar jaar was het genre in de hitparade beland. De Spider Murphy Gang zong <em>Skandal im Sperrbezirk</em> (1981), rock-'n-roll in het Beiers. Trio had in 1982 een internationale hit met het minimalistische <em>Da Da Da</em>. Peter Schilling schreef met <em>Major Tom (völlig losgelöst)</em> (1983) een vervolg op <em>Space Oddity</em> van David Bowie.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/hI5M06dvb12bAP7UBvRrT4EmaIBRQinCuNhQu38x9OSqXAqmTDtfz2r9Ki3dhSDS029sW8ymQGlu2-2qALsSt9rLlVGOQlPEm5gdxZg" alt=""><div><span class="who">Falco</span><br>Der Kommissar (1981)</div></div>Oostenrijks en half gerapt: een van de eerste Europese rapnummers.</aside>
+  <p>Het bekendste nummer werd <em>99 Luftballons</em> van Nena (1983). Het lied vertelt hoe 99 losgelaten ballonnen door het leger voor vijandelijke objecten worden aangezien, wat leidt tot een oorlog. Het is een protestlied tegen de Koude Oorlog, en het kwam in de Duitse versie tot nummer 2 in de Verenigde Staten. Er bestaat ook een Engelse versie, <em>99 Red Balloons</em>. Uit Oostenrijk kwam Falco. Op <em>Der Kommissar</em> (1981) rapt hij half in het Duits: een van de eerste Europese rapnummers. Met <em>Rock Me Amadeus</em>, over Mozart, kwam hij in 1986 op nummer 1 in de Verenigde Staten.</p>
+  <p>Door het grote aantal eendagsvliegen en goedkope navolgers kreeg de Neue Deutsche Welle snel een slechte naam. Rond 1985 was het genre verdwenen. De invloed bleef: Duitse bands bleven daarna in hun eigen taal zingen, en het idee dat popmuziek niet Engelstalig hoeft te zijn, vond ook in Nederland navolging.</p>
+
+  <div class="head"><p class="label">Track 03 · 1979-1985 · Nederland</p><h3>Nederpop</h3></div>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/c8XFrAQlMsNwvN4CVXlPihxRm1u5NlYniKaw5gcW4AjoqpRhIvy0jqqP02i6wotp90DqlMkFl6SABjD4it4-EDagKSq_L80gvGxyZXw" alt=""><div><span class="who">Doe Maar</span><br>Sinds 1 dag of 2 (32 jaar) (1982)</div></div>Ska en reggae in het Nederlands.</aside>
+  <p>Ook in Nederland braken begin jaren tachtig bands door die in hun eigen taal zongen. Deze Nederlandstalige rock en pop is de Nederlandse tegenhanger van de Neue Deutsche Welle. De teksten waren vaak maatschappijkritisch en gingen over drugs, werkloosheid en de Koude Oorlog.</p>
+  <p>Doe Maar was de band die de deur openzette. De groep speelde ska en reggae met Nederlandse teksten, zoals in <em>Sinds 1 dag of 2 (32 jaar)</em> (1982). Radio-dj Frits Spits droeg veel bij aan de doorbraak. In 1982 en 1983 was Doe Maar zo populair dat concerten uitliepen op scènes met gillende fans, zoals bij de Beatles twintig jaar eerder. Na Doe Maar kregen andere Nederlandstalige bands een kans. Klein Orkest maakte kleinkunst met een popband, waarin de tekst centraal staat. Het Goede Doel combineerde synthpop met Nederlandse teksten in <em>België (Is er leven op Pluto…?)</em> (1982). De Frank Boeijen Groep zong met <em>Zwart wit</em> (1984) tegen de apartheid, en ook Toontje Lager hoorde bij deze golf.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/OU9M7kjQrRxZc1QXRrY8A5Z1XpPR6LTpwQ_C406QF6LNZ5NRpXfp2T5BUbNNOgsGY8K_JVR9nxTW94N3mH9XxLl4U6tMp6Rxnwv9tQ" alt=""><div><span class="who">Het Goede Doel</span><br>België (Is er leven op Pluto…?) (1982)</div></div>Synthpop met een Nederlandse tekst.</aside>
+  <p>Het verhaal van de Nederlandse popmuziek, van de Indorock van de jaren vijftig tot nu, wordt uitgebreid verteld in Mixtape 11 (Nederpop). Hier is het vooral belangrijk om te zien dat het een Europese beweging was: in Duitsland, Nederland en andere landen zongen jonge bands ineens in hun eigen taal over hun eigen land.</p>
+
+  <div class="head"><p class="label">Track 04 · 1984-1990 · Verenigd Koninkrijk</p><h3>British Eurobeat en Stock Aitken Waterman</h3></div>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/S_hZuWbJ8wVr5yfDMkdHKuYJ8LebyFzLPRdZpwWrIz-vuJnbg3yh8TGXY6azX5mU4My5eOo7rbd1Zrxdc8egjqTMwz5VT1A36GoL0Ykr" alt=""><div><span class="who">Dead or Alive</span><br>You Spin Me Round (Like a Record) (1984)</div></div>De eerste nummer 1 van SAW, met een Hi-NRG-bas in achtsten.</aside>
+  <p>Halverwege de jaren tachtig ontstond in Engeland uit Italo disco en Hi-NRG een nieuw popgeluid: British Eurobeat. Het werd bijna volledig bepaald door één team: het producerstrio Mike Stock, Matt Aitken en Pete Waterman, kortweg Stock Aitken Waterman of SAW. Vanuit hun studio PWL in Londen schreven en produceerden ze meer dan honderd Top 40-hits.</p>
+  <p>SAW werkte als een fabriek. Dezelfde studio, dezelfde muzikanten, hetzelfde geluid: alleen de zangers wisselden. Hun eerste nummer 1 was <em>You Spin Me Round (Like a Record)</em> van Dead or Alive (1984), met een Hi-NRG-bas in achtste noten. Bananarama scoorde met <em>Venus</em> (1986), een cover van het nummer van de Nederlandse band Shocking Blue (zie Mixtape 4). Mel &amp; Kim gebruikten in <em>Respectable</em> (1987) samples van hun eigen stem als ritme-instrument.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/ZqdDS1vGD1wnwX4qFtoUFO1ao16pFSVAHuY7nOZetGL6BJFy7JpnAGevCFjGXHCbOilrEKgij7-G5jJu14NABWyX3btTo1gi_P6bNw" alt=""><div><span class="who">Bananarama</span><br>Venus (1986)</div></div>Een cover van Shocking Blue, in het SAW-geluid.</aside>
+  <p>Het bekendste product van SAW is <em>Never Gonna Give You Up</em> van Rick Astley (1987). Het nummer stond in 1987 op nummer 1 in Engeland en werd een wereldhit. Sinds 2007 is het vooral bekend als internetgrap: bij <em>rickrolling</em> klikt iemand op een link en krijgt hij onverwacht de clip te zien. Kylie Minogue en Jason Donovan waren acteurs uit de Australische soap <em>Neighbours</em>. Hun duet <em>Especially for You</em> (1988) laat zien hoe SAW popmuziek als een televisieproduct behandelde: bekende gezichten, een eenvoudig liefdeslied, een strakke productie.</p>
+  <p>Critici vonden de muziek van SAW eentonig en commercieel, maar het systeem werkte. Het idee van een team dat in hoog tempo hits maakt voor verschillende artiesten, kwam later terug bij Zweedse producers als Max Martin en bij de K-pop. Daarover gaat Mixtape 12 (De hitfabriek).</p>
+
+  <div class="head"><p class="label">Track 05 · 1980-1990</p><h3>De Koude Oorlog</h3></div>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/yyo51DApkD_ckRBAaUd8Hr05PezYsLHj-H7WaOig9lL6Q5FNtrO7P4Xkznnu_D0zS9Fu1MAc1mGQwMaoVN9zFCZOVvGaCT0zDg9EVOo" alt=""><div><span class="who">Doe Maar</span><br>De bom (1983)</div></div>Angst voor een kernoorlog, verpakt in een vrolijk skaritme.</aside>
+  <p>Begin jaren tachtig liep de spanning tussen Oost en West weer hoog op. De Sovjet-Unie had nieuwe raketten op West-Europa gericht, en de NAVO besloot als antwoord Amerikaanse kruisraketten in onder meer Nederland, West-Duitsland en Engeland te plaatsen. De angst voor een kernoorlog was groot. In heel Europa kwamen mensen in verzet. In Nederland demonstreerden in 1983 in Den Haag 550.000 mensen tegen de kruisraketten, de grootste demonstratie in de Nederlandse geschiedenis.</p>
+  <p>Die angst klinkt door in de muziek, vaak op een verrassend vrolijke manier. In <em>De bom</em> (1983) van Doe Maar zingt Henny Vrienten over de vraag wat je doet als de bom valt, op een opgewekt skaritme. Klein Orkest vergeleek in <em>Over de muur</em> (1984) het leven in Oost- en West-Berlijn, en liet zien dat beide kanten hun eigen vorm van onvrijheid hadden. Ook Nena's <em>99 Luftballons</em> en Righeira's <em>Vamos a la Playa</em> horen in dit rijtje.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/jp7NxAVBJam6HZTMEEWBIx_P8mRNBeU-8jRMuSWtBHQbz1zIFUSQwkvohZJdplIPaIKic3rj2QIjV6j_IfQUOKQYXeMV5NnNLD-6x_s" alt=""><div><span class="who">Sting</span><br>Russians (1985)</div></div>De melodie komt uit <em>Luitenant Kijé</em> van Prokofjev.</aside>
+  <p>Ook grote Engelstalige artiesten schreven over de Koude Oorlog. Sting, de voormalige zanger van The Police, bouwde <em>Russians</em> (1985) op een melodie uit de suite <em>Luitenant Kijé</em> van de Russische componist Sergej Prokofjev. Het lied stelt de vraag of Russen net zoveel van hun kinderen houden als westerlingen. Elton John zong in <em>Nikita</em> (1985) over een liefde aan de andere kant van het IJzeren Gordijn. Billy Joel schreef <em>Leningrad</em> (1989) over een Russische clown die hij ontmoette tijdens zijn tournee door de Sovjet-Unie. En Frankie Goes to Hollywood liet in de clip van <em>Two Tribes</em> (1984) de leiders van beide supermachten met elkaar worstelen.</p>
+  <p>Toen in november 1989 de Berlijnse Muur viel, verdween dit onderwerp vrij snel uit de popmuziek. De nummers zijn gebleven als tijdsdocument van een decennium waarin veel jongeren werkelijk dachten dat de wereld kon vergaan.</p>
+
+  <!-- SIDE E -->
+  <header class="opener part" style="background-image:url('https://lh3.googleusercontent.com/JvTVn3z3zqynJ1687z-jeazAXXU-xWg5wKaJDfbbFATmHz5emUHQJpwnNxxa9_TSULMBJJ-tZGISDuHbUSKUZ-3wIWA88R40km4992mb')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side E · 1973-1990</p>
+    <h2>Rock, hiphop en house</h2>
+    <p class="sub">Stadionrock, de Bronx en een club in Chicago: drie geluiden die de toekomst bepalen.</p>
+    <span class="letter" aria-hidden="true">E</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1980-1990 · Verenigde Staten</p><h3>Rock</h3></div>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/6qiTrbjw7RG6iIKX-3x-YeWC9J1JgzM9jo5_NfOZEIwjWMz2I-5l4jOjflCsGpsHE2UsxgfdKQ2H76eNmxIcppGO2zY4ilCVAO6v5w" alt=""><div><span class="who">Van Halen</span><br>Jump (1984)</div></div>Een synthriff (Oberheim OB-Xa) als hook, in een band met een gitaarheld.</aside>
+  <p>Rock was in de jaren tachtig groter dan ooit, al klonk het anders dan in de jaren zeventig. Drie stromingen waren belangrijk. Glam metal combineerde hardrock met haarlak, make-up en strakke broeken; bands als Mötley Crüe en Poison waren daar het voorbeeld van. AOR, album-oriented rock, was gladde, melodieuze rock voor de radio. En stadionrock was rock voor de grootste zalen en stadions, met refreinen die tienduizenden mensen konden meezingen.</p>
+  <p>Ook in de rock deed de elektronica mee. Drums werden gesampled of met veel galm opgenomen, en synthesizers kregen een plek naast de gitaar. Van Halen, de band van gitarist Eddie Van Halen, scoorde de grootste hit met <em>Jump</em> (1984), waarin niet de gitaar maar een Oberheim OB-Xa-synthesizer het hoofdmotief speelt. De Zweedse band Europe opende <em>The Final Countdown</em> (1986) met een synthesizerriff dat klinkt als een fanfare. Sommige muzikanten speelden op een keytar, een synthesizer die je als een gitaar om je nek hangt.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/fcNZHJea2H-0Yd7JKR-Yl7a1pIAHmtKv5HMvIFYXLUTgQS_f7avmiE2e37vM_HbyokaH1MqXq5o9WA5eKyI3v_HcwCKES58KtRgMXGw" alt=""><div><span class="who">Bruce Springsteen</span><br>Born in the U.S.A. (1984)</div></div>Een protestlied over Vietnamveteranen dat als patriottisch lied werd gebruikt.</aside>
+  <p>Bruce Springsteen werd met <em>Born in the U.S.A.</em> (1984) een van de grootste stadionartiesten. Het titelnummer klinkt met zijn grote drums en het meezingrefrein als een volkslied, maar de coupletten vertellen over een Vietnamveteraan die na thuiskomst geen werk vindt en door zijn land in de steek wordt gelaten. Ronald Reagan gebruikte het nummer in 1984 in zijn verkiezingscampagne als patriottisch lied, tot ongenoegen van Springsteen. Het is een goed voorbeeld van een lied waarvan de klank een andere boodschap uitstraalt dan de tekst.</p>
+  <p>Bon Jovi verbond rock met pop. In <em>Livin' on a Prayer</em> (1986) speelt de gitaar via een talkbox, een slangetje waarmee de gitarist met zijn mond het gitaargeluid vormt. In het laatste refrein gaat het nummer een hele toon omhoog: een <em>truckers gear change</em>. Guns N' Roses bracht de rauwheid terug. Hun album <em>Appetite for Destruction</em> (1987) klonk vuiler en gevaarlijker dan de glam metal. Het riff van <em>Sweet Child O' Mine</em> begon als een vingeroefening van gitarist Slash.</p>
+  <p>Onder de oppervlakte groeide intussen een invloedrijke underground. Industrial combineerde machines, vervorming en woede. Nine Inch Nails, het project van Trent Reznor, liet dat in <em>Head Like a Hole</em> (1989) horen. Alternatieve rockbands speelden op universiteitsradio en in kleine clubs, en in Seattle ontstond aan het eind van het decennium grunge. Die stroming zou in de jaren negentig de glam metal in één klap ouderwets laten lijken.</p>
+
+  <div class="head"><p class="label">Track 02 · 1973-1990 · The Bronx, New York</p><h3>Hiphop</h3></div>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/ikvA9RT6I1q1aJxmIqR_WFZQzEUqlcgYTyEfi2SKwXbdOOqT2k0_8hlTeoSBfAcub4bqeoCBLIF_n-6zAPOk9ruosYWhLeY1PlDzpEM" alt=""><div><span class="who">The Sugarhill Gang</span><br>Rapper's Delight (1979)</div></div>De eerste rap-hit, op de baslijn van <em>Good Times</em> van Chic, nagespeeld door een studioband.</aside>
+  <p>In de jaren zeventig was de South Bronx in New York een van de armste wijken van de Verenigde Staten. Er was veel werkloosheid, gebouwen stonden leeg of brandden af, en de bewoners, vooral zwarte en Latijns-Amerikaanse jongeren, hadden te maken met racisme en armoede. In die omgeving ontstond hiphop.</p>
+  <p>Het begin wordt meestal gelegd bij DJ Kool Herc, een uit Jamaica afkomstige dj. Op 11 augustus 1973 draaide hij op een feest in een flatgebouw aan Sedgwick Avenue. Herc merkte dat de dansers het wildst werden tijdens de <em>break</em>: het korte instrumentale stuk van een funkplaat waarin alleen de drums en de bas spelen. Hij gebruikte twee draaitafels met twee exemplaren van dezelfde plaat om de break steeds opnieuw af te spelen en zo te verlengen. Over die eindeloze breaks begonnen MC's te praten en te rijmen, en dansers ontwikkelden de breakdance.</p>
+  <p>Hiphop is meer dan muziek. Er worden vier elementen onderscheiden: deejaying, met technieken als scratchen; MC-ing, het rappen; breakdance; en graffiti. Daar komt nog beatboxing bij, ritmes maken met je mond. De Rock Steady Crew was een groep breakdancers die in 1983 zelfs een eigen hit had.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/DK2EUt8EWvw9Rynb8JKyStJc2aFbTqHmgSh7oC8jkziGf3MefDpBV0X9J35f5d70MYJwbg3QNOjoOvcNCzBHUfRFFnxd_3TC4I-eask" alt=""><div><span class="who">Grandmaster Flash &amp; The Furious Five</span><br>The Message (1982)</div></div>De eerste grote rap over de sociale werkelijkheid.</aside>
+  <p>De eerste rap-hit kwam in 1979: <em>Rapper's Delight</em> van The Sugarhill Gang. Het nummer gebruikt de baslijn van <em>Good Times</em> van Chic, maar die werd niet gesampled: een studioband speelde hem na. Samplers waren toen nog te duur. In 1982 bracht Grandmaster Flash &amp; The Furious Five <em>The Message</em> uit, de eerste grote rap over de sociale werkelijkheid van de wijk. In plaats van feest en opschepperij ging het over armoede, criminaliteit en stress. Hiphop liet vanaf dat moment ook horen hoe het leven in de Bronx eruitzag.</p>
+  <p>De echte doorbraak naar een groot wit publiek kwam in 1986. Run-DMC nam samen met de rockband Aerosmith een nieuwe versie op van Aerosmiths <em>Walk This Way</em> uit 1975. In de clip breken de rappers letterlijk door een muur heen naar het podium van de rockers. Het nummer werd een grote hit en werd veel gedraaid op MTV. Hoe hiphop zich daarna ontwikkelde tot een van de grootste stromingen in de popmuziek, en wat het zegt over zwarte identiteit in Amerika, lees je in Mixtape 6 (Fear of a Black Planet).</p>
+
+  <div class="head"><p class="label">Track 03 · 1984-1990 · Chicago, Detroit</p><h3>House</h3></div>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/3rkswBDA7prunBma4zXGMdPFM3LUFczIfFkgCM54k3fsc6lq6AgnM8qdfNkJ3plRUxKcZLRO9vt47QrEoNuCCYR6Tq7NCDiy-iEGyVo" alt=""><div><span class="who">Inner City</span><br>Big Fun (1988)</div></div>Kevin Saunderson uit Detroit: techno met een popzangeres.</aside>
+  <p>Het derde geluid dat de toekomst zou bepalen, kwam uit de clubs. House is een verzamelnaam geworden voor verschillende stromingen: house uit Chicago, techno uit Detroit, garage uit New York en acid house uit Engeland. De naam komt van The Warehouse, een club in Chicago waar dj Frankie Knuckles vanaf 1977 draaide. In New York speelde de Paradise Garage met dj Larry Levan een vergelijkbare rol, en daar komt de naam garage vandaan.</p>
+  <p>House is in de kern disco met een mechanische beat. De drumcomputers van Roland, de TR-808 en de TR-909, leveren de bassdrum op elke tel, en de TB-303 een piepende, kronkelende baslijn. Een belangrijk verschil met de popmuziek van daarvoor is de rolverdeling: producers maken de muziek, dj's draaien haar. De muziek is gemaakt om te mixen, niet om op de radio te klinken. Toch werden sommige tracks hits. <em>Love Can't Turn Around</em> van Farley "Jackmaster" Funk (1986) was een van de eerste househits in Europa. Kevin Saunderson uit Detroit scoorde met Inner City en zangeres Paris Grey in 1988 met <em>Big Fun</em>: techno met een popzangeres.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/v_7nH5zAZZ8jOeDkdG9dTKwRSa9OqUe6cC-3yrQ81aOOABdzLXZwXTg6JOGRwBW73CrhF_vPbwT0Z3XG_PWpnqHzqWX_UcuqiLa68gQ" alt=""><div><span class="who">M|A|R|R|S</span><br>Pump Up the Volume (1987)</div></div>Gebouwd uit tientallen samples. Het leidde tot een van de eerste rechtszaken over sampling.</aside>
+  <p>In Engeland werd house in 1987 en 1988 een massale jeugdcultuur, met acid house en de eerste raves. Britse producers maakten er een eigen variant van, vaak opgebouwd uit samples. <em>Pump Up the Volume</em> van M|A|R|R|S (1987), een samenwerking tussen leden van de bands Colourbox en A.R. Kane, bestaat uit tientallen samples van andere platen. Het werd een nummer 1 in Engeland en leidde tot een van de eerste rechtszaken over sampling. De aanklagers waren Stock Aitken Waterman, die vonden dat een fragment uit hun nummer <em>Roadblock</em> zonder toestemming was gebruikt. <em>Theme from S'Express</em> (1988) van Mark Moore, onder de naam S'Express, was Britse acid house op basis van samples. Het verdere verhaal van house, techno en rave staat in Mixtape 8 (Elektronische muziek).</p>
+  <p>Daarmee is het antwoord op de vraag waarmee dit hoofdstuk begon, voor een groot deel gegeven. De popmuziek van nu klinkt naar de jaren tachtig omdat de gereedschappen van nu in dat decennium zijn ontstaan. De drumcomputer, de digitale synthesizer, MIDI en de sampler zijn nog altijd de basis van vrijwel elke popproductie, alleen zitten ze nu in een laptop. De 808 is het fundament van trap en hiphop. De galmende snaredrum, de DX7-piano en de arpeggio's uit de Italo disco duiken steeds opnieuw op, van synthwave tot de hits van The Weeknd. Ook het systeem van nu werd in de jaren tachtig gebouwd: de popster als merk, de videoclip als visitekaartje en de producer als de eigenlijke maker van het geluid. En omdat er zoveel muziek uit dat decennium bewaard is, komt die steeds terug, via films, series en TikTok. Zo werd <em>Running Up That Hill</em> van Kate Bush uit 1985 in 2022 opnieuw een wereldhit, nadat het in de serie <em>Stranger Things</em> te horen was.</p>
+</section>
+
+<section class="back">
+  <h4 class="backhead">Begrippen</h4>
+  <dl class="terms">
+    <div><dt>Synthesizer</dt><dd>Elektronisch instrument dat klank opwekt en vormt</dd></div>
+    <div><dt>Drumcomputer</dt><dd>Apparaat dat drumpatronen afspeelt (TR-808, LinnDrum)</dd></div>
+    <div><dt>MIDI</dt><dd>Standaard (1983) waarmee instrumenten en computers communiceren</dd></div>
+    <div><dt>Sampling</dt><dd>Opgenomen geluid hergebruiken als bouwsteen</dd></div>
+    <div><dt>Hi-NRG</dt><dd>Snelle, elektronische dansmuziek uit de clubs, basis van SAW</dd></div>
+    <div><dt>Gender bending</dt><dd>Bewust spelen met mannelijk en vrouwelijk uiterlijk</dd></div>
+    <div><dt>Break</dt><dd>Instrumentaal stuk van een funkplaat waarop gedanst en gerapt werd</dd></div>
+    <div><dt>House</dt><dd>Elektronische dansmuziek uit Chicago met een four-on-the-floor-beat</dd></div>
+    <div><dt>Superproducer</dt><dd>Producer wiens geluid belangrijker is dan dat van de artiest</dd></div>
+  </dl>
+
+  <h4 class="backhead">Verder luisteren en kijken</h4>
+  <div class="links">
+    <div class="link-card"><div class="qr" data-url="https://open.spotify.com/playlist/0nI0aGOy19mXram99stXoI"></div>
+      <div><span class="tag">SPOTIFY · PLAYLIST</span><p>Alle nummers uit dit hoofdstuk, in de volgorde van de tekst. Scan de code met je telefoon.</p><p class="url">open.spotify.com/playlist/0nI0aGOy19mXram99stXoI</p></div></div>
+    <div class="link-card lesson"><div><span class="tag">LESSONUP · LES</span><p><strong>Mixtape 7: De jaren 80</strong></p><p>De les bij dit hoofdstuk, met beeld en fragmenten.</p></div></div>
+  </div>
+
+  <footer class="colofon">
+    <p>Platenhoezen: Apple Music.</p>
+    <p>School of Rock · De geschiedenis van popmuziek · ArtEZ University of the Arts</p>
+  </footer>
+</section>
+<nav class="pager" aria-label="Andere mixtapes"><a href="06.html"><small>← Mixtape 6</small><b>Fear of a Black Planet</b></a><a class="next" href="08.html"><small>Mixtape 8 →</small><b>Elektronische muziek</b></a></nav>
+
+</div><footer class="sitefoot"><div class="wrap"><p>School of Rock · De geschiedenis van popmuziek in mixtapes · Jan-Wolter Smit · ArtEZ University of the Arts</p><p><a href="../pdf/school-of-rock-reader.pdf">Download de reader (pdf)</a></p></div></footer><script src="../assets/player.js"></script><script src="../assets/chapter.js"></script><script>document.querySelectorAll('.qr[data-url]').forEach(function(el){if(typeof QRCode==='undefined'){return;}new QRCode(el,{text:el.dataset.url,width:256,height:256,colorDark:'#1C1B19',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.M});});</script></body></html>

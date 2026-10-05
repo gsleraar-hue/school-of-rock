@@ -1,0 +1,353 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content=".."><title>Mixtape 1 · Het ontstaan van popmuziek · School of Rock</title><link rel="icon" href="../assets/cassette.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="../assets/site.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><style>
+  /* Eén thema met opzet: een boek in de huisstijl van de lessen. */
+  :root {
+    color-scheme: light;
+    --page: #FFFFFF;
+    --ink: #1C1B19;
+    --ink-soft: #55524C;
+    --line: #DDD8CE;
+    --red: #D63A31;
+    --yellow: #F2D500;
+    --display: "Oswald", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "Space Mono", "Courier New", monospace;
+    --hand: "Caveat", "Comic Sans MS", cursive;
+    --text: 34rem;
+    --margin: 13rem;
+    --gap: 2.25rem;
+  }
+  html { background: var(--page); }
+  body { background: var(--page); color: var(--ink); font: 400 16px/1.65 var(--body); padding-inline: 16px; padding-block: 0 64px; }
+  .book { max-width: calc(var(--text) + var(--gap) + var(--margin)); margin: 0 auto; }
+  p { margin: 0; }
+  em { font-style: italic; }
+  a { color: inherit; text-decoration-color: var(--red); text-underline-offset: 2px; }
+
+  /* Hoofdstukopening en delen */
+  .opener { position: relative; overflow: hidden; color: #FFFFFF; box-sizing: border-box; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; }
+  .opener .wash { position: absolute; inset: 0; background-color: rgba(214,58,49,.62); }
+  .opener .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 55%; background-color: rgba(28,27,25,.38); }
+  .opener .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background: var(--yellow); }
+  .opener h1, .opener h2, .opener .sub, .part .kicker { position: relative; }
+  .opener .kicker { font: 12px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--yellow); }
+  .opener h1, .opener h2 { font-family: var(--display); font-weight: 600; line-height: 1.02; margin: 0; text-wrap: balance; }
+  .opener .sub { max-width: 36ch; line-height: 1.4; }
+  .cover { margin-inline: -16px; min-height: 420px; padding: 32px 28px 36px 44px; }
+  .cover h1 { font-size: clamp(44px, 9vw, 72px); max-width: 12ch; }
+  .cover .sub { font-size: 18px; }
+  .cover .kicker { position: absolute; top: 26px; left: 44px; }
+  .cover .cassette { position: absolute; top: 16px; right: 18px; width: 88px; height: auto; }
+  .part { margin: 64px calc(-1 * (var(--margin) + var(--gap))) 28px 0; min-height: 230px; padding: 24px 24px 24px 40px; clear: both; }
+  .part h2 { font-size: clamp(30px, 6vw, 44px); }
+  .part .sub { font-size: 15px; }
+  .part .letter { position: absolute; right: 18px; bottom: -12px; font: 600 150px/1 var(--display); color: var(--yellow); }
+
+  /* Tekstvak met kantlijn */
+  .flow { padding-right: calc(var(--margin) + var(--gap)); }
+  .flow > p { max-width: var(--text); }
+  .flow > p { text-indent: 1.4em; }
+  .flow > .intro, .flow > .head + p, .flow > .head + aside + p, .flow > .head + figure + p { text-indent: 0; }
+  .head { margin: 40px 0 10px; max-width: var(--text); }
+  .head .label { font: 11px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--red); margin: 0 0 4px; }
+  .head h3 { font: 600 22px/1.15 var(--display); margin: 0; text-wrap: balance; }
+  .intro { font-size: 18px; line-height: 1.6; }
+
+  /* Kantlijn: luistertips, beeld, citaten, QR */
+  .side-note, .side-fig, .side-quote { float: right; clear: right; width: var(--margin); margin: 6px calc(-1 * (var(--margin) + var(--gap))) 18px 0; }
+  .side-note { border-left: 2px solid var(--yellow); padding-left: 10px; font-size: 12.5px; line-height: 1.4; color: var(--ink-soft); }
+  .side-note .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .side-note .rec { display: grid; grid-template-columns: 40px 1fr; gap: 8px; align-items: center; margin-bottom: 6px; }
+  .side-note .rec img { width: 40px; height: 40px; border-radius: 2px; }
+  .side-note .who { color: var(--ink); font-weight: 600; }
+  .side-note .qr { width: 96px; height: 96px; margin: 4px 0 6px; }
+  .side-note .qr img, .side-note .qr canvas { width: 100% !important; height: 100% !important; }
+  .side-fig img { display: block; width: 100%; border: 4px solid #FFFFFF; box-shadow: 0 3px 12px rgba(0,0,0,.18); transform: rotate(2deg); }
+  .side-fig figcaption { font: 600 20px/1.05 var(--hand); color: var(--red); text-align: center; margin-top: 8px; }
+  .side-quote { font: 500 17px/1.25 var(--display); color: var(--red); border-top: 2px solid var(--red); padding-top: 8px; }
+  .side-quote span { display: block; font: 11px/1.4 var(--mono); color: var(--ink-soft); margin-top: 6px; }
+
+  /* Achterin */
+  .back { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 8px; }
+  h4.backhead { font: 600 22px/1.15 var(--display); margin: 28px 0 0; }
+  .terms { columns: 2 240px; column-gap: 32px; margin: 12px 0 0; }
+  .terms div { break-inside: avoid; margin: 0 0 10px; }
+  .terms dt { font-weight: 600; }
+  .terms dd { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.45; }
+  .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px 32px; margin-top: 14px; }
+  .link-card { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: start; }
+  .link-card .qr { width: 112px; height: 112px; }
+  .link-card.lesson { grid-template-columns: 1fr; }
+  .link-card .qr img, .link-card .qr canvas { width: 100% !important; height: 100% !important; }
+  .link-card .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .link-card p { font-size: 14px; line-height: 1.45; }
+  .link-card .url { font: 11px/1.4 var(--mono); color: var(--ink-soft); word-break: break-all; margin-top: 6px; }
+  .colofon { margin-top: 36px; font-size: 12px; line-height: 1.5; color: var(--ink-soft); display: grid; gap: 6px; max-width: var(--text); }
+
+  @media screen and (max-width: 760px) {
+    .part { margin-right: 0; }
+    .flow { padding-right: 0; }
+    .side-note, .side-fig, .side-quote { float: none; width: auto; margin: 16px 0; }
+    .side-fig { max-width: 220px; }
+  }
+
+  /* Boek op A4 */
+  @page { size: A4; margin: 20mm 18mm 22mm 20mm; }
+  @page cover { margin: 0; }
+  @media print {
+    html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root { --text: 112mm; --margin: 44mm; --gap: 8mm; }
+    body { padding: 0; font-size: 9.6pt; line-height: 1.55; }
+    .book { max-width: none; }
+    p { orphans: 3; widows: 3; }
+    .cover { page: cover; margin: 0; height: 296mm; padding: 0 22mm 32mm 26mm; break-after: page; }
+    .cover .kicker { top: 18mm; left: 26mm; font-size: 8pt; }
+    .cover .cassette { top: 14mm; right: 16mm; width: 28mm; }
+    .cover h1 { font-size: 56pt; }
+    .cover .sub { font-size: 14pt; }
+    .opener .bar { width: 5mm; }
+    .part { margin: 0 calc(-1 * (var(--margin) + var(--gap))) 6mm 0; height: 70mm; min-height: 0; padding: 0 50mm 8mm 12mm; break-before: page; break-after: avoid; }
+    .part .kicker { font-size: 7.5pt; }
+    .part h2 { font-size: 26pt; }
+    .part .sub { font-size: 10pt; }
+    .part .letter { font-size: 100pt; right: 8mm; bottom: -5mm; }
+    .first-part { break-before: auto; margin-top: 10mm; }
+    .head { margin: 8mm 0 2.5mm; break-after: avoid; break-inside: avoid; }
+    .head .label { font-size: 6.8pt; }
+    .head h3 { font-size: 14pt; }
+    .intro { font-size: 11pt; }
+    .side-note { font-size: 7.6pt; padding-left: 3mm; margin-top: 1mm; margin-bottom: 5mm; break-inside: avoid; }
+    .side-note .tag { font-size: 6.2pt; margin-bottom: 2mm; }
+    .side-note .rec { grid-template-columns: 11mm 1fr; gap: 2.5mm; margin-bottom: 1.5mm; }
+    .side-note .rec img { width: 11mm; height: 11mm; }
+    .side-note .qr { width: 24mm; height: 24mm; }
+    .side-fig { margin-bottom: 5mm; break-inside: avoid; }
+    .side-fig figcaption { font-size: 13pt; }
+    .side-quote { font-size: 11pt; break-inside: avoid; }
+    .side-quote span { font-size: 6.5pt; }
+    .back { break-before: page; margin-top: 0; }
+    h4.backhead { font-size: 14pt; margin-top: 8mm; }
+    .terms { columns: 2; column-gap: 10mm; }
+    .terms div { margin-bottom: 2.5mm; }
+    .terms dd { font-size: 8.6pt; }
+    .terms div { break-inside: avoid; }
+    .links { grid-template-columns: 1fr 1fr; gap: 8mm; break-inside: avoid; }
+    .link-card { grid-template-columns: 30mm 1fr; gap: 5mm; }
+    .link-card .qr { width: 30mm; height: 30mm; }
+    .link-card p { font-size: 8.8pt; }
+    .link-card .url { font-size: 6.8pt; }
+    .colofon { font-size: 7.5pt; margin-top: 10mm; }
+  }
+  .cover .cover-text { position: absolute; left: 44px; right: 28px; bottom: 36px; display: grid; gap: 10px; }
+  @media print { .cover { display: block !important; height: 294mm !important; } .cover .cover-text { left: 26mm; right: 22mm; bottom: 32mm; gap: 4mm; } }</style><style>
+  body.chapter { padding-top: 0; }
+  body.chapter .sitenav { margin-inline: -16px; }
+  .deck { margin: 0 -16px; background: #1C1B19; color: #fff; padding: 18px 20px 20px; display: grid; gap: 14px; }
+  .deck-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .deck .lbl { font: 11px/1.4 "Space Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: #F2D500; min-width: 7.5em; }
+  .deck .lesson { font: 500 16px/1.3 "Oswald", sans-serif; }
+  .deck .btn { padding: 10px 14px; font-size: 14px; }
+  .deck .btn.ghost { color: #fff; border-color: #55524C; }
+  .deck-embed { margin: 0; }
+  .deck-embed iframe { border-radius: 8px; display: block; }
+  .deck-genres { display: flex; flex-wrap: wrap; gap: 6px; }
+  .gchip { --c: #999; display: inline-flex; align-items: center; gap: 7px; text-decoration: none; font: 13px/1 "Inter", sans-serif; padding: 7px 10px; border-radius: 999px; background: #2A2825; color: #fff; }
+  .gchip i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+  .gchip span { color: #9C978D; font-family: "Space Mono", monospace; font-size: 11px; }
+  .gchip:hover { background: #3A3833; }
+  .note-play { display: flex; align-items: center; gap: 8px; margin: 2px 0 8px; font: 11px/1.2 "Space Mono", monospace; letter-spacing: .04em; text-transform: uppercase; color: #D63A31; }
+  .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 48px 0 0; }
+  .pager a { display: grid; gap: 4px; padding: 16px; border: 1px solid #DDD8CE; border-radius: 4px; text-decoration: none; }
+  .pager a:hover { border-color: #1C1B19; }
+  .pager .next { text-align: right; }
+  .pager small { font: 11px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #D63A31; }
+  .pager b { font: 600 18px/1.15 "Oswald", sans-serif; }
+  @media print { .sitenav, .deck, .pager, .sitefoot { display: none !important; } }
+</style></head><body class="chapter" data-mixtape="1"><header class="sitenav"><a class="brand" href="../index.html"><img src="../assets/cassette.png" alt=""><span>School of Rock</span></a><nav aria-label="Hoofdmenu"><a href="../index.html#mixtapes" aria-current="page">Mixtapes</a><a href="../kaart.html">Genrekaart</a><a href="../begrippen.html">Begrippen</a><a href="../pdf/school-of-rock-reader.pdf">Reader (pdf)</a></nav></header><div class="book">
+
+<header class="opener cover" style="background-image:url('https://lh3.googleusercontent.com/j6IjZIFBQOra2tCNG2TXaBB2TIjAnNK5kmSaL0XD1s1g9h4ROm5CRdPX13AmtuMsBGLU00dEG-bRR-Z2U7psShDjVs1FGYk6lPgZB3E')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+  <p class="kicker">School of Rock · Mixtape 1</p>
+  <img class="cassette" src="../assets/cassette.png" alt="School of Rock-cassette">
+  <div class="cover-text"><h1>Het ontstaan van popmuziek</h1>
+  <p class="sub">Van work songs en ragtime tot Rocket 88: de wortels van alles wat daarna komt (tot 1955).</p></div>
+</header>
+<div class="deck" aria-label="Bij dit hoofdstuk">
+  <div class="deck-row"><span class="lbl">Luisteren</span><a class="btn solid deck-spotify" href="https://open.spotify.com/playlist/7N2uEAg6SMOE3nLWw7wFv3" data-embed="https://open.spotify.com/embed/playlist/=generator" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Spotify-playlist</a><a class="btn ghost" href="https://open.spotify.com/playlist/7N2uEAg6SMOE3nLWw7wFv3" target="_blank" rel="noopener">Open in Spotify</a><a class="btn ghost" href="../pdf/mixtape-01.pdf" download>Download pdf</a></div>
+  <div class="deck-embed" hidden></div>
+  <div class="deck-row"><span class="lbl">Les</span><span class="lesson">LessonUp · Mixtape 1: Het ontstaan van popmuziek</span></div>
+  <div class="deck-row"><span class="lbl">Op de kaart</span><div class="deck-genres"></div></div>
+</div>
+
+<section class="flow">
+  <aside class="side-note"><span class="tag">LUISTER MEE</span><div class="qr" data-url="https://open.spotify.com/playlist/7N2uEAg6SMOE3nLWw7wFv3"></div>Alle nummers uit dit hoofdstuk staan op volgorde in de Spotify-playlist bij Mixtape 1.</aside>
+  <p class="intro">Wie vandaag een popsong schrijft, gebruikt bijna vanzelf een akkoordenschema uit de blues, een ritme met de nadruk op de tweede en vierde tel, een songvorm uit de muziekuitgeverijen van New York en een bezetting van gitaar, bas en drums. Al die onderdelen hebben een herkomst. Ze ontstonden tussen ongeveer 1880 en 1955 in de Verenigde Staten, en een groot deel ervan in het zuiden.</p>
+  <p>De mensen die deze muziek maakten, hadden vaak weinig te zeggen over wat er daarna mee gebeurde. Zwarte muzikanten leefden onder segregatie: ze mochten niet in dezelfde zalen spelen, niet op dezelfde radiozenders klinken en kwamen niet in dezelfde hitlijsten als witte artiesten. Toch werd hun muziek de basis van wat de hele wereld later als pop zou kennen. Dat roept de vraag op die in dit hoofdstuk steeds terugkomt: <strong>hoe werd de muziek van het Amerikaanse zuiden, gemaakt door mensen zonder rechten, de basis van de wereldwijde popmuziek?</strong> Bij elke stijl helpen drie kleinere vragen: wie maakte de muziek, wie verdiende eraan, en welk muzikaal kenmerk ging mee naar de volgende stijl?</p>
+
+  <!-- SIDE A -->
+  <header class="opener part first-part" style="background-image:url('https://lh3.googleusercontent.com/j6IjZIFBQOra2tCNG2TXaBB2TIjAnNK5kmSaL0XD1s1g9h4ROm5CRdPX13AmtuMsBGLU00dEG-bRR-Z2U7psShDjVs1FGYk6lPgZB3E')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side A · 1933-nu</p>
+    <h2>Wat is popmuziek?</h2>
+    <p class="sub">Vier definities en één lied dat steeds van eigenaar wisselt.</p>
+    <span class="letter" aria-hidden="true">A</span>
+  </header>
+
+  <p>Het woord pop lijkt eenvoudig. Het is een afkorting van <em>popular</em>, populair. Maar wie probeert te zeggen wat popmuziek precies is, merkt snel dat er verschillende antwoorden mogelijk zijn. Een bruikbaar startpunt is deze werkdefinitie: in pop draait het, anders dan in rock, vooral om het liedje en de productie, en minder om stijl en tekstuele inhoud. Die zin past goed bij een hit uit 1955 of 2025. Of hij ook past bij muziek uit 1920, is een vraag die in dit hoofdstuk steeds terugkomt.</p>
+  <p>Naast die werkdefinitie bestaan er minstens vier manieren om naar pop te kijken. De eerste is de eenvoudigste: <em>pop is wat populair is</em>. Wat veel mensen kopen, streamen en kennen. Dat is meetbaar via hitlijsten, verkoopcijfers en streams, maar het zegt niets over hoe de muziek klinkt.</p>
+  <p>De tweede definitie komt van de Britse musicoloog Philip Tagg. In 1982 zette hij <em>popular music</em> naast twee andere soorten muziek: volksmuziek en kunstmuziek. Volksmuziek wordt door amateurs gemaakt en mondeling doorgegeven. Kunstmuziek wordt opgeschreven en door geschoolde musici uitgevoerd. Popular music is de derde soort: gemaakt door professionals, verspreid via opnames en massamedia, en verkocht op een markt. Volgens die indeling is de blues van Robert Johnson oorspronkelijk volksmuziek, die door de plaat popular music wordt.</p>
+  <p>De derde definitie ziet pop als <em>product</em>. Pop wordt dan van bovenaf gemaakt en verpakt door songwriters, producers en platenmaatschappijen. Het liedje en de productie zijn belangrijker dan de artiest die het zingt. Dat is ook de werkdefinitie van hierboven. De vierde definitie ziet pop als <em>genre</em>. Vanaf de jaren zestig betekent pop: korte songs van drie à vier minuten, een vorm met couplet en refrein, een hook, de zang centraal en gericht op de radio. Pop is in die betekenis het tegenovergestelde van rock, dat zich graag 'echt' en 'authentiek' noemt. Die tegenstelling tussen pop en rock is uitgebreid beschreven door de Britse popsocioloog Simon Frith.</p>
+  <p>Geen van de vier definities dekt alles. Een liedje uit Tin Pan Alley, de New Yorkse straat vol muziekuitgevers die verderop in dit hoofdstuk aan bod komt, past in alle vier. De blues past in bijna geen enkele. Het eerste nummer van deze mixtape laat zien waarom het verschil ertoe doet.</p>
+
+  <div class="head"><p class="label">Track 01 · 1933-nu · Appalachen, New York, Newcastle</p><h3>House of the Rising Sun: zes versies</h3></div>
+  <p><em>House of the Rising Sun</em> is een traditional: een lied zonder bekende maker. Het vertelt over een huis in New Orleans dat iemand ongeluk heeft gebracht. Niemand weet precies wanneer het ontstond. Het lied werd van zanger op zanger doorgegeven, en elke uitvoerder paste de melodie, de tekst en de begeleiding een beetje aan. Dat mondeling doorgeven en steeds opnieuw bewerken heet het <em>folkproces</em>. Wie zes opnames uit verschillende tijden naast elkaar legt, hoort dat proces aan het werk.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">Clarence Ashley &amp; Gwen Foster</span><br>House of the Rising Sun (1933)</div></div>De oudste bekende opname. Twee gitaren, twee stemmen, een vrij ritme en een modale melodie zonder vaste akkoordenreeks.</aside>
+  <p>De oudste bekende opname is van Clarence Ashley en Gwen Foster uit 1933. Het zijn twee witte muzikanten uit de Appalachen, het berggebied in het oosten van de Verenigde Staten. Je hoort twee gitaren en twee stemmen in een vrij ritme. De melodie is modaal: ze volgt nog geen vaste akkoordenreeks, zoals in veel oude volksmuziek. Een paar jaar later zingt Lead Belly het lied, de zwarte zanger en gitarist Huddie Ledbetter. Hij speelt op een twaalfsnarige gitaar en zingt met de frasering van de blues. Het lied verhuist zo van de witte naar de zwarte traditie, en later weer terug.</p>
+  <p>In de jaren vijftig en zestig herontdekten jonge witte muzikanten in New York de oude volksmuziek. In Greenwich Village, een wijk vol cafés en kleine podia, ontstond de <em>folk revival</em>. De zanger en gitarist Dave Van Ronk bedacht daar een nieuw arrangement van <em>House of the Rising Sun</em>, met een dalende baslijn en een akkoordenreeks in mineur. Bijna iedereen die het lied daarna speelde, gebruikte die versie. Een van de jonge muzikanten die het van Van Ronk hoorde, was Bob Dylan. Hij nam het arrangement op voor zijn debuutalbum uit 1962, zonder het te vragen. Van Ronk had het zelf nog willen opnemen. Wie is nu eigenlijk de auteur van een traditional: wie het lied ooit begon, wie het arrangement maakte, of wie het als eerste op de plaat zette?</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">The Animals</span><br>House of the Rising Sun (1964)</div></div>Gebroken akkoorden Am-C-D-F in 6/8, een elektrisch orgel en een opbouw naar een climax. Hier wordt folk pop.</aside>
+  <p>Die vraag werd in 1964 heel concreet. De Britse band The Animals, uit Newcastle, maakte van het lied een elektrische popsong. De gitaar speelt gebroken akkoorden (Am, C, D, F) in een 6/8-maat, het elektrisch orgel van Alan Price speelt een solo, en de zang van Eric Burdon bouwt op naar een climax. Het nummer duurt ruim vier minuten, lang voor een single in die tijd, en werd toch een nummer 1-hit in Engeland en de Verenigde Staten. Op de plaat stond het arrangement op naam van Alan Price alleen. Hij ontving daardoor de inkomsten uit de auteursrechten, wat tot jarenlange ruzie in de band leidde.</p>
+  <p>De laatste versie in deze reeks komt van de Britse rockband Muse, die het lied in de jaren 2000 live speelde. Muse speelt niet de versie van Ashley of Van Ronk, maar die van The Animals. Het arrangement uit 1964 is inmiddels zelf de traditie geworden.</p>
+  <p>Zo laat één lied het verschil zien tussen twee manieren van denken over muziek. In de folktraditie reist een lied mondeling en krijgt het bij elke uitvoerder een nieuw arrangement. Niemand is eigenaar. Met de plaat en het auteursrecht wordt een versie ineens eigendom, en dus geld. Die verschuiving, van gedeeld lied naar verkoopbaar product, is een van de kernen van het ontstaan van popmuziek. Om te begrijpen waar die muziek vandaan kwam, gaan we terug naar de stad waar het lied over gaat.</p>
+
+  <!-- SIDE B -->
+  <header class="opener part" style="background-image:url('https://lh3.googleusercontent.com/8K_lug_L0Dg27sPx1F-GoapoLL6ucN9vC0s4x2fKwZqKfiYFVktG7Rh-hJTGBHaHj_nbKSm76tNZNTNiHZKiLDs_eDXWadUx05OB2IQ')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side B · 1890-1945</p>
+    <h2>New Orleans en het zuiden</h2>
+    <p class="sub">Blues, ragtime, jazz en swing: waar Afrikaanse, Europese en Caribische muziek elkaar raken.</p>
+    <span class="letter" aria-hidden="true">B</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · vóór 1900 · Louisiana</p><h3>Een smeltkroes van stijlen</h3></div>
+  <p>New Orleans ligt aan de monding van de Mississippi, in de staat Louisiana. De stad was lange tijd Frans en daarna Spaans bezit. Pas in 1803 kwam Louisiana in handen van de Verenigde Staten. Daardoor leefden er andere gewoonten dan in de rest van het land. Een van die gewoonten had grote gevolgen voor de muziek. Op een plein aan de rand van de stad, Congo Square, mochten tot slaaf gemaakte Afrikanen tot in de negentiende eeuw op zondag samenkomen om te dansen, te zingen en te trommelen. Nergens anders in de Verenigde Staten was dat toegestaan. Afrikaanse ritmes en zangvormen bleven daardoor in New Orleans langer en openlijker bestaan dan elders.</p>
+  <p>In Louisiana kwamen muzikale tradities samen die nergens anders zo dicht op elkaar zaten. Op de plantages zongen tot slaaf gemaakten <em>work songs</em>: liederen die het ritme van het werk aangaven. Eén zanger zong een regel voor, de groep antwoordde. Die vorm heet <em>call and response</em>, vraag en antwoord. Naast de work songs bestonden <em>field hollers</em>: roepen en zingen van één persoon op het land, met een vrij omgaan met toonhoogte. In de kerk ontstonden <em>spirituals</em> en later gospel, meerstemmige religieuze liederen.</p>
+  <p>Daartegenover stond de Europese muziek. Brassbands speelden marsmuziek, met koperblazers, een strakke 2/4-maat en vaste vormen. Schotse, Ierse en Franse immigranten brachten hun eigen volksmuziek en dansen mee. Uit het Caribisch gebied, vooral Cuba, kwamen ritmes als de habanera, met een kenmerkend accent dat net naast de tel valt. De pianist Jelly Roll Morton, een van de eerste grote jazzmuzikanten uit New Orleans, noemde dat Caribische ritme later de <em>Spanish tinge</em>. Zonder die Spaanse kleur kreeg je volgens hem nooit de juiste smaak in je jazz.</p>
+  <p>Al deze stromingen bestonden naast elkaar en beïnvloedden elkaar. Uit die mengeling groeiden in de decennia rond 1900 drie stijlen die de basis van de popmuziek zouden vormen: blues, ragtime en jazz.</p>
+
+  <div class="head"><p class="label">Track 02 · vanaf ca. 1890 · Mississippi Delta</p><h3>Blues</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/lfto0XzWuEL9hiQSxKn7diUvP1eX3NsOPtnbQIcO_gwls3h3VZYjYak-m2FnkxhGqQrHye5SPQSMUN5d3uhVJFMEzmdYw22bxyLGBiMp" alt="Robert Johnson"><figcaption>Robert Johnson</figcaption></figure>
+  <p>De blues groeide rond 1890 uit de work songs, hollers en spirituals van de zwarte bevolking op het platteland van het zuiden. Een belangrijk gebied was de Mississippi Delta, de vruchtbare vlakte tussen de rivieren Mississippi en Yazoo, waar katoen werd verbouwd. De slavernij was afgeschaft, maar het leven bleef hard. De blues zingt over dat leven: over werk, armoede, liefde, reizen en tegenslag.</p>
+  <p>Muzikaal heeft de blues een aantal duidelijke kenmerken. Het bekendste is het <em>12-matenschema</em>: een vaste reeks van twaalf maten over drie akkoorden, de eerste (I), de vierde (IV) en de vijfde (V) trap van de toonladder. Daarop past een tekst in AAB-vorm. De zanger zingt een regel (A), herhaalt die (A) en geeft dan een antwoord (B). Zo leeft het call and response van de work songs voort in één stem.</p>
+  <p>Het tweede kenmerk zijn de <em>blue notes</em>. Dat zijn tonen die tegen de majeurtoonladder in schuren: de kleine terts, de verminderde kwint en de kleine septiem, gespeeld of gezongen over een majeurakkoord. Bluesmuzikanten zitten vaak net tussen twee tonen in. Op de gitaar buigen ze een snaar omhoog (een <em>bend</em>), en ze gebruiken een ruwe, schurende klank die <em>dirty tone</em> heet. De instrumenten waren eenvoudig en draagbaar: de stem, de gitaar (vaak gespeeld met een buisje of flessenhals over de snaren, de slidegitaar), de mondharmonica en, in de steden, de piano.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/QCNj24pk7VgEJfGa4oatlGoKWAtvcX-9i4PbFcWNWCmOXFbpRNELF8y2wWrNjIR9UPieaup2pmCOP2rWMGFMm8TZ6nhpkdXRw59pWGwY" alt=""><div><span class="who">Robert Johnson</span><br>Cross Road Blues (1936)</div></div>Tel de maten: Johnson houdt zich niet aan precies 12. Delta-bluesmuzikanten volgden de tekst, niet het schema.</aside>
+  <p>De bekendste Delta-bluesmuzikant is Robert Johnson (1911-1938). Hij nam in 1936 en 1937 in totaal 29 nummers op en stierf een jaar later, 27 jaar oud. Over zijn leven is weinig bekend, en daardoor ontstonden legendes. Volgens de bekendste zou hij op een kruispunt zijn ziel aan de duivel hebben verkocht in ruil voor zijn gitaartechniek. In <em>Cross Road Blues</em> (1936) zingt hij over een kruispunt, wat die legende verder voedde.</p>
+  <p>Wie bij <em>Cross Road Blues</em> de maten probeert mee te tellen, merkt dat het schema niet klopt. Johnson rekt een maat op als hij meer tekst kwijt moet, of gaat eerder naar het volgende akkoord. Delta-bluesmuzikanten volgden de tekst, niet een vast schema. Het 12-matenschema als standaard is pas later ontstaan, vooral door opnames en door de elektrische Chicago-blues van na de Tweede Wereldoorlog, waarin een hele band tegelijk moest wisselen. De blues van Johnson werd in de jaren zestig opnieuw ontdekt door Britse rockmuzikanten: Eric Clapton speelde <em>Cross Road Blues</em> in 1968 met zijn band Cream als <em>Crossroads</em>.</p>
+
+  <div class="head"><p class="label">Track 03 · ca. 1895-1918</p><h3>Ragtime</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/A0uJaW03j6gH2E687CcTjKKyVhxWFmmhH5S3JED7yYCGinDZ6TYMpxlvVRTCfl_jhl7ZMz0VU316T6UUPQ3zlDtGRUFpXVG3lThlQhQ" alt="Scott Joplin"><figcaption>Scott Joplin</figcaption></figure>
+  <p>Terwijl de blues mondeling werd doorgegeven, ontstond er tegelijk een Afro-Amerikaanse muziek die juist op papier werd gezet: ragtime. Het was de eerste Afro-Amerikaanse muziek die gecomponeerd, genoteerd en als bladmuziek verkocht werd. Rond 1900 stond in veel Amerikaanse huiskamers een piano, en ragtime werd thuis gespeeld van gedrukte noten. Daarmee werd het ook een van de eerste vormen van zwarte muziek waar een wit publiek op grote schaal geld aan uitgaf.</p>
+  <p>Ragtime is een brugstuk tussen twee tradities. Van de Europese muziek komen de notatie, de vorm en de piano. Van de Afro-Amerikaanse muziek komt de <em>syncope</em>: een accent tussen of vóór de tel. De verdeling over de handen laat dat goed horen. De linkerhand speelt een mars-bas: een lage toon op tel 1 en 3 en een akkoord op tel 2 en 4. Dat patroon is de voorloper van de stride-piano uit de jazz. De rechterhand speelt daar syncopen overheen, tegen de tel in. Dat 'gescheurde' ritme gaf de stijl haar naam: <em>ragged time</em>.</p>
+  <p>Ook de vorm komt uit de marsmuziek. Een ragtime bestaat uit <em>strains</em>: afgeronde delen van zestien maten, die elk een eigen melodie hebben. Een gangbare volgorde is AABBACCDD. Het derde deel, het trio, staat vaak in een andere toonsoort, de subdominant. De maatsoort is 2/4, net als bij een mars.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/iuKHgVzn2KyKX7CDwu10QQ_eXg4zqUKFHs6HFcDJY757rAQv4P3BlOlHgW2bAFeEyRr-2cw6i7df6rhkMXV-Z54KXbRHjp8edXrI5MU" alt=""><div><span class="who">Scott Joplin</span><br>The Entertainer (1902)</div></div>Hoor je waar de B-strain begint? Luister naar de linkerhand: die is een marsorkest in het klein.</aside>
+  <p>De belangrijkste ragtimecomponist was Scott Joplin. Hij woonde een tijd in Sedalia, Missouri, waar zijn <em>Maple Leaf Rag</em> in 1899 werd uitgegeven. Die rag verkocht als bladmuziek zeer goed. In 1902 volgde <em>The Entertainer</em>. Joplin zag ragtime als serieuze muziek en schreef ook een opera, <em>Treemonisha</em>. Hij stierf in 1917, toen de belangstelling voor ragtime al afnam. <em>The Entertainer</em> werd pas in 1973 wereldberoemd, toen het als titelmuziek werd gebruikt in de film <em>The Sting</em>.</p>
+  <p>Wie <em>The Entertainer</em> na <em>Cross Road Blues</em> hoort, hoort twee werelden. De blues is vrij, vol blue notes en volgt de tekst. Ragtime is gecomponeerd, strak in vorm en precies genoteerd. Beide stijlen komen samen in de stad waar dit hoofdstuk begon.</p>
+
+  <div class="head"><p class="label">Track 04 · ca. 1900-1920 · New Orleans</p><h3>Back to New Orleans</h3></div>
+  <p>Rond 1900 was het zuiden van de Verenigde Staten wettelijk gesegregeerd. De Jim Crow-wetten, genoemd naar een karikatuur uit de minstrelshows, hielden zwart en wit gescheiden in scholen, restaurants en treinen, en hielden zwarte burgers weg bij de verkiezingen. In de muziek was er meer ruimte. Muzikanten konden er werk vinden, en in New Orleans speelden ze op straat, bij feesten, op rivierboten en bij begrafenissen.</p>
+  <p>Die begrafenissen, de <em>jazz funerals</em>, laten goed zien hoe in New Orleans verschillende tradities samenkwamen. Op weg naar de begraafplaats speelde een brassband een langzame hymne. Op de terugweg speelde dezelfde band een swingende versie, en liepen mensen dansend mee. Zo raakten de kerk, met haar hymnes en gospel, en de straat, met haar marsen en blues, met elkaar verbonden. <em>When the Saints Go Marching In</em> is zo'n hymne die de brassbands op beide manieren speelden.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">Brassband, New Orleans</span><br>When the Saints Go Marching In</div></div>Hoor je de collectieve improvisatie? De trompet speelt de melodie, de klarinet versiert erboven, de trombone glijdt eronder.</aside>
+  <p>Uit de brassbands groeide de klassieke bezetting van de New Orleans-jazz. Voorop staat de <em>frontline</em> met drie blazers die elk een eigen taak hebben. De cornet of trompet speelt de melodie. De klarinet speelt daarboven een snelle, versierende tegenstem. De trombone speelt eronder een tegenmelodie en glijdt met glissandi van toon naar toon. Achter hen speelt een ritmesectie met banjo, tuba of contrabas en drums.</p>
+  <p>Het bijzondere is dat de drie blazers tegelijk improviseren. Iedereen kent de melodie en het akkoordenschema, en iedereen vult zijn eigen rol vrij in. Dat heet <em>collectieve improvisatie</em>. Het klinkt druk, maar wie luistert hoort dat de drie lijnen elkaar zelden in de weg zitten. Die manier van samenspelen werd het geluid van een nieuwe stijl.</p>
+
+  <div class="head"><p class="label">Track 05 · ca. 1897-1917 · Storyville</p><h3>Jass</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/hoNJ4_Am-n50uQh65n9VKbj1dYV0maIaMVviMmTLHV_BIRd2VF4MTwViX3qYdEVIP-m7GN7fAWFr93l66GdHugDt42rpqw_wtP_N0Gk" alt="Original Dixieland Jass Band"><figcaption>Original Dixieland Jass Band</figcaption></figure>
+  <p>In 1897 wees het stadsbestuur van New Orleans een wijk aan waar prostitutie werd gedoogd. De wijk kreeg de naam Storyville, naar het raadslid Sidney Story dat het voorstel had gedaan. In de bordelen, bars en danszalen van Storyville was veel werk voor muzikanten. Voor zwarte muzikanten was dat extra belangrijk: door de segregatie konden ze in veel andere zalen niet terecht.</p>
+  <p>De muziek die daar klonk, heette later New Orleans jazz, ook wel Dixieland of hot jazz. Het woord jazz werd eerst als <em>jass</em> geschreven. Het was straattaal met een seksuele lading. Waar het woord precies vandaan komt, is nog steeds omstreden. In de clubs van Storyville was veel ruimte om te experimenteren. Bands speelden urenlang voor dansend publiek en konden een nummer zo lang laten duren als ze wilden. Improvisatie werd zo een kernwaarde van de muziek.</p>
+  <p>Vergeleken met de brassband was de jazzband kleiner, sneller en losser. Er was meer ruimte voor solo's: een muzikant die naar voren stapte en een paar rondes van het schema alleen speelde. Een van de jongens die deze muziek op straat hoorde, was Louis Armstrong, geboren in 1901 in een van de armste wijken van New Orleans. Als kind verkocht hij kolen, en ondertussen luisterde hij naar de bands. Later werd hij de trompettist die de solo centraal zette in de jazz. Met zijn groepen de Hot Five en Hot Seven nam hij tussen 1925 en 1928 platen op waarop het accent verschuift van collectieve improvisatie naar de virtuoze solist. Jazz krijgt in Mixtape 5 (Jazz Festival) een eigen hoofdstuk.</p>
+
+  <div class="head"><p class="label">Track 06 · 1917</p><h3>1917: jazz gaat op reis</h3></div>
+  <p>Het jaar 1917 is een keerpunt. In februari van dat jaar verscheen de eerste plaat met jazz: <em>Livery Stable Blues</em> van de Original Dixieland Jass Band, opgenomen in New York. De muzikanten kwamen uit New Orleans, maar ze waren wit. De plaat verkocht goed, en de band werd beroemd als 'de uitvinders van de jazz'. De zwarte muzikanten die de stijl hadden ontwikkeld, kwamen pas later op de plaat.</p>
+  <p>Dat patroon is belangrijk voor de rest van dit hoofdstuk. Zwarte muzikanten vernieuwen, en een witte band of artiest zorgt voor de commerciële doorbraak en verdient er het meeste aan. Het gebeurt opnieuw bij swing en opnieuw bij rock-'n-roll.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">George M. Cohan</span><br>Over There (1917)</div></div>Dit is geen jazz maar een Tin Pan Alley-oorlogslied. Vergelijk het ritme met de Saints: waar zit de swing?</aside>
+  <p>In april 1917 gingen de Verenigde Staten de Eerste Wereldoorlog in. Het populairste lied van dat moment was <em>Over There</em> van George M. Cohan, een vrolijk marslied over de Amerikaanse soldaten die naar Europa zouden gaan. Het is geen jazz, maar een product van Tin Pan Alley, de muziekindustrie van New York. Het ritme is recht en strak als een mars. Wie het vergelijkt met <em>When the Saints Go Marching In</em>, hoort wat swing is, juist omdat het hier ontbreekt. Amerikaanse soldaten en legerorkesten brachten in de oorlogsjaren wel de nieuwe Amerikaanse muziek mee naar Europa.</p>
+  <p>Ook in New Orleans veranderde er veel. In november 1917 werd Storyville gesloten op aandringen van de Amerikaanse marine, die een marinebasis in de stad had en de matrozen uit de wijk wilde houden. Veel muzikanten verloren hun werk en trokken naar het noorden, naar Chicago en New York. Ze waren niet de enigen. Tussen 1910 en 1970 verhuisden miljoenen zwarte Amerikanen uit het zuiden naar de industriesteden in het noorden, op zoek naar werk en weg van de Jim Crow-wetten. Die volksverhuizing heet de <em>Great Migration</em>. De migranten namen hun muziek mee. Chicago werd in de jaren twintig de nieuwe hoofdstad van de jazz, en na de Tweede Wereldoorlog van de elektrische blues.</p>
+
+  <div class="head"><p class="label">Track 07 · ca. 1930-1945 · New York, Kansas City</p><h3>Swing en de big band</h3></div>
+  <p>In de jaren dertig werd jazz de populaire dansmuziek van heel Amerika. De kleine New Orleans-band groeide uit tot de <em>big band</em>, met vijftien of meer muzikanten. Zo'n orkest is verdeeld in secties: saxofoons, trompetten, trombones en een ritmesectie met piano, gitaar, contrabas en drums. Met zoveel muzikanten werkt collectieve improvisatie niet meer. Daarom kreeg de arrangeur een centrale rol. Arrangeurs als Fletcher Henderson en Don Redman schreven korte, herhaalde motieven, <em>riffs</em>, en lieten de secties elkaar beantwoorden: de saxen spelen een zin, het koper antwoordt. Het call and response van de work songs klinkt hier terug, nu tussen groepen blazers.</p>
+  <p>Ook het ritme veranderde. In de swing worden de achtste noten ongelijk gespeeld, lang-kort: de <em>swing-achtsten</em>. De bas speelt geen mars-bas op 1 en 3 meer, maar loopt gelijkmatig op alle vier de tellen, de <em>walking bass</em>. De gitaar verving de banjo in de ritmesectie. Het resultaat is een ritme dat soepeler en lichter loopt dan de jazz uit New Orleans, en waar je makkelijk op kunt dansen.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/NoZYNMXmbABgs4mqavwbBvHiFl-puAfzlf0PCzV6GuDsRctXlOs4ansKUKYvNCWiPm9SlHQfcVS6Bp16SfX6rPOyKSsD2iphIxQ_Bky5" alt=""><div><span class="who">Duke Ellington Orchestra</span><br>Take the "A" Train (1941)</div></div>Compositie van Billy Strayhorn, in AABA-vorm. Hoor hoe de saxen en het koper elkaar beantwoorden.</aside>
+  <p>De grote zwarte orkesten liepen voorop. Duke Ellington leidde vanaf eind jaren twintig het huisorkest van de Cotton Club in Harlem, New York. Count Basie kwam uit Kansas City, waar een stevige, bluesachtige vorm van swing werd gespeeld. <em>Take the "A" Train</em> (1941) werd de herkenningsmelodie van Ellingtons orkest. Het nummer is geschreven door Billy Strayhorn, Ellingtons vaste medecomponist, en verwijst naar de metrolijn die naar Harlem reed. De vorm is AABA: een melodie die twee keer klinkt, een contrasterend middenstuk (de brug) en dan weer de eerste melodie. Die vorm komt uit Tin Pan Alley en komt verderop in dit hoofdstuk terug.</p>
+  <p>Toch werd niet een zwarte bandleider de 'King of Swing', maar de witte klarinettist Benny Goodman. Zijn arrangementen kwamen voor een groot deel van Fletcher Henderson, de zwarte bandleider die de big-bandstijl mee had bedacht. Tegelijk was Goodman een van de eersten die een gemengde band op het podium zette. Vanaf 1936 speelden de zwarte musici Teddy Wilson (piano) en Lionel Hampton (vibrafoon) in zijn kleine groepen. In 1938 gaf Goodman een concert in Carnegie Hall, de beroemdste concertzaal van New York. Jazz had de danszaal verlaten en de concertzaal bereikt.</p>
+  <p>Swing was dansmuziek voor een massapubliek, verspreid via de radio, platen en dansorkesten die het hele land door toerden. Met uitgevers, platenmaatschappijen, radiozenders en bekende sterren was hier voor het eerst een echte popmuziekindustrie ontstaan.</p>
+  <aside class="side-quote">"Ach, swing… wij noemden het syncopen, toen ragtime, toen blues, toen jazz. Nu is het swing. Die blanken maken er een puinhoop van."<span>Louis Armstrong</span></aside>
+  <p>Louis Armstrong vatte die ontwikkeling spottend samen. Volgens hem was het steeds dezelfde muziek: eerst heette het syncopen, toen ragtime, toen blues, toen jazz en nu swing. Alleen het etiket veranderde, en wie eraan verdiende. Dat roept een vraag op die bij elke stijl in dit boek terugkomt: is een genre een muzikale categorie, of een commerciële?</p>
+
+  <!-- SIDE C -->
+  <header class="opener part" style="background-image:url('https://lh3.googleusercontent.com/rqMwiEl5Z_HHBCuRvSkpBS6JtYwIJ6i4ECyrb4RJZdiENdG4pEKIOpA4RKSoYZivHGf4kt0afFGrF3-XWOEDQ-W5ZMM1KqXbNvUa3YI')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side C · 1885-1959</p>
+    <h2>Country, Tin Pan Alley en rock-'n-roll</h2>
+    <p class="sub">De witte tradities, de muziekindustrie, en de botsing die alles verandert.</p>
+    <span class="letter" aria-hidden="true">C</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · vóór 1920 · Appalachen</p><h3>Country en folk</h3></div>
+  <p>Ook witte immigranten brachten muziek mee naar Amerika. Immigranten uit Schotland, Engeland en Ierland vestigden zich vanaf de achttiende eeuw in de Appalachen, het bergachtige gebied in het oosten van de Verenigde Staten. Ze namen hun liederen en dansen mee. Er waren <em>ballads</em>, lange verhalende liederen over het zware leven, over liefde, moord en ongeluk. En er was dansmuziek, om dat zware leven even te vergeten.</p>
+  <p>Die dansmuziek had vaste ritmes. De <em>jig</em> staat in 6/8: twee zware tellen per maat, elk verdeeld in drie. De <em>reel</em> staat in 4/4 of 2/2 en loopt in gelijkmatige, snelle noten. Het belangrijkste instrument was de fiddle, de viool zoals die in de volksmuziek wordt gespeeld. Daarnaast klonk de banjo, en later kwamen de gitaar en de accordeon erbij. Al die muziek samen kreeg de verzamelnaam Appalachian music of mountain music.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">Traditional</span><br>Swallowtail Jig</div></div>Tel mee in 6/8: twee zware tellen per maat, elk verdeeld in drie.</aside>
+  <p>De banjo laat zien dat deze witte traditie niet los stond van de zwarte. Het instrument is Afro-Amerikaans van oorsprong, afgeleid van West-Afrikaanse luiten. Het kwam in de witte muziek terecht via de <em>minstrelshows</em> van de negentiende eeuw: voorstellingen waarin witte artiesten met zwart geschminkte gezichten (<em>blackface</em>) zwarte Amerikanen belachelijk maakten. Dat is een pijnlijke herkomst, maar wel een die laat zien hoe verweven de tradities waren.</p>
+  <p>Country en blues zijn nooit zo gescheiden geweest als de platenindustrie later deed voorkomen. In de jaren twintig verkochten platenmaatschappijen muziek in twee aparte catalogi. Muziek van zwarte artiesten heette <em>race records</em>, muziek van witte artiesten uit het zuiden heette <em>hillbilly records</em>. In werkelijkheid speelden zwarte en witte muzikanten op het platteland vaak dezelfde liedjes, op dezelfde instrumenten. Het onderscheid zei meer over de markt en over segregatie dan over de muziek.</p>
+
+  <div class="head"><p class="label">Track 02 · 1920-1950 · Nashville</p><h3>Made in America</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/2_aDQpOe9-9URyYmYOgBsSOLOWVuCrx7cyPFvuZqWBNWkb1xIfPYG0ktx81XW3xwMD7Uz_pMbKxwY8ANRsJf2wm9uNrY_SucyRMWkXq2" alt="Hank Williams"><figcaption>Hank Williams</figcaption></figure>
+  <p>In de jaren twintig werd mountain music country. Twee technieken maakten dat mogelijk: de radio en de grammofoonplaat. In 1927 nam producer Ralph Peer in Bristol, op de grens van Tennessee en Virginia, een reeks opnames op die als het begin van de commerciële country gelden. Daarbij waren de Carter Family en Jimmie Rodgers, die de eerste sterren van het genre werden. Al in 1925 was in Nashville, Tennessee, het radioprogramma begonnen dat later de <em>Grand Ole Opry</em> zou heten. Het programma bestaat nog steeds en maakte Nashville tot de hoofdstad van de country.</p>
+  <p>Vanaf de jaren veertig ontstond een nieuwe, snelle variant: <em>bluegrass</em>. De naam komt van de band van Bill Monroe, de Blue Grass Boys. Monroe kwam uit Kentucky, de 'Blue Grass State'. Hij speelde mandoline en zong hoog en schel. In 1945 kwam banjospeler Earl Scruggs uit North Carolina bij zijn band. Scruggs speelde met drie vingers, in snelle patronen van acht noten per maat, de <em>rolls</em>. Die driefingertechniek werd de standaard voor de bluegrassbanjo.</p>
+  <aside class="side-note"><span class="tag">KIJKTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">Flatt &amp; Scruggs</span><br>Foggy Mountain Breakdown (Grand Ole Opry, 1965)</div></div>Let op Scruggs' rechterhand: drie vingers, rolls van acht noten per maat.</aside>
+  <p>Scruggs en zanger-gitarist Lester Flatt verlieten Monroe in 1948 en begonnen een eigen band. Hun instrumentale nummer <em>Foggy Mountain Breakdown</em> uit 1949 werd een van de bekendste bluegrassstukken. Het werd in 1967 gebruikt in de film <em>Bonnie and Clyde</em>.</p>
+  <p>De belangrijkste countryzanger van deze periode was Hank Williams. Hij schreef liedjes over eenzaamheid, drank en liefdesverdriet, met eenvoudige teksten die iedereen begreep. Daarmee werd hij de blauwdruk van de country-singer-songwriter. Williams stierf op 1 januari 1953, nog geen dertig jaar oud.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/D5NWjUoXkaovhUb9WDPE24at49Un-a_YwAZFPUoJca3KDo5yGg_10UkrtoNipkTqVc9AXkxAqTSLtF9phEN9H--7-ddlba8mz4QpfNM" alt=""><div><span class="who">Hank Williams</span><br>Lovesick Blues (1949)</div></div>Een Tin Pan Alley-lied uit 1922, gezongen met een jodel en een bluesbreak. Drie tradities in één plaat.</aside>
+  <p>Zijn doorbraak kwam in 1949 met <em>Lovesick Blues</em>. Dat nummer laat goed zien hoe gemengd country al was. Het is geen volksliedje uit de bergen, maar een Tin Pan Alley-lied uit 1922. Williams zingt het met een jodel, een techniek die in de country populair was geworden via Jimmie Rodgers. En in de begeleiding zit een bluesbreak. Drie tradities in één plaat: de New Yorkse muziekindustrie, de witte country en de zwarte blues.</p>
+
+  <div class="head"><p class="label">Track 03 · ca. 1885-1950 · New York</p><h3>Tin Pan Alley</h3></div>
+  <figure class="side-fig"><img src="https://lh3.googleusercontent.com/z5EjucO13hMsK1_CjMfjCjCe0NVmEGP9YaCIzbeXcmgzSxcQi9mFNFYbDWFo-ZPw_0uc-nN17D0RSJIpqB9QnGC09oGMqPZOC3xIaO8W" alt="Irving Berlin"><figcaption>Irving Berlin</figcaption></figure>
+  <p>Terwijl in het zuiden blues, jazz en country ontstonden, werd in New York het liedje een product. Rond 1885 vestigden zich aan West 28th Street in Manhattan steeds meer muziekuitgevers. Uit de open ramen klonk de hele dag het geluid van piano's waarop nieuwe liedjes werden geprobeerd. Volgens een bekend verhaal klonk dat als gerammel met blikken pannen, en zo kreeg de straat de naam Tin Pan Alley.</p>
+  <p>Tin Pan Alley werkte als een lopende band. Songwriters schreven liedjes, uitgevers drukten ze als bladmuziek en zogenaamde <em>song pluggers</em> speelden ze voor in warenhuizen en theaters, zodat het publiek ze zou kopen. Het geld kwam uit de verkoop van bladmuziek en uit het auteursrecht. In 1914 werd de ASCAP opgericht, een organisatie die voor componisten en uitgevers geld inde wanneer hun liedjes werden uitgevoerd. Tin Pan Alley gebruikte alle stijlen die populair waren, van ragtime tot jazz en blues, maar streek ze glad voor een breed publiek.</p>
+  <p>Het standaardliedje van Tin Pan Alley had een vaste vorm: het lied van 32 maten in AABA-vorm. Een melodie van acht maten (A) klinkt twee keer, daarna komt een contrasterende brug (B) en ten slotte weer A. Die vorm is eenvoudig te onthouden en te herhalen, en hij bleef lang in gebruik. Veel jazzstandards zijn AABA, en ook de Beatles schreven nog songs in die vorm, zoals <em>Yesterday</em> (zie Mixtape 3).</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/KdY30U_07iNA7cQ2hyYEgw6gFq5-jbzdB_zDT5QkeeNO2Ya28PuS5PZ3vVuhCEXdNy8MdQjrbfGAqhaa6V_ie0AvRoOCg9SaoEKhzhU" alt=""><div><span class="who">Bing Crosby</span><br>White Christmas (Irving Berlin)</div></div>Luister naar de vorm: waar begint de brug (B)? Crosby's crooning bestaat dankzij de microfoon.</aside>
+  <p>De grote namen van Tin Pan Alley waren Irving Berlin, George Gershwin, Cole Porter en het duo Rodgers &amp; Hammerstein. Irving Berlin had zijn eerste grote hit in 1911 met <em>Alexander's Ragtime Band</em>. Hij kon zelf nauwelijks noten lezen en speelde piano alleen in Fis-majeur, op de zwarte toetsen. Om in andere toonsoorten te spelen gebruikte hij een transponeerpiano, waarvan je het klavier met een hendel kon verschuiven. Toch schreef hij honderden liedjes. Zijn <em>White Christmas</em> werd in 1942 gezongen door Bing Crosby in de film <em>Holiday Inn</em> en geldt als de best verkochte single ooit.</p>
+  <p>Crosby laat ook zien hoe techniek de muziek veranderde. Voor de microfoon moest een zanger hard en luid zingen om een zaal te bereiken. Met een microfoon kon een zanger zacht en dichtbij zingen, alsof hij naast de luisteraar stond. Die zangstijl heet <em>crooning</em>, en Crosby was er de bekendste vertegenwoordiger van.</p>
+  <p>Tin Pan Alley is de uitvinding van pop als product. De song staat los van de uitvoerder en kan door iedereen gezongen worden. Dat is precies de werkdefinitie uit het begin van dit hoofdstuk: het draait om het liedje en de productie. Het model van songwriters en uitgevers in één gebouw of straat leefde voort in de popindustrie van later. Daarover gaat Mixtape 12 (De hitfabriek).</p>
+
+  <div class="head"><p class="label">Track 04 · 1947-1954 · Memphis</p><h3>Van zwarte rock-'n-roll…</h3></div>
+  <p>Na de Tweede Wereldoorlog waren big bands te duur geworden om mee te toeren. Een kleinere bezetting met een gitaar, een bas, drums en één saxofoon kon net zoveel lawaai maken, zeker met elektrische versterking. In de zwarte muziek ontstond zo <em>rhythm-and-blues</em>: luide, dansbare muziek voor een stedelijk publiek. Rock-'n-roll groeide daaruit, met invloeden uit jump blues, boogie-woogie, gospel en country.</p>
+  <p>Twee muzikale kenmerken maken rock-'n-roll herkenbaar. Het eerste is de <em>backbeat</em>: de nadruk op tel 2 en 4, luid gespeeld op de snaredrum. In de mars en de ragtime lag het zwaartepunt op 1 en 3. Nu verschuift het naar de tellen ertussen, en dat geeft de muziek haar stuwende karakter. Het tweede kenmerk is de gitaarriff met een herkenbaar motief: de <em>hook</em>, een kort stukje muziek dat in je hoofd blijft hangen.</p>
+  <p>De pioniers van de rock-'n-roll waren zwart. Sister Rosetta Tharpe speelde al in de jaren veertig gospel op een elektrische gitaar, met een backbeat. Haar <em>Strange Things Happening Every Day</em> uit 1944 wordt vaak genoemd als een van de vroegste voorbeelden van rock-'n-roll. Over haar lees je meer in Mixtape 10 (Vrouwen in de popmuziek). Fats Domino uit New Orleans, Chuck Berry, Little Richard en Bo Diddley maakten in de jaren vijftig de nummers die de stijl zouden bepalen.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/OJ6XNvikJMcCmiZvZSSepYI_3D2YPyCnyXDhWP2k9MG6OWLLFWz3yZC-l1WntvkPZS_s54sWFLlYw-ghWRs80seifDnjW5WbDqjRTZZM" alt=""><div><span class="who">Jackie Brenston &amp; his Delta Cats</span><br>Rocket 88 (1951)</div></div>Vaak 'de eerste rock-'n-roll-plaat' genoemd. De vervormde gitaar kwam van een kapotte versterker, volgepropt met papier.</aside>
+  <p>Een plaat die vaak de eerste rock-'n-roll-plaat wordt genoemd, is <em>Rocket 88</em> uit 1951. Op het label staat Jackie Brenston &amp; his Delta Cats, maar de band was eigenlijk de Kings of Rhythm van Ike Turner. Ze namen het nummer op in Memphis, bij Sam Phillips, die een paar jaar later Elvis Presley zou ontdekken. Onderweg naar de studio was de gitaarversterker beschadigd geraakt. De gitarist propte de kapotte luidspreker vol met papier, en daardoor klonk de gitaar vervormd en ruw. Dat geluid, dat eigenlijk een ongeluk was, werd later met opzet nagemaakt.</p>
+  <p>Of <em>Rocket 88</em> echt de eerste rock-'n-roll-plaat is, is een discussie zonder winnaar. Sister Rosetta Tharpe speelde al jaren eerder elektrische gitaar met een backbeat, en in de rhythm-and-blues van eind jaren veertig zitten veel kandidaten. Rock-'n-roll heeft geen geboortedatum. Het is het moment waarop de lijnen uit dit hoofdstuk samenkomen: de blues, de swing, de gospel en de country.</p>
+
+  <div class="head"><p class="label">Track 05 · 1954-1959</p><h3>…naar witte rock-'n-roll</h3></div>
+  <p>Begin jaren vijftig kwamen er een paar technische en maatschappelijke veranderingen samen. De eerste waren technisch. De massieve elektrische gitaar, zoals de Fender die Leo Fender vanaf 1950 in serie bouwde, kon luid spelen zonder rondzingen. Versterkers en microfoons werden beter. En de 45-toerensingle, in 1949 door RCA geïntroduceerd, was klein, stevig en goedkoop. De tweede verandering was welvaart. Na de oorlog ging het de Verenigde Staten economisch goed. Witte tieners hadden voor het eerst zakgeld, een eigen radio en een platenspeler. Ze vormden een nieuwe markt, met een eigen smaak. Over die jeugdcultuur gaat Mixtape 2 (Jeugdculturen 1950-1980).</p>
+  <p>De discjockey Alan Freed speelde daarin een sleutelrol. Hij draaide vanaf 1951 in Cleveland rhythm-and-blues van zwarte artiesten voor een gemengd en steeds meer wit publiek. Hij maakte de term <em>rock and roll</em> populair, die in zwarte muziek al langer voorkwam. Zo hoorden witte jongeren muziek die op de meeste witte zenders niet te horen was.</p>
+  <p>De muziekindustrie reageerde zoals in 1917 en in de swing. Witte artiesten namen covers op van zwarte hits, en scoorden daarmee hoger in de hitlijsten. Pat Boone nam in 1955 en 1956 brave versies op van <em>Ain't That a Shame</em> van Fats Domino en <em>Tutti Frutti</em> van Little Richard. Hij verdiende er meer aan dan de originele artiesten. Veel zwarte pioniers hadden hun rechten verkocht of kregen weinig uitbetaald. Witte radiozenders, zalen en hitlijsten bleven intussen voor een groot deel gesegregeerd.</p>
+  <aside class="side-note"><span class="tag">KIJKTIP</span><div class="rec" style="grid-template-columns:1fr"><div><span class="who">Bill Haley &amp; His Comets</span><br>Rock Around the Clock (1954)</div></div>Luister naar de 12-maten blues onder de 'witte' verpakking.</aside>
+  <p>Het nummer dat rock-'n-roll bij het grote publiek bracht, was <em>Rock Around the Clock</em> van Bill Haley &amp; His Comets. Het werd in 1954 opgenomen en sloeg pas aan toen het in 1955 werd gebruikt in de film <em>Blackboard Jungle</em>, over opstandige jongeren op een school in New York. Daarna stond het wekenlang op nummer 1 in de Verenigde Staten. Wie goed luistert, hoort onder de verpakking van een witte countryband een 12-maten blues.</p>
+  <p>Ook andere witte muzikanten maakten rock-'n-roll, zoals Buddy Holly en Elvis Presley. Presley nam in 1954 bij Sam Phillips in Memphis zijn eerste single op: <em>That's All Right</em>, een blues van de zwarte zanger Arthur Crudup. Op de B-kant stond een bluegrassnummer van Bill Monroe, <em>Blue Moon of Kentucky</em>, in een snelle versie. Zwarte blues en witte country op één single: zo was rock-'n-roll ook muzikaal een ontmoeting. Datzelfde hoor je bij Chuck Berry, wiens <em>Maybellene</em> (1955) gebaseerd is op de oude countryfiddlemelodie <em>Ida Red</em>.</p>
+  <p>Een veelgehoorde misvatting is dat Elvis de rock-'n-roll heeft uitgevonden. Hij maakte de muziek bekend bij een wit publiek, en daarmee wereldwijd. Maar de muziek die hij zong, bestond al: in de blues van de Delta, de gospel van Sister Rosetta Tharpe, de rhythm-and-blues van Memphis en de country van Nashville. Louis Armstrong had het in de jaren dertig al gezegd: het etiket verandert, en wie eraan verdient. Hoe de muziek van het zuiden de basis werd van de wereldwijde popmuziek, is daarmee ook een verhaal over wie de erkenning en het geld kreeg. Het verhaal gaat verder in Mixtape 2, waar rock-'n-roll de muziek wordt van een nieuwe generatie.</p>
+</section>
+
+<section class="back">
+  <h4 class="backhead">Begrippen</h4>
+  <dl class="terms">
+    <div><dt>Blue note</dt><dd>Verlaagde terts, kwint of septiem, vaak met een bend gezongen of gespeeld</dd></div>
+    <div><dt>12-maten blues</dt><dd>I–IV–V-schema over 12 maten met een AAB-tekst</dd></div>
+    <div><dt>Syncope</dt><dd>Accent tussen of vóór de tel</dd></div>
+    <div><dt>Strain</dt><dd>Afgerond deel van 16 maten in ragtime en marsmuziek</dd></div>
+    <div><dt>Frontline</dt><dd>De melodie-instrumenten van een New Orleans-band: cornet, klarinet, trombone</dd></div>
+    <div><dt>Swing-achtsten</dt><dd>Ongelijke achtste noten, lang–kort</dd></div>
+    <div><dt>AABA</dt><dd>Songvorm van 32 maten: twee keer A, een brug (B), en A</dd></div>
+    <div><dt>Backbeat</dt><dd>Nadruk op tel 2 en 4</dd></div>
+    <div><dt>Hook</dt><dd>Kort, herkenbaar motief dat blijft hangen</dd></div>
+    <div><dt>Folkproces</dt><dd>Het mondeling doorgeven en steeds opnieuw bewerken van een lied</dd></div>
+  </dl>
+
+  <h4 class="backhead">Verder luisteren en kijken</h4>
+  <div class="links">
+    <div class="link-card"><div class="qr" data-url="https://open.spotify.com/playlist/7N2uEAg6SMOE3nLWw7wFv3"></div>
+      <div><span class="tag">SPOTIFY · PLAYLIST</span><p>Alle nummers uit dit hoofdstuk, in de volgorde van de tekst. Scan de code met je telefoon.</p><p class="url">open.spotify.com/playlist/7N2uEAg6SMOE3nLWw7wFv3</p></div></div>
+    <div class="link-card lesson"><div><span class="tag">LESSONUP · LES</span><p><strong>Mixtape 1: Het ontstaan van popmuziek</strong></p><p>De les bij dit hoofdstuk, met beeld en fragmenten.</p></div></div>
+  </div>
+
+  <footer class="colofon">
+    <p>Platenhoezen: Apple Music.</p>
+    <p>School of Rock · De geschiedenis van popmuziek · ArtEZ University of the Arts</p>
+  </footer>
+</section>
+<nav class="pager" aria-label="Andere mixtapes"><span></span><a class="next" href="02.html"><small>Mixtape 2 →</small><b>Jeugdculturen 1950-1980</b></a></nav>
+
+</div><footer class="sitefoot"><div class="wrap"><p>School of Rock · De geschiedenis van popmuziek in mixtapes · Jan-Wolter Smit · ArtEZ University of the Arts</p><p><a href="../pdf/school-of-rock-reader.pdf">Download de reader (pdf)</a></p></div></footer><script src="../assets/player.js"></script><script src="../assets/chapter.js"></script><script>document.querySelectorAll('.qr[data-url]').forEach(function(el){if(typeof QRCode==='undefined'){return;}new QRCode(el,{text:el.dataset.url,width:256,height:256,colorDark:'#1C1B19',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.M});});</script></body></html>

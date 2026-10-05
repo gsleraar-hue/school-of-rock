@@ -1,0 +1,334 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content=".."><title>Mixtape 6 · Fear of a Black Planet · School of Rock</title><link rel="icon" href="../assets/cassette.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="../assets/site.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><style>
+  /* Eén thema met opzet: een boek in de huisstijl van de lessen. */
+  :root {
+    color-scheme: light;
+    --page: #FFFFFF;
+    --ink: #1C1B19;
+    --ink-soft: #55524C;
+    --line: #DDD8CE;
+    --red: #D63A31;
+    --yellow: #F2D500;
+    --display: "Oswald", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "Space Mono", "Courier New", monospace;
+    --hand: "Caveat", "Comic Sans MS", cursive;
+    --text: 34rem;
+    --margin: 13rem;
+    --gap: 2.25rem;
+  }
+  html { background: var(--page); }
+  body { background: var(--page); color: var(--ink); font: 400 16px/1.65 var(--body); padding-inline: 16px; padding-block: 0 64px; }
+  .book { max-width: calc(var(--text) + var(--gap) + var(--margin)); margin: 0 auto; }
+  p { margin: 0; }
+  em { font-style: italic; }
+  a { color: inherit; text-decoration-color: var(--red); text-underline-offset: 2px; }
+
+  /* Hoofdstukopening en delen */
+  .opener { position: relative; overflow: hidden; color: #FFFFFF; box-sizing: border-box; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; }
+  .opener .wash { position: absolute; inset: 0; background-color: rgba(214,58,49,.62); }
+  .opener .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 55%; background-color: rgba(28,27,25,.38); }
+  .opener .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background: var(--yellow); }
+  .opener h1, .opener h2, .opener .sub, .part .kicker { position: relative; }
+  .opener .kicker { font: 12px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--yellow); }
+  .opener h1, .opener h2 { font-family: var(--display); font-weight: 600; line-height: 1.02; margin: 0; text-wrap: balance; }
+  .opener .sub { max-width: 36ch; line-height: 1.4; }
+  .cover { margin-inline: -16px; min-height: 420px; padding: 32px 28px 36px 44px; }
+  .cover h1 { font-size: clamp(44px, 9vw, 72px); max-width: 12ch; }
+  .cover .sub { font-size: 18px; }
+  .cover .kicker { position: absolute; top: 26px; left: 44px; }
+  .cover .cassette { position: absolute; top: 16px; right: 18px; width: 88px; height: auto; }
+  .part { margin: 64px calc(-1 * (var(--margin) + var(--gap))) 28px 0; min-height: 230px; padding: 24px 24px 24px 40px; clear: both; }
+  .part h2 { font-size: clamp(30px, 6vw, 44px); }
+  .part .sub { font-size: 15px; }
+  .part .letter { position: absolute; right: 18px; bottom: -12px; font: 600 150px/1 var(--display); color: var(--yellow); }
+
+  /* Tekstvak met kantlijn */
+  .flow { padding-right: calc(var(--margin) + var(--gap)); }
+  .flow > p { max-width: var(--text); }
+  .flow > p { text-indent: 1.4em; }
+  .flow > .intro, .flow > .head + p, .flow > .head + aside + p, .flow > .head + figure + p { text-indent: 0; }
+  .head { margin: 40px 0 10px; max-width: var(--text); }
+  .head .label { font: 11px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--red); margin: 0 0 4px; }
+  .head h3 { font: 600 22px/1.15 var(--display); margin: 0; text-wrap: balance; }
+  .intro { font-size: 18px; line-height: 1.6; }
+
+  /* Kantlijn: luistertips, beeld, citaten, QR */
+  .side-note, .side-fig, .side-quote { float: right; clear: right; width: var(--margin); margin: 6px calc(-1 * (var(--margin) + var(--gap))) 18px 0; }
+  .side-note { border-left: 2px solid var(--yellow); padding-left: 10px; font-size: 12.5px; line-height: 1.4; color: var(--ink-soft); }
+  .side-note .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .side-note .rec { display: grid; grid-template-columns: 40px 1fr; gap: 8px; align-items: center; margin-bottom: 6px; }
+  .side-note .rec img { width: 40px; height: 40px; border-radius: 2px; }
+  .side-note .who { color: var(--ink); font-weight: 600; }
+  .side-note .qr { width: 96px; height: 96px; margin: 4px 0 6px; }
+  .side-note .qr img, .side-note .qr canvas { width: 100% !important; height: 100% !important; }
+  .side-fig img { display: block; width: 100%; border: 4px solid #FFFFFF; box-shadow: 0 3px 12px rgba(0,0,0,.18); transform: rotate(2deg); }
+  .side-fig figcaption { font: 600 20px/1.05 var(--hand); color: var(--red); text-align: center; margin-top: 8px; }
+  .side-quote { font: 500 17px/1.25 var(--display); color: var(--red); border-top: 2px solid var(--red); padding-top: 8px; }
+  .side-quote span { display: block; font: 11px/1.4 var(--mono); color: var(--ink-soft); margin-top: 6px; }
+
+  /* Achterin */
+  .back { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 8px; }
+  h4.backhead { font: 600 22px/1.15 var(--display); margin: 28px 0 0; }
+  .terms { columns: 2 240px; column-gap: 32px; margin: 12px 0 0; }
+  .terms div { break-inside: avoid; margin: 0 0 10px; }
+  .terms dt { font-weight: 600; }
+  .terms dd { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.45; }
+  .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px 32px; margin-top: 14px; }
+  .link-card { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: start; }
+  .link-card .qr { width: 112px; height: 112px; }
+  .link-card.lesson { grid-template-columns: 1fr; }
+  .link-card .qr img, .link-card .qr canvas { width: 100% !important; height: 100% !important; }
+  .link-card .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .link-card p { font-size: 14px; line-height: 1.45; }
+  .link-card .url { font: 11px/1.4 var(--mono); color: var(--ink-soft); word-break: break-all; margin-top: 6px; }
+  .colofon { margin-top: 36px; font-size: 12px; line-height: 1.5; color: var(--ink-soft); display: grid; gap: 6px; max-width: var(--text); }
+
+  @media screen and (max-width: 760px) {
+    .part { margin-right: 0; }
+    .flow { padding-right: 0; }
+    .side-note, .side-fig, .side-quote { float: none; width: auto; margin: 16px 0; }
+    .side-fig { max-width: 220px; }
+  }
+
+  /* Boek op A4 */
+  @page { size: A4; margin: 20mm 18mm 22mm 20mm; }
+  @page cover { margin: 0; }
+  @media print {
+    html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root { --text: 112mm; --margin: 44mm; --gap: 8mm; }
+    body { padding: 0; font-size: 9.6pt; line-height: 1.55; }
+    .book { max-width: none; }
+    p { orphans: 3; widows: 3; }
+    .cover { page: cover; margin: 0; height: 296mm; padding: 0 22mm 32mm 26mm; break-after: page; }
+    .cover .kicker { top: 18mm; left: 26mm; font-size: 8pt; }
+    .cover .cassette { top: 14mm; right: 16mm; width: 28mm; }
+    .cover h1 { font-size: 56pt; }
+    .cover .sub { font-size: 14pt; }
+    .opener .bar { width: 5mm; }
+    .part { margin: 0 calc(-1 * (var(--margin) + var(--gap))) 6mm 0; height: 70mm; min-height: 0; padding: 0 50mm 8mm 12mm; break-before: page; break-after: avoid; }
+    .part .kicker { font-size: 7.5pt; }
+    .part h2 { font-size: 26pt; }
+    .part .sub { font-size: 10pt; }
+    .part .letter { font-size: 100pt; right: 8mm; bottom: -5mm; }
+    .first-part { break-before: auto; margin-top: 10mm; }
+    .head { margin: 8mm 0 2.5mm; break-after: avoid; break-inside: avoid; }
+    .head .label { font-size: 6.8pt; }
+    .head h3 { font-size: 14pt; }
+    .intro { font-size: 11pt; }
+    .side-note { font-size: 7.6pt; padding-left: 3mm; margin-top: 1mm; margin-bottom: 5mm; break-inside: avoid; }
+    .side-note .tag { font-size: 6.2pt; margin-bottom: 2mm; }
+    .side-note .rec { grid-template-columns: 11mm 1fr; gap: 2.5mm; margin-bottom: 1.5mm; }
+    .side-note .rec img { width: 11mm; height: 11mm; }
+    .side-note .qr { width: 24mm; height: 24mm; }
+    .side-fig { margin-bottom: 5mm; break-inside: avoid; }
+    .side-fig figcaption { font-size: 13pt; }
+    .side-quote { font-size: 11pt; break-inside: avoid; }
+    .side-quote span { font-size: 6.5pt; }
+    .back { break-before: page; margin-top: 0; }
+    h4.backhead { font-size: 14pt; margin-top: 8mm; }
+    .terms { columns: 2; column-gap: 10mm; }
+    .terms div { margin-bottom: 2.5mm; }
+    .terms dd { font-size: 8.6pt; }
+    .terms div { break-inside: avoid; }
+    .links { grid-template-columns: 1fr 1fr; gap: 8mm; break-inside: avoid; }
+    .link-card { grid-template-columns: 30mm 1fr; gap: 5mm; }
+    .link-card .qr { width: 30mm; height: 30mm; }
+    .link-card p { font-size: 8.8pt; }
+    .link-card .url { font-size: 6.8pt; }
+    .colofon { font-size: 7.5pt; margin-top: 10mm; }
+  }
+  .cover .cover-text { position: absolute; left: 44px; right: 28px; bottom: 36px; display: grid; gap: 10px; }
+  @media print { .cover { display: block !important; height: 294mm !important; } .cover .cover-text { left: 26mm; right: 22mm; bottom: 32mm; gap: 4mm; } }</style><style>
+  body.chapter { padding-top: 0; }
+  body.chapter .sitenav { margin-inline: -16px; }
+  .deck { margin: 0 -16px; background: #1C1B19; color: #fff; padding: 18px 20px 20px; display: grid; gap: 14px; }
+  .deck-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .deck .lbl { font: 11px/1.4 "Space Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: #F2D500; min-width: 7.5em; }
+  .deck .lesson { font: 500 16px/1.3 "Oswald", sans-serif; }
+  .deck .btn { padding: 10px 14px; font-size: 14px; }
+  .deck .btn.ghost { color: #fff; border-color: #55524C; }
+  .deck-embed { margin: 0; }
+  .deck-embed iframe { border-radius: 8px; display: block; }
+  .deck-genres { display: flex; flex-wrap: wrap; gap: 6px; }
+  .gchip { --c: #999; display: inline-flex; align-items: center; gap: 7px; text-decoration: none; font: 13px/1 "Inter", sans-serif; padding: 7px 10px; border-radius: 999px; background: #2A2825; color: #fff; }
+  .gchip i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+  .gchip span { color: #9C978D; font-family: "Space Mono", monospace; font-size: 11px; }
+  .gchip:hover { background: #3A3833; }
+  .note-play { display: flex; align-items: center; gap: 8px; margin: 2px 0 8px; font: 11px/1.2 "Space Mono", monospace; letter-spacing: .04em; text-transform: uppercase; color: #D63A31; }
+  .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 48px 0 0; }
+  .pager a { display: grid; gap: 4px; padding: 16px; border: 1px solid #DDD8CE; border-radius: 4px; text-decoration: none; }
+  .pager a:hover { border-color: #1C1B19; }
+  .pager .next { text-align: right; }
+  .pager small { font: 11px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #D63A31; }
+  .pager b { font: 600 18px/1.15 "Oswald", sans-serif; }
+  @media print { .sitenav, .deck, .pager, .sitefoot { display: none !important; } }
+</style></head><body class="chapter" data-mixtape="6"><header class="sitenav"><a class="brand" href="../index.html"><img src="../assets/cassette.png" alt=""><span>School of Rock</span></a><nav aria-label="Hoofdmenu"><a href="../index.html#mixtapes" aria-current="page">Mixtapes</a><a href="../kaart.html">Genrekaart</a><a href="../begrippen.html">Begrippen</a><a href="../pdf/school-of-rock-reader.pdf">Reader (pdf)</a></nav></header><div class="book">
+
+<header class="opener cover" style="background-image:url('https://lh3.googleusercontent.com/hGa1tTQj-8bDnkcEFOPpI3pc3IqPfc5qsFTWdJ0qU2dQmRVJ0Ud3OO2OH2HRezVu-pstqjE-XRixueWGCiAhTtiAK5PbycTmAyWx7w')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+  <p class="kicker">School of Rock · Mixtape 6</p>
+  <img class="cassette" src="../assets/cassette.png" alt="School of Rock-cassette">
+  <div class="cover-text"><h1>Fear of a Black Planet</h1>
+  <p class="sub">Zwarte muziek vanaf 1945: soul, funk, reggae, disco, hiphop en R&amp;B, en de strijd die erin doorklinkt.</p></div>
+</header>
+<div class="deck" aria-label="Bij dit hoofdstuk">
+  <div class="deck-row"><span class="lbl">Luisteren</span><a class="btn solid deck-spotify" href="https://open.spotify.com/playlist/4rD4S7mER7jSma1MS9D7Rk" data-embed="https://open.spotify.com/embed/playlist/=generator" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Spotify-playlist</a><a class="btn ghost" href="https://open.spotify.com/playlist/4rD4S7mER7jSma1MS9D7Rk" target="_blank" rel="noopener">Open in Spotify</a><a class="btn ghost" href="../pdf/mixtape-06.pdf" download>Download pdf</a></div>
+  <div class="deck-embed" hidden></div>
+  <div class="deck-row"><span class="lbl">Les</span><span class="lesson">LessonUp · Mixtape 6: Fear of a Black Planet</span></div>
+  <div class="deck-row"><span class="lbl">Op de kaart</span><div class="deck-genres"></div></div>
+</div>
+
+<section class="flow">
+  <aside class="side-note"><span class="tag">LUISTER MEE</span><div class="qr" data-url="https://open.spotify.com/playlist/4rD4S7mER7jSma1MS9D7Rk"></div>Alle nummers uit dit hoofdstuk staan op volgorde in de Spotify-playlist bij Mixtape 6.</aside>
+  <p class="intro">In 1989 kwam <em>Do the Right Thing</em> van regisseur Spike Lee in de bioscoop, een film over één hete zomerdag in een zwarte wijk van Brooklyn die eindigt in geweld. Door de hele film klinkt hetzelfde nummer: <em>Fight the Power</em> van Public Enemy. Het productieteam van de groep, The Bomb Squad, stapelde er tientallen samples in op elkaar, van de grooves van James Brown tot fragmenten uit toespraken van de burgerrechtenbeweging. Een jaar later stond het nummer op het album waaraan dit hoofdstuk zijn titel ontleent: <em>Fear of a Black Planet</em> (1990).</p>
+  <p>Public Enemy liet in één plaat horen hoe nauw muziek en maatschappij in zwarte Amerikaanse muziek met elkaar verbonden zijn. Dat begint al bij de namen. De Amerikaanse platenindustrie verkocht muziek van zwarte artiesten eerst als <em>race records</em>, daarna als <em>rhythm &amp; blues</em> en later als <em>urban</em>. Zo'n etiket zegt weinig over de klank en veel over het publiek dat de industrie voor ogen had. Is 'zwarte muziek' dan een muzikale categorie of een sociale? Het antwoord is: allebei. De muziek is gemaakt door de nakomelingen van tot slaaf gemaakte Afrikanen, en dat is te horen.</p>
+  <p>In Mixtape 1 (Het ontstaan van popmuziek) zagen we hoe blues, jazz en gospel ontstonden in de Afrikaanse diaspora: de gemeenschappen van mensen van Afrikaanse afkomst buiten Afrika. Bepaalde kenmerken reisden door alle stijlen mee: call &amp; response tussen voorzanger en groep, polyritmiek, improvisatie, de nadruk op groove en de centrale rol van de stem. Die kenmerken komen we na 1945 opnieuw tegen in soul, funk, reggae, disco, hiphop en R&amp;B. Steeds was die muziek verbonden met de strijd voor gelijke rechten. En steeds werd ze groter dan de groep die haar maakte. Daarover gaat de vraag van dit hoofdstuk: <strong>hoe werd muziek van een onderdrukte groep de muziek die de wereld het meest beluistert?</strong></p>
+
+  <!-- SIDE A -->
+  <header class="opener part first-part" style="background-image:url('https://lh3.googleusercontent.com/hGa1tTQj-8bDnkcEFOPpI3pc3IqPfc5qsFTWdJ0qU2dQmRVJ0Ud3OO2OH2HRezVu-pstqjE-XRixueWGCiAhTtiAK5PbycTmAyWx7w')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side A · 1954-1975</p>
+    <h2>Soul uit Detroit en Memphis</h2>
+    <p class="sub">De kerk gaat de straat op, en de platenmaatschappij wordt een fabriek.</p>
+    <span class="letter" aria-hidden="true">A</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · Vanaf 1955 · Verenigde Staten</p><h3>Soul: de kerk gaat de straat op</h3></div>
+  <p>Soul ontstond in de tweede helft van de jaren vijftig en groeide in de jaren zestig uit tot de belangrijkste zwarte popmuziek van de Verenigde Staten. De wortels liggen in drie stijlen: de gospel van de zwarte kerk, jazz en rhythm-and-blues. Vooral de kerk is belangrijk. In het zuiden van de Verenigde Staten was de kerk het centrum van de zwarte gemeenschap, en de plek waar veel zangers en zangeressen leerden zingen.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/g-8tsDbdTfe1qOfdfVlQW0JMh9I7NiWz6E28u0R_yuy2s9MSuSEXHIoN5SwMA7X0RGvUqZlrzaeQ1OhvnYP6vq136BRFl6Wi8NJ9isI" alt=""><div><span class="who">Ray Charles</span><br>I Got a Woman (1954)</div></div>Gebaseerd op de gospel <em>It Must Be Jesus</em>: kerkmuziek wordt liefdeslied.</aside>
+  <p>De stap van kerk naar hitparade zette Ray Charles. In 1954 nam hij voor het label Atlantic <em>I Got a Woman</em> op. De melodie en de manier van zingen komen uit een gospel, <em>It Must Be Jesus</em>. Charles verving Jezus door een vrouw. Voor een deel van zijn publiek was dat godslastering: muziek die bedoeld was om God te eren, ging nu over liefde en verlangen. Tegelijk werd het nummer een hit. Dat patroon, schandaal en succes tegelijk, zou in de geschiedenis van zwarte muziek vaker terugkomen.</p>
+  <p>In soul staan de stem en de tekst centraal. Zangers gebruiken melisma: veel noten op één lettergreep, zoals een voorganger in de kerk een woord kan rekken. Ze zingen rauw, schreeuwen soms, en laten horen dat het ze iets kost. Bijna altijd is er call &amp; response: de zanger roept, een koor of een blazerssectie antwoordt. Dat is de vorm van de kerkdienst, waarin voorganger en gemeente elkaar beantwoorden.</p>
+  <p>James Brown liet in 1965 met <em>I Got You (I Feel Good)</em> horen hoe ver je die stem kon oprekken. De hook van het nummer is een schreeuw. De blazers spelen geen lange melodieën, maar korte stoten, die als slagwerk werken. Brown legde de nadruk steeds meer op het ritme, en zou daarmee een paar jaar later de funk uitvinden (side B).</p>
+  <p>Soul was de soundtrack van de burgerrechtenbeweging. In het zuiden waren zwarte en witte Amerikanen tot in de jaren zestig bij wet van elkaar gescheiden: in scholen, bussen, restaurants en wachtkamers. Zwarte burgers werden bovendien op allerlei manieren verhinderd om te stemmen. In 1955 begon in Montgomery, Alabama, een boycot van de stadsbussen, nadat Rosa Parks was gearresteerd omdat ze haar plaats niet aan een witte passagier wilde afstaan. Daarna volgden marsen, sit-ins en in 1963 de Mars op Washington, waar Martin Luther King zijn toespraak 'I Have a Dream' hield. In 1964 en 1965 werden segregatie en discriminatie bij verkiezingen bij wet verboden. Zangers als Sam Cooke, die uit de gospel kwam, gaven die strijd een stem: zijn <em>A Change Is Gonna Come</em> (1964) werd een lied van de beweging.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/cmtzOFz0g8ZM0xZatQudV-lZyrnNX012GVcKuKsgeirIrQMT_urDwMmarn4w1TJWB-CRLZY1lFqsd8vrQyEWnF8dV4nN_0Pxa5q4Og" alt=""><div><span class="who">Aretha Franklin</span><br>Respect (1967)</div></div>Een nummer van Otis Redding, door Aretha omgedraaid tot volkslied voor vrouwen- en burgerrechten.</aside>
+  <p>Het duidelijkste voorbeeld is <em>Respect</em> van Aretha Franklin. Het nummer is geschreven door Otis Redding, die het in 1965 zelf opnam. Bij Redding is het een man die thuiskomt en respect vraagt van zijn vrouw. Aretha Franklin, dochter van een dominee uit Detroit, draaide het in 1967 om: nu eist een vrouw respect. Ze voegde er het gespelde woord aan toe dat iedereen kan meezingen. Daarmee werd <em>Respect</em> een volkslied voor twee bewegingen tegelijk: die voor burgerrechten en die voor vrouwenrechten. In Mixtape 10 (Vrouwen in de popmuziek) komen we op haar terug.</p>
+  <p>Na de moord op Martin Luther King in april 1968 werd de toon feller. James Brown nam in hetzelfde jaar <em>Say It Loud – I'm Black and I'm Proud</em> op. Soul ging over zwarte trots, en over de vraag wie er profiteerde van zwarte muziek. Die vraag speelde ook in de twee steden waar soul een eigen geluid kreeg: Detroit en Memphis.</p>
+
+  <div class="head"><p class="label">Track 02 · 1959-1972 · Detroit</p><h3>Motown: Hitsville U.S.A.</h3></div>
+  <p>Detroit was de stad van de Amerikaanse auto-industrie. Vanaf de Eerste Wereldoorlog trokken honderdduizenden zwarte Amerikanen uit het zuiden naar steden in het noorden, op zoek naar werk in de fabrieken en weg van de segregatie. Berry Gordy, een songwriter uit Detroit, had zelf aan de lopende band van een autofabriek gestaan. In 1959 begon hij met 800 dollar, geleend van zijn familie, een platenlabel: Tamla Records. Kort daarna volgde het label Motown, een samentrekking van <em>Motor Town</em>, de bijnaam van Detroit.</p>
+  <p>Het hoofdkwartier was een gewoon woonhuis aan West Grand Boulevard. Gordy hing er een bord op met de tekst <em>Hitsville U.S.A.</em> In het huis zaten de kantoren, en er was een kleine opnamestudio. Daar werd van de vroege jaren zestig tot het begin van de jaren zeventig vrijwel elke Motown-hit opgenomen. Het huis is nu het Motown Museum.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/xuRy-o1kdjmEt7vcrFu9SsfKpOZbDYsbNzJkaNxPB4R895tJbnRKxqk0YOGff2FLmtHQdTIoO_8VZdlRDVUqTeFFvoUoK7jVz0c7qnuq" alt=""><div><span class="who">The Jackson 5</span><br>I Want You Back (1969)</div></div>Let op de pianoglissando aan het begin en de beweeglijke baslijn.</aside>
+  <p>Gordy organiseerde zijn label zoals een autofabriek: een lopende band waar elke afdeling één taak had. Songwriters schreven de liedjes. Het bekendste team was Holland-Dozier-Holland (Brian Holland, Lamont Dozier en Eddie Holland), dat hits schreef voor The Supremes en The Four Tops. Smokey Robinson schreef en produceerde voor anderen en zong zelf met The Miracles. De huisband, The Funk Brothers, speelde op bijna alle opnames, meestal zonder dat hun namen op de hoes stonden. Hun bassist James Jamerson bepaalde met zijn beweeglijke baslijnen voor een groot deel het Motown-geluid. Artiesten kregen les in kleding, houding en manieren van Maxine Powell, en choreograaf Cholly Atkins studeerde de danspasjes in. Elke week besliste een vergadering welke opnames goed genoeg waren om uit te brengen.</p>
+  <p>Het doel was zwarte muziek die ook het witte publiek kocht. Motown noemde zichzelf <em>The Sound of Young America</em>, niet <em>The Sound of Black America</em>. De productie was helder en opgewekt, met een tamboerijn op de tel en liedjes over liefde, zelden over politiek. Dat werkte. The Supremes, drie jonge vrouwen uit een sociale woonwijk in Detroit, werden de succesvolste groep van het label, met twaalf nummer-1-hits in de Verenigde Staten. In 1967 werd de naam van zangeres Diana Ross voor het eerst vóór de groepsnaam gezet. Op <em>Reflections</em> uit dat jaar klinkt in het intro een oscillator: Motown volgde de psychedelische mode van dat moment.</p>
+  <p>Smokey Robinson liet zien dat het format ruimte liet voor poëzie. In <em>The Tracks of My Tears</em> (1965) zingt hij over iemand die op een feest lacht, terwijl wie goed kijkt de sporen van zijn tranen kan zien. Het is een driedubbel beeld in een liedje van drie minuten. The Jackson 5 kwam uit Gary, Indiana, een industriestad bij Chicago. Bij <em>I Want You Back</em> (1969) was zanger Michael Jackson elf jaar oud. Over zijn latere carrière gaat Mixtape 7 (De jaren 80).</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/d_wmkEyA8ceP-vf4GdPsUNkUOUSKeZaPFva2ozGuJL5Kn26MqCzJf7vJJ47xZvpMP7JFAcQ0rZLWfXKc0Nh31Lr1tf4gSJzFLYmrfg" alt=""><div><span class="who">Marvin Gaye</span><br>What's Going On (1971)</div></div>Gaye vocht tegen Gordy om dit protestalbum over Vietnam en armoede uit te brengen.</aside>
+  <p>De lopende band had ook een keerzijde. Artiesten hadden weinig te zeggen over hun eigen muziek. Rond 1970 wilden zangers als Marvin Gaye en Stevie Wonder zelf bepalen wat ze opnamen. Gaye maakte <em>What's Going On</em> (1971), een album over de oorlog in Vietnam, armoede, drugs en vervuiling. Gordy vond het te politiek en wilde het niet uitbrengen. Gaye zette door, en het album werd een groot succes. Een jaar later, in 1972, verhuisde Motown naar Los Angeles. Het verhaal van popmuziek als product van een fabriek gaat verder in Mixtape 12 (De hitfabriek).</p>
+
+  <div class="head"><p class="label">Track 03 · 1957-1975 · Memphis</p><h3>Stax: Soulsville U.S.A.</h3></div>
+  <p>Zevenhonderd kilometer naar het zuiden, in Memphis, Tennessee, ontstond een ander soulgeluid. Het label daar heette Stax. Het werd opgericht door een witte broer en zus: Jim Stewart, een bankmedewerker die in zijn vrije tijd countryviool speelde, en Estelle Axton, die een hypotheek op haar huis nam om het bedrijf te financieren. Ze begonnen in 1957 als Satellite Records. In 1961 veranderden ze de naam in Stax, van de eerste letters van hun achternamen: <strong>St</strong>ewart en <strong>Ax</strong>ton.</p>
+  <p>Stax zat in een oude bioscoop, het Capitol Theatre, in een zwarte wijk van Memphis. In de voormalige foyer was een platenwinkel, waar de medewerkers konden horen wat de buurt wilde kopen. Op de gevel kwam de tekst <em>Soulsville U.S.A.</em>, een antwoord op Hitsville in Detroit. In de zaal stond de studio. Er werd live opgenomen, met alle muzikanten tegelijk in één ruimte, en weinig achteraf toegevoegd. De schuine vloer van de bioscoop gaf de opnames een eigen klank.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/1t7ZfUr67sU5Pdt2Q5PE03Tbiwu77Dsi3VeKyF_fbuBYKNaglEt3KJ68sGyF5EjVMnKMazP8ShcC3pZ6GrVTQQiOEW1EQrIeXZNGDaM" alt=""><div><span class="who">Booker T. &amp; the MG's</span><br>Green Onions (1962)</div></div>Een 12-maten blues in F op het Hammondorgel, met gitaar van Steve Cropper.</aside>
+  <p>Het resultaat klonk rauwer en zuidelijker dan Motown. Waar Detroit glad en opgewekt was, waren de opnames van Stax ruiger, met een zware bas, een droge drum en de blazers van de Memphis Horns. De huisband was Booker T. &amp; the MG's: organist Booker T. Jones en drummer Al Jackson Jr. waren zwart, gitarist Steve Cropper en bassist Donald 'Duck' Dunn waren wit. Een gemengde band was in het gesegregeerde zuiden van de vroege jaren zestig een uitzondering. In de studio speelden ze samen. Buiten de studio golden de regels van de stad.</p>
+  <p>In 1962 hadden ze zelf een hit met <em>Green Onions</em>, een instrumentaal nummer. Het is een 12-maten blues in F: Jones herhaalt op het Hammondorgel een korte figuur, Cropper speelt er scherpe gitaarakkoorden tegenin. Booker T. Jones was toen nog een tiener. Als huisband speelden de MG's op de platen van bijna alle Stax-artiesten, van Sam &amp; Dave tot Otis Redding.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/ZtsT42IPdJyN-KwCcNP_b516FpodxPD6Qb4IEuOWxPy9uBw1uGlXwZ31ZA5IvyFm-d8yQhRHSfGQ9UZkk7_Uyn-tCyP3p0Dyvlol3g4" alt=""><div><span class="who">Otis Redding</span><br>(Sittin' On) The Dock of the Bay (1968)</div></div>Het gefluit aan het eind is een geïmproviseerde plek voor een tekst die nooit kwam.</aside>
+  <p>Otis Redding, uit Macon in Georgia, was de grootste ster van Stax. In juni 1967 trad hij op tijdens het Monterey Pop Festival in Californië, voor een publiek van vooral witte hippies, en won hij er een nieuw publiek. Eind dat jaar schreef hij met Steve Cropper <em>(Sittin' On) The Dock of the Bay</em>, een rustiger en persoonlijker nummer dan zijn eerdere werk. Op 10 december 1967, een paar dagen na de opname, kwam Redding om bij een vliegtuigongeluk. Hij was 26. Het gefluit aan het eind van het nummer was bedoeld als tijdelijke plek voor een tekst die hij nog wilde schrijven. In 1968 werd het zijn eerste nummer-1-hit in de Verenigde Staten.</p>
+  <p>Voor Stax volgde een moeilijke periode. In april 1968 werd Martin Luther King in Memphis vermoord, en de verhoudingen in de stad en in het bedrijf veranderden. In datzelfde jaar eindigde de samenwerking met Atlantic Records, dat de platen van Stax had verspreid, en bleek dat de rechten op de oude opnames bij Atlantic lagen. Stax ging door met nieuwe artiesten, zoals Isaac Hayes, die in 1971 een Oscar won voor de muziek van de film <em>Shaft</em>. In 1972 organiseerde het label Wattstax, een groot concert in Los Angeles. In 1975 ging Stax failliet. Op de plek van de oude bioscoop staat nu het Stax Museum of American Soul Music.</p>
+  <p>Motown en Stax laten twee antwoorden zien op dezelfde vraag. Motown maakte zwarte muziek die het witte publiek bereikte door zo gepolijst mogelijk te klinken. Stax bleef dichter bij de kerk en de blues, en vond zijn witte publiek later, onder meer via rockmuzikanten die de platen van Redding en de MG's kenden.</p>
+
+  <!-- SIDE B -->
+  <header class="opener part" style="background-image:url('https://lh3.googleusercontent.com/gISHtXY9EdYCxi_Ks3unYqLfxu0R_zxtd9nEvgLEfDdwogQON6i1H3bYG9eg4KyFWYMe2himDlSaxMWChRb2W64qfQaVeCkkrWBJ3a4')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side B · 1965-1980</p>
+    <h2>Funk, reggae en disco</h2>
+    <p class="sub">Groove als statement: van James Brown via Kingston naar de dansvloeren van New York.</p>
+    <span class="letter" aria-hidden="true">B</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · Vanaf 1965 · Verenigde Staten</p><h3>Funk: alles op de één</h3></div>
+  <p>Funk groeide in de tweede helft van de jaren zestig uit jazz, rhythm-and-blues en soul. Ook hier speelde James Brown de hoofdrol. Op <em>Papa's Got a Brand New Bag</em> (1965) en <em>Cold Sweat</em> (1967) zette hij melodie en harmonie op de achtergrond. Elk instrument werd een soort slagwerk: de gitaar, de bas, de blazers en zelfs de stem.</p>
+  <p>Het belangrijkste kenmerk van funk heet <em>on the one</em>: de nadruk ligt op de eerste tel van de maat. In rhythm-and-blues en rock ligt de nadruk juist op de tweede en vierde tel, de backbeat. In funk komen alle instrumenten samen op de één, en daartussen spelen ze korte, verschoven figuren. Ritme gaat boven harmonie. Een funknummer blijft vaak minutenlang op één akkoord. De gitaar speelt een korte, gedempte slag, staccato. De bas speelt syncopisch, net naast de tel. De blazers spelen strakke, korte stoten. Samen vormen ze de groove, en die groove is het eigenlijke nummer.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/zX26G03Y3Mdo-mLkdD4tlacmnhdppPWzGvq9VS8qeiD2fzfM3ioUdffGCJ431OQ3gDsVmqm1qTtnYP1GeODPviU8cZMwLWydac8gIUk" alt=""><div><span class="who">James Brown</span><br>Get Up (I Feel Like Being a) Sex Machine (1970)</div></div>Bootsy Collins op bas: vrijwel het hele nummer op één akkoord.</aside>
+  <p>In <em>Get Up (I Feel Like Being a) Sex Machine</em> (1970) hoor je dat principe in zijn zuiverste vorm. Vrijwel het hele nummer staat op één akkoord. De basgitaar wordt bespeeld door de toen negentienjarige Bootsy Collins, de gitaar herhaalt eindeloos dezelfde korte slag, en Brown roept terwijl zijn zanger Bobby Byrd antwoordt: call &amp; response uit de kerk, nu op de dansvloer. In hetzelfde jaar nam Brown <em>Funky Drummer</em> op. Het drumbreak van Clyde Stubblefield in dat nummer werd later een van de meest gesamplede fragmenten in de hiphop (side C).</p>
+  <p>Funk was ook een houding. Na <em>Say It Loud – I'm Black and I'm Proud</em> stond de muziek voor zelfbewustzijn: afrokapsels, felle kleuren, grote bands op het podium. Sly and the Family Stone uit San Francisco liet met de samenstelling van de band zelf iets zien: zwarte en witte muzikanten, mannen en vrouwen, in één groep.</p>
+  <p>George Clinton ging nog verder. Zijn twee groepen, Parliament en Funkadelic, vormden samen een collectief van tientallen muzikanten dat bekendstond als P-Funk. Clinton verpakte de muziek in sciencefiction: op het album <em>Mothership Connection</em> (1975) landen zwarte Amerikanen in een ruimteschip, en op het podium daalde een echt ruimteschip neer. In <em>Give Up the Funk</em> (1975) zingen koren door elkaar, en speelt toetsenist Bernie Worrell de baslijn op een Minimoog-synthesizer. Over die synthesizer gaat Mixtape 8 (Elektronische muziek).</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/Ic24QJcUyyAUfI6KVXoqL5MvKoXHzodP1xf0RatnUrcLx_IMfY7xy3SJMsXndMX_3SCY7hsIwPpNLKoT09JTT3LGBBpB10xnP864-3s" alt=""><div><span class="who">Stevie Wonder</span><br>Superstition (1972)</div></div>Het riff speelt Wonder zelf op een Hohner-clavinet; hij speelde ook de drums.</aside>
+  <p>Stevie Wonder stond al sinds zijn kindertijd onder contract bij Motown. Toen hij in 1971 21 werd, onderhandelde hij een nieuw contract waarin hij zelf de baas werd over zijn muziek. Een van de eerste resultaten was het album <em>Talking Book</em> (1972). Op <em>Superstition</em> speelt Wonder het riff zelf op een clavinet van Hohner, een elektrisch toetsinstrument met een korte, tokkelende klank. De drums speelde hij ook zelf. Earth, Wind &amp; Fire, de groep van Maurice White, maakte funk met een grote blazerssectie en een zonnige majeurgroove. In <em>September</em> (1978) was het 'ba-dee-ya' in het refrein een tijdelijke tekst, die bleef staan omdat niemand iets beters vond.</p>
+  <p>Funk verdween niet toen de stijl uit de hitparade raakte. De grooves werden het materiaal van de hiphop. En rockbands namen de stijl over: Living Colour maakte in de jaren tachtig funkmetal, en de Red Hot Chili Peppers combineerden funk met punk en rock.</p>
+
+  <div class="head"><p class="label">Track 02 · Vanaf 1968 · Jamaica</p><h3>Reggae: de riddim van Kingston</h3></div>
+  <p>Jamaica was eeuwenlang een Britse kolonie, met plantages waarop tot slaaf gemaakte Afrikanen werkten. In 1962 werd het eiland onafhankelijk. In de arme wijken van de hoofdstad Kingston speelde muziek zich af rond <em>sound systems</em>: rijdende discotheken met enorme luidsprekers, waarop dj's Amerikaanse rhythm-and-blues draaiden. Toen die platen schaars werden, gingen Jamaicaanse producers zelf opnemen.</p>
+  <p>Zo ontstonden achter elkaar drie stijlen. Eerst ska, eind jaren vijftig en begin jaren zestig: snel en vrolijk, met de nadruk op de offbeat. Halverwege de jaren zestig rocksteady, trager en met meer ruimte voor de bas. En rond 1968 reggae. Een van de eerste nummers met dat woord in de titel was <em>Do the Reggay</em> (1968) van Toots and the Maytals.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/4qO9L90fxde0KEUDRlEyq5Mtj6-nDiyOLTpjEZHQvnMJ7V1Y1fOwwiKOFJXcDj9JPmg9g9KQnWEHrAc6OYLawL6DSDeItkN4XmWRCQ" alt=""><div><span class="who">Bob Marley &amp; The Wailers</span><br>Stir It Up (1973)</div></div>Luister naar het verschil tussen de bas (melodisch, zwaar) en de gitaar (kort, op de offbeat).</aside>
+  <p>In reggae bepalen drums en basgitaar samen de <em>riddim</em>, de ritmische basis van een nummer. De bas is zwaar en melodisch, en speelt vaak de belangrijkste lijn. De gitaar speelt de <em>skank</em>: een korte, gedempte akkoordslag op de tweede en vierde tel. De drummer speelt meestal de <em>one drop</em>: de bassdrum valt op de derde tel, en de eerste tel blijft leeg. Daardoor voelt reggae tegelijk traag en gespannen. Het is het omgekeerde van funk, waar alles juist op de één samenkomt.</p>
+  <p>Veel reggaemuzikanten waren rastafari. Rastafari is een Jamaicaanse lezing van de Bijbel, waarin Afrika het beloofde land is en keizer Haile Selassie van Ethiopië als messias wordt gezien. De beweging bouwde voort op de ideeën van de Jamaicaan Marcus Garvey, die in de jaren twintig opriep tot zwarte trots en een terugkeer naar Afrika. In reggaeteksten heet het systeem dat onderdrukt 'Babylon'. De teksten gaan over slavernij, armoede, Afrika en verzet.</p>
+  <p>Bob Marley groeide op in Trenchtown, een arme wijk in Kingston. Met Peter Tosh en Bunny Wailer vormde hij The Wailers. In 1973 verscheen <em>Catch a Fire</em> bij het Britse label Island Records van Chris Blackwell. Blackwell liet gitaar- en toetspartijen toevoegen om de plaat geschikter te maken voor het rockpubliek. Op <em>Stir It Up</em> van dat album hoor je de rolverdeling van reggae duidelijk. Marley werd de eerste wereldster uit wat toen de Derde Wereld werd genoemd. Hij overleed in 1981, 36 jaar oud.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/TXPd7qLFqBWaSUPK40f8Q382BA2jI-yTDMS__qwnkPXUXbgUcodBOni55sEYtTVq1ujtlvstV6wcmgrbaWuJZzTbghTPQoliANtXmA" alt=""><div><span class="who">Peter Tosh</span><br>Johnny B. Goode (1983)</div></div>Chuck Berry's rock-'n-roll klassieker als reggae: dezelfde akkoorden, een ander ritme.</aside>
+  <p>Peter Tosh ging na The Wailers solo verder en was in zijn teksten feller dan Marley. In 1983 nam hij <em>Johnny B. Goode</em> op, de rock-'n-roll klassieker van Chuck Berry uit 1958. De akkoorden zijn dezelfde, het ritme is anders. Het is een goede oefening om te horen wat een riddim doet: hetzelfde nummer krijgt een heel ander karakter. En het laat zien hoe de muziek van de diaspora heen en weer reist. Rock-'n-roll, dat zelf uit zwarte rhythm-and-blues was ontstaan (Mixtape 1), komt via Jamaica terug als reggae.</p>
+  <p>Jamaicaanse producers als King Tubby en Lee 'Scratch' Perry bouwden van bestaande opnames nieuwe versies: ze haalden de zang weg, lieten instrumenten in en uit vallen en zetten er echo en galm op. Die stijl heet dub, en maakte van de studio een instrument. Later kwam dancehall, waarin dj's over riddims heen praten en zingen. Die praktijk reisde mee met emigranten. Clive Campbell verhuisde in 1967 van Kingston naar The Bronx in New York. Daar werd hij bekend als dj Kool Herc, en legde hij de basis voor de hiphop.</p>
+
+  <div class="head"><p class="label">Track 03 · 1970-1980 · New York, Chicago</p><h3>Disco en Disco Demolition Night</h3></div>
+  <p>Disco ontstond eind jaren zestig, begin jaren zeventig in clubs in New York waar zwarte, latino en homoseksuele bezoekers kwamen. Na de rellen rond de Stonewall Inn in 1969, waarbij bezoekers van een homobar zich verzetten tegen een politie-inval, werden zulke clubs plekken waar mensen zich vrij konden voelen. In The Loft van David Mancuso (vanaf 1970) en later de Paradise Garage, waar Larry Levan draaide, werd de dj de belangrijkste persoon in de zaal. Hij liet platen naadloos in elkaar overlopen, zodat de dansvloer nooit stil viel.</p>
+  <p>Het ritme van disco heet <em>four-on-the-floor</em>: een bassdrum op elke tel, met een open hi-hat op de offbeat, rond 120 beats per minuut. Daarboven klinken strijkers en blazers. Voor dj's kwamen er langere versies op 12-inch-singles: grote platen met een extended mix, waarin het instrumentale deel werd verlengd. Disco was op zijn hoogtepunt tussen 1974 en 1980.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/hko1HceojhuL_D0yctDv7IYiIJaizK7FfJug9Hjdp-mh7g1lyYalqev571c7HlSjBliyRIbx_8wWNJYtiw6FlESW6jUX2rd0z_DlJoI" alt=""><div><span class="who">Chic</span><br>Le Freak (1978)</div></div>Nile Rodgers' 'chucking' gitaar en de bas van Bernard Edwards: de groove die Rapper's Delight later leent.</aside>
+  <p>De band Chic draaide om twee muzikanten: gitarist Nile Rodgers en bassist Bernard Edwards. Rodgers speelt korte, ritmische akkoorden, 'chucking' genoemd, en Edwards een bas die steeds in beweging is. Volgens Rodgers ontstond <em>Le Freak</em> (1978) nadat de twee op oudejaarsavond niet werden binnengelaten in Studio 54, de bekendste discotheek van New York. De groove van hun nummer <em>Good Times</em> (1979) zou een paar maanden later de basis worden van de eerste rap-hit.</p>
+  <p>Disco bereikte ook het grote publiek buiten de clubs. Donna Summer en producer Giorgio Moroder maakten in München <em>I Feel Love</em> (1977), waarin vrijwel alles uit een Moog-synthesizer komt. Het is het begin van de elektronische dansmuziek, en het begin van Mixtape 8. Village People werd bedacht door de Franse producers Jacques Morali en Henri Belolo. De groep speelde met beelden uit de homocultuur, en <em>Y.M.C.A.</em> (1978) was een knipoog naar die cultuur. Het grote publiek omarmde het als feestnummer. De film <em>Saturday Night Fever</em> (1977) bracht disco naar de witte middenklasse, met muziek van de Bee Gees. Voor <em>Stayin' Alive</em> gebruikten ze een drumloop van één maat uit een ander nummer: een vroege vorm van samplen.</p>
+  <aside class="side-quote">"Disco sucks"<span>Slogan van de anti-discobeweging, 1979</span></aside>
+  <p>Juist dat succes riep verzet op. Op 12 juli 1979 organiseerde de Chicagose radio-dj Steve Dahl in het honkbalstadion Comiskey Park de <em>Disco Demolition Night</em>. Bezoekers mochten goedkoop naar binnen als ze een discoplaat meenamen. Tussen twee wedstrijden van de Chicago White Sox werd een container met duizenden platen op het veld opgeblazen. Daarna stormden duizenden bezoekers het veld op, en de tweede wedstrijd moest worden afgelast.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/H_bGJbcikPN1UiDyinSjlwz80DiR8OBQNEMJ2A170Ohrf3GmGP_AhmRcvuHSRDuh9oc6mLsaZvLoVN6H8PlAIn0-x84TFZnPqEYR0cc" alt=""><div><span class="who">Bee Gees</span><br>Stayin' Alive (1977)</div></div>Een drumloop van één maat uit een ander nummer: een vroege 'sample'.</aside>
+  <p>De leus 'Disco sucks' leek een kwestie van smaak: rockfans vonden disco oppervlakkig en commercieel. Maar wie keek wat er in de container lag, zag iets anders. Veel platen die bezoekers meenamen waren geen disco, maar soul en funk van zwarte artiesten. Disco kwam uit zwarte, latino en queer clubs, en de campagne werd vooral gedragen door witte rockfans. Nile Rodgers vergeleek de avond later met een boekverbranding door de nazi's.</p>
+  <p>Na 1979 noemde de platenindustrie de muziek liever <em>dance</em>. Maar disco verdween niet. In New York leefde het voort als garage, genoemd naar de Paradise Garage. En in Chicago, de stad waar de platen waren opgeblazen, maakten zwarte dj's er een paar jaar later house van.</p>
+
+  <!-- SIDE C -->
+  <header class="opener part" style="background-image:url('https://lh3.googleusercontent.com/JvTVn3z3zqynJ1687z-jeazAXXU-xWg5wKaJDfbbFATmHz5emUHQJpwnNxxa9_TSULMBJJ-tZGISDuHbUSKUZ-3wIWA88R40km4992mb')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side C · 1973-nu</p>
+    <h2>Hiphop en moderne R&amp;B</h2>
+    <p class="sub">Van block parties in The Bronx tot de grootste muziekstroom ter wereld.</p>
+    <span class="letter" aria-hidden="true">C</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1973-1986 · The Bronx</p><h3>Hiphop: het begin</h3></div>
+  <p>The Bronx, een stadsdeel in het noorden van New York, was in de jaren zeventig een van de armste gebieden van de Verenigde Staten. Een snelweg, de Cross Bronx Expressway, sneed dwars door de wijken. Wie het kon betalen, vertrok. Er was veel werkloosheid, en hele huizenblokken brandden af. De bewoners waren grotendeels zwart en Latijns-Amerikaans. Hiphop ontstond hier als reactie op racisme, werkloosheid en armoede: jongeren zonder geld voor clubs organiseerden hun eigen feesten.</p>
+  <p>Een van de eersten was Clive Campbell, de dj die zich Kool Herc noemde. Hij kende de sound systems uit Kingston. Op 11 augustus 1973 draaide hij op een feest voor zijn zus in de recreatieruimte van een flatgebouw aan Sedgwick Avenue. Herc merkte dat de dansers vooral wachtten op de break: het korte stuk in een funkplaat waarin alleen de drums en de bas spelen. Hij kocht twee exemplaren van dezelfde plaat en wisselde met twee draaitafels tussen de twee af. Zo kon hij de break eindeloos verlengen. Hij noemde dat de <em>merry-go-round</em>. De dansers die op die breaks dansten, heetten b-boys en b-girls.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/ikvA9RT6I1q1aJxmIqR_WFZQzEUqlcgYTyEfi2SKwXbdOOqT2k0_8hlTeoSBfAcub4bqeoCBLIF_n-6zAPOk9ruosYWhLeY1PlDzpEM" alt=""><div><span class="who">The Sugarhill Gang</span><br>Rapper's Delight (1979)</div></div>De eerste rap-hit, op de baslijn van <em>Good Times</em> van Chic.</aside>
+  <p>Andere dj's bouwden daarop voort. Afrika Bambaataa draaide alles wat dansbaar was, van funk tot Kraftwerk. Grandmaster Flash ontwikkelde technieken om sneller en preciezer tussen platen te wisselen. Grand Wizzard Theodore ontdekte het scratchen: een plaat met de hand heen en weer bewegen onder de naald. Naast de dj stond de MC, de <em>master of ceremonies</em>, die eerst vooral het publiek opzweepte en later steeds langere teksten op het ritme ging rappen. Zo ontstonden de elementen van de hiphopcultuur: deejaying (draaien en scratchen), MC-ing (rappen), breakdance en graffiti. Later kwam er beatboxing bij: drumklanken maken met je mond. Voor geen van die elementen had je veel geld nodig.</p>
+  <p>Op plaat kwam rap pas in 1979, en niet uit The Bronx. Sylvia Robinson, eigenaar van het label Sugar Hill Records in New Jersey, stelde een groep samen van drie rappers: The Sugarhill Gang. <em>Rapper's Delight</em> duurt in de lange versie bijna een kwartier. De muziek is de baslijn van <em>Good Times</em> van Chic, opnieuw ingespeeld door een studioband. Nile Rodgers en Bernard Edwards kregen na een juridische procedure alsnog een vermelding als componisten. Het nummer werd de eerste rap-hit, ook in Nederland.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/DK2EUt8EWvw9Rynb8JKyStJc2aFbTqHmgSh7oC8jkziGf3MefDpBV0X9J35f5d70MYJwbg3QNOjoOvcNCzBHUfRFFnxd_3TC4I-eask" alt=""><div><span class="who">Grandmaster Flash &amp; The Furious Five</span><br>The Message (1982)</div></div>Trager, dreigender, met een synthesizerlijn: rap als reportage.</aside>
+  <p><em>Rapper's Delight</em> is een feestnummer. <em>The Message</em> (1982) van Grandmaster Flash &amp; The Furious Five is dat niet. Het tempo is lager, de stemming dreigend, en een synthesizerlijn keert steeds terug. Rapper Melle Mel beschrijft het leven in het getto: gebroken glas, stank, lawaai, geen geld om te verhuizen, kinderen die geen kans krijgen. Voor het eerst beschreef een rap-hit de sociale werkelijkheid van de wijken waar de muziek vandaan kwam. Rap werd een vorm van reportage.</p>
+  <p>Hiphop verspreidde zich snel buiten New York. De breakdancers van de Rock Steady Crew hadden in 1983 een eigen hit, <em>(Hey You) The Rock Steady Crew</em>, en films als <em>Wild Style</em> (1983) en <em>Beat Street</em> (1984) lieten de cultuur in de rest van de wereld zien. Veertig jaar later, op de Olympische Spelen van 2024 in Parijs, was breaking een olympische sport. De doorbraak naar het grote witte publiek kwam in 1986. Run-DMC, een groep uit Queens, nam met producer Rick Rubin een nieuwe versie op van <em>Walk This Way</em> van de rockband Aerosmith, samen met zanger Steven Tyler en gitarist Joe Perry. In de videoclip breekt Tyler letterlijk door een muur tussen twee repetitieruimtes. Rap en rock samen bereikten zo MTV, dat in zijn eerste jaren nauwelijks zwarte artiesten had uitgezonden (Mixtape 7).</p>
+
+  <div class="head"><p class="label">Track 02 · 1987-2002 · New York, Los Angeles</p><h3>Hiphop wordt groot</h3></div>
+  <p>Eind jaren tachtig begon wat de <em>golden age</em> van de hiphop heet. Samplers werden betaalbaar, en producers bouwden hun beats uit stukjes bestaande opnames: een drumbreak van James Brown, een blazersstoot van een soulplaat, een stem uit een film. Samplen werd een kunstvorm. Over de sampler als instrument gaat Mixtape 9 (Het instrument).</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/boehEYscLkPW0hT9RERDoSoHjnD3xxIczDpuOl0Sz6PGRcAnDKG5FPD1_DIPfydGHMCkDIxfFhIi5ZaErLWpL88mhlx0DTzqdJHh0g" alt=""><div><span class="who">Public Enemy</span><br>Night of the Living Baseheads (1988)</div></div>The Bomb Squad: lagen van samples, sirenes en scratches.</aside>
+  <p>Public Enemy, met rappers Chuck D en Flavor Flav, bracht dat samplen tot het uiterste. Op het album <em>It Takes a Nation of Millions to Hold Us Back</em> (1988) stapelt The Bomb Squad, het productieteam rond Hank Shocklee, laag op laag: samples, sirenes, scratches en fragmenten van toespraken. <em>Night of the Living Baseheads</em> gaat over crack, de drug die in de jaren tachtig zwarte wijken in Amerikaanse steden ontwrichtte. Chuck D noemde rap ooit het CNN van zwart Amerika: het nieuws dat de gewone media niet brachten. Met <em>Fight the Power</em> en het album <em>Fear of a Black Planet</em> maakte de groep van die politieke lijn haar handelsmerk.</p>
+  <p>De La Soul koos een andere toon. Op <em>3 Feet High and Rising</em> (1989), geproduceerd door Prince Paul, staan speelse samples, onder meer van Funkadelic, en teksten met humor. <em>Me Myself and I</em> was het tegenbeeld van de stoere rapper. Het samplen kreeg wel een juridisch staartje. Na een rechtszaak tegen rapper Biz Markie in 1991 moest voor elke sample toestemming worden gevraagd en betaald. Omdat de rechten op de oude samples van De La Soul niet goed waren geregeld, ontbrak hun vroege werk tot 2023 op streamingdiensten.</p>
+  <p>Aan de westkust ontstond gangsta rap. N.W.A. kwam uit Compton, een voorstad van Los Angeles, en bracht in 1988 het album <em>Straight Outta Compton</em> uit. Het nummer <em>Fuck tha Police</em> is een aanklacht tegen politiegeweld in Los Angeles, met een expliciete tekst. De FBI stuurde de platenmaatschappij er een waarschuwingsbrief over. Drie jaar later, in 1991, filmde een omstander hoe agenten in Los Angeles de zwarte automobilist Rodney King mishandelden. Toen de agenten in 1992 werden vrijgesproken, braken in de stad rellen uit. Wat N.W.A. had beschreven, was voor iedereen zichtbaar geworden.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/Tvjr2LmTuqH_wnDtZJihKbANpQfsZBHfw8daSFNR91N8vjfKqePuQ618nE_69kbd30XXQ6NcEQO6OzVkyeLTXIkdlDthGivF6iPb-A" alt=""><div><span class="who">2Pac feat. Dr. Dre</span><br>California Love (1995)</div></div>G-funk: trage funkgrooves met een talkbox (Roger Troutman).</aside>
+  <p>Hiphop werd in deze jaren ook controversieel. Teksten over geweld en vrouwonvriendelijke teksten leidden tot ophef, en tussen rappers van de East Coast en de West Coast ontstond een rivaliteit die uit de hand liep. 2Pac werd in september 1996 in Las Vegas doodgeschoten, The Notorious B.I.G. in maart 1997 in Los Angeles. Muzikaal was de periode rijk. Dr. Dre, voormalig lid van N.W.A., ontwikkelde met <em>The Chronic</em> (1992) de G-funk: trage funkgrooves met synthesizers en veel ruimte. Op <em>California Love</em> (1995) zingt Roger Troutman door een talkbox, een slangetje waarmee je de klank van een instrument met je mond vormt. Op <em>Still D.R.E.</em> (1999) is de beat minimaal: een pianoriff van Scott Storch, drums en verder vooral stilte. In New York bracht de Wu-Tang Clan uit Staten Island in 1993 <em>Protect Ya Neck</em> uit: negen MC's, lo-fi beats van RZA en samples uit kungfufilms.</p>
+  <p>Er is een ongemakkelijk feit in dit verhaal. Hiphop werd pas echt geaccepteerd door witte luisteraars toen witte rappers doorbraken. <em>Licensed to Ill</em> (1986) van de Beastie Boys was het eerste rapalbum dat op nummer 1 kwam in de Amerikaanse albumlijst. Op <em>Sabotage</em> (1994) speelt de groep zelf gitaar, bas en drums: rap, punk en funk door elkaar. Eminem uit Detroit werd ontdekt door Dr. Dre. Zijn <em>Lose Yourself</em> (2002), uit de film <em>8 Mile</em>, was het eerste rapnummer dat een Oscar won. Inmiddels is de muziek niet meer weg te denken. Sinds 2017 is hiphop, mede door streaming, de grootste muziekstroom ter wereld. In 2018 won Kendrick Lamar als eerste muzikant buiten klassiek en jazz de Pulitzerprijs voor muziek.</p>
+
+  <div class="head"><p class="label">Track 03 · Vanaf 1980 · Verenigde Staten</p><h3>Moderne R&amp;B</h3></div>
+  <p>De term rhythm-and-blues kwam terug, nu afgekort tot R&amp;B. Moderne R&amp;B groeit uit rhythm-and-blues, soul, funk, hiphop en elektronische muziek. Productie, zang en drumcomputers staan centraal, en de producer wordt een ster, soms net zo bekend als de zanger.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/MuyNGpDwGpwpsmNm91AMJ_YQ5Ezms5Tg9Reeqy1hoPEV_AGm8wy1yxRRb0AwXF5DacRqRRMpbq-7-BkaNb5Hc5TdvJluxCpVIU4K3l0" alt=""><div><span class="who">Janet Jackson</span><br>When I Think of You (1986)</div></div>Jimmy Jam &amp; Terry Lewis: de strakke Minneapolis-sound.</aside>
+  <p>Het begin ligt bij Michael Jackson. Na de Jackson 5 maakte hij met producer Quincy Jones het album <em>Off the Wall</em> (1979). <em>Rock with You</em> werd geschreven door de Engelse songwriter Rod Temperton: soepele disco met een zachte, precieze stem. Drie jaar later volgde <em>Thriller</em> (1982), het best verkochte album aller tijden. Zijn zus Janet Jackson werkte voor het album <em>Control</em> (1986) met Jimmy Jam en Terry Lewis, twee producers uit Minneapolis die uit de kring rond Prince kwamen. <em>When I Think of You</em> laat hun strakke Minneapolis-sound horen: drumcomputers, synthesizers en korte, scherpe akkoorden. Whitney Houston, dochter van gospelzangeres Cissy Houston, zong met een stem uit de kerk in een synthpopproductie. In <em>I Wanna Dance with Somebody</em> (1987) herhaalt zich wat Ray Charles in 1954 deed: de gospelstem gaat de dansvloer op.</p>
+  <p>Eind jaren tachtig combineerde producer Teddy Riley hiphopbeats met R&amp;B-zang. Die stijl heette new jack swing. In de jaren negentig werd die combinatie de norm. Mary J. Blige werd de 'queen of hip-hop soul'. Op <em>Family Affair</em> (2001) zingt ze soul over een hiphopbeat van Dr. Dre. TLC, een groep van drie vrouwen uit Atlanta, scoorde met <em>Waterfalls</em> (1994) een wereldhit over hiv en drugsgeweld. Erykah Badu nam <em>Tyrone</em> (1997) live op, met harmonieën uit de jazz. Zij hoorde, met onder anderen D'Angelo, bij de neo-soul: R&amp;B die teruggreep op de soul van de jaren zeventig. Producer Timbaland maakte met zangeres Aaliyah en rapper Missy Elliott juist muziek met haperende, ongewone ritmes.</p>
+  <aside class="side-note"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://lh3.googleusercontent.com/vxZsr9Zwfnm7DIvsmVN9exfVh_y6-HhhlYLprnsoLGaN1Gap3m18sbE5-pA_jdzd1LI1G3EzE-LfiMfHZbsACItAbh5rw6AQXHwg0EM" alt=""><div><span class="who">OutKast</span><br>Hey Ya! (2003)</div></div>Een maat van 11/4 in het couplet: door de meeste luisteraars niet opgemerkt.</aside>
+  <p>Na 2000 werden R&amp;B en hiphop de kern van de mainstream. OutKast, het duo van André 3000 en Big Boi uit Atlanta, scoorde in 2003 met <em>Hey Ya!</em>, een vrolijk nummer met in het couplet een maat van elf tellen die de meeste luisteraars niet opmerken. Beyoncé begon in de groep Destiny's Child en werd daarna een van de grootste solosterren ter wereld. <em>Halo</em> (2008), geschreven met Ryan Tedder, is een pianoballad die groeit naar een climax met koor, zoals een gospellied. Usher en Rihanna scoorden hit na hit. Alicia Keys gebruikte op <em>Girl on Fire</em> (2012) het drumpatroon van <em>The Big Beat</em> (1980) van de witte rockzanger Billy Squier, een drumbreak dat al jaren door hiphopproducers werd gesampled.</p>
+  <p>Daarmee is de cirkel van dit hoofdstuk rond. Muziek die in de jaren vijftig apart werd verkocht als <em>race records</em>, die op radiozenders en in platenwinkels gescheiden werd van 'witte' muziek, en die in 1979 in een stadion werd opgeblazen, is nu de muziek die het meest wordt gestreamd. Onderweg ging veel mis: muzikanten die niet op de hoes stonden, opnames waarvan de rechten bij anderen lagen, samples waarvoor niemand werd betaald. En de vraag wie profiteert van zwarte muziek is ook nu niet beantwoord. Wat bleef, zijn de kenmerken waarmee het begon: de stem, de groove, de roep en het antwoord.</p>
+</section>
+
+<section class="back">
+  <h4 class="backhead">Begrippen</h4>
+  <dl class="terms">
+    <div><dt>Diaspora</dt><dd>Verspreiding van een volk buiten het land van herkomst</dd></div>
+    <div><dt>Soul</dt><dd>Gospel en rhythm-and-blues met wereldlijke teksten</dd></div>
+    <div><dt>On the one</dt><dd>De nadruk van funk op de eerste tel</dd></div>
+    <div><dt>Riddim</dt><dd>De ritmische basis van drums en bas in reggae</dd></div>
+    <div><dt>One drop</dt><dd>Reggaeritme met de bassdrum op de derde tel</dd></div>
+    <div><dt>Four-on-the-floor</dt><dd>Bassdrum op elke tel (disco, house)</dd></div>
+    <div><dt>Break</dt><dd>Instrumentaal stuk van een funkplaat, basis van hiphop</dd></div>
+    <div><dt>Sample</dt><dd>Een stukje bestaande opname, hergebruikt als bouwsteen</dd></div>
+    <div><dt>G-funk</dt><dd>West Coast-hiphop met trage funkgrooves en synthesizers</dd></div>
+  </dl>
+
+  <h4 class="backhead">Verder luisteren en kijken</h4>
+  <div class="links">
+    <div class="link-card"><div class="qr" data-url="https://open.spotify.com/playlist/4rD4S7mER7jSma1MS9D7Rk"></div>
+      <div><span class="tag">SPOTIFY · PLAYLIST</span><p>Alle nummers uit dit hoofdstuk, in de volgorde van de tekst. Scan de code met je telefoon.</p><p class="url">open.spotify.com/playlist/4rD4S7mER7jSma1MS9D7Rk</p></div></div>
+    <div class="link-card lesson"><div><span class="tag">LESSONUP · LES</span><p><strong>Mixtape 6: Fear of a Black Planet</strong></p><p>De les bij dit hoofdstuk, met beeld en fragmenten.</p></div></div>
+  </div>
+
+  <footer class="colofon">
+    <p>Platenhoezen: Apple Music.</p>
+    <p>School of Rock · De geschiedenis van popmuziek · ArtEZ University of the Arts</p>
+  </footer>
+</section>
+<nav class="pager" aria-label="Andere mixtapes"><a href="05.html"><small>← Mixtape 5</small><b>Jazz Festival</b></a><a class="next" href="07.html"><small>Mixtape 7 →</small><b>De jaren 80</b></a></nav>
+
+</div><footer class="sitefoot"><div class="wrap"><p>School of Rock · De geschiedenis van popmuziek in mixtapes · Jan-Wolter Smit · ArtEZ University of the Arts</p><p><a href="../pdf/school-of-rock-reader.pdf">Download de reader (pdf)</a></p></div></footer><script src="../assets/player.js"></script><script src="../assets/chapter.js"></script><script>document.querySelectorAll('.qr[data-url]').forEach(function(el){if(typeof QRCode==='undefined'){return;}new QRCode(el,{text:el.dataset.url,width:256,height:256,colorDark:'#1C1B19',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.M});});</script></body></html>
