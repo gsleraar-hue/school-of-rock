@@ -42,7 +42,7 @@
                      },
                      {
                          "id":  "jamaica",
-                         "name":  "Jamaica \u0026 Caribisch",
+                         "name":  "Caribisch \u0026 Latijns",
                          "color":  "#2FA552"
                      },
                      {
@@ -63,7 +63,8 @@
                                      "lon":  -89.5
                                  },
                        "parents":  [
-
+                                       "plantage",
+                                       "europese-kunstmuziek"
                                    ],
                        "text":  "Spirituals ontstonden in de negentiende eeuw onder tot slaaf gemaakte Afro-Amerikanen in het zuiden van de Verenigde Staten; in de zwarte kerken groeide daaruit in de jaren twintig en dertig de gospel: meerstemmige religieuze liederen met roep en antwoord. Sister Rosetta Tharpe nam vanaf 1938 gospelliederen op met het ritme en de swing van de jazz, en speelde in de jaren veertig al solo\u0027s op een elektrische gitaar. Via zangers die in de kerk leerden zingen, werd gospel een van de wortels van soul.",
                        "listen":  "Strange Things Happening Every Day is een gospelnummer, maar wie niet op de tekst let, hoort een stuwende piano en een gitaarsolo zoals in rhythm-and-blues.",
@@ -100,7 +101,7 @@
                                      "lon":  -90.6
                                  },
                        "parents":  [
-
+                                       "plantage"
                                    ],
                        "text":  "De blues groeide rond 1890 uit de work songs, hollers en spirituals van de zwarte bevolking op het platteland van het zuiden, met de Mississippi Delta als belangrijk gebied. Kenmerken zijn het 12-matenschema met een AAB-tekst, blue notes en de slidegitaar. Robert Johnson nam in 1936 en 1937 in totaal 29 nummers op.",
                        "listen":  "Tel in Cross Road Blues de maten mee: Johnson volgt de tekst en rekt het schema op of gaat eerder naar het volgende akkoord.",
@@ -136,7 +137,10 @@
                                      "lon":  -93.23
                                  },
                        "parents":  [
-
+                                       "marsmuziek",
+                                       "habanera",
+                                       "europese-kunstmuziek",
+                                       "minstrel"
                                    ],
                        "text":  "Ragtime was de eerste Afro-Amerikaanse muziekstijl die op grote schaal als bladmuziek werd verkocht. De linkerhand speelt een mars-bas, de rechterhand syncopen tegen de tel in, en de vorm bestaat uit strains van zestien maten. Scott Joplins Maple Leaf Rag werd in 1899 in Sedalia, Missouri, uitgegeven.",
                        "listen":  "Luister naar het verschil tussen de strakke mars-bas in de linkerhand en de syncopen in de rechterhand.",
@@ -168,7 +172,8 @@
                                      "lon":  -81
                                  },
                        "parents":  [
-
+                                       "britse-volksmuziek",
+                                       "west-afrika"
                                    ],
                        "text":  "Immigranten uit Schotland, Engeland en Ierland brachten vanaf de achttiende eeuw ballads en dansmuziek mee naar de Appalachen. De fiddle speelde de jigs en reels uit Schotland en Ierland; in de Appalachen werden daaruit vooral snelle breakdowns in tweekwartsmaat. Daarnaast klonk de banjo, die Afro-Amerikaans van oorsprong is. Liederen gingen mondeling van zanger op zanger: het folkproces.",
                        "listen":  "Hoor in de Ierse Swallowtail Jig, een van de wortels van deze muziek, de twee zware tellen per maat, die elk in drieën zijn verdeeld.",
@@ -255,7 +260,10 @@
                        "parents":  [
                                        "ragtime",
                                        "delta-blues",
-                                       "gospel"
+                                       "gospel",
+                                       "marsmuziek",
+                                       "habanera",
+                                       "west-afrika"
                                    ],
                        "text":  "In New Orleans groeide rond 1900 uit de brassbands de jazz, later ook Dixieland of hot jazz genoemd. Cornet, klarinet en trombone improviseren tegelijk boven banjo, tuba en drums: collectieve improvisatie. In 1917 verscheen de eerste jazzplaat, van de witte Original Dixieland Jass Band.",
                        "listen":  "Volg de rolverdeling: de cornet speelt de melodie, de klarinet versiert erboven en de trombone glijdt eronder.",
@@ -356,7 +364,8 @@
                                      "lon":  -73.99
                                  },
                        "parents":  [
-
+                                       "minstrel",
+                                       "europese-kunstmuziek"
                                    ],
                        "text":  "Vanaf ongeveer 1885 vestigden muziekuitgevers zich bij elkaar in Manhattan, vanaf de jaren 1890 vooral aan West 28th Street. Songwriters schreven liedjes, uitgevers verkochten ze als bladmuziek en song pluggers speelden ze voor; vanaf de jaren twintig werd het lied van 32 maten in AABA-vorm de standaard. Irving Berlin, George Gershwin en Cole Porter waren de grote namen.",
                        "listen":  "Hoor in White Christmas hoe Bing Crosby zacht en dichtbij zingt, dankzij de microfoon: crooning.",
@@ -386,6 +395,11 @@
                                             "n":  12,
                                             "track":  "Track 01",
                                             "heading":  "Tin Pan Alley"
+                                        },
+                                        {
+                                            "n":  12,
+                                            "track":  "Track 01",
+                                            "heading":  "Van AABA naar couplet en refrein"
                                         }
                                     ]
                    },
@@ -440,7 +454,9 @@
                        "parents":  [
                                        "swing",
                                        "delta-blues",
-                                       "gospel"
+                                       "gospel",
+                                       "classic-blues",
+                                       "jump-blues"
                                    ],
                        "text":  "Na de Tweede Wereldoorlog waren big bands te duur om mee te toeren. Kleine bezettingen met piano, elektrische gitaar, bas, drums en een of twee saxofoons maakten luide, dansbare muziek voor een stedelijk zwart publiek: rhythm-and-blues. Leiber en Stoller schreven in 1952 Hound Dog voor Big Mama Thornton; in 1953 stond de plaat zeven weken op 1 in de r\u0026b-hitlijst.",
                        "listen":  "Hoor hoe Big Mama Thornton in Hound Dog een man rauw en krachtig de deur wijst.",
@@ -483,7 +499,10 @@
                        "parents":  [
                                        "rhythm-and-blues",
                                        "country",
-                                       "gospel"
+                                       "gospel",
+                                       "boogie-woogie",
+                                       "jump-blues",
+                                       "chicago-blues"
                                    ],
                        "text":  "Rock-\u0027n-roll groeide uit rhythm-and-blues, met invloeden uit jump blues, boogie-woogie, gospel en country. Herkenbaar zijn de backbeat op tel 2 en 4 en een gitaarriff als hook. Rocket 88 (1951) wordt vaak de eerste rock-\u0027n-roll-plaat genoemd; Rock Around the Clock bracht de stijl in 1955 bij het grote publiek.",
                        "listen":  "Let op de luide snaredrum op 2 en 4 en, in Rocket 88, de vervormde gitaar uit een kapotte luidspreker.",
@@ -584,7 +603,7 @@
                                        "delta-blues"
                                    ],
                        "text":  "Halverwege de jaren vijftig ging skiffle als rage door Groot-Brittannië, met wortels in Amerikaanse folk en blues; Lonnie Donegan had in 1956 een hit met Rock Island Line. Je had alleen een goedkope gitaar, een wasbord en een theekistbas nodig. Duizenden tieners begonnen zo een band, onder wie John Lennon met The Quarrymen.",
-                       "listen":  "Hoor in Rock Island Line de eenvoudige bezetting en het opjagende tempo: muziek die iedereen kon nadoen. In Spite of All the Danger is een vroege opname van The Quarrymen, de skiffleband van John Lennon.",
+                       "listen":  "Hoor in Rock Island Line de eenvoudige bezetting en het opjagende tempo: muziek die iedereen kon nadoen.",
                        "tracks":  [
                                       {
                                           "artist":  "Lonnie Donegan",
@@ -592,13 +611,6 @@
                                           "year":  1955,
                                           "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/90/d3/98/90d3982d-fa64-059c-4839-7fe330e5ffe2/mzaf_3477452183591110631.plus.aac.p.m4a",
                                           "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music/f5/9d/8d/mzi.syiskdqq.jpg/600x600bb.jpg"
-                                      },
-                                      {
-                                          "artist":  "The Quarrymen",
-                                          "title":  "In Spite of All the Danger",
-                                          "year":  1958,
-                                          "audio":  "https://api.lessonup.com/v1/media/ri989NJQg7bt6b8Zu",
-                                          "cover":  "https://lh3.googleusercontent.com/Yjx_Y7608kfS2ecj8wm3J_AMI-puaAUZDE317J_0NPlRbX-ruRtdXSZ8f68Mr31xuR1ME0MrznNVX3hTrEHXOKPoM6Shfc1jZIFxsBY"
                                       }
                                   ],
                        "mixtapes":  [
@@ -626,7 +638,9 @@
                        "parents":  [
                                        "skiffle",
                                        "rock-n-roll",
-                                       "rhythm-and-blues"
+                                       "rhythm-and-blues",
+                                       "rockabilly",
+                                       "chicago-blues"
                                    ],
                        "text":  "Na honderden uren in de clubs van Hamburg werden The Beatles in 1963 de grootste band van Groot-Brittannië. Vanaf 1964 veroverden zij, The Rolling Stones, The Animals en The Kinks de Amerikaanse hitlijsten: de British Invasion. Bij de mods in Londen hoorden bands als The Who.",
                        "listen":  "Hoor in Please Please Me hoe George Martin een langzame ballad liet versnellen tot een opgewekte popsong.",
@@ -673,6 +687,11 @@
                                             "n":  2,
                                             "track":  "Track 01",
                                             "heading":  "Mods"
+                                        },
+                                        {
+                                            "n":  3,
+                                            "track":  "Track 03",
+                                            "heading":  "Epstein, Decca en George Martin"
                                         }
                                     ]
                    },
@@ -692,7 +711,8 @@
                                  },
                        "parents":  [
                                        "appalachian-folk",
-                                       "delta-blues"
+                                       "delta-blues",
+                                       "bluegrass"
                                    ],
                        "text":  "In de jaren vijftig en zestig herontdekten jonge witte muzikanten in Greenwich Village, New York, de oude volksmuziek: de folk revival. Dave Van Ronk maakte er een nieuw arrangement van House of the Rising Sun, dat Bob Dylan in 1962 op zijn debuutalbum zette. Dylans protestliedjes inspireerden later ook Boudewijn de Groot.",
                        "listen":  "Vergelijk de dalende baslijn en de mineurakkoorden van Van Ronk en Dylan met de modale versie uit 1933.",
@@ -774,6 +794,11 @@
                                             "n":  4,
                                             "track":  "Track 03",
                                             "heading":  "De laatste grote rockhits"
+                                        },
+                                        {
+                                            "n":  3,
+                                            "track":  "Track 02",
+                                            "heading":  "Help! en Rubber Soul"
                                         }
                                     ]
                    },
@@ -840,7 +865,8 @@
                                  },
                        "parents":  [
                                        "rock-n-roll",
-                                       "country"
+                                       "country",
+                                       "rockabilly"
                                    ],
                        "text":  "Indische Nederlanders brachten na 1949 krontjong en de Hawaïaanse gitaar mee; met Amerikaanse country en rock-\u0027n-roll smolt dat in Nederland samen tot indorock. Het is snelle, vaak instrumentale gitaarmuziek met veel echo en een wilde show. De Tielman Brothers speelden vanaf 1959 in Duitse clubs, een jaar voordat de Beatles in 1960 naar Hamburg kwamen.",
                        "listen":  "Hoor in Rock Little Baby of Mine hoe een echo-apparaat elke snelle gitaarnoot laat nagalmen.",
@@ -922,7 +948,8 @@
                                  },
                        "parents":  [
                                        "delta-blues",
-                                       "british-beat"
+                                       "british-beat",
+                                       "chicago-blues"
                                    ],
                        "text":  "Cream, het trio van Eric Clapton, Jack Bruce en Ginger Baker, bracht de blues naar de grote zalen, met lange solo\u0027s en harde versterkers; Clapton speelde Robert Johnsons Cross Road Blues als Crossroads. Ook Janis Joplin zong blues met harde, scheurende rockgitaren. Bluesrock werd de basis van de hardrock van de jaren zeventig.",
                        "listen":  "Hoor in White Room het intro in vijfkwartsmaat en het wah-wahpedaal dat de gitaar laat \u0027praten\u0027.",
@@ -972,7 +999,8 @@
                        "parents":  [
                                        "british-beat",
                                        "folk-rock",
-                                       "elektronische-studio"
+                                       "elektronische-studio",
+                                       "raga-rock"
                                    ],
                        "text":  "Rond 1966 en 1967 lieten bands zich inspireren door Indiase muziek, de klassieke avant-garde en lsd. Je hoort drones, modale klanken en studio-effecten; de Beatles gebruikten bandlussen en achterstevoren afgespeelde klanken. San Francisco, met de Summer of Love van 1967, en Londen waren de centra.",
                        "listen":  "Hoor in White Rabbit het marsritme dat steeds luider wordt, met een Spaanse, Frygische klank.",
@@ -1019,6 +1047,26 @@
                                             "n":  3,
                                             "track":  "Track 01",
                                             "heading":  "Sgt. Pepper\u0027s Lonely Hearts Club Band"
+                                        },
+                                        {
+                                            "n":  3,
+                                            "track":  "Track 05",
+                                            "heading":  "Strawberry Fields Forever: van demo tot plaat"
+                                        },
+                                        {
+                                            "n":  3,
+                                            "track":  "Track 02",
+                                            "heading":  "Sgt. Pepper in vijf tracks"
+                                        },
+                                        {
+                                            "n":  3,
+                                            "track":  "Track 03",
+                                            "heading":  "All You Need Is Love"
+                                        },
+                                        {
+                                            "n":  3,
+                                            "track":  "Track 01",
+                                            "heading":  "Rishikesh, Apple en Esher"
                                         }
                                     ]
                    },
@@ -1178,6 +1226,16 @@
                                             "n":  11,
                                             "track":  "Track 01",
                                             "heading":  "Wereldspelers"
+                                        },
+                                        {
+                                            "n":  3,
+                                            "track":  "Track 02",
+                                            "heading":  "The Beatles (\"The White Album\")"
+                                        },
+                                        {
+                                            "n":  9,
+                                            "track":  "Track 01",
+                                            "heading":  "Hammond en Leslie"
                                         }
                                     ]
                    },
@@ -1229,7 +1287,8 @@
                                      "lon":  6.77
                                  },
                        "parents":  [
-                                       "psychedelic-rock"
+                                       "psychedelic-rock",
+                                       "free-jazz"
                                    ],
                        "text":  "In West-Duitsland zochten bands als Can, Neu! en Kraftwerk een eigen geluid, los van de Amerikaanse en Britse rock; Engelse journalisten noemden dat krautrock. Neu! werd opgericht door Michael Rother en Klaus Dinger, die kort bij Kraftwerk hadden gespeeld. Hun motorik-beat kwam later terug in postpunk, elektronische muziek en bij Radiohead.",
                        "listen":  "Hoor in Hallogallo hoe de drums minutenlang hetzelfde 4/4-ritme zonder fills houden, als een auto met constante snelheid.",
@@ -2053,7 +2112,8 @@
                                  },
                        "parents":  [
                                        "tin-pan-alley",
-                                       "rhythm-and-blues"
+                                       "rhythm-and-blues",
+                                       "doo-wop"
                                    ],
                        "text":  "Eind jaren vijftig werkten in en rond het Brill Building aan Broadway jonge schrijversduo\u0027s in kamertjes met een piano, zoals Carole King en Gerry Goffin, en schreven over wat tieners bezighield. Will You Love Me Tomorrow van The Shirelles werd in 1961 de eerste nummer 1 van een zwarte meidengroep. Producer Phil Spector nam in Los Angeles op met zijn Wall of Sound.",
                        "listen":  "Hoor in Be My Baby de Wall of Sound: instrumenten die dubbel en driedubbel spelen, in veel galm.",
@@ -2422,6 +2482,11 @@
                                             "n":  12,
                                             "track":  "Track 03",
                                             "heading":  "Het schrijfkamp"
+                                        },
+                                        {
+                                            "n":  12,
+                                            "track":  "Track 01",
+                                            "heading":  "Van AABA naar couplet en refrein"
                                         }
                                     ]
                    },
@@ -2559,7 +2624,9 @@
                                  },
                        "parents":  [
                                        "kleinkunst",
-                                       "nederpop"
+                                       "nederpop",
+                                       "singer-songwriter",
+                                       "levenslied"
                                    ],
                        "text":  "In de jaren negentig groeide het Nederlandstalige lied voor een groot publiek: Marco Borsato had vanaf 1994 hit na hit met ballads. Acda en de Munnik zetten de lijn van de kleinkunst voort, en BLØF maakte met Geike Arnaert Zoutelande (2017), een van de grootste hits ooit in Nederland. Rond 2020 vonden Snelle en Froukje hun publiek via TikTok en YouTube.",
                        "listen":  "Hoor in Zoutelande een rustig duet over een strand in Zeeland.",
@@ -2624,6 +2691,26 @@
                                             "n":  13,
                                             "track":  "Track 02",
                                             "heading":  "TikTok en het einde van genres"
+                                        },
+                                        {
+                                            "n":  4,
+                                            "track":  "Track 04",
+                                            "heading":  "En dan wordt het stil"
+                                        },
+                                        {
+                                            "n":  13,
+                                            "track":  "Track 04",
+                                            "heading":  "Napster"
+                                        },
+                                        {
+                                            "n":  13,
+                                            "track":  "Track 01",
+                                            "heading":  "Van iPod tot Spotify"
+                                        },
+                                        {
+                                            "n":  13,
+                                            "track":  "Track 03",
+                                            "heading":  "De artiest als eigen label"
                                         }
                                     ]
                    },
@@ -2680,6 +2767,11 @@
                                             "n":  10,
                                             "track":  "Track 02",
                                             "heading":  "Respect"
+                                        },
+                                        {
+                                            "n":  9,
+                                            "track":  "Track 01",
+                                            "heading":  "Hammond en Leslie"
                                         }
                                     ]
                    },
@@ -2780,6 +2872,11 @@
                                             "n":  6,
                                             "track":  "Track 03",
                                             "heading":  "Stax: Soulsville U.S.A."
+                                        },
+                                        {
+                                            "n":  9,
+                                            "track":  "Track 01",
+                                            "heading":  "Hammond en Leslie"
                                         }
                                     ]
                    },
@@ -3375,6 +3472,11 @@
                                             "n":  10,
                                             "track":  "Track 01",
                                             "heading":  "De eerste vrouwen achter de knoppen"
+                                        },
+                                        {
+                                            "n":  3,
+                                            "track":  "Track 04",
+                                            "heading":  "Abbey Road: nog één keer zoals vroeger"
                                         }
                                     ]
                    },
@@ -3952,7 +4054,10 @@
                        "parents":  [
                                        "french-house",
                                        "trance-nl",
-                                       "rave"
+                                       "rave",
+                                       "eurodance",
+                                       "big-beat",
+                                       "dubstep"
                                    ],
                        "text":  "Rond 2010 werd elektronische dansmuziek in de Verenigde Staten het grote nieuwe genre, onder de naam EDM. Festivals trokken honderdduizenden bezoekers en de dj werd een popster met een eigen lichtshow. Avicii bouwde Levels op een zangsample van Etta James, en Martin Garrix maakte Animals op een laptop in zijn slaapkamer.",
                        "listen":  "Hoor de opbouw en de drop: het moment waarop de beat en de bas weer inzetten.",
@@ -4005,7 +4110,8 @@
                        "parents":  [
                                        "golden-age-hiphop",
                                        "reggae",
-                                       "soul"
+                                       "soul",
+                                       "dub"
                                    ],
                        "text":  "Triphop is een vorm van downtempo uit de producersscène van Bristol, waar soundsystems reggae, hiphop, soul en punk door elkaar draaiden. Massive Attack kwam voort uit het collectief The Wild Bunch. Trage, zware breakbeats, samples van oude platen, een diepe reggaebas en zang die meer sfeer dan verhaal is.",
                        "listen":  "Hoor in Unfinished Sympathy de trage beat onder strijkers en een zangstem die sfeer schept.",
@@ -4316,7 +4422,10 @@
                                      "lon":  -73.96
                                  },
                        "parents":  [
-                                       "bebop"
+                                       "bebop",
+                                       "son",
+                                       "mambo",
+                                       "habanera"
                                    ],
                        "text":  "Machito en Mario Bauzá mengden vanaf 1943 in New York jazz met Cubaanse muziek. Dizzy Gillespie nam in 1947 de Cubaanse conguero Chano Pozo, die sinds kort in New York woonde, op in zijn bigband. Jazz swingt lang-kort, Afro-Cubaanse muziek is gebouwd op recht verdeelde noten en de clave; in latin jazz komen die twee samen. Vanaf 1958 maakten João Gilberto en Antônio Carlos Jobim in Rio de Janeiro de bossa nova.",
                        "listen":  "Hoor in Manteca het conga-ostinato van Pozo en een bebop-brug in swing: twee ritmische werelden in één stuk.",
@@ -4637,6 +4746,1221 @@
                                             "n":  5,
                                             "track":  "Track 03",
                                             "heading":  "Nu jazz"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "bluegrass",
+                       "name":  "Bluegrass",
+                       "family":  "country",
+                       "year":  1945,
+                       "place":  {
+                                     "name":  "Kentucky en Nashville",
+                                     "lat":  37.6,
+                                     "lon":  -85.6
+                                 },
+                       "parents":  [
+                                       "appalachian-folk",
+                                       "country"
+                                   ],
+                       "text":  "Vanaf de jaren veertig ontstond in de country een snelle, akoestische variant: bluegrass, genoemd naar de band van mandolinespeler Bill Monroe uit Kentucky, de Blue Grass Boys. In 1945 kwam banjospeler Earl Scruggs uit North Carolina bij die band. Hij speelde met drie vingers, in snelle patronen van acht noten per maat: de rolls. In 1948 begonnen Scruggs en zanger-gitarist Lester Flatt een eigen band; hun Foggy Mountain Breakdown (1949) klonk later in de film Bonnie and Clyde (1967).",
+                       "listen":  "Let in Foggy Mountain Breakdown op de banjo: drie vingers, rolls van acht noten per maat, terwijl fiddle en gitaar het tempo vasthouden.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Flatt \u0026 Scruggs",
+                                          "title":  "Foggy Mountain Breakdown",
+                                          "year":  1949,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/Music5/v4/e5/c9/7b/e5c97b6d-cb3c-5c56-ea9c-e849d03fc3c1/mzaf_4424173562565107161.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/39/80/63/398063cc-a3ec-d813-057e-d16874dc1474/cover.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 02",
+                                            "heading":  "Made in America"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "bossa-nova",
+                       "name":  "Bossa nova",
+                       "family":  "jazz",
+                       "year":  1958,
+                       "place":  {
+                                     "name":  "Rio de Janeiro",
+                                     "lat":  -22.91,
+                                     "lon":  -43.17
+                                 },
+                       "parents":  [
+                                       "cool-jazz",
+                                       "latin-jazz",
+                                       "samba"
+                                   ],
+                       "text":  "In Rio de Janeiro maakten gitarist en zanger João Gilberto en componist Antônio Carlos Jobim vanaf 1958 de bossa nova: een zachte, ingetogen versie van de samba, met jazzakkoorden en een zangstem die bijna fluistert. Bossa nova is Braziliaans en niet Afro-Cubaans; het ritme is anders en de sfeer ook. Via de Amerikaanse saxofonist Stan Getz werd de stijl in de Verenigde Staten populair: Getz/Gilberto (1964), met The Girl from Ipanema gezongen door Astrud Gilberto, werd een hit ver buiten het jazzpubliek.",
+                       "listen":  "Hoor in The Girl from Ipanema het zachte bossa-ritme op de gitaar, de jazzakkoorden en de zang die bijna fluistert, met daarna de saxofoon van Stan Getz.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Stan Getz \u0026 João Gilberto met Astrud Gilberto",
+                                          "title":  "The Girl from Ipanema",
+                                          "year":  1964,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/af/a7/8d/afa78d22-9f23-e61e-fa8e-16c158f82598/mzaf_5318103207441015320.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/19/80/73/1980736d-c6cc-6ed8-6478-5c7670856006/06UMGIM12389.rgb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  5,
+                                            "track":  "Track 02",
+                                            "heading":  "Latin jazz"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "doo-wop",
+                       "name":  "Doo-wop",
+                       "family":  "soul",
+                       "year":  1950,
+                       "place":  {
+                                     "name":  "New York",
+                                     "lat":  40.84,
+                                     "lon":  -73.88
+                                 },
+                       "parents":  [
+                                       "gospel",
+                                       "rhythm-and-blues"
+                                   ],
+                       "text":  "Doo-wop is meerstemmige zang uit de rhythm-and-blues van de jaren vijftig. Groepen van vier of vijf zangers oefenden op straathoeken in steden als New York: een leadzanger, met daaronder een koortje dat klanken en lettergrepen zingt in plaats van tekst. Veel doo-wopballads staan in 12/8, met een langzaam, wiegend ritme. De stijl liet sporen na in de girlgroups, in de vroege Beatles en later in de koortjes van Lauryn Hill.",
+                       "listen":  "Hoor in Earth Angel het koortje onder de leadstem en het wiegende ritme in 12/8, waarin elke tel in drieën is verdeeld.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "The Penguins",
+                                          "title":  "Earth Angel",
+                                          "year":  1954,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f5/89/c4/f589c447-a9c5-2aec-ae4f-93af733aff06/mzaf_365478920992935210.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/31/f0/91/31f09116-e138-15e4-8bab-054068fea8de/MJCD399.jpg/600x600bb.jpg"
+                                      },
+                                      {
+                                          "artist":  "The Quarrymen",
+                                          "title":  "In Spite of All the Danger",
+                                          "year":  1958,
+                                          "audio":  "https://api.lessonup.com/v1/media/ri989NJQg7bt6b8Zu",
+                                          "cover":  "https://lh3.googleusercontent.com/Yjx_Y7608kfS2ecj8wm3J_AMI-puaAUZDE317J_0NPlRbX-ruRtdXSZ8f68Mr31xuR1ME0MrznNVX3hTrEHXOKPoM6Shfc1jZIFxsBY"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  3,
+                                            "track":  "Track 01",
+                                            "heading":  "The Quarrymen"
+                                        },
+                                        {
+                                            "n":  10,
+                                            "track":  "Track 02",
+                                            "heading":  "Zelf de regie"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "marsmuziek",
+                       "name":  "Marsmuziek en brassbands",
+                       "family":  "roots",
+                       "year":  1880,
+                       "place":  {
+                                     "name":  "Washington",
+                                     "lat":  38.9,
+                                     "lon":  "-77.03"
+                                 },
+                       "parents":  [
+                                       "europese-kunstmuziek"
+                                   ],
+                       "text":  "Eind negentiende eeuw had bijna elke Amerikaanse stad een brassband, en John Philip Sousa, leider van de United States Marine Band in Washington, schreef marsen als The Stars and Stripes Forever (1896). Een mars staat in 2/4, met het zwaartepunt op 1 en 3, en bestaat uit meerdere melodieën achter elkaar, de strains. Ragtime nam die maatsoort en vorm over, en in New Orleans speelden brassbands bij begrafenissen: op weg naar de begraafplaats een langzame hymne, op de terugweg vrolijke muziek.",
+                       "listen":  "Hoor in The Stars and Stripes Forever de strakke maat in twee en de melodieën die elkaar afwisselen, zoals later in de ragtime.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "United States Marine Band (John Philip Sousa)",
+                                          "title":  "The Stars and Stripes Forever",
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d0/cf/cc/d0cfcc09-ec13-4858-f513-035f6cd890ce/mzaf_12338366342008475565.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/14/6f/ed/146fed56-2a75-435b-2903-01eab8e4d3a8/754422641821.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 03",
+                                            "heading":  "Ragtime"
+                                        },
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 04",
+                                            "heading":  "Back to New Orleans"
+                                        },
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 05",
+                                            "heading":  "Jass"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "habanera",
+                       "name":  "Habanera",
+                       "family":  "jamaica",
+                       "year":  1850,
+                       "place":  {
+                                     "name":  "Havana",
+                                     "lat":  23.13,
+                                     "lon":  "-82.38"
+                                 },
+                       "parents":  [
+                                       "europese-kunstmuziek",
+                                       "west-afrika"
+                                   ],
+                       "text":  "De habanera is een Cubaanse dans uit de negentiende eeuw, genoemd naar Havana. Kenmerkend is het ritme in 2/4 met een gepunteerde eerste tel en een accent dat net naast de tel valt. Via Spanje en via de havens van het Caribisch gebied kwam dat ritme in heel Amerika terecht: in New Orleans hoor je het in de vroege jazz, en het ligt ook onder de Afro-Cubaanse muziek van de Latin jazz.",
+                       "listen":  "Hoor in La Paloma het wiegende habanera-ritme in de begeleiding: lang, kort en dan twee gelijke tellen.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Sebastián Iradier",
+                                          "title":  "La Paloma",
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/Music5/v4/c9/d6/15/c9d61501-7b38-feb4-ef1e-d15c0405625e/mzaf_4258406968949256924.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/bd/01/01/bd01015c-636d-8336-e4ea-73f122c851f8/888831732228.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 01",
+                                            "heading":  "Een smeltkroes van stijlen"
+                                        },
+                                        {
+                                            "n":  5,
+                                            "track":  "Track 02",
+                                            "heading":  "Latin jazz"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "boogie-woogie",
+                       "name":  "Boogie-woogie",
+                       "family":  "roots",
+                       "year":  1928,
+                       "place":  {
+                                     "name":  "Chicago",
+                                     "lat":  41.88,
+                                     "lon":  "-87.63"
+                                 },
+                       "parents":  [
+                                       "delta-blues",
+                                       "ragtime"
+                                   ],
+                       "text":  "Boogie-woogie is een pianostijl uit de blues, gespeeld in kroegen en op huisfeesten in het zuiden en later in Chicago. De linkerhand speelt een snel, herhaald baspatroon van acht noten per maat, de rechterhand riffs en blue notes. Pine Top Smith nam in 1928 Pine Top\u0027s Boogie Woogie op; eind jaren dertig werd de stijl een rage, en de rollende linkerhand kwam terug in de rhythm-and-blues en de rock-\u0027n-roll.",
+                       "listen":  "Hoor in Pine Top\u0027s Boogie Woogie de linkerhand die steeds hetzelfde rollende baspatroon speelt, terwijl Smith er de danspassen bij roept.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Pine Top Smith",
+                                          "title":  "Pine Top\u0027s Boogie Woogie",
+                                          "year":  1928,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/86/d6/e7/86d6e7f5-e196-c4fb-61ae-a71c7498003c/mzaf_17323491998461793819.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e0/95/96/e09596aa-23dd-9aa0-842d-e5fdde2562ba/8447181581317.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 04",
+                                            "heading":  "Van zwarte rock-\u0027n-roll…"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "jump-blues",
+                       "name":  "Jump blues",
+                       "family":  "soul",
+                       "year":  1942,
+                       "place":  {
+                                     "name":  "New York",
+                                     "lat":  40.76,
+                                     "lon":  "-73.98"
+                                 },
+                       "parents":  [
+                                       "swing",
+                                       "boogie-woogie"
+                                   ],
+                       "text":  "Jump blues is de swing van een kleine band met blazers: snelle shuffles, boogie-woogie op de piano en een zanger die het publiek vermaakt. Louis Jordan and His Tympany Five scoorden er in de jaren veertig de ene hit na de andere mee, zoals Caldonia (1945). Uit de jump blues groeiden de rhythm-and-blues en de rock-\u0027n-roll.",
+                       "listen":  "Hoor in Caldonia de shuffle van de kleine band, de saxofoon en de uitroepen van Louis Jordan.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Louis Jordan and His Tympany Five",
+                                          "title":  "Caldonia",
+                                          "year":  1945,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d6/b9/1e/d6b91ef8-2a87-8c71-ac77-0b7844eabc2a/mzaf_10816694532171418872.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/58/25/f4/5825f4e3-0abb-0687-a96e-f13a57165747/00602567824428.rgb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 04",
+                                            "heading":  "Van zwarte rock-\u0027n-roll…"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "chicago-blues",
+                       "name":  "Chicago-blues",
+                       "family":  "roots",
+                       "year":  1948,
+                       "place":  {
+                                     "name":  "Chicago",
+                                     "lat":  41.83,
+                                     "lon":  "-87.62"
+                                 },
+                       "parents":  [
+                                       "delta-blues"
+                                   ],
+                       "text":  "Na de Tweede Wereldoorlog trokken veel zwarte Amerikanen uit het zuiden naar Chicago, en de blues ging mee. Muddy Waters en Howlin\u0027 Wolf speelden hem elektrisch, met gitaar, mondharmonica, piano, bas en drums, en namen op voor het label Chess. Omdat een hele band tegelijk van akkoord moest wisselen, werd het 12-matenschema de standaard. Britse bands als The Rolling Stones, genoemd naar een nummer van Muddy Waters, bouwden erop voort.",
+                       "listen":  "Hoor in Hoochie Coochie Man het stop-time-riff: de band speelt een korte figuur en valt stil, en in die stilte zingt Muddy Waters.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Muddy Waters",
+                                          "title":  "Hoochie Coochie Man",
+                                          "year":  1954,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/Music/54/72/bb/mzm.omluttgr.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music/f0/52/63/mzi.ppdirmkd.tif/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 02",
+                                            "heading":  "Blues"
+                                        },
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 06",
+                                            "heading":  "1917: jazz gaat op reis"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "son",
+                       "name":  "Son",
+                       "family":  "jamaica",
+                       "year":  1920,
+                       "place":  {
+                                     "name":  "Santiago de Cuba en Havana",
+                                     "lat":  20.02,
+                                     "lon":  "-75.82"
+                                 },
+                       "parents":  [
+                                       "habanera"
+                                   ],
+                       "text":  "De son komt uit het oosten van Cuba en werd in de jaren twintig in Havana populair. Hij mengt Spaanse liedvormen en de tres, een Cubaanse gitaar, met Afrikaanse ritmes en percussie: bongo\u0027s, maracas en de clave. Een zanger wisselt af met een koor, en in het tweede deel herhaalt de band een kort patroon, de montuno. Uit de son groeiden de mambo, de salsa en een groot deel van de Latin jazz.",
+                       "listen":  "Hoor in Chan Chan de tres, het tikken van de clave en het koor dat de zanger antwoordt.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Buena Vista Social Club",
+                                          "title":  "Chan Chan",
+                                          "year":  1997,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6e/c3/0c/6ec30c1a-0458-6ecf-9c9d-8cefa4e45714/mzaf_13929773776901713828.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5a/93/8b/5a938b3e-a74d-9c8b-dcf1-c9c1f83498da/4050538455618.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  5,
+                                            "track":  "Track 02",
+                                            "heading":  "Latin jazz"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "mambo",
+                       "name":  "Mambo",
+                       "family":  "jamaica",
+                       "year":  1938,
+                       "place":  {
+                                     "name":  "Havana en Mexico-Stad",
+                                     "lat":  19.43,
+                                     "lon":  "-99.13"
+                                 },
+                       "parents":  [
+                                       "son",
+                                       "swing"
+                                   ],
+                       "text":  "De mambo groeide eind jaren dertig in Havana uit de danzón en de son. Pianist en bandleider Dámaso Pérez Prado maakte er vanaf 1949 in Mexico-Stad een rage van, met een bigband die het koper scherp en hoog liet spelen. Begin jaren vijftig dansten ook in New York duizenden mensen mambo, onder meer in de Palladium Ballroom.",
+                       "listen":  "Hoor in Mambo No. 5 de felle trompetten, de saxofoons die tegen de tel in spelen en de kreten van Pérez Prado.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Pérez Prado",
+                                          "title":  "Mambo No. 5",
+                                          "year":  1949,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/07/f6/b3/07f6b325-eb88-9004-20fc-e0d48503522a/mzaf_9437595594494263774.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e6/b2/49/e6b24905-1484-77ce-7cf6-1a9d3b22c43c/886447412282.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  5,
+                                            "track":  "Track 02",
+                                            "heading":  "Latin jazz"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "cha-cha-cha",
+                       "name":  "Cha-cha-chá",
+                       "family":  "jamaica",
+                       "year":  1953,
+                       "place":  {
+                                     "name":  "Havana",
+                                     "lat":  23.11,
+                                     "lon":  "-82.36"
+                                 },
+                       "parents":  [
+                                       "mambo"
+                                   ],
+                       "text":  "De cha-cha-chá is een tragere en makkelijker te dansen afgeleide van de mambo, bedacht door violist Enrique Jorrín van het Orquesta América in Havana. La Engañadora (1953) geldt als het eerste nummer. De naam komt van het geschuifel van de voeten op de drie snelle passen.",
+                       "listen":  "Tel in La Engañadora mee op de drie snelle passen aan het eind van elke maat: cha-cha-chá.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Orquesta América",
+                                          "title":  "La Engañadora",
+                                          "year":  1953,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c1/e1/74/c1e174ff-24d2-d8c3-afc1-5ed3d1914cde/mzaf_2974918196373872517.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music5/v4/70/26/10/7026101c-a24d-6b84-12b4-deedf2349426/889176329951.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  5,
+                                            "track":  "Track 02",
+                                            "heading":  "Latin jazz"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "salsa",
+                       "name":  "Salsa",
+                       "family":  "jamaica",
+                       "year":  1970,
+                       "place":  {
+                                     "name":  "New York",
+                                     "lat":  40.8,
+                                     "lon":  "-73.94"
+                                 },
+                       "parents":  [
+                                       "son",
+                                       "mambo",
+                                       "latin-jazz"
+                                   ],
+                       "text":  "Salsa is de naam die eind jaren zestig in New York opkwam voor de Afro-Cubaanse dansmuziek van Puertoricaanse en Cubaanse muzikanten. Het label Fania, met Johnny Pacheco, Willie Colón, Héctor Lavoe en Celia Cruz, maakte salsa in de jaren zeventig groot. De basis is de son, met de clave en de montuno, aangevuld met trombones, jazzakkoorden en teksten over het leven in de barrio.",
+                       "listen":  "Hoor in El Cantante het vaste clave-patroon onder de trombones en de vrije zang van Héctor Lavoe.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Héctor Lavoe",
+                                          "title":  "El Cantante",
+                                          "year":  1978,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4c/30/cc/4c30cc5f-ef65-b42f-005e-23d92aa1902d/mzaf_17450189768709056300.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/c2/da/e2/c2dae2f4-9249-9a51-5f62-206691234cfc/18CRGIM08516.rgb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  5,
+                                            "track":  "Track 02",
+                                            "heading":  "Latin jazz"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "merengue",
+                       "name":  "Merengue",
+                       "family":  "jamaica",
+                       "year":  1930,
+                       "place":  {
+                                     "name":  "Santo Domingo",
+                                     "lat":  18.49,
+                                     "lon":  "-69.93"
+                                 },
+                       "parents":  [
+
+                                   ],
+                       "text":  "Merengue is de nationale dans van de Dominicaanse Republiek: snelle muziek in 2/4 met accordeon, de tambora, een trom met twee vellen, en de güira, een metalen rasp. In de jaren dertig werd de merengue onder dictator Trujillo de officiële dansmuziek van het land. Juan Luis Guerra bracht hem eind jaren tachtig, met jazz- en popinvloeden, naar een internationaal publiek.",
+                       "listen":  "Hoor in Ojalá Que Llueva Café het snelle ritme van tambora en güira onder de meerstemmige zang.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Juan Luis Guerra 4.40",
+                                          "title":  "Ojalá Que Llueva Café",
+                                          "year":  1989,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f5/58/ed/f558ed64-f353-b1c2-fedc-c66d75719d48/mzaf_6852755471978376127.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c9/c7/65/c9c765b8-cd8c-cbb8-3a9e-10b36da50606/s05.sgfpgatb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  5,
+                                            "track":  "Track 02",
+                                            "heading":  "Latin jazz"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "samba",
+                       "name":  "Samba",
+                       "family":  "jamaica",
+                       "year":  1917,
+                       "place":  {
+                                     "name":  "Rio de Janeiro",
+                                     "lat":  "-22.9",
+                                     "lon":  "-43.2"
+                                 },
+                       "parents":  [
+
+                                   ],
+                       "text":  "Samba ontstond in de Afro-Braziliaanse wijken van Rio de Janeiro; Pelo Telefone (1917) geldt als de eerste opgenomen samba. De muziek staat in 2/4 en drijft op percussie, en vanaf de jaren dertig werd samba de muziek van het carnaval en van de radio. In 1958 maakten João Gilberto en Antônio Carlos Jobim er een zachte, ingetogen versie van: de bossa nova.",
+                       "listen":  "Hoor in Aquarela do Brasil het samba-ritme in de percussie, onder een groot orkest.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Francisco Alves",
+                                          "title":  "Aquarela do Brasil",
+                                          "year":  1939,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/Music/af/27/6a/mzm.cbgcrnzi.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music/b3/29/b4/mzi.qtjozzux.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  5,
+                                            "track":  "Track 02",
+                                            "heading":  "Latin jazz"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "dub",
+                       "name":  "Dub",
+                       "family":  "jamaica",
+                       "year":  1972,
+                       "place":  {
+                                     "name":  "Kingston",
+                                     "lat":  18.01,
+                                     "lon":  "-76.78"
+                                 },
+                       "parents":  [
+                                       "reggae"
+                                   ],
+                       "text":  "Jamaicaanse producers zetten op de B-kant van singles een instrumentale versie van de riddim. King Tubby en Lee \u0027Scratch\u0027 Perry gingen verder: ze haalden instrumenten weg en lieten ze terugkomen, en zetten galm en echo op drums, bas en flarden zang. Die stijl heet dub en maakte van de studio een instrument. De technieken van dub keerden terug in jungle, triphop en dubstep.",
+                       "listen":  "Hoor in King Tubby Meets Rockers Uptown hoe instrumenten verdwijnen en terugkomen, met echo op de drums.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Augustus Pablo \u0026 King Tubby",
+                                          "title":  "King Tubby Meets Rockers Uptown",
+                                          "year":  1976,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/12/78/2c/12782c23-a3c7-8f5f-0fa8-8f6e96e0244c/mzaf_5778594857027791220.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/a4/8c/0d/a48c0d66-ac6a-be45-b75f-cdafe2cf202f/054645705967.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  6,
+                                            "track":  "Track 02",
+                                            "heading":  "Reggae: de riddim van Kingston"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "dancehall",
+                       "name":  "Dancehall",
+                       "family":  "jamaica",
+                       "year":  1980,
+                       "place":  {
+                                     "name":  "Kingston",
+                                     "lat":  17.99,
+                                     "lon":  "-76.8"
+                                 },
+                       "parents":  [
+                                       "reggae"
+                                   ],
+                       "text":  "In de jaren tachtig kwam in Jamaica dancehall op, genoemd naar de dansgelegenheden waar sound systems speelden. Dj\u0027s, in Jamaica de artiesten aan de microfoon, praten en zingen over riddims heen; vanaf Under Mi Sleng Teng (1985) werden die riddims steeds vaker digitaal gemaakt. Yellowman en later Shabba Ranks werden de sterren.",
+                       "listen":  "Hoor in Mr. Loverman de diepe stem van Shabba Ranks over een digitale riddim.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Shabba Ranks",
+                                          "title":  "Mr. Loverman",
+                                          "year":  1992,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/21/93/3e/21933e31-dcef-6f15-0b94-3eec5a741f8a/mzaf_7818926151178649953.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/87/80/15/8780156d-0f0d-6ea6-3548-c3fb9fc0d23f/199350002762.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  6,
+                                            "track":  "Track 02",
+                                            "heading":  "Reggae: de riddim van Kingston"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "raga-rock",
+                       "name":  "Raga rock",
+                       "family":  "rock",
+                       "year":  1965,
+                       "place":  {
+                                     "name":  "Londen",
+                                     "lat":  51.52,
+                                     "lon":  "-0.15"
+                                 },
+                       "parents":  [
+                                       "british-beat",
+                                       "folk-rock"
+                                   ],
+                       "text":  "Halverwege de jaren zestig gingen westerse bands Indiase instrumenten en toonladders gebruiken: raga rock. George Harrison speelde sitar op Norwegian Wood (1965) van The Beatles en nam later les bij Ravi Shankar; ook The Byrds en The Rolling Stones, met Paint It Black (1966), gebruikten de klank. Lange drones en modale melodieën werden een kenmerk van de psychedelische rock.",
+                       "listen":  "Hoor in Norwegian Wood hoe de sitar de melodie van de akoestische gitaar volgt.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "The Beatles",
+                                          "title":  "Norwegian Wood (This Bird Has Flown)",
+                                          "year":  1965,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6a/44/b1/6a44b1df-2efb-cd60-401b-75c9baa79ec2/mzaf_12398417827141478109.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/c4/dd/78/c4dd78af-310e-bdc7-f811-c8d7d3a2dc39/00602537669066.rgb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  2,
+                                            "track":  "Track 01",
+                                            "heading":  "Hippies"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "powerpop",
+                       "name":  "Powerpop",
+                       "family":  "rock",
+                       "year":  1972,
+                       "place":  {
+                                     "name":  "Cleveland en Memphis",
+                                     "lat":  41.5,
+                                     "lon":  "-81.69"
+                                 },
+                       "parents":  [
+                                       "british-beat"
+                                   ],
+                       "text":  "Powerpop is gitaarpop met de melodieën en samenzang van de vroege Beatles en de kracht van luide gitaren. Begin jaren zeventig speelden Badfinger, Raspberries en Big Star het, later volgden Cheap Trick en The Knack. In 1994 maakte Weezer met Buddy Holly een liefdesverklaring aan de jaren vijftig, met zwaar vervormde gitaren: powerpop voor de generatie van de alternatieve rock.",
+                       "listen":  "Hoor in Buddy Holly de vrolijke popmelodie boven een muur van vervormde gitaren.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Weezer",
+                                          "title":  "Buddy Holly",
+                                          "year":  1994,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/47/cb/d8/47cbd896-da75-3413-9173-88b0d39e6a97/mzaf_14275138733024998684.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/0a/55/8d/0a558d58-b37d-ad57-0733-c5857d68026e/09UMGIM31891.rgb.jpg/600x600bb.jpg"
+                                      },
+                                      {
+                                          "artist":  "Big Star",
+                                          "title":  "September Gurls",
+                                          "year":  1974,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/46/2f/c9/462fc969-708a-89e3-e08e-5d253d0bf061/mzaf_4880920409131275800.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/93/9a/2b/939a2b16-08b4-90e8-89f8-e66d6bc2fd1e/24CRGIM41748.rgb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  4,
+                                            "track":  "Track 02",
+                                            "heading":  "Britpop, art rock en nu metal"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "symfonische-metal",
+                       "name":  "Symfonische metal",
+                       "family":  "rock",
+                       "year":  1996,
+                       "place":  {
+                                     "name":  "Nederland",
+                                     "lat":  52.03,
+                                     "lon":  4.65
+                                 },
+                       "parents":  [
+                                       "hard-rock",
+                                       "prog-rock"
+                                   ],
+                       "text":  "Symfonische metal combineert zware gitaren en drums met orkestklanken, koren en een klassiek geschoolde zangstem. Nederland werd een centrum van de stijl: Within Temptation, in 1996 opgericht rond zangeres Sharon den Adel, en Epica, opgericht in 2002, spelen op festivals over de hele wereld.",
+                       "listen":  "Hoor in Mother Earth hoe orkest en koor boven de vervormde gitaren uitkomen, met de heldere stem van Sharon den Adel.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Within Temptation",
+                                          "title":  "Mother Earth",
+                                          "year":  2000,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/1e/7e/d5/1e7ed5e1-89ce-89a8-5dd2-592a07448b91/mzaf_14213427494948595715.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e3/ae/ef/e3aeef87-edec-b5d6-7a81-79adfdab9b33/828765193528.png/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  11,
+                                            "track":  "Track 02",
+                                            "heading":  "Het Nederlandstalige lied leeft"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "new-jack-swing",
+                       "name":  "New jack swing",
+                       "family":  "soul",
+                       "year":  1987,
+                       "place":  {
+                                     "name":  "New York",
+                                     "lat":  40.82,
+                                     "lon":  "-73.93"
+                                 },
+                       "parents":  [
+                                       "modern-rnb",
+                                       "golden-age-hiphop"
+                                   ],
+                       "text":  "Eind jaren tachtig combineerde producer Teddy Riley in New York de zang van de R\u0026B met de beats van de hiphop: new jack swing. De drumcomputer swingt, met een korte, harde snare, terwijl zangers als Bobby Brown en Keith Sweat er soulvol overheen zingen. Uit new jack swing groeide begin jaren negentig de hiphopsoul.",
+                       "listen":  "Hoor in My Prerogative de swingende drumcomputer en de harde snare onder de zang van Bobby Brown.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Bobby Brown",
+                                          "title":  "My Prerogative",
+                                          "year":  1988,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5b/b4/bd/5bb4bdc4-22c9-649b-bd7c-551068b2bc59/mzaf_5465414954826731508.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8c/3c/15/8c3c1501-772b-5084-049d-16c8121ab114/06UMGIM17723.rgb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  6,
+                                            "track":  "Track 03",
+                                            "heading":  "Moderne R\u0026B"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "garage-house",
+                       "name":  "Garage",
+                       "family":  "electronic",
+                       "year":  1980,
+                       "place":  {
+                                     "name":  "New York",
+                                     "lat":  40.73,
+                                     "lon":  "-74.01"
+                                 },
+                       "parents":  [
+                                       "disco"
+                                   ],
+                       "text":  "De Paradise Garage in New York, met dj Larry Levan, was van 1977 tot 1987 een van de belangrijkste clubs van de dansmuziek. Toen disco uit de hitparade verdween, leefde de muziek daar voort, met soulvolle zang en gospelinvloeden: garage, genoemd naar de club. In de jaren negentig ontstond in Engeland uit die stijl de UK garage.",
+                       "listen":  "Hoor in That\u0027s the Way Love Is de soulvolle zang en de pianoakkoorden boven een housebeat.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Ten City",
+                                          "title":  "That\u0027s the Way Love Is",
+                                          "year":  1989,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3e/a7/b1/3ea7b1f0-be9a-0341-c189-20620a37bbbb/mzaf_12591531627541750947.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/74/61/33/746133f0-3166-47c2-7d9b-e447959f287b/190295734374.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  6,
+                                            "track":  "Track 03",
+                                            "heading":  "Disco en Disco Demolition Night"
+                                        },
+                                        {
+                                            "n":  7,
+                                            "track":  "Track 03",
+                                            "heading":  "House"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "jungle-dnb",
+                       "name":  "Jungle en drum-and-bass",
+                       "family":  "electronic",
+                       "year":  1992,
+                       "place":  {
+                                     "name":  "Londen",
+                                     "lat":  51.47,
+                                     "lon":  "-0.11"
+                                 },
+                       "parents":  [
+                                       "rave",
+                                       "dub",
+                                       "dancehall"
+                                   ],
+                       "text":  "Begin jaren negentig versnelden Londense producers de breakbeats van de rave tot 160 à 180 bpm en zetten er een diepe, trage baslijn onder, ontleend aan reggae en dub: jungle. Halverwege de jaren negentig werd de stijl strakker en technischer en kreeg hij de naam drum-and-bass, met Goldie, Roni Size en LTJ Bukem als bekende namen.",
+                       "listen":  "Hoor in Inner City Life de snelle, gebroken drums tegen de rustige zang en de lange akkoorden.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Goldie",
+                                          "title":  "Inner City Life",
+                                          "year":  1994,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f8/53/11/f8531121-7185-6809-b5ef-b77951dc3258/mzaf_1283873732990396984.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/d0/2c/15/d02c15b5-c6a6-27e7-cff3-8d0796e12700/190295567484.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  8,
+                                            "track":  "Track 01",
+                                            "heading":  "Rave"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "big-beat",
+                       "name":  "Big beat",
+                       "family":  "electronic",
+                       "year":  1995,
+                       "place":  {
+                                     "name":  "Brighton",
+                                     "lat":  50.82,
+                                     "lon":  "-0.14"
+                                 },
+                       "parents":  [
+                                       "rave",
+                                       "golden-age-hiphop"
+                                   ],
+                       "text":  "Big beat combineerde de breakbeats van de hiphop met rockgitaren, samples en het geluid van de rave. The Chemical Brothers, The Prodigy en Fatboy Slim uit Brighton scoorden er eind jaren negentig grote hits mee, zoals The Rockafeller Skank (1998).",
+                       "listen":  "Hoor in The Rockafeller Skank hoe één gesampelde zin en een gitaarriff steeds herhaald worden boven een zware breakbeat.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Fatboy Slim",
+                                          "title":  "The Rockafeller Skank",
+                                          "year":  1998,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/65/9b/ae/659baecd-75e8-4991-a763-c7fcccdc1757/mzaf_81575070733235113.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/37/ba/96/37ba964c-ff39-36ba-2ac0-933683cf6732/5025425513534.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  8,
+                                            "track":  "Track 01",
+                                            "heading":  "Rave"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "idm",
+                       "name":  "IDM",
+                       "family":  "electronic",
+                       "year":  1992,
+                       "place":  {
+                                     "name":  "Sheffield",
+                                     "lat":  53.41,
+                                     "lon":  "-1.5"
+                                 },
+                       "parents":  [
+                                       "detroit-techno",
+                                       "acid-house",
+                                       "ambient"
+                                   ],
+                       "text":  "IDM, intelligent dance music, is elektronische muziek om naar te luisteren in plaats van op te dansen. Het label Warp uit Sheffield bracht in 1992 de verzamelaar Artificial Intelligence uit, en Aphex Twin, Autechre en Boards of Canada maakten muziek met ingewikkelde ritmes, ongewone klanken en ambient-achtige melodieën.",
+                       "listen":  "Hoor in Xtal de zachte akkoorden en een stem zonder woorden boven een eenvoudige beat.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Aphex Twin",
+                                          "title":  "Xtal",
+                                          "year":  1992,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a1/a9/59/a1a9593a-f705-ca02-495f-2d83f83e4e49/mzaf_282027520707936830.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5f/b3/e0/5fb3e08d-c2cd-3da4-6ad7-c5dc61803683/cover.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  8,
+                                            "track":  "Track 01",
+                                            "heading":  "Rave"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "dubstep",
+                       "name":  "Dubstep",
+                       "family":  "electronic",
+                       "year":  2002,
+                       "place":  {
+                                     "name":  "Londen (Croydon)",
+                                     "lat":  51.37,
+                                     "lon":  "-0.1"
+                                 },
+                       "parents":  [
+                                       "dub",
+                                       "jungle-dnb"
+                                   ],
+                       "text":  "Dubstep ontstond begin jaren 2000 in Zuid-Londen, rond Croydon, uit UK garage, jungle en dub: een tempo rond 140 bpm, een ritme met de snare op de derde tel, zodat het half zo snel lijkt, en een zware sub-bas. In Amerika maakte Skrillex rond 2010 dubstep hard en luid, met een vervormde wobble bass die zelf de melodie wordt.",
+                       "listen":  "Hoor in Midnight Request Line de ruimte in het trage ritme en de diepe bas eronder.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Skream",
+                                          "title":  "Midnight Request Line",
+                                          "year":  2005,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/18/c1/07/18c107f0-ccfb-e944-e0c7-9dd72d1185ab/mzaf_1140466372421235724.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Features6/v4/37/f8/83/37f883ee-86a6-bc66-d839-3bd28cdfdda7/dj.zptttrrk.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  8,
+                                            "track":  "Track 03",
+                                            "heading":  "Van Daft Punk tot EDM"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "synthwave",
+                       "name":  "Synthwave",
+                       "family":  "electronic",
+                       "year":  2006,
+                       "place":  {
+                                     "name":  "Parijs",
+                                     "lat":  48.84,
+                                     "lon":  2.4
+                                 },
+                       "parents":  [
+                                       "italo-disco",
+                                       "synthpop"
+                                   ],
+                       "text":  "Synthwave is elektronische muziek die het geluid van de jaren tachtig nabootst: analoge synthesizers, galmende drums, arpeggio\u0027s uit de Italo disco en beelden van neon en oude films. Franse producers als Kavinsky en College maakten het halverwege de jaren 2000 populair; Nightcall (2010) klonk in de film Drive (2011). Ook The Weeknd gebruikte die klanken in Blinding Lights.",
+                       "listen":  "Hoor in Nightcall de trage beat, de vervormde stem en de synthesizers die aan de jaren tachtig doen denken.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Kavinsky",
+                                          "title":  "Nightcall",
+                                          "year":  2010,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9d/cc/0a/9dcc0afc-2420-c5af-3fed-dce11b56ee19/mzaf_10228879349921465983.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/36/be/7a/36be7aa3-d945-8128-c754-2d01f87d2417/3700551751761.png/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  7,
+                                            "track":  "Track 03",
+                                            "heading":  "House"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "downtempo",
+                       "name":  "Downtempo, lounge en chill-out",
+                       "family":  "electronic",
+                       "year":  1993,
+                       "place":  {
+                                     "name":  "Ibiza",
+                                     "lat":  38.98,
+                                     "lon":  1.3
+                                 },
+                       "parents":  [
+                                       "triphop",
+                                       "ambient"
+                                   ],
+                       "text":  "Downtempo is trage, sfeervolle elektronische muziek met een beat. In de jaren negentig hadden clubs aparte chill-outruimtes, en op Ibiza draaide Café del Mar bij zonsondergang rustige platen. De zachtere varianten van triphop en nu jazz kwamen terecht in cafés en hotels en op verzamelalbums met namen als lounge of chill-out.",
+                       "listen":  "Hoor in La Femme d\u0027Argent de trage groove, de elektrische piano en de zachte synthesizers.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Air",
+                                          "title":  "La Femme d\u0027Argent",
+                                          "year":  1998,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8c/81/02/8c8102b8-7fb4-bd3c-40a7-65e308738fb9/mzaf_6066728911895682016.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/ed/cf/a2/edcfa2bc-4a9a-75f6-80b5-6576d826742c/dj.romspvqk.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  5,
+                                            "track":  "Track 03",
+                                            "heading":  "Nu jazz"
+                                        },
+                                        {
+                                            "n":  5,
+                                            "track":  "Track 04",
+                                            "heading":  "Triphop"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "k-pop",
+                       "name":  "K-pop",
+                       "family":  "pop",
+                       "year":  1992,
+                       "place":  {
+                                     "name":  "Seoel",
+                                     "lat":  37.57,
+                                     "lon":  126.98
+                                 },
+                       "parents":  [
+                                       "boybands-girlbands",
+                                       "modern-rnb",
+                                       "golden-age-hiphop"
+                                   ],
+                       "text":  "K-pop is Zuid-Koreaanse popmuziek die vanaf 1992 groeide, toen Seo Taiji and Boys hiphop en rock in het Koreaans zongen. Grote entertainmentbedrijven trainen jonge artiesten jarenlang in zang, dans en presentatie en stellen er groepen van samen, met teams van songwriters en producers uit binnen- en buitenland. Dat idee van een team dat in hoog tempo hits maakt, kwam eerder voor bij Stock Aitken Waterman en Max Martin. BTS werd met Dynamite (2020) de eerste Koreaanse act op 1 in de Billboard Hot 100.",
+                       "listen":  "Hoor in Dynamite de strakke discogroove en de zang die tussen de leden van de groep wordt verdeeld.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "BTS",
+                                          "title":  "Dynamite",
+                                          "year":  2020,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a3/a0/a6/a3a0a6b5-4715-b872-1aff-21e42634d9cd/mzaf_7224423421767640589.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/22/f3/8f/22f38fb9-1690-326a-d891-7aa946c2b06f/195497623273_Cover.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  7,
+                                            "track":  "Track 04",
+                                            "heading":  "British Eurobeat en Stock Aitken Waterman"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "schlager",
+                       "name":  "Schlager",
+                       "family":  "pop",
+                       "year":  1950,
+                       "place":  {
+                                     "name":  "Duitsland en Nederland",
+                                     "lat":  50.9,
+                                     "lon":  10.6
+                                 },
+                       "parents":  [
+                                       "tin-pan-alley"
+                                   ],
+                       "text":  "Schlager is het Duitse woord voor een hit en werd de naam voor melodieuze, sentimentele populaire liedjes in het Duits en het Nederlands. In de jaren vijftig en zestig domineerde de schlager de Duitse hitparade, met zangers als Freddy Quinn en later Udo Jürgens en Heino. Tot de Neue Deutsche Welle was Duitstalige popmuziek vooral schlager, en ook in Nederland klonk een Nederlandse tekst lang al snel als schlager of cabaret.",
+                       "listen":  "Hoor in Griechischer Wein de meezingbare melodie, het grote orkest en de tekst vol heimwee.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Udo Jürgens",
+                                          "title":  "Griechischer Wein",
+                                          "year":  1974,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c1/b7/b7/c1b7b7fd-20f1-c3df-862e-0268be9327f7/mzaf_4423842615092267893.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/01/f2/0d01f274-4ed2-c036-79e7-156210e1d131/196871040587.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  7,
+                                            "track":  "Track 02",
+                                            "heading":  "Neue Deutsche Welle"
+                                        },
+                                        {
+                                            "n":  11,
+                                            "track":  "Track 02",
+                                            "heading":  "De kleinkunst kantelt"
+                                        },
+                                        {
+                                            "n":  11,
+                                            "track":  "Track 02",
+                                            "heading":  "Doe Maar en de taalwissel"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "levenslied",
+                       "name":  "Levenslied en smartlap",
+                       "family":  "pop",
+                       "year":  1950,
+                       "place":  {
+                                     "name":  "Amsterdam (Jordaan)",
+                                     "lat":  52.375,
+                                     "lon":  4.88
+                                 },
+                       "parents":  [
+                                       "schlager"
+                                   ],
+                       "text":  "Het levenslied is het Nederlandstalige lied over liefde, verdriet, moeder en de stad, met een eenvoudige melodie die iedereen kan meezingen. De wortels liggen bij de straatzangers en de smartlappen, liedjes vol drama. In de jaren vijftig werd de Amsterdamse Jordaan het centrum, met Johnny Jordaan en Tante Leen, en in de jaren tachtig maakte André Hazes het levenslied groot.",
+                       "listen":  "Hoor in Geef mij maar Amsterdam de walsende begeleiding en de tekst die de eigen stad bezingt.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Johnny Jordaan",
+                                          "title":  "Geef mij maar Amsterdam",
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/86/8e/31/868e3154-955b-2c4b-1eeb-685370711052/mzaf_5285190352034127905.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/4a/da/8d/4ada8d1e-7f87-846f-7f1f-2cd84eb8724d/05099920888152.jpg/600x600bb.jpg"
+                                      },
+                                      {
+                                          "artist":  "André Hazes",
+                                          "title":  "Zij gelooft in mij",
+                                          "year":  1981,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/46/42/c6/4642c6fc-c1ac-a8ef-1f35-7761a5dfd9f0/mzaf_7950600055830533008.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/b9/ba/5f/b9ba5f26-e5aa-3014-27a6-d3b4237abe4a/00724353144555.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  11,
+                                            "track":  "Track 02",
+                                            "heading":  "De kleinkunst kantelt"
+                                        },
+                                        {
+                                            "n":  11,
+                                            "track":  "Track 02",
+                                            "heading":  "Het Nederlandstalige lied leeft"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "west-afrika",
+                       "name":  "West-Afrikaanse muziektradities",
+                       "family":  "roots",
+                       "year":  1700,
+                       "place":  {
+                                     "name":  "West- en Centraal-Afrika",
+                                     "lat":  9.5,
+                                     "lon":  "-2"
+                                 },
+                       "parents":  [
+
+                                   ],
+                       "text":  "Tussen de zestiende en de negentiende eeuw werden meer dan twaalf miljoen Afrikanen als slaaf naar Amerika verscheept, de meesten uit West- en Centraal-Afrika. Ze namen muziek mee die in Europa onbekend was: ritmes in meerdere lagen tegelijk, roep en antwoord tussen een voorzanger en een groep, muziek als vast onderdeel van werk, dans en geloof, en instrumenten waaruit de banjo voortkwam. Op Congo Square in New Orleans mochten tot slaaf gemaakte Afrikanen tot in de negentiende eeuw op zondag dansen, zingen en trommelen. Die elementen zitten in vrijwel alle Afro-Amerikaanse muziek die volgde.",
+                       "listen":  "Hoor in Kaira hoe de kora een herhaald patroon speelt met daaroverheen een vrije melodie: lagen die tegelijk klinken.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Toumani Diabaté",
+                                          "title":  "Kaira",
+                                          "year":  1988,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/64/39/eb/6439eb11-4320-2775-4cf8-b5eb9f45077a/mzaf_10768980503166729925.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b4/fc/70/b4fc7007-f541-1a49-8ff5-dbcff4c0b556/0031257133869.png/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 01",
+                                            "heading":  "Een smeltkroes van stijlen"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "plantage",
+                       "name":  "Work songs en field hollers",
+                       "family":  "roots",
+                       "year":  1800,
+                       "place":  {
+                                     "name":  "Plantages in het zuiden van de VS",
+                                     "lat":  32.3,
+                                     "lon":  "-90.2"
+                                 },
+                       "parents":  [
+                                       "west-afrika"
+                                   ],
+                       "text":  "Op de katoen- en suikerplantages in het zuiden van de Verenigde Staten zongen tot slaaf gemaakte Afrikanen bij het werk. In work songs zingt een voorzanger een regel voor en antwoordt de groep, in het ritme van het werk: call and response. Een field holler is het roepen en zingen van één persoon op het land, met een vrij omgaan met toonhoogte. In de kerk en op geheime bijeenkomsten ontstonden de spirituals. Na de afschaffing van de slavernij in 1865 leefden deze vormen voort, onder meer in gevangenissen en werkploegen, waar Alan Lomax ze in de twintigste eeuw opnam.",
+                       "listen":  "Hoor in Po\u0027 Lazarus de voorzanger en de groep die antwoordt, met de slagen van de bijlen als ritme.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "James Carter and the Prisoners",
+                                          "title":  "Po\u0027 Lazarus",
+                                          "year":  1959,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e4/9d/dc/e49ddc36-ebbe-e4ec-5b18-b5d1aa06cdbd/mzaf_9788952829745472079.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3f/51/5f/3f515fd1-5ef1-6f12-3738-d0e212b474c8/s03.kzsiadji.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 01",
+                                            "heading":  "Een smeltkroes van stijlen"
+                                        },
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 02",
+                                            "heading":  "Blues"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "europese-kunstmuziek",
+                       "name":  "Europese kunstmuziek",
+                       "family":  "roots",
+                       "year":  1750,
+                       "place":  {
+                                     "name":  "Europa",
+                                     "lat":  48.21,
+                                     "lon":  16.37
+                                 },
+                       "parents":  [
+
+                                   ],
+                       "text":  "Uit Europa kwam de harmonie van de kunstmuziek: majeur en mineur, akkoorden met een vaste functie, melodieën in regelmatige frasen en muziek die werd genoteerd. Met de kolonisten kwamen ook hymnen, marsen, dansen als de wals en de polka, en het lied voor zang en piano in de huiskamer. Bladmuziek en de piano maakten die muziek in de negentiende eeuw ook in Amerika gewoon. Van de Europese muziek komen de notatie, de vorm en de piano van de ragtime, en ook Tin Pan Alley en de meerstemmige spirituals bouwden erop voort.",
+                       "listen":  "Hoor in An der schönen blauen Donau de wals in drie tellen en de melodie die in regelmatige frasen loopt.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Johann Strauss II",
+                                          "title":  "An der schönen blauen Donau",
+                                          "year":  1867,
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3b/2f/79/3b2f7951-b953-556e-95ef-795e8eaed7ef/mzaf_5112258283040024812.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/00/29/a9/0029a96a-54fa-d925-47fe-404a5cfa971d/21UM1IM18660.rgb.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 01",
+                                            "heading":  "Een smeltkroes van stijlen"
+                                        },
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 03",
+                                            "heading":  "Ragtime"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "britse-volksmuziek",
+                       "name":  "Britse en Ierse volksmuziek",
+                       "family":  "roots",
+                       "year":  1700,
+                       "place":  {
+                                     "name":  "Schotland, Ierland en Engeland",
+                                     "lat":  54.6,
+                                     "lon":  "-4.5"
+                                 },
+                       "parents":  [
+
+                                   ],
+                       "text":  "Immigranten uit Schotland, Engeland en Ierland vestigden zich vanaf de achttiende eeuw in de Appalachen. Ze brachten ballads mee, lange verhalende liederen over liefde, moord en ongeluk die van zanger op zanger werden doorgegeven, en dansmuziek voor de fiddle, zoals jigs en reels. Zo kwamen liederen als Barbara Allen in Amerika terecht. Die traditie is de basis van de Appalachian folk en de country, en via de folk revival ook van de singer-songwriters.",
+                       "listen":  "Hoor in Barbara Allen een ballad zonder begeleiding, waarin elk couplet een stukje van het verhaal vertelt.",
+                       "tracks":  [
+                                      {
+                                          "artist":  "Shirley Collins",
+                                          "title":  "Barbara Allen",
+                                          "audio":  "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/55/ec/80/55ec80f2-813b-7d55-1faf-a132a8efa506/mzaf_2243417533794338861.plus.aac.p.m4a",
+                                          "cover":  "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/8a/cd/c2/8acdc2e0-a546-1a87-96b0-8e806f93b12c/888608341219.jpg/600x600bb.jpg"
+                                      }
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 01",
+                                            "heading":  "Country en folk"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "minstrel",
+                       "name":  "Minstrelshows",
+                       "family":  "pop",
+                       "year":  1843,
+                       "place":  {
+                                     "name":  "New York",
+                                     "lat":  40.71,
+                                     "lon":  "-74.0"
+                                 },
+                       "parents":  [
+                                       "plantage",
+                                       "britse-volksmuziek"
+                                   ],
+                       "text":  "Vanaf de jaren 1830 traden witte artiesten met zwart geschminkte gezichten op in minstrelshows: voorstellingen in blackface waarin zwarte Amerikanen belachelijk werden gemaakt, met liedjes, dansen en sketches die zogenaamd uit het leven op de plantage kwamen. Het typetje Jim Crow gaf later zijn naam aan de wetten die zwart en wit gescheiden hielden. De minstrelshow was ook de eerste grote vorm van populair vermaak in Amerika: de banjo kwam er via deze shows in de witte muziek terecht, liedschrijvers als Stephen Foster schreven ervoor, en na de Burgeroorlog traden ook zwarte artiesten op. Het is een pijnlijke herkomst, maar wel een die laat zien hoe verweven de tradities waren.",
+                       "listen":  "Er staat hier bewust geen fragment bij. Lees in de reader hoe de banjo via deze shows in de country terechtkwam.",
+                       "tracks":  [
+
+                                  ],
+                       "mixtapes":  [
+                                        {
+                                            "n":  1,
+                                            "track":  "Track 01",
+                                            "heading":  "Country en folk"
                                         }
                                     ]
                    }

@@ -65,7 +65,7 @@
 
   let W = 0, H = 0;
   // ---------- Stamboom: tijd horizontaal, families als banen ----------
-  const PX_PER_YEAR = 15, ROW = 22, LANE_PAD = 14, LEFT = 150;
+  const PX_PER_YEAR = 15, ROW = 22, LANE_PAD = 14, LEFT = 175;
   const tx = y => LEFT + (y - YMIN) * PX_PER_YEAR;
   let lanes = [];
   function layoutTree() {
@@ -99,7 +99,7 @@
     if (world) countries = topojson.feature(world, world.objects.countries);
     // Genres in dezelfde stad uit elkaar duwen.
     const nodes = G.map(g => { const [x, y] = projection([g.place.lon, g.place.lat]); return { g, x, y, tx: x, ty: y }; });
-    const sim = d3.forceSimulation(nodes).force('x', d3.forceX(d => d.tx).strength(.35)).force('y', d3.forceY(d => d.ty).strength(.35)).force('c', d3.forceCollide(9)).stop();
+    const sim = d3.forceSimulation(nodes).force('x', d3.forceX(d => d.tx).strength(.6)).force('y', d3.forceY(d => d.ty).strength(.6)).force('c', d3.forceCollide(6.5)).stop();
     for (let i = 0; i < 160; i++) sim.tick();
     nodes.forEach(n => { n.g.world = { x: n.x, y: n.y, ax: n.tx, ay: n.ty }; });
   }
@@ -201,6 +201,15 @@
       if (free) { placed.push(box); show.add(d.id); }
     });
     nodeSel.select('text').attr('visibility', d => show.has(d.id) ? null : 'hidden');
+    // plaatsnamen wijken voor genrenamen
+    if (state.mode === 'world') {
+      updateCities();
+      gCities.selectAll('text').each(function () {
+        if (this.getAttribute('visibility') === 'hidden') return;
+        const b = this.getBBox(), box = [b.x - 2, b.y - 1, b.x + b.width + 2, b.y + b.height + 1];
+        if (placed.some(p => !(box[2] < p[0] || box[0] > p[2] || box[3] < p[1] || box[1] > p[3]))) this.setAttribute('visibility', 'hidden');
+      });
+    }
   }
 
   function fit(animate) { const t = fitTransform(); (animate ? svg.transition().duration(700) : svg).call(zoom.transform, t); }
@@ -355,7 +364,7 @@
     if (state.mode === b.dataset.mode) return;
     state.mode = b.dataset.mode;
     document.querySelectorAll('[data-mode]').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
-    drawBack(); suppress = true; svg.call(zoom.transform, fitTransform()); place(true); setTimeout(() => { suppress = false; }, 950);
+    drawBack(); svg.interrupt(); suppress = true; svg.call(zoom.transform, fitTransform()); place(true); setTimeout(() => { suppress = false; cullLabels(); }, 950); setTimeout(cullLabels, 1300);
     if (state.sel) setTimeout(() => centerOn(state.sel), 950);
   }));
   $('#k-zin').addEventListener('click', () => svg.transition().call(zoom.scaleBy, 1.4));

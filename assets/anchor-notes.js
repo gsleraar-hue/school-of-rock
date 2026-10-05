@@ -26,7 +26,7 @@
     // terug naar het begin van de zin
     var s = Math.max(lc.lastIndexOf('. ', i), lc.lastIndexOf('? ', i), lc.lastIndexOf('! ', i), lc.lastIndexOf(': ', i));
     var start = s < 0 ? 0 : s + 2;
-    if (start === 0) { p.insertBefore(a, p.firstChild); return; }
+    if (start === 0 || a.dataset.para) { p.insertBefore(a, p.firstChild); return; }
     var hit = m.nodes.filter(function (x) { return x.start <= start; }).pop();
     if (!hit) { p.insertBefore(a, p.firstChild); return; }
     var off = start - hit.start, node = hit.node;
@@ -43,6 +43,8 @@
       if (!window.SOR_PRINT && getComputedStyle(a).float === 'none') return;
       var k = noteKeys(a);
       if (!k) return;
+      var who = a.querySelector('.who').textContent;
+      if ((window.SOR_PARA || []).some(function (x) { return who.indexOf(x) >= 0; })) a.dataset.para = '1';
       var idx = kids.indexOf(a), lo = idx, hi = idx;
       while (lo > 0 && !kids[lo - 1].matches('.head, .part')) lo--;
       while (hi < kids.length - 1 && !kids[hi + 1].matches('.head, .part')) hi++;
