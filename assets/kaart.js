@@ -190,11 +190,14 @@
     const prio = d => (d === state.sel ? 0 : root.classed('dim') && nodeSel.filter(x => x === d).classed('hl') ? 1 : 2);
     const list = G.filter(d => visible(d)).map(d => ({ d, q: P(d), p: prio(d) })).sort((a, b) => a.p - b.p || a.d.year - b.d.year);
     const show = new Set();
+    const dots = list;
     list.forEach(({ d, q }) => {
       const w = d.name.length * 6.4 + 12;
       const box = [q.x - 8, q.y - 8, q.x + w, q.y + 8];
       if (q.x < -50 || q.y < -20 || q.x > W + 50 || q.y > H + 20) return;
-      if (!placed.some(b => !(box[2] < b[0] || box[0] > b[2] || box[3] < b[1] || box[1] > b[3]))) { placed.push(box); show.add(d.id); }
+      const free = !placed.some(b => !(box[2] < b[0] || box[0] > b[2] || box[3] < b[1] || box[1] > b[3]))
+        && !dots.some(o => o.d !== d && o.q.x + 6 > box[0] + 14 && o.q.x - 6 < box[2] && o.q.y + 6 > box[1] && o.q.y - 6 < box[3]);
+      if (free) { placed.push(box); show.add(d.id); }
     });
     nodeSel.select('text').attr('visibility', d => show.has(d.id) ? null : 'hidden');
   }
@@ -364,9 +367,14 @@
   function syncYear() { range.value = state.year; yearLbl.textContent = state.year >= YMAX ? 'nu' : state.year; yearBig.textContent = state.year >= YMAX ? '' : state.year; }
   range.addEventListener('input', () => { state.year = +range.value; syncYear(); applyVisibility(); });
   $('#k-sound').addEventListener('change', e => { state.sound = e.target.checked; });
-  let timer = null, lastSound = 0;
+  let timer = null, lastSound = 0, speed = 1;
+  // Tempo: aantal jaren per seconde, onthouden per bezoeker
+  const speedBtns = [...document.querySelectorAll('.k-speed button')];
+  function setSpeed(v) { speed = v; speedBtns.forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.speed === v))); try { localStorage.setItem('sor-kaart-tempo', String(v)); } catch (e) {} }
+  speedBtns.forEach(b => b.addEventListener('click', () => setSpeed(+b.dataset.speed)));
+  try { const v = +localStorage.getItem('sor-kaart-tempo'); if (speedBtns.some(b => +b.dataset.speed === v)) setSpeed(v); } catch (e) {}
   const playBtn = $('#k-play');
-  function stopTape() { clearInterval(timer); timer = null; state.playing = false; playBtn.innerHTML = playBtn.dataset.play; }
+  function stopTape() { clearTimeout(timer); timer = null; state.playing = false; playBtn.innerHTML = playBtn.dataset.play; }
   playBtn.dataset.play = playBtn.innerHTML;
   playBtn.addEventListener('click', () => {
     if (state.playing) { stopTape(); return; }
@@ -375,16 +383,18 @@
     if (state.year >= YMAX) state.year = YMIN;
     state.playing = true;
     playBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg>Pauze';
-    timer = setInterval(() => {
-      const prev = state.year; state.year += 1; syncYear(); applyVisibility();
+    const tick = () => {
+      state.year += 1; syncYear(); applyVisibility();
       const born = G.filter(g => g.year === state.year && state.fams.has(g.family));
       if (born.length) {
         nodeSel.filter(d => born.includes(d)).classed('pulse', false).each(function () { void this.getBBox(); }).classed('pulse', true);
         const now = Date.now();
-        if (state.sound && now - lastSound > 5000) { const g = born.find(x => x.tracks && x.tracks[0]); if (g) { SOR.play({ ...g.tracks[0] }); lastSound = now; } }
+        if (state.sound && now - lastSound > 5000 / Math.min(speed, 2)) { const g = born.find(x => x.tracks && x.tracks[0]); if (g) { SOR.play({ ...g.tracks[0] }); lastSound = now; } }
       }
-      if (state.year >= YMAX) { state.year = YMAX; syncYear(); stopTape(); }
-    }, state.sound ? 260 : 140);
+      if (state.year >= YMAX) { state.year = YMAX; syncYear(); stopTape(); return; }
+      timer = setTimeout(tick, 220 / speed);
+    };
+    tick();
   });
 
   // ---------- Uitleg bij eerste bezoek ----------

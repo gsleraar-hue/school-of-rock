@@ -91,7 +91,7 @@ body.kaart .sitefoot { display: none; }
 .kp-step button:disabled { opacity: .3; cursor: default; }
 
 /* Tijdlijn onderin */
-.k-time { display: grid; grid-template-columns: auto auto 1fr auto; align-items: center; gap: 14px; padding: 10px 18px 12px; background: #181715; border-top: 1px solid #2A2825; }
+.k-time { display: grid; grid-template-columns: auto auto 1fr auto auto; align-items: center; gap: 14px; padding: 10px 18px 12px; background: #181715; border-top: 1px solid #2A2825; }
 .k-playbtn { display: inline-flex; align-items: center; gap: 8px; border: 0; background: var(--red); color: #fff; font: 600 14px/1 var(--display); letter-spacing: .03em; text-transform: uppercase; padding: 11px 14px; border-radius: 3px; cursor: pointer; }
 .k-playbtn svg { width: 14px; height: 14px; fill: currentColor; }
 .k-year { font: 700 26px/1 var(--display); color: var(--yellow); min-width: 3.2ch; font-variant-numeric: tabular-nums; }
@@ -110,6 +110,7 @@ body.kaart .sitefoot { display: none; }
   .k-field input { width: 150px; }
   .k-title p { display: none; }
   .k-time { grid-template-columns: auto auto 1fr; }
+  .k-speed { grid-column: 1 / -1; justify-self: start; }
   .k-sound { display: none; }
 }
 .kp-step button { white-space: nowrap; }
@@ -120,3 +121,7 @@ body.kaart .sitefoot { display: none; }
 .world .node text { opacity: 1; }
 .world.zoomed .node text, .world .node:hover text, .world .node:focus text, .world .node.sel text, .world.dim .node.hl text { opacity: 1; }
 .dim .cities text { opacity: .35; }
+.k-speed { display: inline-flex; align-items: center; gap: 2px; background: #232120; border-radius: 4px; padding: 3px; }
+.k-speed span { font: 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: #9C978D; padding: 0 8px 0 6px; }
+.k-speed button { font: 600 13px/1 var(--mono); border: 0; background: none; color: #CFCAC0; padding: 7px 9px; border-radius: 3px; cursor: pointer; min-width: 36px; }
+.k-speed button[aria-pressed="true"] { background: var(--yellow); color: var(--ink); }
