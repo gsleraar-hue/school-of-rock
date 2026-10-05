@@ -38,7 +38,7 @@
     voices = synth.getVoices();
     const nl = voices.filter(v => /^nl/i.test(v.lang)).sort((a, b) => rankNl(a) - rankNl(b));
     const en = voices.filter(v => /^en/i.test(v.lang)).sort((a, b) => rankNl(a) - rankNl(b));
-    enVoice = en[0] || null;
+    enVoice = null; // alles met dezelfde Nederlandse stem; geen aparte Engelse stem voor namen
     const sel = $('.tts-voice'); sel.innerHTML = '';
     nl.forEach(v => { const o = document.createElement('option'); o.value = v.name; o.textContent = v.name.replace(/^Microsoft |^Google /, '').replace(/ - Dutch.*| \(Natural\).*|Online /g, ''); sel.appendChild(o); });
     const saved = store.get('voice', '');
