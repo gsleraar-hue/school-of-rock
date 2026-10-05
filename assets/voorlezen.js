@@ -79,6 +79,7 @@
       buildNames(out.filter(s => s && !dutch.test(s)));
     });
   })();
+  window.SOR_TTS_SAY = t => say(t);
   window.SOR_TTS_TEST = t => { const v = enVoice; enVoice = enVoice || { lang: 'en' }; const r = splitNames(t); enVoice = v; return r; };
   // Reeksen van twee of meer woorden met een hoofdletter (Jimi Hendrix, Led Zeppelin) zijn bijna altijd Engelse namen.
   const NL_CAPS = /^(Verenigde|Staten|Tweede|Eerste|Wereldoorlog|Koude|Oorlog|Noord|Zuid|Oost|West|Den|Haag|Nederland|Nederlandse|Nederlanders|Engeland|Engelse|Amerika|Amerikaanse|Europa|Europese|Duitsland|Duitse|Frankrijk|Franse|Londen|Parijs|Brussel|Sint|Mixtape|Kant|Amerikaan|Amerikanen|Brit|Britten|Brits|Britse|Engelsman|Ier|Ierse|Schot|Schotse|Indische|Indonesië|Suriname|Antillen|Caribisch|Afrika|Afrikaanse|Azië|Latijns|Midden|Oosten|Grote|Kleine|Nieuwe|Oude|In|Op|De|Het|Een|Van|Na|Toen|Daarna|Ook|Met|Bij|Voor|Uit|Over|Zo|Dat|Die|Deze|Dit|Er|Hij|Zij|Ze|Je|Ik|We|Wie|Wat|Waar|Hoe|Maar|En|Of|Als|Om|Aan|Door|Tot|Naar|Hun|Zijn|Haar|Alle|Veel|Elke|Geen|Pas|Toch|Nu|Hier|Daar|Later|Eerst|Tijdens|Sinds|Vanaf|Rond|Begin|Eind|Halverwege|Volgens|Omdat|Terwijl|Want|Dus|Wel|Niet|Nog|Al|Zanger|Zangeres|Gitarist|Bassist|Drummer|Toetsenist|Producer|Producers|Componist|Saxofonist|Trompettist|Pianist|Album|Albums|Plaat|Platen|B-kant|A-kant|Groep|Hitlijst|Volgens|Fotograaf|Regisseur|Schrijver|Journalist|Dj|Dj's|Rapper|Rappers|Zo|Daarom)$/;
@@ -151,12 +152,25 @@
     return items.filter(i => i.parts.some(p => p.text.trim()));
   }
 
+  // ---------- uitspraaklijst ----------
+  let lexRe = null, lex = {};
+  (function loadLex() {
+    const root = (document.querySelector('meta[name=sor-root]') || {}).content || '..';
+    fetch(root + '/data/uitspraak.json').then(r => r.json()).then(d => {
+      lex = d.woorden || {};
+      const keys = Object.keys(lex).sort((a, b) => b.length - a.length).map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+      if (keys.length) lexRe = new RegExp('(?<![\\p{L}\\d])(' + keys.join('|') + ')(?![\\p{L}\\d])', 'gu');
+    }).catch(() => {});
+  })();
+  const say = t => (lexRe ? t.replace(lexRe, m => lex[m] !== undefined ? lex[m] : m) : t);
+
   // ---------- afspelen ----------
   let items = [], idx = 0, playing = false, token = 0;
   function sentences(parts) {
     // Chrome breekt lange stukken af: knip op zinnen.
     const out = [];
-    parts.forEach(p => { (p.text.match(/[^.!?;:]+[.!?;:]*\s*/g) || [p.text]).forEach(s => { if (s.trim()) out.push({ text: s, en: p.en }); }); });
+    // alleen knippen na een leesteken gevolgd door een spatie, zodat U.S.A. en Sgt. heel blijven
+    parts.forEach(p => { p.text.split(/(?<=[.!?;:])\s+(?=\p{Lu}|\d|$)/u).forEach(s => { if (s.trim()) out.push({ text: s + ' ', en: p.en }); }); });
     return out;
   }
   function mark(el) {
@@ -177,7 +191,7 @@
       if (my !== token || !playing) return;
       if (c >= chunks.length) { idx++; speakItem(); return; }
       const ch = chunks[c++];
-      const u = new SpeechSynthesisUtterance(ch.text);
+      const u = new SpeechSynthesisUtterance(say(ch.text));
       const v = ch.en && enVoice ? enVoice : nlVoice;
       if (v) { u.voice = v; u.lang = v.lang; } else u.lang = ch.en ? 'en-GB' : 'nl-NL';
       u.rate = rate;
