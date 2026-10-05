@@ -45,6 +45,10 @@
     nlVoice = nl.find(v => v.name === saved) || nl[0] || null;
     if (nlVoice) sel.value = nlVoice.name;
     $('.tts-vwrap').hidden = nl.length < 2;
+    // alleen een eenvoudige stem? wijs op Edge
+    const good = nl.some(v => /Natural|Online|Google/.test(v.name));
+    let hint = row.querySelector('.tts-hint');
+    if (!good) { if (!hint) { hint = document.createElement('span'); hint.className = 'tts-hint'; row.appendChild(hint); } hint.textContent = nl.length ? 'Tip: in Microsoft Edge klinkt de voorleesstem natuurlijker.' : 'Er is geen Nederlandse stem gevonden. In Microsoft Edge werkt voorlezen het best.'; } else if (hint) hint.remove();
   }
   loadVoices();
   if (synth.onvoiceschanged !== undefined) synth.onvoiceschanged = loadVoices;
