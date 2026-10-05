@@ -37,6 +37,7 @@
     <form id="op-form" autocomplete="off">
       <input type="password" id="op-pw" aria-label="Wachtwoord" placeholder="Wachtwoord" required>
       <button class="btn solid" type="submit">Openen</button>
+      <label class="keep"><input type="checkbox" id="op-show"> Toon wachtwoord</label>
       <label class="keep"><input type="checkbox" id="op-keep"> Onthoud op dit apparaat</label>
     </form>
     <p class="err" id="op-err" role="alert"></p>
@@ -59,6 +60,7 @@
     document.getElementById('op-lock').hidden = true;
     if (location.hash) { const t = document.querySelector(location.hash); if (t) t.scrollIntoView(); }
   }
+  document.getElementById('op-show').addEventListener('change', e => { document.getElementById('op-pw').type = e.target.checked ? 'text' : 'password'; });
   const err = document.getElementById('op-err');
   let saved = null; try { saved = localStorage.getItem('sor-opdrachten') || sessionStorage.getItem('sor-opdrachten'); } catch (e) {}
   if (saved) open(saved).then(show).catch(() => { try { localStorage.removeItem('sor-opdrachten'); sessionStorage.removeItem('sor-opdrachten'); } catch (e) {} });
