@@ -49,14 +49,16 @@
     box.innerHTML = list.map(g => `<a class="gchip" href="${SOR.root}/kaart.html#${g.id}" style="--c:${(fam.get(g.family) || {}).color || '#999'}"><i></i>${g.name}<span>${g.year}</span></a>`).join('');
   }).catch(() => { const r = document.querySelector('.deck-genres'); if (r) r.closest('.deck-row').hidden = true; });
 
-  // Spotify-speler openen.
-  const sp = document.querySelector('.deck-spotify');
-  if (sp) sp.addEventListener('click', e => {
-    const frame = document.querySelector('.deck-embed');
+  // Spotify-speler en LessonUp-les in de pagina openen.
+  const kinds = { sp: { title: 'Spotify-playlist', h: 380, allow: 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' }, lu: { title: 'LessonUp-les', allow: 'autoplay; fullscreen; clipboard-write' } };
+  document.querySelectorAll('.deck-toggle').forEach(btn => btn.addEventListener('click', e => {
+    const frame = document.querySelector(`.deck-embed[data-name="${btn.dataset.target}"]`);
     if (!frame) return;
     e.preventDefault();
-    if (!frame.innerHTML) frame.innerHTML = `<iframe title="Spotify-playlist" src="${sp.dataset.embed}" width="100%" height="380" frameborder="0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
+    const k = kinds[btn.dataset.target];
+    if (!frame.innerHTML) frame.innerHTML = `<iframe title="${k.title}" src="${btn.dataset.embed}" width="100%"${k.h ? ` height="${k.h}"` : ''} frameborder="0" allow="${k.allow}" allowfullscreen></iframe>`;
     frame.hidden = !frame.hidden;
-    sp.setAttribute('aria-expanded', String(!frame.hidden));
-  });
+    btn.setAttribute('aria-expanded', String(!frame.hidden));
+    if (!frame.hidden && btn.dataset.target === 'lu') frame.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }));
 })();
