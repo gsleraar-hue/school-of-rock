@@ -14,7 +14,7 @@
   bar.hidden = true;
   bar.innerHTML = `
     <button class="sp-toggle" type="button" aria-label="Pauzeer"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-pause" d="M7 5h3v14H7zM14 5h3v14h-3z"/><path class="i-play" d="M8 5l11 7-11 7z"/></svg></button>
-    <img class="sp-cover" alt="">
+    <img class="sp-cover" alt="" hidden onerror="this.hidden=true">
     <div class="sp-meta"><span class="sp-artist"></span><span class="sp-title"></span><div class="sp-bar"><i></i></div></div>
     <span class="sp-tag mono">fragment · 30 s</span>
     <button class="sp-close" type="button" aria-label="Sluit speler">×</button>`;
@@ -26,7 +26,7 @@
     .sor-player .sp-toggle svg{width:18px;height:18px;fill:currentColor}
     .sor-player .sp-toggle .i-play{display:none}.sor-player.paused .i-play{display:block}.sor-player.paused .i-pause{display:none}
     .sor-player .sp-cover{width:40px;height:40px;border-radius:2px;object-fit:cover;background:#2A2825}
-    .sor-player .sp-cover[src=""]{visibility:hidden}
+    .sor-player .sp-cover[hidden]{display:none}
     .sor-player .sp-meta{flex:1;min-width:0;display:grid;gap:2px;font-size:13px;line-height:1.25}
     .sor-player .sp-artist{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .sor-player .sp-title{color:#CFCAC0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -63,7 +63,7 @@
       audio.src = track.audio;
       $('.sp-artist').textContent = track.artist || '';
       $('.sp-title').textContent = [track.title, track.year].filter(Boolean).join(' · ');
-      $('.sp-cover').src = track.cover || '';
+      { const im = $('.sp-cover'); if (track.cover) { im.src = track.cover; im.hidden = false; } else { im.removeAttribute('src'); im.hidden = true; } }
       bar.hidden = false;
       audio.play().catch(() => paint());
     },

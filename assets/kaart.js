@@ -265,7 +265,7 @@
         ${step}
         <p>${d.text}</p>
         ${d.listen ? `<p class="kp-listen">${d.listen}</p>` : ''}
-        ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((t, i) => `<div class="kp-track"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${t.artist}">${SOR.playIcon}</button><img src="${t.cover || ''}" alt=""><div><b>${t.artist}</b><span>${t.title}${t.year ? ' · ' + t.year : ''}</span></div></div>`).join('')}</div></div>` : ''}
+        ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((t, i) => `<div class="kp-track${t.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${t.artist}">${SOR.playIcon}</button>${t.cover ? `<img src="${t.cover}" alt="" loading="lazy" onerror="this.remove();this.parentNode&&0">` : ''}<div><b>${t.artist}</b><span>${t.title}${t.year ? ' · ' + t.year : ''}</span></div></div>`).join('')}</div></div>` : ''}
         ${(d.parents || []).length ? `<div><p class="kp-h">Komt voort uit</p><div class="kp-links">${d.parents.map(chip).join('')}</div></div>` : ''}
         ${d.children.length ? `<div><p class="kp-h">Leidde tot</p><div class="kp-links">${d.children.map(chip).join('')}</div></div>` : ''}
         ${(d.mixtapes || []).length ? `<div><p class="kp-h">Lees in de reader</p><div class="kp-read">${d.mixtapes.map(m => { const mx = mixById.get(m.n); return `<a href="mixtape/${String(m.n).padStart(2, '0')}.html#${SOR.slug(m.heading)}"><small>${String(m.n).padStart(2, '0')}</small><b>${m.heading}</b><span>Mixtape ${m.n} · ${mx ? mx.title : ''} · ${m.track || ''}</span></a>`; }).join('')}</div></div>` : ''}

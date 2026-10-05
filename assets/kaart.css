@@ -124,4 +124,5 @@ body.kaart .sitefoot { display: none; }
 .k-speed { display: inline-flex; align-items: center; gap: 2px; background: #232120; border-radius: 4px; padding: 3px; }
 .k-speed span { font: 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: #9C978D; padding: 0 8px 0 6px; }
 .k-speed button { font: 600 13px/1 var(--mono); border: 0; background: none; color: #CFCAC0; padding: 7px 9px; border-radius: 3px; cursor: pointer; min-width: 36px; }
-.k-speed button[aria-pressed="true"] { background: var(--yellow); color: var(--ink); }
+.k-speed button[aria-pressed="true"] { background: var(--yellow); color: var(--ink); }.kp-track.nocover { grid-template-columns: 30px 1fr; }
+.kp-track:has(> button + div) { grid-template-columns: 30px 1fr; }
