@@ -1,0 +1,394 @@
+[
+ {
+  "mixtape": 1,
+  "artist": "Flatt & Scruggs",
+  "title": "Foggy Mountain Breakdown (Grand Ole Opry, 1965)",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f3/50/bd/f350bd1d-6229-4e74-7bc3-cb87e60669e0/mzaf_7200612329192121009.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/72/fe/ac/72feacf5-6a05-2b07-99ce-c85f4de5dc2d/20UMGIM02983.rgb.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 1,
+  "artist": "Bill Haley & His Comets",
+  "title": "Rock Around the Clock",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/df/ec/de/dfecdee4-00ff-81f4-80ff-3f8deadad1fb/mzaf_16331399569046693203.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/ba/ff/b5/baffb590-c70d-aca3-369f-0bb2427f41a6/cover.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 2,
+  "artist": "The Tielman Brothers",
+  "title": "Bossa Nova Baby (live op tv)",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b7/73/a3/b773a328-ab78-f49c-78e5-bad24566385f/mzaf_5045489644356044794.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/99/57/99/9957994d-648c-630d-762e-9630ae9353fa/199800572326.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 2,
+  "artist": "Milt Jackson & John Coltrane",
+  "title": "Be-Bop",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ce/7e/db/ce7edbe8-ba36-f73c-39c7-8e03b2452ee8/mzaf_16652160032576916096.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/75/c4/10/75c41011-7cc2-b864-8672-aeb49403c595/603497893256.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 3,
+  "artist": "The Beatles",
+  "title": "Rain (B-kant, 1966)",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f4/e3/bc/f4e3bc74-d4ba-0820-4588-ba1211b2734b/mzaf_17612694480047674708.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/01/69/02/01690216-48fc-1c54-b1de-48170d16b1c3/00602567725268.rgb.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 3,
+  "artist": "The Beatles",
+  "title": "Eleanor Rigby",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8d/5a/f4/8d5af4f9-4f46-346b-b2f2-15e8ea50a114/mzaf_15667943753268690213.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b8/3b/79/b83b79ba-59ae-8e76-9087-aaed5431f281/13UMGIM63887.rgb.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 3,
+  "artist": "The Beatles",
+  "title": "Tomorrow Never Knows",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5e/9e/1b/5e9e1b8e-bde3-d88b-4e0e-96f476d4edfa/mzaf_11795979391953777454.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b8/3b/79/b83b79ba-59ae-8e76-9087-aaed5431f281/13UMGIM63887.rgb.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 3,
+  "artist": "The Beatles",
+  "title": "Strawberry Fields Forever (stereomix, 2015)",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/83/24/24/832424d9-4cd3-c7f2-880b-ef70e31a3746/mzaf_3474308457287075029.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/92/4a/5a/924a5a27-c6d8-92c8-4039-27bfd02a982d/13UMGIM63883.rgb.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 3,
+  "artist": "The Beatles",
+  "title": "Lucy in the Sky with Diamonds",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/2b/34/c62b34d3-7cd4-e957-8452-9fe83a5387db/mzaf_5933950958753908238.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/92/4a/5a/924a5a27-c6d8-92c8-4039-27bfd02a982d/13UMGIM63883.rgb.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 3,
+  "artist": "The Beatles",
+  "title": "A Day in the Life",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b5/75/95/b5759549-ec91-acdd-c7fc-417e5eb564d3/mzaf_14646335593768523348.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/92/4a/5a/924a5a27-c6d8-92c8-4039-27bfd02a982d/13UMGIM63883.rgb.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 3,
+  "artist": "The Beatles",
+  "title": "Dear Prudence",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1c/63/b7/1c63b736-9853-5d30-7855-d29563986794/mzaf_5025180814813783343.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/09/f5/f9/09f5f938-53d1-6b1e-7ec0-c4d8ecae552d/13UABIM56313.rgb.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 3,
+  "artist": "The Beatles",
+  "title": "Blackbird",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/03/a9/d8/03a9d8db-889a-7495-3836-eea33113a06e/mzaf_8347061937829962010.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/09/f5/f9/09f5f938-53d1-6b1e-7ec0-c4d8ecae552d/13UABIM56313.rgb.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 3,
+  "artist": "The Beatles",
+  "title": "Helter Skelter",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d2/bb/b1/d2bbb1c2-0206-e924-e880-6ab43d1dcff0/mzaf_2594994941714598678.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/09/f5/f9/09f5f938-53d1-6b1e-7ec0-c4d8ecae552d/13UABIM56313.rgb.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 3,
+  "artist": "The Beatles",
+  "title": "Come Together",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b7/b6/f4/b7b6f4cf-a1d6-972d-9bc5-89740b5cf774/mzaf_926247360294422106.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b8/fc/2d/b8fc2d07-d23f-a0ce-4fca-b7b418bb7ce6/13UMGIM63890.rgb.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 3,
+  "artist": "The Beatles",
+  "title": "Here Comes the Sun",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4a/a3/f5/4aa3f5c8-4e7f-e569-2761-42dee5e109f2/mzaf_8826093569597587431.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/92/4a/5a/924a5a27-c6d8-92c8-4039-27bfd02a982d/13UMGIM63883.rgb.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Charlie Parker",
+  "title": "Anthropology",
+  "audio": "https://api.lessonup.com/v1/media/zkHrYRCHTMGXakAWk",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Dizzy Gillespie & Charlie Parker",
+  "title": "Hot House",
+  "audio": "https://api.lessonup.com/v1/media/mwtzQYaxWNtpMqfpW",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Dizzy Gillespie",
+  "title": "Manteca",
+  "audio": "https://api.lessonup.com/v1/media/fweTz4AHSidAqCyLy",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Dizzy Gillespie Orchestra",
+  "title": "Cubana Be, Cubana Bop",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d0/da/38/d0da386c-a59d-5cf3-01f7-b96b6d23a11b/mzaf_974956159064262798.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/4b/e9/4f/mzi.yktpmmyq.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Gil Evans",
+  "title": "Willow Tree",
+  "audio": "https://api.lessonup.com/v1/media/QAzu63wd72SmE8oSY",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Miles Davis",
+  "title": "Blue in Green",
+  "audio": "https://api.lessonup.com/v1/media/xfWqWbGKeZwrvdqqA",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Gerry Mulligan & Chet Baker",
+  "title": "My Funny Valentine",
+  "audio": "https://api.lessonup.com/v1/media/QEsctLmcczBxeciKP",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Dave Brubeck Quartet",
+  "title": "Take Five",
+  "audio": "https://api.lessonup.com/v1/media/hsNhoMcjtLqeHuCdu",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "John Coltrane",
+  "title": "Blue Train",
+  "audio": "https://api.lessonup.com/v1/media/QYh2BhWQTrGXZkJm9",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Freddie Hubbard",
+  "title": "Arietis",
+  "audio": "https://api.lessonup.com/v1/media/9mh4xiq6HJLWfpYKY",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Ornette Coleman",
+  "title": "Lonely Woman",
+  "audio": "https://api.lessonup.com/v1/media/8K92hNMFvmxQoWM8z",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Frank Wright",
+  "title": "The Earth",
+  "audio": "https://api.lessonup.com/v1/media/nJWnYqzfkR5Xp8DX9",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Weather Report",
+  "title": "Birdland",
+  "audio": "https://api.lessonup.com/v1/media/vuRBzcSPWPvTxDr4b",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Steely Dan",
+  "title": "Aja",
+  "audio": "https://api.lessonup.com/v1/media/TacdzdkRWAf8Ge63A",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Grover Washington Jr. & Bill Withers",
+  "title": "Just the Two of Us",
+  "audio": "https://api.lessonup.com/v1/media/ZWFpxmbfugCj2tp34",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Al Jarreau",
+  "title": "Roof Garden",
+  "audio": "https://api.lessonup.com/v1/media/iS8vNYQbwbcE9ujn9",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "St. Germain",
+  "title": "So Flute",
+  "audio": "https://api.lessonup.com/v1/media/cLSfukv5o3WvPtGGS",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "The Cinematic Orchestra",
+  "title": "To Build a Home",
+  "audio": "https://api.lessonup.com/v1/media/AmBbQLFYXgo7Gs4Lz",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "Massive Attack",
+  "title": "Unfinished Sympathy",
+  "audio": "https://api.lessonup.com/v1/media/njvG7zHNRxd8e8qDJ",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 5,
+  "artist": "London Grammar",
+  "title": "Strong",
+  "audio": "https://api.lessonup.com/v1/media/EfLzNaPNkvjwJ6y2B",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 7,
+  "artist": "a-ha",
+  "title": "Take On Me (single, 1984 en 1985)",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c4/ed/28/c4ed2806-14ff-8a6c-b22f-fde872f8a5d8/mzaf_7191743939498691729.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music60/v4/21/c6/3a/21c63aa1-8c84-2af6-374c-ff520bb63e4d/mzm.qcpavuiv.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 9,
+  "artist": "Benny Goodman and His Orchestra met Charlie Christian",
+  "title": "Solo Flight",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/46/c6/e4/46c6e474-c3b9-5bc3-d509-30cf736e65c9/mzaf_3022177279451954155.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/13/33/3d/mzi.xxdiquhu.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 9,
+  "artist": "Booker T. & the M.G.'s",
+  "title": "Green Onions",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/42/c2/a4/42c2a45b-6e3c-4a30-1362-9bcb2caaa28e/mzaf_2093512645324731078.plus.aac.p.m4a",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 9,
+  "artist": "Procol Harum",
+  "title": "A Whiter Shade of Pale",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e0/8e/ba/e08ebab8-b084-03c6-f6ba-3769f82a87cd/mzaf_11261740043524231344.plus.aac.p.m4a",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 9,
+  "artist": "Marvin Gaye",
+  "title": "Sexual Healing",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/c7/d2/00/c7d200c2-7726-5a38-1b13-81dc6cbbda24/mzaf_13927014083609634281.plus.aac.p.m4a",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 10,
+  "artist": "Carole King",
+  "title": "It's Too Late",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9c/52/56/9c52568b-9efc-8572-b7fe-047317154ee2/mzaf_10611586259190988943.plus.aac.p.m4a",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 10,
+  "artist": "Joni Mitchell",
+  "title": "Both Sides Now",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/65/31/e2/6531e209-4a87-583e-f3ed-24b87a91b443/mzaf_7139891475603500190.plus.aac.p.m4a",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 10,
+  "artist": "Delia Derbyshire",
+  "title": "Doctor Who",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a3/05/40/a30540fa-3917-5bc9-abcd-478bc0eb8ab6/mzaf_1642345256944083071.plus.aac.p.m4a",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 11,
+  "artist": "Boudewijn de Groot",
+  "title": "Welterusten mijnheer de president",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8c/44/0b/8c440bc3-093c-8b24-ccea-8f5d06808a13/mzaf_16936609635136083504.plus.aac.p.m4a",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 11,
+  "artist": "Wim Sonneveld",
+  "title": "Het dorp",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/34/54/ab/3454abca-f5c8-5575-7f6d-c0e0e9fb8861/mzaf_17735070999738291269.plus.aac.p.m4a",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 12,
+  "artist": "Britney Spears",
+  "title": "...Baby One More Time",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/49/2d/12/492d127a-ae83-a0cd-97b6-10d34d4a56f5/mzaf_694336938043858459.plus.aac.p.m4a",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 12,
+  "artist": "Backstreet Boys",
+  "title": "I Want It That Way",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/12/cd/f8/12cdf81c-f174-cd45-9a56-9b2388df9e63/mzaf_2642298639219088626.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5f/6b/e9/5f6be919-1b9e-30ef-45b7-cc27fc428fd5/012414167224.jpg/300x300bb.jpg",
+  "src": "itunes"
+ },
+ {
+  "mixtape": 12,
+  "artist": "Taylor Swift",
+  "title": "Shake It Off",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/82/9a/55/829a551a-461c-f1d8-818d-ddedb090791d/mzaf_3170634596127872695.plus.aac.p.m4a",
+  "cover": "",
+  "src": "lessonup"
+ },
+ {
+  "mixtape": 8,
+  "artist": "Rhythim Is Rhythim",
+  "title": "Strings of Life",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/74/66/a9/7466a931-cee5-e8e5-b327-66ff9c559187/mzaf_5214720034261436593.plus.aac.p.m4a",
+  "cover": "https://lh3.googleusercontent.com/L7CkvCJrEP6e2_cXBwzm8aHLOAe_TVtJrt3gJipXtjznmiGfsFXXOz3L3UB5ctiZCeZlTl6vnJJdggfyOKtCfp4h82q81zyMkJPIS8o",
+  "src": "lessonup"
+ }
+]

@@ -10,8 +10,10 @@
   });
 
   // Afspeelknoppen bij de luistertips.
-  SOR.load('data/tracks.json').then(tracks => {
+  // tracks.json: fragmenten uit de les; tips-audio.json: aanvulling voor tips zonder fragment in de les
+  Promise.all([SOR.load('data/tracks.json'), SOR.load('data/tips-audio.json').catch(() => [])]).then(([tracks, extra]) => {
     const mine = tracks.filter(t => t.mixtape === N);
+    const byTip = new Map(extra.filter(t => t.mixtape === N).map(t => [SOR.norm(t.artist) + '|' + SOR.norm(t.title), t]));
     const key = (a, t) => SOR.norm(a) + '|' + SOR.norm((t || '').replace(/\(.*?\)/g, '')).slice(0, 14);
     const byKey = new Map(mine.map(t => [key(t.artist, t.title), t]));
     const byArtist = new Map(); mine.forEach(t => { const k = SOR.norm(t.artist); if (!byArtist.has(k)) byArtist.set(k, []); byArtist.get(k).push(t); });
@@ -25,6 +27,7 @@
       const title = (lines.find(l => l !== artist) || '').replace(/\s*\(\d{4}\)\s*$/, '');
       let t = byKey.get(key(artist, title));
       if (!t) { const cands = byArtist.get(SOR.norm(artist)) || []; t = cands.find(c => SOR.norm(c.title).startsWith(SOR.norm(title).slice(0, 6))) || (cands.length === 1 ? cands[0] : null); }
+      if (!t) t = byTip.get(SOR.norm(artist) + '|' + SOR.norm(title));
       if (!t) return;
       const b = document.createElement('button');
       b.type = 'button'; b.className = 'sor-play'; b.setAttribute('aria-label', 'Speel ' + artist + ' – ' + title);
