@@ -162,7 +162,7 @@
   }
   (function loadLex() {
     const root = (document.querySelector('meta[name=sor-root]') || {}).content || '..';
-    fetch(root + '/data/uitspraak.json').then(r => r.json()).then(d => {
+    fetch(root + '/data/uitspraak.json?v=' + Date.now(), { cache: 'no-store' }).then(r => r.json()).then(d => {
       const overal = Object.assign({}, d.woorden || {}, d.overal || {});
       lexes.overal = { map: overal, re: compile(overal) };
       lexes.engels = { map: d.engels || {}, re: compile(d.engels || {}) };
