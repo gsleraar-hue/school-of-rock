@@ -159,6 +159,8 @@
   .lu-frame { position: relative; aspect-ratio: 16 / 10; background: #000; border-radius: 8px; overflow: hidden; }
   .lu-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .lu-frame:fullscreen { border-radius: 0; }
+  .lu-cover { position: absolute; right: 8px; bottom: 8px; width: 160px; height: 46px; z-index: 2; display: flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 10px; background: #F2D500; color: #1C1B19; font: 700 15px/1 "Oswald", sans-serif; letter-spacing: .03em; text-transform: uppercase; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.25); }
+  .lu-cover:hover { background: #FFE34D; }
   .deck-embed.lu { position: relative; aspect-ratio: 16 / 10; max-height: 85vh; background: #000; border-radius: 8px; overflow: hidden; }
   .deck-embed.lu[hidden] { display: none; }
   .deck-help { margin: -4px 0 0; font: 12px/1.4 "Space Mono", monospace; color: #9C978D; }
@@ -180,7 +182,7 @@
   .pager b { font: 600 18px/1.15 "Oswald", sans-serif; }
   .mt-step { position: fixed; top: 50%; z-index: 40; display: flex; align-items: center; gap: 10px; text-decoration: none; transform: translateY(-50%); }
   .mt-step.prev { left: 14px; } .mt-step.next { right: 14px; flex-direction: row-reverse; }
-  .mt-step i { flex: none; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: #1C1B19; color: #F2D500; font: 700 22px/1 "Oswald", sans-serif; font-style: normal; box-shadow: 0 6px 18px rgba(0,0,0,.18); transition: transform .15s; }
+  .mt-step i { flex: none; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: #1C1B19; color: #F2D500; font-style: normal; line-height: 0; box-shadow: 0 6px 18px rgba(0,0,0,.18); transition: transform .15s; }
   .mt-step span { background: #1C1B19; color: #fff; border-radius: 4px; padding: 8px 10px; font: 600 14px/1.2 "Oswald", sans-serif; max-width: 220px; opacity: 0; pointer-events: none; transition: opacity .15s; }
   .mt-step span small { display: block; font: 10px/1.2 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #F2D500; margin-bottom: 3px; }
   .mt-step:hover i, .mt-step:focus-visible i { transform: scale(1.08); }
@@ -355,6 +357,6 @@
     <p>School of Rock · De geschiedenis van popmuziek · ArtEZ University of the Arts</p>
   </footer>
 </section>
-<nav class="pager" aria-label="Andere mixtapes"><a href="01.html"><small>← Mixtape 1</small><b>Het ontstaan van popmuziek</b></a><a class="next" href="03.html"><small>Mixtape 3 →</small><b>The Beatles</b></a></nav><a class="mt-step prev" href="01.html" rel="prev" aria-label="Vorige: Mixtape 1, Het ontstaan van popmuziek"><i aria-hidden="true">&larr;</i><span><small>Mixtape 1</small>Het ontstaan van popmuziek</span></a><a class="mt-step next" href="03.html" rel="next" aria-label="Volgende: Mixtape 3, The Beatles"><i aria-hidden="true">&rarr;</i><span><small>Mixtape 3</small>The Beatles</span></a>
+<nav class="pager" aria-label="Andere mixtapes"><a href="01.html"><small>← Mixtape 1</small><b>Het ontstaan van popmuziek</b></a><a class="next" href="03.html"><small>Mixtape 3 →</small><b>The Beatles</b></a></nav><a class="mt-step prev" href="01.html" rel="prev" aria-label="Vorige: Mixtape 1, Het ontstaan van popmuziek"><i aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></i><span><small>Mixtape 1</small>Het ontstaan van popmuziek</span></a><a class="mt-step next" href="03.html" rel="next" aria-label="Volgende: Mixtape 3, The Beatles"><i aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i><span><small>Mixtape 3</small>The Beatles</span></a>
 
 </div><footer class="sitefoot"><div class="wrap"><p>School of Rock · De geschiedenis van popmuziek in mixtapes · Jan-Wolter Smit · ArtEZ University of the Arts</p><p><a href="../pdf/school-of-rock-reader.pdf">Download de reader (pdf)</a></p></div></footer><script src="../assets/player.js"></script><script src="../assets/anchor-notes.js"></script><script src="../assets/chapter.js"></script><script>document.querySelectorAll('.qr[data-url]').forEach(function(el){if(typeof QRCode==='undefined'){return;}new QRCode(el,{text:el.dataset.url,width:256,height:256,colorDark:'#1C1B19',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.M});});</script></body></html>

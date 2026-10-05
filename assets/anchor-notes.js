@@ -40,7 +40,7 @@
     var kids = Array.prototype.slice.call(flow.children);
     kids.forEach(function (a) {
       if (!a.matches('aside.side-note')) return;
-      if (getComputedStyle(a).float === 'none') return;
+      if (!window.SOR_PRINT && getComputedStyle(a).float === 'none') return;
       var k = noteKeys(a);
       if (!k) return;
       var idx = kids.indexOf(a), lo = idx, hi = idx;

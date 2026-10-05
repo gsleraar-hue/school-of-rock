@@ -107,6 +107,7 @@
   // ---------- Tekenen ----------
   const nodeSel = gNodes.selectAll('g.node').data(G, d => d.id).join(enter => {
     const n = enter.append('g').attr('class', 'node').attr('tabindex', 0).attr('role', 'button').attr('aria-label', d => `${d.name}, ${d.year}, ${d.place.name}`);
+    n.append('circle').attr('class', 'hit').attr('r', 14);
     n.append('circle').attr('class', 'ring').attr('r', 8);
     n.append('circle').attr('class', 'dot').attr('r', 7).attr('fill', d => famById.get(d.family)?.color || '#999');
     n.append('text').attr('x', 11).attr('dy', '.35em').text(d => d.name);
