@@ -71,12 +71,15 @@
     $('.sp-bar i').style.width = (audio.duration ? (100 * audio.currentTime / audio.duration) : 0) + '%';
     if (current && current.book) $('.sp-time').textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration || current.duration);
   }
+  // reeksen: School of Rock (pop) en De Droomfabriek (film), elk met eigen hoofdstukken en eigen bewaarde positie
+  const SETS = { pop: { data: 'data/luisterboek.json', key: 'boek', label: 'Luisterboek · Mixtape ', album: 'School of Rock · luisterboek', cover: 'assets/cassette.png' }, film: { data: 'film/data/luisterboek.json', key: 'boek-film', label: 'De Droomfabriek · Mixtape ', album: 'De Droomfabriek · luisterboek', cover: 'film/assets/icon.svg' } };
+  const setOf = tr => SETS[(tr && tr.bookSet) || 'pop'];
   // luisterboek: positie bewaren, zodat je later verder kunt luisteren
   let lastSave = 0;
   function savePos(force) {
     if (!current || !current.book || !isFinite(audio.currentTime)) return;
     const now = Date.now(); if (!force && now - lastSave < 4000) return; lastSave = now;
-    store.set('boek', { n: current.book, t: Math.floor(audio.currentTime), at: now });
+    store.set(setOf(current).key, { n: current.book, t: Math.floor(audio.currentTime), at: now });
   }
   audio.addEventListener('play', paint);
   audio.addEventListener('pause', () => { savePos(true); paint(); });
@@ -107,7 +110,7 @@
   audio.addEventListener('timeupdate', () => { fade(); progress(); savePos(false); });
   audio.addEventListener('loadedmetadata', progress);
   audio.addEventListener('ended', () => {
-    if (current && current.book) { const n = current.book; if (n < 13) { SOR.playBook(n + 1, 0); return; } store.set('boek', { n: 1, t: 0, at: Date.now() }); }
+    if (current && current.book) { const n = current.book, set = current.bookSet || 'pop', max = current.bookMax || 13; if (n < max) { SOR.playBook(n + 1, 0, set); return; } store.set(setOf(current).key, { n: 1, t: 0, at: Date.now() }); }
     paint(); listeners.forEach(fn => fn(current, false, true));
   });
   function seekBy(s) { if (!audio.duration) return; audio.currentTime = Math.min(audio.duration - 1, Math.max(0, audio.currentTime + s)); progress(); savePos(true); }
@@ -116,7 +119,7 @@
     if (e.target.closest('.sp-close')) { audio.pause(); bar.hidden = true; }
     if (e.target.closest('.sp-back')) seekBy(-15);
     if (e.target.closest('.sp-fwd')) seekBy(30);
-    if (e.target.closest('.sp-next') && current && current.book && current.book < 13) SOR.playBook(current.book + 1, 0);
+    if (e.target.closest('.sp-next') && current && current.book && current.book < (current.bookMax || 13)) SOR.playBook(current.book + 1, 0, current.bookSet || 'pop');
     if (e.target.closest('.sp-rate')) { const r = RATES[(RATES.indexOf(audio.playbackRate) + 1) % RATES.length] || 1; audio.playbackRate = r; store.set('tempo', r); $('.sp-rate').textContent = String(r).replace('.', ',') + '×'; }
     const sb = e.target.closest('.sp-bar');
     if (sb && current && current.book && audio.duration) { const r = sb.getBoundingClientRect(); audio.currentTime = audio.duration * Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)); progress(); savePos(true); }
@@ -129,17 +132,17 @@
   function mediaSession(track) {
     if (!('mediaSession' in navigator)) return;
     try {
-      navigator.mediaSession.metadata = new MediaMetadata({ title: track.title || '', artist: track.artist || '', album: track.book ? 'School of Rock · luisterboek' : 'School of Rock', artwork: track.cover ? [{ src: track.cover, sizes: '512x512' }] : [] });
+      navigator.mediaSession.metadata = new MediaMetadata({ title: track.title || '', artist: track.artist || '', album: track.book ? setOf(track).album : 'School of Rock', artwork: track.cover ? [{ src: track.cover, sizes: '512x512' }] : [] });
       const h = (a, f) => { try { navigator.mediaSession.setActionHandler(a, f); } catch (e) {} };
       h('play', () => audio.play()); h('pause', () => audio.pause());
       h('seekbackward', track.book ? () => seekBy(-15) : null); h('seekforward', track.book ? () => seekBy(30) : null);
-      h('nexttrack', track.book && track.book < 13 ? () => SOR.playBook(track.book + 1, 0) : null);
-      h('previoustrack', track.book && track.book > 1 ? () => SOR.playBook(track.book - 1, 0) : null);
+      h('nexttrack', track.book && track.book < (track.bookMax || 13) ? () => SOR.playBook(track.book + 1, 0, track.bookSet || 'pop') : null);
+      h('previoustrack', track.book && track.book > 1 ? () => SOR.playBook(track.book - 1, 0, track.bookSet || 'pop') : null);
     } catch (e) {}
   }
 
-  let chapters = null;
-  const book = () => chapters || (chapters = fetch(abs('data/luisterboek.json')).then(r => r.json()).catch(() => { chapters = null; return []; }));
+  const chapters = {};
+  const book = (set = 'pop') => chapters[set] || (chapters[set] = fetch(abs(SETS[set].data)).then(r => r.json()).catch(() => { delete chapters[set]; return []; }));
 
   const SOR = window.SOR = {
     slug, norm, fmt, get root() { return root(); }, media: audio,
@@ -166,16 +169,16 @@
       paint();
     },
     // Luisterboek: hoofdstuk n, vanaf seconde t (zonder t: waar je gebleven was in dit hoofdstuk)
-    async playBook(n, t) {
-      const list = await book(); const c = list.find(x => x.n === n); if (!c) return;
-      const saved = store.get('boek');
+    async playBook(n, t, set = 'pop') {
+      const S = SETS[set]; const list = await book(set); const c = list.find(x => x.n === n); if (!c) return;
+      const saved = store.get(S.key);
       const start = t !== undefined ? t : (saved && saved.n === n ? saved.t : 0);
-      if (current && current.book === n) { if (t !== undefined) { audio.currentTime = t; } audio.paused ? audio.play() : (t === undefined && audio.pause()); return; }
-      SOR.play({ audio: abs(c.file), book: n, duration: c.duration, artist: 'Luisterboek · Mixtape ' + n, title: c.title, cover: abs('assets/cassette.png') }, start > 5 ? start - 3 : 0);
+      if (current && current.book === n && (current.bookSet || 'pop') === set) { if (t !== undefined) { audio.currentTime = t; } audio.paused ? audio.play() : (t === undefined && audio.pause()); return; }
+      SOR.play({ audio: abs(c.file), book: n, bookSet: set, bookMax: list.length, duration: c.duration, artist: S.label + n, title: c.title, cover: abs(S.cover) }, start > 5 ? start - 3 : 0);
     },
     bookChapters: book,
-    bookPosition() { return store.get('boek'); },
-    bookPlaying(n) { return !!(current && current.book === n && !audio.paused); },
+    bookPosition(set = 'pop') { return store.get(SETS[set].key); },
+    bookPlaying(n, set = 'pop') { return !!(current && current.book === n && (current.bookSet || 'pop') === set && !audio.paused); },
     stop() { audio.pause(); if (tail) { tail.pause(); tail = null; } },
     pause() { audio.pause(); if (tail) { tail.pause(); tail = null; } },
     isPlaying(track) { return !!(current && track && current.audio === track.audio && !audio.paused); },

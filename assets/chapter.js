@@ -1,7 +1,9 @@
 /* Online hoofdstuk: ankers per track, afspeelknoppen bij luistertips, genres op de kaart. */
 (function () {
   const SOR = window.SOR;
-  const N = +document.body.dataset.mixtape;
+  const RAW = document.body.dataset.mixtape || '';
+  const SET = RAW.startsWith('film-') ? 'film' : 'pop';
+  const N = +RAW.replace('film-', '');
 
   // Ankers per track, zodat de kaart naar een track kan linken.
   document.querySelectorAll('.flow .head h3').forEach(h => {
@@ -19,15 +21,15 @@
     const go = row.querySelector('.sor-book-go'), fromStart = row.querySelector('.sor-book-start'), info = row.querySelector('.sor-book-info');
     let dur = 0;
     function label() {
-      const pos = SOR.bookPosition(); const here = pos && pos.n === N && pos.t > 20 ? pos.t : 0;
-      const on = SOR.bookPlaying(N);
+      const pos = SOR.bookPosition(SET); const here = pos && pos.n === N && pos.t > 20 ? pos.t : 0;
+      const on = SOR.bookPlaying(N, SET);
       go.innerHTML = (on ? SOR.pauseIcon : SOR.playIcon) + '<span>' + (on ? 'Pauzeer' : here ? 'Verder luisteren' : 'Luister dit hoofdstuk') + '</span>';
       fromStart.hidden = !here || on;
       info.textContent = here && !on ? 'bij ' + SOR.fmt(here) + ' van ' + SOR.fmt(dur) : dur ? Math.round(dur / 60) + ' minuten' : '';
     }
-    SOR.bookChapters().then(list => { const c = list.find(x => x.n === N); if (!c) { row.remove(); return; } dur = c.duration; label(); });
-    go.addEventListener('click', () => SOR.playBook(N));
-    fromStart.addEventListener('click', () => SOR.playBook(N, 0));
+    SOR.bookChapters(SET).then(list => { const c = list.find(x => x.n === N); if (!c) { row.remove(); return; } dur = c.duration; label(); });
+    go.addEventListener('click', () => SOR.playBook(N, undefined, SET));
+    fromStart.addEventListener('click', () => SOR.playBook(N, 0, SET));
     SOR.onChange(label);
     const css = document.createElement('style');
     css.textContent = '.sor-book-row .btn svg{width:14px;height:14px;fill:currentColor;margin-right:8px;vertical-align:-2px}.sor-book-row .sor-book-info{font-size:11px;letter-spacing:.04em;color:#9C978D;align-self:center}';
@@ -37,8 +39,8 @@
   // Afspeelknoppen bij de luistertips.
   // tracks.json: fragmenten uit de les; tips-audio.json: aanvulling voor tips zonder fragment in de les
   Promise.all([SOR.load('data/tracks.json'), SOR.load('data/tips-audio.json').catch(() => [])]).then(([tracks, extra]) => {
-    const mine = tracks.filter(t => t.mixtape === N);
-    const byTip = new Map(extra.filter(t => t.mixtape === N).map(t => [SOR.norm(t.artist) + '|' + SOR.norm(t.title), t]));
+    const mine = SET === 'pop' ? tracks.filter(t => t.mixtape === N) : [];
+    const byTip = new Map(extra.filter(t => SET === 'pop' && t.mixtape === N).map(t => [SOR.norm(t.artist) + '|' + SOR.norm(t.title), t]));
     const key = (a, t) => SOR.norm(a) + '|' + SOR.norm((t || '').replace(/\(.*?\)/g, '')).slice(0, 14);
     const byKey = new Map(mine.map(t => [key(t.artist, t.title), t]));
     const byArtist = new Map(); mine.forEach(t => { const k = SOR.norm(t.artist); if (!byArtist.has(k)) byArtist.set(k, []); byArtist.get(k).push(t); });
