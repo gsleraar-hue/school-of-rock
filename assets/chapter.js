@@ -58,10 +58,12 @@
       b.type = 'button'; b.className = 'sor-play'; b.setAttribute('aria-label', 'Speel ' + artist + ' – ' + title);
       b.innerHTML = SOR.playIcon;
       b.addEventListener('click', () => SOR.play({ ...t, year: (title.match(/\d{4}/) || [])[0] }));
-      const tag = note.querySelector('.tag');
-      const row = document.createElement('div'); row.className = 'note-play';
-      row.append(b, Object.assign(document.createElement('span'), { textContent: 'Luister naar het fragment' }));
-      (tag || note.firstChild).after(row);
+      // afspeelknop op de hoes (of op de plek van de hoes als die er niet is)
+      const cov = document.createElement('span'); cov.className = 'note-play rec-cover';
+      const img = rec && rec.querySelector('img');
+      if (img) { img.replaceWith(cov); cov.append(img, b); }
+      else if (rec) { cov.classList.add('no-img'); cov.append(b); rec.style.removeProperty('grid-template-columns'); rec.prepend(cov); }
+      else { const tag = note.querySelector('.tag'); cov.append(b); (tag || note.firstChild).after(cov); }
       buttons.push([b, t]);
     });
     SOR.onChange(() => buttons.forEach(([b, t]) => { const on = SOR.isPlaying(t); b.classList.toggle('on', on); b.innerHTML = on ? SOR.pauseIcon : SOR.playIcon; }));
