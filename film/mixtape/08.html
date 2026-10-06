@@ -1,0 +1,397 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content="../.."><title>Filmmuziek · Mixtape 8 · Druk op start</title><link rel="icon" href="../../film/assets/icon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="../../assets/site.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><style>
+  /* Eén thema met opzet: een boek in de huisstijl van de lessen. */
+  :root {
+    color-scheme: light;
+    --page: #FFFFFF;
+    --ink: #1C1B19;
+    --ink-soft: #55524C;
+    --line: #DDD8CE;
+    --red: #D63A31;
+    --yellow: #F2D500;
+    --display: "Oswald", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "Space Mono", "Courier New", monospace;
+    --hand: "Caveat", "Comic Sans MS", cursive;
+    --text: 34rem;
+    --margin: 13rem;
+    --gap: 2.25rem;
+  }
+  html { background: var(--page); }
+  body { background: var(--page); color: var(--ink); font: 400 16px/1.65 var(--body); padding-inline: 16px; padding-block: 0 64px; }
+  .book { max-width: calc(var(--text) + var(--gap) + var(--margin)); margin: 0 auto; }
+  p { margin: 0; }
+  em { font-style: italic; }
+  a { color: inherit; text-decoration-color: var(--red); text-underline-offset: 2px; }
+
+  /* Hoofdstukopening en delen */
+  .opener { position: relative; overflow: hidden; color: #FFFFFF; box-sizing: border-box; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; }
+  .opener .wash { position: absolute; inset: 0; background-color: rgba(214,58,49,.62); }
+  .opener .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 55%; background-color: rgba(28,27,25,.38); }
+  .opener .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background: var(--yellow); }
+  .opener h1, .opener h2, .opener .sub, .part .kicker { position: relative; }
+  .opener .kicker { font: 12px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--yellow); }
+  .opener h1, .opener h2 { font-family: var(--display); font-weight: 600; line-height: 1.02; margin: 0; text-wrap: balance; }
+  .opener .sub { max-width: 36ch; line-height: 1.4; }
+  .cover { margin-inline: -16px; min-height: 420px; padding: 32px 28px 36px 44px; }
+  .cover h1 { font-size: clamp(44px, 9vw, 72px); max-width: 12ch; }
+  .cover .sub { font-size: 18px; }
+  .cover .kicker { position: absolute; top: 26px; left: 44px; }
+  .cover .cassette { position: absolute; top: 16px; right: 18px; width: 88px; height: auto; }
+  .part { margin: 64px calc(-1 * (var(--margin) + var(--gap))) 28px 0; min-height: 230px; padding: 24px 24px 24px 40px; clear: both; }
+  .part h2 { font-size: clamp(30px, 6vw, 44px); }
+  .part .sub { font-size: 15px; }
+  .part .letter { position: absolute; right: 18px; bottom: -12px; font: 600 150px/1 var(--display); color: var(--yellow); }
+
+  /* Tekstvak met kantlijn */
+  .flow { padding-right: calc(var(--margin) + var(--gap)); }
+  .flow > p { max-width: var(--text); }
+  .flow > p { text-indent: 1.4em; }
+  .flow > .intro, .flow > .head + p, .flow > .head + aside + p, .flow > .head + figure + p { text-indent: 0; }
+  .head { margin: 40px 0 10px; max-width: var(--text); }
+  .head .label { font: 11px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--red); margin: 0 0 4px; }
+  .head h3 { font: 600 22px/1.15 var(--display); margin: 0; text-wrap: balance; }
+  .intro { font-size: 18px; line-height: 1.6; }
+
+  /* Kantlijn: luistertips, beeld, citaten, QR */
+  .side-note, .side-fig, .side-quote { float: right; clear: right; width: var(--margin); margin: 6px calc(-1 * (var(--margin) + var(--gap))) 18px 0; }
+  .side-note { border-left: 2px solid var(--yellow); padding-left: 10px; font-size: 12.5px; line-height: 1.4; color: var(--ink-soft); }
+  .side-note .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .side-note .rec { display: grid; grid-template-columns: 40px 1fr; gap: 8px; align-items: center; margin-bottom: 6px; }
+  .side-note .rec img { width: 40px; height: 40px; border-radius: 2px; }
+  .side-note .who { color: var(--ink); font-weight: 600; }
+  .side-note .qr { width: 96px; height: 96px; margin: 4px 0 6px; }
+  .side-note .qr img, .side-note .qr canvas { width: 100% !important; height: 100% !important; }
+  .side-fig img { display: block; width: 100%; border: 4px solid #FFFFFF; box-shadow: 0 3px 12px rgba(0,0,0,.18); transform: rotate(2deg); }
+  .side-fig figcaption { font: 600 20px/1.05 var(--hand); color: var(--red); text-align: center; margin-top: 8px; }
+  .side-quote { font: 500 17px/1.25 var(--display); color: var(--red); border-top: 2px solid var(--red); padding-top: 8px; }
+  .side-quote span { display: block; font: 11px/1.4 var(--mono); color: var(--ink-soft); margin-top: 6px; }
+
+  /* Achterin */
+  .back { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 8px; }
+  h4.backhead { font: 600 22px/1.15 var(--display); margin: 28px 0 0; }
+  .terms { columns: 2 240px; column-gap: 32px; margin: 12px 0 0; }
+  .terms div { break-inside: avoid; margin: 0 0 10px; }
+  .terms dt { font-weight: 600; }
+  .terms dd { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.45; }
+  .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px 32px; margin-top: 14px; }
+  .link-card { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: start; }
+  .link-card .qr { width: 112px; height: 112px; }
+  .link-card.lesson { grid-template-columns: 1fr; }
+  .link-card .qr img, .link-card .qr canvas { width: 100% !important; height: 100% !important; }
+  .link-card .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .link-card p { font-size: 14px; line-height: 1.45; }
+  .link-card .url { font: 11px/1.4 var(--mono); color: var(--ink-soft); word-break: break-all; margin-top: 6px; }
+  .colofon { margin-top: 36px; font-size: 12px; line-height: 1.5; color: var(--ink-soft); display: grid; gap: 6px; max-width: var(--text); }
+
+  @media screen and (max-width: 760px) {
+    .part { margin-right: 0; }
+    .flow { padding-right: 0; }
+    .side-note, .side-fig, .side-quote { float: none; width: auto; margin: 16px 0; }
+    .side-fig { max-width: 220px; }
+  }
+
+  /* Boek op A4 */
+  @page { size: A4; margin: 20mm 18mm 22mm 20mm; }
+  @page cover { margin: 0; }
+  @media print {
+    html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root { --text: 112mm; --margin: 44mm; --gap: 8mm; }
+    body { padding: 0; font-size: 9.6pt; line-height: 1.55; }
+    .book { max-width: none; }
+    p { orphans: 3; widows: 3; }
+    .cover { page: cover; margin: 0; height: 296mm; padding: 0 22mm 32mm 26mm; break-after: page; }
+    .cover .kicker { top: 18mm; left: 26mm; font-size: 8pt; }
+    .cover .cassette { top: 14mm; right: 16mm; width: 28mm; }
+    .cover h1 { font-size: 56pt; }
+    .cover .sub { font-size: 14pt; }
+    .opener .bar { width: 5mm; }
+    .part { margin: 0 calc(-1 * (var(--margin) + var(--gap))) 6mm 0; height: 70mm; min-height: 0; padding: 0 50mm 8mm 12mm; break-before: page; break-after: avoid; }
+    .part .kicker { font-size: 7.5pt; }
+    .part h2 { font-size: 26pt; }
+    .part .sub { font-size: 10pt; }
+    .part .letter { font-size: 100pt; right: 8mm; bottom: -5mm; }
+    .first-part { break-before: auto; margin-top: 10mm; }
+    .head { margin: 8mm 0 2.5mm; break-after: avoid; break-inside: avoid; }
+    .head .label { font-size: 6.8pt; }
+    .head h3 { font-size: 14pt; }
+    .intro { font-size: 11pt; }
+    .side-note { font-size: 7.6pt; padding-left: 3mm; margin-top: 1mm; margin-bottom: 5mm; break-inside: avoid; }
+    .side-note .tag { font-size: 6.2pt; margin-bottom: 2mm; }
+    .side-note .rec { grid-template-columns: 11mm 1fr; gap: 2.5mm; margin-bottom: 1.5mm; }
+    .side-note .rec img { width: 11mm; height: 11mm; }
+    .side-note .qr { width: 24mm; height: 24mm; }
+    .side-fig { margin-bottom: 5mm; break-inside: avoid; }
+    .side-fig figcaption { font-size: 13pt; }
+    .side-quote { font-size: 11pt; break-inside: avoid; }
+    .side-quote span { font-size: 6.5pt; }
+    .back { break-before: page; margin-top: 0; }
+    h4.backhead { font-size: 14pt; margin-top: 8mm; }
+    .terms { columns: 2; column-gap: 10mm; }
+    .terms div { margin-bottom: 2.5mm; }
+    .terms dd { font-size: 8.6pt; }
+    .terms div { break-inside: avoid; }
+    .links { grid-template-columns: 1fr 1fr; gap: 8mm; break-inside: avoid; }
+    .link-card { grid-template-columns: 30mm 1fr; gap: 5mm; }
+    .link-card .qr { width: 30mm; height: 30mm; }
+    .link-card p { font-size: 8.8pt; }
+    .link-card .url { font-size: 6.8pt; }
+    .colofon { font-size: 7.5pt; margin-top: 10mm; }
+  }
+  .cover .cover-text { position: absolute; left: 44px; right: 28px; bottom: 36px; display: grid; gap: 10px; }
+  @media print { .cover { display: block !important; height: 294mm !important; } .cover .cover-text { left: 26mm; right: 22mm; bottom: 32mm; gap: 4mm; } }</style><style>
+  body.chapter { padding-top: 0; }
+  body.chapter .sitenav { margin-inline: -16px; }
+  .deck { margin: 0 -16px; background: #1C1B19; color: #fff; padding: 18px 20px 20px; display: grid; gap: 14px; }
+  .deck-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .deck .lbl { font: 11px/1.4 "Space Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: #F2D500; min-width: 7.5em; }
+  .deck .lesson { font: 500 16px/1.3 "Oswald", sans-serif; }
+  .deck .btn { padding: 10px 14px; font-size: 14px; }
+  .deck .btn.ghost { color: #fff; border-color: #55524C; }
+  .deck-embed { margin: 0; }
+  .deck-embed iframe { border-radius: 8px; display: block; }
+  .lu-modal { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 16px; background: rgba(18,17,16,.82); }
+  .lu-modal[hidden] { display: none; }
+  .lu-box { position: relative; width: min(1280px, 100%, calc((100vh - 110px) * 1.6)); display: grid; gap: 10px; }
+  .lu-bar { display: flex; align-items: center; gap: 10px; color: #fff; }
+  .lu-bar b { font: 600 18px/1.2 "Oswald", sans-serif; margin-right: auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lu-bar button { font: 12px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #fff; background: #2A2825; border: 1px solid #55524C; border-radius: 4px; padding: 9px 12px; cursor: pointer; }
+  .lu-bar .lu-close { background: #F2D500; color: #1C1B19; border-color: #F2D500; font-weight: 700; }
+  .lu-frame { position: relative; aspect-ratio: 16 / 10; background: #000; border-radius: 8px; overflow: hidden; }
+  .lu-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .lu-frame:fullscreen { border-radius: 0; }
+  .lu-cover { position: absolute; right: 8px; bottom: 8px; width: 160px; height: 46px; z-index: 2; display: flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 10px; background: #F2D500; color: #1C1B19; font: 700 15px/1 "Oswald", sans-serif; letter-spacing: .03em; text-transform: uppercase; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.25); }
+  .lu-cover:hover { background: #FFE34D; }
+  .deck-embed.lu { position: relative; aspect-ratio: 16 / 10; max-height: 85vh; background: #000; border-radius: 8px; overflow: hidden; }
+  .deck-embed.lu[hidden] { display: none; }
+  .deck-help { margin: -4px 0 0; font: 12px/1.4 "Space Mono", monospace; color: #9C978D; }
+  .deck-help a { color: #F2D500; }
+  .deck-help[hidden] { display: none; }
+  .deck-embed.lu:fullscreen { aspect-ratio: auto; max-height: none; border-radius: 0; }
+  .deck-embed.lu iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0; }
+  .deck-genres { display: flex; flex-wrap: wrap; gap: 6px; }
+  .gchip { --c: #999; display: inline-flex; align-items: center; gap: 7px; text-decoration: none; font: 13px/1 "Inter", sans-serif; padding: 7px 10px; border-radius: 999px; background: #2A2825; color: #fff; }
+  .gchip i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+  .gchip span { color: #9C978D; font-family: "Space Mono", monospace; font-size: 11px; }
+  .gchip:hover { background: #3A3833; }
+  .side-note .rec { grid-template-columns: 52px 1fr; gap: 10px; }
+  .side-note .rec-cover { position: relative; display: block; width: 52px; height: 52px; }
+  .side-note .rec .rec-cover img { display: block; width: 52px; height: 52px; object-fit: cover; }
+  .side-note .rec-cover .sor-play { position: absolute; right: -7px; bottom: -7px; width: 28px; height: 28px; box-shadow: 0 2px 6px rgba(0,0,0,.3); }
+  .side-note .rec-cover.no-img { display: grid; place-items: center; background: #EDE9E1; border-radius: 2px; }
+  .side-note .rec-cover.no-img .sor-play { position: static; }
+  .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 48px 0 0; }
+  .pager a { display: grid; gap: 4px; padding: 16px; border: 1px solid #DDD8CE; border-radius: 4px; text-decoration: none; }
+  .pager a:hover { border-color: #1C1B19; }
+  .pager .next { text-align: right; }
+  .pager small { font: 11px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #D63A31; }
+  .pager b { font: 600 18px/1.15 "Oswald", sans-serif; }
+  .mt-step { position: fixed; top: 50%; z-index: 40; display: flex; align-items: center; gap: 10px; text-decoration: none; transform: translateY(-50%); }
+  .mt-step.prev { left: 14px; } .mt-step.next { right: 14px; flex-direction: row-reverse; }
+  .mt-step i { flex: none; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: #1C1B19; color: #F2D500; font-style: normal; line-height: 0; box-shadow: 0 6px 18px rgba(0,0,0,.18); transition: transform .15s; }
+  .mt-step span { background: #1C1B19; color: #fff; border-radius: 4px; padding: 8px 10px; font: 600 14px/1.2 "Oswald", sans-serif; max-width: 220px; opacity: 0; pointer-events: none; transition: opacity .15s; }
+  .mt-step span small { display: block; font: 10px/1.2 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #F2D500; margin-bottom: 3px; }
+  .mt-step:hover i, .mt-step:focus-visible i { transform: scale(1.08); }
+  .mt-step:hover span, .mt-step:focus-visible span { opacity: 1; }
+  @media (max-width: 1100px) { .mt-step { top: auto; bottom: 14px; transform: none; } body:has(.sor-player:not([hidden])) .mt-step { bottom: 96px; } .mt-step span { display: none; } .mt-step i { width: 42px; height: 42px; } }
+  @media print { .sitenav, .deck, .pager, .sitefoot, .mt-step { display: none !important; } }
+</style><style>
+:root { --red: #1E488C; --yellow: #E9B44C; }
+.opener .wash { background-color: rgba(30,72,140,.66) !important; }
+.opener .shade { background-color: rgba(10,22,44,.40) !important; }
+
+  body .sor-play { background: #1E488C; }
+  .deck .lbl { color: #E9B44C; }
+  .deck .btn.solid { background: #E9B44C; border-color: #E9B44C; color: #1C1B19; }
+  .mt-step i { color: #E9B44C; }
+  .pager small { color: #1E488C; }
+</style><script src="../../assets/player.js"></script><script src="../../assets/nav.js"></script></head><body class="chapter" data-mixtape="film-8"><header class="sitenav"><a class="brand" href="../index.html"><img src="../assets/icon.svg" alt=""><span>Filmmuziek</span></a><nav aria-label="Hoofdmenu"><a href="../../index.html">← School of Rock</a><a href="../index.html">Kaart</a><a href="../mixtapes.html" aria-current="page">Mixtapes</a><a href="../over.html">Over</a></nav></header><div class="book">
+
+<header class="opener cover" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/SW_Testbild_auf_Philips_TD1410U.jpg/960px-SW_Testbild_auf_Philips_TD1410U.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+  <p class="kicker">Filmmuziek · Mixtape 8</p>
+  <img class="cassette" src="../../assets/cassette.png" alt="">
+  <div class="cover-text"><h1>Druk op start</h1>
+  <p class="sub">Games, series en streaming: van tv-tune en 8-bit tot Halo, Game of Thrones en Loki, ca. 1959–2022.</p></div>
+</header>
+<div class="deck" aria-label="Bij dit hoofdstuk">
+  <div class="deck-row"><span class="lbl">Op de kaart</span><a class="btn ghost" href="../index.html">Naar de filmmuziekkaart</a></div>
+</div>
+
+<section class="flow">
+  <aside class="side-note"><span class="tag">LUISTER MEE</span><div class="qr" data-url="https://sorock.nl/film/mixtapes.html"></div>Alle fragmenten uit dit hoofdstuk staan op volgorde in de Spotify-playlist bij Mixtape 8.</aside>
+  <p class="intro">Een speelfilm zie je één keer, in een donkere zaal, van begin tot eind. Een televisieserie komt elke week terug, in de huiskamer, met de afwas nog op het aanrecht en de telefoon die gaat. Daarom vroeg televisie om een ander soort muziek: kort, direct herkenbaar en sterk genoeg om iemand vanuit de keuken naar de bank te roepen. De <strong>tv-tune</strong>, de herkenningsmelodie die aan het begin van elke aflevering klinkt, werd een eigen kunstvorm met eigen regels.</p>
+  <p>Ongeveer tegelijk met de bloei van de tv-tune ontstond een tweede nieuw medium: de videogame. De eerste spelcomputers hadden geen ruimte voor opgenomen muziek. Een kleine chip maakte een paar eenvoudige golfvormen, en de componist moest elke noot als code invoeren. Uit die beperking groeide een herkenbare stijl, en binnen twintig jaar klonken gamescores met orkest en koor die zich met filmmuziek konden meten. Gamemuziek heeft wel een eigenschap die filmmuziek mist: ze moet reageren op wat de speler doet, en ze weet niet hoe lang een scène gaat duren.</p>
+  <p>Rond 2000 begonnen kabelzenders en later streamingdiensten series te maken met het budget en de ambitie van speelfilms. Componisten werken sindsdien zonder veel moeite tussen film, serie en game, en de titelmuziek van een serie werd weer wat de tv-tune in de jaren zestig was: het merkteken van het hele werk.</p>
+
+  <!-- SIDE A -->
+  <header class="opener part first-part" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Howard_Morris_Patricia_Barry_%22The_Twilight_Zone%22_%281963_CBS_press_photo%29.jpg/960px-Howard_Morris_Patricia_Barry_%22The_Twilight_Zone%22_%281963_CBS_press_photo%29.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side A · 1959-1990</p>
+    <h2>Een tune per week</h2>
+    <p class="sub">Klassieke televisiemuziek, van The Twilight Zone tot Twin Peaks.</p>
+    <span class="letter" aria-hidden="true">A</span>
+  </header>
+
+  <div class="head"><p class="label">Track 01 · 1959-1971 · Los Angeles, Londen</p><h3>De tune als visitekaartje</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Rod_Serling_photo_portrait_1959.JPG" alt="Rod Serling"><figcaption>Rod Serling, bedenker van The Twilight Zone, 1959</figcaption></figure>
+  <p>Een filmcomponist heeft in de openingstitels vaak een paar minuten om een sfeer neer te zetten, een tv-componist soms maar tien seconden. In die tijd moet de kijker horen welk programma begint en of het spannend, grappig, vreemd of ernstig is. De tune moet bovendien week na week, soms jaren achter elkaar, terugkomen zonder te gaan vervelen. Dat vraagt om een kort motief met één opvallend element, zoals een ongewone klank, een ritme dat blijft haken of een instrument dat je niet verwacht.</p>
+  <p><em>The Twilight Zone</em> laat zien hoe ver de keuze van dat ene element kan gaan. De Amerikaanse zender CBS begon de serie van schrijver Rod Serling in 1959, met elke week een op zichzelf staand verhaal met een vreemde wending. Voor het eerste seizoen schreef Bernard Herrmann, de vaste componist van Alfred Hitchcock (zie Mixtape 2), een orkestrale titelmuziek. Vanaf het tweede seizoen klonk iets heel anders. CBS had bij de Franse avant-gardecomponist Marius Constant een reeks korte stukjes besteld voor zijn muziekbibliotheek. De tune die op tv kwam, was een montage van twee van die stukjes, <em>Etrange 3</em> en <em>Milieu 2</em>. Een elektrische gitaar, gespeeld door Howard Roberts, herhaalt een klein, steeds terugkerend figuurtje boven een onrustige achtergrond. Het klinkt schurend en onaf, en juist daardoor past het bij een serie waarin de gewone werkelijkheid steeds een beetje scheef blijkt te staan.</p>
+  <p>In Engeland werd de Australiër Ron Grainer de bekendste schrijver van tv-tunes. Hij werd in 1922 in Queensland geboren en verhuisde in 1952 met zijn gezin naar Londen. Daar speelde hij eerst piano in nachtclubs, tot hij als componist voor de televisie aan de slag kon. Voor de detectiveserie <em>Maigret</em> (1960) schreef hij een tune die meteen een Ivor Novello Award won, een Britse prijs voor songwriters en componisten.</p>
+  <p>Twee jaar later volgde <em>Steptoe and Son</em> (1962), een BBC-sitcom over een vader en zoon die samen een handel in oud ijzer en voddengoed runnen in een armoedige buurt van Londen. Grainers tune, <em>Old Ned</em>, is een licht hinkende melodie die meteen de toon van de serie zet: een beetje treurig, een beetje komisch, en vooral heel gewoon. Er is geen grote orkestklank en geen spanning. Een paar instrumenten spelen een melodie die je zo zou kunnen nafluiten, en dat is precies de bedoeling. De tune zegt: dit is een verhaal over gewone mensen, en je mag erom lachen. Ook <em>Old Ned</em> leverde Grainer een Ivor Novello Award op.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/65/11/53/651153bf-262a-8c43-dc8e-270b4970153e/mzaf_7223231463308420676.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/92/52/47/92524731-c102-01bb-eaee-7bc9ebaf3a30/8718781123116.jpg/600x600bb.jpg" alt=""><div><span class="who">Ron Grainer</span><br>Serie: Steptoe and Son (1962)</div></div>Een tune die in een paar maten de sfeer van een sitcom neerzet.</aside>
+  <p>Zijn bekendste tune werd die van <em>Doctor Who</em> (1963), een sciencefictionserie over een tijdreiziger in een blauwe politiecel. Grainer schreef de melodie en de baslijn op papier, maar hij nam ze niet zelf op. Dat deed Delia Derbyshire van de BBC Radiophonic Workshop, de elektronische studio van de BBC. Zij bouwde elke noot afzonderlijk op met oscillatoren, apparaten die een zuivere toon opwekken, en plakte de stukjes tape met de hand aan elkaar (haar werkwijze staat in Mixtape 5). Er speelt geen enkel gewoon instrument in mee. De pulserende bas in galopritme en de zwevende, glijdende melodie klonken in 1963 als muziek uit een andere wereld. Grainer was zo onder de indruk dat hij Derbyshire als medecomponist wilde laten vermelden, maar de BBC stond dat niet toe: medewerkers van de Radiophonic Workshop bleven anoniem.</p>
+  <p>In 1967 schreef Grainer de tune voor <em>The Prisoner</em>, een raadselachtige serie over een geheim agent die wordt opgesloten in een dorp waar niemand een naam heeft. Hij werkte daarnaast voor de film. Voor <em>The Omega Man</em> (1971), een sciencefictionfilm met Charlton Heston als laatste gezonde man in een verlaten Los Angeles, schreef hij een score die jazz, lichte muziek en spanningsmuziek mengt.</p>
+  <p>Ook in Amerika ontstonden zulke tunes, zoals het thema in vijfkwartsmaat dat Lalo Schifrin voor <em>Mission: Impossible</em> (1966) schreef (zie Mixtape 4). Telkens maakt één element de tune herkenbaar: een maatsoort, een klankkleur of een kort figuur.</p>
+
+  <div class="head"><p class="label">Track 02 · 1984-1990 · Miami, Los Angeles</p><h3>Synthesizer en droom: Miami Vice en Twin Peaks</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Angelo_Badalamenti_%28yearbook%29.jpg" alt="Angelo Badalamenti"><figcaption>Angelo Badalamenti (schoolfoto)</figcaption></figure>
+  <p>In de jaren tachtig kwam de synthesizer de huiskamer binnen, en de televisie liep voorop. <em>Miami Vice</em> (1984), een politieserie van de Amerikaanse zender NBC, zag eruit als een reeks videoclips: pastelkleurige pakken, snelle auto's, palmbomen en neonlicht. De serie gebruikte bestaande popnummers, zoals <em>In the Air Tonight</em> van Phil Collins, maar de eigen muziek kwam van één man: Jan Hammer.</p>
+  <p>Hammer werd in 1948 in Praag geboren en speelde in de jaren zeventig keyboards in het Mahavishnu Orchestra, een jazzrockgroep met gitarist John McLaughlin. Hij was gewend om met synthesizers te spelen alsof het solo-instrumenten waren, met buigende tonen en snelle loopjes zoals een gitarist die speelt. Voor <em>Miami Vice</em> werkte hij in zijn eigen studio met onder meer de Fairlight CMI, een van de eerste computers waarmee je klanken kon samplen en in een sequencer kon programmeren. Zo kon één muzikant in korte tijd een complete score maken, zonder orkest en zonder opnamestudio.</p>
+  <p>De <em>Miami Vice Theme</em> is opgebouwd uit een drumcomputer met een harde, droge klank, een pulserende baslijn in achtsten en een melodie die over de akkoorden heen springt. Het is muziek die in een discotheek niet zou misstaan, en dat was ook het idee: het disco- en synthgeluid uit Mixtape 5 kwam nu elke week op de buis. In november 1985 stond het nummer op de eerste plaats van de Amerikaanse <em>Billboard Hot 100</em>. Het won twee Grammy's, en het bleef ruim 27 jaar het laatste instrumentale nummer dat die hitlijst aanvoerde.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/39/93/a8/3993a814-561d-ca2b-53df-fe70e9fe81ce/mzaf_9045863425206674224.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8d/65/75/8d65757f-43b5-3201-119e-1585af751d7e/888174423425.jpg/600x600bb.jpg" alt=""><div><span class="who">Jan Hammer</span><br>Serie: Miami Vice (1984)</div></div>Een tv-tune die de hitparade aanvoerde: synths en drumcomputer.</aside>
+  <p>Zes jaar later verscheen een serie die op een heel andere manier met synthesizers werkte. <em>Twin Peaks</em> (1990) van David Lynch en Mark Frost, uitgezonden door ABC, begint met de vondst van het lichaam van Laura Palmer, een scholiere in een klein houthakkersstadje. Wat volgt is deels misdaadserie, deels soap en deels nachtmerrie. De muziek kwam van Angelo Badalamenti, die sinds <em>Blue Velvet</em> (1986) met Lynch samenwerkte (zijn filmwerk komt in Mixtape 3 aan bod).</p>
+  <p>Badalamenti en Lynch werkten op een bijzondere manier samen. Lynch is geen musicus, maar hij kon een sfeer beschrijven: een donker bos, een meisje dat alleen loopt, iets moois dat tegelijk eng is. Badalamenti zat aan het keyboard en speelde terwijl Lynch praatte, en paste de muziek aan tot Lynch zei dat het klopte. Zo ontstond <em>Laura Palmer's Theme</em>. Het begint met trage, donkere synthakkoorden, die lang blijven liggen. Dan stijgt de muziek langzaam, en op een bepaald moment bloeit ze open in een warme, bijna overdreven romantische melodie, die daarna weer wegzakt in het donker. Dat wisselen tussen schoonheid en dreiging is het hart van de hele serie.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/92/e5/6c/92e56ccf-b13b-0df1-00c1-038169769cac/mzaf_12805787695263402882.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/91/95/49/91954948-c2f7-579a-7ec6-61d4b8f02bdd/dj.pprunfmw.jpg/600x600bb.jpg" alt=""><div><span class="who">Angelo Badalamenti</span><br>Serie: Twin Peaks (1990)</div></div>Wacht op het moment dat de trage akkoorden plotseling opbloeien.</aside>
+  <p>De rest van de score is opgebouwd uit dezelfde bouwstenen: synthesizerakkoorden met veel galm, een elektrische gitaar met een diepe, trillende klank, een jazzy contrabas met brushes op de snaredrum. Personages kregen eigen thema's. Het lome, jazzachtige <em>Audrey's Dance</em> klinkt wanneer de scholiere Audrey Horne in beeld komt. De titelmuziek bestond al in een gezongen versie: <em>Falling</em>, met zangeres Julee Cruise en tekst van Lynch. De <em>Twin Peaks Theme</em> leverde Badalamenti een Grammy op.</p>
+  <p>Met <em>Twin Peaks</em> werd duidelijk dat een tv-score net zo bepalend kon zijn voor de identiteit van een werk als de score van een film. De muziek was niet alleen een tune aan het begin, maar een sfeer die door alle afleveringen heen liep en die kijkers konden herkennen zonder dat ze het beeld zagen. Dat idee zou tien jaar later terugkomen, toen series het budget van speelfilms kregen.</p>
+
+  <!-- SIDE B -->
+  <header class="opener part" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/960px-NES-Console-Set.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side B · 1985-2016</p>
+    <h2>Insert coin</h2>
+    <p class="sub">Van vijf geluidskanalen tot gamemuziek in de concertzaal.</p>
+    <span class="letter" aria-hidden="true">B</span>
+  </header>
+
+  <div class="head"><p class="label">Track 03 · 1985-1998 · Kyoto</p><h3>Vijf kanalen: Nintendo</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Koji_Kondo_-_GDC_2007_cropped.jpg/960px-Koji_Kondo_-_GDC_2007_cropped.jpg" alt="Kōji Kondō"><figcaption>Kōji Kondō</figcaption></figure>
+  <p>Voor opgenomen muziek was het geheugen van de eerste spelcomputers veel te klein. In plaats daarvan zat er een <strong>geluidschip</strong> in: een chip die zelf eenvoudige golfvormen opwekt. De componist voerde elke noot in als een reeks getallen voor toonhoogte, duur en volume. Muziek maken voor een game was voor de helft componeren en voor de helft programmeren.</p>
+  <p>Het Nintendo Entertainment System (NES), in Japan de Famicom, had een geluidschip met vijf kanalen. Twee daarvan maakten een <strong>blokgolf</strong>: een golfvorm die abrupt tussen hoog en laag springt en daardoor scherp en een beetje piepend klinkt. Die twee kanalen waren bestemd voor de melodie en de begeleiding. Een derde kanaal maakte een driehoeksgolf, zachter en ronder, die vooral voor de bas werd gebruikt. Het vierde kanaal maakte ruis, waarmee je slagwerk kon nabootsen: een korte ruisstoot klinkt als een snaredrum of een hi-hat. Het vijfde kanaal kon korte, grove samples afspelen. Meer was er niet. Voor volle akkoorden waren er te weinig kanalen; daarom speelde de componist de tonen vaak snel na elkaar, als een <strong>arpeggio</strong>, zodat het oor ze samenvoegt.</p>
+  <p>Kōji Kondō kwam in 1984 bij Nintendo in Kyoto, als eerste medewerker van het bedrijf die zich helemaal op het componeren toelegde. Een jaar later schreef hij de muziek voor <em>Super Mario Bros.</em> (1985). Hij wilde dat de muziek het gevoel van rennen en springen versterkte. De melodie van het hoofdthema, de <em>Ground Theme</em>, heeft een Latijns-Amerikaans ritme met veel syncopen: accenten die net naast de tel vallen. Daardoor huppelt de muziek, zoals Mario over het scherm huppelt. Kondō stemde het tempo af op de beweging van de speler. Omdat een speler minutenlang in hetzelfde level kan blijven, moest de muziek ook eindeloos kunnen herhalen zonder te vervelen. Hij hield de melodie kort en pakkend, met afwisselende delen die steeds weer naar het begin terugkeren. De <em>Ground Theme</em> werd als eerste gamemuziek opgenomen in het National Recording Registry, de Amerikaanse lijst van geluidsopnamen die bewaard moeten blijven.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/d3/17/7c/d3177c0b-feaa-3e62-4890-db3b44362000/mzaf_6462201008256393930.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3f/59/24/3f592468-40c6-8af1-b953-f7757d1af56e/198001099915.png/600x600bb.jpg" alt=""><div><span class="who">Kōji Kondō</span><br>Game: Super Mario Bros. (1985)</div></div>Zoek de kanalen: melodie, begeleiding, bas en ruis.</aside>
+  <p>Voor <em>The Legend of Zelda</em> (1986) wilde Kondō aanvankelijk de <em>Boléro</em> van Maurice Ravel gebruiken als titelmuziek, omdat het tempo zo goed paste. Laat in de ontwikkeling bleek dat het stuk nog auteursrechtelijk beschermd was. Kondō maakte daarom in één dag een nieuw titelthema, op basis van de heldhaftige mars die hij al had geschreven voor de open wereld waarin de speler op avontuur gaat. Die melodie keert sindsdien in bijna elk deel van de reeks terug.</p>
+  <p>In <em>The Legend of Zelda: Ocarina of Time</em> (1998) ging Kondō een stap verder. Daar werd muziek zelf een onderdeel van het spel. De hoofdpersoon krijgt een ocarina, een klein fluitje, en de speler leert er korte melodieën op spelen met de knoppen van de controller. Die melodieën hebben een functie: ze openen deuren, laten het weer omslaan of brengen de speler naar een andere plek. De speler moet de muziek dus onthouden en zelf spelen. Het was zijn laatste grote score die hij alleen schreef; daarna werkte hij vooral als begeleider van andere componisten bij Nintendo.</p>
+  <p>Niet alle Nintendo-muziek was vrolijk. Hirokazu Tanaka schreef voor <em>Metroid</em> (1986), een spel waarin een premiejager alleen door een vijandige planeet trekt, bewust geen pakkende deuntjes. Hij wilde af van de gebruikelijke gamemelodieën en koos voor een duistere, eenzame klank met weinig melodie en veel herhaalde bas- en slagwerkpatronen. Pas na de overwinning op het einde klinkt een heldere, triomfantelijke melodie. Zijn collega's vonden de muziek te somber, maar Tanaka mocht zijn plan uitvoeren. <em>Metroid</em> bewijst dat je met vijf kanalen ook angst en verlatenheid kunt oproepen.</p>
+
+  <div class="head"><p class="label">Track 04 · 1985-1992 · Engeland, Tokio</p><h3>C64, Mega Drive en de club</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Sega-Mega-Drive-JP-Mk1-Console-Set.jpg/960px-Sega-Mega-Drive-JP-Mk1-Console-Set.jpg" alt="Sega Mega Drive"><figcaption>Sega Mega Drive (Japanse uitvoering)</figcaption></figure>
+  <p>Terwijl in Japan de spelcomputers voor de televisie opkwamen, speelden in Europa veel jongeren hun games op een thuiscomputer. De Commodore 64, die in 1982 op de markt kwam, had een geluidschip dat bij muzikanten populair werd: de SID. Die chip had maar drie stemmen, minder dan de NES, maar elke stem kon kiezen uit verschillende golfvormen (driehoek, zaagtand, blokgolf en ruis), en er zat een filter in waarmee je de klank kon laten openen en sluiten zoals op een analoge synthesizer. Daardoor klonk de C64 voller en meer als een echt instrument.</p>
+  <p>De Engelsman Rob Hubbard, geboren in 1955 in Hull, werd de bekendste componist voor de C64. Hij had muziek gestudeerd en leerde zichzelf programmeren. Tussen 1985 en 1989 schreef of bewerkte hij als freelancer muziek voor meer dan vijfenzeventig games. Hij programmeerde zijn muziek direct in machinecode, de taal van de processor zelf. Dat gaf hem volledige controle: hij liet tonen razendsnel tussen toonhoogtes wisselen om akkoorden te suggereren, liet de toonhoogte trillen als een vibrato en wisselde golfvormen binnen één noot. Voor <em>Monty on the Run</em> (1985) baseerde hij de muziek deels op <em>Devil's Galop</em> van Charles Williams, een Brits stuk lichte muziek uit de jaren veertig. Het resultaat is een snel, gejaagd stuk van enkele minuten met een baslijn die geen moment stilstaat, een melodie vol versieringen en solo's die aan een rockband doen denken. Met drie stemmen klinkt het als een complete band.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/b4/4f/a7/b44fa7af-4076-716e-5037-03aeeb650b81/mzaf_15604696613754484092.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/79/e2/b1/79e2b11e-bfb9-d626-2898-5590feb175ec/0728238649074.jpg/600x600bb.jpg" alt=""><div><span class="who">Rob Hubbard</span><br>Game: Monty on the Run (1985)</div></div>Eén geluidschip met drie stemmen: hoor hoe vol het toch klinkt.</aside>
+  <p>Eind jaren tachtig bracht Sega een nieuwe spelcomputer uit: de Mega Drive, in Amerika de Genesis. Daarin zat een geluidschip van Yamaha dat werkte met <strong>FM-synthese</strong>. Bij die techniek laat je de ene golf de frequentie van een andere golf veranderen. Zo ontstaan klanken met veel boventonen: metalig, glanzend, soms een beetje hard. Het is dezelfde techniek als in de Yamaha DX7, de synthesizer die in de popmuziek van de jaren tachtig overal te horen was. Naast die FM-chip zat een eenvoudiger chip voor blokgolven en ruis.</p>
+  <p>Yuzo Koshiro, geboren in 1967 in Tokio, had als kind pianoles gehad van zijn moeder en een paar jaar les van Joe Hisaishi, de latere componist van de films van Studio Ghibli (zie Mixtape 7). Als scholier schreef hij al gamemuziek op een NEC PC-8801, een Japanse thuiscomputer. Voor <em>Streets of Rage</em> (1991) en <em>Streets of Rage 2</em> (1992), vechtspellen waarin de speler door de straten van een stad trekt, liet hij zich inspireren door de clubmuziek van dat moment: house, techno, breakbeat en funk. Hij componeerde op zijn oude PC-8801 met een programmeertaal die hij zelf had geschreven. In <em>Go Straight</em> uit het tweede deel hoor je een rechte vierkwartsbeat met een bassdrum op elke tel, stotterende synthakkoorden en een baslijn die zo uit een Brits clubnummer zou kunnen komen. Koshiro probeerde met de FM-chip de klank na te bootsen van de drumcomputers en synthesizers van Roland die in de clubs te horen waren.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5f/38/4e/5f384e13-76db-6b85-3b54-49dde882e7a1/mzaf_11899677960227466073.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/69/39/a3/6939a357-5d6f-1f44-34ed-ccf1e0fe6e71/5059435599097_cover.jpg/600x600bb.jpg" alt=""><div><span class="who">Yuzo Koshiro</span><br>Game: Streets of Rage 2 (1992)</div></div>Housemuziek uit een spelcomputer.</aside>
+  <p>Sega haalde voor zijn nieuwe mascotte ook een popmuzikant binnen. Masato Nakamura, bassist van de Japanse popgroep Dreams Come True, schreef de muziek voor <em>Sonic the Hedgehog</em> (1991). Zijn <em>Green Hill Zone</em> is een opgewekt popnummer met een springerige baslijn, een vrolijke melodie en een duidelijk refrein: muziek bij een blauwe egel die veel sneller rent dan Mario.</p>
+  <p>Toen spelcomputers in de jaren negentig muziek van cd gingen afspelen, werden geluidschips overbodig. De klank verdween toch niet: muzikanten bleven ermee werken, en er ontstond een eigen muziekscene: <strong>chiptune</strong>, muziek die gemaakt is met, of in de stijl van, de geluidschips van oude computers en consoles. Een aantal van die muzikanten stapte later over naar de film; Disasterpeace, die in Mixtape 5 voorkomt met zijn muziek voor <em>It Follows</em>, is daar een voorbeeld van.</p>
+
+  <div class="head"><p class="label">Track 05 · 1986-2004 · Tokio</p><h3>Dragon Quest: een ouverture voor het rollenspel</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Koichi_Sugiyama_202011.jpg/960px-Koichi_Sugiyama_202011.jpg" alt="Koichi Sugiyama"><figcaption>Koichi Sugiyama, 2020</figcaption></figure>
+  <p>In een actiespel als <em>Super Mario Bros.</em> duurt een level een paar minuten. In een rollenspel trekt de speler tientallen uren door een wereld: hij loopt door velden, bezoekt steden en kastelen, daalt af in kerkers en vecht tegen monsters. Bij Japanse rollenspellen, vaak afgekort tot <strong>JRPG</strong>, klinkt dezelfde muziek dus urenlang, steeds opnieuw. Ze moet kunnen herhalen zonder te irriteren, en de speler helpen zich in de wereld te oriënteren.</p>
+  <p>Koichi Sugiyama, geboren in 1931, had al een lange carrière achter de rug toen hij aan gamemuziek begon. Hij was regisseur geweest bij radio en televisie en schreef daarna reclamemuziek, popsongs en muziek voor tekenfilmseries. Hij speelde zelf graag computerspellen. Nadat hij een fanbrief had gestuurd aan het bedrijf Enix over een van hun spellen, vroeg Enix hem om muziek te schrijven. Zo werd hij halverwege de vijftig de componist van <em>Dragon Quest</em> (1986), het spel dat het Japanse rollenspel groot maakte.</p>
+  <p>Sugiyama schreef zijn muziek in de stijl van de westerse klassieke muziek, met heldere melodieën en harmonieën die aan de Europese romantiek doen denken. Het spel opent met een plechtige <em>Ouverture</em>, een fanfare met een marsachtig thema, zoals een opera of een feestelijk concert begint. Die ouverture klinkt sindsdien aan het begin van elk deel van de reeks.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/48/d1/75/48d175a5-8b50-ea5d-28cc-2bdd2e1c75cc/mzaf_2037885060422306374.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/8b/d6/03/8bd6038b-3431-bfd5-fc2c-735d0a1d711f/dj.enprhfyk.jpg/600x600bb.jpg" alt=""><div><span class="who">Koichi Sugiyama &amp; Tokyo Metropolitan Symphony Orchestra</span><br>Game: Dragon Quest (1986)</div></div>Een gamemelodie in de concertzaal: hoor de klassieke fanfare.</aside>
+  <p>Belangrijker nog was de ordening die Sugiyama aanbracht. Hij gaf elk soort plek in de spelwereld een eigen thema: het kasteel kreeg een statige, hoofse melodie, de stad een vriendelijk deuntje, het open veld een opgewekte wandelmuziek, de kerker een duister, langzaam stuk en het gevecht een gejaagde, ritmische muziek. De speler hoort dus meteen waar hij is en wat er gebeurt, ook zonder naar het scherm te kijken. Veel latere rollenspellen namen dat patroon over. Zo werkte de muziek als een plattegrond van de spelwereld.</p>
+  <p>Sugiyama wilde ook dat zijn muziek buiten het scherm bestond. Al in 1987 organiseerde hij in de Suntory Hall in Tokio het eerste concert met gamemuziek, waar een strijkersensemble suites uit de eerste twee <em>Dragon Quest</em>-delen speelde. Hij liet zijn muziek opnemen door symfonieorkesten, en die albums verschenen naast de spellen. Hij bleef de muziek voor de reeks schrijven tot zijn dood in 2021, in totaal meer dan vijfhonderd stukken in vijfendertig jaar.</p>
+  <p>Sugiyama was ook een omstreden figuur. Hij was actief in nationalistische kringen in Japan. In 2007 ondertekende hij een advertentie in de <em>Washington Post</em> die de historische feiten over de Japanse oorlogsmisdaden in twijfel trok, en in 2015 zei hij op de Japanse zender Channel Sakura dat voorlichting over lhbti op scholen niet nodig was. Die uitspraken leverden hem veel kritiek op.</p>
+
+  <div class="head"><p class="label">Track 06 · 1987-2016 · Tokio, Osaka</p><h3>Final Fantasy, Street Fighter en Kingdom Hearts</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Nobuo_Uematsu_-_Paris_4-dec-2004.JPG" alt="Nobuo Uematsu"><figcaption>Nobuo Uematsu in Parijs, 2004</figcaption></figure>
+  <p>Een jaar na <em>Dragon Quest</em> bracht het bedrijf Square zijn eigen rollenspel uit: <em>Final Fantasy</em> (1987). De muziek kwam van Nobuo Uematsu, geboren in 1959. Uematsu was autodidact. Hij leerde zichzelf piano spelen vanaf zijn twaalfde en had geen conservatorium gedaan. Zijn grote voorbeeld was Elton John; daarnaast luisterde hij naar de Beatles, naar progrockgroepen als Emerson, Lake &amp; Palmer en naar Tsjaikovski. Hij kwam in 1986 bij Square en schreef de muziek voor alle tien eerste delen van de reeks, tot en met <em>Final Fantasy X</em> (2001), waarvoor hij voor het eerst met andere componisten samenwerkte.</p>
+  <p>Het openingsstuk van het eerste deel, de <em>Prelude</em>, is eenvoudig: een reeks gebroken akkoorden die als een harp op en neer golft. Het komt in bijna elk deel terug en werkt als een herkenningsteken voor de hele reeks. Uematsu mengde in zijn muziek allerlei stijlen: een orkestraal thema voor het open veld, een rocknummer voor een gevecht, een volksliedje voor een dorp, een treurige pianomelodie voor een sterfscène. Elk belangrijk personage kreeg een eigen thema, zoals in de opera.</p>
+  <p>Hoe ver hij daarin ging, laat <em>Final Fantasy VI</em> (1994) horen. In dat deel bezoeken de personages een operavoorstelling, en Uematsu schreef er een korte opera in een paar delen voor. Het spel draaide op de Super Nintendo, die korte gesamplede klanken kon afspelen maar geen echte zang. De zangpartijen klinken als een synthetische stem zonder verstaanbare tekst. Toch werkt de scène, en de aria uit die opera, <em>Aria di Mezzo Carattere</em>, wordt nu door orkesten en zangers uitgevoerd.</p>
+  <p>Toen <em>Final Fantasy VII</em> (1997) op de PlayStation verscheen, was er meer ruimte voor geluid. Voor het laatste gevecht tegen de schurk Sephiroth schreef Uematsu <em>One-Winged Angel</em>. Hij noemde het een kruising tussen de muziek van Igor Stravinsky en die van Jimi Hendrix. Hij werkte er twee weken aan: hij schreef losse muzikale zinnen op en legde ze daarna als een puzzel aan elkaar. Het stuk heeft harde, onregelmatige accenten in het orkest, rockdrums en een koor dat Latijnse tekst zingt. Die tekst komt uit de middeleeuwse gedichten die ook Carl Orff gebruikte in zijn <em>Carmina Burana</em>. In het spel klonk het koor nog als gesamplede stemmen; later verschenen versies met een echt orkest en koor.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d5/82/65/d5826518-c08f-ac1c-a047-4b71af0f20e5/mzaf_2155416402330121882.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/14/c9/3e/14c93ed5-f552-90b5-9cc5-0d1372c005a1/dj.pzwbuhuv.jpg/600x600bb.jpg" alt=""><div><span class="who">Nobuo Uematsu</span><br>Game: Final Fantasy VII (1997)</div></div>Koor, orkest en rock voor één eindbaas.</aside>
+  <p>Uematsu werkte met anderen samen. Yasunori Mitsuda schreef de muziek voor <em>Chrono Trigger</em> (1995), een rollenspel over tijdreizen. Hij wilde muziek maken die in geen enkel bestaand genre paste, muziek van een denkbeeldige wereld. Toen hij tijdens het werk ziek werd, schreef Uematsu een deel van de stukken. Ook deze muziek wordt nog vaak in concerten gespeeld.</p>
+  <p>Yoko Shimomura, geboren in 1967, kwam uit een andere hoek. Ze studeerde piano aan de muziekhogeschool van Osaka. Na haar examen in 1988 ging ze werken bij Capcom, een maker van arcadespellen, tot verbazing van haar familie en docenten: zij hadden een dure muziekopleiding betaald en begrepen niet waarom ze voor games ging schrijven. Bij Capcom schreef ze bijna alle muziek voor <em>Street Fighter II</em> (1991), een vechtspel waarin spelers kiezen uit acht vechters uit verschillende landen. Elke vechter kreeg een kort, energiek thema dat bij zijn land en karakter paste en dat klinkt zolang er in zijn decor gevochten wordt. Het thema van de Amerikaanse soldaat Guile werd het bekendste.</p>
+  <p>In 1993 stapte Shimomura over naar Square, omdat ze liever muziek in klassieke stijl voor rollenspellen wilde schrijven dan snelle arcademuziek. Haar grootste werk werd <em>Kingdom Hearts</em> (2002), een rollenspel waarin figuren van Disney en van <em>Final Fantasy</em> samenkomen. Het spel opent met <em>Dearly Beloved</em>, een korte, rustige pianomelodie, die in elk deel van de reeks terugkomt. Na <em>Kingdom Hearts</em> ging Shimomura als freelancer verder; ze schreef onder meer de muziek voor <em>Final Fantasy XV</em> (2016), waaraan ze tien jaar werkte.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b2/0b/07/b20b07df-7edc-1637-e852-4486d5420d33/mzaf_9460771497437955596.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/55/9a/79/559a7986-d4d9-1a3c-f896-647ab0ac5095/23UMGIM08514.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Yoko Shimomura</span><br>Game: Kingdom Hearts (2002)</div></div>Een korte, rustige pianomelodie als welkom in een spelwereld.</aside>
+  <p>De muziek van deze Japanse componisten verliet al snel het scherm. Orkesten over de hele wereld spelen concerten met muziek uit <em>Final Fantasy</em>, <em>Dragon Quest</em>, <em>Chrono Trigger</em> en <em>Kingdom Hearts</em>, voor zalen vol mensen die met deze muziek zijn opgegroeid.</p>
+
+  <!-- SIDE C -->
+  <header class="opener part" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Video_Games_Live_concert_2008.jpg/960px-Video_Games_Live_concert_2008.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Side C · 1997-2022</p>
+    <h2>Spelen en streamen</h2>
+    <p class="sub">Westerse gamescores en de gouden eeuw van de serie.</p>
+    <span class="letter" aria-hidden="true">C</span>
+  </header>
+
+  <div class="head"><p class="label">Track 07 · 1997-2014 · Chicago, Seattle</p><h3>Halo: monniken en gitaren</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Martin_O%27Donnell.png/960px-Martin_O%27Donnell.png" alt="Martin O'Donnell"><figcaption>Martin O'Donnell</figcaption></figure>
+  <p>Rond 2000 konden spelcomputers en pc's opgenomen muziek in cd-kwaliteit afspelen. Westerse gamestudio's begonnen hun spellen te zien als interactieve films, met een score die zich met een filmscore kon meten. Michael Giacchino schreef in 1999 een orkestscore voor de oorlogsgame <em>Medal of Honor</em>, voordat hij naar film en animatie overstapte (zie Mixtape 7). Een score die veel navolging kreeg, kwam echter uit een onverwachte hoek.</p>
+  <p>Martin O'Donnell en Michael Salvatori hadden in Chicago samen een bedrijf voor reclamemuziek. Ze schreven jingles voor schoonmaakmiddelen en vitaminepillen. Via de gamestudio Bungie, die ook in Chicago zat, kwamen ze bij gamemuziek terecht: ze maakten de muziek voor de strategiegame <em>Myth</em> (1997). Bungie werkte daarna aan een sciencefictionspel, <em>Halo: Combat Evolved</em>, dat in 2001 verscheen als een van de eerste spellen voor de Xbox van Microsoft.</p>
+  <p>Voor een van de eerste presentaties van het spel vroeg Bungie om muziek die oud en mysterieus klonk. In zijn auto bedacht hij het begin en schreef hij de melodie op: een mannenkoor dat zingt in de stijl van het <strong>gregoriaans</strong>, de eenstemmige kerkzang van de middeleeuwen. De monnikenstemmen zingen een langzame, plechtige melodie zonder begeleiding. Daarna vallen strijkers in met een snel, herhaald ritme, en komen percussie en koper erbij. Op andere plekken in de score klinken elektrische gitaren en rockdrums. Die combinatie van oud en nieuw, van kerkzang en rock, gaf de sciencefictionwereld een plechtig en mysterieus karakter: alsof de ringvormige wereld waarop het spel zich afspeelt, een oud geheim bewaart.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/91/be/ce/91bece60-0ac9-0cf0-7bd4-17a7392f641b/mzaf_2204161395312214910.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/75/6f/9e/756f9ee4-3c26-fe99-fbe3-540abc365a3e/669311200020_cover.jpg/600x600bb.jpg" alt=""><div><span class="who">Martin O'Donnell &amp; Michael Salvatori</span><br>Game: Halo: Combat Evolved (2001)</div></div>Gregoriaans koor in de toekomst: oud en nieuw in één thema.</aside>
+  <p>Het grootste verschil met filmmuziek zat in hoe de muziek in het spel werd gebruikt. Een filmcomponist schrijft voor een vaste tijdlijn: hij weet precies op welke seconde de held de kamer binnenkomt. Een gamecomponist weet dat niet. De ene speler rent in twee minuten door een gang, de andere doet er tien minuten over. Daarom maakten O'Donnell en Salvatori <strong>interactieve muziek</strong>: muziek die verandert door wat de speler doet. De score bestond uit losse stukken en lagen die het spel aan elkaar kon koppelen. Als de speler rustig rondliep, klonk er spaarzame muziek of helemaal niets. Begon er een gevecht, dan schakelde het spel over op een spannender stuk met meer slagwerk. Was het gevecht voorbij, dan zakte de muziek weer weg. Zo volgde de muziek het verloop van het spel, ook al wist niemand van tevoren hoe dat zou lopen.</p>
+  <p>Het Halo-thema werd het muzikale merkteken van de reeks en keerde terug in <em>Halo 2</em> (2004) en <em>Halo 3</em> (2007). Voor de volgende game van Bungie, <em>Destiny</em> (2014), werkten O'Donnell en Salvatori samen met Paul McCartney aan een groot muziekstuk, <em>Music of the Spheres</em>. Een gamethema was nu net zo bekend geworden als een filmthema.</p>
+
+  <div class="head"><p class="label">Track 08 · 2012-2021 · Los Angeles, Seattle</p><h3>Muziek die met de speler meegroeit</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Lena_Raine_%28cropped%29.jpg/960px-Lena_Raine_%28cropped%29.jpg" alt="Lena Raine"><figcaption>Lena Raine</figcaption></figure>
+  <p>Na 2010 lieten kleine studio's zien dat een game ook zonder grote actie en zonder gesproken tekst een verhaal kon vertellen. Muziek kreeg in die spellen een nog grotere rol. <em>Journey</em> (2012) van de studio thatgamecompany is daar een bekend voorbeeld van. De speler bestuurt een figuur in een rode mantel die door een woestijn naar een berg in de verte loopt. Er wordt geen woord gesproken. Soms kom je een andere speler tegen, maar praten kan niet.</p>
+  <p>Componist Austin Wintory, geboren in 1984, studeerde aan de University of Southern California en had al eerder met de studio gewerkt. Hij besloot niet elk gebied een eigen thema te geven, zoals Sugiyama dat deed, maar de hele score op één motief te bouwen dat de reis van de speler vertegenwoordigt. Hij beschreef de muziek als een groot celloconcert, waarin de speler de solist is en het orkest de wereld om hem heen. De solocello, gespeeld door Tina Guo, is dus de stem van de speler. Aan het begin klinkt de cello alleen en zacht, in een lege, stille woestijn. Naarmate de reis vordert, groeit het orkest om de cello heen: er komen strijkers bij, blazers, harp en koor. Ontmoet de speler een ander, dan komen er harp en altviool in de muziek, die het spel er op dat moment zelf aan toevoegt. Het slot, <em>Apotheosis</em>, laat het motief in volle orkestklank horen, als de speler de top van de berg bereikt. De score werd in 2013 als eerste gamesoundtrack genomineerd voor een Grammy in de categorie voor beeldmuziek.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/04/56/3a/04563a8f-2f8d-38a1-0062-c693be778cb1/mzaf_5219835861322944414.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/7d/ad/f5/7dadf5df-5d35-bf8e-6de4-687ba900e860/859716768304.jpg/600x600bb.jpg" alt=""><div><span class="who">Austin Wintory</span><br>Game: Journey (2012)</div></div>De cello bereikt de top: het slot van een reis zonder woorden.</aside>
+  <p>Een jaar later koos de studio Naughty Dog voor <em>The Last of Us</em> (2013) een componist die tot dan toe vooral voor de film werkte: de Argentijn Gustavo Santaolalla, die twee Oscars had gewonnen en wiens werk in Mixtape 6 aan bod komt. Het spel speelt zich af in een Amerika dat na een epidemie in verval is geraakt. Santaolalla schreef geen grote orkestscore, maar sobere muziek voor een paar instrumenten, vooral voor gitaar en de ronroco, een luit uit de Andes met een heldere, droge klank. Een paar tonen, veel stilte en veel galm laten de leegte van de wereld horen. Toen de zender HBO het verhaal in 2023 tot een serie verwerkte, schreef Santaolalla mee aan de muziek en kwam zijn thema uit de game terug. Zo reisde dezelfde muziek van game naar televisie.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/18/bb/7a/18bb7a0a-10bd-13d7-8d71-78a1c407a5f5/mzaf_7015665378801919271.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/95/7a/8b/957a8b8b-77a2-fa17-7d34-0d4ffef0151f/886443853973.jpg/600x600bb.jpg" alt=""><div><span class="who">Gustavo Santaolalla</span><br>Game: The Last of Us (2013)</div></div>Een paar gitaartonen in een lege wereld.</aside>
+  <p>Lena Raine, geboren in 1984 in Seattle, hoort bij een generatie componisten die hun muziek van begin tot eind zelf maken, thuis, met software en een paar instrumenten. Ze studeerde compositie in Seattle en werkte zes jaar als ontwerper en componist bij ArenaNet, de maker van het online rollenspel <em>Guild Wars 2</em>. Ontwikkelaar Maddy Thorson vroeg haar daarna voor <em>Celeste</em> (2018), een moeilijk platformspel over een jonge vrouw die een berg beklimt en onderweg vecht tegen haar eigen angsten en paniekaanvallen. Thorson had Raine gekozen om haar mengeling van ambient, techno en 8-bitklanken.</p>
+  <p>Raine combineerde in <em>Celeste</em> een eenvoudige pianomelodie met synthesizers, elektronische beats en klanken die aan oude geluidschips doen denken. De muziek wordt intenser naarmate de speler hoger komt: er komen lagen bij, het ritme wordt drukker, de klank voller. In <em>Resurrections</em> begint een piano alleen, met een melancholieke melodie, waarna synthesizers en een stuwende beat de muziek optillen. Zo hoort de speler zijn eigen voortgang en de spanning van het verhaal.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/30/94/92/3094922d-6da1-6ba2-ab64-65fd03018268/mzaf_4811288415296610536.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/87/af/6a/87af6a5a-af86-974e-67d6-14d57550a0ee/840093227690.png/600x600bb.jpg" alt=""><div><span class="who">Lena Raine</span><br>Game: Celeste (2018)</div></div>Piano en synths: hoor de muziek mee klimmen.</aside>
+  <p>Na <em>Celeste</em> schreef Raine vanaf 2020 nieuwe muziek voor <em>Minecraft</em>, een van de meest gespeelde games ter wereld. Haar stuk <em>Pigstep</em> is een speelse, funky track die de speler in het spel op een plaat kan vinden en afspelen. Voor <em>Chicory: A Colorful Tale</em> (2021) maakte ze een warme score met piano, kamermuziek en elektronica. Wat Wintory, Santaolalla en Raine gemeen hebben, is het inzicht dat gamemuziek een verhaal kan vertellen zonder tekst en zonder vaste tijdlijn. De muziek gaat niet mee met de klok, maar met de speler.</p>
+
+  <div class="head"><p class="label">Track 09 · 2004-2022 · Los Angeles, Santa Monica</p><h3>Taiko in de ruimte, cello op de landkaart</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Bear_McCreary%2C_GDC_2019_%28GEN1879_1%29_%28cropped%29.jpg" alt="Bear McCreary"><figcaption>Bear McCreary, 2019</figcaption></figure>
+  <p>Rond 2000 begonnen kabelzenders als HBO, die niet van reclame afhankelijk waren, series te maken met het budget en de ambitie van speelfilms. Later deden streamingdiensten als Netflix en Disney+ hetzelfde. Zo ontstond wat <strong>prestige-tv</strong> heet. Componisten kregen meer tijd en ruimte: een serie die jaren loopt, kan een muzikale wereld opbouwen die meegroeit met de personages.</p>
+  <p>Bear McCreary, geboren in 1979, studeerde aan de University of Southern California en leerde het vak bij Elmer Bernstein, de componist van <em>The Magnificent Seven</em>. Voor de sciencefictionserie <em>Battlestar Galactica</em> (2004), over de laatste overlevenden van de mensheid die op de vlucht zijn voor de robots die ze zelf hebben gebouwd, wilden de makers juist niet het gebruikelijke sciencefictiongeluid van een groot symfonieorkest met glanzend koper. McCreary koos voor slagwerk en instrumenten uit de hele wereld: Japanse taikotrommels, de Armeense duduk (een dubbelrietinstrument met een donkere, klagende klank), de Chinese erhu (een tweesnarige strijker) en gamelan. Pas tegen het einde van het eerste seizoen kwamen er weer orkeststrijkers bij. Dat maakte de serie rauwer en menselijker.</p>
+  <p>Voor de finale van het eerste seizoen schreef McCreary een <em>Passacaglia</em>. Dat is een barokke vorm waarin een bassmotief steeds wordt herhaald, terwijl de stemmen erboven variëren en steeds voller worden. McCreary gebruikte die oude vorm met de klankkleuren van zijn serie: boven dezelfde baslijn komen steeds meer lagen bij. Het idee van een herhaalde basis waarop spanning wordt opgebouwd, past goed bij televisie, waar muziek vaak lang onder een scène moet doorlopen.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/dc/38/43/dc3843c8-e376-a98c-8529-3663eb194754/mzaf_11434069387121570706.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music/07/14/8c/mzi.eysiipgf.jpg/600x600bb.jpg" alt=""><div><span class="who">Bear McCreary</span><br>Serie: Battlestar Galactica (2005)</div></div>Een barokke vorm in niet-westerse kleuren: sciencefiction zonder standaardorkest.</aside>
+  <p>McCreary werkte daarna aan <em>The Walking Dead</em> (2010) en <em>Outlander</em> (2014), een historische serie die zich deels in Schotland afspeelt. Voor de titelmuziek bewerkte hij het Schotse volkslied <em>The Skye Boat Song</em>, gezongen door zijn vrouw Raya Yarbrough. Een Emmy had hij toen al gewonnen, in 2013, voor de titelmuziek van <em>Da Vinci's Demons</em>. Hij schreef ook voor games. Voor <em>God of War</em> (2018), waarin de hoofdpersoon door de wereld van de Noordse mythologie trekt, maakte hij een donkere score met Noords klinkende instrumenten en een zwaar mannenkoor. Dezelfde componist, met dezelfde aanpak, werkte dus voor serie en game. De grens tussen die twee werelden was vervaagd.</p>
+  <p>Ramin Djawadi, in 1974 in Duisburg geboren als zoon van een Iraanse vader en een Duitse moeder, studeerde aan het Berklee College of Music in Boston en begon in de studio van Hans Zimmer, waar jonge componisten het vak leren door mee te werken aan grote films (zie Mixtape 7). Hij werd bekend met de rockgitaren van <em>Iron Man</em> (2008) en daarna met de fantasyserie <em>Game of Thrones</em> (2011) van HBO.</p>
+  <p>De begintitels van <em>Game of Thrones</em> tonen een mechanische landkaart van een verzonnen wereld. Steden en kastelen rijzen als tandwielen en raderwerken uit de kaart op. Djawadi bouwde de titelmuziek op een kort, herhaald ritmisch motief in de cello's, een <strong>ostinato</strong>: een figuur dat steeds terugkomt, op een andere toonhoogte of met een andere begeleiding. Het motief draait als de raderen in beeld, en elke herhaling bouwt de spanning verder op. Daarboven spelen de cello's de melodie, met een donkere, ernstige klank die bij het verhaal past. Djawadi won voor de serie twee Emmy's.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/61/28/ad/6128ade4-d49a-3811-df92-b231bb3b3803/mzaf_1140403213038657471.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/20/75/39/207539da-60d1-8ac1-7f4f-9f7e534c8c85/00030206709728.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Ramin Djawadi</span><br>Serie: Game of Thrones (2011)</div></div>Een cello-ostinato dat met de landkaart meedraait.</aside>
+  <p>Voor de HBO-serie <em>Westworld</em> (2016), over een pretpark in de stijl van het Wilde Westen waar robots de bezoekers vermaken, bedacht Djawadi samen met maker Jonathan Nolan een vondst. In de saloon van het park speelt een pianola, een piano die zichzelf bespeelt met een rol papier. Wat die pianola speelt, zijn bewerkingen van popsongs van onder meer Radiohead, Soundgarden en de Rolling Stones. Een westernsalon met moderne popmuziek klopt niet, en dat is het punt: het park is zelf ook een nep-verleden vol moderne techniek. Voor <em>House of the Dragon</em> (2022), de voorgeschiedenis van <em>Game of Thrones</em>, borduurde Djawadi voort op zijn eerdere thema's, zodat kijkers meteen hoorden in welke wereld ze waren.</p>
+
+  <div class="head"><p class="label">Track 10 · 2016-2022 · Los Angeles, New York</p><h3>Synths en hiphop: Stranger Things en Succession</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Nicholas_Britell_at_the_2024_New_York_Film_Festival_1_%28cropped%29.jpg/960px-Nicholas_Britell_at_the_2024_New_York_Film_Festival_1_%28cropped%29.jpg" alt="Nicholas Britell"><figcaption>Nicholas Britell, 2024</figcaption></figure>
+  <p>Toen Netflix in 2016 de serie <em>Stranger Things</em> uitbracht, kozen de makers, de broers Matt en Ross Duffer, voor een geluid dat precies paste bij hun verhaal. De serie speelt in 1983 in een klein Amerikaans stadje, waar een groep kinderen op zoek gaat naar een verdwenen vriend en op een bovennatuurlijke wereld stuit. Beelden en verwijzingen komen uit de films van Steven Spielberg en John Carpenter uit die tijd, en de muziek ook.</p>
+  <p>Kyle Dixon en Michael Stein speelden in Survive, een elektronische band uit Austin in Texas, die al jaren werkte met oude analoge synthesizers zoals de Korg Mono/Poly, de Roland SH-101 en de ARP Odyssey, en met drumcomputers. Hun titelmuziek voor <em>Stranger Things</em> is opgebouwd uit een pulserend <strong>arpeggio</strong>: een akkoord dat niet tegelijk klinkt maar als een snel, herhaald loopje van losse tonen, zoals een sequencer dat speelt. Daaronder ligt een diepe, aanzwellende bas, en daarboven een eenvoudige melodie van een paar lange tonen. Wie de synthesizermuziek van John Carpenter kent (zie Mixtape 5), herkent het geluid meteen. Het is muziek die tegelijk nostalgisch en dreigend klinkt: de jaren tachtig als merkteken. Dixon en Stein wonnen er in 2017 een Emmy mee voor de beste titelmuziek. Hun stijl sluit aan bij de <strong>synthwave</strong>, een stroming die bewust het synthesizergeluid van de jaren tachtig nabootst (ook die komt in Mixtape 5 aan bod).</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/92/6f/ed/926fed10-ec76-2790-4b24-7fa4af34cea0/mzaf_10795859141048042074.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e0/fe/29/e0fe29b5-d7fe-e0d7-04e5-dd0b989a8675/780163484526.jpg/600x600bb.jpg" alt=""><div><span class="who">Kyle Dixon &amp; Michael Stein</span><br>Serie: Stranger Things (2016)</div></div>Pulserende arpeggio's: de jaren tachtig als merkteken.</aside>
+  <p>Nicholas Britell, geboren in 1980, kwam uit twee werelden tegelijk. Hij volgde als kind pianolessen aan de vooropleiding van de Juilliard School in New York en studeerde aan Harvard. Daar speelde hij keyboards en synthesizers in een instrumentale hiphopgroep. In zijn filmmuziek, zoals voor <em>Moonlight</em> (2016), combineerde hij die twee werelden al (zie Mixtape 3).</p>
+  <p>Voor <em>Succession</em> (2018) van HBO, een serie over een rijke mediafamilie waarvan de kinderen vechten om de opvolging van hun vader, deed hij hetzelfde in de titelmuziek. Een piano speelt een statige, klassiek klinkende melodie in mineur, met strijkers die ernstige akkoorden aanhouden. Dat klinkt als geld, macht en oude traditie. Maar daaronder ligt een zware, trage hiphopbeat met een diepe bassdrum en een droge snare. Die combinatie maakt de muziek tegelijk plechtig en ironisch. De familie gedraagt zich als een koningshuis, maar de kijker hoort dat het allemaal een beetje opgeblazen is. Britell won er in 2019 een Emmy mee.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1a/56/0d/1a560db6-2ec9-e160-3bc5-bbb3bb9940ea/mzaf_10340756199296060404.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f4/08/d2/f408d2f6-1ed1-08a4-664c-977faa4e3442/731383709463.jpg/600x600bb.jpg" alt=""><div><span class="who">Nicholas Britell</span><br>Serie: Succession (2018)</div></div>Klassieke piano op een hiphopbeat: macht met een ironische glimlach.</aside>
+  <p>Voor <em>Andor</em> (2022), een Star Wars-serie op Disney+ over het ontstaan van het verzet tegen het Keizerrijk, ontwierp Britell een eigen klankwereld, los van de bekende thema's van John Williams. Een Star Wars-verhaal kreeg zo een geluid dat niet meteen aan de films deed denken.</p>
+  <p>Dat titelmuziek in deze jaren weer zo belangrijk werd, heeft met het kijkgedrag te maken. Op een streamingdienst kijk je vaak meerdere afleveringen achter elkaar. De diensten bieden zelfs een knop om de begintitels over te slaan. Juist daardoor moet een titelsequentie iets bijzonders zijn: een eigen kunstwerkje van een minuut dat je niet wilt missen, en dat je meteen herkent als je het thuis, in de trein of in een reclamefilmpje hoort. De titelmuziek werd het merkteken van de serie, zoals de tv-tune dat in de jaren zestig was.</p>
+
+  <div class="head"><p class="label">Track 11 · 2019-2022 · Londen, Los Angeles</p><h3>Theremin en Star Wars op de bank</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Theremin_player_with_the_New_Leviathan_Orch_at_Maison%2C_New_Orleans%2C_2010.jpg/960px-Theremin_player_with_the_New_Leviathan_Orch_at_Maison%2C_New_Orleans%2C_2010.jpg" alt="Theremin"><figcaption>Een thereminspeler aan het werk</figcaption></figure>
+  <p>Op Disney+, de streamingdienst die in 2019 begon, verschenen al snel series uit de werelden van Star Wars en Marvel. In de bioscoop hadden die een vast geluid: het grote symfonieorkest. Op televisie zochten de makers bewust iets anders.</p>
+  <p>Voor <em>The Mandalorian</em> (2019), de eerste live-action Star Wars-serie, wilde maker Jon Favreau muziek die ruwer, scherper en meer technisch klonk dan de scores van John Williams. Hij sprak met componist Ludwig Göransson over westerns en samoeraifilms, want de serie gaat over een eenzame premiejager die van planeet naar planeet trekt. Göransson, die in Mixtape 7 aan bod komt, begon met een basblokfluit. Hij speelde die zelf en bewerkte de opname digitaal tot een vreemde, toekomstige klank. Daarbij kwamen gitaren, piano, drums en synthesizers, en daaromheen een orkest van zeventig musici. Het resultaat klinkt als een western in de ruimte: een eenzaam melodie-instrument, een strak ritme en veel open ruimte.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7f/7f/06/7f7f0624-697c-a5a6-28ba-0315c7565139/mzaf_6538370982614567471.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/dd/73/43/dd7343b4-4f06-df19-1a5c-ab8b9904dd98/19UMGIM97288.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Ludwig Göransson</span><br>Serie: The Mandalorian (2019)</div></div>Westernsfeer met synthesizers: Star Wars zonder Williams-orkest.</aside>
+  <p>Natalie Holt, geboren in 1982, studeerde viool aan de Royal Academy of Music in Londen en daarna filmcompositie aan de National Film and Television School. Ze speelde in een strijkkwartet en schreef muziek voor Britse televisieseries. Voor de Marvel-serie <em>Loki</em> (2021) kreeg ze een opdracht die bij haar opleiding paste: een score voor groot orkest en koor. Maar ze voegde er synthesizers en een bijzonder elektronisch instrument aan toe: de <strong>theremin</strong>. Dat is een van de oudste elektronische instrumenten, uitgevonden rond 1920. De speler raakt het niet aan, maar beweegt zijn handen in de buurt van twee antennes. De ene hand regelt de toonhoogte, de andere het volume. Daardoor glijdt de toon zonder overgang van de ene hoogte naar de andere, met een zwevende, bijna menselijke klank.</p>
+  <p>In Hollywood werd de theremin in de jaren veertig en vijftig gebruikt voor waanzin en buitenaardse wezens, bijvoorbeeld in <em>Spellbound</em> van Miklós Rózsa en in <em>The Day the Earth Stood Still</em> van Bernard Herrmann (zie Mixtape 5). Die geschiedenis past bij Loki, de god van het bedrog uit de Noordse mythologie, die in de serie wordt opgepakt door een bureaucratische organisatie die over de tijdlijn waakt, de TVA. De glijdende, ongrijpbare toon van de theremin past bij een personage dat je nooit helemaal kunt vertrouwen. In het stuk <em>TVA</em> hoor je de theremin naast een plechtig koor, synthesizers en een groot orkest.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d3/88/22/d38822a5-d176-6891-d6a1-a2b3d29a5563/mzaf_14762951033478497630.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/27/9f/7b/279f7bc5-2612-9c31-7b23-e50368d21242/21UMGIM56799.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Natalie Holt</span><br>Serie: Loki (2021)</div></div>Orkest, koor en theremin: een oud elektronisch instrument voor een nieuwe god.</aside>
+  <p>Een jaar later schreef Holt de muziek voor <em>Obi-Wan Kenobi</em> (2022). Daarmee werd ze de eerste vrouw die de muziek voor een live-action Star Wars-productie schreef. John Williams, toen negentig jaar oud, leverde voor die serie het hoofdthema voor het titelpersonage. Holt schreef de rest van de score.</p>
+  <p>In deze series klinkt veel tegelijk: de theremin uit de Hollywoodfilms van de jaren veertig, de synthesizers uit de jaren tachtig, het grote orkest van de blockbuster, het leidmotief uit de opera en de korte, herkenbare tune van de vroege televisie. De componisten die dat maken, werken zonder moeite voor film, serie en game. De grenzen tussen die media zijn verdwenen, en dezelfde technieken en makers gaan overal mee.</p>
+
+</section>
+
+<section class="back">
+  <h4 class="backhead">Begrippen</h4>
+  <dl class="terms">
+    <div><dt>Tv-tune</dt><dd>Korte herkenningsmelodie van een serie, die elke aflevering terugkomt.</dd></div>
+    <div><dt>Geluidschip</dt><dd>Chip in een spelcomputer die eenvoudige golfvormen opwekt.</dd></div>
+    <div><dt>Blokgolf</dt><dd>Eenvoudige golfvorm met een scherpe, 'piepende' klank, typisch voor 8-bit.</dd></div>
+    <div><dt>Arpeggio</dt><dd>Akkoord waarvan de tonen na elkaar klinken in plaats van tegelijk.</dd></div>
+    <div><dt>FM-synthese</dt><dd>Klankopwekking waarbij de ene golf de frequentie van een andere moduleert; typisch voor de Mega Drive.</dd></div>
+    <div><dt>Chiptune</dt><dd>Muziek gemaakt met (of in de stijl van) de geluidschips van oude computers en consoles.</dd></div>
+    <div><dt>JRPG</dt><dd>Japans rollenspel, zoals Dragon Quest en Final Fantasy.</dd></div>
+    <div><dt>Interactieve muziek</dt><dd>Gamemuziek die verandert door wat de speler doet.</dd></div>
+    <div><dt>Gregoriaans</dt><dd>Eenstemmige, onbegeleide kerkzang uit de middeleeuwen.</dd></div>
+    <div><dt>Prestige-tv</dt><dd>Series met het budget en de ambitie van speelfilms, vanaf HBO rond 2000.</dd></div>
+    <div><dt>Ostinato</dt><dd>Kort muzikaal figuur dat steeds wordt herhaald.</dd></div>
+    <div><dt>Theremin</dt><dd>Elektronisch instrument dat je bespeelt zonder het aan te raken, met glijdende tonen.</dd></div>
+  </dl>
+  <h4 class="backhead">Verder luisteren en kijken</h4>
+  <div class="links">
+    <div class="link-card"><div class="qr" data-url="https://sorock.nl/film/mixtapes.html"></div><div><span class="tag">SPOTIFY · PLAYLIST</span><p>Alle fragmenten uit dit hoofdstuk, in de volgorde van de tekst. Scan de code met je telefoon.</p></div></div>
+    <div class="link-card lesson"><div><span class="tag">LESSONUP · LES</span><p><strong>Filmmuziek · Mixtape 8: Druk op start</strong></p><p>De les bij dit hoofdstuk, met beeld en fragmenten.</p></div></div>
+  </div>
+  <footer class="colofon"><p>Foto's: Wikimedia Commons (zie fotoverantwoording). Platenhoezen: Apple Music.</p><p>Filmmuziek · Een verborgen kant van School of Rock · ArtEZ University of the Arts</p></footer>
+</section>
+<nav class="pager" aria-label="Andere mixtapes"><a href="07.html"><small>← Mixtape 7</small><b>Groter dan het doek</b></a><span></span></nav><a class="mt-step prev" href="07.html" rel="prev" aria-label="Vorige: Mixtape 7, Groter dan het doek"><i aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></i><span><small>Mixtape 7</small>Groter dan het doek</span></a>
+</div><footer class="sitefoot"><div class="wrap"><p>Filmmuziek · Een verborgen kant van School of Rock · Jan-Wolter Smit · ArtEZ University of the Arts</p></div></footer><script src="../../assets/player.js"></script><script src="../../assets/anchor-notes.js"></script><script src="../../assets/chapter.js"></script><script>document.querySelectorAll('.qr[data-url]').forEach(function(el){if(typeof QRCode==='undefined'){return;}new QRCode(el,{text:el.dataset.url,width:256,height:256,colorDark:'#1C1B19',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.M});});</script></body></html>

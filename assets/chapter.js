@@ -50,7 +50,9 @@
       const lines = rec ? rec.innerText.split('\n').map(s => s.trim()).filter(Boolean) : [];
       const artist = who.textContent.trim();
       const title = (lines.find(l => l !== artist) || '').replace(/\s*\(\d{4}\)\s*$/, '');
-      let t = byKey.get(key(artist, title));
+      // filmhoofdstukken: het fragment staat direct op de tip (data-audio)
+      const img0 = rec && rec.querySelector('img');
+      let t = note.dataset.audio ? { audio: note.dataset.audio, artist, title, cover: img0 ? img0.src : '' } : byKey.get(key(artist, title));
       if (!t) { const cands = byArtist.get(SOR.norm(artist)) || []; t = cands.find(c => SOR.norm(c.title).startsWith(SOR.norm(title).slice(0, 6))) || (cands.length === 1 ? cands[0] : null); }
       if (!t) t = byTip.get(SOR.norm(artist) + '|' + SOR.norm(title));
       if (!t) return;
