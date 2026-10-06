@@ -11,7 +11,8 @@
   row.className = 'deck-row';
   row.innerHTML = '<span class="lbl">Voorlezen</span><button type="button" class="btn solid tts-start"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>Lees dit hoofdstuk voor</button>';
   const lessonRow = deck.querySelector('.deck-toggle[data-target="lu"]')?.closest('.deck-row');
-  deck.insertBefore(row, lessonRow ? lessonRow.nextSibling : deck.firstChild);
+  // De grote knop staat niet meer bovenaan: voorlezen start via het knopje bij een alinea.
+  void lessonRow;
   const startBtn = row.querySelector('.tts-start');
   if (!synth) { startBtn.disabled = true; startBtn.title = 'Deze browser kan niet voorlezen.'; return; }
 
@@ -256,14 +257,6 @@
 
   startBtn.addEventListener('click', () => { if (window.SOR && SOR.pause) try { SOR.pause(); } catch (e) {} const s = savedIndex(); play(s > 0 ? s : firstVisible()); });
   startLabel();
-  // zwevende knop: voorlezen vanaf wat je nu ziet, zonder terug te scrollen
-  const fab = document.createElement('button');
-  fab.type = 'button'; fab.className = 'tts-fab';
-  fab.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg><span>Voorlezen vanaf hier</span>';
-  document.body.appendChild(fab);
-  fab.addEventListener('click', () => play(firstVisible()));
-  const deckObs = new IntersectionObserver(es => { fab.classList.toggle('show', !es[0].isIntersecting); });
-  deckObs.observe(deck);
   $('.tts-play').addEventListener('click', () => (playing ? pause() : play(idx)));
   $('.tts-prev').addEventListener('click', () => play(idx - 1));
   $('.tts-next').addEventListener('click', () => play(idx + 1));
