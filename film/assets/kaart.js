@@ -2,10 +2,11 @@
 (async function () {
   const SOR = window.SOR;
   const $ = s => document.querySelector(s);
-  const [data, routes, world] = await Promise.all([
+  const [data, routes, world, titels] = await Promise.all([
     SOR.load('data/kaart.json'),
     SOR.load('data/routes.json').catch(() => []),
-    fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(r => r.json()).catch(() => null)
+    fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(r => r.json()).catch(() => null),
+    SOR.load('data/film-titels.json').catch(() => ({})) // Engelse titels van anderstalige films, om op te zoeken
   ]);
 
   const fams = data.families;
@@ -59,6 +60,8 @@
     const k = filmKey(f); if (!k) return;
     const e = filmIdx.get(k) || { label: String(f).replace(/\s*\(tv\)\s*$/i, ''), nodes: [] };
     if (!e.nodes.includes(g)) e.nodes.push(g); filmIdx.set(k, e);
+    const base = String(f).replace(/\s*\((tv|\d{4}[^)]*)\)\s*$/i, ''), en = titels[base];
+    if (en) { const ka = filmKey(en); const a = filmIdx.get(ka) || { label: en + ' (' + base + ')', nodes: [] }; if (!a.nodes.includes(g)) a.nodes.push(g); filmIdx.set(ka, a); }
   }));
   const filmLabel = e => 'Film: ' + e.label;
   dl.innerHTML = [...G.slice().sort((a, b) => a.name.localeCompare(b.name, 'nl')).map(g => `<option value="${g.name}">`),
@@ -66,7 +69,7 @@
   $('#k-search').addEventListener('change', e => {
     const raw = e.target.value; const v = SOR.norm(raw.replace(/^Film:\s*/i, ''));
     let g = /^Film:/i.test(raw) ? null : (G.find(x => SOR.norm(x.name) === v) || null);
-    if (!g) { const f = filmIdx.get(filmKey(raw.replace(/^Film:\s*/i, ''))) || [...filmIdx.entries()].find(([k]) => k.includes(v))?.[1]; if (f) g = f.nodes.find(isComp) || f.nodes[0]; }
+    if (!g) { const f = [...filmIdx.values()].find(e => filmLabel(e) === raw) || filmIdx.get(filmKey(raw.replace(/^Film:\s*/i, ''))) || [...filmIdx.entries()].find(([k]) => k.includes(v))?.[1]; if (f) g = f.nodes.find(isComp) || f.nodes[0]; }
     if (!g) g = G.find(x => SOR.norm(x.name).includes(v));
     if (g) { if (isComp(g) && !state.comps) { compBox.checked = true; compBox.dispatchEvent(new Event('change')); } select(g, true); e.target.value = ''; }
   });

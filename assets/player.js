@@ -80,14 +80,15 @@
   }
   audio.addEventListener('play', paint);
   audio.addEventListener('pause', () => { savePos(true); paint(); });
-  // Automix voor fragmenten (niet het luisterboek): 1,2 seconde zacht in, 2,5 seconde zacht uit,
+  // Automix voor fragmenten (niet het luisterboek): 2,5 seconde zacht in, 4 seconde zacht uit,
   // en bij een wissel loopt het vorige fragment nog even door terwijl het volgende opkomt (crossfade).
-  const FADE = 2.5, FADE_IN = 1.2, XFADE = 1.6;
+  const FADE = 4, FADE_IN = 2.5, XFADE = 3;
+  const ease = x => Math.sin(Math.max(0, Math.min(1, x)) * Math.PI / 2); // vloeiende curve (gelijke luidheid bij overlap)
   function fade() {
     const frag = current && !current.book && isFinite(audio.duration) && audio.duration > FADE * 2;
     const rest = frag ? audio.duration - audio.currentTime : Infinity;
-    const vin = current && !current.book ? Math.min(1, audio.currentTime / FADE_IN) : 1;
-    const v = Math.min(vin, rest < FADE ? Math.max(0, rest / FADE) : 1);
+    const vin = current && !current.book ? ease(audio.currentTime / FADE_IN) : 1;
+    const v = Math.min(vin, rest < FADE ? ease(rest / FADE) : 1);
     if (Math.abs(audio.volume - v) > .01) audio.volume = v;
   }
   let tail = null;
@@ -99,7 +100,7 @@
     t.addEventListener('loadedmetadata', () => { try { t.currentTime = from; } catch (e) {} }, { once: true });
     t.play().catch(() => {});
     const t0 = Date.now();
-    const iv = setInterval(() => { const k = Math.min(1, (Date.now() - t0) / (XFADE * 1000)); if (tail !== t || k >= 1 || t.paused) { clearInterval(iv); t.pause(); if (tail === t) tail = null; return; } t.volume = Math.max(0, v0 * (1 - k)); }, 40);
+    const iv = setInterval(() => { const k = Math.min(1, (Date.now() - t0) / (XFADE * 1000)); if (tail !== t || k >= 1 || t.paused) { clearInterval(iv); t.pause(); if (tail === t) tail = null; return; } t.volume = Math.max(0, v0 * ease(1 - k)); }, 40);
   }
   function fadeLoop() { fade(); if (!audio.paused) requestAnimationFrame(fadeLoop); }
   audio.addEventListener('play', () => requestAnimationFrame(fadeLoop));
