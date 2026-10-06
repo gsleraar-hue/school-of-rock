@@ -113,6 +113,6 @@
     if (document.querySelector('.lu-modal:not([hidden])') || document.fullscreenElement) return;
     const sel = e.key === 'ArrowLeft' ? '.mt-step.prev' : e.key === 'ArrowRight' ? '.mt-step.next' : '';
     const a = sel && document.querySelector(sel);
-    if (a) location.href = a.href;
+    if (a) a.click(); // via de link, zodat de speler doorspeelt
   });
 })();

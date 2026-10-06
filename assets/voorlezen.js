@@ -268,4 +268,5 @@
   book.addEventListener('click', e => { if (bar.hidden || e.target.closest('a, button, .rec, input, select, audio') || (window.getSelection && String(window.getSelection()).length)) return; const p = e.target.closest('.flow > p, .flow > .head, aside.side-note'); if (!p) return; const list = collect(); const i = list.findIndex(it => it.el === p || it.el.contains(p)); if (i >= 0) play(i); });
   document.addEventListener('keydown', e => { if (bar.hidden || e.target.closest('input, select, textarea')) return; if (e.key === ' ' && !e.target.closest('button')) { e.preventDefault(); playing ? pause() : play(idx); } });
   window.addEventListener('beforeunload', () => synth.cancel());
+  document.addEventListener('sor:leave', stop); // naar een andere pagina binnen de site
 })();

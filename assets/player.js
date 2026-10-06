@@ -1,6 +1,7 @@
 /* Gedeelde speler: één fragment tegelijk, met een balk onderin het scherm. */
 (function () {
-  const ROOT = document.querySelector('meta[name="sor-root"]')?.content || '.';
+  if (window.SOR) return; // al geladen: de speler blijft staan bij navigeren binnen de site
+  const root = () => document.querySelector('meta[name="sor-root"]')?.content || '.';
   const slug = s => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/&/g, ' en ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const norm = s => slug(s).replace(/-/g, '');
 
@@ -11,6 +12,7 @@
 
   const bar = document.createElement('div');
   bar.className = 'sor-player';
+  bar.setAttribute('data-persist', '');
   bar.hidden = true;
   bar.innerHTML = `
     <button class="sp-toggle" type="button" aria-label="Pauzeer"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-pause" d="M7 5h3v14H7zM14 5h3v14h-3z"/><path class="i-play" d="M8 5l11 7-11 7z"/></svg></button>
@@ -19,6 +21,7 @@
     <span class="sp-tag mono">fragment · 30 s</span>
     <button class="sp-close" type="button" aria-label="Sluit speler">×</button>`;
   const css = document.createElement('style');
+  css.setAttribute('data-persist', '');
   css.textContent = `
     .sor-player{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:80;width:min(560px,calc(100% - 24px));display:flex;align-items:center;gap:12px;padding:8px 10px 8px 8px;background:#1C1B19;color:#fff;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.35);border-left:5px solid #F2D500;font-family:Inter,Segoe UI,Arial,sans-serif}
     .sor-player[hidden]{display:none}
@@ -38,7 +41,7 @@
     .sor-play svg{width:12px;height:12px;fill:currentColor}
     .sor-play.on{background:#1C1B19;color:#F2D500}`;
   document.head.appendChild(css);
-  document.addEventListener('DOMContentLoaded', () => document.body.appendChild(bar));
+  if (document.body) document.body.appendChild(bar); else document.addEventListener('DOMContentLoaded', () => document.body.appendChild(bar));
 
   const $ = s => bar.querySelector(s);
   function paint() {
@@ -55,7 +58,7 @@
   });
 
   const SOR = window.SOR = {
-    slug, norm, root: ROOT,
+    slug, norm, get root() { return root(); },
     play(track) {
       if (!track || !track.audio) return;
       if (current && current.audio === track.audio) { audio.paused ? audio.play() : audio.pause(); return; }
@@ -72,6 +75,6 @@
     onChange(fn) { listeners.add(fn); return () => listeners.delete(fn); },
     playIcon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>',
     pauseIcon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg>',
-    load(path) { return fetch(ROOT + '/' + path).then(r => r.json()); }
+    load(path) { return fetch(root() + '/' + path).then(r => r.json()); }
   };
 })();
