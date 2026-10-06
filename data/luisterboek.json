@@ -1,15 +1,80 @@
 [
- {"n": 1, "title": "Het ontstaan van popmuziek", "file": "audio/mixtape-01.mp3", "duration": 2899},
- {"n": 2, "title": "Jeugdculturen 1950-1980", "file": "audio/mixtape-02.mp3", "duration": 2358},
- {"n": 3, "title": "The Beatles", "file": "audio/mixtape-03.mp3", "duration": 3950},
- {"n": 4, "title": "Toen rock nog pop was", "file": "audio/mixtape-04.mp3", "duration": 2830},
- {"n": 5, "title": "Jazz Festival", "file": "audio/mixtape-05.mp3", "duration": 2559},
- {"n": 6, "title": "Fear of a Black Planet", "file": "audio/mixtape-06.mp3", "duration": 3085},
- {"n": 7, "title": "De jaren 80", "file": "audio/mixtape-07.mp3", "duration": 4007},
- {"n": 8, "title": "Elektronische muziek", "file": "audio/mixtape-08.mp3", "duration": 1799},
- {"n": 9, "title": "Het instrument", "file": "audio/mixtape-09.mp3", "duration": 2838},
- {"n": 10, "title": "Vrouwen in de popmuziek", "file": "audio/mixtape-10.mp3", "duration": 2492},
- {"n": 11, "title": "Nederpop", "file": "audio/mixtape-11.mp3", "duration": 2676},
- {"n": 12, "title": "De hitfabriek", "file": "audio/mixtape-12.mp3", "duration": 2771},
- {"n": 13, "title": "Van cassette tot cloud", "file": "audio/mixtape-13.mp3", "duration": 2221}
+ {
+  "n": 1,
+  "title": "Het ontstaan van popmuziek",
+  "file": "audio/mixtape-01.mp3",
+  "duration": 2900
+ },
+ {
+  "n": 2,
+  "title": "Jeugdculturen 1950-1980",
+  "file": "audio/mixtape-02.mp3",
+  "duration": 2357
+ },
+ {
+  "n": 3,
+  "title": "The Beatles",
+  "file": "audio/mixtape-03.mp3",
+  "duration": 3950
+ },
+ {
+  "n": 4,
+  "title": "Toen rock nog pop was",
+  "file": "audio/mixtape-04.mp3",
+  "duration": 2828
+ },
+ {
+  "n": 5,
+  "title": "Jazz Festival",
+  "file": "audio/mixtape-05.mp3",
+  "duration": 2566
+ },
+ {
+  "n": 6,
+  "title": "Fear of a Black Planet",
+  "file": "audio/mixtape-06.mp3",
+  "duration": 3085
+ },
+ {
+  "n": 7,
+  "title": "De jaren 80",
+  "file": "audio/mixtape-07.mp3",
+  "duration": 4002
+ },
+ {
+  "n": 8,
+  "title": "Elektronische muziek",
+  "file": "audio/mixtape-08.mp3",
+  "duration": 1798
+ },
+ {
+  "n": 9,
+  "title": "Het instrument",
+  "file": "audio/mixtape-09.mp3",
+  "duration": 2834
+ },
+ {
+  "n": 10,
+  "title": "Vrouwen in de popmuziek",
+  "file": "audio/mixtape-10.mp3",
+  "duration": 2522
+ },
+ {
+  "n": 11,
+  "title": "Nederpop",
+  "file": "audio/mixtape-11.mp3",
+  "duration": 2676
+ },
+ {
+  "n": 12,
+  "title": "De hitfabriek",
+  "file": "audio/mixtape-12.mp3",
+  "duration": 2770
+ },
+ {
+  "n": 13,
+  "title": "Van cassette tot cloud",
+  "file": "audio/mixtape-13.mp3",
+  "duration": 2221
+ }
 ]
