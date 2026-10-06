@@ -1,0 +1,3 @@
+/* Filmmuziekkaart: eigen accentkleuren (bioscoopgoud en rood fluweel) */
+:root { --yellow: #E9B44C; --red: #B8323E; --red-deep: #8E2430; }
+.sitenav .brand img { width: 28px; height: 28px; }

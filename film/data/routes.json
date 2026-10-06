@@ -1,0 +1,8 @@
+[
+ { "id": "hollywood-orkest", "title": "Het Hollywood-orkest: van Steiner tot Zimmer", "steps": ["stomme-symfonisch", "steiner", "korngold", "golden-age", "herrmann", "goldsmith", "symf-terugkeer", "williams", "horner", "remote-control", "zimmer", "superhelden"] },
+ { "id": "elektronica", "title": "Elektronica in de film: van theremin tot Reznor", "steps": ["elektro-pioniers", "barrons", "derbyshire", "carlos", "vroege-synth", "tangerine-dream", "vangelis", "synth-disco", "moroder", "horror-synth", "carpenter", "synthwave", "reznor-ross"] },
+ { "id": "europa", "title": "Europa: eigen klanken naast Hollywood", "steps": ["sovjet", "prokofjev", "frans-poetisch", "neorealisme", "rota", "spaghettiwestern", "morricone", "nouvelle-vague", "delerue", "legrand", "europese-arthouse", "preisner", "nl-vl"] },
+ { "id": "azie", "title": "Azië: van Bombay tot Seoul", "steps": ["india-gouden", "naushad", "rd-burman", "rahman", "japan-gouden", "hayasaka", "takemitsu", "anime", "kanno", "ghibli", "hisaishi", "chinese-cinema", "korea", "jung-jae-il"] },
+ { "id": "minder-is-meer", "title": "Minder is meer: modernisme, minimal en ambient", "steps": ["modernisme", "rosenman", "minimal", "glass", "nyman", "ambient-drone", "johannsson", "hildur", "mica-levi", "greenwood"] },
+ { "id": "games", "title": "Van piepjes tot orkest: muziek voor games", "steps": ["chiptune", "kondo", "jrpg", "sugiyama", "uematsu", "shimomura", "westerse-games", "odonnell-salvatori", "wintory", "lena-raine"] }
+]
