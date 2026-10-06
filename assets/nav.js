@@ -102,18 +102,20 @@
     });
   }
 
-  // Easter egg: vijf keer snel op het cassettelogo klikken opent de verborgen filmkaart.
+  // Easter egg: vijf keer snel op het logo klikken wisselt tussen School of Rock en De Droomfabriek (sorock.nl/film/).
   let egg = [];
   document.addEventListener('click', e => {
     const b = e.target.closest('.sitenav .brand');
-    if (!b || /\/film\//.test(location.pathname)) return;
+    if (!b) return;
     const now = Date.now();
     egg = egg.filter(t => now - t < 3000); egg.push(now);
     if (egg.length < 5) return;
     egg = []; e.preventDefault(); e.stopImmediatePropagation();
     const img = b.querySelector('img'); if (img && img.animate) img.animate([{ transform: 'rotate(0)' }, { transform: 'rotate(360deg)' }], { duration: 600, easing: 'ease-in-out' });
     const root = (document.querySelector('meta[name="sor-root"]') || {}).content || '.';
-    setTimeout(() => go(new URL(root + '/film/index.html', location.href).href, true), 500);
+    const inFilm = /\/film\//.test(location.pathname);
+    const target = inFilm ? new URL(location.pathname.replace(/\/film\/.*$/, '/index.html'), location.href) : new URL(root + '/film/index.html', location.href);
+    setTimeout(() => go(target.href, true), 500);
   }, true);
 
   // Vanaf hier hoort elke luisteraar op window/document bij de pagina (de eigen luisteraars hierboven en die van de speler niet).
