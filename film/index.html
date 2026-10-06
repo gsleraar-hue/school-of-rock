@@ -1,68 +1,108 @@
-<!doctype html>
-<html lang="nl">
-<head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="sor-root" content=".">
-<title>Filmmuziekkaart · stromingen en componisten</title>
-<meta name="description" content="Interactieve kaart van de geschiedenis van de filmmuziek: stromingen en componisten, als stamboom en op de wereldkaart, met luisterfragmenten.">
-<link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap">
-<link rel="stylesheet" href="../assets/site.css">
-<link rel="stylesheet" href="./assets/kaart.css">
-<link rel="stylesheet" href="./assets/film.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
-<script src="../assets/player.js"></script><script src="../assets/nav.js"></script>
-</head>
-<body class="kaart">
-<header class="sitenav">
-  <a class="brand" href="./index.html"><img src="./assets/icon.svg" alt=""><span>Filmmuziek</span></a>
-  <nav aria-label="Hoofdmenu"><a href="../index.html">← School of Rock</a>
-    <a href="./index.html" aria-current="page">Kaart</a>
-    <a href="./mixtapes.html">Mixtapes</a>
-    <a href="./over.html">Over</a>
-  </nav>
-</header>
-<div class="k-app">
-  <div class="k-top">
-    <div class="k-title"><h1>Filmmuziekkaart</h1><p>Klik een stroming · volg de lijnen · speel af</p></div>
-    <div class="k-seg" role="group" aria-label="Weergave"><button type="button" data-mode="tree" aria-pressed="true">Stamboom</button><button type="button" data-mode="world" aria-pressed="false">Wereld</button></div>
-    <label class="k-field">Route <select id="k-path"></select></label>
-    <label class="k-field">Zoek <input id="k-search" list="k-genres" placeholder="Stroming of componist, bv. Zimmer" autocomplete="off"><datalist id="k-genres"></datalist></label>
-    <label class="k-comps"><input type="checkbox" id="k-comps" checked> Componisten</label>
-    <span class="k-spacer"></span>
-    <button class="k-help" type="button">Uitleg</button>
-  </div>
-  <div class="k-fams" aria-label="Families"></div>
-  <div class="k-main">
-    <div class="k-stage">
-      <div class="k-yearbig" aria-hidden="true"></div>
-      <div class="k-zoom"><button id="k-zin" type="button" aria-label="Inzoomen">+</button><button id="k-zout" type="button" aria-label="Uitzoomen">−</button><button id="k-fit" type="button" aria-label="Alles tonen">⤢</button></div>
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content=".."><title>De Droomfabriek · Filmmuziek in mixtapes</title><link rel="icon" href="../film/assets/icon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="../assets/site.css"><style>
+  .hero { position: relative; overflow: hidden; background: var(--ink); color: var(--white); min-height: min(78vh, 680px); display: flex; align-items: flex-end; padding: 120px 0 56px; }
+  .hero .mosaic { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(4, 1fr); grid-auto-flow: dense; }
+  .hero .mosaic i { background-size: cover; background-position: center; filter: grayscale(1) contrast(1.1); }
+  .hero .mosaic i:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+  .hero .mosaic i:nth-child(4) { grid-row: span 2; }
+  .hero .mosaic i:nth-child(8), .hero .mosaic i:nth-child(11), .hero .mosaic i:nth-child(13) { grid-column: span 2; }
+  .hero .wash { position: absolute; inset: 0; background-color: rgba(214,58,49,.78); }
+  .hero .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 60%; background: linear-gradient(to top, rgba(28,27,25,.62), rgba(28,27,25,0)); }
+  .hero .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 14px; background: var(--yellow); z-index: 1; }
+  .hero .top-kicker { position: absolute; top: 28px; left: max(36px, calc((100vw - 1180px) / 2 + 20px)); font: 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--yellow); margin: 0; z-index: 1; }
+  .hero .cassette { position: absolute; top: 18px; right: 22px; width: clamp(80px, 10vw, 128px); height: auto; z-index: 1; }
+  .hero .wrap { position: relative; z-index: 1; width: 100%; }
+  .hero h1 { font: 700 clamp(56px, 11vw, 132px)/.9 var(--display); margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+  .hero .sub { font: 500 clamp(20px, 3vw, 28px)/1.2 var(--display); color: var(--yellow); margin: 18px 0 0; }
+  .hero .by { font: 13px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; margin: 22px 0 0; color: #FFE9E7; }
+  .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .hero .btn { color: var(--white); }
+  @media (max-width: 820px) { .hero .mosaic { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, 1fr); } .hero .mosaic i { grid-column: auto !important; grid-row: auto !important; } .hero .mosaic i:nth-child(1) { grid-column: span 2 !important; grid-row: span 2 !important; } .hero .mosaic i:nth-child(n+9) { display: none; } .hero { min-height: 0; padding-top: 110px; } .hero .top-kicker { left: 30px; max-width: 55%; } }
+  .ways { padding: 64px 0 8px; }
+  .ways .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+  .way { display: grid; gap: 10px; align-content: start; padding: 24px; background: var(--white); border-radius: 4px; text-decoration: none; border-top: 5px solid var(--ink); min-height: 220px; }
+  .way:hover { border-top-color: var(--red); }
+  .way .n { font: 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--red); }
+  .way h3 { font: 600 28px/1.05 var(--display); margin: 0; }
+  .way p { margin: 0; color: var(--ink-soft); }
+  .way .go { margin-top: auto; font: 600 14px/1 var(--display); text-transform: uppercase; letter-spacing: .04em; }
+  .way.map { background: var(--ink); color: var(--white); border-top-color: var(--yellow); }
+  .way.map p { color: #CFCAC0; }
+  .way.map .n { color: var(--yellow); }
+  @media (max-width: 820px) { .ways .grid { grid-template-columns: 1fr; } .way { min-height: 0; } }
+
+  .tapes { padding: 64px 0 0; }
+  .tapes .head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; }
+  .group-label { font: 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); margin: 36px 0 12px; padding-top: 10px; border-top: 1px solid var(--line); }
+  .shelf { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .shelf.five { grid-template-columns: repeat(3, 1fr); }
+  .shelf > .mt:first-child { grid-column: span 2; }
+  .shelf.one { grid-template-columns: 1fr; }
+  .shelf.one > .mt { grid-template-rows: none; grid-template-columns: 1.2fr 1fr; min-height: 260px; }
+  .shelf.one > .mt .body { align-content: center; padding: 28px 32px; }
+  .shelf.one > .mt .body b { font-size: 34px; }
+  .shelf > .mt:first-child:not(:only-child) .body b { font-size: 28px; }
+  @media (max-width: 900px) { .shelf, .shelf.five { grid-template-columns: 1fr 1fr; } .shelf > .mt:first-child { grid-column: span 2; } .shelf.one > .mt { grid-template-columns: 1fr; grid-template-rows: 170px auto; } }
+  @media (max-width: 560px) { .shelf, .shelf.five { grid-template-columns: 1fr; } .shelf > .mt:first-child { grid-column: auto; } }
+  .mt { position: relative; display: grid; grid-template-rows: 170px auto; background: var(--white); border-radius: 4px; overflow: hidden; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
+  .mt:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(28,27,25,.14); }
+  .mt .ph { position: relative; background-size: cover; background-position: center; }
+  .mt .ph::before { content: ""; position: absolute; inset: 0; background: rgba(214,58,49,.62); }
+  .mt .ph::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 8px; background: var(--yellow); }
+  .mt .num { position: absolute; right: 12px; bottom: -14px; font: 700 96px/1 var(--display); color: var(--yellow); text-shadow: 0 3px 14px rgba(0,0,0,.3); }
+  .mt .body { padding: 16px 18px 18px; display: grid; gap: 6px; }
+  .mt .body small { font: 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--red); }
+  .mt .body b { font: 600 22px/1.1 var(--display); }
+  .mt .body p { margin: 0; font-size: 14px; line-height: 1.45; color: var(--ink-soft); }
+</style><style>
+  :root { --red: #1E488C; --yellow: #E9B44C; }
+  .hero .wash { background-color: rgba(30,72,140,.78); }
+  .hero .shade { background: linear-gradient(to top, rgba(10,22,44,.62), rgba(10,22,44,0)); }
+  .hero .by { color: #DCE6F5; }
+  .hero .mosaic { grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); }
+  .hero .mosaic i { grid-column: auto !important; grid-row: auto !important; }
+  .hero .logo { position: absolute; top: 18px; right: 22px; width: clamp(80px, 10vw, 128px); height: auto; z-index: 1; }
+  .mt .ph::before { background: linear-gradient(100deg, rgba(12,30,70,.88), rgba(30,72,140,.62) 55%, rgba(233,180,76,.35)); }
+  .shelf.four { grid-template-columns: repeat(4, 1fr); }
+  .shelf.four > .mt:first-child { grid-column: auto; }
+  .shelf.four > .mt:first-child .body b { font-size: 22px; }
+  .mt.soon { opacity: .55; }
+  @media (max-width: 900px) { .shelf.four { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .shelf.four { grid-template-columns: 1fr; } }
+</style><script src="../assets/player.js"></script><script src="../assets/nav.js"></script></head><body><header class="sitenav"><a class="brand" href="./index.html"><img src="./assets/icon.svg" alt=""><span>De Droomfabriek</span></a><nav aria-label="Hoofdmenu"><a href="./../index.html">← School of Rock</a><a href="./index.html" aria-current="page">Mixtapes</a><a href="./kaart.html">Kaart</a><a href="./over.html">Over</a></nav></header><main><section class="hero">
+  <div class="mosaic" aria-hidden="true"><i style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Boris_Bilinski_%281900-1948%29_Plakat_f%C3%BCr_den_Film_Metropolis_%281%29.jpg/960px-Boris_Bilinski_%281900-1948%29_Plakat_f%C3%BCr_den_Film_Metropolis_%281%29.jpg')"></i><i style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/8/83/King_Kong_Fay_Wray_1933.jpg')"></i><i style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/6/6e/Ingressostorico_cinecitta.jpg')"></i><i style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Singin%27_in_the_Rain_trailer_screenshot.jpg/960px-Singin%27_in_the_Rain_trailer_screenshot.jpg')"></i><i style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/e/e6/Moog_Modular_55_img2.jpg')"></i><i style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Raj_Mandir_Cinema%2C_Jaipur_01.jpg/960px-Raj_Mandir_Cinema%2C_Jaipur_01.jpg')"></i><i style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Mickey_Mouse_-_Steamboat_Willie_%281928%29.jpg/960px-Mickey_Mouse_-_Steamboat_Willie_%281928%29.jpg')"></i><i style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/SW_Testbild_auf_Philips_TD1410U.jpg/960px-SW_Testbild_auf_Philips_TD1410U.jpg')"></i></div>
+  <div class="wash"></div><div class="shade"></div><div class="bar"></div>
+  <p class="top-kicker">Filmmuziek · een verborgen kant van School of Rock</p>
+  <img class="logo" src="assets/icon.svg" alt="">
+  <div class="wrap">
+    <h1>De Droomfabriek</h1>
+    <p class="sub">De geschiedenis van de filmmuziek in mixtapes</p>
+    <p class="by">Jan-Wolter Smit</p>
+    <div class="actions">
+      <a class="btn solid" href="kaart.html">Open de filmmuziekkaart</a>
+      <a class="btn" href="#mixtapes">Naar de mixtapes</a>
     </div>
-    <aside class="k-panel" hidden aria-live="polite"></aside>
   </div>
-  <div class="k-time">
-    <button class="k-playbtn" id="k-play" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Speel de geschiedenis af</button>
-    <span class="k-year" id="k-yearlbl">nu</span>
-    <input id="k-range" type="range" step="1" aria-label="Jaar">
-    <div class="k-speed" role="group" aria-label="Tempo"><span>Tempo</span><button type="button" data-speed="0.5" aria-pressed="false">½×</button><button type="button" data-speed="1" aria-pressed="true">1×</button><button type="button" data-speed="2" aria-pressed="false">2×</button><button type="button" data-speed="4" aria-pressed="false">4×</button></div>
-    <label class="k-sound"><input type="checkbox" id="k-sound"> met geluid</label>
+</section>
+<section class="ways wrap" aria-labelledby="ways-h">
+  <p class="kicker">Zo werkt dit deel</p>
+  <h2 class="h-sec" id="ways-h">Lezen, luisteren, opzoeken</h2>
+  <p class="lede">Elke mixtape is een hoofdstuk over een periode of thema uit de filmmuziek. Bij elke luistertip hoort een fragment dat je meteen kunt afspelen.</p>
+  <div class="grid">
+    <a class="way" href="#mixtapes"><span class="n">01 · Lezen</span><h3>De mixtapes</h3><p>Acht hoofdstukken, van de pianist in de stomme-filmzaal tot de muziek van games en series.</p><span class="go">Kies een mixtape →</span></a>
+    <a class="way map" href="kaart.html"><span class="n">02 · Luisteren</span><h3>De filmmuziekkaart</h3><p>Stromingen en componisten als stamboom en op de wereldkaart, met fragmenten bij elke knoop.</p><span class="go">Open de kaart →</span></a>
+    <a class="way" href="kaart.html"><span class="n">03 · Opzoeken</span><h3>Zoek een film</h3><p>Typ in de kaart een film, componist of stroming en spring naar de plek waar die thuishoort.</p><span class="go">Zoek in de kaart →</span></a>
   </div>
-  <div class="k-intro" hidden role="dialog" aria-labelledby="k-intro-h">
-    <p class="kicker">Filmmuziekkaart</p>
-    <h2 id="k-intro-h">Honderddertig jaar filmmuziek op één kaart</h2>
-    <ol>
-      <li><b>Klik een stroming</b> om erover te lezen en fragmenten te horen. De lijnen laten zien waar ze vandaan komt en wat eruit voortkwam.</li>
-      <li><b>Componisten</b> zijn de kleine punten. Gestippelde lijnen tonen wie door wie werd beïnvloed. Zet ze uit voor een rustiger beeld.</li>
-      <li><b>Stamboom of wereld</b>: alles langs de tijd, of op de plek waar het ontstond.</li>
-      <li><b>Speel de geschiedenis af</b> en zie stromingen en componisten één voor één verschijnen. Zet het geluid aan om ze ook te horen.</li>
-    </ol>
-    <button class="btn solid" type="button" data-close-intro>Begin</button>
-  </div>
-</div>
-<script src="./assets/kaart.js"></script>
-</body>
-</html>
+</section>
+<section class="tapes wrap" id="mixtapes" aria-labelledby="tapes-h">
+  <div class="head"><div><p class="kicker">De reader</p><h2 class="h-sec" id="tapes-h">De mixtapes</h2></div></div>
+  <p class="group-label">Van stomme film tot popsong</p>
+  <div class="shelf four"><a class="mt" href="mixtape/01.html"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Boris_Bilinski_%281900-1948%29_Plakat_f%C3%BCr_den_Film_Metropolis_%281%29.jpg/960px-Boris_Bilinski_%281900-1948%29_Plakat_f%C3%BCr_den_Film_Metropolis_%281%29.jpg')"><span class="num">01</span></div><div class="body"><small>Mixtape 1</small><b>Nooit stil</b><p>Stomme film en de eerste klanken: van bioscooppianist tot geluidsfilm, ca. 1895–1935.</p></div></a>
+<a class="mt" href="mixtape/02.html"><div class="ph" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/8/83/King_Kong_Fay_Wray_1933.jpg')"><span class="num">02</span></div><div class="body"><small>Mixtape 2</small><b>Het studio-orkest</b><p>Hollywood Golden Age: het studio-orkest, van King Kong tot Taxi Driver, ca. 1933–1976.</p></div></a>
+<a class="mt" href="mixtape/03.html"><div class="ph" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/6/6e/Ingressostorico_cinecitta.jpg')"><span class="num">03</span></div><div class="body"><small>Mixtape 3</small><b>Europa in close-up</b><p>Europa en de auteursfilm: concertcomponisten, nieuwe golven en vaste duo's van regisseur en componist, ca. 1936–2022.</p></div></a>
+<a class="mt" href="mixtape/04.html"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Singin%27_in_the_Rain_trailer_screenshot.jpg/960px-Singin%27_in_the_Rain_trailer_screenshot.jpg')"><span class="num">04</span></div><div class="body"><small>Mixtape 4</small><b>Songs uit de platenkast</b><p>Jazz, pop en de song in film: van Busby Berkeley tot Pulp Fiction, ca. 1929–1994.</p></div></a></div>
+  <p class="group-label">Nieuwe klanken, nieuwe schermen</p>
+  <div class="shelf four"><a class="mt" href="mixtape/05.html"><div class="ph" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/e/e6/Moog_Modular_55_img2.jpg')"><span class="num">05</span></div><div class="body"><small>Mixtape 5</small><b>Stroom en patroon</b><p>Elektronica, minimal en ambient: van theremin en tape tot drone en techno, ca. 1945–2024.</p></div></a>
+<a class="mt" href="mixtape/06.html"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Raj_Mandir_Cinema%2C_Jaipur_01.jpg/960px-Raj_Mandir_Cinema%2C_Jaipur_01.jpg')"><span class="num">06</span></div><div class="body"><small>Mixtape 6</small><b>Van Mumbai tot Mexico-Stad</b><p>Azië en wereldcinema: playbacksterren, raga's, Godzilla, anime en een nieuwe golf uit Seoul, ca. 1931–2021.</p></div></a>
+<a class="mt" href="mixtape/07.html"><div class="ph" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Mickey_Mouse_-_Steamboat_Willie_%281928%29.jpg/960px-Mickey_Mouse_-_Steamboat_Willie_%281928%29.jpg')"><span class="num">07</span></div><div class="body"><small>Mixtape 7</small><b>Groter dan het doek</b><p>Blockbuster en animatie: van Mickey Mouse en Star Wars tot Zimmer, superhelden en trailermuziek, ca. 1928–2024.</p></div></a>
+<a class="mt" href="mixtape/08.html"><div class="ph" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/SW_Testbild_auf_Philips_TD1410U.jpg/960px-SW_Testbild_auf_Philips_TD1410U.jpg')"><span class="num">08</span></div><div class="body"><small>Mixtape 8</small><b>Druk op start</b><p>Games, series en streaming: van tv-tune en 8-bit tot Halo, Game of Thrones en Loki, ca. 1959–2022.</p></div></a></div>
+</section></main><footer class="sitefoot"><div class="wrap"><p>De Droomfabriek · Filmmuziek, een verborgen kant van School of Rock · Jan-Wolter Smit · ArtEZ University of the Arts</p></div></footer></body></html>

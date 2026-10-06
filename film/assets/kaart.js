@@ -52,8 +52,24 @@
   sel.innerHTML = '<option value="">Alles</option>' + routes.map(r => `<option value="${r.id}">${r.title}</option>`).join('');
   if (!routes.length) sel.closest('label').hidden = true;
   const dl = $('#k-genres');
-  dl.innerHTML = G.slice().sort((a, b) => a.name.localeCompare(b.name, 'nl')).map(g => `<option value="${g.name}">`).join('');
-  $('#k-search').addEventListener('change', e => { const v = SOR.norm(e.target.value); const g = G.find(x => SOR.norm(x.name) === v) || G.find(x => SOR.norm(x.name).includes(v)); if (g) { if (isComp(g) && !state.comps) { compBox.checked = true; compBox.dispatchEvent(new Event('change')); } select(g, true); e.target.value = ''; } });
+  // zoeken op stroming, componist of film (films uit de lijst van de knoop en uit de fragmenten)
+  const filmKey = s => SOR.norm(String(s).replace(/\s*\((tv|\d{4}[^)]*)\)\s*$/i, ''));
+  const filmIdx = new Map(); // genormaliseerde titel → { label, nodes: [] }
+  G.forEach(g => [...(g.films || []), ...(g.tracks || []).map(t => t.film)].filter(Boolean).forEach(f => {
+    const k = filmKey(f); if (!k) return;
+    const e = filmIdx.get(k) || { label: String(f).replace(/\s*\(tv\)\s*$/i, ''), nodes: [] };
+    if (!e.nodes.includes(g)) e.nodes.push(g); filmIdx.set(k, e);
+  }));
+  const filmLabel = e => 'Film: ' + e.label;
+  dl.innerHTML = [...G.slice().sort((a, b) => a.name.localeCompare(b.name, 'nl')).map(g => `<option value="${g.name}">`),
+    ...[...filmIdx.values()].sort((a, b) => a.label.localeCompare(b.label, 'nl')).map(e => `<option value="${filmLabel(e).replace(/"/g, '&quot;')}">`)].join('');
+  $('#k-search').addEventListener('change', e => {
+    const raw = e.target.value; const v = SOR.norm(raw.replace(/^Film:\s*/i, ''));
+    let g = /^Film:/i.test(raw) ? null : (G.find(x => SOR.norm(x.name) === v) || null);
+    if (!g) { const f = filmIdx.get(filmKey(raw.replace(/^Film:\s*/i, ''))) || [...filmIdx.entries()].find(([k]) => k.includes(v))?.[1]; if (f) g = f.nodes.find(isComp) || f.nodes[0]; }
+    if (!g) g = G.find(x => SOR.norm(x.name).includes(v));
+    if (g) { if (isComp(g) && !state.comps) { compBox.checked = true; compBox.dispatchEvent(new Event('change')); } select(g, true); e.target.value = ''; }
+  });
 
   // ---------- SVG ----------
   const stage = $('.k-stage');
