@@ -80,7 +80,17 @@
   }
   audio.addEventListener('play', paint);
   audio.addEventListener('pause', () => { savePos(true); paint(); });
-  audio.addEventListener('timeupdate', () => { progress(); savePos(false); });
+  // Fragmenten (niet het luisterboek) lopen aan het eind in 2,5 seconde zacht uit.
+  const FADE = 2.5;
+  function fade() {
+    const frag = current && !current.book && isFinite(audio.duration) && audio.duration > FADE * 2;
+    const rest = frag ? audio.duration - audio.currentTime : Infinity;
+    const v = rest < FADE ? Math.max(0, rest / FADE) : 1;
+    if (Math.abs(audio.volume - v) > .01) audio.volume = v;
+  }
+  function fadeLoop() { fade(); if (!audio.paused) requestAnimationFrame(fadeLoop); }
+  audio.addEventListener('play', () => requestAnimationFrame(fadeLoop));
+  audio.addEventListener('timeupdate', () => { fade(); progress(); savePos(false); });
   audio.addEventListener('loadedmetadata', progress);
   audio.addEventListener('ended', () => {
     if (current && current.book) { const n = current.book; if (n < 13) { SOR.playBook(n + 1, 0); return; } store.set('boek', { n: 1, t: 0, at: Date.now() }); }
