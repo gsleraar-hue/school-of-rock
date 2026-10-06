@@ -4,7 +4,8 @@
   .fm-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-top: 28px; }
   .fm-card { display: grid; grid-template-rows: 150px auto; border: 1px solid #DDD8CE; border-radius: 4px; overflow: hidden; text-decoration: none; color: inherit; background: #fff; position: relative; }
   .fm-card:hover { border-color: #1C1B19; }
-  .fm-img { background: #1C1B19 center / cover no-repeat; filter: grayscale(.4) contrast(1.05); }
+  .fm-img { position: relative; background: #1C1B19 center / cover no-repeat; }
+  .fm-img::after { content: ""; position: absolute; inset: 0; background: rgba(30,72,140,.66); }
   .fm-txt { display: grid; gap: 6px; padding: 14px 16px 18px; }
   .fm-txt small { font: 11px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #1E488C; }
   .fm-txt b { font: 600 21px/1.15 "Oswald", sans-serif; }
