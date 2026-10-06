@@ -9,6 +9,31 @@
     if (!head.id) head.id = SOR.slug(h.textContent);
   });
 
+  // Luisterboek: dit hoofdstuk beluisteren (de speler loopt door als je verder klikt op de site).
+  (function () {
+    const deck = document.querySelector('.deck'); if (!deck || !SOR.playBook) return;
+    const row = document.createElement('div'); row.className = 'deck-row sor-book-row';
+    row.innerHTML = '<span class="lbl">Luisterboek</span><button type="button" class="btn solid sor-book-go">' + SOR.playIcon + '<span>Luister dit hoofdstuk</span></button><button type="button" class="btn ghost sor-book-start" hidden>Vanaf het begin</button><span class="sor-book-info mono"></span>';
+    const after = deck.querySelector('.deck-embed[data-name="sp"]') || deck.firstElementChild;
+    after.after(row);
+    const go = row.querySelector('.sor-book-go'), fromStart = row.querySelector('.sor-book-start'), info = row.querySelector('.sor-book-info');
+    let dur = 0;
+    function label() {
+      const pos = SOR.bookPosition(); const here = pos && pos.n === N && pos.t > 20 ? pos.t : 0;
+      const on = SOR.bookPlaying(N);
+      go.innerHTML = (on ? SOR.pauseIcon : SOR.playIcon) + '<span>' + (on ? 'Pauzeer' : here ? 'Verder luisteren' : 'Luister dit hoofdstuk') + '</span>';
+      fromStart.hidden = !here || on;
+      info.textContent = here && !on ? 'bij ' + SOR.fmt(here) + ' van ' + SOR.fmt(dur) : dur ? Math.round(dur / 60) + ' minuten' : '';
+    }
+    SOR.bookChapters().then(list => { const c = list.find(x => x.n === N); if (!c) { row.remove(); return; } dur = c.duration; label(); });
+    go.addEventListener('click', () => SOR.playBook(N));
+    fromStart.addEventListener('click', () => SOR.playBook(N, 0));
+    SOR.onChange(label);
+    const css = document.createElement('style');
+    css.textContent = '.sor-book-row .btn svg{width:14px;height:14px;fill:currentColor;margin-right:8px;vertical-align:-2px}.sor-book-row .sor-book-info{font-size:11px;letter-spacing:.04em;color:#9C978D;align-self:center}';
+    document.head.appendChild(css);
+  })();
+
   // Afspeelknoppen bij de luistertips.
   // tracks.json: fragmenten uit de les; tips-audio.json: aanvulling voor tips zonder fragment in de les
   Promise.all([SOR.load('data/tracks.json'), SOR.load('data/tips-audio.json').catch(() => [])]).then(([tracks, extra]) => {
