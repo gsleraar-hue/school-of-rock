@@ -40,5 +40,41 @@
   "title": "De jaren 80",
   "file": "audio/mixtape-07.mp3?v=3",
   "duration": 3591
+ },
+ {
+  "n": 8,
+  "title": "Elektronische muziek",
+  "file": "audio/mixtape-08.mp3?v=3",
+  "duration": 1634
+ },
+ {
+  "n": 9,
+  "title": "Het instrument",
+  "file": "audio/mixtape-09.mp3?v=3",
+  "duration": 2635
+ },
+ {
+  "n": 10,
+  "title": "Vrouwen in de popmuziek",
+  "file": "audio/mixtape-10.mp3?v=3",
+  "duration": 2278
+ },
+ {
+  "n": 11,
+  "title": "Nederpop",
+  "file": "audio/mixtape-11.mp3?v=3",
+  "duration": 2396
+ },
+ {
+  "n": 12,
+  "title": "De hitfabriek",
+  "file": "audio/mixtape-12.mp3?v=3",
+  "duration": 2523
+ },
+ {
+  "n": 13,
+  "title": "Van cassette tot cloud",
+  "file": "audio/mixtape-13.mp3?v=3",
+  "duration": 2022
  }
 ]
