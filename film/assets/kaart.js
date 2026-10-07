@@ -354,8 +354,8 @@
   function visible(d) { return state.fams.has(d.family) && d.year <= state.year && (!isComp(d) || state.comps); }
   function topVisible(t) { return t.pos <= topN && t.year <= state.year && (!t.family || state.fams.has(t.family)); }
   const topR = t => topN <= 10 ? 9 : topN <= 50 ? (t.pos <= 10 ? 7.5 : 6) : topN <= 100 ? (t.pos <= 10 ? 6.5 : 5) : (t.pos <= 10 ? 6 : t.pos <= 100 ? 4.5 : 3.5);
-  function setTopN(n, animate = true) {
-    topN = n; try { localStorage.setItem('film-kaart-topn', String(n)); } catch (e) {}
+  function setTopN(n, animate = true, keep = true) {
+    topN = n; if (keep) try { localStorage.setItem('film-kaart-topn', String(n)); } catch (e) {}
     document.querySelectorAll('[data-topn]').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.topn === n)));
     layoutTop();
     topSel.select('circle.dot').attr('r', topR);
@@ -443,9 +443,10 @@
   function renderTopPanel(t) {
     const f = t.family && famById.get(t.family);
     // fragment: de preview uit de lijst, anders een fragment van dezelfde film op de kaart
-    const own = t.preview ? [{ audio: t.preview, artist: t.artist, title: t.ptrack ? t.title + ' · ' + t.ptrack : t.title, cover: t.pcover || t.cover, year: t.year, film: t.title, label: t.ptrack || 'fragment' }] : [];
+    // drie fragmenten per film: NPO en iTunes uit de lijst, aangevuld met fragmenten van dezelfde film op de kaart
+    const own = (t.tracks || []).map(x => ({ audio: x.audio, artist: t.artist, title: t.title + ' · ' + x.label, cover: x.cover || t.cover, year: t.year, film: t.title, label: x.label, own: true }));
     const fromMap = t.comps.flatMap(id => (byId.get(id).tracks || []).filter(x => x.audio && x.film && filmKey(x.film) === filmKey(t.title)));
-    const tracks = [...own, ...fromMap].slice(0, 3);
+    const tracks = [...own, ...fromMap.filter(x => !own.some(o => o.audio === x.audio))].slice(0, 3);
     const move = !t.prev ? 'nieuw in de lijst' : t.prev === t.pos ? 'zelfde plek als vorig jaar' : `vorig jaar ${t.prev}`;
     const others = TOP.filter(x => x !== t && x.comps.some(id => t.comps.includes(id)));
     const kind = { serie: 'Tv-serie', game: 'Game', anders: '' }[t.kind] || 'Film';
@@ -460,7 +461,7 @@
         <p class="kp-rank"><b>${t.pos}</b><span>${move}</span></p>
         ${spark(t)}
         ${t.note ? `<p>${t.note}</p>` : ''}
-        ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((x, i) => `<div class="kp-track${x.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${x.title}">${SOR.playIcon}</button>${x.cover ? `<img src="${x.cover}" alt="" loading="lazy" onerror="this.remove()">` : ''}<div><b>${x.film || x.artist}</b><span>${x === own[0] ? t.artist + ' · ' + x.label : x.title}</span></div></div>`).join('')}</div></div>` : ''}
+        ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((x, i) => `<div class="kp-track${x.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${x.title}">${SOR.playIcon}</button>${x.cover ? `<img src="${x.cover}" alt="" loading="lazy" onerror="this.remove()">` : ''}<div><b>${x.own ? x.label : (x.film || x.artist)}</b><span>${x.own ? t.artist : x.title}</span></div></div>`).join('')}</div></div>` : ''}
         ${t.comps.length ? `<div><p class="kp-h">Op de kaart</p><div class="kp-links">${t.comps.map(chip).join('')}${f ? '' : ''}</div></div>` : `<p class="kp-listen">${t.artist} staat (nog) niet als componist op de kaart.</p>`}
         ${others.length ? `<div><p class="kp-h">Meer van ${t.comps.length === 1 ? byId.get(t.comps[0]).name : 'deze componisten'} in de lijst</p><div class="kp-tops">${others.map(topChip).join('')}</div></div>` : ''}
       </div>`;
@@ -493,7 +494,7 @@
   function selectTop(t, center) {
     if (!t) return;
     if (state.mode !== 'top') setMode('top');
-    if (t.pos > topN) setTopN([10, 50, 100, 400].find(n => n >= t.pos), false);
+    if (t.pos > topN) setTopN([10, 50, 100, 400].find(n => n >= t.pos), false, false);
     if (t.family && !state.fams.has(t.family)) { state.fams.add(t.family); famBox.querySelector(`[data-f="${t.family}"]`).setAttribute('aria-pressed', 'true'); }
     if (t.year > state.year) { state.year = YMAX; syncYear(); }
     applyVisibility();
