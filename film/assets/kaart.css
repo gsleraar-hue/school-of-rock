@@ -142,3 +142,38 @@ body.kaart .sitefoot { display: none; }
 .kp-films { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
 .kp-films span { font-size: 12px; padding: 3px 8px; border-radius: 3px; background: #2A2825; color: #D9D5CC; }
 .k-comps { display: inline-flex; align-items: center; gap: 6px; font: 11px/1 var(--mono, "Space Mono", monospace); letter-spacing: .05em; text-transform: uppercase; color: #CFCAC0; cursor: pointer; }
+
+/* Top 400 van NPO Klassiek: noteringen als punten (jaar × plaats in de lijst) */
+g.top400 { display: none; }
+.topmode g.top400 { display: block; }
+.topmode .node, .topmode .link { display: none; }
+.rank line { stroke: #2A2825; stroke-dasharray: 2 4; }
+.rank text { fill: #6F6A62; font: 11px/1 var(--mono); }
+.tnode { cursor: pointer; transition: opacity .25s; }
+.tnode circle.dot { stroke: #121110; stroke-width: 1.5; }
+.tnode.top10 circle.dot { stroke-width: 2; }
+.tnode .hit { fill: transparent; stroke: none; pointer-events: all; }
+.tnode .ring { fill: none; stroke: var(--yellow); stroke-width: 2; opacity: 0; pointer-events: none; }
+.tnode.pulse .ring { animation: pulse 1.2s ease-out; }
+.tnode text { font: 500 11px/1 var(--body); fill: #D9D5CC; paint-order: stroke; stroke: #121110; stroke-width: 3px; stroke-linejoin: round; pointer-events: visiblePainted; }
+.tnode.top10 text { font-weight: 700; font-size: 12px; fill: #fff; }
+.tnode:hover text, .tnode.sel text, .tnode.hl text { fill: #fff; font-weight: 700; }
+.tnode.sel circle.dot { stroke: var(--yellow); stroke-width: 3; }
+.tnode.playing circle.dot { animation: beat .9s ease-in-out infinite; }
+.dim .tnode:not(.hl):not(.sel) { opacity: .16; }
+.tnode.future { opacity: 0 !important; pointer-events: none; }
+.kp-rank { display: flex; align-items: baseline; gap: 12px; margin: 0; }
+.kp-rank b { font: 600 46px/1 var(--display); color: var(--ink, #1C1B19); }
+.kp-rank span { font: 12px/1.4 var(--mono); letter-spacing: .04em; color: var(--ink-soft, #6F6A62); }
+.kp-tops { display: grid; gap: 4px; }
+.kp-top { display: grid; grid-template-columns: 40px 1fr auto; align-items: center; gap: 8px; text-align: left; font: inherit; font-size: 13px; padding: 6px 8px; border: 0; border-left: 4px solid var(--c, #888); border-radius: 3px; background: #fff; cursor: pointer; }
+.kp-top:hover { background: #F4F0E6; }
+.kp-top b { font: 600 16px/1 var(--display); }
+.kp-top em { font: 11px/1 var(--mono); font-style: normal; color: var(--ink-soft, #6F6A62); }
+.kp-spark svg { width: 100%; height: auto; display: block; background: #fff; border-radius: 4px; }
+.kp-spark .band { fill: #EAE5DA; }
+.kp-spark .line { fill: none; stroke-width: 2.5; stroke-linejoin: round; }
+.kp-spark circle { stroke: #fff; stroke-width: 1.5; }
+.kp-spark text { font: 700 9px/1 var(--mono); fill: var(--ink, #1C1B19); }
+.kp-spark text.ax { font-weight: 400; fill: #9C978D; }
+.kp-spark-note { font-size: 12px; color: var(--ink-soft, #6F6A62); margin: 6px 0 0; }
