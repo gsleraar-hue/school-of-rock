@@ -57,10 +57,11 @@
       row.appendChild(lab);
       const css = document.createElement('style');
       css.textContent = '.sor-sync{font:11px/1.4 "Space Mono",monospace;letter-spacing:.04em;color:#9C978D;align-self:center;display:inline-flex;gap:6px;align-items:center;cursor:pointer}.sor-sync input{accent-color:#9C978D;margin:0}' +
-        '.flow p.ra-now{box-shadow:-10px 0 0 -8px rgba(156,151,141,.55);transition:box-shadow .6s}' +
+        // lijntje in de marge dat meegroeit met het voorlezen van de alinea
+        '.flow p.ra-now{position:relative}.flow p.ra-now::before{content:"";position:absolute;left:-18px;top:.35em;width:2px;border-radius:1px;background:rgba(156,151,141,.5);height:calc((100% - .7em) * var(--ra, 0));transition:height .6s linear}' +
         '.ra-go{position:absolute;z-index:5;width:22px;height:22px;border-radius:50%;border:0;padding:0;background:transparent;color:#9C978D;opacity:0;transition:opacity .2s;cursor:pointer;display:grid;place-items:center}.ra-go svg{width:12px;height:12px;fill:currentColor}.ra-go:hover,.ra-go:focus-visible{opacity:1!important;color:#5E5A53}';
       document.head.appendChild(css);
-      cb.addEventListener('change', () => { store.set(cb.checked); if (!cb.checked && cur) { cur.classList.remove('ra-now'); cur = null; } });
+      cb.addEventListener('change', () => { store.set(cb.checked); if (!cb.checked && cur) { cur.classList.remove('ra-now'); cur.style.removeProperty('--ra'); cur = null; } });
       // afspeelknopje bij een alinea (alleen met muis/touchpad)
       if (matchMedia('(hover: hover)').matches) {
         const go = document.createElement('button'); go.type = 'button'; go.className = 'ra-go'; go.setAttribute('aria-label', 'Luisterboek vanaf deze alinea'); go.title = 'Luister vanaf hier'; go.innerHTML = SOR.playIcon;
@@ -73,16 +74,25 @@
       // volgen tijdens het afspelen
       let cur = null, lastUser = 0;
       ['wheel', 'touchmove', 'keydown'].forEach(ev => addEventListener(ev, () => { lastUser = Date.now(); }, { passive: true }));
-      setInterval(() => {
+      // verspringen in de player: de tekst gaat mee naar die plek, ook als je net zelf scrolde
+      let jumped = false;
+      const follow = () => {
         if (!cb.checked || !SOR.bookPlaying(N, SET)) return;
         const t = SOR.media.currentTime; let i = -1;
         for (let k = 0; k < times.length; k++) { if (times[k] <= t + 0.5) i = k; else break; }
-        const p = ps[i] || null; if (p === cur) return;
-        if (cur) cur.classList.remove('ra-now'); cur = p; if (!p) return;
+        const p = ps[i] || null;
+        // hoe ver het voorlezen in de alinea is: het lijntje groeit mee
+        if (p) { const end = times[i + 1] != null ? times[i + 1] : (SOR.media.duration || t + 60); p.style.setProperty('--ra', Math.min(1, Math.max(0.04, (t - times[i]) / Math.max(1, end - times[i]))).toFixed(3)); }
+        if (p === cur && !jumped) return;
+        if (cur && cur !== p) { cur.classList.remove('ra-now'); cur.style.removeProperty('--ra'); }
+        cur = p; if (!p) { jumped = false; return; }
         p.classList.add('ra-now');
-        const r = p.getBoundingClientRect();
-        if (Date.now() - lastUser > 6000 && (r.top < 70 || r.top > innerHeight * 0.75)) scrollTo({ top: scrollY + r.top - innerHeight * 0.3, behavior: 'smooth' });
-      }, 700);
+        const r = p.getBoundingClientRect(), out = r.top < 70 || r.top > innerHeight * 0.75;
+        if (out && (jumped || Date.now() - lastUser > 6000)) scrollTo({ top: scrollY + r.top - innerHeight * 0.3, behavior: 'smooth' });
+        jumped = false;
+      };
+      SOR.media.addEventListener('seeked', () => { jumped = true; follow(); });
+      setInterval(follow, 600);
     }).catch(() => {});
   }
 
