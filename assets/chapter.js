@@ -12,8 +12,8 @@
   });
 
   // Luisterboek: dit hoofdstuk beluisteren (de speler loopt door als je verder klikt op de site).
-  // Staat uit sinds 2026-10-07; de code en de speler blijven bewaard voor later.
-  const LUISTERBOEK = false;
+  // Alleen hoofdstukken die in luisterboek.json staan krijgen de knop (nieuwe opnames komen gefaseerd).
+  const LUISTERBOEK = true;
   (function () {
     if (!LUISTERBOEK) return;
     const deck = document.querySelector('.deck'); if (!deck || !SOR.playBook) return;

@@ -1,50 +1,8 @@
 [
  {
-  "n": 1,
-  "title": "Nooit stil",
-  "file": "film/audio/mixtape-01.mp3?v=2",
-  "duration": 4003
- },
- {
-  "n": 2,
-  "title": "Het studio-orkest",
-  "file": "film/audio/mixtape-02.mp3?v=2",
-  "duration": 3620
- },
- {
-  "n": 3,
-  "title": "Europa in close-up",
-  "file": "film/audio/mixtape-03.mp3?v=2",
-  "duration": 4372
- },
- {
-  "n": 4,
-  "title": "Songs uit de platenkast",
-  "file": "film/audio/mixtape-04.mp3?v=2",
-  "duration": 3592
- },
- {
-  "n": 5,
-  "title": "Stroom en patroon",
-  "file": "film/audio/mixtape-05.mp3?v=2",
-  "duration": 3453
- },
- {
-  "n": 6,
-  "title": "Van Mumbai tot Mexico-Stad",
-  "file": "film/audio/mixtape-06.mp3?v=2",
-  "duration": 3743
- },
- {
-  "n": 7,
-  "title": "Groter dan het doek",
-  "file": "film/audio/mixtape-07.mp3?v=2",
-  "duration": 3643
- },
- {
   "n": 8,
   "title": "Druk op start",
-  "file": "film/audio/mixtape-08.mp3?v=2",
-  "duration": 3415
+  "file": "film/audio/filmrol-08.mp3?v=3",
+  "duration": 3470
  }
 ]
