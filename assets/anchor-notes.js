@@ -51,6 +51,7 @@
   }
   function anchor(flow) {
     var kids = Array.prototype.slice.call(flow.children);
+    var last = null;
     kids.forEach(function (a) {
       if (!a.matches('aside.side-note')) return;
       if (!window.SOR_PRINT && getComputedStyle(a).float === 'none') return;
@@ -65,18 +66,51 @@
       var ps = kids.slice(lo, hi + 1).filter(function (x) { return x.tagName === 'P'; });
       var all = kids.filter(function (x) { return x.tagName === 'P' && ps.indexOf(x) < 0; })
         .sort(function (x, y) { return Math.abs(kids.indexOf(x) - idx) - Math.abs(kids.indexOf(y) - idx); });
-      var keys = [k.title, k.artist].filter(function (x) { return x && x.length > 2; });
-      // eerst in de eigen track, dan in de rest van het hoofdstukdeel
-      var sets = [ps, all];
-      for (var s = 0; s < sets.length; s++) {
-        for (var j = 0; j < keys.length; j++) {
-          var key = norm(keys[j]);
-          for (var q = 0; q < sets[s].length; q++) {
-            var at = norm(textMap(sets[s][q]).text).indexOf(key);
-            if (at >= 0) { place(a, sets[s][q], at); return; }
+      // volgorde: titel in de eigen track, artiest in de eigen track, titel elders in het hoofdstuk.
+      // De artiest nooit buiten de eigen track zoeken, en nooit een algemene naam als "Traditional":
+      // dan belandt de tip bij een heel ander nummer. Niets gevonden: de tip blijft waar hij in de tekst staat.
+      var generic = /^(traditional|traditioneel|anoniem|anonymous|various|diverse)/i;
+      var title = k.title && k.title.length > 2 ? norm(k.title) : '';
+      var artist = k.artist && k.artist.length > 2 && !generic.test(k.artist) ? norm(k.artist) : '';
+      // vangnet: staat de titel nergens in de tekst, dan de alinea waarin de toelichting van de tip terugkomt
+      var rec = a.querySelector('.rec'), note = '';
+      if (rec) { var c = rec.nextSibling; while (c) { note += c.textContent; c = c.nextSibling; } }
+      note = norm(note).replace(/\s+/g, ' ').trim();
+      if (note.indexOf(': ') > 0) note = note.split(': ')[1];
+      note = note.split(' ').slice(0, 4).join(' ');
+      var tries = [[ps, title], [ps, artist], [all, title], [ps, note.length > 10 ? note : '']];
+      // tips blijven in de volgorde van de tekst: nooit vóór een tip die eerder in de bron staat
+      // (anders staat bv. de cover van The Animals vóór de eerste opname uit 1933)
+      var lastP = null;
+      if (last) { lastP = last.closest('p'); if (!lastP) { lastP = last.nextElementSibling; while (lastP && lastP.tagName !== 'P') lastP = lastP.nextElementSibling; } }
+      var allowed = function (p) { return !lastP || p === lastP || (lastP.compareDocumentPosition(p) & Node.DOCUMENT_POSITION_FOLLOWING); };
+      // een artiest die maar in een paar alinea's voorkomt (geen Beatles in hun eigen hoofdstuk) gaat voor:
+      // de alinea met die artiest én het jaartal van de tip, ook als de titel eerder al viel (bv. The Animals, 1964)
+      var year = ((rec ? rec.textContent : '').match(/\((\d{4})\)/) || [])[1];
+      if (artist && year) {
+        var allP = kids.filter(function (x) { return x.tagName === 'P'; });
+        var count = allP.filter(function (x) { return norm(textMap(x).text).indexOf(artist) >= 0; }).length;
+        if (count <= 3) {
+          for (var q2 = 0; q2 < ps.length; q2++) {
+            if (!allowed(ps[q2])) continue;
+            var tx = norm(textMap(ps[q2]).text), at2 = tx.indexOf(artist);
+            if (at2 >= 0 && tx.indexOf(year) >= 0) { if (ps[q2] === lastP && last.closest('p') === lastP) last.after(a); else place(a, ps[q2], at2); last = a; return; }
           }
         }
       }
+      for (var s = 0; s < tries.length; s++) {
+        var set = tries[s][0], key = tries[s][1];
+        if (!key) continue;
+        for (var q = 0; q < set.length; q++) {
+          if (!allowed(set[q])) continue;
+          var at = norm(textMap(set[q]).text).indexOf(key);
+          if (at < 0) continue;
+          // zelfde alinea als de vorige tip: direct ná die tip, zodat de volgorde klopt
+          if (set[q] === lastP && last.closest('p') === lastP) last.after(a); else place(a, set[q], at);
+          last = a; return;
+        }
+      }
+      last = a;
     });
   }
   function run() { document.querySelectorAll('.flow').forEach(anchor); }
