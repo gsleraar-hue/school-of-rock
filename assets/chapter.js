@@ -30,7 +30,7 @@
       fromStart.hidden = !here || on;
       info.textContent = here && !on ? 'bij ' + SOR.fmt(here) + ' van ' + SOR.fmt(dur) : dur ? Math.round(dur / 60) + ' minuten' : '';
     }
-    SOR.bookChapters(SET).then(list => { const c = list.find(x => x.n === N); if (!c) { row.remove(); return; } dur = c.duration; label(); });
+    SOR.bookChapters(SET).then(list => { const c = list.find(x => x.n === N); if (!c) { row.remove(); return; } dur = c.duration; label(); meelezen(row); });
     go.addEventListener('click', () => SOR.playBook(N, undefined, SET));
     fromStart.addEventListener('click', () => SOR.playBook(N, 0, SET));
     SOR.onChange(label);
@@ -38,6 +38,53 @@
     css.textContent = '.sor-book-row .btn svg{width:14px;height:14px;fill:currentColor;margin-right:8px;vertical-align:-2px}.sor-book-row .sor-book-info{font-size:11px;letter-spacing:.04em;color:#9C978D;align-self:center}';
     document.head.appendChild(css);
   })();
+
+  // Meelezen: welke alinea wordt nu voorgelezen (data/sync/NN.json: starttijd per alinea).
+  // Heel subtiel: een dun streepje in de kantlijn, alleen als 'Meelezen' aanstaat; meescrollen alleen als je zelf niet scrolt.
+  // Los daarvan: met de muis op een alinea verschijnt een klein afspeelknopje om het luisterboek dáár te starten.
+  function paragraphs() {
+    return [...document.querySelectorAll('.flow p')].filter(p => !p.closest('aside, figure, .head, .opener, .deck, header') && p.textContent.trim().length > 40);
+  }
+  function meelezen(row) {
+    const path = (SET === 'film' ? 'film/data/sync/' : 'data/sync/') + String(N).padStart(2, '0') + '.json';
+    SOR.load(path).then(sync => {
+      const ps = paragraphs(), times = sync.p || [];
+      if (!times.length || Math.abs(times.length - ps.length) > 2) return; // tekst en tijden horen bij elkaar
+      const store = { get() { try { return localStorage.getItem('sor-meelezen') === '1'; } catch (e) { return false; } }, set(v) { try { localStorage.setItem('sor-meelezen', v ? '1' : '0'); } catch (e) {} } };
+      const lab = document.createElement('label'); lab.className = 'sor-sync';
+      lab.innerHTML = '<input type="checkbox"> Meelezen';
+      const cb = lab.querySelector('input'); cb.checked = store.get();
+      row.appendChild(lab);
+      const css = document.createElement('style');
+      css.textContent = '.sor-sync{font:11px/1.4 "Space Mono",monospace;letter-spacing:.04em;color:#9C978D;align-self:center;display:inline-flex;gap:6px;align-items:center;cursor:pointer}.sor-sync input{accent-color:#9C978D;margin:0}' +
+        '.flow p.ra-now{box-shadow:-10px 0 0 -8px rgba(156,151,141,.55);transition:box-shadow .6s}' +
+        '.ra-go{position:absolute;z-index:5;width:22px;height:22px;border-radius:50%;border:0;padding:0;background:transparent;color:#9C978D;opacity:0;transition:opacity .2s;cursor:pointer;display:grid;place-items:center}.ra-go svg{width:12px;height:12px;fill:currentColor}.ra-go:hover,.ra-go:focus-visible{opacity:1!important;color:#5E5A53}';
+      document.head.appendChild(css);
+      cb.addEventListener('change', () => { store.set(cb.checked); if (!cb.checked && cur) { cur.classList.remove('ra-now'); cur = null; } });
+      // afspeelknopje bij een alinea (alleen met muis/touchpad)
+      if (matchMedia('(hover: hover)').matches) {
+        const go = document.createElement('button'); go.type = 'button'; go.className = 'ra-go'; go.setAttribute('aria-label', 'Luisterboek vanaf deze alinea'); go.title = 'Luister vanaf hier'; go.innerHTML = SOR.playIcon;
+        document.body.appendChild(go); let target = -1;
+        ps.forEach((p, i) => p.addEventListener('mouseenter', () => { const r = p.getBoundingClientRect(); target = i; go.style.left = (r.left + scrollX - 30) + 'px'; go.style.top = (r.top + scrollY + 1) + 'px'; go.style.opacity = '.55'; }));
+        ps.forEach(p => p.addEventListener('mouseleave', e => { if (e.relatedTarget !== go) go.style.opacity = '0'; }));
+        go.addEventListener('mouseleave', () => { go.style.opacity = '0'; });
+        go.addEventListener('click', () => { if (target >= 0 && times[target] != null) SOR.playBook(N, Math.max(0, times[target] + 3), SET); });
+      }
+      // volgen tijdens het afspelen
+      let cur = null, lastUser = 0;
+      ['wheel', 'touchmove', 'keydown'].forEach(ev => addEventListener(ev, () => { lastUser = Date.now(); }, { passive: true }));
+      setInterval(() => {
+        if (!cb.checked || !SOR.bookPlaying(N, SET)) return;
+        const t = SOR.media.currentTime; let i = -1;
+        for (let k = 0; k < times.length; k++) { if (times[k] <= t + 0.5) i = k; else break; }
+        const p = ps[i] || null; if (p === cur) return;
+        if (cur) cur.classList.remove('ra-now'); cur = p; if (!p) return;
+        p.classList.add('ra-now');
+        const r = p.getBoundingClientRect();
+        if (Date.now() - lastUser > 6000 && (r.top < 70 || r.top > innerHeight * 0.75)) scrollTo({ top: scrollY + r.top - innerHeight * 0.3, behavior: 'smooth' });
+      }, 700);
+    }).catch(() => {});
+  }
 
   // Afspeelknoppen bij de luistertips.
   // tracks.json: fragmenten uit de les; tips-audio.json: aanvulling voor tips zonder fragment in de les
