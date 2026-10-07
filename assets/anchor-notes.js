@@ -87,6 +87,14 @@
       // een artiest die maar in een paar alinea's voorkomt (geen Beatles in hun eigen hoofdstuk) gaat voor:
       // de alinea met die artiest én het jaartal van de tip, ook als de titel eerder al viel (bv. The Animals, 1964)
       var year = ((rec ? rec.textContent : '').match(/\((\d{4})\)/) || [])[1];
+      // ... maar een alinea met de titel én de artiest of het jaartal gaat altijd voor (bv. Formation van Beyoncé)
+      if (title) {
+        for (var q3 = 0; q3 < ps.length; q3++) {
+          if (!allowed(ps[q3])) continue;
+          var tx3 = norm(textMap(ps[q3]).text), at3 = tx3.indexOf(title);
+          if (at3 >= 0 && ((artist && tx3.indexOf(artist) >= 0) || (year && tx3.indexOf(year) >= 0))) { if (ps[q3] === lastP && last.closest('p') === lastP) last.after(a); else place(a, ps[q3], at3); last = a; return; }
+        }
+      }
       if (artist && year) {
         var allP = kids.filter(function (x) { return x.tagName === 'P'; });
         var count = allP.filter(function (x) { return norm(textMap(x).text).indexOf(artist) >= 0; }).length;
