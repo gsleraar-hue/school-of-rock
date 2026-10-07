@@ -177,3 +177,5 @@ g.top400 { display: none; }
 .kp-spark text { font: 700 9px/1 var(--mono); fill: var(--ink, #1C1B19); }
 .kp-spark text.ax { font-weight: 400; fill: #9C978D; }
 .kp-spark-note { font-size: 12px; color: var(--ink-soft, #6F6A62); margin: 6px 0 0; }
+.k-topn[hidden] { display: none; }
+.k-topn::before { content: "Toon top"; font: 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: #9C978D; align-self: center; padding: 0 8px 0 6px; }

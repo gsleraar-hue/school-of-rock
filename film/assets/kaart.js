@@ -151,12 +151,17 @@
   const treeW = tx(YMAX) + 160;
 
   // ---------- Top 400: jaar horizontaal (zelfde tijdas als de stamboom), plaats in de lijst verticaal ----------
-  const TOP_STEP = 3.2, TOP_Y0 = 56;
-  const topY = p => TOP_Y0 + (p - 1) * TOP_STEP;
-  const topH = topY(400) + 24;
+  // Hoeveel noteringen je ziet (top 10, 50, 100 of 400): de verticale as rekt mee, zodat een korte lijst ruim en rustig oogt.
+  const TOP_Y0 = 56, TOP_SPAN = 900;
+  let topN = 50;
+  try { const v = +localStorage.getItem('film-kaart-topn'); if ([10, 50, 100, 400].includes(v)) topN = v; } catch (e) {}
+  const topY = p => TOP_Y0 + (p - 1) * TOP_SPAN / Math.max(1, topN - 1);
+  const topH = () => topY(topN) + 30;
   const topYmin = TOP.length ? d3.min(TOP, t => t.year) - 3 : YMIN;
+  const topTicks = () => ({ 10: d3.range(1, 11), 50: [1, 10, 20, 30, 40, 50], 100: [1, 25, 50, 75, 100] }[topN] || [1, 50, 100, 150, 200, 250, 300, 350, 400]);
   // binnen een jaar een beetje spreiden, zodat noteringen uit hetzelfde jaar niet op één lijn vallen
-  TOP.forEach(t => { const j = ((t.pos * 37) % 11) / 10 - .5; t.at = { x: tx(t.year + .5 + j * .8), y: topY(t.pos) }; });
+  function layoutTop() { TOP.forEach(t => { const j = ((t.pos * 37) % 11) / 10 - .5; t.at = { x: tx(t.year + .5 + j * .8), y: topY(Math.min(t.pos, topN + 2)) }; }); }
+  layoutTop();
 
   // ---------- Wereld ----------
   let projection = null, countries = null;
@@ -221,7 +226,7 @@
       const dg = gGrid.selectAll('g.decade').data(decades).join('g').attr('class', 'decade');
       dg.append('line');
       dg.append('text').attr('y', 16).text(d => d);
-      const rg = gGrid.selectAll('g.rank').data([1, 10, 50, 100, 150, 200, 250, 300, 350, 400]).join('g').attr('class', 'rank');
+      const rg = gGrid.selectAll('g.rank').data(topTicks()).join('g').attr('class', 'rank');
       rg.append('line');
       rg.append('text').attr('text-anchor', 'end').attr('dy', '.35em').text(d => d);
       updateGrid();
@@ -257,7 +262,7 @@
     });
   }
   function updateGrid() {
-    const bottom = state.mode === 'top' ? topH : treeH;
+    const bottom = state.mode === 'top' ? topH() : treeH;
     gGrid.selectAll('g.decade').each(function (d) { const x = T.applyX(tx(d)); const g = d3.select(this); g.select('line').attr('x1', x).attr('x2', x).attr('y1', Math.max(22, T.applyY(26))).attr('y2', T.applyY(bottom)); g.select('text').attr('x', x + 4); });
     // plaatsen in de lijst als lijnen, met het getal links in beeld
     const x0 = Math.max(44, T.applyX(tx(topYmin)));
@@ -277,7 +282,7 @@
     const t = animate ? d3.transition().duration(900).ease(d3.easeCubicInOut) : null;
     (t ? nodeSel.transition(t) : nodeSel).attr('transform', d => { const q = P(d); return `translate(${q.x},${q.y})`; });
     (t ? linkSel.transition(t) : linkSel).attr('d', linkPath);
-    topSel.attr('transform', d => { const q = PT(d); return `translate(${q.x},${q.y})`; });
+    (t && state.mode === 'top' ? topSel.transition(t) : topSel).attr('transform', d => { const q = PT(d); return `translate(${q.x},${q.y})`; });
     drawPath();
     if (!animate) cullLabels(); else setTimeout(cullLabels, 950);
   }
@@ -316,7 +321,7 @@
     const hl = t => root.classed('dim') && topSel.filter(x => x === t).classed('hl');
     const prio = t => (t === state.topSel ? 0 : hl(t) ? 1 : 2);
     const list = TOP.filter(topVisible).map(t => ({ t, q: PT(t), p: prio(t) })).sort((a, b) => a.p - b.p || a.t.pos - b.t.pos);
-    const limit = T.k >= 2.2 ? 400 : T.k >= 1.3 ? 100 : 25;
+    const limit = topN <= 50 ? topN : T.k >= 2.2 ? 400 : T.k >= 1.3 ? 100 : 25;
     list.forEach(({ t, q, p }) => {
       if (p === 2 && t.pos > limit) return;
       if (q.x < -50 || q.y < -20 || q.x > W + 50 || q.y > H + 20) return;
@@ -330,7 +335,7 @@
   function fit(animate) { const t = fitTransform(); (animate ? svg.transition().duration(700) : svg).call(zoom.transform, t); }
   function fitTransform() {
     if (state.mode === 'top') {
-      const x0 = tx(topYmin) - 40, x1 = tx(YMAX) + 20, y0 = 0, y1 = topH;
+      const x0 = tx(topYmin) - 40, x1 = tx(YMAX) + 20, y0 = 0, y1 = topH();
       const k = Math.max(.1, Math.min((W - 20) / (x1 - x0), (H - 10) / (y1 - y0)));
       return d3.zoomIdentity.translate(W / 2 - (x0 + x1) / 2 * k, 4 - y0 * k).scale(k);
     }
@@ -347,7 +352,22 @@
 
   // ---------- Zichtbaarheid ----------
   function visible(d) { return state.fams.has(d.family) && d.year <= state.year && (!isComp(d) || state.comps); }
-  function topVisible(t) { return t.year <= state.year && (!t.family || state.fams.has(t.family)); }
+  function topVisible(t) { return t.pos <= topN && t.year <= state.year && (!t.family || state.fams.has(t.family)); }
+  const topR = t => topN <= 10 ? 9 : topN <= 50 ? (t.pos <= 10 ? 7.5 : 6) : topN <= 100 ? (t.pos <= 10 ? 6.5 : 5) : (t.pos <= 10 ? 6 : t.pos <= 100 ? 4.5 : 3.5);
+  function setTopN(n, animate = true) {
+    topN = n; try { localStorage.setItem('film-kaart-topn', String(n)); } catch (e) {}
+    document.querySelectorAll('[data-topn]').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.topn === n)));
+    layoutTop();
+    topSel.select('circle.dot').attr('r', topR);
+    topSel.select('text').attr('x', t => topR(t) + 4);
+    applyVisibility();
+    if (state.mode !== 'top') return;
+    drawBack(); svg.interrupt(); suppress = true;
+    svg.call(zoom.transform, fitTransform());
+    place(animate); setTimeout(() => { suppress = false; cullLabels(); }, animate ? 950 : 0);
+  }
+  document.querySelectorAll('[data-topn]').forEach(b => b.addEventListener('click', () => { if (state.topSel && state.topSel.pos > +b.dataset.topn) clearSelection(); setTopN(+b.dataset.topn); }));
+  setTopN(topN, false);
   function applyVisibility() {
     nodeSel.classed('future', d => !visible(d));
     linkSel.classed('future', l => !visible(l.source) || !visible(l.target));
@@ -423,7 +443,7 @@
   function renderTopPanel(t) {
     const f = t.family && famById.get(t.family);
     // fragment: de preview uit de lijst, anders een fragment van dezelfde film op de kaart
-    const own = t.preview ? [{ audio: t.preview, artist: t.artist, title: t.title, cover: t.cover, year: t.year, film: t.title }] : [];
+    const own = t.preview ? [{ audio: t.preview, artist: t.artist, title: t.ptrack ? t.title + ' · ' + t.ptrack : t.title, cover: t.pcover || t.cover, year: t.year, film: t.title, label: t.ptrack || 'fragment' }] : [];
     const fromMap = t.comps.flatMap(id => (byId.get(id).tracks || []).filter(x => x.audio && x.film && filmKey(x.film) === filmKey(t.title)));
     const tracks = [...own, ...fromMap].slice(0, 3);
     const move = !t.prev ? 'nieuw in de lijst' : t.prev === t.pos ? 'zelfde plek als vorig jaar' : `vorig jaar ${t.prev}`;
@@ -440,7 +460,7 @@
         <p class="kp-rank"><b>${t.pos}</b><span>${move}</span></p>
         ${spark(t)}
         ${t.note ? `<p>${t.note}</p>` : ''}
-        ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((x, i) => `<div class="kp-track${x.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${x.title}">${SOR.playIcon}</button>${x.cover ? `<img src="${x.cover}" alt="" loading="lazy" onerror="this.remove()">` : ''}<div><b>${x.film || x.artist}</b><span>${x === own[0] ? t.artist + ' · fragment' : x.title}</span></div></div>`).join('')}</div></div>` : ''}
+        ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((x, i) => `<div class="kp-track${x.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${x.title}">${SOR.playIcon}</button>${x.cover ? `<img src="${x.cover}" alt="" loading="lazy" onerror="this.remove()">` : ''}<div><b>${x.film || x.artist}</b><span>${x === own[0] ? t.artist + ' · ' + x.label : x.title}</span></div></div>`).join('')}</div></div>` : ''}
         ${t.comps.length ? `<div><p class="kp-h">Op de kaart</p><div class="kp-links">${t.comps.map(chip).join('')}${f ? '' : ''}</div></div>` : `<p class="kp-listen">${t.artist} staat (nog) niet als componist op de kaart.</p>`}
         ${others.length ? `<div><p class="kp-h">Meer van ${t.comps.length === 1 ? byId.get(t.comps[0]).name : 'deze componisten'} in de lijst</p><div class="kp-tops">${others.map(topChip).join('')}</div></div>` : ''}
       </div>`;
@@ -473,6 +493,7 @@
   function selectTop(t, center) {
     if (!t) return;
     if (state.mode !== 'top') setMode('top');
+    if (t.pos > topN) setTopN([10, 50, 100, 400].find(n => n >= t.pos), false);
     if (t.family && !state.fams.has(t.family)) { state.fams.add(t.family); famBox.querySelector(`[data-f="${t.family}"]`).setAttribute('aria-pressed', 'true'); }
     if (t.year > state.year) { state.year = YMAX; syncYear(); }
     applyVisibility();
@@ -577,6 +598,7 @@
     document.querySelectorAll('[data-mode]').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.mode === m)));
     sel.closest('label').hidden = m === 'top' || !routes.length;
     compBox.closest('label').hidden = m === 'top';
+    const tn = $('.k-topn'); if (tn) tn.hidden = m !== 'top';
     const sub = $('.k-title p'); if (!sub.dataset.def) sub.dataset.def = sub.textContent;
     sub.textContent = m === 'top' ? 'NPO Klassiek Filmmuziek Top 400 (2026) · nr. 1 bovenaan · jaar van de film' : sub.dataset.def;
     state.modeSwitching = true;
