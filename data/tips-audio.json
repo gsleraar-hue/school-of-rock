@@ -398,5 +398,13 @@
   "audio": "https://api.lessonup.com/v1/media/EMKFRBRBmFzT72Kew",
   "cover": "https://lh3.googleusercontent.com/-abxro5QqnMNGQuKBOOaZsX4RPaFi1y-bmcqsRohRpvFIKgQFz82t--truNImqFost4PJ47kjWM8WUvlWbzzQJSpEO7m1lTn_ZIk_PE",
   "src": "lessonup"
+ },
+ {
+  "mixtape": 9,
+  "artist": "Kanye West",
+  "title": "Love Lockdown",
+  "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5b/a3/ec/5ba3ec7a-ba89-b991-2c1e-bbea277709d8/mzaf_4501583853193442993.plus.aac.p.m4a",
+  "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/61/19/f36119b9-4d88-05eb-4306-2ae0e7decf88/08UMGIM26559.rgb.jpg/300x300bb.jpg",
+  "src": "itunes"
  }
 ]

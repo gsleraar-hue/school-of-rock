@@ -12,7 +12,10 @@
   });
 
   // Luisterboek: dit hoofdstuk beluisteren (de speler loopt door als je verder klikt op de site).
+  // Staat uit sinds 2026-10-07; de code en de speler blijven bewaard voor later.
+  const LUISTERBOEK = false;
   (function () {
+    if (!LUISTERBOEK) return;
     const deck = document.querySelector('.deck'); if (!deck || !SOR.playBook) return;
     const row = document.createElement('div'); row.className = 'deck-row sor-book-row';
     row.innerHTML = '<span class="lbl">Luisterboek</span><button type="button" class="btn solid sor-book-go">' + SOR.playIcon + '<span>Luister dit hoofdstuk</span></button><button type="button" class="btn ghost sor-book-start" hidden>Vanaf het begin</button><span class="sor-book-info mono"></span>';
@@ -55,8 +58,11 @@
       // filmhoofdstukken: het fragment staat direct op de tip (data-audio)
       const img0 = rec && rec.querySelector('img');
       let t = note.dataset.audio ? { audio: note.dataset.audio, artist, title, cover: img0 ? img0.src : '' } : byKey.get(key(artist, title));
-      if (!t) { const cands = byArtist.get(SOR.norm(artist)) || []; t = cands.find(c => SOR.norm(c.title).startsWith(SOR.norm(title).slice(0, 6))) || (cands.length === 1 ? cands[0] : null); }
+      const cands = byArtist.get(SOR.norm(artist)) || [];
+      if (!t) t = cands.find(c => SOR.norm(c.title).startsWith(SOR.norm(title).slice(0, 6)));
       if (!t) t = byTip.get(SOR.norm(artist) + '|' + SOR.norm(title));
+      // het enige fragment van deze artiest alleen als de les het met een jaartal aanduidt ("1933, …"), niet als het een andere song is
+      if (!t && cands.length === 1 && /^\d{4}\b/.test(cands[0].title)) t = cands[0];
       if (!t) return;
       const b = document.createElement('button');
       b.type = 'button'; b.className = 'sor-play'; b.setAttribute('aria-label', 'Speel ' + artist + ' – ' + title);
