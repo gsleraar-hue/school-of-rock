@@ -88,7 +88,12 @@
         cur = p; if (!p) { jumped = false; return; }
         p.classList.add('ra-now');
         const r = p.getBoundingClientRect(), out = r.top < 70 || r.top > innerHeight * 0.75;
-        if (out && (jumped || Date.now() - lastUser > 6000)) scrollTo({ top: scrollY + r.top - innerHeight * 0.3, behavior: Math.abs(r.top) > innerHeight * 2 ? 'instant' : 'smooth' });
+        if (out && (jumped || Date.now() - lastUser > 6000)) {
+          const far = Math.abs(r.top) > innerHeight * 2;
+          scrollTo({ top: scrollY + r.top - innerHeight * 0.3, behavior: far ? 'instant' : 'smooth' });
+          // foto's die net laden verschuiven de pagina: na een grote sprong nog één keer bijstellen
+          if (far) setTimeout(() => { const q = p.getBoundingClientRect(); if (q.top < 70 || q.top > innerHeight * 0.75) scrollTo({ top: scrollY + q.top - innerHeight * 0.3, behavior: 'instant' }); }, 900);
+        }
         jumped = false;
       };
       SOR.media.addEventListener('seeked', () => { jumped = true; follow(); });
