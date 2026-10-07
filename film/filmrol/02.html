@@ -1,0 +1,429 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content="../.."><title>De Droomfabriek · Filmrol 2 · Het studio-orkest</title><link rel="icon" href="../../film/assets/icon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="../../assets/site.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><style>
+  /* Eén thema met opzet: een boek in de huisstijl van de lessen. */
+  :root {
+    color-scheme: light;
+    --page: #FFFFFF;
+    --ink: #1C1B19;
+    --ink-soft: #55524C;
+    --line: #DDD8CE;
+    --red: #D63A31;
+    --yellow: #F2D500;
+    --display: "Oswald", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "Space Mono", "Courier New", monospace;
+    --hand: "Caveat", "Comic Sans MS", cursive;
+    --text: 34rem;
+    --margin: 13rem;
+    --gap: 2.25rem;
+  }
+  html { background: var(--page); }
+  body { background: var(--page); color: var(--ink); font: 400 16px/1.65 var(--body); padding-inline: 16px; padding-block: 0 64px; }
+  .book { max-width: calc(var(--text) + var(--gap) + var(--margin)); margin: 0 auto; }
+  p { margin: 0; }
+  em { font-style: italic; }
+  a { color: inherit; text-decoration-color: var(--red); text-underline-offset: 2px; }
+
+  /* Hoofdstukopening en delen */
+  .opener { position: relative; overflow: hidden; color: #FFFFFF; box-sizing: border-box; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; }
+  .opener .wash { position: absolute; inset: 0; background-color: rgba(214,58,49,.62); }
+  .opener .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 55%; background-color: rgba(28,27,25,.38); }
+  .opener .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background: var(--yellow); }
+  .opener h1, .opener h2, .opener .sub, .part .kicker { position: relative; }
+  .opener .kicker { font: 12px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--yellow); }
+  .opener h1, .opener h2 { font-family: var(--display); font-weight: 600; line-height: 1.02; margin: 0; text-wrap: balance; }
+  .opener .sub { max-width: 36ch; line-height: 1.4; }
+  .cover { margin-inline: -16px; min-height: 420px; padding: 32px 28px 36px 44px; }
+  .cover h1 { font-size: clamp(44px, 9vw, 72px); max-width: 12ch; }
+  .cover .sub { font-size: 18px; }
+  .cover .kicker { position: absolute; top: 26px; left: 44px; }
+  .cover .cassette { position: absolute; top: 16px; right: 18px; width: 88px; height: auto; }
+  .part { margin: 64px calc(-1 * (var(--margin) + var(--gap))) 28px 0; min-height: 230px; padding: 24px 24px 24px 40px; clear: both; }
+  .part h2 { font-size: clamp(30px, 6vw, 44px); }
+  .part .sub { font-size: 15px; }
+  .part .letter { position: absolute; right: 18px; bottom: -12px; font: 600 150px/1 var(--display); color: var(--yellow); }
+
+  /* Tekstvak met kantlijn */
+  .flow { padding-right: calc(var(--margin) + var(--gap)); }
+  .flow > p { max-width: var(--text); }
+  .flow > p { text-indent: 1.4em; }
+  .flow > .intro, .flow > .head + p, .flow > .head + aside + p, .flow > .head + figure + p { text-indent: 0; }
+  .head { margin: 40px 0 10px; max-width: var(--text); }
+  .head .label { font: 11px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--red); margin: 0 0 4px; }
+  .head h3 { font: 600 22px/1.15 var(--display); margin: 0; text-wrap: balance; }
+  .intro { font-size: 18px; line-height: 1.6; }
+
+  /* Kantlijn: luistertips, beeld, citaten, QR */
+  .side-note, .side-fig, .side-quote { float: right; clear: right; width: var(--margin); margin: 6px calc(-1 * (var(--margin) + var(--gap))) 18px 0; }
+  .side-note { border-left: 2px solid var(--yellow); padding-left: 10px; font-size: 12.5px; line-height: 1.4; color: var(--ink-soft); }
+  .side-note .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .side-note .rec { display: grid; grid-template-columns: 40px 1fr; gap: 8px; align-items: center; margin-bottom: 6px; }
+  .side-note .rec img { width: 40px; height: 40px; border-radius: 2px; }
+  .side-note .who { color: var(--ink); font-weight: 600; }
+  .side-note .qr { width: 96px; height: 96px; margin: 4px 0 6px; }
+  .side-note .qr img, .side-note .qr canvas { width: 100% !important; height: 100% !important; }
+  .side-fig img { display: block; width: 100%; border: 4px solid #FFFFFF; box-shadow: 0 3px 12px rgba(0,0,0,.18); transform: rotate(2deg); }
+  .side-fig figcaption { font: 600 20px/1.05 var(--hand); color: var(--red); text-align: center; margin-top: 8px; }
+  .side-quote { font: 500 17px/1.25 var(--display); color: var(--red); border-top: 2px solid var(--red); padding-top: 8px; }
+  .side-quote span { display: block; font: 11px/1.4 var(--mono); color: var(--ink-soft); margin-top: 6px; }
+
+  /* Achterin */
+  .back { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 8px; }
+  h4.backhead { font: 600 22px/1.15 var(--display); margin: 28px 0 0; }
+  .terms { columns: 2 240px; column-gap: 32px; margin: 12px 0 0; }
+  .terms div { break-inside: avoid; margin: 0 0 10px; }
+  .terms dt { font-weight: 600; }
+  .terms dd { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.45; }
+  .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px 32px; margin-top: 14px; }
+  .link-card { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: start; }
+  .link-card .qr { width: 112px; height: 112px; }
+  .link-card.lesson { grid-template-columns: 1fr; }
+  .link-card .qr img, .link-card .qr canvas { width: 100% !important; height: 100% !important; }
+  .link-card .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .link-card p { font-size: 14px; line-height: 1.45; }
+  .link-card .url { font: 11px/1.4 var(--mono); color: var(--ink-soft); word-break: break-all; margin-top: 6px; }
+  .colofon { margin-top: 36px; font-size: 12px; line-height: 1.5; color: var(--ink-soft); display: grid; gap: 6px; max-width: var(--text); }
+
+  @media screen and (max-width: 760px) {
+    .part { margin-right: 0; }
+    .flow { padding-right: 0; }
+    .side-note, .side-fig, .side-quote { float: none; width: auto; margin: 16px 0; }
+    .side-fig { max-width: 220px; }
+  }
+
+  /* Boek op A4 */
+  @page { size: A4; margin: 20mm 18mm 22mm 20mm; }
+  @page cover { margin: 0; }
+  @media print {
+    html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root { --text: 112mm; --margin: 44mm; --gap: 8mm; }
+    body { padding: 0; font-size: 9.6pt; line-height: 1.55; }
+    .book { max-width: none; }
+    p { orphans: 3; widows: 3; }
+    .cover { page: cover; margin: 0; height: 296mm; padding: 0 22mm 32mm 26mm; break-after: page; }
+    .cover .kicker { top: 18mm; left: 26mm; font-size: 8pt; }
+    .cover .cassette { top: 14mm; right: 16mm; width: 28mm; }
+    .cover h1 { font-size: 56pt; }
+    .cover .sub { font-size: 14pt; }
+    .opener .bar { width: 5mm; }
+    .part { margin: 0 calc(-1 * (var(--margin) + var(--gap))) 6mm 0; height: 70mm; min-height: 0; padding: 0 50mm 8mm 12mm; break-before: page; break-after: avoid; }
+    .part .kicker { font-size: 7.5pt; }
+    .part h2 { font-size: 26pt; }
+    .part .sub { font-size: 10pt; }
+    .part .letter { font-size: 100pt; right: 8mm; bottom: -5mm; }
+    .first-part { break-before: auto; margin-top: 10mm; }
+    .head { margin: 8mm 0 2.5mm; break-after: avoid; break-inside: avoid; }
+    .head .label { font-size: 6.8pt; }
+    .head h3 { font-size: 14pt; }
+    .intro { font-size: 11pt; }
+    .side-note { font-size: 7.6pt; padding-left: 3mm; margin-top: 1mm; margin-bottom: 5mm; break-inside: avoid; }
+    .side-note .tag { font-size: 6.2pt; margin-bottom: 2mm; }
+    .side-note .rec { grid-template-columns: 11mm 1fr; gap: 2.5mm; margin-bottom: 1.5mm; }
+    .side-note .rec img { width: 11mm; height: 11mm; }
+    .side-note .qr { width: 24mm; height: 24mm; }
+    .side-fig { margin-bottom: 5mm; break-inside: avoid; }
+    .side-fig figcaption { font-size: 13pt; }
+    .side-quote { font-size: 11pt; break-inside: avoid; }
+    .side-quote span { font-size: 6.5pt; }
+    .back { break-before: page; margin-top: 0; }
+    h4.backhead { font-size: 14pt; margin-top: 8mm; }
+    .terms { columns: 2; column-gap: 10mm; }
+    .terms div { margin-bottom: 2.5mm; }
+    .terms dd { font-size: 8.6pt; }
+    .terms div { break-inside: avoid; }
+    .links { grid-template-columns: 1fr 1fr; gap: 8mm; break-inside: avoid; }
+    .link-card { grid-template-columns: 30mm 1fr; gap: 5mm; }
+    .link-card .qr { width: 30mm; height: 30mm; }
+    .link-card p { font-size: 8.8pt; }
+    .link-card .url { font-size: 6.8pt; }
+    .colofon { font-size: 7.5pt; margin-top: 10mm; }
+  }
+  .cover .cover-text { position: absolute; left: 44px; right: 28px; bottom: 36px; display: grid; gap: 10px; }
+  @media print { .cover { display: block !important; height: 294mm !important; } .cover .cover-text { left: 26mm; right: 22mm; bottom: 32mm; gap: 4mm; } }</style><style>
+  body.chapter { padding-top: 0; }
+  body.chapter .sitenav { margin-inline: -16px; }
+  .deck { margin: 0 -16px; background: #1C1B19; color: #fff; padding: 18px 20px 20px; display: grid; gap: 14px; }
+  .deck-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .deck .lbl { font: 11px/1.4 "Space Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: #F2D500; min-width: 7.5em; }
+  .deck .lesson { font: 500 16px/1.3 "Oswald", sans-serif; }
+  .deck .btn { padding: 10px 14px; font-size: 14px; }
+  .deck .btn.ghost { color: #fff; border-color: #55524C; }
+  .deck-embed { margin: 0; }
+  .deck-embed iframe { border-radius: 8px; display: block; }
+  .lu-modal { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 16px; background: rgba(18,17,16,.82); }
+  .lu-modal[hidden] { display: none; }
+  .lu-box { position: relative; width: min(1280px, 100%, calc((100vh - 110px) * 1.6)); display: grid; gap: 10px; }
+  .lu-bar { display: flex; align-items: center; gap: 10px; color: #fff; }
+  .lu-bar b { font: 600 18px/1.2 "Oswald", sans-serif; margin-right: auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lu-bar button { font: 12px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #fff; background: #2A2825; border: 1px solid #55524C; border-radius: 4px; padding: 9px 12px; cursor: pointer; }
+  .lu-bar .lu-close { background: #F2D500; color: #1C1B19; border-color: #F2D500; font-weight: 700; }
+  .lu-frame { position: relative; aspect-ratio: 16 / 10; background: #000; border-radius: 8px; overflow: hidden; }
+  .lu-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .lu-frame:fullscreen { border-radius: 0; }
+  .lu-cover { position: absolute; right: 8px; bottom: 8px; width: 160px; height: 46px; z-index: 2; display: flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 10px; background: #F2D500; color: #1C1B19; font: 700 15px/1 "Oswald", sans-serif; letter-spacing: .03em; text-transform: uppercase; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.25); }
+  .lu-cover:hover { background: #FFE34D; }
+  .deck-embed.lu { position: relative; aspect-ratio: 16 / 10; max-height: 85vh; background: #000; border-radius: 8px; overflow: hidden; }
+  .deck-embed.lu[hidden] { display: none; }
+  .deck-help { margin: -4px 0 0; font: 12px/1.4 "Space Mono", monospace; color: #9C978D; }
+  .deck-help a { color: #F2D500; }
+  .deck-help[hidden] { display: none; }
+  .deck-embed.lu:fullscreen { aspect-ratio: auto; max-height: none; border-radius: 0; }
+  .deck-embed.lu iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0; }
+  .deck-genres { display: flex; flex-wrap: wrap; gap: 6px; }
+  .gchip { --c: #999; display: inline-flex; align-items: center; gap: 7px; text-decoration: none; font: 13px/1 "Inter", sans-serif; padding: 7px 10px; border-radius: 999px; background: #2A2825; color: #fff; }
+  .gchip i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+  .gchip span { color: #9C978D; font-family: "Space Mono", monospace; font-size: 11px; }
+  .gchip:hover { background: #3A3833; }
+  .side-note .rec { grid-template-columns: 52px 1fr; gap: 10px; }
+  .side-note .rec-cover { position: relative; display: block; width: 52px; height: 52px; }
+  .side-note .rec .rec-cover img { display: block; width: 52px; height: 52px; object-fit: cover; }
+  .side-note .rec-cover .sor-play { position: absolute; right: -7px; bottom: -7px; width: 28px; height: 28px; box-shadow: 0 2px 6px rgba(0,0,0,.3); }
+  .side-note .rec-cover.no-img { display: grid; place-items: center; background: #EDE9E1; border-radius: 2px; }
+  .side-note .rec-cover.no-img .sor-play { position: static; }
+  .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 48px 0 0; }
+  .pager a { display: grid; gap: 4px; padding: 16px; border: 1px solid #DDD8CE; border-radius: 4px; text-decoration: none; }
+  .pager a:hover { border-color: #1C1B19; }
+  .pager .next { text-align: right; }
+  .pager small { font: 11px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #D63A31; }
+  .pager b { font: 600 18px/1.15 "Oswald", sans-serif; }
+  .mt-step { position: fixed; top: 50%; z-index: 40; display: flex; align-items: center; gap: 10px; text-decoration: none; transform: translateY(-50%); }
+  .mt-step.prev { left: 14px; } .mt-step.next { right: 14px; flex-direction: row-reverse; }
+  .mt-step i { flex: none; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: #1C1B19; color: #F2D500; font-style: normal; line-height: 0; box-shadow: 0 6px 18px rgba(0,0,0,.18); transition: transform .15s; }
+  .mt-step span { background: #1C1B19; color: #fff; border-radius: 4px; padding: 8px 10px; font: 600 14px/1.2 "Oswald", sans-serif; max-width: 220px; opacity: 0; pointer-events: none; transition: opacity .15s; }
+  .mt-step span small { display: block; font: 10px/1.2 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #F2D500; margin-bottom: 3px; }
+  .mt-step:hover i, .mt-step:focus-visible i { transform: scale(1.08); }
+  .mt-step:hover span, .mt-step:focus-visible span { opacity: 1; }
+  @media (max-width: 1100px) { .mt-step { top: auto; bottom: 14px; transform: none; } body:has(.sor-player:not([hidden])) .mt-step { bottom: 96px; } .mt-step span { display: none; } .mt-step i { width: 42px; height: 42px; } }
+  @media print { .sitenav, .deck, .pager, .sitefoot, .mt-step { display: none !important; } }
+</style><style>
+:root { --red: #1E488C; --yellow: #E9B44C; }
+.opener .wash { background-color: rgba(30,72,140,.66) !important; }
+.opener .shade { background-color: rgba(10,22,44,.40) !important; }
+@media print { .first-part { break-before: page !important; margin-top: 0 !important; } }
+
+  body .sor-play { background: #1E488C; }
+  .deck .lbl { color: #E9B44C; }
+  .deck .btn.solid { background: #E9B44C; border-color: #E9B44C; color: #1C1B19; }
+  .mt-step i { color: #E9B44C; }
+  .pager small { color: #1E488C; }
+</style><script src="../../assets/player.js"></script><script src="../../assets/nav.js"></script></head><body class="chapter" data-mixtape="film-2"><header class="sitenav"><a class="brand" href="../index.html"><img src="../assets/icon.svg" alt=""><span>De Droomfabriek</span></a><nav aria-label="Hoofdmenu"><a href="../index.html" aria-current="page">Filmrollen</a><a href="../kaart.html">Kaart</a><a href="../begrippen.html">Begrippen</a><a href="../pdf/droomfabriek-reader.pdf">Reader (pdf)</a></nav></header><div class="book">
+
+<header class="opener cover" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/8/83/King_Kong_Fay_Wray_1933.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+  <p class="kicker">De Droomfabriek · Filmrol 2</p>
+  <img class="cassette" src="../assets/icon.svg" alt="">
+  <div class="cover-text"><h1>Het studio-orkest</h1>
+  <p class="sub">Hollywood Golden Age: het studio-orkest, van King Kong tot Taxi Driver, ca. 1933–1976.</p></div>
+</header>
+<div class="deck" aria-label="Bij dit hoofdstuk">
+  <div class="deck-row"><span class="lbl">Luisteren</span><a class="btn solid deck-toggle" data-target="sp" href="https://open.spotify.com/playlist/0VzsKJ17QSJWVgKqi7e8k8" data-embed="https://open.spotify.com/embed/playlist/0VzsKJ17QSJWVgKqi7e8k8?utm_source=generator" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Spotify-playlist</a><a class="btn ghost" href="https://open.spotify.com/playlist/0VzsKJ17QSJWVgKqi7e8k8" target="_blank" rel="noopener">Open in Spotify</a><a class="btn ghost" href="../pdf/droomfabriek-filmrol-02.pdf" download>Download pdf</a></div>
+  <div class="deck-embed" data-name="sp" hidden></div>
+  <div class="deck-row"><span class="lbl">Les</span><a class="btn solid deck-toggle" href="https://www.lessonup.com/nl/lesson/zzd63AAC87GgAscrc" data-embed="https://www.lessonup.com/app/teach-v2/searchembed/zzd63AAC87GgAscrc?lang=nl" data-target="lu" data-title="De Droomfabriek · Filmrol 2: Het studio-orkest" aria-haspopup="dialog"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Open de les</a></div>
+  <div class="deck-row"><span class="lbl">Op de kaart</span><a class="btn ghost" href="../kaart.html">Naar de filmmuziekkaart</a></div>
+</div>
+
+<section class="flow">
+  <aside class="side-note"><span class="tag">LUISTER MEE</span><div class="qr" data-url="https://open.spotify.com/playlist/0VzsKJ17QSJWVgKqi7e8k8"></div>Alle fragmenten uit dit hoofdstuk staan op volgorde in de Spotify-playlist bij Filmrol 2.</aside>
+  <p class="intro">In de jaren dertig werkte Hollywood als een fabriek. Een handvol grote studio's, zoals Warner Bros., MGM, Paramount, RKO en 20th Century Fox, maakte samen honderden films per jaar. Elke studio had eigen acteurs, regisseurs, decorbouwers en een eigen muziekafdeling, met een vast orkest, arrangeurs, kopiisten en componisten in loondienst. Dat <strong>studiosysteem</strong> bepaalde hoe filmmuziek werd gemaakt: snel, in teamverband en op maat van de montage. Een componist kreeg de film vaak pas als die bijna af was, en had dan een paar weken om een uur of meer muziek te schrijven.</p>
+  <p>De mensen die deze muziek schreven, kwamen voor een groot deel uit Europa. Max Steiner en Erich Wolfgang Korngold waren in Wenen opgegroeid, Franz Waxman kwam uit Duitsland, Miklós Rózsa uit Hongarije, Dimitri Tiomkin uit Rusland. Ze brachten de taal mee van Wagner, Richard Strauss, Puccini en de operette: een groot symfonieorkest, brede melodieën in de strijkers, koperfanfares en het <strong>leidmotief</strong>, een kort thema dat bij een personage, een plek of een idee hoort en steeds terugkomt. Daarnaast ontstond een Amerikaans tegengeluid, met open, sobere klanken voor het platteland en de western.</p>
+  <p>Vanaf de jaren vijftig begon dat klassieke model te schuren. Bernard Herrmann bouwde zijn muziek uit korte cellen in plaats van lange melodieën, componisten met een moderne opleiding brachten twaalftoonstechniek en clusters naar de studio, en de regisseurs van New Hollywood gebruikten muziek spaarzamer. Rond 1976 was de doorlopende orkestscore niet verdwenen, maar ze was niet meer vanzelfsprekend.</p>
+
+  <!-- AKTE 1 -->
+  <header class="opener part first-part" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/2/20/The_Adventures_of_Robin_Hood_1938_Trailer.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Akte 1 · 1931-1949</p>
+    <h2>De studio als orkest</h2>
+    <p class="sub">Het symfonische model en een eigen Amerikaans tegengeluid.</p>
+    <span class="letter" aria-hidden="true">1</span>
+  </header>
+
+  <div class="head"><p class="label">Scène 01 · 1933-1942 · Los Angeles</p><h3>Een monster krijgt een thema</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Max_Steiner_%28c._1945%29.png" alt="Max Steiner"><figcaption>Max Steiner, rond 1945</figcaption></figure>
+  <p>Toen de geluidsfilm rond 1930 doorbrak, wisten de studio's niet goed wat ze met muziek moesten doen. Muziek die uit het niets klonk, zonder orkest in beeld, vonden veel producenten verwarrend. Het publiek zou zich afvragen waar die vandaan kwam. In de eerste geluidsfilms klonk daarom vooral muziek die in het verhaal zelf hoorde: een band in een nachtclub, een radio, een zanger. Muziek die alleen de kijker hoort en de personages niet, de <strong>underscore</strong>, bleef beperkt tot de begin- en eindtitels.</p>
+  <p>Max Steiner veranderde dat. Hij werd in 1888 in Wenen geboren, in een theaterfamilie: zijn grootvader leidde het Theater an der Wien. Hij werkte als dirigent van operettes in Europa en daarna op Broadway, waar hij musicals orkestreerde en dirigeerde. In 1929 kwam hij naar Hollywood, waar hij bij RKO de muziekafdeling ging leiden. Zijn ervaring met het theater was precies wat de film nodig had: hij wist hoe je muziek laat beginnen en stoppen op het moment dat een acteur opkomt of een scène omslaat.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/08/cf/80/08cf802b-2b13-4593-6f0a-16faaf92f685/mzaf_9013002083935783506.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music/96/73/93/mzi.rtxitkdv.jpg/600x600bb.jpg" alt=""><div><span class="who">National Philharmonic Orchestra &amp; Charles Gerhardt</span><br>Film: King Kong (1933)</div></div>Hoor hoe het orkest het monster al aankondigt voordat je het ziet.</aside>
+  <p>Het grote voorbeeld werd <em>King Kong</em> (1933), van regisseurs Merian C. Cooper en Ernest B. Schoedsack. In de scènes in New York aan het begin klinkt nauwelijks muziek. Pas als het schip in de mist het eiland nadert, zet het orkest in, en vanaf dan houdt het bijna niet meer op. Steiner liet horen wat een doorlopende orkestscore in een geluidsfilm kon doen. De muziek bouwt spanning op voordat er iets te zien is, schetst het eiland met trommels en dansritmes voor de inwoners, en geeft het monster een eigen thema: een zwaar, dalend motief in het lage koper. Als Kong later in New York op het Empire State Building staat, komt dat thema terug, nu niet meer dreigend maar bijna treurig. Het publiek hoort aan de muziek dat het om hetzelfde wezen gaat, ook al is de situatie veranderd.</p>
+  
+  <p>In <em>King Kong</em> zitten de kenmerken die de klassieke Hollywoodscore zouden bepalen. Er is een groot symfonieorkest, met weelderige strijkers en koperfanfares. Er zijn leidmotieven, zoals bij Wagner: elk belangrijk personage krijgt een thema dat terugkeert en verandert. En de muziek volgt de actie heel precies. Als iemand een trap afloopt, dalen de noten mee; als iemand valt, valt de muziek. Die manier van werken heet <strong>mickey-mousing</strong>, naar de tekenfilms van Walt Disney, waarin elke beweging een muzikaal accent kreeg. Steiner deed dit zo vaak dat het als een kenmerk van zijn stijl ging gelden. Om zo nauwkeurig te kunnen werken, nam hij de lengte van elke scène op in seconden en schreef hij zijn muziek daarop. Bij de opname gebruikte hij als een van de eersten in de speelfilm een <strong>click track</strong>: een tikkend metronoomsignaal in de koptelefoon van de dirigent, afgestemd op het aantal beeldjes per seconde. Tekenfilmcomponisten werkten al eerder zo.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c8/1f/d8/c81fd8cc-3099-3708-91d5-74936bb7b17e/mzaf_10298093713606785811.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/12/4b/b8/124bb88e-69f7-5f18-459c-c76c37682503/794043166815.jpg/600x600bb.jpg" alt=""><div><span class="who">Max Steiner</span><br>Film: Gone with the Wind (1939)</div></div>Het Tara-thema: een plek wordt een melodie die steeds terugkeert.</aside>
+  <p>In 1937 stapte Steiner over naar Warner Bros., waar hij tot in de jaren zestig bleef werken. Hij schreef in totaal ruim driehonderd scores en won drie Oscars, voor <em>The Informer</em> (1935), <em>Now, Voyager</em> (1942) en <em>Since You Went Away</em> (1944). Voor producent David O. Selznick schreef hij de muziek bij <em>Gone with the Wind</em> (1939), een film van bijna vier uur. Het hoofdthema hoort niet bij een persoon maar bij een plek: Tara, de plantage van de familie van Scarlett O'Hara. Het is een brede, zingende melodie met grote sprongen omhoog, gespeeld door de volle strijkers. Steeds als Scarlett aan haar huis denkt of ernaar terugkeert, klinkt dat thema. Aan het eind van de film, als ze alles kwijt is behalve de grond, wordt het thema het laatste woord.</p>
+  
+  <p>In <em>Casablanca</em> (1942) van Michael Curtiz deed Steiner iets anders. Het lied <em>As Time Goes By</em>, geschreven door Herman Hupfeld in 1931, wordt in de film door pianist Sam gespeeld en gezongen: het hoort dus in het verhaal. Steiner nam de melodie over in zijn orkestscore en liet die terugkomen in allerlei vormen, als liefdesthema, als herinnering en als spijt. Ook het Franse volkslied <em>La Marseillaise</em> en het Duitse volkslied, het <em>Deutschlandlied</em>, gebruikte hij als motieven voor de twee kampen in de film. Het Duitse lied klinkt bij hem in mineur, als dreiging. Zo vlocht hij bestaande muziek in een eigen score.</p>
+  <p>Steiner wordt vaak de vader van de Hollywood-filmmuziek genoemd. Dat is niet omdat hij de eerste was, maar omdat zijn werkwijze het model werd dat iedereen overnam. Hij bleef die werkwijze trouw tot in de jaren vijftig, onder meer in de western <em>The Searchers</em> (1956) van John Ford.</p>
+
+  <div class="head"><p class="label">Scène 02 · 1935-1942 · Wenen, Los Angeles</p><h3>Korngold: opera zonder zang</h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Erich_Wolfgang_Korngold%2C_1897-1957%2C_bust_portrait%2C_facing_left_LCCN2005689510.jpg/960px-Erich_Wolfgang_Korngold%2C_1897-1957%2C_bust_portrait%2C_facing_left_LCCN2005689510.jpg" alt="Erich Wolfgang Korngold"><figcaption>Erich Wolfgang Korngold</figcaption></figure>
+  <p>Waar Steiner uit het theater kwam, kwam Erich Wolfgang Korngold uit de concertzaal en het operahuis. Hij werd in 1897 in Brno geboren en groeide op in Wenen, als zoon van Julius Korngold, de gevreesde muziekcriticus van de grootste Weense krant. Als kind gold hij al als wonderkind. Gustav Mahler hoorde zijn vroege werk en raadde hem aan te gaan studeren bij Alexander Zemlinsky. Zijn ballet <em>Der Schneemann</em>, dat hij als elfjarige schreef, werd in 1910 in de Weense Hofoper opgevoerd. Zijn opera <em>Die tote Stadt</em> (1920) werd een internationaal succes en in tientallen operahuizen gespeeld.</p>
+  <p>In 1934 haalde de Oostenrijkse theaterregisseur Max Reinhardt hem naar Hollywood. Reinhardt verfilmde voor Warner Bros. Shakespeares <em>A Midsummer Night's Dream</em> (1935) en wilde dat Korngold de muziek van Felix Mendelssohn voor de film bewerkte. Daarna kreeg Korngold een contract bij Warner. Hij pendelde een paar jaar tussen Wenen en Los Angeles, tot de Anschluss in 1938: toen Duitsland Oostenrijk inlijfde, was hij in Hollywood, en hij bleef daar. Als componist van Joodse afkomst kon hij niet meer terug.</p>
+  <p>Korngold zei zelf dat hij voor de film schreef zoals voor de opera, alleen zonder zang. Dat hoor je. Zijn scores hebben de rijke, chromatische harmonieën van Richard Strauss en Puccini: akkoorden met veel extra tonen, modulaties naar verre toonsoorten, melodieën die lang uitzingen. Hij schreef zijn muziek vaak aan de piano terwijl de film werd vertoond, zodat hij precies wist wat er in beeld gebeurde. En hij behandelde de dialoog als een zangstem: de muziek wordt zachter als er gesproken wordt en zwelt aan in de pauzes. Zijn vaste orkestrator, Hugo Friedhofer, werkte zijn schetsen uit voor het volledige orkest. Zo'n <strong>orkestrator</strong> was in het studiosysteem onmisbaar, omdat componisten anders nooit op tijd klaar waren.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/7c/d6/17/7cd617f4-5419-cb95-5771-2fbd71add12d/mzaf_7333874962413272004.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music1/v4/a8/83/72/a883729f-3f6d-d976-a7aa-89a38ef12738/747313336975.jpg/600x600bb.jpg" alt=""><div><span class="who">Erich Wolfgang Korngold</span><br>Film: The Adventures of Robin Hood (1938)</div></div>Fanfares en zwierige strijkers: avontuur als opera zonder woorden.</aside>
+  <p>Korngold is vooral bekend van de avonturenfilms die Warner rond acteur Errol Flynn maakte. <em>Captain Blood</em> (1935) en <em>The Sea Hawk</em> (1940) zijn zwierige piratenfilms, met zeilschepen, zwaardgevechten en een romance. De muziek heeft fanfares in de trompetten en hoorns, snelle loopjes in de strijkers voor de gevechten, en een warme liefdesmelodie, vaak voor de violen of een solo-instrument.</p>
+  
+  <p>Zowel <em>Anthony Adverse</em> (1936) als <em>The Adventures of Robin Hood</em> (1938) werd met een Oscar voor de muziek bekroond. Die tweede score laat goed horen hoe hij werkte. Robin Hood heeft een eigen thema, een opgewekte mars; Maid Marian krijgt een romantische melodie; voor de schurken klinkt donkerder, chromatisch materiaal. In de gevechtsscènes wisselen die thema's elkaar snel af, terwijl de muziek tegelijk de klappen van de zwaarden volgt.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/56/b3/67/56b36787-9fd5-8057-576a-8d9d055c784e/mzaf_16983624549972805413.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music/5b/e8/f6/mzi.fjmzqghk.jpg/600x600bb.jpg" alt=""><div><span class="who">National Philharmonic Orchestra &amp; Charles Gerhardt</span><br>Film: Kings Row (1942)</div></div>Luister naar de sprong omhoog in het thema en vergelijk die met John Williams.</aside>
+  <p>In 1942 schreef Korngold de muziek voor <em>Kings Row</em>, een drama over een kleine Amerikaanse stad, met Ronald Reagan in een van de hoofdrollen. Het hoofdthema begint met een fanfare die met een grote sprong omhoog gaat en daarna breed uitzingt in het koper. Dat thema wordt vaak genoemd als voorbeeld voor de stijl van John Williams, die in de jaren zeventig de symfonische filmmuziek terugbracht (zie Filmrol 7). Wie het begin van <em>Kings Row</em> naast de titelmuziek van <em>Star Wars</em> legt, hoort waarom.</p>
+  
+  <p>Na de oorlog wilde Korngold terug naar de concertzaal. Zijn vioolconcert uit 1945, in 1947 gespeeld door Jascha Heifetz, gebruikt thema's uit zijn eigen films. Veel critici vonden dat in die tijd ouderwets en te veel 'Hollywood'. Korngold overleed in 1957 in Los Angeles. Pas later kreeg zijn werk opnieuw aandacht, onder meer door de plaatopnamen die zijn zoon George Korngold en dirigent Charles Gerhardt in de jaren zeventig maakten met het National Philharmonic Orchestra in Londen. Veel luistertips in dit hoofdstuk komen uit die reeks.</p>
+
+  <div class="head"><p class="label">Scène 03 · 1931-1953 · New Haven, Berlijn, Los Angeles</p><h3>Fanfare, Newman-sound en Frankenstein</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Alfred_Newman.jpg" alt="Alfred Newman"><figcaption>Alfred Newman als jonge pianist, 1914</figcaption></figure>
+  <p>Niet alle grote namen van de Golden Age kwamen uit Europa. Alfred Newman werd in 1900 geboren in New Haven, in de Amerikaanse staat Connecticut, als oudste van tien kinderen. Hij speelde al jong piano in theaters om het gezin te helpen onderhouden en werd daarna dirigent op Broadway. In 1930 kwam hij naar Hollywood, waar hij eerst voor producent Samuel Goldwyn werkte.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ea/30/2a/ea302a87-fe58-985b-e605-e88456a941f1/mzaf_7948362497303670011.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music/23/3c/4c/mzi.tgvfamgr.jpg/600x600bb.jpg" alt=""><div><span class="who">National Philharmonic Orchestra &amp; Charles Gerhardt</span><br>Film: Street Scene (1931)</div></div>De studiofanfare van Fox, gevolgd door Newmans jazzy stadsthema.</aside>
+  <p>Een van zijn eerste scores was <em>Street Scene</em> (1931) van King Vidor, een film over één straat in New York op één warme zomerdag. Newman schreef er een stadsthema voor met een jazzy ritme en bluesachtige wendingen, een beetje in de geest van George Gershwin. Dat thema bleek zo bruikbaar dat Fox het later steeds opnieuw inzette als het een film in New York wilde laten beginnen, bijvoorbeeld in <em>How to Marry a Millionaire</em> (1953).</p>
+  <p>Het stuk muziek van Newman dat de meeste mensen kennen, duurt maar een paar seconden: de fanfare die klinkt bij het logo van 20th Century Fox. Hij schreef die in 1933 voor 20th Century Pictures, dat later opging in 20th Century Fox, met roffels op de kleine trom en een stralend motief in de trompetten. Toen Fox het breedbeeldsysteem CinemaScope invoerde, kreeg de fanfare een verlengd slot. Vanaf 1940 leidde Newman de muziekafdeling van Fox, twintig jaar lang. Hij componeerde zelf, maar hij dirigeerde ook de scores van anderen en bepaalde de klank van het studio-orkest.</p>
+  
+  <p>Die klank kreeg een eigen naam: de <strong>Newman-sound</strong>, een warme, glanzende strijkersklank. De violen spelen met veel vibrato en lange, zingende lijnen, vaak in hoge ligging. Wie een Fox-film uit de jaren veertig of vijftig hoort, herkent die volle, zachte strijkersklank meteen. Newman schreef onder meer <em>Wuthering Heights</em> (1939), <em>The Song of Bernadette</em> (1943) en <em>The Robe</em> (1953), de eerste film in CinemaScope. Hij won negen Oscars, meer dan enige andere filmcomponist. Ook de familie bleef in het vak: zijn zonen Thomas en David en zijn neef Randy werden filmcomponisten (zie Filmrol 3 en 7).</p>
+  <p>Franz Waxman had een heel andere achtergrond. Hij werd in 1906 geboren in Königshütte, in het toenmalige Duitsland, en werkte in Berlijn als pianist en arrangeur voor jazzbands en cabaret. Hij orkestreerde onder meer muziek van Friedrich Hollaender voor <em>Der blaue Engel</em> (1930). In 1934 werd hij in Berlijn door nazi's aangevallen. Hij vertrok kort daarna via Parijs naar Hollywood.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/Music/1c/64/a0/mzm.pcikqfms.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music/00/c1/4c/mzi.tlcbaslv.jpg/600x600bb.jpg" alt=""><div><span class="who">National Philharmonic Orchestra &amp; Charles Gerhardt</span><br>Film: Bride of Frankenstein (1935)</div></div>Griezel met knipoog: hoor de kleurrijke orkestratie bij de schepping.</aside>
+  <p>Zijn eerste grote Amerikaanse score was <em>Bride of Frankenstein</em> (1935) van James Whale, het vervolg op <em>Frankenstein</em> uit 1931. Waxman combineerde griezel en humor, zoals de film zelf dat ook doet. In de scène waarin de vrouwelijke creatuur tot leven wordt gewekt, bouwt hij spanning op met een herhaald ritme in de pauken, dat klinkt als een kloppend hart, en met steeds dichtere lagen in het orkest. Voor de bruid zelf schreef hij een zacht, lyrisch thema van drie noten in de strijkers en houtblazers, versierd met glissandi op de harp. Die kleurrijke orkestratie, met ongewone combinaties van instrumenten, werd zijn handelsmerk.</p>
+  
+  <p>Waxman werkte veel met Alfred Hitchcock, onder meer aan <em>Rebecca</em> (1940) en <em>Rear Window</em> (1954). Zijn Berlijnse ervaring met jazz nam hij mee: hij gebruikte jazz al vroeg als serieuze klankkleur in een orkestscore, niet alleen als achtergrond in een nachtclubscène. Voor <em>Sunset Boulevard</em> (1950) en <em>A Place in the Sun</em> (1951) won hij twee jaar na elkaar een Oscar. In 1947 richtte hij in Los Angeles een muziekfestival op, waar hij nieuwe concertmuziek dirigeerde. Daarmee was hij een van de filmcomponisten die de brug naar de moderne muziek openhield.</p>
+
+  <div class="head"><p class="label">Scène 04 · 1936-1949 · New York, Hollywood</p><h3>Americana: open kwinten, open land</h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Aaron_Copland%2C_1930.jpg/960px-Aaron_Copland%2C_1930.jpg" alt="Aaron Copland"><figcaption>Aaron Copland, 1930</figcaption></figure>
+  <p>Terwijl Hollywood klonk als Wenen, zochten Amerikaanse concertcomponisten in de jaren dertig naar een eigen geluid. Dat geluid, dat later <strong>americana</strong> werd genoemd, ontstond in de concertzaal en kwam niet via de grote studio's de film in, maar via de documentaire.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/Music6/v4/5f/b8/bf/5fb8bf1c-c7b3-9bf0-7355-c7a58c2d3598/mzaf_3860309446928229932.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/24/de/63/24de6303-098f-6c3d-40f5-0d5fa60df0cf/The_Blow_That_Broke_frontcover_2400.jpg/600x600bb.jpg" alt=""><div><span class="who">Virgil Thomson</span><br>Film: The Plow That Broke the Plains (1936)</div></div>Cowboyliedjes in de concertzaal: eenvoud als stijlkeuze.</aside>
+  <p>In 1936 maakte regisseur Pare Lorentz in opdracht van de Amerikaanse overheid <em>The Plow That Broke the Plains</em>, een documentaire over de Dust Bowl: de stofstormen die in de jaren dertig de uitgeputte landbouwgrond van de Great Plains wegbliezen. De muziek kwam van Virgil Thomson, een componist en criticus die, net als veel Amerikanen van zijn generatie, in Parijs had gestudeerd. Thomson gebruikte materiaal dat iedereen in Amerika kende: hymnes uit de kerk, cowboyliedjes, volksdansen. Hij zette ze in eenvoudige harmonieën, met heldere blazers en weinig chromatiek. Die eenvoud was een bewuste keuze. Het moest klinken als het land zelf, niet als een Europees operahuis. Twee jaar later schreef Thomson de muziek voor Lorentz' volgende documentaire, <em>The River</em> (1938). Voor <em>Louisiana Story</em> (1948) van Robert Flaherty kreeg hij als eerste filmcomponist een Pulitzerprijs.</p>
+  
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/10/26/65/1026651e-8e75-e0b1-2393-9b7d2dd29a31/mzaf_428198366631223335.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/76/31/82/763182bc-d5bd-0e1b-adb3-6490870363de/196871531030.jpg/600x600bb.jpg" alt=""><div><span class="who">Aaron Copland</span><br>Film: Of Mice and Men (1939)</div></div>Hoor de ruimte tussen de instrumenten: zo klinkt het platteland.</aside>
+  <p>De componist die dit geluid naar Hollywood bracht, was Aaron Copland. Hij werd in 1900 in Brooklyn geboren, als zoon van Joodse immigranten uit Litouwen, en studeerde in Parijs bij Nadia Boulanger, de lerares van een hele generatie Amerikaanse componisten. Eind jaren dertig was hij een bekende concertcomponist, met balletten als <em>Billy the Kid</em> (1938). Hij begon in de film met de documentaire <em>The City</em> (1939), over stadsplanning in Amerika. Daarna volgden twee speelfilms: <em>Of Mice and Men</em> (1939) van Lewis Milestone, naar de roman van John Steinbeck over twee landarbeiders, en <em>Our Town</em> (1940), naar het toneelstuk van Thornton Wilder over een klein stadje.</p>
+  <p>Copland verzette zich tegen de dikke, doorlopende orkestklank van Hollywood. Hij vond dat de muziek niet elke beweging hoefde te volgen en schreef liever minder muziek, maar met een duidelijke eigen kleur. Zijn stijl is doorzichtig. Hij gebruikt <strong>open kwinten</strong> en kwarten: samenklanken zonder terts, die daardoor niet duidelijk majeur of mineur zijn en leeg en weids klinken. Tussen de hoge en lage instrumenten laat hij veel ruimte open, zodat je een fluit of een trompet boven een paar lage strijkers hoort zonder dat er iets tussen zit. De melodieën zijn eenvoudig en liedachtig, het tempo is meestal rustig. Zo klinkt bij Copland het platteland: veel ruimte en weinig mensen.</p>
+  
+  <p>Copland bewerkte delen van zijn filmmuziek tot concertstukken. In <em>Music for Movies</em> (1942) bundelde hij fragmenten uit <em>The City</em>, <em>Of Mice and Men</em> en <em>Our Town</em>. Van <em>The Red Pony</em> (1949), weer naar Steinbeck, maakte hij een orkestsuite. Voor <em>The Heiress</em> (1949) van William Wyler, een kostuumdrama naar een roman van Henry James, kreeg hij in 1950 een Oscar. Ook daar liet hij horen dat een sobere, doorzichtige orkestklank genoeg is om de gevoelens van een personage te dragen.</p>
+  <p>Zijn filmwerk is niet groot in omvang, maar de invloed is groot. De open klank van Copland werd het model voor westernmuziek en voor de 'Amerikaanse' filmklank in het algemeen. Als een film een weids landschap, een boerderij of een klein stadje wil laten horen, grijpen componisten tot vandaag terug naar open kwinten, heldere koperblazers en een eenvoudige melodie. In scène 06 hoor je hoe de western dat geluid overnam.</p>
+
+  <!-- AKTE 2 -->
+  <header class="opener part" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Lawrence_of_Arabia_train_attack_%28from_trailer%29_1.jpg/960px-Lawrence_of_Arabia_train_attack_%28from_trailer%29_1.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Akte 2 · 1944-1962</p>
+    <h2>Schaduw en breedbeeld</h2>
+    <p class="sub">Noir, western en epos geven Hollywood drie nieuwe muzikale gezichten.</p>
+    <span class="letter" aria-hidden="true">2</span>
+  </header>
+
+  <div class="head"><p class="label">Scène 05 · 1944-1950 · Los Angeles</p><h3>Film noir: chromatiek in de nacht</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Mikl%C3%B3s_R%C3%B3zsa_%26_Ginger_Rogers_Oscars_1946_%28cropped%29.jpg" alt="Miklós Rózsa"><figcaption>Miklós Rózsa bij de Oscaruitreiking, 1946</figcaption></figure>
+  <p>In 1946 zagen Franse filmcritici na de oorlog in korte tijd een reeks Amerikaanse misdaadfilms die tijdens de bezetting niet vertoond waren. Ze vielen op door hun donkere toon: nachtelijke straten, natte trottoirs, schaduwen van jaloezieën op de muur, hoofdpersonen die zich door een vrouw of door geld laten verleiden en daar niet meer uit komen. De critici noemden ze <strong>film noir</strong>, zwarte film. In Hollywood zelf gebruikte niemand dat woord; het was geen genre dat de studio's bewust maakten. Maar de muziek in deze films veranderde wel. Ze werd harder, onrustiger en minder romantisch.</p>
+  <p>De componist die die klank het sterkst bepaalde, was Miklós Rózsa. Hij werd in 1907 in Boedapest geboren en studeerde in Leipzig. Hij bleef zijn hele leven concertmuziek schrijven, en Hongaarse volksmuziek, met haar scherpe ritmes en modale melodieën, kleurde zijn stijl. Via Parijs kwam hij in Londen terecht, waar hij werkte voor de Hongaarse producent Alexander Korda. Met Korda's <em>The Thief of Bagdad</em> (1940), die vanwege de oorlog in Hollywood werd afgemaakt, kwam hij naar Amerika.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/fa/44/73/fa44736c-7216-4404-6eb3-e039b939bf47/mzaf_1179185364130124363.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music/v4/a4/2f/6c/a42f6cd4-5fb6-4ccf-8ab6-bb401ef30625/cover.jpg/600x600bb.jpg" alt=""><div><span class="who">Miklós Rózsa</span><br>Film: Double Indemnity (1944)</div></div>Let op de dreigende marsfiguur en de scherpe akkoorden.</aside>
+  <p>Voor <em>Double Indemnity</em> (1944) van Billy Wilder, over een verzekeringsagent die met een getrouwde vrouw haar man vermoordt, schreef Rózsa muziek die veel harder klonk dan het publiek van een Hollywoodfilm gewend was. Het hoofdthema is een dreigende marsfiguur in de lage strijkers en het koper, met een ritme dat voortsleept als een begrafenisstoet. Daarboven klinken scherpe, dissonante akkoorden die niet oplossen. Zo kwam een klank in de film die tot dan toe vooral in de concertzaal bestond.</p>
+  
+  <p>Twee jaar later volgde <em>The Killers</em> (1946) van Robert Siodmak, naar een verhaal van Ernest Hemingway. Rózsa schreef er een kort, hamerend motief van vier tonen voor, dat steeds klinkt als de huurmoordenaars in beeld komen. Dat motief werd later vrijwel letterlijk de herkenningsmelodie van de politieserie <em>Dragnet</em>. In <em>Spellbound</em> (1945) van Hitchcock gebruikte Rózsa een theremin, een elektronisch instrument, voor de verwarde geest van de hoofdpersoon; dat verhaal komt terug in Filmrol 5.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/11/2a/e3/112ae3e6-7ffd-c0be-538f-c61e203567db/mzaf_8095481720702441828.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/06/77/e7/0677e72b-4879-7d1a-15bb-d67c75b508ad/David_Raksin_-_Laura_Original_Motion_Picture_Soundtrack.jpg/600x600bb.jpg" alt=""><div><span class="who">David Raksin</span><br>Film: Laura (1944)</div></div>Eén thema, steeds anders gekleurd: van filmmuziek naar jazzstandard.</aside>
+  <p>Niet elke noirscore is hard. David Raksin schreef voor <em>Laura</em> (1944) van Otto Preminger, over een rechercheur die verliefd wordt op het portret van een vermoorde vrouw, één melancholiek thema dat bijna de hele film draagt. Raksin kleurde het steeds anders: op de piano, in de strijkers, als dansmuziek uit een radio, vervormd en dromerig als de rechercheur 's nachts alleen in haar appartement zit. Het thema zweeft harmonisch, met akkoorden die steeds een stap verschuiven en pas laat landen. Het werd zo populair dat Johnny Mercer er een tekst op schreef. Als lied werd <em>Laura</em> een jazzstandard, gespeeld en gezongen door honderden musici.</p>
+  
+  <p>Franz Waxman, die we in scène 03 tegenkwamen, schreef in 1950 de muziek voor <em>Sunset Boulevard</em> van Billy Wilder. De film gaat over een vergeten ster uit de stomme film die in haar vervallen villa nog altijd leeft alsof het 1925 is. Waxman gaf de personages leidmotieven, zoals Steiner dat deed, maar hij vervormde ze. Voor de oude ster gebruikte hij een tango en andere dansmuziek uit de jaren twintig, die in de loop van de film steeds verwrongener klinkt, met dissonanten en vreemde instrumentcombinaties. In de laatste scène, als ze de trap afdaalt en denkt dat ze weer voor de camera staat, wordt die muziek een waanbeeld.</p>
+  <p>Zo liet de noirscore de romantiek van de Golden Age los. Ze zocht spanning in <strong>chromatiek</strong>, het gebruik van tonen die buiten de toonladder vallen, in lage koperblazers en in harmonieën die niet doen wat je verwacht. Het orkest bleef groot, maar het zong niet meer. Het dreigde.</p>
+
+  <div class="head"><p class="label">Scène 06 · 1939-1960 · Los Angeles</p><h3>De western krijgt een titelsong</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Dimitri_Tiomkin_1937.jpg" alt="Dimitri Tiomkin"><figcaption>Dimitri Tiomkin, 1937</figcaption></figure>
+  <p>De western was in Hollywood vanaf het begin een van de meest gemaakte soorten film, maar lang klonk de muziek niet anders dan in andere films. Voor <em>Stagecoach</em> (1939) van John Ford bewerkte een team van arrangeurs Amerikaanse volksliedjes en cowboyliedjes tot een score, die een Oscar won. Na de oorlog kreeg de western een eigen muzikale identiteit, met <strong>galopperende ritmes</strong> in de strijkers en het slagwerk, koperfanfares voor de cavalerie, een gitaar bij het kampvuur, en melodieën die aan volksliedjes doen denken.</p>
+  <p>De componist die de western het sterkst bepaalde, was geen Amerikaan maar een Rus. Dimitri Tiomkin werd in 1894 geboren in het Russische keizerrijk en studeerde aan het conservatorium van Sint-Petersburg, onder anderen bij Aleksandr Glazoenov. Hij trad op als concertpianist in Berlijn en Parijs, speelde vanaf 1925 in Amerikaanse variététheaters en verhuisde na de beurskrach van 1929 naar Hollywood. Voor regisseur Frank Capra schreef hij <em>Lost Horizon</em> (1937) en <em>It's a Wonderful Life</em> (1946).</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/df/0a/c1/df0ac12b-bc01-af95-1bbb-1d1df0a8e2db/mzaf_7861336958829284562.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music2/v4/88/00/1d/88001d53-2d97-2867-427f-d272108e6a4a/cover.jpg/600x600bb.jpg" alt=""><div><span class="who">Tex Ritter</span><br>Film: High Noon (1952)</div></div>Eén ballade als rode draad: het begin van de westernsong.</aside>
+  <p>In 1952 maakte Fred Zinnemann <em>High Noon</em>, met Gary Cooper als marshal die op de dag van zijn huwelijk alleen een bende moet opwachten die met de trein van twaalf uur aankomt. De film speelt zich bijna in echte tijd af. Tiomkin schreef met tekstschrijver Ned Washington een eenvoudige ballade, <em>Do Not Forsake Me, Oh My Darlin'</em>, gezongen door countryzanger Tex Ritter. Dat lied klinkt al onder de begintitels, met een paardentrot in de begeleiding, en komt daarna steeds terug: soms gezongen, soms als melodie in het orkest, langzamer of dreigender naarmate twaalf uur dichterbij komt. Eén lied wordt zo de rode draad van een hele film.</p>
+  
+  <p>Het lied werd een hit, in de versie van Tex Ritter en in een versie van Frankie Laine. Lied en score wonnen allebei een Oscar. Voor de studio's was dat een ontdekking: een titelsong kon als single de film aanprijzen nog voordat die in de bioscoop draaide. Daarna kreeg bijna elke western een titelsong. Tiomkin schreef er zelf nog veel, onder meer voor <em>Rio Bravo</em> (1959) van Howard Hawks en <em>The Alamo</em> (1960) van John Wayne. In <em>Rio Bravo</em> klinkt steeds <em>El Degüello</em>, een dreigende trompetmelodie van Tiomkin. In de film wordt uitgelegd dat het Mexicaanse leger dit signaal bij de Alamo liet spelen, als teken dat er geen genade zou worden gegeven. Tiomkin won in totaal vier Oscars. Bij de uitreiking in 1955 voor <em>The High and the Mighty</em> bedankte hij niet zijn collega's, maar Bach, Brahms, Beethoven en Debussy.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/26/dc/d9/26dcd914-4146-8927-c996-3bed525edd05/mzaf_3591255111707034189.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music/22/bd/04/mzi.ooisxwne.jpg/600x600bb.jpg" alt=""><div><span class="who">Jerome Moross</span><br>Film: The Big Country (1958)</div></div>Springerige ritmes en open intervallen: Copland in breedbeeld.</aside>
+  <p>Een ander soort westernmuziek kwam van Jerome Moross, een New Yorker die net als Copland voor het theater en de concertzaal schreef. Voor <em>The Big Country</em> (1958) van William Wyler, een western over twee families die ruzie maken om water, schreef hij een breed hoofdthema in de strijkers en het koper, boven een springerig, voortdurend doorgaand ritme dat aan een rijdende koets doet denken. De melodie heeft grote, open intervallen, en de harmonie de open klank van Copland. Het is americana in breedbeeld.</p>
+  
+  <p>Twee jaar later zette Elmer Bernstein in <em>The Magnificent Seven</em> (1960) van John Sturges een hoofdthema neer dat de westernklank voor decennia vastlegde. Het begint met een gesyncopeerd ritme in de strijkers, waarin de accenten net naast de tel vallen, en daarboven een breed thema in de hoorns. Omdat de film in Mexico speelt, gaf Bernstein het geheel een Mexicaanse kleur, met gitaren en dansritmes. Het thema werd later bekend uit reclames voor sigaretten. Bernstein zelf, en vooral zijn jazzscores, komt terug in Filmrol 4. Een paar jaar later zou de western in Italië een heel ander geluid krijgen, met fluiten, elektrische gitaar en zweepslagen; dat verhaal volgt in Filmrol 3.</p>
+
+  <div class="head"><p class="label">Scène 07 · 1951-1965 · Hollywood, Cinecittà</p><h3>Epos: ouverture, pauze en veel koper</h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Identite-MauriceJarre-1950-Sacem.png/960px-Identite-MauriceJarre-1950-Sacem.png" alt="Maurice Jarre"><figcaption>Maurice Jarre, 1950</figcaption></figure>
+  <p>In de jaren vijftig kreeg Hollywood een nieuwe concurrent: de televisie. Steeds meer Amerikanen bleven thuis. De studio's antwoordden met wat de televisie niet kon bieden: kleur, breedbeeld, stereogeluid en lange, dure historische films met duizenden figuranten. Veel daarvan werden opgenomen in Cinecittà, de grote filmstudio bij Rome, waar het goedkoper was. De muziek groeide mee met het formaat.</p>
+  <p>Deze films hadden vaak een vaste opbouw die uit de opera kwam. Voordat het doek openging, klonk een <strong>ouverture</strong>: een paar minuten muziek in een donkere zaal, waarin de belangrijkste thema's van de film na elkaar voorbijkwamen. Halverwege de film volgde een pauze, met eigen pauzemuziek, en aan het eind nog muziek terwijl het publiek de zaal verliet. Een bezoek aan zo'n film was een avondvullend evenement, en de muziek hielp om dat te laten voelen.</p>
+  <p>Miklós Rózsa, de componist van de noir, werd de belangrijkste componist van het epos. Voor <em>Quo Vadis</em> (1951) van MGM, over christenen in het Rome van keizer Nero, deed hij onderzoek naar de weinige melodieën die uit de Griekse en Romeinse oudheid bewaard zijn gebleven, en gebruikte die als bouwstof voor zijn eigen thema's. Zo probeerde hij een klank te maken die niet negentiende-eeuws Wenen was, maar de oudheid opriep, ook al kon niemand weten hoe die precies klonk.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/67/f2/52/67f252c9-4be4-298c-5103-dfa463efde01/mzaf_10044532093343627365.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/62/d7/9a/62d79a4e-33b1-2163-aadb-7c6ef4cc4e24/13UMGIM74098.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Miklós Rózsa</span><br>Film: Ben-Hur (1959)</div></div>Een mars voor de wagenrenners: koper op de schaal van het decor.</aside>
+  <p>Voor <em>Ben-Hur</em> (1959) van William Wyler schreef Rózsa meer dan drie uur muziek, waarvan tweeënhalf uur in de film kwam: destijds de langste filmscore die ooit was geschreven. Er zitten fanfares in voor de Romeinse legers, marsen voor de parades, koralen voor de religieuze scènes en een lyrisch liefdesthema. De beroemde wagenrennen zelf hebben geen muziek: daar hoor je alleen hoeven, wielen en het publiek. Maar voor de start trekken de wagenmenners in een parade langs het publiek, op een mars die de schaal van het decor heeft. <em>Ben-Hur</em> leverde Rózsa zijn derde Oscar op.</p>
+  
+  <p>Alex North gaf het epos een hardere klank. Voor <em>Spartacus</em> (1960) van Stanley Kubrick, over een slavenopstand in het oude Rome, schreef hij muziek met scherpe dissonanten, onregelmatige ritmes en ongewone klankkleuren, zoals oude snaarinstrumenten en exotisch slagwerk. Zijn Rome klinkt niet plechtig maar wreed. Kubrick vroeg North later ook voor <em>2001: A Space Odyssey</em>, maar gebruikte die muziek uiteindelijk niet (zie scène 09).</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/00/8a/ff/008affc9-a690-bbf1-fe7a-d69624169e02/mzaf_12883430250322942611.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/21/ba/e1/21bae14f-580f-9edd-b76a-212a740be0ca/886449852284.jpg/600x600bb.jpg" alt=""><div><span class="who">Maurice Jarre</span><br>Film: Lawrence of Arabia (1962)</div></div>Een ouverture voor het doek opengaat: zoek het slagwerk en de ondes Martenot.</aside>
+  <p>Het laatste grote epos van deze periode kwam van een Fransman. Maurice Jarre werd in 1924 in Lyon geboren en studeerde aan het conservatorium van Parijs, met slagwerk als hoofdvak. Hij werkte jarenlang als muzikaal leider voor het theater van Jean Vilar en schreef muziek voor Franse films, zoals de horrorfilm <em>Les yeux sans visage</em> (1960) van Georges Franju. Toen regisseur David Lean hem vroeg voor <em>Lawrence of Arabia</em> (1962), was dat een verrassende keuze.</p>
+  <p>Jarre schreef een groot, breed hoofdthema met wijde sprongen, dat in de volle strijkers de leegte van de woestijn oproept. Daaronder liet hij zijn achtergrond als slagwerker horen: pauken, trommels en ander slagwerk geven de film zijn ritme. Voor een vreemde, zwevende klank gebruikte hij de <strong>ondes Martenot</strong>, een Frans elektronisch instrument uit 1928 dat met een toetsenbord of een ring aan een draad wordt bespeeld en glijdende tonen kan maken. De film begint met een ouverture van een paar minuten, in een zaal waar het licht al uit is.</p>
+  
+  <p><em>Lawrence of Arabia</em> leverde Jarre een Oscar op. Voor Leans volgende film, <em>Doctor Zhivago</em> (1965), over een arts en dichter tijdens de Russische Revolutie, schreef hij een wals voor de vrouw van wie Zhivago houdt. Het thema van Lara, gespeeld door een groep balalaika's, Russische snaarinstrumenten met een driehoekige klankkast, werd een wereldhit, en de score leverde Jarre opnieuw een Oscar op. Jarre won drie Oscars, alle drie voor films van Lean. Daarmee sloot hij de periode van het grote epos af: weinig later waren zulke films te duur geworden, en kwam het publiek er niet meer massaal op af.</p>
+
+  <!-- AKTE 3 -->
+  <header class="opener part" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/d/db/Vertigo_1958_trailer_Stewart_hanging_on.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Akte 3 · 1955-1976</p>
+    <h2>Nieuwe zenuwen</h2>
+    <p class="sub">Korte cellen, twaalftoonsreeksen en een spaarzamere score breken het studiomodel open.</p>
+    <span class="letter" aria-hidden="true">3</span>
+  </header>
+
+  <div class="head"><p class="label">Scène 08 · 1941-1964 · New York, Los Angeles</p><h3>Herrmann en Hitchcock</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Bernard-Herrmann.jpg" alt="Bernard Herrmann"><figcaption>Bernard Herrmann</figcaption></figure>
+  <p>Bernard Herrmann werd in 1911 in New York geboren. Hij studeerde aan de Juilliard School, was ook dirigent en werkte in de jaren dertig voor de radiozender CBS. Daar schreef hij muziek voor hoorspelen, onder meer voor het Mercury Theatre van de jonge acteur en regisseur Orson Welles. Radio leerde hem kort en precies te werken: een overgang tussen twee scènes moest in een paar seconden een stemming neerzetten. Toen Welles in 1941 zijn eerste film maakte, <em>Citizen Kane</em>, nam hij Herrmann mee.</p>
+  <p>In <em>Citizen Kane</em> is al te horen hoe Herrmann anders dacht dan Steiner of Korngold. Hij hield niet van lange melodieën. Hij bouwde zijn muziek uit korte motieven, cellen van twee, drie of vier noten, die hij herhaalde, verschoof naar een andere toonhoogte en in steeds een andere kleur liet klinken. Harmonieën liet hij vaak onopgelost, zodat de spanning bleef hangen. Voor een scène waarin de vrouw van Kane, een middelmatige zangeres, een opera moet zingen, schreef hij expres een aria die te hoog voor haar ligt. Je hoort haar stem breken, en dat vertelt het verhaal.</p>
+  <p>Herrmann koos per film een eigen bezetting, en die was vaak ongewoon. In <em>The Day the Earth Stood Still</em> (1951) gebruikte hij twee theremins, een verhaal dat terugkomt in Filmrol 5. Hij weigerde het standaard studio-orkest als vanzelfsprekend te accepteren en orkestreerde, anders dan de meeste collega's, alles zelf.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/58/26/5c/58265ce5-fdd5-6932-1f87-ebe12a416454/mzaf_10658352535498785776.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/80/93/27/8093276f-c21f-f8d3-5531-4e9929669f5f/00030206575996.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Bernard Herrmann</span><br>Film: Vertigo (1958)</div></div>Draaiende arpeggio's die de duizeligheid van de hoofdpersoon laten horen.</aside>
+  <p>Tussen 1955 en 1964 werkte Herrmann met Alfred Hitchcock aan een reeks films, van <em>The Trouble with Harry</em> (1955) tot <em>Marnie</em> (1964). In <em>The Man Who Knew Too Much</em> (1956) is hij zelfs te zien, als dirigent in de Royal Albert Hall in Londen. Een kernwerk uit die samenwerking is <em>Vertigo</em> (1958). James Stewart speelt een gepensioneerde rechercheur met hoogtevrees, die geobsedeerd raakt door een vrouw. Herrmann schreef voor de begintitels figuren van gebroken akkoorden, <strong>arpeggio's</strong>, die tegen elkaar in op en neer gaan, in twee lagen die niet gelijk lopen. Het effect is een draaiende spiraal, net als de duizeligheid van de hoofdpersoon en de spiralen in de titelbeelden. Voor de liefde schreef hij lange, steeds verder stijgende lijnen die doen denken aan <em>Tristan und Isolde</em> van Wagner: een verlangen dat nooit vervuld wordt.</p>
+  
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/37/81/ed/3781edd6-ecb6-5482-bca5-ad0a50443a32/mzaf_3236284465805038706.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/29/81/19/29811949-4ee2-c6be-2801-21c686bda31b/00030206576528.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Bernard Herrmann</span><br>Film: Psycho (1960)</div></div>Alleen strijkers: korte, jagende cellen in plaats van een melodie.</aside>
+  <p>Voor <em>Psycho</em> (1960) koos Herrmann een bezetting van alleen strijkers. Hitchcock maakte de film met een klein budget en in zwart-wit, en Herrmann vond dat de muziek bij die kale beelden moest passen. Zonder koper en hout heeft de score geen warme of glanzende kleuren. De muziek bij de begintitels is opgebouwd uit korte, jagende cellen: een fel, herhaald ritme in de violen, met scherpe accenten, en daaronder korte motieven die steeds terugkomen zonder ergens heen te gaan. Een melodie die je kunt neuriën is er niet. Het voelt als een vlucht zonder doel, en dat is precies wat de vrouw in de eerste helft van de film doet.</p>
+  
+  <p>Bij de moord onder de douche wilde Hitchcock eerst helemaal geen muziek. Herrmann schreef toch iets, en Hitchcock gaf hem gelijk. De violen spelen schrille, herhaalde noten hoog op de snaar, die steken als het mes. Het is nauwelijks nog een melodie, eerder een geluid. Tegelijk is het een vorm van mickey-mousing, maar dan tot het uiterste doorgevoerd: de muziek volgt niet de beweging van een personage, maar de klap zelf.</p>
+  <p>Herrmanns werkwijze legde de basis voor de moderne thrillermuziek. Herhaalde cellen, onopgeloste harmonie en een kale, gerichte bezetting zijn tot vandaag de bouwstenen van spanning in film. De samenwerking met Hitchcock eindigde in 1966 met een ruzie: de studio wilde voor <em>Torn Curtain</em> een moderne, popachtige score, Herrmann schreef wat hij zelf wilde, en Hitchcock verwierp de muziek. Daarna werkte Herrmann vooral in Europa, tot jonge Amerikaanse regisseurs hem terughaalden (zie scène 10).</p>
+
+  <div class="head"><p class="label">Scène 09 · 1955-1980 · Los Angeles</p><h3>Twaalf tonen in Hollywood</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Jerry_Goldsmith_2.jpg" alt="Jerry Goldsmith"><figcaption>Jerry Goldsmith</figcaption></figure>
+  <p>In de concertzaal had Arnold Schönberg al in de jaren twintig de <strong>twaalftoonstechniek</strong> ontwikkeld. Een componist zet alle twaalf tonen van het octaaf in een vaste volgorde, de reeks, en bouwt daarmee zowel melodieën als akkoorden. Omdat geen enkele toon vaker voorkomt dan de andere, is er geen grondtoon en geen toonsoort. De muziek is <strong>atonaal</strong>. Schönberg woonde vanaf 1934 zelf in Los Angeles en gaf er les, maar de filmstudio's hielden die taal lang buiten de deur. Pas vanaf het midden van de jaren vijftig kwam de moderne concertmuziek de film in.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/55/ed/5c/55ed5c02-24fa-1365-5578-450f7417b380/mzaf_15522164984132606712.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Features4/v4/4d/a8/4c/4da84c0b-c3c6-05af-637b-e6d00b8645c4/dj.feqnjerc.jpg/600x600bb.jpg" alt=""><div><span class="who">London Sinfonietta &amp; John Adams</span><br>Film: East of Eden (1955)</div></div>Moderne harmonie in een studiofilm: onrust onder de melodie.</aside>
+  <p>Een van de eersten was Leonard Rosenman. Hij werd in 1924 in New York geboren en studeerde compositie bij onder anderen Schönberg en Roger Sessions. Hij gaf pianoles aan de jonge acteur James Dean, en via Dean kwam hij bij regisseur Elia Kazan terecht, die hem vroeg voor <em>East of Eden</em> (1955). Die score heeft nog een herkenbare melodie, maar daaronder schuurt de harmonie: akkoorden met tonen die niet bij elkaar lijken te horen, ritmes die haperen. De onrust van de jonge hoofdpersoon, gespeeld door Dean, zit in de begeleiding.</p>
+  
+  <p>Hetzelfde jaar schreef Rosenman de muziek voor <em>The Cobweb</em> (1955) van Vincente Minnelli, een film die zich afspeelt in een psychiatrische kliniek. Die score geldt als de eerste twaalftoonscore van Hollywood: een grote studiofilm met muziek die grotendeels op reeksen is gebouwd. Ook <em>Rebel Without a Cause</em> (1955) van Nicholas Ray, weer met James Dean, heeft scherpe dissonanten en schokkende ritmes. Rosenman liet horen dat moderne muziek niet alleen in de concertzaal thuishoorde, maar psychische spanning op het scherm heel direct kon overbrengen.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a6/16/86/a616860b-5b3e-f1e7-068b-236f195945d1/mzaf_15680453728607137882.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/9d/89/0a/9d890a7a-18c3-04e3-d0bb-7b081b45b6dd/00030206584899.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Jerry Goldsmith</span><br>Film: Planet of the Apes (1968)</div></div>Percussie en blazers met vreemde speeltechnieken: muziek als opgejaagd dier.</aside>
+  <p>De componist die deze taal het verst doorvoerde, was Jerry Goldsmith. Hij werd in 1929 in Los Angeles geboren, volgde als student de lessen van Miklós Rózsa en begon bij de radio en de televisie van CBS. Voor <em>Freud</em> (1962) van John Huston, over de jonge Sigmund Freud, schreef hij dissonante, atonale muziek, met zwevende klanken voor het onderbewuste. Voor <em>Planet of the Apes</em> (1968) van Franklin J. Schaffner ging hij nog verder. De muziek is atonaal, met veel slagwerk, waaronder ongewone instrumenten zoals roestvrijstalen mengkommen uit Goldsmiths eigen keuken. De blazers gebruiken speeltechnieken die je in een studio-orkest niet verwachtte: hoornisten draaien hun mondstuk om en blazen alleen lucht door het instrument, zodat er een rauw, dierlijk geluid ontstaat. In de jachtscène, waarin de apen mensen opjagen, klinkt de muziek zelf als een opgejaagd dier.</p>
+  
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5f/3c/2d/5f3c2db4-149e-dbb1-53a8-cf16bb1778c1/mzaf_1400133191837651944.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/5e/9e/60/5e9e60dd-a249-b43d-fd58-bc04bff74d33/708527256923.jpg/600x600bb.jpg" alt=""><div><span class="who">György Ligeti</span><br>Film: 2001: A Space Odyssey (1968)</div></div>Geen melodie, alleen een klankveld: concertmuziek als ruimte.</aside>
+  <p>In hetzelfde jaar ging Stanley Kubrick nog een stap verder, door helemaal geen filmcomponist te gebruiken. Voor <em>2001: A Space Odyssey</em> (1968) had hij Alex North gevraagd, maar tijdens de montage gebruikte Kubrick bestaande muziek als tijdelijke begeleiding, en die beviel hem zo goed dat hij haar hield. North hoorde pas bij de première dat zijn score niet in de film zat. Naast <em>Also sprach Zarathustra</em> van Richard Strauss en <em>An der schönen blauen Donau</em> van Johann Strauss koos Kubrick werken van de Hongaarse componist György Ligeti, waaronder <em>Atmosphères</em> (1961). Dat stuk heeft geen melodie en geen ritme. Het bestaat uit klankvlakken: <strong>clusters</strong>, akkoorden van dicht naast elkaar liggende tonen, die langzaam van kleur en dichtheid veranderen. Bij Kubrick werd het de klank van de ruimte en van het onbekende.</p>
+  
+  <p>Kubrick bleef zo werken. Voor <em>The Shining</em> (1980) gebruikte hij opnieuw muziek van Ligeti, en daarnaast van de Poolse componist Krzysztof Penderecki en van Béla Bartók. Clusters, <strong>glissandi</strong> (glijdende tonen zonder vaste toonhoogte) en atonaliteit werden zo de klank van angst, waanzin en het onbekende. Wat in de concertzaal vaak als moeilijk gold, werkte in de bioscoop direct: het publiek hoefde er niets van te weten om het te voelen. De elektronische kant van dit verhaal volgt in Filmrol 5.</p>
+
+  <div class="head"><p class="label">Scène 10 · 1967-1976 · Los Angeles, New York</p><h3>New Hollywood: de score wordt spaarzaam</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/David_Shire05_%28cropped%29.JPG" alt="David Shire"><figcaption>David Shire</figcaption></figure>
+  <p>Eind jaren zestig zat Hollywood in een crisis. De grote, dure films brachten niet meer genoeg op, het studiosysteem met vaste contracten was uit elkaar gevallen, en het publiek was jonger geworden. De studio's gaven daarom jonge regisseurs meer vrijheid, zoals Francis Ford Coppola, Martin Scorsese, Robert Altman en Roman Polanski. Hun films waren persoonlijker en rauwer, vaak gefilmd op straat in plaats van in de studio. Deze periode heet <strong>New Hollywood</strong>. De muziek veranderde mee. Soms kwam die uit de popmuziek, zoals de liedjes van Simon &amp; Garfunkel in <em>The Graduate</em> (1967) (zie Filmrol 4). Soms kwam ze juist uit een sobere, Europese hoek.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/80/c8/d6/80c8d65a-fcd7-f938-52a2-eabcec61ec7e/mzaf_12207026458018906892.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2f/60/1d/2f601d13-4531-dbdc-bb25-334be4a1018f/00602547196729.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Nino Rota</span><br>Film: The Godfather (1972)</div></div>Eén eenzame trompet opent een familiesaga.</aside>
+  <p>Voor <em>The Godfather</em> (1972) vroeg Coppola de Italiaanse componist Nino Rota, die bekend was van zijn werk met Federico Fellini (Rota zelf: zie Filmrol 3). Rota schreef een melancholieke wals in mineur, die de film opent met één eenzame trompet. Er is geen groot orkest dat een familiesaga aankondigt, alleen een stem die klinkt als een herinnering aan Sicilië. Het liefdesthema van de film bleek een bewerking van muziek die Rota eerder voor een Italiaanse komedie had geschreven, en daarom mocht de score niet meedingen naar een Oscar. Voor het vervolg, <em>The Godfather Part II</em> (1974), kreeg Rota die Oscar wel, samen met Carmine Coppola, de vader van de regisseur.</p>
+  
+  <p>Ook Jerry Goldsmith, de modernist uit scène 09, werkte in deze jaren met kleine, gerichte middelen. Voor <em>Chinatown</em> (1974) van Polanski, een detectivefilm in het Los Angeles van de jaren dertig, verving hij op korte termijn een afgewezen score van een andere componist, en schreef hij in ongeveer tien dagen nieuwe muziek. Hij koos een ongewone bezetting: strijkers, piano's, harpen en één solotrompet, gespeeld door studiomuzikant Uan Rasey. De piano's en harpen maken ritselende, glinsterende klanken, de trompet speelt een loom, melancholiek thema dat aan de jazz van de jaren dertig doet denken. Eén solo-instrument draagt de eenzaamheid van de hoofdpersoon.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3f/c4/65/3fc4650e-c6dd-88b3-659a-56e04ae1f427/mzaf_8335361644943560721.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/8c/a6/71/8ca67136-dff1-6a0d-b19f-9d252060d8cd/1976.jpg/600x600bb.jpg" alt=""><div><span class="who">David Shire</span><br>Film: The Conversation (1974)</div></div>Solopiano, net zo eenzaam als de afluisteraar in beeld.</aside>
+  <p>David Shire werd in 1937 in Buffalo geboren, studeerde aan Yale en schreef eerst vooral musicals, samen met tekstschrijver Richard Maltby Jr. Hij was getrouwd met actrice Talia Shire, de zus van Coppola, en zo kwam hij bij <em>The Conversation</em> (1974) terecht. Gene Hackman speelt daarin een afluisterspecialist, een eenzame, achterdochtige man die in zijn vrije tijd saxofoon speelt bij platen. Shire schreef een score voor bijna alleen solopiano: een sober, jazzy thema dat telkens terugkomt, soms vervormd. De muziek is net zo eenzaam als de man in beeld, en net zo terughoudend.</p>
+  
+  <p>In hetzelfde jaar maakte Shire voor <em>The Taking of Pelham One Two Three</em> (1974), over de kaping van een metrotrein in New York, iets heel anders: een funky score met koper, drums en elektrische bas, gebouwd op twaalftoonsreeksen. De hoekige, dissonante koperlijnen klinken als moderne concertmuziek, maar de baslijn en de drums groeven als funk. Twaalftoonstechniek werd hier stadse misdaadmuziek. Voor <em>All the President's Men</em> (1976) van Alan J. Pakula, over de journalisten die het Watergate-schandaal onthulden, deed Shire het tegenovergestelde. De film heeft heel weinig muziek. Shire koos ervoor om de spanning over te laten aan de dialogen, de typemachines en de stilte, en alleen op een paar plekken een spaarzame, onderhuidse klank toe te voegen.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6b/b5/33/6bb5336d-5b17-96f7-4a26-5926690b93a8/mzaf_10452865733695871777.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Features/31/81/30/dj.qwlysewg.jpg/600x600bb.jpg" alt=""><div><span class="who">Bernard Herrmann</span><br>Film: Taxi Driver (1976)</div></div>Zwoele saxofoon tegen dreigend koper: Herrmanns afscheid.</aside>
+  <p>De laatste score in dit hoofdstuk is van Bernard Herrmann, die na zijn breuk met Hitchcock door jonge regisseurs werd teruggehaald. Hij werkte met Brian De Palma aan <em>Sisters</em> (1972) en <em>Obsession</em> (1976), en met Martin Scorsese aan <em>Taxi Driver</em> (1976). Die film gaat over een eenzame taxichauffeur in het nachtelijke New York, gespeeld door Robert De Niro, die langzaam ontspoort. Herrmann schreef een loom, zwoel thema voor altsaxofoon, met de sfeer van een nachtclub, en zette daar dreigend, laag koper en harde slagen in het slagwerk tegenover. De twee kanten van de hoofdpersoon, verlangen en geweld, klinken zo naast elkaar. Herrmann rondde de opnamen af en overleed op 24 december 1975, een paar maanden voordat de film uitkwam.</p>
+  
+  <p>In de films van New Hollywood werd de score vaker een spaarzame kleur dan een groot, doorlopend tapijt. Eén trompet, een solopiano, een saxofoon of zelfs stilte deed het werk dat vroeger een heel orkest deed. Maar het grote orkest was niet weg. In 1975 schreef John Williams voor <em>Jaws</em> van Steven Spielberg een score die weer helemaal op het symfonieorkest leunde, en twee jaar later volgde <em>Star Wars</em>, met leidmotieven en fanfares die rechtstreeks teruggaan op Korngold en Steiner. Dat verhaal begint in Filmrol 7.</p>
+</section>
+
+<section class="back">
+  <h4 class="backhead">Begrippen</h4>
+  <dl class="terms">
+    <div><dt>Studiosysteem</dt><dd>Hollywoodstudio's met eigen orkesten, muziekafdelingen en componisten in vaste dienst.</dd></div>
+    <div><dt>Underscore</dt><dd>Muziek die alleen de kijker hoort, niet de personages in de film.</dd></div>
+    <div><dt>Leidmotief</dt><dd>Kort thema dat bij een personage, plek of idee hoort en steeds terugkomt.</dd></div>
+    <div><dt>Mickey-mousing</dt><dd>Muziek die de actie in beeld tel voor tel nabootst.</dd></div>
+    <div><dt>Click track</dt><dd>Tikkend metronoomsignaal bij de opname, afgestemd op de lengte van het beeld.</dd></div>
+    <div><dt>Orkestrator</dt><dd>Musicus die de schets van de componist uitwerkt voor het volledige orkest.</dd></div>
+    <div><dt>Main title</dt><dd>Muziek onder de begintitels; zet de toon van de film.</dd></div>
+    <div><dt>Newman-sound</dt><dd>Warme, glanzende strijkersklank die Alfred Newman bij Fox ontwikkelde.</dd></div>
+    <div><dt>Open kwinten</dt><dd>Samenklanken zonder terts; klinken leeg en weids, typisch voor americana.</dd></div>
+    <div><dt>Titelsong</dt><dd>Lied onder de begintitels dat als single de film aanprijst, zoals bij High Noon.</dd></div>
+    <div><dt>Ouverture en pauzemuziek</dt><dd>Muziek voor het begin en tijdens de pauze van lange epossen, zoals in de opera.</dd></div>
+    <div><dt>Ondes Martenot</dt><dd>Frans elektronisch instrument uit 1928 met glijdende, zwevende tonen.</dd></div>
+    <div><dt>Twaalftoonstechniek</dt><dd>Componeren met een reeks van alle twaalf tonen, zonder grondtoon.</dd></div>
+    <div><dt>Cluster</dt><dd>Akkoord van dicht naast elkaar liggende tonen; klinkt als een dichte klankvlek.</dd></div>
+  </dl>
+
+  <h4 class="backhead">Verder luisteren en kijken</h4>
+  <div class="links">
+    <div class="link-card"><div class="qr" data-url="https://open.spotify.com/playlist/0VzsKJ17QSJWVgKqi7e8k8"></div>
+      <div><span class="tag">SPOTIFY · PLAYLIST</span><p>Alle fragmenten uit dit hoofdstuk, in de volgorde van de tekst. Scan de code met je telefoon.</p></div></div>
+    <div class="link-card lesson"><div><span class="tag">LESSONUP · LES</span><p><strong>De Droomfabriek · Filmrol 2: Het studio-orkest</strong></p><p>De les bij dit hoofdstuk, met beeld en fragmenten.</p></div></div>
+  </div>
+
+  <footer class="colofon">
+    <p>Foto's: Wikimedia Commons (zie fotoverantwoording). Platenhoezen: Apple Music.</p>
+    <p>De Droomfabriek · Filmmuziek, een verborgen kant van School of Rock · ArtEZ University of the Arts</p>
+  </footer>
+</section>
+<nav class="pager" aria-label="Andere filmrollen"><a href="01.html"><small>← Filmrol 1</small><b>Nooit stil</b></a><a class="next" href="03.html"><small>Filmrol 3 →</small><b>Europa in close-up</b></a></nav><a class="mt-step prev" href="01.html" rel="prev" aria-label="Vorige: Filmrol 1, Nooit stil"><i aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></i><span><small>Filmrol 1</small>Nooit stil</span></a><a class="mt-step next" href="03.html" rel="next" aria-label="Volgende: Filmrol 3, Europa in close-up"><i aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i><span><small>Filmrol 3</small>Europa in close-up</span></a>
+
+</div><footer class="sitefoot"><div class="wrap"><p>De Droomfabriek · Filmmuziek, een verborgen kant van School of Rock · Jan-Wolter Smit · ArtEZ University of the Arts</p></div></footer><script src="../../assets/player.js"></script><script src="../../assets/anchor-notes.js"></script><script src="../../assets/chapter.js"></script><script>document.querySelectorAll('.qr[data-url]').forEach(function(el){if(typeof QRCode==='undefined'){return;}new QRCode(el,{text:el.dataset.url,width:256,height:256,colorDark:'#1C1B19',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.M});});</script></body></html>

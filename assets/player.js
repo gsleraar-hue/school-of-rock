@@ -72,7 +72,7 @@
     if (current && current.book) $('.sp-time').textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration || current.duration);
   }
   // reeksen: School of Rock (pop) en De Droomfabriek (film), elk met eigen hoofdstukken en eigen bewaarde positie
-  const SETS = { pop: { data: 'data/luisterboek.json', key: 'boek', label: 'Luisterboek · Mixtape ', album: 'School of Rock · luisterboek', cover: 'assets/cassette.png' }, film: { data: 'film/data/luisterboek.json', key: 'boek-film', label: 'De Droomfabriek · Mixtape ', album: 'De Droomfabriek · luisterboek', cover: 'film/assets/icon.svg' } };
+  const SETS = { pop: { data: 'data/luisterboek.json', key: 'boek', label: 'Luisterboek · Mixtape ', album: 'School of Rock · luisterboek', cover: 'assets/cassette.png' }, film: { data: 'film/data/luisterboek.json', key: 'boek-film', label: 'De Droomfabriek · Filmrol ', album: 'De Droomfabriek · luisterboek', cover: 'film/assets/icon.svg' } };
   const setOf = tr => SETS[(tr && tr.bookSet) || 'pop'];
   // luisterboek: positie bewaren, zodat je later verder kunt luisteren
   let lastSave = 0;

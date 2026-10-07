@@ -1,0 +1,439 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content="../.."><title>De Droomfabriek · Filmrol 4 · Songs uit de platenkast</title><link rel="icon" href="../../film/assets/icon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="../../assets/site.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><style>
+  /* Eén thema met opzet: een boek in de huisstijl van de lessen. */
+  :root {
+    color-scheme: light;
+    --page: #FFFFFF;
+    --ink: #1C1B19;
+    --ink-soft: #55524C;
+    --line: #DDD8CE;
+    --red: #D63A31;
+    --yellow: #F2D500;
+    --display: "Oswald", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "Space Mono", "Courier New", monospace;
+    --hand: "Caveat", "Comic Sans MS", cursive;
+    --text: 34rem;
+    --margin: 13rem;
+    --gap: 2.25rem;
+  }
+  html { background: var(--page); }
+  body { background: var(--page); color: var(--ink); font: 400 16px/1.65 var(--body); padding-inline: 16px; padding-block: 0 64px; }
+  .book { max-width: calc(var(--text) + var(--gap) + var(--margin)); margin: 0 auto; }
+  p { margin: 0; }
+  em { font-style: italic; }
+  a { color: inherit; text-decoration-color: var(--red); text-underline-offset: 2px; }
+
+  /* Hoofdstukopening en delen */
+  .opener { position: relative; overflow: hidden; color: #FFFFFF; box-sizing: border-box; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; }
+  .opener .wash { position: absolute; inset: 0; background-color: rgba(214,58,49,.62); }
+  .opener .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 55%; background-color: rgba(28,27,25,.38); }
+  .opener .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background: var(--yellow); }
+  .opener h1, .opener h2, .opener .sub, .part .kicker { position: relative; }
+  .opener .kicker { font: 12px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--yellow); }
+  .opener h1, .opener h2 { font-family: var(--display); font-weight: 600; line-height: 1.02; margin: 0; text-wrap: balance; }
+  .opener .sub { max-width: 36ch; line-height: 1.4; }
+  .cover { margin-inline: -16px; min-height: 420px; padding: 32px 28px 36px 44px; }
+  .cover h1 { font-size: clamp(44px, 9vw, 72px); max-width: 12ch; }
+  .cover .sub { font-size: 18px; }
+  .cover .kicker { position: absolute; top: 26px; left: 44px; }
+  .cover .cassette { position: absolute; top: 16px; right: 18px; width: 88px; height: auto; }
+  .part { margin: 64px calc(-1 * (var(--margin) + var(--gap))) 28px 0; min-height: 230px; padding: 24px 24px 24px 40px; clear: both; }
+  .part h2 { font-size: clamp(30px, 6vw, 44px); }
+  .part .sub { font-size: 15px; }
+  .part .letter { position: absolute; right: 18px; bottom: -12px; font: 600 150px/1 var(--display); color: var(--yellow); }
+
+  /* Tekstvak met kantlijn */
+  .flow { padding-right: calc(var(--margin) + var(--gap)); }
+  .flow > p { max-width: var(--text); }
+  .flow > p { text-indent: 1.4em; }
+  .flow > .intro, .flow > .head + p, .flow > .head + aside + p, .flow > .head + figure + p { text-indent: 0; }
+  .head { margin: 40px 0 10px; max-width: var(--text); }
+  .head .label { font: 11px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--red); margin: 0 0 4px; }
+  .head h3 { font: 600 22px/1.15 var(--display); margin: 0; text-wrap: balance; }
+  .intro { font-size: 18px; line-height: 1.6; }
+
+  /* Kantlijn: luistertips, beeld, citaten, QR */
+  .side-note, .side-fig, .side-quote { float: right; clear: right; width: var(--margin); margin: 6px calc(-1 * (var(--margin) + var(--gap))) 18px 0; }
+  .side-note { border-left: 2px solid var(--yellow); padding-left: 10px; font-size: 12.5px; line-height: 1.4; color: var(--ink-soft); }
+  .side-note .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .side-note .rec { display: grid; grid-template-columns: 40px 1fr; gap: 8px; align-items: center; margin-bottom: 6px; }
+  .side-note .rec img { width: 40px; height: 40px; border-radius: 2px; }
+  .side-note .who { color: var(--ink); font-weight: 600; }
+  .side-note .qr { width: 96px; height: 96px; margin: 4px 0 6px; }
+  .side-note .qr img, .side-note .qr canvas { width: 100% !important; height: 100% !important; }
+  .side-fig img { display: block; width: 100%; border: 4px solid #FFFFFF; box-shadow: 0 3px 12px rgba(0,0,0,.18); transform: rotate(2deg); }
+  .side-fig figcaption { font: 600 20px/1.05 var(--hand); color: var(--red); text-align: center; margin-top: 8px; }
+  .side-quote { font: 500 17px/1.25 var(--display); color: var(--red); border-top: 2px solid var(--red); padding-top: 8px; }
+  .side-quote span { display: block; font: 11px/1.4 var(--mono); color: var(--ink-soft); margin-top: 6px; }
+
+  /* Achterin */
+  .back { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 8px; }
+  h4.backhead { font: 600 22px/1.15 var(--display); margin: 28px 0 0; }
+  .terms { columns: 2 240px; column-gap: 32px; margin: 12px 0 0; }
+  .terms div { break-inside: avoid; margin: 0 0 10px; }
+  .terms dt { font-weight: 600; }
+  .terms dd { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.45; }
+  .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px 32px; margin-top: 14px; }
+  .link-card { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: start; }
+  .link-card .qr { width: 112px; height: 112px; }
+  .link-card.lesson { grid-template-columns: 1fr; }
+  .link-card .qr img, .link-card .qr canvas { width: 100% !important; height: 100% !important; }
+  .link-card .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .link-card p { font-size: 14px; line-height: 1.45; }
+  .link-card .url { font: 11px/1.4 var(--mono); color: var(--ink-soft); word-break: break-all; margin-top: 6px; }
+  .colofon { margin-top: 36px; font-size: 12px; line-height: 1.5; color: var(--ink-soft); display: grid; gap: 6px; max-width: var(--text); }
+
+  @media screen and (max-width: 760px) {
+    .part { margin-right: 0; }
+    .flow { padding-right: 0; }
+    .side-note, .side-fig, .side-quote { float: none; width: auto; margin: 16px 0; }
+    .side-fig { max-width: 220px; }
+  }
+
+  /* Boek op A4 */
+  @page { size: A4; margin: 20mm 18mm 22mm 20mm; }
+  @page cover { margin: 0; }
+  @media print {
+    html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root { --text: 112mm; --margin: 44mm; --gap: 8mm; }
+    body { padding: 0; font-size: 9.6pt; line-height: 1.55; }
+    .book { max-width: none; }
+    p { orphans: 3; widows: 3; }
+    .cover { page: cover; margin: 0; height: 296mm; padding: 0 22mm 32mm 26mm; break-after: page; }
+    .cover .kicker { top: 18mm; left: 26mm; font-size: 8pt; }
+    .cover .cassette { top: 14mm; right: 16mm; width: 28mm; }
+    .cover h1 { font-size: 56pt; }
+    .cover .sub { font-size: 14pt; }
+    .opener .bar { width: 5mm; }
+    .part { margin: 0 calc(-1 * (var(--margin) + var(--gap))) 6mm 0; height: 70mm; min-height: 0; padding: 0 50mm 8mm 12mm; break-before: page; break-after: avoid; }
+    .part .kicker { font-size: 7.5pt; }
+    .part h2 { font-size: 26pt; }
+    .part .sub { font-size: 10pt; }
+    .part .letter { font-size: 100pt; right: 8mm; bottom: -5mm; }
+    .first-part { break-before: auto; margin-top: 10mm; }
+    .head { margin: 8mm 0 2.5mm; break-after: avoid; break-inside: avoid; }
+    .head .label { font-size: 6.8pt; }
+    .head h3 { font-size: 14pt; }
+    .intro { font-size: 11pt; }
+    .side-note { font-size: 7.6pt; padding-left: 3mm; margin-top: 1mm; margin-bottom: 5mm; break-inside: avoid; }
+    .side-note .tag { font-size: 6.2pt; margin-bottom: 2mm; }
+    .side-note .rec { grid-template-columns: 11mm 1fr; gap: 2.5mm; margin-bottom: 1.5mm; }
+    .side-note .rec img { width: 11mm; height: 11mm; }
+    .side-note .qr { width: 24mm; height: 24mm; }
+    .side-fig { margin-bottom: 5mm; break-inside: avoid; }
+    .side-fig figcaption { font-size: 13pt; }
+    .side-quote { font-size: 11pt; break-inside: avoid; }
+    .side-quote span { font-size: 6.5pt; }
+    .back { break-before: page; margin-top: 0; }
+    h4.backhead { font-size: 14pt; margin-top: 8mm; }
+    .terms { columns: 2; column-gap: 10mm; }
+    .terms div { margin-bottom: 2.5mm; }
+    .terms dd { font-size: 8.6pt; }
+    .terms div { break-inside: avoid; }
+    .links { grid-template-columns: 1fr 1fr; gap: 8mm; break-inside: avoid; }
+    .link-card { grid-template-columns: 30mm 1fr; gap: 5mm; }
+    .link-card .qr { width: 30mm; height: 30mm; }
+    .link-card p { font-size: 8.8pt; }
+    .link-card .url { font-size: 6.8pt; }
+    .colofon { font-size: 7.5pt; margin-top: 10mm; }
+  }
+  .cover .cover-text { position: absolute; left: 44px; right: 28px; bottom: 36px; display: grid; gap: 10px; }
+  @media print { .cover { display: block !important; height: 294mm !important; } .cover .cover-text { left: 26mm; right: 22mm; bottom: 32mm; gap: 4mm; } }</style><style>
+  body.chapter { padding-top: 0; }
+  body.chapter .sitenav { margin-inline: -16px; }
+  .deck { margin: 0 -16px; background: #1C1B19; color: #fff; padding: 18px 20px 20px; display: grid; gap: 14px; }
+  .deck-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .deck .lbl { font: 11px/1.4 "Space Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: #F2D500; min-width: 7.5em; }
+  .deck .lesson { font: 500 16px/1.3 "Oswald", sans-serif; }
+  .deck .btn { padding: 10px 14px; font-size: 14px; }
+  .deck .btn.ghost { color: #fff; border-color: #55524C; }
+  .deck-embed { margin: 0; }
+  .deck-embed iframe { border-radius: 8px; display: block; }
+  .lu-modal { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 16px; background: rgba(18,17,16,.82); }
+  .lu-modal[hidden] { display: none; }
+  .lu-box { position: relative; width: min(1280px, 100%, calc((100vh - 110px) * 1.6)); display: grid; gap: 10px; }
+  .lu-bar { display: flex; align-items: center; gap: 10px; color: #fff; }
+  .lu-bar b { font: 600 18px/1.2 "Oswald", sans-serif; margin-right: auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lu-bar button { font: 12px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #fff; background: #2A2825; border: 1px solid #55524C; border-radius: 4px; padding: 9px 12px; cursor: pointer; }
+  .lu-bar .lu-close { background: #F2D500; color: #1C1B19; border-color: #F2D500; font-weight: 700; }
+  .lu-frame { position: relative; aspect-ratio: 16 / 10; background: #000; border-radius: 8px; overflow: hidden; }
+  .lu-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .lu-frame:fullscreen { border-radius: 0; }
+  .lu-cover { position: absolute; right: 8px; bottom: 8px; width: 160px; height: 46px; z-index: 2; display: flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 10px; background: #F2D500; color: #1C1B19; font: 700 15px/1 "Oswald", sans-serif; letter-spacing: .03em; text-transform: uppercase; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.25); }
+  .lu-cover:hover { background: #FFE34D; }
+  .deck-embed.lu { position: relative; aspect-ratio: 16 / 10; max-height: 85vh; background: #000; border-radius: 8px; overflow: hidden; }
+  .deck-embed.lu[hidden] { display: none; }
+  .deck-help { margin: -4px 0 0; font: 12px/1.4 "Space Mono", monospace; color: #9C978D; }
+  .deck-help a { color: #F2D500; }
+  .deck-help[hidden] { display: none; }
+  .deck-embed.lu:fullscreen { aspect-ratio: auto; max-height: none; border-radius: 0; }
+  .deck-embed.lu iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0; }
+  .deck-genres { display: flex; flex-wrap: wrap; gap: 6px; }
+  .gchip { --c: #999; display: inline-flex; align-items: center; gap: 7px; text-decoration: none; font: 13px/1 "Inter", sans-serif; padding: 7px 10px; border-radius: 999px; background: #2A2825; color: #fff; }
+  .gchip i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+  .gchip span { color: #9C978D; font-family: "Space Mono", monospace; font-size: 11px; }
+  .gchip:hover { background: #3A3833; }
+  .side-note .rec { grid-template-columns: 52px 1fr; gap: 10px; }
+  .side-note .rec-cover { position: relative; display: block; width: 52px; height: 52px; }
+  .side-note .rec .rec-cover img { display: block; width: 52px; height: 52px; object-fit: cover; }
+  .side-note .rec-cover .sor-play { position: absolute; right: -7px; bottom: -7px; width: 28px; height: 28px; box-shadow: 0 2px 6px rgba(0,0,0,.3); }
+  .side-note .rec-cover.no-img { display: grid; place-items: center; background: #EDE9E1; border-radius: 2px; }
+  .side-note .rec-cover.no-img .sor-play { position: static; }
+  .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 48px 0 0; }
+  .pager a { display: grid; gap: 4px; padding: 16px; border: 1px solid #DDD8CE; border-radius: 4px; text-decoration: none; }
+  .pager a:hover { border-color: #1C1B19; }
+  .pager .next { text-align: right; }
+  .pager small { font: 11px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #D63A31; }
+  .pager b { font: 600 18px/1.15 "Oswald", sans-serif; }
+  .mt-step { position: fixed; top: 50%; z-index: 40; display: flex; align-items: center; gap: 10px; text-decoration: none; transform: translateY(-50%); }
+  .mt-step.prev { left: 14px; } .mt-step.next { right: 14px; flex-direction: row-reverse; }
+  .mt-step i { flex: none; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: #1C1B19; color: #F2D500; font-style: normal; line-height: 0; box-shadow: 0 6px 18px rgba(0,0,0,.18); transition: transform .15s; }
+  .mt-step span { background: #1C1B19; color: #fff; border-radius: 4px; padding: 8px 10px; font: 600 14px/1.2 "Oswald", sans-serif; max-width: 220px; opacity: 0; pointer-events: none; transition: opacity .15s; }
+  .mt-step span small { display: block; font: 10px/1.2 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #F2D500; margin-bottom: 3px; }
+  .mt-step:hover i, .mt-step:focus-visible i { transform: scale(1.08); }
+  .mt-step:hover span, .mt-step:focus-visible span { opacity: 1; }
+  @media (max-width: 1100px) { .mt-step { top: auto; bottom: 14px; transform: none; } body:has(.sor-player:not([hidden])) .mt-step { bottom: 96px; } .mt-step span { display: none; } .mt-step i { width: 42px; height: 42px; } }
+  @media print { .sitenav, .deck, .pager, .sitefoot, .mt-step { display: none !important; } }
+</style><style>
+:root { --red: #1E488C; --yellow: #E9B44C; }
+.opener .wash { background-color: rgba(30,72,140,.66) !important; }
+.opener .shade { background-color: rgba(10,22,44,.40) !important; }
+@media print { .first-part { break-before: page !important; margin-top: 0 !important; } }
+
+  body .sor-play { background: #1E488C; }
+  .deck .lbl { color: #E9B44C; }
+  .deck .btn.solid { background: #E9B44C; border-color: #E9B44C; color: #1C1B19; }
+  .mt-step i { color: #E9B44C; }
+  .pager small { color: #1E488C; }
+</style><script src="../../assets/player.js"></script><script src="../../assets/nav.js"></script></head><body class="chapter" data-mixtape="film-4"><header class="sitenav"><a class="brand" href="../index.html"><img src="../assets/icon.svg" alt=""><span>De Droomfabriek</span></a><nav aria-label="Hoofdmenu"><a href="../index.html" aria-current="page">Filmrollen</a><a href="../kaart.html">Kaart</a><a href="../begrippen.html">Begrippen</a><a href="../pdf/droomfabriek-reader.pdf">Reader (pdf)</a></nav></header><div class="book">
+
+<header class="opener cover" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Singin%27_in_the_Rain_trailer_screenshot.jpg/960px-Singin%27_in_the_Rain_trailer_screenshot.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+  <p class="kicker">De Droomfabriek · Filmrol 4</p>
+  <img class="cassette" src="../assets/icon.svg" alt="">
+  <div class="cover-text"><h1>Songs uit de platenkast</h1>
+  <p class="sub">Jazz, pop en de song in film: van Busby Berkeley tot <em>Pulp Fiction</em>, ca. 1929–1994.</p></div>
+</header>
+<div class="deck" aria-label="Bij dit hoofdstuk">
+  <div class="deck-row"><span class="lbl">Luisteren</span><a class="btn solid deck-toggle" data-target="sp" href="https://open.spotify.com/playlist/0zfVJb0CzpdQqb79cQwSb6" data-embed="https://open.spotify.com/embed/playlist/0zfVJb0CzpdQqb79cQwSb6?utm_source=generator" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Spotify-playlist</a><a class="btn ghost" href="https://open.spotify.com/playlist/0zfVJb0CzpdQqb79cQwSb6" target="_blank" rel="noopener">Open in Spotify</a><a class="btn ghost" href="../pdf/droomfabriek-filmrol-04.pdf" download>Download pdf</a></div>
+  <div class="deck-embed" data-name="sp" hidden></div>
+  <div class="deck-row"><span class="lbl">Les</span><a class="btn solid deck-toggle" href="https://www.lessonup.com/nl/lesson/f8epNyEAdgz6bGThk" data-embed="https://www.lessonup.com/app/teach-v2/searchembed/f8epNyEAdgz6bGThk?lang=nl" data-target="lu" data-title="De Droomfabriek · Filmrol 4: Songs uit de platenkast" aria-haspopup="dialog"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Open de les</a></div>
+  <div class="deck-row"><span class="lbl">Op de kaart</span><a class="btn ghost" href="../kaart.html">Naar de filmmuziekkaart</a></div>
+</div>
+
+<section class="flow">
+  <aside class="side-note"><span class="tag">LUISTER MEE</span><div class="qr" data-url="https://open.spotify.com/playlist/0zfVJb0CzpdQqb79cQwSb6"></div>Alle fragmenten uit dit hoofdstuk staan op volgorde in de Spotify-playlist bij Filmrol 4.</aside>
+  <p class="intro">Zodra film kon praten, kon hij ook zingen. Vanaf 1929 maakten de Hollywoodstudio's musicals aan de lopende band, en het lied werd de motor van het verhaal. Een liedje kon een personage voorstellen, een liefde laten beginnen of een hele crisis wegzingen. Tegelijk was het een product dat buiten de bioscoop verder leefde: als bladmuziek, op de radio en op de plaat. Die dubbele rol, als onderdeel van de film en als los te verkopen hit, loopt als een rode draad door de geschiedenis van de song in film.</p>
+  <p>In de jaren vijftig kwam er een tweede stroom bij. Jazz had in Hollywood lang alleen geklonken uit een band in beeld, in een nachtclub of op een feest. Nu schoof hij de score zelf in. Componisten als Alex North, Elmer Bernstein en Duke Ellington gebruikten blues, bigband en kleine combo's om de stad, de nacht en de onrust van hun personages te laten horen. Henry Mancini, Lalo Schifrin en John Barry maakten van die jazz een stijlvol, koel geluid voor misdaad en spionage, dat net zo goed op de platenspeler thuis werkte als in de bioscoop.</p>
+  <p>Vanaf het eind van de jaren zestig ging het nog een stap verder. Regisseurs ontdekten dat bestaande popsongs een hele film konden dragen, zonder nieuw gecomponeerde score. Een lied bracht zijn eigen betekenis en zijn eigen tijd mee. De soundtrackplaat werd een commercieel product op zichzelf, van <em>The Graduate</em> en <em>Shaft</em> tot <em>Pulp Fiction</em>, en de regisseur werd soms meer een dj dan een opdrachtgever van een componist.</p>
+
+  <!-- AKTE 1 -->
+  <header class="opener part first-part" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/42nd_Street_%281933%29_Lobby_Card.jpg/960px-42nd_Street_%281933%29_Lobby_Card.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Akte 1 · 1929-1961</p>
+    <h2>Zingen op het doek</h2>
+    <p class="sub">De filmmusical van caleidoscoop tot <em>West Side Story</em>.</p>
+    <span class="letter" aria-hidden="true">1</span>
+  </header>
+
+  <div class="head"><p class="label">Scène 01 · 1929-1946 · Los Angeles</p><h3>Caleidoscoop: de studiomusical</h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Busby_Berkeley_during_his_murder_trial_%28cropped%29.jpg/960px-Busby_Berkeley_during_his_murder_trial_%28cropped%29.jpg" alt="Busby Berkeley"><figcaption>Busby Berkeley</figcaption></figure>
+  <p>Toen de geluidsfilm eind jaren twintig doorbrak (zie Filmrol 1), lag de <strong>filmmusical</strong> voor de hand: een film waarin liedjes en dans het verhaal vooruitduwen. Vanaf 1929 haalden de studio's songschrijvers van Broadway naar Hollywood en maakten ze musicals in hoog tempo. In 1933 kreeg het genre een eigen filmische vorm, vooral door choreograaf Busby Berkeley.</p>
+  <p>Berkeley had op Broadway dansnummers gemaakt, maar hij dacht vanuit de camera. In het theater ziet het publiek een podium van voren. In een film kan de camera overal staan. Berkeley zette tientallen danseressen in identieke kostuums in cirkels en rijen en filmde ze recht van boven. Als ze hun armen of waaiers bewogen, ontstonden draaiende patronen die op een caleidoscoop leken. Zulke beelden waren alleen in de film mogelijk.</p>
+  <p>Het eerste grote voorbeeld was <em>42nd Street</em> (1933), geregisseerd door Lloyd Bacon voor Warner Bros. Het is een <strong>backstagemusical</strong>: een film over het maken van een show. Een jonge danseres, gespeeld door Ruby Keeler, moet op het laatste moment de hoofdrol overnemen. De liedjes worden dus in het verhaal zelf uitgevoerd, als nummers op het toneel. Zo hoefde niemand uit te leggen waarom de personages ineens gingen zingen. Maar zodra het doek opgaat, laat Berkeley het theater los en wordt het dansnummer een film in de film, met camerastandpunten die geen toeschouwer in de zaal ooit had kunnen zien.</p>
+  <p>De liedjes van <em>42nd Street</em> kwamen van componist Harry Warren en tekstschrijver Al Dubin. Warren werd in 1893 in Brooklyn geboren als Salvatore Guaragna, in een Italiaans immigrantengezin, en leerde zichzelf muziek. Bij Warner schreef hij met Dubin jarenlang de liedjes voor de musicals waarvoor Berkeley de grote nummers maakte. Hun songs hebben een strakke vorm, meestal met een kort couplet en een refrein van 32 maten in de vorm AABA, en een pakkende eerste regel die je na één keer horen kent.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/54/20/73/542073c3-406c-3554-21ed-af7037a447fa/mzaf_13706650434582799587.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/61/11/54/61115461-1ca1-0dfb-f3ee-c25cbefd8c03/cover.jpg/600x600bb.jpg" alt=""><div><span class="who">Ginger Rogers</span><br>Film: Gold Diggers of 1933 (1933)</div></div><em>We're in the Money</em>: een vrolijk geldlied midden in de economische crisis.</aside>
+  <p>Die liedjes klonken midden in de economische crisis. In <em>Gold Diggers of 1933</em>, dat hetzelfde jaar uitkwam, opent Ginger Rogers de film met <em>We're in the Money</em>. Ze staat op het toneel in een kostuum van grote munten, omringd door danseressen met nog meer munten, en zingt dat het geld weer binnenstroomt. Het is een optimistisch lied voor een publiek dat juist geen geld had. Even later leggen schuldeisers de repetitie stil, omdat de producent zijn rekeningen niet heeft betaald. Aan het eind van de film keert de toon helemaal om. Het slotnummer, <em>Remember My Forgotten Man</em>, gaat over oud-soldaten uit de Eerste Wereldoorlog die nu werkloos in de rij staan voor gratis soep.</p>
+  
+  <p>Bij RKO ontstond tegelijk een ander soort musical. Fred Astaire en Ginger Rogers maakten daar in de jaren dertig negen films samen, waarvan <em>Top Hat</em> (1935) de bekendste is, met liedjes van Irving Berlin zoals <em>Cheek to Cheek</em>. Waar Berkeley met massa's en patronen werkte, draaide het bij Astaire om twee mensen. Hij wilde dat zijn dansen in lange shots werden gefilmd, met het hele lichaam in beeld, zodat de kijker kon zien dat de dans echt was en niet in de montage werd gemaakt. De liedjes groeiden ook meer uit het gesprek: een flirt gaat over in zang, de zang in dans. Daarmee wees <em>Top Hat</em> vooruit naar de musical waarin liedjes en verhaal helemaal in elkaar overlopen.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e8/3d/aa/e83daad9-32ef-1902-28e0-58825c31e8ba/mzaf_8777160890704215858.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1d/c8/ff/1dc8ff05-307c-0734-17ed-6a5f7bd645ff/mzi.varbrygk.jpg/600x600bb.jpg" alt=""><div><span class="who">Glenn Miller and His Orchestra</span><br>Film: Sun Valley Serenade (1941)</div></div><em>Chattanooga Choo Choo</em>: een bigbandhit die via de film de hele wereld rondging.</aside>
+  <p>Harry Warren bleef ondertussen hits leveren. Begin jaren veertig werkte hij voor 20th Century Fox, waar hij met tekstschrijver Mack Gordon <em>Chattanooga Choo Choo</em> schreef voor <em>Sun Valley Serenade</em> (1941). Het orkest van Glenn Miller speelt het in de film, met zanger Tex Beneke en de vocalgroep The Modernaires, en daarna dansen de Nicholas Brothers het nummer met Dorothy Dandridge. Het arrangement doet een trein na: trompetten en trombones bootsen de fluit van een locomotief na, en aan het eind klinkt die fluit opnieuw. De plaat werd een wereldhit. In februari 1942 kreeg Glenn Miller er de allereerste gouden plaat voor, voor meer dan een miljoen verkochte exemplaren. Film en plaat versterkten elkaar.</p>
+  
+  <p>Warren won drie Oscars voor het beste lied: voor <em>Lullaby of Broadway</em> (1935), <em>You'll Never Know</em> (1943) en <em>On the Atchison, Topeka and the Santa Fe</em> uit <em>The Harvey Girls</em> (1946). Hij schreef meer dan achthonderd liedjes, maar zijn naam bleef veel minder bekend dan die van Irving Berlin. De melodie was van iedereen, de eer ging naar de sterren die haar zongen.</p>
+
+  <div class="head"><p class="label">Scène 02 · 1949-2016 · Los Angeles, New York</p><h3>Van <em>Singin' in the Rain</em> tot <em>West Side Story</em></h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Leonard_Bernstein_1971.jpg/960px-Leonard_Bernstein_1971.jpg" alt="Leonard Bernstein"><figcaption>Leonard Bernstein</figcaption></figure>
+  <p>In de jaren veertig en vijftig werd MGM de studio van de musical. Producent Arthur Freed bouwde daar een eigen afdeling op, de Freed Unit, met regisseurs, choreografen en arrangeurs die gespecialiseerd waren in het genre. Freed was zelf tekstschrijver geweest en had met componist Nacio Herb Brown in de vroege geluidsfilm tal van liedjes geschreven.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/81/c5/b0/81c5b02c-8fa1-81f7-eafd-f792c8892fe5/mzaf_17724809493012138393.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/5a/5e/c2/5a5ec258-75ae-8d5f-2a13-09495d6fa8f7/794043185656.jpg/600x600bb.jpg" alt=""><div><span class="who">Gene Kelly</span><br>Film: Singin' in the Rain (1952)</div></div><em>Singin' in the Rain</em>: het bekendste regenlied. Let op hoe de dans het ritme overneemt.</aside>
+  <p><em>Singin' in the Rain</em> (1952), geregisseerd door Gene Kelly en Stanley Donen, is gebouwd op de oude liedjes van Freed en Brown. Het verhaal kijkt met humor terug op de overgang van de stomme film naar de geluidsfilm, rond 1927. Een filmster met een schelle, onbruikbare stem moet ineens praten en zingen, en een jonge actrice zingt stiekem haar partijen in. Het is een grap over het <strong>nasynchroniseren</strong>, het achteraf inzingen of inspreken van een stem bij beeld. De studio's deden dat in werkelijkheid voortdurend, ook in de musicals van Freed zelf.</p>
+  <p>Het titelnummer is de bekendste scène uit de film. Gene Kelly loopt na een avond verliefd te zijn door een straat vol regen, klapt zijn paraplu dicht en begint te dansen. Het lied zelf is eenvoudig: een rustige melodie in een kalm tempo. De dans neemt het ritme over. Kelly tikt met zijn voeten in de plassen, stampt, springt en zwaait om een lantaarnpaal, en het orkest volgt zijn bewegingen. Hier is geen podium meer en geen show in de show: de dans komt rechtstreeks voort uit het gevoel van het personage.</p>
+  
+  <p>Leonard Bernstein kwam uit een andere wereld. Hij was dirigent, pianist en componist van zowel concertmuziek als musicals, en vanaf 1958 chef-dirigent van de New York Philharmonic. Zijn eerste musical, <em>On the Town</em>, werd in 1949 door Kelly en Donen verfilmd. MGM verving daarbij een groot deel van zijn muziek door nieuwe, eenvoudiger liedjes. Bernstein schreef maar één originele filmscore: <em>On the Waterfront</em> (1954) van Elia Kazan, met Marlon Brando als havenarbeider. De film opent met een eenzame hoorn die zacht een melodie speelt. Daarna vallen percussie en koper hard in, met een agressief, ritmisch motief. De hele film lang staan die twee werelden tegenover elkaar: de kwetsbare man en het geweld van de haven. Bernstein kreeg er een Oscarnominatie voor.</p>
+  <p><em>West Side Story</em> ging in 1957 op Broadway in première, met teksten van Stephen Sondheim en choreografie van Jerome Robbins. Het is het verhaal van Romeo en Julia, verplaatst naar de straten van New York: twee jongerenbendes, de Amerikaanse Jets en de Puerto Ricaanse Sharks, en een liefde die tussen die twee groepen in valt. De verfilming van 1961, geregisseerd door Robert Wise en Jerome Robbins, bleef dicht bij Bernsteins partituur. De film won tien Oscars, onder meer voor beste film en voor Rita Moreno en George Chakiris als bijrolspelers.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/52/82/aa/5282aa33-494b-a871-cf7b-eb4efea210da/mzaf_4485430740963406570.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e1/80/00/e18000a3-4f26-41cc-f27e-e30cf668e57f/mzi.kiyqaevi.jpg/600x600bb.jpg" alt=""><div><span class="who">Rita Moreno &amp; George Chakiris</span><br>Film: West Side Story (1961)</div></div><em>America</em>: wisselende maten van zes en drie. Tel mee met de handklappen.</aside>
+  <p>Bernstein mengde in <em>West Side Story</em> jazz, Latijns-Amerikaanse dansritmes en de harmonie van de moderne concertmuziek. Eén interval komt steeds terug: de <strong>tritonus</strong>, een interval van drie hele tonen, bijvoorbeeld van C naar Fis. Het klinkt gespannen en onaf, alsof het ergens naartoe wil. In het liefdeslied <em>Maria</em> zit die sprong in de naam zelf: van de eerste naar de tweede lettergreep springt de melodie een tritonus omhoog, en de derde lettergreep lost dat met een halve toon omhoog op. In <em>Cool</em>, waarin de Jets proberen kalm te blijven voor het gevecht, is hetzelfde interval de kern van het thema. Zo krijgen liefde en geweld in de musical dezelfde muzikale bouwsteen.</p>
+  <p>Het nummer <em>America</em> laat het ritmische plezier van de partituur horen. De Puerto Ricaanse vrouwen en mannen zingen een spottend duel over het leven in de Verenigde Staten. Het ritme wisselt steeds tussen een maat van zes achtsten, geteld als twee groepen van drie, en een maat van drie kwarten, geteld als drie groepen van twee. Dat verschuiven van de accenten, een <strong>hemiool</strong>, komt uit Latijns-Amerikaanse dansmuziek en geeft het nummer een springerige, onrustige drive.</p>
+  
+  <p>Na de jaren zestig werd de grote filmmusical zeldzaam. In 2016 liet regisseur Damien Chazelle het met componist Justin Hurwitz herleven in <em>La La Land</em>. De film opent met een dansnummer op een vastgelopen snelweg in Los Angeles en volgt een actrice en een jazzpianist. Hurwitz verwijst naar de oude Hollywoodmusical, naar de Franse musicals van Jacques Demy en naar jazz. Hij bouwt de score rond een paar thema's die steeds terugkomen, van solopiano tot vol orkest. Hij won er twee Oscars mee, voor de score en voor het lied <em>City of Stars</em>.</p>
+
+  <!-- AKTE 2 -->
+  <header class="opener part" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Duke_Ellington_at_the_Hurricane_Club_1943.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Akte 2 · 1951-1973</p>
+    <h2>Jazz in de nacht</h2>
+    <p class="sub">Jazz verhuist van de nachtclub naar de score en wordt het geluid van stad, misdaad en spionage.</p>
+    <span class="letter" aria-hidden="true">2</span>
+  </header>
+
+  <div class="head"><p class="label">Scène 03 · 1951-1962 · Los Angeles</p><h3>Jazz in de partituur</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Elmer_Bernstein_1981_%28cropped%29.jpg" alt="Elmer Bernstein"><figcaption>Elmer Bernstein</figcaption></figure>
+  <p>In de Hollywoodfilm van de jaren dertig en veertig klonk jazz bijna altijd als <strong>bronmuziek</strong>: muziek die in de wereld van het verhaal zelf klinkt en die de personages ook horen. Een band speelt in een nachtclub, iemand zet een plaat op, een orkest speelt op een feest. De score die alleen de kijker hoort, de underscore, was symfonisch (zie Filmrol 2). Jazz stond voor plezier, uitgaan en soms voor zonde, maar mocht niet vertellen wat er in een personage omging.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/a2/f1/ca/a2f1ca25-8eed-e6c7-55ec-42832df4eb6b/mzaf_12507165939553794844.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/0e/20/ab/0e20ab69-9574-08cb-de50-a5e3491932e1/22UMGIM57508.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Alex North</span><br>Film: A Streetcar Named Desire (1951)</div></div><em>Streetcar</em>: blues en jazz als de zinnelijkheid en spanning van New Orleans.</aside>
+  <p>Alex North veranderde dat met <em>A Streetcar Named Desire</em> (1951) van Elia Kazan, naar het toneelstuk van Tennessee Williams. North had aan de Juilliard School in New York gestudeerd en ook een tijd in Moskou, en hij had muziek geschreven voor theater en dans. Kazan nam hem mee naar Hollywood. De film speelt in New Orleans, de stad die als bakermat van de jazz geldt. Blanche DuBois, gespeeld door Vivien Leigh, komt logeren bij haar zus en zwager Stanley, gespeeld door Marlon Brando, in een krappe woning in de oude stad. Blanche houdt zich vast aan een beeld van zichzelf dat steeds verder afbrokkelt.</p>
+  <p>North gebruikte in de score zelf jazz en blues: een zwoele klarinet en saxofoon, blue notes, een trage, slepende puls. De muziek beschrijft niet wat er te zien is, maar wat er in de personages gebeurt. Ze klinkt zinnelijk en broeierig rond Stanley, en wordt onrustiger en vervormder naarmate Blanche haar greep op de werkelijkheid verliest. Daarmee werd North een van de eersten die jazz in Hollywood als psychologische muziek gebruikten.</p>
+  
+  <p>North schreef daarna ook grote orkestscores, zoals voor <em>Spartacus</em> (1960), en een score voor <em>2001: A Space Odyssey</em> die Stanley Kubrick uiteindelijk niet gebruikte (zie Filmrol 2). Hij werd vijftien keer voor een Oscar genomineerd, maar won er nooit een voor een score. In 1986 kreeg hij een ere-Oscar voor zijn hele werk.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview71/v4/5a/fc/8b/5afc8bbd-2d59-8368-ff73-4e929d9fca52/mzaf_1828319266075503206.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music/v4/c8/85/6a/c8856a65-5f71-68fd-b487-9688990a0bda/887396256682.tif/600x600bb.jpg" alt=""><div><span class="who">Elmer Bernstein</span><br>Film: The Man with the Golden Arm (1955)</div></div><em>Main Title</em>: hard koper en drums, een bigband voor een verslaving.</aside>
+  <p>Vier jaar na <em>Streetcar</em> ging Elmer Bernstein nog een stap verder. Bernstein, geboren in 1922 in New York en geen familie van Leonard, had piano en compositie gestudeerd, onder meer bij Stefan Wolpe. In 1955 schreef hij de muziek voor <em>The Man with the Golden Arm</em> van Otto Preminger. Frank Sinatra speelt Frankie Machine, een kaartdeler in Chicago die verslaafd is aan heroïne en ervan droomt om drummer te worden in een bigband. Sinatra kreeg drumles van jazzdrummer Shelly Manne. Preminger bracht de film uit zonder goedkeuring van de Production Code, de zelfcensuur van Hollywood, omdat drugsgebruik niet mocht worden getoond.</p>
+  <p>Bernstein gaf de film een harde jazzscore voor <strong>bigband</strong>: een groot jazzorkest met secties trompetten, trombones en saxofoons, plus een ritmesectie van piano, bas en drums. Het hoofdthema begint met een drijvende, herhaalde baslijn in piano en bas. Daarboven schreeuwen de trompetten korte, scherpe akkoorden en de drums jagen alles op. Het klinkt nerveus en dwingend, zoals de verslaving van de hoofdpersoon. Grafisch ontwerper Saul Bass maakte er een titelreeks bij van witte balken op een zwarte achtergrond die samen een kromme arm vormen. Beeld en muziek werden zo samen het merk van de film. Bernstein kreeg er een Oscarnominatie voor, en de titelmuziek werd door andere orkesten als single uitgebracht.</p>
+  
+  <p>Bernstein bleef niet bij jazz. Hij werkte daarna in vrijwel elke stijl die Hollywood vroeg. Voor <em>The Ten Commandments</em> (1956) van Cecil B. DeMille schreef hij een groot bijbels epos, voor <em>The Magnificent Seven</em> (1960) een van de bekendste westernthema's (zie Filmrol 2). In <em>To Kill a Mockingbird</em> (1962) van Robert Mulligan koos hij juist voor een kleine, intieme bezetting. Het verhaal wordt verteld door een jong meisje, en de muziek begint met een eenvoudige melodie op de piano, alsof een kind een paar noten speelt, met harp en fluit eromheen. Zijn enige Oscar won Bernstein voor de muziek van de musical <em>Thoroughly Modern Millie</em> (1967).</p>
+
+  <div class="head"><p class="label">Scène 04 · 1958-1961 · New York, Parijs</p><h3>De jazzmusici spelen zelf</h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Miles_Davis_by_Palumbo_cropped.jpg/960px-Miles_Davis_by_Palumbo_cropped.jpg" alt="Miles Davis"><figcaption>Miles Davis</figcaption></figure>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/96/f7/74/96f7741b-cfd0-7542-8375-f7624062ca04/mzaf_12289923099635342027.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6b/6d/2a/6b6d2a61-6e2c-eef2-b0da-f97febaefed6/886445222647.jpg/600x600bb.jpg" alt=""><div><span class="who">Duke Ellington</span><br>Film: Anatomy of a Murder (1959)</div></div><em>Main Title and Anatomy of a Murder</em>: een heel jazzorkest als verteller van een rechtbankdrama.</aside>
+  <p>North en Bernstein waren componisten met een klassieke opleiding die jazz schreven. Eind jaren vijftig kwamen ook jazzmusici zelf aan de beurt. Duke Ellington was al sinds de jaren twintig bandleider, pianist en een van de belangrijkste componisten van de jazz. Met zijn orkest was hij in een aantal korte films te zien geweest. In 1959 vroeg Otto Preminger hem voor zijn eerste volledige filmscore: <em>Anatomy of a Murder</em>, een rechtbankdrama met James Stewart als advocaat in een klein stadje in Michigan.</p>
+  <p>Ellington schreef de muziek samen met Billy Strayhorn, zijn vaste arrangeur en medecomponist. Ze werd gespeeld door Ellingtons eigen orkest, met solisten als altsaxofonist Johnny Hodges. Ellington schreef altijd voor de klank van zijn musici: de gedempte trompetten met een plunjer, de zwoele altsax van Hodges, de lage baritonsax van Harry Carney. Die klankkleuren hoor je in de film terug, maar dan in korte stukjes, verspreid over de scènes. Ellington speelt zelf ook een kleine rol, als pianist Pie Eye, en een paar musici uit zijn orkest zijn ook in beeld.</p>
+  <p>De score geldt als een mijlpaal. Het was de eerste belangrijke Hollywoodscore van Afro-Amerikaanse componisten waarbij de muziek niet uit een band in beeld komt, maar als underscore boven de film ligt. Het soundtrackalbum won drie Grammy's. Twee jaar later volgde <em>Paris Blues</em> (1961) van Martin Ritt, over twee Amerikaanse jazzmusici in Parijs, gespeeld door Paul Newman en Sidney Poitier. Louis Armstrong speelt in de film mee. Ellingtons score werd genomineerd voor een Oscar.</p>
+  
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1f/95/4e/1f954ed9-058d-3aae-9001-4eb5ca18fbe7/mzaf_18066099709055012290.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ba/73/b6/ba73b6d3-4c91-f42a-3c1d-b5f80dc0b1d1/00600753836583.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Miles Davis</span><br>Film: Ascenseur pour l'échafaud (1958)</div></div><em>Générique</em>: geïmproviseerd bij het beeld, met gedempte trompet in de nachtelijke stad.</aside>
+  <p>In Frankrijk gebeurde iets wat in Hollywood ondenkbaar was. Trompettist Miles Davis was eind 1957 voor optredens in Parijs. De 25-jarige regisseur Louis Malle vroeg hem om muziek voor zijn eerste speelfilm, <em>Ascenseur pour l'échafaud</em>, een misdaadfilm met Jeanne Moreau. Een man vermoordt zijn baas, de echtgenoot van zijn minnares, en raakt daarna vast in een lift, terwijl zij de hele nacht door Parijs zwerft en hem zoekt.</p>
+  <p>Davis nam de muziek op 4 en 5 december 1957 op in een studio in Parijs, met vier musici: de Franse tenorsaxofonist Barney Wilen, pianist René Urtreger, bassist Pierre Michelot en de Amerikaanse drummer Kenny Clarke, die in Parijs woonde. Er waren geen uitgeschreven thema's. Davis had in zijn hotelkamer alleen een paar eenvoudige akkoordreeksen bedacht. De band kreeg het verhaal uitgelegd en improviseerde terwijl de scènes uit de film op een scherm achter hen werden geprojecteerd. De musici speelden dus rechtstreeks op het beeld, zoals een pianist in de stomme film dat deed, maar dan met de taal van de moderne jazz.</p>
+  <p>Het resultaat is koel, traag en ruim. Davis speelt met een gedempte trompet lange, ijle lijnen boven akkoorden die lang blijven liggen. Het geldt als een vroeg voorbeeld van <strong>modale jazz</strong>: improvisatie op een toonladder (een modus) in plaats van op snel wisselende akkoorden, zoals in de bebop. De solist krijgt daardoor meer ruimte en de muziek een zwevend, open karakter, dat goed past bij een vrouw die 's nachts door verlaten straten loopt. Davis werkte dat idee verder uit op <em>Milestones</em> (1958) en vooral op zijn album <em>Kind of Blue</em> (1959).</p>
+  
+  <p>De jonge Franse regisseurs van de nouvelle vague, de nieuwe golf van eind jaren vijftig, gebruikten vaker jazz. Pianist Martial Solal schreef bijvoorbeeld de muziek voor <em>À bout de souffle</em> (1960) van Jean-Luc Godard. Die geschiedenis staat in Filmrol 3.</p>
+
+  <div class="head"><p class="label">Scène 05 · 1958-1963 · Los Angeles</p><h3>Mancini: jazz voor de platenspeler</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Henry_Mancini.jpg" alt="Henry Mancini"><figcaption>Henry Mancini</figcaption></figure>
+  <p>Henry Mancini groeide op in Pennsylvania als zoon van een Italiaanse immigrant die fluit speelde in de plaatselijke harmonie. Hij studeerde kort aan de Juilliard School, ging in militaire dienst en speelde na de oorlog piano en arrangeerde voor het Glenn Miller Orchestra, dat na de dood van Miller onder leiding van Tex Beneke verderging. In 1952 kwam hij in de muziekafdeling van Universal terecht. Daar leerde hij het vak door aan tientallen films mee te werken, vaak zonder dat zijn naam op de aftiteling stond. Hij werkte onder meer mee aan <em>Touch of Evil</em> (1958) van Orson Welles.</p>
+  <p>Zijn doorbraak kwam via de televisie. In 1958 schreef hij de muziek voor de detectiveserie <em>Peter Gunn</em> van regisseur Blake Edwards. Het titelthema rust op een <strong>ostinato</strong>: een kort motief dat steeds wordt herhaald, hier een dreigende baslijn die gitaar en piano samen spelen. De pianist bij de opname was een jonge studiomuzikant die later zelf beroemd werd als filmcomponist: John Williams. Boven het ostinato vallen jazzblazers in met harde, korte stoten. Gitarist Duane Eddy had er in 1959 een hit mee.</p>
+  <aside class="side-quote">"Het titelthema van Peter Gunn komt eigenlijk meer uit de rock-'n-roll dan uit de jazz."<span>Henry Mancini, 1989</span></aside>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6d/1b/14/6d1b14ee-6943-baf3-a00b-6b7a8842ff34/mzaf_582393630659911642.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/66/92/62/66926281-5268-8665-1c63-ea274a17a540/mzi.zeonhico.jpg/600x600bb.jpg" alt=""><div><span class="who">Henry Mancini</span><br>Film: Peter Gunn (tv, 1958)</div></div><em>Peter Gunn</em>: één herhaalde baslijn draagt het hele stuk.</aside>
+  <p>Het album <em>The Music from Peter Gunn</em> won in 1959 de allereerste Grammy voor album van het jaar. Dat was nieuw: muziek die voor een tv-serie was geschreven, werd een bestseller in de platenwinkel. Mancini nam zijn muziek daarvoor opnieuw op, niet als korte stukjes van een paar seconden zoals in de serie, maar als afgeronde nummers van twee à drie minuten die je thuis kon draaien. Hij dacht aan twee publieken tegelijk: de kijker voor de televisie en de luisteraar met een platenspeler.</p>
+  
+  <p>Met Blake Edwards bleef Mancini samenwerken. Voor <em>Breakfast at Tiffany's</em> (1961), met Audrey Hepburn, schreef hij met tekstschrijver Johnny Mercer het lied <em>Moon River</em>. Hepburn zingt het in de film zelf, zittend op de brandtrap voor haar raam, met een gitaar. De melodie is eenvoudig en ligt binnen het bereik van een stem zonder zangopleiding, en dat was ook de bedoeling. Het lied en de score wonnen allebei een Oscar. Daarna volgden onder meer <em>Charade</em> (1963) van Stanley Donen en <em>The Pink Panther</em> (1963), opnieuw van Edwards.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/24/c7/6f/24c76f94-1636-73d5-81f6-e3e47e0fff1b/mzaf_5332735104775495241.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/bf/7c/af/bf7caff0-6378-5041-988a-5b5956667989/mzm.umliuhpd.jpg/600x600bb.jpg" alt=""><div><span class="who">Henry Mancini</span><br>Film: The Pink Panther (1963)</div></div><em>The Pink Panther Theme</em>: de tenorsax sluipt op zijn tenen, chromatiek als humor.</aside>
+  <p>Het thema van <em>The Pink Panther</em> hoort bij een getekende roze panter in de titelreeks, die door het beeld sluipt. De tenorsaxofoon van Plas Johnson speelt de melodie op zijn tenen. De lijn is <strong>chromatisch</strong>: ze beweegt in halve toonstappen, met noten die buiten de gewone toonladder vallen. Tussen de frasen zitten stiltes en korte accenten, alsof de panter even stilstaat en om zich heen kijkt. De muziek is spannend en grappig tegelijk. Mancini liet horen dat jazz in film niet alleen voor drugs, misdaad en nacht hoefde te staan, maar ook licht, elegant en geestig kon zijn.</p>
+  
+
+  <div class="head"><p class="label">Scène 06 · 1965-1973 · Buenos Aires, Los Angeles</p><h3>Schifrin: vijf tellen spanning</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Lalo_Schifrin_%281968_Dot_Records_publicity_photo%29.jpg" alt="Lalo Schifrin"><figcaption>Lalo Schifrin, 1968</figcaption></figure>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/83/8a/ca/838aca12-a4f0-43da-167a-c2fc2685ec0f/mzaf_16106560851238552269.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/9f/0a/9b/9f0a9b6e-89fd-7390-1d8d-ebf1e545a5c4/00602557100150.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Lalo Schifrin</span><br>Film: Mission: Impossible (tv, 1966)</div></div><em>Mission: Impossible</em>: tel de maat. Geen vier maar vijf tellen.</aside>
+  <p>Lalo Schifrin werd in 1932 in Buenos Aires geboren. Hij kreeg een klassieke opleiding en studeerde vanaf 1952 aan het conservatorium van Parijs, onder meer bij Olivier Messiaen. 's Avonds speelde hij jazz in Parijse clubs. In 1960 werd hij in New York pianist en arrangeur in de band van trompettist Dizzy Gillespie, een van de grondleggers van de bebop, die jazz al jaren combineerde met Latijns-Amerikaanse ritmes. Vanaf 1963 werkte hij in Hollywood, voor film en televisie.</p>
+  <p>Zijn bekendste stuk schreef hij in 1966 voor de tv-serie <em>Mission: Impossible</em>. Het thema staat in een <strong>5/4-maat</strong>: vijf tellen per maat in plaats van de gebruikelijke vier. De bas speelt twee lange noten en twee korte, steeds opnieuw: lang, lang, kort, kort. Doordat er één tel meer is dan je verwacht, valt het begin van de volgende maat steeds iets later dan je lichaam denkt. Dat maakt het thema onrustig en voortjagend, zonder dat het snel hoeft te zijn. Het koper speelt er korte, scherpe signalen boven. In de titelreeks brandt een lont. Het werd een van de bekendste tv-thema's (over televisiemuziek gaat Filmrol 8).</p>
+  
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ef/84/bd/ef84bd63-2904-eb9f-773b-07c70bd42867/mzaf_4025187518671996063.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music/e0/0c/95/mzi.eyvuzopb.jpg/600x600bb.jpg" alt=""><div><span class="who">Lalo Schifrin</span><br>Film: Bullitt (1968)</div></div><em>Bullitt (Main Title)</em>: jazz, funk en orkest, het geluid van de politiefilm.</aside>
+  <p>In de bioscoop werd Schifrin de componist van de Amerikaanse politie- en misdaadfilm. Voor <em>Cool Hand Luke</em> (1967), met Paul Newman als gevangene in een strafkamp, kreeg hij een Oscarnominatie. In <em>Bullitt</em> (1968) van Peter Yates speelt Steve McQueen een rechercheur in San Francisco. Schifrins muziek mengt jazz, funk, latin en orkest: een funky elektrische bas, fluit, koperstoten en percussie. Voor het soundtrackalbum nam hij de muziek opnieuw op met topmuzikanten uit de jazz en de studio, zoals fluitist Bud Shank, bassiste Carol Kaye en gitarist Howard Roberts. Ook hij dacht dus aan de luisteraar thuis.</p>
+  <p>De film werd vooral bekend om een achtervolging van ongeveer tien minuten door de heuvelstraten van San Francisco. Zodra de achtervolging echt op gang komt, valt de muziek weg en blijven alleen ronkende motoren en gierende banden over. De spanning zit dan in het geluid zelf. Schifrin schreef daarna ook de muziek voor <em>Dirty Harry</em> (1971) van Don Siegel, met Clint Eastwood, en voor <em>Enter the Dragon</em> (1973), met Bruce Lee, waarin hij Aziatische klanken combineerde met funkritmes.</p>
+  
+
+  <div class="head"><p class="label">Scène 07 · 1962-2008 · Londen</p><h3>Bond: twanggitaar en koper</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Barry_in_concert.jpg" alt="John Barry"><figcaption>John Barry</figcaption></figure>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/d1/f3/a5/d1f3a52e-4548-b7a8-fb47-b4748acda80d/mzaf_5510081548625101046.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/26/6a/cc/266acc13-4ffd-2356-e940-da4f61359ef6/00602547739452.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Monty Norman</span><br>Film: Dr. No (1962)</div></div><em>James Bond Theme</em>: de twanggitaar. Eén riff draagt een heel filmmerk.</aside>
+  <p>In 1962 kwam <em>Dr. No</em> uit, de eerste film over de Britse geheim agent James Bond, geregisseerd door Terence Young. De film kreeg een herkenningsmelodie die sindsdien in vrijwel elke Bondfilm terugkomt: het <em>James Bond Theme</em>. Het staat op naam van Monty Norman, die de muziek voor de film schreef. De producenten waren niet tevreden over zijn versie en vroegen de jonge John Barry om het thema te arrangeren. Barry kwam uit York en leidde eind jaren vijftig de popgroep The John Barry Seven.</p>
+  <p>In Barry's arrangement speelt een elektrische gitaar de melodie op de lage snaren, met de <strong>twanggitaar</strong>-klank: een harde aanslag en veel galm, die je kende van de instrumentale rock van Duane Eddy. Gitarist Vic Flick speelde de partij. Daaronder ligt een vamp in mineur, een lijn die met halve toonstappen heen en weer schuift. Dan vallen de bigbandblazers in met een swingend middendeel, en het stuk eindigt op een mineurakkoord met een grote septiem erin. Dat akkoord blijft onopgelost hangen en klinkt gevaarlijk en elegant tegelijk. In een paar maten staan zo rock, jazz en spanning bij elkaar.</p>
+  
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b7/3b/cd/b73bcd54-1aa8-d74b-80f5-1555fd1c791d/mzaf_13589298639777934028.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/af/52/6d/af526d95-f4df-ab8b-e9a8-3d4a2c1762aa/05099969735356.jpg/600x600bb.jpg" alt=""><div><span class="who">Shirley Bassey</span><br>Film: Goldfinger (1964)</div></div><em>Goldfinger</em>: het titellied als blauwdruk voor elke latere Bondsong.</aside>
+  <p>Barry werd daarna de vaste componist van de reeks. Hij schreef de muziek voor elf Bondfilms. Met <em>Goldfinger</em> (1964) legde hij de klank vast die bij Bond hoort: scherp koper, jazzakkoorden, strijkers en een groot <strong>titellied</strong> onder de begintitels, dat ook als single werd uitgebracht. Het lied <em>Goldfinger</em>, met tekst van Leslie Bricusse en Anthony Newley, wordt gezongen door de Welshe zangeres Shirley Bassey. Het opent met harde koperakkoorden, waarna een sluipende, chromatische lijn de spanning opbouwt. Bassey zingt met veel kracht en houdt aan het eind een lange hoge noot vast. Het lied werd een hit in Groot-Brittannië en Amerika en het voorbeeld voor bijna elk later Bondlied: een zangeres of zanger, een groot orkest en een melodie die de titel van de film herhaalt.</p>
+  
+  <p>Barry zocht ook buiten de Bondfilms naar nieuwe klanken voor spionage. Voor <em>The Ipcress File</em> (1965), met Michael Caine als een nuchtere Britse agent, gebruikte hij een <strong>cimbalom</strong>, een Hongaars hakkebord waarvan de snaren met hamertjes worden aangeslagen. Het geeft de film een koel, Oost-Europees geluid dat past bij de Koude Oorlog. In de Bondfilm <em>On Her Majesty's Secret Service</em> (1969) zette hij een Moog-synthesizer in, toen nog een nieuw elektronisch instrument. Voor dezelfde film nam Louis Armstrong het lied <em>We Have All the Time in the World</em> op.</p>
+  <p>Barry's latere stijl werd breder en romantischer, met lange, trage strijkersmelodieën. Hij won vijf Oscars: twee voor <em>Born Free</em> (1966), en verder voor <em>The Lion in Winter</em> (1968), <em>Out of Africa</em> (1985) en <em>Dances with Wolves</em> (1990). De Bondklank leefde ondertussen door. De Britse componist David Arnold maakte in 1997 het album <em>Shaken and Stirred</em>, met nieuwe versies van Bondliedjes door popartiesten. Daarna mocht hij <em>Tomorrow Never Dies</em> (1997) schrijven. Tot en met <em>Quantum of Solace</em> (2008) schreef hij vijf Bondfilms. Hij combineerde Barry's koper en jazzakkoorden met elektronische beats.</p>
+
+  <!-- AKTE 3 -->
+  <header class="opener part" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Star_Glo_Jukebox_Little_Havana%2C_Miami_Florida_2011.jpg/960px-Star_Glo_Jukebox_Little_Havana%2C_Miami_Florida_2011.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Akte 3 · 1965-1994</p>
+    <h2>De platenkast als partituur</h2>
+    <p class="sub">Titelsongs, rocknummers, soul en funk nemen de plaats van de score in.</p>
+    <span class="letter" aria-hidden="true">3</span>
+  </header>
+
+  <div class="head"><p class="label">Scène 08 · 1965-1969 · Los Angeles</p><h3>Bacharach: titelsong en flügelhorn</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Burt_Bacharach_1972.JPG" alt="Burt Bacharach"><figcaption>Burt Bacharach, 1972</figcaption></figure>
+  <p>Burt Bacharach werd in 1928 in Kansas City geboren en groeide op in New York. Hij kreeg een klassieke opleiding, onder meer bij de Franse componist Darius Milhaud. Eind jaren vijftig werd hij arrangeur en dirigent van de Duitse zangeres en filmster Marlene Dietrich, met wie hij jaren door de wereld toerde. Met tekstschrijver Hal David schreef hij in de jaren zestig tientallen hits, vaak voor de zangeres Dionne Warwick, zoals <em>Walk On By</em> (1964).</p>
+  <p>De liedjes van Bacharach klinken licht, maar ze zitten ingewikkeld in elkaar. Hij wisselt vaak van maatsoort midden in een lied, zodat een frase een tel langer of korter is dan je verwacht. Zijn akkoorden komen uit de jazz en nemen onverwachte wendingen, en zijn melodieën springen soms grote intervallen. Toch voelt het voor de luisteraar natuurlijk, omdat de maatwisselingen precies volgen hoe de tekst ademt. Zijn orkestklank is herkenbaar: een zachte <strong>flügelhorn</strong>, een koperinstrument dat lijkt op een trompet maar ronder en warmer klinkt, met piano, lichte strijkers en vocale koortjes.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/74/45/eb/7445eb48-ecea-34d4-3dda-8fafbf1edf39/mzaf_12308157786899894060.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/56/22/12/56221235-d562-5a16-10aa-4e91dd7820f3/00731453891227.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Dusty Springfield</span><br>Film: Casino Royale (1967)</div></div><em>The Look of Love</em>: zoek de verrassende akkoordwendingen onder de zwoele zang.</aside>
+  <p>Voor de film schreef Bacharach vooral <strong>titelsongs</strong>: liedjes onder de begintitels, die ook als single uitkwamen en zo reclame maakten voor de film. <em>What's New Pussycat?</em> (1965) werd gezongen door Tom Jones, <em>Alfie</em> (1966) werd een hit voor onder anderen Dionne Warwick. Voor <em>Casino Royale</em> (1967), een chaotische parodie op de Bondfilms, schreef hij de hele score. Daarin zingt Dusty Springfield <em>The Look of Love</em>, een traag lied met een ontspannen bossanovaritme en een zwoele tenorsaxofoonsolo. Bossanova is een Braziliaanse stijl uit eind jaren vijftig, waarin samba en jazzharmonie samenkomen. Het lied kreeg een Oscarnominatie.</p>
+  
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2a/e2/30/2ae230f2-a772-1db1-12d1-1388495ed671/mzaf_665961424593621519.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/71/89/0f/71890f6b-47de-d853-7942-93fceb59ec5b/00075021315921.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Burt Bacharach</span><br>Film: Butch Cassidy and the Sundance Kid (1969)</div></div><em>South American Getaway</em>: achtervolgingsmuziek zonder dreiging. Hoor hoe licht Bacharach actie maakt.</aside>
+  <p>Zijn grootste filmsucces kwam met de western <em>Butch Cassidy and the Sundance Kid</em> (1969) van George Roy Hill, met Paul Newman en Robert Redford als twee vriendelijke treinrovers. Bacharach schreef er een score bij die helemaal niet klinkt als een western. In de bekendste scène fietst Newman met Katharine Ross over een boerenerf, terwijl B.J. Thomas <em>Raindrops Keep Fallin' on My Head</em> zingt, een luchtig popliedje. De scène staat los van het verhaal, als een soort videoclip binnen de film.</p>
+  <p>Ook de actiemuziek is licht. In <em>South American Getaway</em> zingt een koortje zonder woorden snelle, swingende lijnen, in de stijl van een vocale jazzgroep. Sommige critici vonden dat bij het uitkomen van de film absurd en ouderwets, omdat het niets met het Wilde Westen te maken had. Maar juist dat paste bij de toon van de film, die zijn helden met ironie en sympathie bekijkt. Bacharach won twee Oscars, voor de score en voor <em>Raindrops</em>. Het liedje werd in de versie van B.J. Thomas een nummer 1-hit in Amerika.</p>
+  
+
+  <div class="head"><p class="label">Scène 09 · 1967-1969 · Los Angeles</p><h3>Bestaande liedjes, nieuwe betekenis</h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Simon_and_Garfunkel_1968.jpg/960px-Simon_and_Garfunkel_1968.jpg" alt="Simon &amp; Garfunkel"><figcaption>Simon &amp; Garfunkel, 1968</figcaption></figure>
+  <p>Bacharach schreef nog nieuwe liedjes voor een film. Eind jaren zestig ontdekten filmmakers dat het ook anders kon: met liedjes die al bestonden. Het bioscooppubliek was jong geworden en herkende een popnummer binnen een paar seconden. Een bekend nummer bracht zijn eigen betekenis, zijn eigen tijd en zijn eigen gevoel mee naar de film. De regisseur hoefde dat niet meer door een componist te laten opbouwen.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5d/5a/23/5d5a23e5-1191-668d-de94-e94590085b10/mzaf_11901788581145285929.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/38/4b/c8/384bc80c-0617-cf55-b6f4-34cf4e30c11e/886447698648.jpg/600x600bb.jpg" alt=""><div><span class="who">Simon &amp; Garfunkel</span><br>Film: The Graduate (1967)</div></div><em>The Sound of Silence</em>: een bestaand lied wordt de binnenwereld van de hoofdpersoon.</aside>
+  <p>Het eerste grote voorbeeld was <em>The Graduate</em> (1967) van Mike Nichols. Dustin Hoffman speelt Benjamin Braddock, die net is afgestudeerd en thuis in Californië niet weet wat hij met zijn leven moet. Hij begint een verhouding met de oudere Mrs. Robinson, gespeeld door Anne Bancroft, en wordt daarna verliefd op haar dochter. Nichols gebruikte voor de film liedjes van het folkduo Simon &amp; Garfunkel, die voor een groot deel al op hun platen stonden. Alleen <em>Mrs. Robinson</em> werkte Paul Simon speciaal voor de film uit, en ook dat lied klinkt er alleen in stukjes in. De volledige versie verscheen in 1968 op het album <em>Bookends</em>.</p>
+  <p>Het belangrijkste lied in de film is <em>The Sound of Silence</em>. Paul Simon had het in 1964 geschreven en het duo had het eerst akoestisch opgenomen, met twee stemmen en een gitaar. Producer Tom Wilson voegde in 1965, zonder overleg met Simon en Garfunkel, elektrische gitaar, bas en drums toe. In die folkrockversie werd het begin 1966 een nummer 1-hit. In de film klinkt het al bij de opening, als Benjamin na zijn vlucht stil op een rolpad door de aankomsthal van het vliegveld schuift, en het komt aan het eind terug. Het lied gaat over mensen die langs elkaar heen praten en niet echt naar elkaar luisteren. In de film wordt het de binnenwereld van Benjamin, die zich tussen de volwassenen om hem heen niet kan uitdrukken.</p>
+  
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/b2/a0/49/b2a049ac-b8ca-30b3-05f7-23c5a76ac774/mzaf_1327794637764711716.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/cd/2a/eb/cd2aebb9-9f0f-6377-6b5a-f99016fa31c8/06UMGIM05102.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Steppenwolf</span><br>Film: Easy Rider (1969)</div></div><em>Born to Be Wild</em>: geen componist, wel een soundtrack. Rock als motor van de road movie.</aside>
+  <p>Twee jaar later ging <em>Easy Rider</em> (1969) nog verder. Dennis Hopper regisseerde de film en speelde er samen met Peter Fonda in, als twee motorrijders die van Los Angeles naar New Orleans rijden. De film heeft geen gecomponeerde score. In plaats daarvan klinkt een reeks rocknummers van onder anderen Steppenwolf, The Byrds, The Band en The Jimi Hendrix Experience. De nummers lopen vaak in hun geheel onder lange shots van de motoren op de snelweg. De muziek vertelt niet wat er gebeurt, ze geeft het gevoel van de reis en van vrijheid.</p>
+  <p><em>Born to Be Wild</em> van Steppenwolf klinkt als de twee mannen vertrekken: een hard rocknummer met een vervormde gitaarriff, een stampend ritme en een zanger die het over de open weg heeft. Het lied was een jaar eerder uitgebracht. Na <em>Easy Rider</em> was het lied voor altijd verbonden met motoren en de <strong>road movie</strong>, de film over een reis. Dat is precies wat er gebeurt als een bestaand nummer in een film terechtkomt: het neemt een betekenis mee, en het krijgt er een nieuwe bij.</p>
+  
+  <p>Daarmee veranderde ook de rol van de muziekmaker. In <em>The Graduate</em> en <em>Easy Rider</em> was de componist geen schrijver van nieuwe muziek meer, maar eerder een samensteller die bestaande nummers koos en op de juiste plek in de montage legde. Vaak deed de regisseur dat zelf. Het paste bij New Hollywood, de nieuwe generatie Amerikaanse regisseurs die eind jaren zestig met kleinere, persoonlijkere films de oude studiogewoontes doorbrak (zie Filmrol 2). En het had een commerciële kant: de soundtrackplaat met bekende popnummers werkte als reclame voor de film, en omgekeerd.</p>
+
+  <div class="head"><p class="label">Scène 10 · 1971-1974 · New York, Memphis</p><h3>Blaxploitation: wah-wah en hi-hat</h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Isaac_Hayes_at_the_1973_PUSH_Black_Expo.jpg/960px-Isaac_Hayes_at_the_1973_PUSH_Black_Expo.jpg" alt="Isaac Hayes"><figcaption>Isaac Hayes, 1973</figcaption></figure>
+  <p>Begin jaren zeventig verscheen in Amerika een nieuw soort film: actiefilms met zwarte hoofdrolspelers, gemaakt voor een zwart publiek in de grote steden. Ze werden <strong>blaxploitation</strong> genoemd, een samentrekking van <em>black</em> en <em>exploitation</em>, het Engelse woord voor goedkope films die op een publiek mikken met spektakel. De helden waren detectives, criminelen of wrekers die zich niets lieten zeggen door de witte autoriteiten. Soul en funk, de muziek die het publiek zelf draaide, werden de score.</p>
+  <p>Een van de eerste films was <em>Sweet Sweetback's Baadasssss Song</em> (1971) van Melvin Van Peebles. Hij schreef, regisseerde en speelde de hoofdrol, en hij schreef ook de muziek. Die werd gespeeld door een toen nog onbekende band: Earth, Wind &amp; Fire. Datzelfde jaar maakte fotograaf en regisseur Gordon Parks voor MGM de detectivefilm <em>Shaft</em>, met Richard Roundtree als privédetective John Shaft in New York.</p>
+  <p>De muziek van <em>Shaft</em> kwam van Isaac Hayes. Hij was songschrijver en producer bij Stax in Memphis, het label van zuidelijke soul. Met David Porter had hij hits geschreven als <em>Soul Man</em> voor Sam &amp; Dave. Eind jaren zestig werd hij zelf een ster met lange, orkestrale soulnummers. Voor <em>Shaft</em> maakte hij een dubbelalbum vol funk en soul. Hij nam eerst de ritmepartijen van het titelnummer op, schreef daarna de muziek voor de rest van de film, en kwam pas aan het eind terug bij het titellied.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/f2/ed/aaf2ed6d-1d5e-8833-cafc-6f026937b5ed/mzaf_3318513745197097849.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0b/7e/c4/0b7ec4dd-1152-5b32-6d8d-16fe114b8268/00888072013445.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Isaac Hayes</span><br>Film: Shaft (1971)</div></div><em>Theme from Shaft</em>: eerst alleen hi-hat en wah-wah. Het arrangement bouwt zich laag voor laag op.</aside>
+  <p>Het titelnummer begint met alleen een <strong>hi-hat</strong>, het bekkenpaar op een pedaal van het drumstel, die doorlopende zestiende noten speelt. Drummer Willie Hall haalde dat patroon uit een break in <em>Try a Little Tenderness</em> van Otis Redding, een Stax-plaat waarop Hayes zelf had meegespeeld. Dan valt de gitaar van Charles Pitts in met een <strong>wah-wah</strong>-pedaal: een effect dat met de voet de klank van open naar dicht laat schuiven, zodat de gitaar lijkt te praten. De riff had Hayes eerder bedacht voor een Stax-nummer dat nooit af kwam. Laag voor laag komen er bas, piano, blazers, strijkers en fluit bij. Pas na een lange instrumentale opbouw begint Hayes te zingen, half pratend, terwijl een groep zangeressen hem antwoordt: vraag en antwoord, zoals in de gospel.</p>
+  
+  <p><em>Theme from Shaft</em> won in 1972 de Oscar voor het beste lied. Hayes was daarmee de eerste Afro-Amerikaan die een Oscar won in een categorie buiten het acteren. Het nummer wordt ook wel een van de eerste discoplaten genoemd, door de doorlopende hi-hat en het dansbare tempo. De klank van <em>Shaft</em>, met wah-wahgitaar, hi-hat en blazers als accenten boven de groove, werd het geluid van het genre. In 1974 speelde Hayes zelf de hoofdrol in <em>Truck Turner</em>, waarvoor hij ook de muziek schreef.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5f/78/e2/5f78e2b7-ed98-ba1c-d9cd-140e39011819/mzaf_16325640461992530251.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c4/34/f0/c434f094-4c7e-3c62-8f15-cd02028e1ce7/603497885978.jpg/600x600bb.jpg" alt=""><div><span class="who">Curtis Mayfield</span><br>Film: Super Fly (1972)</div></div><em>Superfly</em>: dansbare soul met een kritische tekst over de drugswereld.</aside>
+  <p>Curtis Mayfield, zanger en gitarist van The Impressions uit Chicago, schreef de liedjes voor <em>Super Fly</em> (1972) van Gordon Parks Jr., de zoon van de regisseur van <em>Shaft</em>. De film gaat over een cocaïnedealer in Harlem die wil stoppen. Mayfields liedjes zijn dansbaar, met een strakke funkbas, percussie en zachte strijkers, en hij zingt in een hoge, lichte falsetstem. Maar zijn teksten zijn kritisch: ze beschrijven de drugswereld zonder haar mooier te maken. Zo zeggen de liedjes soms iets anders dan de beelden, die de dealer als stoere held laten zien. Roy Ayers schreef het jaar daarna jazzfunk voor <em>Coffy</em> (1973), met Pam Grier als verpleegster die wraak neemt op drugsdealers.</p>
+  
+
+  <div class="head"><p class="label">Scène 11 · 1973-1994 · Los Angeles</p><h3>Van <em>American Graffiti</em> tot <em>Pulp Fiction</em></h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Quentin_Tarantino_by_Gage_Skidmore.jpg/960px-Quentin_Tarantino_by_Gage_Skidmore.jpg" alt="Quentin Tarantino"><figcaption>Quentin Tarantino</figcaption></figure>
+  <p>In 1973 maakte George Lucas <em>American Graffiti</em>, met Francis Ford Coppola als producent. De film speelt zich af in één nacht in 1962, in het Californische stadje Modesto, waar een groep jongeren na hun eindexamen rondrijdt in auto's, bij een drive-in eet en elkaar zoekt. Overal staat de radio aan. De hele film door draait de dj Wolfman Jack hits uit de jaren vijftig en vroege jaren zestig. Geluidsontwerper Walter Murch stelde voor om zijn radioprogramma de ruggengraat van de film te maken.</p>
+  <p>Daardoor valt in <em>American Graffiti</em> de bronmuziek samen met de score. Alle muziek komt uit de autoradio's, en de personages horen haar ook. Tegelijk doet ze wat een score doet: ze zet de sfeer van elke scène, geeft commentaar en verbindt de losse verhaallijnen. Zo'n soundtrack van bestaande nummers heet een <strong>compilatiescore</strong>. De film bevat 41 nummers, en de rechten kostten zoveel geld dat er voor een gecomponeerde score niets overbleef. Alleen platenmaatschappij RCA weigerde, en daarom ontbreekt Elvis Presley.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ba/2c/7c/ba2c7ca1-90ec-7ec5-0c79-0ce32cd613fb/mzaf_4194861062813914729.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/9e/2b/3c/9e2b3cbc-7a49-3af6-009c-ac14f7d71f68/00008811195724.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Bill Haley &amp; His Comets</span><br>Film: American Graffiti (1973)</div></div><em>Rock Around the Clock</em>: een oude hit opent de film en zet meteen het jaar neer.</aside>
+  <p>De film opent met <em>Rock Around the Clock</em> van Bill Haley &amp; His Comets. Het nummer werd op 12 april 1954 in New York opgenomen voor Decca. Het is een twaalfmatige blues in hoog tempo. Het begint met de zanger die de uren aftelt over losse, harde akkoorden van de band, en daarna rolt het nummer door met een slappende contrabas, een strakke snaredrum en een snelle gitaarsolo van Danny Cedrone. Eerst verscheen het als B-kant van een single en werd het maar een kleine hit. Pas in 1955, toen regisseur Richard Brooks het onder de begintitels van <em>Blackboard Jungle</em> zette, een film over opstandige scholieren, werd het een wereldhit. Het werd de eerste rock-'n-rollplaat die zowel in Amerika als in Groot-Brittannië bovenaan de hitlijst stond. Door <em>American Graffiti</em> kwam de originele opname in 1974 opnieuw in de Amerikaanse hitlijst.</p>
+  
+  <p>Twintig jaar later werkte Quentin Tarantino op dezelfde manier, maar met een andere bedoeling. Hij had als jongeman in een videotheek gewerkt en kende honderden films en platen. In zijn eerste film, <em>Reservoir Dogs</em> (1992), komt de muziek uit een denkbeeldig radioprogramma met hits uit de jaren zeventig. In een gewelddadige scène danst een van de gangsters op <em>Stuck in the Middle with You</em> van Stealers Wheel, een vrolijk poplied. Het contrast tussen het luchtige nummer en het geweld maakt de scène juist moeilijk om naar te kijken.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/53/f6/88/53f688b6-03c2-1b4a-f566-af2023b92034/mzaf_11370757700834240300.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/31/15/15/31151512-97d0-6abd-6218-b9800d9b71bc/06UMGIM02037.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Dick Dale &amp; His Del-Tones</span><br>Film: Pulp Fiction (1994)</div></div><em>Misirlou</em>: surfgitaar uit 1962 als openingsschok van een film uit 1994.</aside>
+  <p>Voor <em>Pulp Fiction</em> (1994) haalde Tarantino de muziek uit zijn eigen platenkast: surfrock uit het begin van de jaren zestig, soul en oude popnummers. De film opent met een gesprek in een eetcafé dat eindigt in een overval. Op het moment dat de overvallers hun wapens trekken, bevriest het beeld en barst <em>Misirlou</em> van Dick Dale los onder de begintitels. Even later lijkt iemand aan de knop van een radio te draaien, en schakelt de muziek over op <em>Jungle Boogie</em> van Kool &amp; the Gang.</p>
+  <p><em>Misirlou</em> is een oud volkslied uit het oostelijke Middellandse Zeegebied, dat zowel in Griekse als in Arabische en Joodse muziek bekend is. Dick Dale, van Libanees-Amerikaanse afkomst, had zijn oom het lied op één snaar van een oed horen spelen, een Arabische luit. In 1962 maakte hij er een surfrocknummer van. Hij speelt de melodie op de lage snaren van een elektrische gitaar met veel galm, in een razendsnelle <strong>tremolo</strong>: hij slaat dezelfde noot steeds heel snel op en neer aan, zodat een lange, trillende toon ontstaat. De toonladder is de dubbelharmonische, met twee stappen van anderhalve toon. Dat geeft het nummer zijn oosterse, dreigende kleur. Onder de titels van een film uit 1994 klinkt deze plaat van ruim dertig jaar oud als een schok.</p>
+  
+  <p>Verderop in de film dansen John Travolta en Uma Thurman op <em>You Never Can Tell</em> van Chuck Berry, en zingt Dusty Springfield <em>Son of a Preacher Man</em>. Bij <em>American Graffiti</em> waren de liedjes vooral een tijdmachine: ze lieten horen hoe het in 1962 klonk. Bij Tarantino komen ze uit verschillende tijden door elkaar. Ze zeggen minder over het jaar waarin de film speelt, en meer over de smaak van de regisseur. Tarantino citeerde in latere films ook vaak de muziek uit Italiaanse westerns (zie Filmrol 3). Hij werkt als een dj, die platen kiest, combineert en op het juiste moment laat vallen.</p>
+  <p>Van Busby Berkeley tot Tarantino draait de song in film steeds om herkenning. Een melodie die je al kent, of die je na één keer niet meer vergeet, verbindt de film met het leven van de kijker buiten de bioscoop. Die herkenning verkocht bladmuziek, singles en soundtrackalbums. De film maakt de song beroemd, en de song maakt reclame voor de film.</p>
+</section>
+
+<section class="back">
+  <h4 class="backhead">Begrippen</h4>
+  <dl class="terms">
+    <div><dt>Filmmusical</dt><dd>Film waarin liedjes en dans het verhaal vooruitduwen.</dd></div>
+    <div><dt>Backstagemusical</dt><dd>Musical over het maken van een show; de liedjes worden in het verhaal als toneelnummers uitgevoerd.</dd></div>
+    <div><dt>Nasynchroniseren</dt><dd>Achteraf een stem of zang inspreken bij het beeld, soms door iemand anders dan de acteur.</dd></div>
+    <div><dt>Tritonus</dt><dd>Interval van drie hele tonen; klinkt gespannen, centraal in <em>West Side Story</em>.</dd></div>
+    <div><dt>Hemiool</dt><dd>Ritmische verschuiving waarbij twee groepen van drie en drie groepen van twee elkaar afwisselen.</dd></div>
+    <div><dt>Bronmuziek</dt><dd>Muziek die in de wereld van het verhaal klinkt en die de personages ook horen, zoals een band of een radio.</dd></div>
+    <div><dt>Bigband</dt><dd>Groot jazzorkest met secties trompetten, trombones en saxofoons plus ritmesectie.</dd></div>
+    <div><dt>Modale jazz</dt><dd>Improvisatie op toonladders (modi) in plaats van snel wisselende akkoorden.</dd></div>
+    <div><dt>Ostinato</dt><dd>Kort motief dat steeds wordt herhaald, zoals de baslijn van <em>Peter Gunn</em>.</dd></div>
+    <div><dt>Chromatiek</dt><dd>Melodie of harmonie die in halve toonstappen beweegt, met noten buiten de gewone toonladder.</dd></div>
+    <div><dt>5/4-maat</dt><dd>Maatsoort met vijf tellen per maat, zoals in <em>Mission: Impossible</em>.</dd></div>
+    <div><dt>Twanggitaar</dt><dd>Elektrische gitaar met harde aanslag op de lage snaren en veel galm.</dd></div>
+    <div><dt>Cimbalom</dt><dd>Hongaars hakkebord waarvan de snaren met hamertjes worden aangeslagen.</dd></div>
+    <div><dt>Titelsong</dt><dd>Lied onder de begintitels, vaak ook als hitsingle uitgebracht.</dd></div>
+    <div><dt>Flügelhorn</dt><dd>Koperinstrument dat lijkt op een trompet, met een rondere, warmere klank.</dd></div>
+    <div><dt>Compilatiescore</dt><dd>Soundtrack die bestaat uit bestaande nummers in plaats van nieuw gecomponeerde muziek.</dd></div>
+    <div><dt>Blaxploitation</dt><dd>Amerikaanse actiefilms uit de jaren zeventig met zwarte hoofdrolspelers, met soul en funk als score.</dd></div>
+    <div><dt>Wah-wah</dt><dd>Gitaareffect met een pedaal dat de klank laat 'praten'.</dd></div>
+    <div><dt>Tremolo</dt><dd>Snel herhaald aanslaan van dezelfde noot, zodat een trillende toon ontstaat.</dd></div>
+  </dl>
+
+  <h4 class="backhead">Verder luisteren en kijken</h4>
+  <div class="links">
+    <div class="link-card"><div class="qr" data-url="https://open.spotify.com/playlist/0zfVJb0CzpdQqb79cQwSb6"></div>
+      <div><span class="tag">SPOTIFY · PLAYLIST</span><p>Alle fragmenten uit dit hoofdstuk, in de volgorde van de tekst. Scan de code met je telefoon.</p></div></div>
+    <div class="link-card lesson"><div><span class="tag">LESSONUP · LES</span><p><strong>De Droomfabriek · Filmrol 4: Songs uit de platenkast</strong></p><p>De les bij dit hoofdstuk, met beeld en fragmenten.</p></div></div>
+  </div>
+
+  <footer class="colofon">
+    <p>Foto's: Wikimedia Commons (zie fotoverantwoording). Platenhoezen: Apple Music.</p>
+    <p>De Droomfabriek · Filmmuziek, een verborgen kant van School of Rock · ArtEZ University of the Arts</p>
+  </footer>
+</section>
+<nav class="pager" aria-label="Andere filmrollen"><a href="03.html"><small>← Filmrol 3</small><b>Europa in close-up</b></a><a class="next" href="05.html"><small>Filmrol 5 →</small><b>Stroom en patroon</b></a></nav><a class="mt-step prev" href="03.html" rel="prev" aria-label="Vorige: Filmrol 3, Europa in close-up"><i aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></i><span><small>Filmrol 3</small>Europa in close-up</span></a><a class="mt-step next" href="05.html" rel="next" aria-label="Volgende: Filmrol 5, Stroom en patroon"><i aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i><span><small>Filmrol 5</small>Stroom en patroon</span></a>
+
+</div><footer class="sitefoot"><div class="wrap"><p>De Droomfabriek · Filmmuziek, een verborgen kant van School of Rock · Jan-Wolter Smit · ArtEZ University of the Arts</p></div></footer><script src="../../assets/player.js"></script><script src="../../assets/anchor-notes.js"></script><script src="../../assets/chapter.js"></script><script>document.querySelectorAll('.qr[data-url]').forEach(function(el){if(typeof QRCode==='undefined'){return;}new QRCode(el,{text:el.dataset.url,width:256,height:256,colorDark:'#1C1B19',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.M});});</script></body></html>

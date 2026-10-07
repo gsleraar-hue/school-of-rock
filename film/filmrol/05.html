@@ -1,0 +1,429 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content="../.."><title>De Droomfabriek · Filmrol 5 · Stroom en patroon</title><link rel="icon" href="../../film/assets/icon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="../../assets/site.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><style>
+  /* Eén thema met opzet: een boek in de huisstijl van de lessen. */
+  :root {
+    color-scheme: light;
+    --page: #FFFFFF;
+    --ink: #1C1B19;
+    --ink-soft: #55524C;
+    --line: #DDD8CE;
+    --red: #D63A31;
+    --yellow: #F2D500;
+    --display: "Oswald", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "Space Mono", "Courier New", monospace;
+    --hand: "Caveat", "Comic Sans MS", cursive;
+    --text: 34rem;
+    --margin: 13rem;
+    --gap: 2.25rem;
+  }
+  html { background: var(--page); }
+  body { background: var(--page); color: var(--ink); font: 400 16px/1.65 var(--body); padding-inline: 16px; padding-block: 0 64px; }
+  .book { max-width: calc(var(--text) + var(--gap) + var(--margin)); margin: 0 auto; }
+  p { margin: 0; }
+  em { font-style: italic; }
+  a { color: inherit; text-decoration-color: var(--red); text-underline-offset: 2px; }
+
+  /* Hoofdstukopening en delen */
+  .opener { position: relative; overflow: hidden; color: #FFFFFF; box-sizing: border-box; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; }
+  .opener .wash { position: absolute; inset: 0; background-color: rgba(214,58,49,.62); }
+  .opener .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 55%; background-color: rgba(28,27,25,.38); }
+  .opener .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background: var(--yellow); }
+  .opener h1, .opener h2, .opener .sub, .part .kicker { position: relative; }
+  .opener .kicker { font: 12px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--yellow); }
+  .opener h1, .opener h2 { font-family: var(--display); font-weight: 600; line-height: 1.02; margin: 0; text-wrap: balance; }
+  .opener .sub { max-width: 36ch; line-height: 1.4; }
+  .cover { margin-inline: -16px; min-height: 420px; padding: 32px 28px 36px 44px; }
+  .cover h1 { font-size: clamp(44px, 9vw, 72px); max-width: 12ch; }
+  .cover .sub { font-size: 18px; }
+  .cover .kicker { position: absolute; top: 26px; left: 44px; }
+  .cover .cassette { position: absolute; top: 16px; right: 18px; width: 88px; height: auto; }
+  .part { margin: 64px calc(-1 * (var(--margin) + var(--gap))) 28px 0; min-height: 230px; padding: 24px 24px 24px 40px; clear: both; }
+  .part h2 { font-size: clamp(30px, 6vw, 44px); }
+  .part .sub { font-size: 15px; }
+  .part .letter { position: absolute; right: 18px; bottom: -12px; font: 600 150px/1 var(--display); color: var(--yellow); }
+
+  /* Tekstvak met kantlijn */
+  .flow { padding-right: calc(var(--margin) + var(--gap)); }
+  .flow > p { max-width: var(--text); }
+  .flow > p { text-indent: 1.4em; }
+  .flow > .intro, .flow > .head + p, .flow > .head + aside + p, .flow > .head + figure + p { text-indent: 0; }
+  .head { margin: 40px 0 10px; max-width: var(--text); }
+  .head .label { font: 11px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--red); margin: 0 0 4px; }
+  .head h3 { font: 600 22px/1.15 var(--display); margin: 0; text-wrap: balance; }
+  .intro { font-size: 18px; line-height: 1.6; }
+
+  /* Kantlijn: luistertips, beeld, citaten, QR */
+  .side-note, .side-fig, .side-quote { float: right; clear: right; width: var(--margin); margin: 6px calc(-1 * (var(--margin) + var(--gap))) 18px 0; }
+  .side-note { border-left: 2px solid var(--yellow); padding-left: 10px; font-size: 12.5px; line-height: 1.4; color: var(--ink-soft); }
+  .side-note .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .side-note .rec { display: grid; grid-template-columns: 40px 1fr; gap: 8px; align-items: center; margin-bottom: 6px; }
+  .side-note .rec img { width: 40px; height: 40px; border-radius: 2px; }
+  .side-note .who { color: var(--ink); font-weight: 600; }
+  .side-note .qr { width: 96px; height: 96px; margin: 4px 0 6px; }
+  .side-note .qr img, .side-note .qr canvas { width: 100% !important; height: 100% !important; }
+  .side-fig img { display: block; width: 100%; border: 4px solid #FFFFFF; box-shadow: 0 3px 12px rgba(0,0,0,.18); transform: rotate(2deg); }
+  .side-fig figcaption { font: 600 20px/1.05 var(--hand); color: var(--red); text-align: center; margin-top: 8px; }
+  .side-quote { font: 500 17px/1.25 var(--display); color: var(--red); border-top: 2px solid var(--red); padding-top: 8px; }
+  .side-quote span { display: block; font: 11px/1.4 var(--mono); color: var(--ink-soft); margin-top: 6px; }
+
+  /* Achterin */
+  .back { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 8px; }
+  h4.backhead { font: 600 22px/1.15 var(--display); margin: 28px 0 0; }
+  .terms { columns: 2 240px; column-gap: 32px; margin: 12px 0 0; }
+  .terms div { break-inside: avoid; margin: 0 0 10px; }
+  .terms dt { font-weight: 600; }
+  .terms dd { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.45; }
+  .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px 32px; margin-top: 14px; }
+  .link-card { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: start; }
+  .link-card .qr { width: 112px; height: 112px; }
+  .link-card.lesson { grid-template-columns: 1fr; }
+  .link-card .qr img, .link-card .qr canvas { width: 100% !important; height: 100% !important; }
+  .link-card .tag { font: 10px/1 var(--mono); letter-spacing: .08em; color: var(--red); display: block; margin-bottom: 6px; }
+  .link-card p { font-size: 14px; line-height: 1.45; }
+  .link-card .url { font: 11px/1.4 var(--mono); color: var(--ink-soft); word-break: break-all; margin-top: 6px; }
+  .colofon { margin-top: 36px; font-size: 12px; line-height: 1.5; color: var(--ink-soft); display: grid; gap: 6px; max-width: var(--text); }
+
+  @media screen and (max-width: 760px) {
+    .part { margin-right: 0; }
+    .flow { padding-right: 0; }
+    .side-note, .side-fig, .side-quote { float: none; width: auto; margin: 16px 0; }
+    .side-fig { max-width: 220px; }
+  }
+
+  /* Boek op A4 */
+  @page { size: A4; margin: 20mm 18mm 22mm 20mm; }
+  @page cover { margin: 0; }
+  @media print {
+    html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root { --text: 112mm; --margin: 44mm; --gap: 8mm; }
+    body { padding: 0; font-size: 9.6pt; line-height: 1.55; }
+    .book { max-width: none; }
+    p { orphans: 3; widows: 3; }
+    .cover { page: cover; margin: 0; height: 296mm; padding: 0 22mm 32mm 26mm; break-after: page; }
+    .cover .kicker { top: 18mm; left: 26mm; font-size: 8pt; }
+    .cover .cassette { top: 14mm; right: 16mm; width: 28mm; }
+    .cover h1 { font-size: 56pt; }
+    .cover .sub { font-size: 14pt; }
+    .opener .bar { width: 5mm; }
+    .part { margin: 0 calc(-1 * (var(--margin) + var(--gap))) 6mm 0; height: 70mm; min-height: 0; padding: 0 50mm 8mm 12mm; break-before: page; break-after: avoid; }
+    .part .kicker { font-size: 7.5pt; }
+    .part h2 { font-size: 26pt; }
+    .part .sub { font-size: 10pt; }
+    .part .letter { font-size: 100pt; right: 8mm; bottom: -5mm; }
+    .first-part { break-before: auto; margin-top: 10mm; }
+    .head { margin: 8mm 0 2.5mm; break-after: avoid; break-inside: avoid; }
+    .head .label { font-size: 6.8pt; }
+    .head h3 { font-size: 14pt; }
+    .intro { font-size: 11pt; }
+    .side-note { font-size: 7.6pt; padding-left: 3mm; margin-top: 1mm; margin-bottom: 5mm; break-inside: avoid; }
+    .side-note .tag { font-size: 6.2pt; margin-bottom: 2mm; }
+    .side-note .rec { grid-template-columns: 11mm 1fr; gap: 2.5mm; margin-bottom: 1.5mm; }
+    .side-note .rec img { width: 11mm; height: 11mm; }
+    .side-note .qr { width: 24mm; height: 24mm; }
+    .side-fig { margin-bottom: 5mm; break-inside: avoid; }
+    .side-fig figcaption { font-size: 13pt; }
+    .side-quote { font-size: 11pt; break-inside: avoid; }
+    .side-quote span { font-size: 6.5pt; }
+    .back { break-before: page; margin-top: 0; }
+    h4.backhead { font-size: 14pt; margin-top: 8mm; }
+    .terms { columns: 2; column-gap: 10mm; }
+    .terms div { margin-bottom: 2.5mm; }
+    .terms dd { font-size: 8.6pt; }
+    .terms div { break-inside: avoid; }
+    .links { grid-template-columns: 1fr 1fr; gap: 8mm; break-inside: avoid; }
+    .link-card { grid-template-columns: 30mm 1fr; gap: 5mm; }
+    .link-card .qr { width: 30mm; height: 30mm; }
+    .link-card p { font-size: 8.8pt; }
+    .link-card .url { font-size: 6.8pt; }
+    .colofon { font-size: 7.5pt; margin-top: 10mm; }
+  }
+  .cover .cover-text { position: absolute; left: 44px; right: 28px; bottom: 36px; display: grid; gap: 10px; }
+  @media print { .cover { display: block !important; height: 294mm !important; } .cover .cover-text { left: 26mm; right: 22mm; bottom: 32mm; gap: 4mm; } }</style><style>
+  body.chapter { padding-top: 0; }
+  body.chapter .sitenav { margin-inline: -16px; }
+  .deck { margin: 0 -16px; background: #1C1B19; color: #fff; padding: 18px 20px 20px; display: grid; gap: 14px; }
+  .deck-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .deck .lbl { font: 11px/1.4 "Space Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: #F2D500; min-width: 7.5em; }
+  .deck .lesson { font: 500 16px/1.3 "Oswald", sans-serif; }
+  .deck .btn { padding: 10px 14px; font-size: 14px; }
+  .deck .btn.ghost { color: #fff; border-color: #55524C; }
+  .deck-embed { margin: 0; }
+  .deck-embed iframe { border-radius: 8px; display: block; }
+  .lu-modal { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 16px; background: rgba(18,17,16,.82); }
+  .lu-modal[hidden] { display: none; }
+  .lu-box { position: relative; width: min(1280px, 100%, calc((100vh - 110px) * 1.6)); display: grid; gap: 10px; }
+  .lu-bar { display: flex; align-items: center; gap: 10px; color: #fff; }
+  .lu-bar b { font: 600 18px/1.2 "Oswald", sans-serif; margin-right: auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lu-bar button { font: 12px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #fff; background: #2A2825; border: 1px solid #55524C; border-radius: 4px; padding: 9px 12px; cursor: pointer; }
+  .lu-bar .lu-close { background: #F2D500; color: #1C1B19; border-color: #F2D500; font-weight: 700; }
+  .lu-frame { position: relative; aspect-ratio: 16 / 10; background: #000; border-radius: 8px; overflow: hidden; }
+  .lu-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .lu-frame:fullscreen { border-radius: 0; }
+  .lu-cover { position: absolute; right: 8px; bottom: 8px; width: 160px; height: 46px; z-index: 2; display: flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 10px; background: #F2D500; color: #1C1B19; font: 700 15px/1 "Oswald", sans-serif; letter-spacing: .03em; text-transform: uppercase; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.25); }
+  .lu-cover:hover { background: #FFE34D; }
+  .deck-embed.lu { position: relative; aspect-ratio: 16 / 10; max-height: 85vh; background: #000; border-radius: 8px; overflow: hidden; }
+  .deck-embed.lu[hidden] { display: none; }
+  .deck-help { margin: -4px 0 0; font: 12px/1.4 "Space Mono", monospace; color: #9C978D; }
+  .deck-help a { color: #F2D500; }
+  .deck-help[hidden] { display: none; }
+  .deck-embed.lu:fullscreen { aspect-ratio: auto; max-height: none; border-radius: 0; }
+  .deck-embed.lu iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0; }
+  .deck-genres { display: flex; flex-wrap: wrap; gap: 6px; }
+  .gchip { --c: #999; display: inline-flex; align-items: center; gap: 7px; text-decoration: none; font: 13px/1 "Inter", sans-serif; padding: 7px 10px; border-radius: 999px; background: #2A2825; color: #fff; }
+  .gchip i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+  .gchip span { color: #9C978D; font-family: "Space Mono", monospace; font-size: 11px; }
+  .gchip:hover { background: #3A3833; }
+  .side-note .rec { grid-template-columns: 52px 1fr; gap: 10px; }
+  .side-note .rec-cover { position: relative; display: block; width: 52px; height: 52px; }
+  .side-note .rec .rec-cover img { display: block; width: 52px; height: 52px; object-fit: cover; }
+  .side-note .rec-cover .sor-play { position: absolute; right: -7px; bottom: -7px; width: 28px; height: 28px; box-shadow: 0 2px 6px rgba(0,0,0,.3); }
+  .side-note .rec-cover.no-img { display: grid; place-items: center; background: #EDE9E1; border-radius: 2px; }
+  .side-note .rec-cover.no-img .sor-play { position: static; }
+  .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 48px 0 0; }
+  .pager a { display: grid; gap: 4px; padding: 16px; border: 1px solid #DDD8CE; border-radius: 4px; text-decoration: none; }
+  .pager a:hover { border-color: #1C1B19; }
+  .pager .next { text-align: right; }
+  .pager small { font: 11px/1 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #D63A31; }
+  .pager b { font: 600 18px/1.15 "Oswald", sans-serif; }
+  .mt-step { position: fixed; top: 50%; z-index: 40; display: flex; align-items: center; gap: 10px; text-decoration: none; transform: translateY(-50%); }
+  .mt-step.prev { left: 14px; } .mt-step.next { right: 14px; flex-direction: row-reverse; }
+  .mt-step i { flex: none; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: #1C1B19; color: #F2D500; font-style: normal; line-height: 0; box-shadow: 0 6px 18px rgba(0,0,0,.18); transition: transform .15s; }
+  .mt-step span { background: #1C1B19; color: #fff; border-radius: 4px; padding: 8px 10px; font: 600 14px/1.2 "Oswald", sans-serif; max-width: 220px; opacity: 0; pointer-events: none; transition: opacity .15s; }
+  .mt-step span small { display: block; font: 10px/1.2 "Space Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #F2D500; margin-bottom: 3px; }
+  .mt-step:hover i, .mt-step:focus-visible i { transform: scale(1.08); }
+  .mt-step:hover span, .mt-step:focus-visible span { opacity: 1; }
+  @media (max-width: 1100px) { .mt-step { top: auto; bottom: 14px; transform: none; } body:has(.sor-player:not([hidden])) .mt-step { bottom: 96px; } .mt-step span { display: none; } .mt-step i { width: 42px; height: 42px; } }
+  @media print { .sitenav, .deck, .pager, .sitefoot, .mt-step { display: none !important; } }
+</style><style>
+:root { --red: #1E488C; --yellow: #E9B44C; }
+.opener .wash { background-color: rgba(30,72,140,.66) !important; }
+.opener .shade { background-color: rgba(10,22,44,.40) !important; }
+@media print { .first-part { break-before: page !important; margin-top: 0 !important; } }
+
+  body .sor-play { background: #1E488C; }
+  .deck .lbl { color: #E9B44C; }
+  .deck .btn.solid { background: #E9B44C; border-color: #E9B44C; color: #1C1B19; }
+  .mt-step i { color: #E9B44C; }
+  .pager small { color: #1E488C; }
+</style><script src="../../assets/player.js"></script><script src="../../assets/nav.js"></script></head><body class="chapter" data-mixtape="film-5"><header class="sitenav"><a class="brand" href="../index.html"><img src="../assets/icon.svg" alt=""><span>De Droomfabriek</span></a><nav aria-label="Hoofdmenu"><a href="../index.html" aria-current="page">Filmrollen</a><a href="../kaart.html">Kaart</a><a href="../begrippen.html">Begrippen</a><a href="../pdf/droomfabriek-reader.pdf">Reader (pdf)</a></nav></header><div class="book">
+
+<header class="opener cover" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/e/e6/Moog_Modular_55_img2.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+  <p class="kicker">De Droomfabriek · Filmrol 5</p>
+  <img class="cassette" src="../assets/icon.svg" alt="">
+  <div class="cover-text"><h1>Stroom en patroon</h1>
+  <p class="sub">Elektronica, minimal en ambient: van theremin en tape tot drone en techno, ca. 1945–2024.</p></div>
+</header>
+<div class="deck" aria-label="Bij dit hoofdstuk">
+  <div class="deck-row"><span class="lbl">Luisteren</span><a class="btn solid deck-toggle" data-target="sp" href="https://open.spotify.com/playlist/76KXPPuIdt0i89UWVDqkRK" data-embed="https://open.spotify.com/embed/playlist/76KXPPuIdt0i89UWVDqkRK?utm_source=generator" aria-expanded="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Spotify-playlist</a><a class="btn ghost" href="https://open.spotify.com/playlist/76KXPPuIdt0i89UWVDqkRK" target="_blank" rel="noopener">Open in Spotify</a><a class="btn ghost" href="../pdf/droomfabriek-filmrol-05.pdf" download>Download pdf</a></div>
+  <div class="deck-embed" data-name="sp" hidden></div>
+  <div class="deck-row"><span class="lbl">Les</span><a class="btn solid deck-toggle" href="https://www.lessonup.com/nl/lesson/BoguuFLCjb6R9m9AA" data-embed="https://www.lessonup.com/app/teach-v2/searchembed/BoguuFLCjb6R9m9AA?lang=nl" data-target="lu" data-title="De Droomfabriek · Filmrol 5: Stroom en patroon" aria-haspopup="dialog"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Open de les</a></div>
+  <div class="deck-row"><span class="lbl">Op de kaart</span><a class="btn ghost" href="../kaart.html">Naar de filmmuziekkaart</a></div>
+</div>
+
+<section class="flow">
+  <aside class="side-note"><span class="tag">LUISTER MEE</span><div class="qr" data-url="https://open.spotify.com/playlist/76KXPPuIdt0i89UWVDqkRK"></div>Alle fragmenten uit dit hoofdstuk staan op volgorde in de Spotify-playlist bij Filmrol 5.</aside>
+  <p class="intro">Een Hollywoodorkest bestond in 1945 uit strijkers, houtblazers, koperblazers, harp en slagwerk: de bezetting waarmee Wagner en Strauss al hadden gewerkt. Toch zochten componisten in die jaren naar klanken die geen van die instrumenten kon maken, voor dromen, waanbeelden en bezoekers uit de ruimte. Ze vonden ze eerst in de theremin, daarna in zelfgebouwde elektronische schakelingen en in geluidsband die met een schaar werd geknipt en met plakband weer aan elkaar gezet. De synthesizer bestond toen nog niet.</p>
+  <p>Vanaf 1971 werd de synthesizer een gewoon filminstrument. Wendy Carlos speelde Purcell en Beethoven op de Moog voor Stanley Kubrick, Tangerine Dream bracht de sequencer naar Hollywood en Vangelis speelde zijn scores live in. In Rome en Los Angeles maakten Goblin en John Carpenter er horror mee, in München maakte Giorgio Moroder er disco mee. Elektronische apparaten waren goedkoper dan een orkest, en één muzikant kon er in zijn eentje een hele score mee opnemen. Daardoor kwamen ook regisseurs, rockmuzikanten en producers aan het werk als filmcomponist.</p>
+  <p>Tegelijk verschoof de aandacht van de melodie naar het patroon en de klank zelf. Minimal music bouwt een score uit korte figuren die steeds herhaald worden en langzaam veranderen. Ambient en drone vervangen het thema door een klankveld dat langzaam van kleur verschiet. In de studio's van de eenentwintigste eeuw is het verschil tussen componeren, produceren en geluid ontwerpen bijna verdwenen, en klinkt een filmscore soms als een elektronische plaat.</p>
+
+  <!-- AKTE 1 -->
+  <header class="opener part first-part" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Clara_Rockmore_%281911-1998%29_at_her_Theremin.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Akte 1 · 1945-1972</p>
+    <h2>Elektrische geesten</h2>
+    <p class="sub">Theremin, zelfgebouwde schakelingen en tape: elektronische klank vóór de synthesizer.</p>
+    <span class="letter" aria-hidden="true">1</span>
+  </header>
+
+  <div class="head"><p class="label">Scène 01 · 1945-1956 · Los Angeles, New York</p><h3>Zonder aanraken: theremin en circuits</h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Forbiddenplanetposter.jpg/960px-Forbiddenplanetposter.jpg" alt="Affiche van Forbidden Planet (1956)"><figcaption>Affiche van <em>Forbidden Planet</em> (1956)</figcaption></figure>
+  <p>Het eerste elektronische instrument dat in de filmmuziek een vaste rol kreeg, was de <strong>theremin</strong>. De Russische uitvinder Lev Termen, in het westen bekend als Léon Theremin, bouwde het rond 1920. Het instrument heeft twee antennes. De afstand van je ene hand tot de rechte antenne bepaalt de toonhoogte, de afstand van je andere hand tot de lus bepaalt het volume. Je raakt het instrument dus niet aan. Omdat er geen toetsen of fretten zijn, glijdt de toon traploos van de ene hoogte naar de andere, met een zingend, wat trillend geluid dat het midden houdt tussen een stem en een zingende zaag.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/Music/af/72/d6/mzm.gnodezmg.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music/63/93/97/mzi.qdfxdpzp.jpg/600x600bb.jpg" alt=""><div><span class="who">Miklós Rózsa</span><br><em>Spellbound</em>: The Dream Sequence, The Mountain Lodge (1945)</div></div>De theremin zingt als een verwarde stem boven het orkest.</aside>
+  <p>Dmitri Sjostakovitsj gebruikte de theremin al in 1931 in de Sovjetfilm <em>Odna</em>. In Hollywood brak het instrument pas in de jaren veertig door, en dan meteen met een vaste betekenis: de theremin klonk wanneer er iets mis was met de geest. Miklós Rózsa, een Hongaarse componist die in Hollywood werkte, schreef in 1945 twee scores met theremin. In <em>The Lost Weekend</em> van Billy Wilder staat het instrument voor de drankzucht van de hoofdpersoon. In <em>Spellbound</em> van Alfred Hitchcock hoort het bij de verwarde geest van een man die aan geheugenverlies lijdt. De theremin werd in beide films bespeeld door Samuel Hoffman, die in Los Angeles de vaste thereminspeler van de filmstudio's werd.</p>
+  
+  <p>In <em>Spellbound</em> klinkt de theremin steeds wanneer de hoofdpersoon door zijn herinneringen in paniek raakt. Het orkest speelt dan door, maar de glijdende, onvaste toon erboven laat horen dat er iets niet klopt. Ook in de droomscène, waarvoor de schilder Salvador Dalí de decors ontwierp, speelt het instrument een hoofdrol. Rózsa won er een Oscar mee. De theremin werd daarna zo vaak voor waanzin en angst gebruikt dat het een cliché werd.</p>
+  <p>In de jaren vijftig verhuisde het instrument naar de sciencefiction. Bernard Herrmann, over wie meer in Filmrol 2, schreef in 1951 de muziek voor <em>The Day the Earth Stood Still</em> van Robert Wise, over een buitenaardse bezoeker die in Washington landt. Hij zette twee theremins naast een elektrische viool, cello en contrabas, orgels, vibrafoons en een grote groep koperblazers. Zo ontstond een orkest dat zelf al buitenaards klonk. Toch bleef het een orkest: Herrmann schreef een partituur en muzikanten speelden die.</p>
+  <p>Vijf jaar later kwam er een film zonder één gespeelde noot. Louis en Bebe Barron trouwden in 1947 en begonnen kort daarna in Greenwich Village in New York een eigen studio. Van een neef van Louis, die bij het bedrijf 3M werkte, kregen ze als huwelijkscadeau een van de eerste bandrecorders. Ze werkten als technici mee aan <em>Williams Mix</em> (1952) van John Cage, een stuk dat uit honderden opgenomen geluiden bestaat die op band aan elkaar zijn geplakt. Louis was geïnspireerd door het boek <em>Cybernetics</em> (1948) van de wiskundige Norbert Wiener, over de besturing van machines en levende wezens. Hij bouwde elektronische circuits volgens de vergelijkingen uit dat boek en liet ze geluid maken. Hij belastte ze tot ze doorbrandden. Elk circuit had zo een eigen 'leven' met een begin en een eind, en geen enkel geluid kon precies worden herhaald.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/db/37/44/db374472-8c90-775c-6e47-27c2872b3d3c/mzaf_13346612893328436914.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music/y2005/m06/d20/h02/s05.ulrcpeic.jpg/600x600bb.jpg" alt=""><div><span class="who">Louis and Bebe Barron</span><br><em>Forbidden Planet</em>: Main Titles (Overture) (1956)</div></div>Geen instrument te bekennen: alleen schakelingen en bandrecorders.</aside>
+  <p>Die opnamen waren nog geen muziek. Bebe en Louis bewerkten ze met galm, echo en filters, speelden ze sneller of langzamer of achterstevoren af en knipten de band in stukken. Dat bewerken van opgenomen geluid heet <strong>bandmanipulatie</strong>. In 1955 spraken de Barrons op een kunsttentoonstelling Dore Schary aan, de baas van de filmstudio MGM. Zo kregen ze de opdracht voor <em>Forbidden Planet</em> (1956), een sciencefictionfilm die losjes is gebaseerd op <em>The Tempest</em> van Shakespeare en zich afspeelt op de planeet Altair IV.</p>
+  
+  <p><em>Forbidden Planet</em> werd de eerste film met een volledig elektronische score, jaren voordat Robert Moog en Don Buchla hun synthesizers bouwden. In de film is moeilijk te zeggen waar de muziek ophoudt en het geluidseffect begint. Hetzelfde gloeiende, pulserende geluid is muziek bij de titels en het geluid van een onzichtbaar monster in een gevecht. De Barrons gaven elk personage en elk ding een eigen circuit, een eigen klank, zoals een componist een eigen thema schrijft. Hun werk kreeg toch geen erkenning als muziek. Een advocaat van de Amerikaanse muzikantenbond liet de titel 'Electronic Music' in de aftiteling veranderen in 'Electronic Tonalities'. De Barrons waren geen lid van de bond, en hun score kon zo niet meedingen naar een Oscar voor filmmuziek.</p>
+
+  <div class="head"><p class="label">Scène 02 · 1963-1972 · Londen, Moskou</p><h3>Knippen en plakken: tape en ANS</h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/BBC_Radiophonic_Workshop_%281958-98%29_machines_-_Tape_Recorder_with_tape_loop_equipment%2C_Beat_Frequency_Oscillator_%26_EMS_Putney_VCS3.jpg/960px-BBC_Radiophonic_Workshop_%281958-98%29_machines_-_Tape_Recorder_with_tape_loop_equipment%2C_Beat_Frequency_Oscillator_%26_EMS_Putney_VCS3.jpg" alt="Bandrecorder, oscillator en VCS3 van de BBC Radiophonic Workshop"><figcaption>Apparatuur van de BBC Radiophonic Workshop: bandrecorder met tapeloop, oscillator en VCS3</figcaption></figure>
+  <p>In 1958 opende de BBC in Londen een eigen elektronische studio, de BBC Radiophonic Workshop. Die maakte geluiden en muziek voor radio- en televisieprogramma's: hoorspelen, documentaires, schooltelevisie. De apparatuur was voor een groot deel overgenomen van andere afdelingen van de omroep: bandrecorders, meetapparatuur en <strong>oscillatoren</strong>, schakelingen die een elektrische trilling opwekken en daarmee een zuivere toon.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/31/b2/a8/31b2a825-cb20-9161-f8d0-e945df555c45/mzaf_5963362494082430765.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6a/80/b9/6a80b9fb-fdee-b35d-70e0-82dfb1454688/326.jpg/600x600bb.jpg" alt=""><div><span class="who">Delia Derbyshire</span><br><em>Doctor Who</em> (tv): Dr. Who (1963)</div></div>Elke toon apart op band geknipt: luister naar de overgangen tussen de stukjes.</aside>
+  <p>Delia Derbyshire kwam uit Coventry. Ze studeerde wiskunde en muziek aan Girton College in Cambridge. Vanaf 1962 werkte ze bij de Radiophonic Workshop. Een jaar later kreeg de studio een melodie van de componist Ron Grainer, het thema voor een nieuwe sciencefictionserie: <em>Doctor Who</em>. Grainer had een melodie, een baslijn en een beschrijving van de klank op papier gezet. Derbyshire moest er geluid van maken, zonder synthesizer en zonder een enkel gespeeld instrument.</p>
+  <p>Ze nam elke toon apart op: tonen van oscillatoren voor de melodie, gefilterde ruis voor de zuchtende achtergrond. Elke noot kreeg op band precies de lengte die bij het ritme hoorde. Om een andere toonhoogte te krijgen, speelde ze de band sneller of langzamer af. Daarna knipte ze alle stukjes los en plakte ze een voor een aan elkaar. De bas, de melodie en de andere lagen kwamen elk op een eigen band. Die banden werden op aparte bandrecorders tegelijk gestart en samen opgenomen. Het resultaat klonk in 1963 als niets anders op de televisie: een pulserende bas, een zwevende melodie die tussen de tonen glijdt, en geen herkenbaar instrument.</p>
+  <aside class="side-quote">"Did I really write this?" "Most of it."<span>Ron Grainer en Delia Derbyshire, 1963</span></aside>
+  
+  <p>Grainer herkende zijn eigen stuk nauwelijks terug. Hij wilde Derbyshire als medecomponist laten noemen, maar de BBC stond dat niet toe. Medewerkers van de Workshop werden in die tijd niet bij naam genoemd; de studio als geheel kreeg de eer. Pas in 2013, bij de speciale aflevering voor het vijftigjarig bestaan van de serie, stond Derbyshires naam op het scherm. Haar verhaal staat niet op zichzelf. In de vroege elektronische muziek deden technici, vaak vrouwen, een groot deel van het creatieve werk, terwijl de naam van de componist op de partituur stond. Over Grainer en de geschiedenis van de televisietune gaat Filmrol 8.</p>
+  <p>Derbyshire bleef tot 1973 bij de BBC en maakte ook muziek voor documentaires en radio. In dezelfde jaren werd de elektronische studio in Engeland kleiner en beter te gebruiken. De componist Tristram Cary, een van de Britse pioniers van de elektronische muziek, schreef ook voor de horrorfilms van Hammer, zoals <em>Quatermass and the Pit</em> (1967), waarover meer in Filmrol 3. In 1969 richtte Cary met Peter Zinovieff en David Cockerell in Londen het bedrijf EMS op. Hun kleine synthesizer, de VCS3, kwam ook in de Radiophonic Workshop terecht.</p>
+  <p>Achter het IJzeren Gordijn ging de ontwikkeling een eigen weg. In Moskou bouwde de ingenieur Jevgeni Moerzin de ANS-synthesizer, genoemd naar de initialen van de componist Aleksandr Nikolajevitsj Skrjabin. Het apparaat werkt met licht. Op glazen platen die met zwarte verf zijn bedekt, kras je lijnen. Licht valt door die lijnen op fotocellen, en elke positie op de plaat staat voor een toonhoogte. Zo teken je klank in plaats van hem te spelen. Eduard Artemjev gebruikte de ANS voor <em>Solaris</em> (1972) van Andrej Tarkovski, een film over een ruimtestation boven een planeet die de herinneringen van de bemanning tot leven brengt. Artemjev mengde de elektronische klanken met een koraalvoorspel van Bach, <em>Ich ruf zu dir, Herr Jesu Christ</em>, zodat de aarde en de vreemde planeet elk een eigen klank kregen. Hij werkte daarna opnieuw met Tarkovski aan <em>Spiegel</em> (1975) en <em>Stalker</em> (1979).</p>
+
+  <!-- AKTE 2 -->
+  <header class="opener part" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Yamaha_CS-80_%281977%29_8-voices_dual-layered_analog_polyphonic_synthesizer%2C_with_22_preset_sounds_%26_6_user_patches_-_VINTAGE_SYNTH_%40_YAMAHA_BOOTH_-_2015_NAMM_Show.jpg/960px-thumbnail.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Akte 2 · 1970-1986</p>
+    <h2>De synthesizer neemt het over</h2>
+    <p class="sub">Moog, sequencers, progrock, horror en disco.</p>
+    <span class="letter" aria-hidden="true">2</span>
+  </header>
+
+  <div class="head"><p class="label">Scène 03 · 1968-1982 · New York</p><h3>Bach op de Moog</h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Wendy_Carlos_%28Bay_Area_Reporter%2C_1985%29.jpg/960px-Wendy_Carlos_%28Bay_Area_Reporter%2C_1985%29.jpg" alt="Wendy Carlos"><figcaption>Wendy Carlos, 1985</figcaption></figure>
+  <p>Halverwege de jaren zestig bouwde de Amerikaanse ingenieur Robert Moog een nieuw soort instrument: de modulaire synthesizer. Het was een kast vol losse onderdelen, modules, die je met snoeren aan elkaar verbond. Een oscillator maakt de toon, een filter kleurt hem door bepaalde boventonen weg te halen, en een envelope bepaalt hoe de toon begint, aanhoudt en wegsterft. Het belangrijkste idee was spanningsbesturing: elke module kan door een elektrische spanning worden geregeld, bijvoorbeeld door het klavier. Zo werd het apparaat bespeelbaar als een instrument.</p>
+  <p>Wendy Carlos studeerde muziek en natuurkunde en gaf Moog advies bij de ontwikkeling van zijn instrument. Met producer Rachel Elkind maakte ze in 1968 het album <em>Switched-On Bach</em>: muziek van Johann Sebastian Bach, volledig op de Moog gespeeld. Dat was een enorm karwei. De synthesizer kon maar één toon tegelijk spelen, dus nam Carlos elke stem van Bachs contrapunt apart op en stapelde ze laag voor laag op een meersporenbandrecorder. Voor elke stem stelde ze de klank opnieuw in. Het album werd een wereldsucces en won drie Grammy's. Daarmee had de synthesizer een publiek.</p>
+  <aside class="side-note" ><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/08/42/09/0842093a-eeae-32ca-95c1-1b61f29cb2ca/191079013029_cover.jpg/600x600bb.jpg" alt=""><div><span class="who">Wendy Carlos</span><br><em>A Clockwork Orange</em>: Title Music from A Clockwork Orange (1971)</div></div>Purcell op de Moog: barokke rouwmuziek wordt onheilspellend.</aside>
+  <p>Stanley Kubrick hoorde in de muziek van Carlos de toon die hij zocht voor <em>A Clockwork Orange</em> (1971), zijn film over een jonge crimineel in een kil Engeland van de nabije toekomst. De hoofdpersoon Alex houdt van Beethoven, en de film gebruikt bestaande klassieke muziek, gedeeltelijk door Carlos en Elkind op de Moog omgezet. Het titelstuk is een bewerking van de <em>Music for the Funeral of Queen Mary</em> (1695) van Henry Purcell, rouwmuziek voor een Engelse koningin. Carlos houdt de trage, plechtige akkoorden van Purcell intact, maar de koperblazers zijn vervangen door synthesizerklanken die kaal en onnatuurlijk klinken.</p>
+  
+  <p>Voor het slot van de Negende symfonie van Beethoven gebruikte Carlos een <strong>vocoder</strong>, een apparaat dat de klankkleur van een stem op een synthesizer overzet. De synthesizer lijkt daardoor de tekst te zingen. Het was een van de eerste keren dat een vocoder in muziek te horen was. Daarnaast schreef Carlos een eigen elektronisch stuk, <em>Timesteps</em>, waarvan Kubrick een deel in de film gebruikte.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0c/e8/99/0ce899a0-8b18-af5d-8745-4db3131a42be/mzaf_4009849741062529103.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/d4/b2/fd/d4b2fdda-6a13-ff5e-9b06-28c70228eb3d/794043206030.jpg/600x600bb.jpg" alt=""><div><span class="who">Wendy Carlos &amp; Rachel Elkind</span><br><em>The Shining</em>: Main Title (The Shining) (1980)</div></div>Zoek de oude Dies irae-melodie in het elektronische klankbeeld.</aside>
+  <p>Negen jaar later werkten Carlos en Elkind opnieuw voor Kubrick, aan <em>The Shining</em> (1980). Kubrick gebruikte in die film vooral bestaande moderne muziek van Penderecki, Ligeti en Bartók, maar het titelstuk kwam van Carlos en Elkind. Ze namen de <em>Dies irae</em>, een gregoriaanse melodie uit de middeleeuwse dodenmis die componisten al eeuwen gebruiken als teken van de dood, in de vorm waarin Berlioz hem in zijn <em>Symphonie fantastique</em> gebruikte. Die melodie klinkt laag en traag in een synthesizerklank die aan koperblazers doet denken, terwijl de camera een auto volgt over een bergweg naar een afgelegen hotel. Erboven klinken elektronische kreten en glijdende tonen.</p>
+  
+  <p>Voor Disney maakte Carlos daarna <em>Tron</em> (1982), een film die zich voor een groot deel in een computer afspeelt. Daarin combineerde ze haar synthesizers met het London Philharmonic Orchestra, een koor en het orgel van de Royal Albert Hall. Carlos liet in deze jaren zien dat de synthesizer meer was dan een apparaat voor rare geluiden. Je kon er oude muziek mee spelen, een orkest mee aanvullen en een eigen klankwereld mee bouwen.</p>
+
+  <div class="head"><p class="label">Scène 04 · 1977-1992 · Berlijn, Londen</p><h3>Sequencers en de stad bij nacht</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/VangelisElGrecopremiereDE2.jpg" alt="Vangelis"><figcaption>Vangelis</figcaption></figure>
+  <p>In West-Berlijn richtte Edgar Froese in 1967 de groep Tangerine Dream op. De groep hoorde bij de Duitse experimentele rock van die jaren, die in Engeland Krautrock werd genoemd. In de jaren zeventig bestond de kern uit Froese, Christopher Franke en Peter Baumann, en speelden ze vrijwel alleen op synthesizers. Franke, oorspronkelijk drummer, werkte met een <strong>sequencer</strong>: een apparaat dat een reeks tonen onthoudt en die automatisch blijft herhalen. Een sequencer speelt een kort patroon van bijvoorbeeld acht of zestien tonen in een strak tempo, eindeloos door. Daarboven kunnen de andere spelers akkoorden en melodieën langzaam laten verschuiven. Op het album <em>Phaedra</em> (1974) is dat principe al volledig te horen.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7e/5a/07/7e5a0792-da27-3c8b-ab55-b73e335613a3/mzaf_8779653018608077367.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a9/cc/b6/a9ccb68d-f2e9-3193-a26b-22152dfe4087/00008811084226.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Tangerine Dream</span><br><em>Sorcerer</em>: Main Title (1977)</div></div>Pulserende sequencerpatronen: de motor van de jaren-tachtigthriller.</aside>
+  <p>Regisseur William Friedkin hoorde de groep tijdens een reis door Duitsland in een concert in een vervallen kerk in het Zwarte Woud. Hij vroeg hen voor <em>Sorcerer</em> (1977), een thriller over vier mannen die in Zuid-Amerika vrachtwagens met springstof door de jungle rijden. Friedkin stuurde hun alleen het script. Tangerine Dream schreef muziek op basis van hun indrukken van het verhaal, zonder een meter film te hebben gezien. Toen de opnamen binnenkwamen, monteerde Friedkin delen van de film op de muziek, in plaats van andersom.</p>
+  
+  <p>Na <em>Sorcerer</em> werkte Tangerine Dream aan tientallen films. Voor <em>Thief</em> (1981) van Michael Mann, over een kluiskraker in Chicago, maakten ze koele, voortjagende patronen bij de nachtelijke straten. Voor <em>Risky Business</em> (1983) met Tom Cruise schreven ze onder meer <em>Love on a Real Train</em>. Voor de Amerikaanse versie van Ridley Scotts sprookjesfilm <em>Legend</em> (1985) verving hun muziek de orkestscore van Jerry Goldsmith, die in Europa wel werd gebruikt. Het sequencerpatroon werd in die jaren het geluid van de thriller: een strakke puls die spanning houdt zonder dat er een melodie nodig is.</p>
+  <p>Een andere manier van werken had Vangelis, eigenlijk Evangelos Papathanassiou. Hij kwam uit Griekenland en had zichzelf grotendeels leren spelen. Hij werd bekend als toetsenist van de rockgroep Aphrodite's Child en werkte daarna vanuit zijn eigen studio in Londen. Vangelis schreef zijn filmmuziek niet uit. Hij keek naar de beelden en speelde de muziek direct in op zijn synthesizers. Voor <em>Chariots of Fire</em> (1981) van Hugh Hudson, over twee Britse hardlopers bij de Olympische Spelen van 1924, maakte hij een titelstuk met een eenvoudige melodie op piano boven brede, warme synthesizerakkoorden. Dat er bij een film over de jaren twintig elektronische muziek klonk, was ongewoon. De score won een Oscar.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d7/87/0b/d7870b02-65de-af58-df2e-8d54fcd5330d/mzaf_12483161989392342141.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ce/4a/79/ce4a7928-167f-2838-f9ec-6b987400ec5d/s06.beplfgoj.jpg/600x600bb.jpg" alt=""><div><span class="who">Vangelis</span><br><em>Blade Runner</em>: Blade Runner (Main Titles) (1982)</div></div>Galm en zwevende akkoorden: een stad in regen en neon.</aside>
+  <p>Voor <em>Blade Runner</em> (1982) van Ridley Scott, een sciencefictionfilm in een donker Los Angeles van 2019, gebruikte Vangelis vooral de Yamaha CS-80. Die synthesizer kon meerdere tonen tegelijk spelen en reageerde op hoe hard je een toets indrukte, ook nadat je hem had aangeslagen. Met een strip boven het klavier kon de speler de toon laten glijden. Zo kon Vangelis expressief spelen, bijna als op een akoestisch instrument. Hij legde lange akkoorden met veel <strong>galm</strong>, de nagalm van een grote ruimte, onder trage melodieën. In het liefdesthema speelt saxofonist Dick Morrissey een melodie die aan nachtclubjazz uit de jaren veertig doet denken. Zo verbindt de muziek de film noir met de toekomst.</p>
+  
+  <p>De soundtrack van <em>Blade Runner</em> verscheen pas in 1994 officieel op plaat, maar de klank had toen al school gemaakt. Veel sciencefiction na 1982 klinkt nachtelijk, melancholiek en elektronisch. Vangelis bleef daarna films maken, onder meer <em>1492: Conquest of Paradise</em> (1992) van Ridley Scott, waarin synthesizer en koor samengaan.</p>
+
+  <div class="head"><p class="label">Scène 05 · 1970-1978 · Rome</p><h3>Giallo: Goblin en de progrockhorror</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Claudio_Simonetti_a_San_Nicandro_Garganico.jpg" alt="Claudio Simonetti"><figcaption>Claudio Simonetti (Goblin)</figcaption></figure>
+  <p>In Italië verschenen vanaf 1929 goedkope detectiveverhalen met een gele omslag. Het Italiaanse woord voor geel, <em>giallo</em>, werd daardoor de naam voor het genre. In de jaren zestig ging het woord over op een soort film: de <strong>giallo</strong>, een moordthriller met een onbekende dader, veel aandacht voor camerawerk en kleur, en bloederige moordscènes. Het genre beleefde zijn bloeitijd tussen 1968 en 1978, en regisseur Dario Argento werd de bekendste maker ervan.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/Music/e1/ee/66/mzm.gakughga.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/2a/e4/24/2ae424d5-d928-8aad-f98b-9127ef1a1f89/cover.jpg/600x600bb.jpg" alt=""><div><span class="who">Ennio Morricone</span><br><em>L'uccello dalle piume di cristallo</em>: Piume di cristallo (1970)</div></div>Een slaapliedje dat steeds onheilspellender wordt.</aside>
+  <p>Voor zijn eerste film, <em>L'uccello dalle piume di cristallo</em> (1970), vroeg Argento Ennio Morricone. Morricone, die in Filmrol 3 bij de spaghettiwestern uitgebreid aan bod komt, schreef een score die bijna lieflijk begint. Een vrouwenstem neuriet een slaapliedje boven een zachte begeleiding. Maar de melodie blijft niet onschuldig. Ademhaling, gefluister en atonale uitbarstingen, muziek zonder vaste toonsoort, schuiven ertussen. Het contrast tussen een kinderlijk liedje en de dreiging van de moordenaar werd een vast middel in de Italiaanse horror.</p>
+  
+  <p>Vijf jaar later koos Argento een heel andere aanpak. Voor <em>Profondo rosso</em> (1975) had hij eerst de jazzpianist en componist Giorgio Gaslini gevraagd. De Romeinse progrockband Goblin, rond toetsenist Claudio Simonetti, gitarist Massimo Morante en bassist Fabio Pignatelli, zou diens muziek spelen. Na een ruzie vertrok Gaslini, en Argento liet de band zelf de score schrijven. Het hoofdthema bestaat uit een herhaald motief op orgel en synthesizer, met een strakke baslijn en rockdrums eronder. Het stuk werd in Italië een hit. Horrormuziek klonk voortaan niet meer alleen als een orkest, maar ook als een band.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/61/9a/48/619a48a9-5ad8-a8aa-8c2c-a416fd373a48/mzaf_15752699855828903042.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/39/f4/4d/39f44da7-0719-8dce-e364-638e65de8f3e/mzi.cqhmbaoe.jpg/600x600bb.jpg" alt=""><div><span class="who">Goblin</span><br><em>Suspiria</em>: Suspiria (1977)</div></div>Celesta, fluisterstemmen en synthesizer: luister met het licht uit.</aside>
+  <p>Voor <em>Suspiria</em> (1977), over een balletacademie in Freiburg die door heksen wordt geleid, gingen Argento en Goblin verder. Het titelstuk begint als een speeldoos: een eenvoudige melodie op de celesta, een klokkenspel met toetsen. Daaronder speelt een lage baslijn steeds hetzelfde figuur. Daarna komen er een Moog-synthesizer, een Griekse bouzouki, Indiase tabla's en stemmen bij. Die stemmen fluisteren, hijgen en schreeuwen, en worden zo een instrument in de muziek. De lagen worden steeds dikker, tot de muziek bijna hypnotiserend werkt.</p>
+  
+  <p>Een jaar later maakte Goblin, samen met Argento, de muziek voor de Europese versie van <em>Dawn of the Dead</em> (1978) van George A. Romero, een zombiefilm die zich in een winkelcentrum afspeelt. In Europa heette die film <em>Zombi</em>. Goblin bracht de klank van de rockband en de synthesizer in de horrorfilm: korte, herhaalde riffs in plaats van lange melodieën, een ritmesectie in plaats van tremolo's in de strijkers. In Amerika werkte een regisseur in dezelfde jaren aan een vergelijkbare aanpak, met nog minder middelen.</p>
+
+  <div class="head"><p class="label">Scène 06 · 1976-1984 · Los Angeles</p><h3>Carpenter: vijf tellen angst</h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/John_Carpenter_Photo_Op_GalaxyCon_Richmond_2025.jpg/960px-John_Carpenter_Photo_Op_GalaxyCon_Richmond_2025.jpg" alt="John Carpenter"><figcaption>John Carpenter, 2025</figcaption></figure>
+  <p>John Carpenter is regisseur, maar hij schrijft ook de muziek voor zijn eigen films. Daar begon hij mee omdat er geen geld was voor een componist. Voor <em>Halloween</em> (1978) kreeg hij in totaal 10.000 dollar, voor de regie, het script en de muziek samen. Carpenter is geen geschoolde componist, maar hij had van jongs af aan muziek om zich heen: zijn vader was muziekdocent. Hij werkt met wat hij zelf kan spelen, op piano en synthesizers, en houdt het daarom eenvoudig.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/47/60/5f/47605f16-aa36-e1c5-86a4-f4eaa3389eda/mzaf_1438473920498391433.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/36/be/7a/36be7aa3-d945-8128-c754-2d01f87d2417/3700551751761.png/600x600bb.jpg" alt=""><div><span class="who">John Carpenter</span><br><em>Assault on Precinct 13</em>: Assault on Precinct 13 (Main Title) (1976)</div></div>Een strak elektronisch ritme en één riff: meer is niet nodig.</aside>
+  <p>Voor <em>Assault on Precinct 13</em> (1976), over een bijna leeg politiebureau in Los Angeles dat door een bende wordt belegerd, maakte hij een titelstuk met een strak elektronisch ritme en één herhaalde riff. Er is geen thema dat zich ontwikkelt, geen orkest dat aanzwelt. De muziek houdt alleen een puls vast, en juist die gelijkmatigheid maakt onrustig.</p>
+  
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/Music/33/09/57/mzm.tciyrmue.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music/c1/89/65/mzi.trdzjzho.jpg/600x600bb.jpg" alt=""><div><span class="who">John Carpenter</span><br><em>Halloween</em>: Halloween Theme - Main Title (1978)</div></div>Tel het pianomotief: vijf tellen, steeds opnieuw.</aside>
+  <p>Het thema van <em>Halloween</em> is een pianomotief in een hoog register, in een ongewone vijfkwartsmaat: vijf tellen per maat in plaats van vier. Je kunt het ook tellen als tien snelle tellen, een 10/8-maat. Carpenter leerde die maatsoort van zijn vader. Omdat de maat een tel 'te lang' is, valt het begin van het motief steeds net anders dan je verwacht, en blijft het luisteren onrustig. Onder het motief houdt een lage synthesizertoon aan. Volgens Carpenter maakte hij de hele score in drie dagen.</p>
+  
+  <p>Carpenters spanning komt uit drie bouwstenen. De eerste is het <strong>ostinato</strong>, een kort motief of ritme dat steeds herhaald wordt. De tweede is de lage bromtoon die eronder blijft liggen. De derde is de plotselinge klap, een harde synthesizerklank op het moment dat de moordenaar in beeld komt. Carpenter noemt Bernard Herrmann als zijn voorbeeld, de componist van <em>Psycho</em> (zie Filmrol 2). Ook bij Herrmann maakt een kort motief, steeds herhaald, vaak meer spanning dan een grote melodie.</p>
+  <p>Na <em>The Fog</em> (1980) werkte Carpenter vanaf <em>Escape from New York</em> (1981) samen met geluidsontwerper Alan Howarth. Howarth zorgde voor de techniek en de klank, Carpenter voor de motieven. Hun muziek werd voller, met sequencers en drumcomputers, maar bleef gebouwd op dezelfde eenvoudige herhaling. Andere componisten namen de aanpak over. Charles Bernstein schreef voor <em>A Nightmare on Elm Street</em> (1984) van Wes Craven een synthesizerscore met een kinderlijk motief en lage bromtonen. Carpenters minimale klank bleef zo invloedrijk dat hij in 2015 met <em>Lost Themes</em> een album uitbracht met muziek voor films die niet bestaan. In scène 11 komt zijn invloed terug.</p>
+
+  <div class="head"><p class="label">Scène 07 · 1977-1986 · München, Los Angeles</p><h3>Disco in de bioscoop</h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Giorgio_Moroder_-_First_Avenue_Minneapolis_-_The_Current_%2844776142702%29.jpg/960px-Giorgio_Moroder_-_First_Avenue_Minneapolis_-_The_Current_%2844776142702%29.jpg" alt="Giorgio Moroder"><figcaption>Giorgio Moroder</figcaption></figure>
+  <p>Giorgio Moroder komt uit Zuid-Tirol, het Duitstalige deel van Noord-Italië. In de jaren zeventig werkte hij als producer in München. Met zangeres Donna Summer en producer Pete Bellotte maakte hij in 1977 <em>I Feel Love</em>. Op die plaat speelt een sequencer een snel, pulserend baspatroon, en Summers stem zweeft erboven. De plaat is bijna helemaal met synthesizers en sequencer gemaakt. Het nummer werd een grote hit en klinkt nog altijd als het begin van de elektronische dansmuziek.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/67/79/e9/6779e958-fa20-ed88-7472-70483c3c91e6/mzaf_7683306115142507665.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d9/10/a3/d910a357-d9d2-69e3-d880-1a781bbafca7/06UMGIM04409.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Giorgio Moroder</span><br><em>Midnight Express</em>: Chase (1978)</div></div>De sequencer als hartslag van een vlucht.</aside>
+  <p>Regisseur Alan Parker vroeg Moroder voor <em>Midnight Express</em> (1978), over een jonge Amerikaan die in een Turkse gevangenis belandt nadat hij met hasj is betrapt. Het belangrijkste stuk is <em>Chase</em>, voor een vluchtscène. Het is opgebouwd als een discotrack: een sequencer pulst in de bas, synthesizerakkoorden en -melodieën komen er laag voor laag bij, en het tempo blijft van begin tot eind gelijk. De spanning komt niet uit een versnelling, maar uit de onophoudelijke herhaling. Moroder won er de Oscar voor beste originele score mee.</p>
+  
+  <p>Daarna werd de combinatie van synthesizer, <strong>drumcomputer</strong> (een apparaat dat geprogrammeerde drumritmes speelt) en popsong het geluid van Hollywood in de jaren tachtig. Moroder schreef <em>Call Me</em>, gezongen door Blondie, voor <em>American Gigolo</em> (1980) van Paul Schrader. Voor Schraders <em>Cat People</em> (1982) zong David Bowie het titelnummer, en voor Brian De Palma's <em>Scarface</em> (1983) maakte Moroder een koele elektronische score. Hij won Oscars voor de liedjes <em>Flashdance... What a Feeling</em> (1983) en <em>Take My Breath Away</em> uit <em>Top Gun</em> (1986). Een film had nu vaak een hitsingle, en de score en de liedjes klonken als één geheel. Over de popsong in de film gaat Filmrol 4.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/28/5f/75/285f7556-8d6b-c192-d47a-ebc0ee232d0c/mzaf_9736515358810970311.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/43/8e/b1/438eb1b3-ff35-098c-f393-7b9b226206ea/00602537885084.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Harold Faltermeyer</span><br><em>Beverly Hills Cop</em>: Axel F (1984)</div></div>Springerige synthmelodie op een strakke drumcomputer: een filmthema als dancehit.</aside>
+  <p>Harold Faltermeyer uit München studeerde aan de muziekhogeschool in zijn stad en werkte als toetsenist en arrangeur voor Moroder, onder meer bij <em>Midnight Express</em>. Zijn eigen doorbraak kwam met <em>Beverly Hills Cop</em> (1984) van Martin Brest, een actiekomedie met Eddie Murphy als politieagent uit Detroit. Het thema <em>Axel F</em>, genoemd naar Murphy's personage, bestaat uit een springerige synthesizermelodie met grote sprongen en korte, afgebroken noten, boven een strak geprogrammeerd drumcomputerritme. Het werd wereldwijd een hit, als instrumentaal stuk. Daarna schreef Faltermeyer de muziek voor <em>Fletch</em> (1985) en voor <em>Top Gun</em> (1986), waarvan de <em>Top Gun Anthem</em> met gitarist Steve Stevens een Grammy won.</p>
+  
+  <p>Synthesizerpop werd zo het gewone geluid van de Hollywood-actiefilm. In hetzelfde jaar als <em>Beverly Hills Cop</em> bracht Jan Hammer dat geluid naar de televisie, met de muziek voor de politieserie <em>Miami Vice</em>. Dat verhaal staat in Filmrol 8.</p>
+
+  <!-- AKTE 3 -->
+  <header class="opener part" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Eurorack_Modular_Synthesizer.jpg/960px-Eurorack_Modular_Synthesizer.jpg')"><div class="wash"></div><div class="shade"></div><div class="bar"></div>
+    <p class="kicker">Akte 3 · 1982-2024</p>
+    <h2>Patroon en textuur</h2>
+    <p class="sub">Minimal music, drone, industrial en de terugkeer van de jaren tachtig.</p>
+    <span class="letter" aria-hidden="true">3</span>
+  </header>
+
+  <div class="head"><p class="label">Scène 08 · 1982-2019 · New York, Londen, Berlijn</p><h3>Herhaling als motor: minimal music</h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Philip_Glass_in_Florence%2C_Italy_-_1993_%28cropped%29.jpg/960px-Philip_Glass_in_Florence%2C_Italy_-_1993_%28cropped%29.jpg" alt="Philip Glass"><figcaption>Philip Glass, 1993</figcaption></figure>
+  <p>In de jaren zestig ontstond in New York een nieuwe stroming in de gecomponeerde muziek: <strong>minimal music</strong>. Componisten als La Monte Young, Terry Riley, Steve Reich en Philip Glass keerden zich af van de ingewikkelde, atonale muziek die toen in de conservatoria de toon zette. Hun muziek bestaat uit korte patronen die vele keren herhaald worden en langzaam veranderen: er komt een noot bij, er valt er een weg, een patroon schuift een tel op ten opzichte van een ander. De harmonie is eenvoudig en blijft lang op hetzelfde akkoord staan. In <em>In C</em> (1964) van Terry Riley spelen de muzikanten 53 korte figuren, elk zo vaak als ze willen.</p>
+  <p>Philip Glass werd in 1937 in Baltimore geboren. Hij studeerde in Chicago en aan de Juilliard School in New York, en daarna in Parijs bij Nadia Boulanger, de lerares van een hele generatie Amerikaanse componisten. In Parijs werkte hij ook met de Indiase sitarspeler Ravi Shankar. In de Indiase muziek ontdekte hij hoe je een stuk kunt opbouwen uit kleine ritmische eenheden die je optelt en herhaalt. Daaruit groeide zijn eigen stijl: gebroken akkoorden, <strong>arpeggio's</strong>, die in hoog tempo worden herhaald en langzaam van vorm veranderen. Met zijn eigen Philip Glass Ensemble, met elektrische orgels, blazers en zang, speelde hij die muziek vooral voor een publiek uit de beeldende kunst en de popmuziek.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/98/07/c8/9807c84e-b39b-18e3-09ee-2956d9f0e48c/mzaf_5948093463015483282.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/85/a3/40/85a34058-bd90-6a2d-f2dc-db74a959db82/00042281404221.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Philip Glass</span><br><em>Koyaanisqatsi</em>: Koyaanisqatsi (1982)</div></div>Een diepe basstem herhaalt het woord: beeld en muziek dragen samen.</aside>
+  <p>In 1982 bracht Glass het principe naar de film met <em>Koyaanisqatsi</em> van Godfrey Reggio. De film heeft geen dialoog, geen acteurs en geen verhaal. Cameraman Ron Fricke filmde landschappen, steden, fabrieken en mensenmassa's, vaak versneld of vertraagd. De titel is een woord uit de taal van de Hopi in Arizona en betekent ongeveer 'leven uit balans'. Omdat er geen verhaal is, dragen beeld en muziek de film samen. De film is verdeeld in delen die elk door een omslag in de muziek worden gemarkeerd. In het deel 'The Grid' jagen de patronen van synthesizers en orgel even snel als de versnelde beelden van verkeer en roltrappen.</p>
+  
+  <p>Het titelstuk begint met een orgel dat een trage baslijn herhaalt. Daarboven zingt de Nederlandse bas Albert de Ruiter het woord <em>koyaanisqatsi</em>, steeds opnieuw, extreem laag. Het klinkt als een stem uit een andere wereld. Glass schreef daarna onder meer muziek voor <em>Mishima</em> (1985) van Paul Schrader, voor strijkkwartet en orkest, voor Martin Scorsese's <em>Kundun</em> (1997) en voor <em>The Hours</em> (2002). Voor de laatste twee werd hij genomineerd voor een Oscar.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/9b/fd/99/9bfd990b-4132-e808-3cec-b7b2fcf76413/mzaf_9548697442485133452.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/e6/9a/9e/e69a9e33-484f-3bb5-18aa-a89d93e180d8/5060099970030_1.jpg/600x600bb.jpg" alt=""><div><span class="who">Michael Nyman</span><br><em>The Draughtsman's Contract</em>: Chasing Sheep Is Best Left to Shepherds (1982)</div></div>Een baslijn van Purcell, versterkt en opgejaagd.</aside>
+  <p>In Londen ging Michael Nyman een andere kant op. Nyman studeerde aan de Royal Academy of Music en werkte eerst als muziekcriticus. Hij was een van de eersten die het woord minimalisme voor muziek gebruikte. Met zijn Michael Nyman Band, met saxofoons, versterkte strijkers en piano, maakte hij een harde, energieke variant. Voor regisseur Peter Greenaway bouwde hij scores op oude muziek. In <em>The Draughtsman's Contract</em> (1982), een film over een tekenaar op een Engels landgoed in 1694, nam hij baslijnen van Henry Purcell, die in dezelfde tijd leefde, als fundament. Op die herhaalde baslijnen bouwde hij nieuwe, opgejaagde muziek, luid en ritmisch gespeeld.</p>
+  
+  <p>Nymans grootste succes werd <em>The Piano</em> (1993) van Jane Campion, over een Schotse vrouw die niet spreekt en met haar piano naar Nieuw-Zeeland reist. De pianomuziek, deels gebaseerd op Schotse volksliedjes, is haar stem. Omdat de hoofdpersoon in de film zelf speelt, is de muziek tegelijk filmmuziek en een deel van het verhaal.</p>
+  <p>Na 2000 werd de techniek gemeengoed. Clint Mansell, eerder zanger van de Britse band Pop Will Eat Itself, schreef voor <em>Requiem for a Dream</em> (2000) van Darren Aronofsky een kort strijkersmotief dat het Kronos Quartet steeds opnieuw speelt, telkens dringender, terwijl de personages verder wegzakken in hun verslaving. Max Richter, in 1966 in Duitsland geboren en in Engeland opgegroeid, verbindt minimal music met elektronica en een melancholieke, bijna romantische klank. Zijn stuk <em>On the Nature of Daylight</em>, van het album <em>The Blue Notebooks</em> (2004), is een trage reeks akkoorden voor strijkers die steeds terugkomt en door de herhaling zwaarder wordt. Het werd in tal van films gebruikt, zoals <em>Shutter Island</em> (2010) en <em>Arrival</em> (2016). Herhaling geeft de muziek beweging, zonder het beeld voor te schrijven wat het moet voelen.</p>
+
+  <div class="head"><p class="label">Scène 09 · 2007-2023 · Reykjavík, Berlijn, Oxford, Londen</p><h3>Klank in plaats van melodie</h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Hildur_Gudnadottir_on_the_Green_Carpet_at_the_2025_Zurich_Film_Festival_01.jpg/960px-Hildur_Gudnadottir_on_the_Green_Carpet_at_the_2025_Zurich_Film_Festival_01.jpg" alt="Hildur Guðnadóttir"><figcaption>Hildur Guðnadóttir, 2025</figcaption></figure>
+  <p>Na 2000 verschoof de aandacht in veel filmscores van melodie naar klank en textuur. Er is dan geen thema meer dat je kunt nazingen, maar een klankveld dat langzaam verandert van kleur en dichtheid. Componisten leenden uit de ambient, uit de <strong>drone</strong>, muziek die rust op lang aangehouden tonen, en uit de moderne gecomponeerde muziek van Penderecki en Ligeti, die in Filmrol 2 aan bod komt. Opvallend veel van deze componisten komen niet van het conservatorium, maar uit de rock, de experimentele pop of de elektronische muziek.</p>
+  <p>Jonny Greenwood, gitarist van Radiohead, schreef voor <em>There Will Be Blood</em> (2007) van Paul Thomas Anderson muziek voor strijkorkest. Hij gebruikte <strong>clusters</strong>, akkoorden van tonen die vlak naast elkaar liggen, en kwarttonen, de toonafstanden tussen de halve tonen in. De strijkers schuiven als één massa en glijden van de ene toonhoogte naar de andere. De muziek maakt de dorre woestijn, de olie in de grond en de obsessie van de hoofdpersoon hoorbaar. Omdat Greenwood er een deel van zijn eerdere stuk <em>Popcorn Superhet Receiver</em> in verwerkte, mocht de score niet meedingen naar een Oscar. Voor Anderson schreef hij daarna onder meer <em>Phantom Thread</em> (2017), die juist romantisch klinkt, en voor Jane Campion <em>The Power of the Dog</em> (2021), waarin een cello getokkeld wordt als een banjo.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/b0/ae/f6b0aeeb-101c-d328-73dc-bf64a2cc0460/mzaf_14312534875481669310.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/aa/70/f2/aa70f298-6d6b-2b4c-bc91-b62ff4f1f783/00028947967842.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Jóhann Jóhannsson</span><br><em>Arrival</em>: Heptapod B (2016)</div></div>Bewerkte stemmen klinken als een taal die je niet kent.</aside>
+  <p>Jóhann Jóhannsson werd in 1969 in Reykjavík geboren en kwam uit de indierock en de experimentele elektronica. Hij smeedde orkest, koor en elektronische bewerking samen tot één klankveld. Met regisseur Denis Villeneuve maakte hij <em>Prisoners</em> (2013), <em>Sicario</em> (2015) en <em>Arrival</em> (2016). In <em>Sicario</em>, over de drugsoorlog aan de Mexicaanse grens, klinkt een laag, dreunend ritme van koperblazers, slagwerk en elektronica als een naderend gevaar. In <em>Arrival</em> landen buitenaardse wezens op aarde, en een taalkundige probeert hun taal te leren. Jóhannsson bewerkte opnamen van stemmen tot klanken die als een vreemde taal klinken: je hoort dat het mensen zijn, maar je verstaat niets. Hij overleed in 2018 in Berlijn, 48 jaar oud.</p>
+  
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/56/22/09/56220960-aa9d-f923-6211-cd5a29fa286d/mzaf_2982596073319913096.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4d/41/70/4d4170e5-0d74-6311-ec84-d8e15d99fcfe/191402048568.png/600x600bb.jpg" alt=""><div><span class="who">Mica Levi</span><br><em>Under the Skin</em>: Lipstick to Void (2013)</div></div>Glijdende strijkers: vreemd, lichamelijk en ontstemd.</aside>
+  <p>Mica Levi, in 1987 geboren en opgeleid aan de Guildhall School of Music and Drama in Londen, werd eerst bekend met de experimentele popband Micachu and the Shapes. Regisseur Jonathan Glazer vroeg Levi voor <em>Under the Skin</em> (2013), over een buitenaards wezen in de gedaante van een vrouw dat in Schotland mannen verleidt. De score bestaat uit strijkers die tussen de tonen in glijden en zoemen, met een kort motief dat steeds terugkomt. Omdat de toonhoogte nooit vaststaat, klinkt de muziek vreemd en tegelijk lichamelijk. Opnieuw met Glazer volgde <em>The Zone of Interest</em> (2023), over het gezin van de commandant van Auschwitz. Die film heeft opvallend weinig muziek: een duistere ouverture bij een zwart beeld, en een slot. Daartussen hoor je vooral de geluiden van het kamp achter de tuinmuur.</p>
+  
+  <p>Hildur Guðnadóttir werd in 1982 in Reykjavík geboren en is celliste. Ze werkte jarenlang samen met Jóhannsson, onder meer aan <em>Sicario</em>, en schreef daarna zelf <em>Sicario: Day of the Soldado</em> (2018). Haar cello, vaak elektronisch bewerkt, staat centraal in haar werk. Voor de serie <em>Chernobyl</em> (2019) gebruikte ze alleen geluiden die ze opnam in een stilgelegde kerncentrale in Litouwen. Die vormde ze om tot ritmes en klankvelden.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6c/f9/69/6cf96973-586c-fe49-d7e9-4620f69effef/mzaf_17835458061250199713.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/bb/45/af/bb45afd7-eef7-84d5-40fc-943aef24a3c8/794043201745.jpg/600x600bb.jpg" alt=""><div><span class="who">Hildur Guðnadóttir</span><br><em>Joker</em>: Bathroom Dance (2019)</div></div>De cello was er eerst; de acteur bewoog erop.</aside>
+  <p>Voor <em>Joker</em> (2019) van Todd Phillips schreef ze muziek voordat de opnamen begonnen. Gewoonlijk werkt het andersom: eerst wordt de film gemonteerd, dan komt de muziek. Op de set liet Phillips haar muziek horen, en acteur Joaquin Phoenix bewoog erop. In de scène in een openbaar toilet danst zijn personage langzaam op een trage, donkere cellomelodie. Guðnadóttir won er een Oscar mee.</p>
+  
+
+  <div class="head"><p class="label">Scène 10 · 2010-2024 · Los Angeles, Parijs</p><h3>Uit de studio: Reznor, Ross en Daft Punk</h3></div>
+  <figure class="side-fig"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Trent_Reznor-FEB2008_%28cropped%2C_but_higher_quality%29_%282%29.jpg" alt="Trent Reznor"><figcaption>Trent Reznor, 2008</figcaption></figure>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a1/61/30/a1613057-4491-4397-94aa-1f1b9b804450/mzaf_1573591844972755679.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c8/d6/ab/c8d6abf5-f991-429f-a47d-c3ee25777343/859704488368_cover.jpg/600x600bb.jpg" alt=""><div><span class="who">Trent Reznor &amp; Atticus Ross</span><br><em>The Social Network</em>: Hand Covers Bruise (2010)</div></div>Een eenzame pianolijn boven een groeiende brom.</aside>
+  <p>Trent Reznor richtte eind jaren tachtig de band Nine Inch Nails op, een van de bekendste namen in de <strong>industrial</strong>: rock met machinale ritmes, vervormde synthesizers en geluiden die aan fabrieken doen denken. De Britse producer Atticus Ross werkte vanaf 2005 met hem. Regisseur David Fincher vroeg hen in 2010 voor <em>The Social Network</em>, over de oprichting van Facebook. Het was hun eerste grote filmscore, en ze wonnen er een Oscar mee.</p>
+  <p>Reznor en Ross werken niet met een partituur voor een orkest. Ze bouwen hun muziek in de studio, laag voor laag. Ze vervormen klanken, laten ruis en brom toe en stapelen geluiden die bijna als <strong>sounddesign</strong> klinken, het ontwerpen van geluiden op de grens van muziek en geluidseffect. In <em>Hand Covers Bruise</em> speelt een piano een eenvoudige, eenzame melodie van een paar tonen. Daaronder groeit een gruizige, lage elektronische klank, die steeds dichterbij lijkt te komen. Het contrast tussen de kwetsbare piano en de onrustige klanklaag zegt iets over de hoofdpersoon: slim en eenzaam tegelijk.</p>
+  
+  <p>Voor Fincher maakten ze daarna onder meer <em>The Girl with the Dragon Tattoo</em> (2011) en <em>Gone Girl</em> (2014). Met de jazzpianist Jon Batiste maakten ze de muziek voor de Pixarfilm <em>Soul</em> (2020), over een muziekleraar die jazzpianist wil worden. Batiste schreef de jazz die in de stad New York klinkt, Reznor en Ross de elektronische klanken van het hiernamaals. Ze wonnen een tweede Oscar. Voor <em>Challengers</em> (2024) van Luca Guadagnino, een film over drie tennissers, schreven ze opzwepende technomuziek met een strakke beat, die tijdens de wedstrijden als een clubtrack doorloopt.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b0/31/b2/b031b227-88da-3dee-05fe-520b96f30285/mzaf_8299314304356888270.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/f3/ff/7d/f3ff7d57-3d4c-4ca6-45df-11dcd1fcfe3a/00050087237196.rgb.jpg/600x600bb.jpg" alt=""><div><span class="who">Daft Punk</span><br><em>TRON: Legacy</em>: Derezzed (2010)</div></div>Een Franse dance-act scoort een Disneyfilm.</aside>
+  <p>In hetzelfde jaar als <em>The Social Network</em> kreeg Disney een score van het Franse duo Daft Punk, bekend van de housemuziek uit Parijs. <em>Tron: Legacy</em> (2010) was het vervolg op <em>Tron</em> van 1982, waarvan Wendy Carlos de muziek maakte (scène 03). Daft Punk schreef voor een groot orkest, met hulp van arrangeur Joseph Trapanese, en combineerde dat met synthesizers en dansritmes. In <em>Derezzed</em> klinkt geen orkest: het is een korte, harde elektronische track, die in de film klinkt in een club waar het duo zelf als dj's te zien is.</p>
+  
+  <p>Bij Reznor, Ross en Daft Punk vervaagt het verschil tussen een filmscore en een elektronische plaat. De muziek wordt gemaakt met dezelfde apparaten, in dezelfde studio's en vaak voor hetzelfde publiek. Soundtrackalbums van deze makers worden beluisterd als albums, en de klank van hun platen bepaalt die van de film.</p>
+
+  <div class="head"><p class="label">Scène 11 · 2011-2014 · Los Angeles</p><h3>Terug naar 1984: synthwave</h3></div>
+  <figure class="side-fig"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Cliff_Martinez_%28cropped%29.jpg/960px-Cliff_Martinez_%28cropped%29.jpg" alt="Cliff Martinez"><figcaption>Cliff Martinez</figcaption></figure>
+  <p>Rond 2010 grepen muzikanten terug op de synthesizerklank van de jaren tachtig: zachte klankvlakken, arpeggio's van analoge synthesizers, drumcomputers met veel galm en melodieën die klinken als de titelmuziek van een oude actiefilm. Die stroming kreeg de naam <strong>synthwave</strong>. Kenmerkend is de nostalgie, en het warme, iets wazige geluid van analoge apparatuur. Veel van die muziek werd thuis gemaakt, met oude synthesizers of met software die ze nabootst.</p>
+  <p>Cliff Martinez was in de jaren tachtig drummer van de Red Hot Chili Peppers. Daarna ging hij filmmuziek maken, vooral voor Steven Soderbergh, vanaf <em>Sex, Lies, and Videotape</em> (1989). Zijn muziek is ambient: zachte, lang aangehouden klanken en kleine motieven die langzaam rondgaan. Voor Soderberghs <em>Solaris</em> (2002), een nieuwe verfilming van het verhaal dat Tarkovski in 1972 verfilmde (scène 02), gebruikte hij onder meer de Cristal Baschet, een instrument van glazen staafjes die met natte vingers worden bespeeld, naast steeldrums en synthesizers.</p>
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/97/b2/2a/97b22a6b-79a4-92b2-33a2-2bb935ba66bd/mzaf_1504483550933454784.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0e/4a/c2/0e4ac256-3e90-1131-2693-bf1098e6a753/886443160507.jpg/600x600bb.jpg" alt=""><div><span class="who">Cliff Martinez</span><br><em>Drive</em>: Rubber Head (2011)</div></div>Koele synthvlakken: de nacht als ambient.</aside>
+  <p>Voor <em>Drive</em> (2011) van Nicolas Winding Refn, met Ryan Gosling als stuntman die 's nachts vluchtauto rijdt, schreef Martinez een koele elektronische score. Lange synthesizerklanken en kleine, glinsterende motieven hangen boven de nachtelijke straten van Los Angeles. Refn vulde de score aan met synthpopnummers van onder anderen Kavinsky en College. Martinez liet zijn muziek daarop aansluiten, zodat score en liedjes één klankwereld vormen. De film maakte de stijl bekend bij een groot publiek.</p>
+  
+  <aside class="side-note" data-audio="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8c/c6/97/8cc6970a-45ab-0eca-6afe-7ea512ae9afe/mzaf_6509707617807246091.plus.aac.p.m4a"><span class="tag">LUISTERTIP</span><div class="rec"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/91/de/11/91de111b-429f-2179-6dd2-1704e8cfe684/886448177654_cover.jpg/600x600bb.jpg" alt=""><div><span class="who">Disasterpeace</span><br><em>It Follows</em>: Heels (2014)</div></div>Carpenter dertig jaar later: harde synths die blijven achtervolgen.</aside>
+  <p>Disasterpeace, de artiestennaam van Rich Vreeland, maakte eerder muziek voor computergames, onder meer voor <em>Fez</em> (2012). Voor de horrorfilm <em>It Follows</em> (2014) van David Robert Mitchell, over een jonge vrouw die achtervolgd wordt door een gestalte die alleen zij kan zien, schreef hij een harde synthesizerscore in de geest van John Carpenter (scène 06). Lage, vervormde akkoorden slaan hard aan en houden lang aan, en schelle hoge tonen snijden erdoorheen. Net als bij Carpenter komt de spanning uit eenvoudige, herhaalde gebaren. Maar de klank is ruwer en luider, en de muziek staat vaak bijna ongemakkelijk hard in de mix.</p>
+  
+  <p>Twee jaar later bracht de titelmuziek van de serie <em>Stranger Things</em> (2016), van Kyle Dixon en Michael Stein van de band S U R V I V E, hetzelfde geluid naar de streamingdienst: een arpeggio op een analoge synthesizer, een lage puls en een melodie die zo uit een film van 1984 had kunnen komen. Dat verhaal staat in Filmrol 8. Zo kwam de elektronische filmmuziek terug bij haar eigen verleden. De synthesizer, ooit een apparaat voor geluiden uit de ruimte, was zelf een klank geworden die aan een tijdperk herinnert.</p>
+
+</section>
+
+<section class="back">
+  <h4 class="backhead">Begrippen</h4>
+  <dl class="terms">
+    <div><dt>Theremin</dt><dd>Elektronisch instrument dat je bespeelt door je handen in een elektrisch veld te bewegen, zonder het aan te raken.</dd></div>
+    <div><dt>Bandmanipulatie</dt><dd>Opgenomen geluid op tape versnellen, vertragen, omkeren, knippen en plakken.</dd></div>
+    <div><dt>Oscillator</dt><dd>Schakeling die een elektrische trilling en dus een toon opwekt.</dd></div>
+    <div><dt>Vocoder</dt><dd>Apparaat dat de klankkleur van een stem op een synthesizer overzet, zodat de synthesizer lijkt te zingen.</dd></div>
+    <div><dt>Sequencer</dt><dd>Apparaat dat korte patronen van tonen automatisch herhaalt.</dd></div>
+    <div><dt>Giallo</dt><dd>Italiaanse moordthriller, vooral uit de jaren zestig en zeventig, genoemd naar de gele omslagen van goedkope detectiveboekjes.</dd></div>
+    <div><dt>Ostinato</dt><dd>Steeds herhaald kort motief of ritme.</dd></div>
+    <div><dt>Drumcomputer</dt><dd>Elektronisch apparaat dat programmeerbare drumritmes speelt.</dd></div>
+    <div><dt>Minimal music</dt><dd>Muziek uit korte patronen die vele keren herhaald worden en langzaam veranderen.</dd></div>
+    <div><dt>Arpeggio</dt><dd>Akkoord waarvan de tonen na elkaar in plaats van tegelijk klinken.</dd></div>
+    <div><dt>Drone</dt><dd>Lang aangehouden toon of klankveld als basis van de muziek.</dd></div>
+    <div><dt>Cluster</dt><dd>Akkoord van tonen die vlak naast elkaar liggen.</dd></div>
+    <div><dt>Sounddesign</dt><dd>Het ontwerpen van geluiden en klankkleuren, op de grens van muziek en geluidseffect.</dd></div>
+    <div><dt>Synthwave</dt><dd>Muziek vanaf ca. 2010 die de synthesizerklank van de jaren tachtig nabootst.</dd></div>
+  </dl>
+
+  <h4 class="backhead">Verder luisteren en kijken</h4>
+  <div class="links">
+    <div class="link-card"><div class="qr" data-url="https://open.spotify.com/playlist/76KXPPuIdt0i89UWVDqkRK"></div>
+      <div><span class="tag">SPOTIFY · PLAYLIST</span><p>Alle fragmenten uit dit hoofdstuk, in de volgorde van de tekst. Scan de code met je telefoon.</p></div></div>
+    <div class="link-card lesson"><div><span class="tag">LESSONUP · LES</span><p><strong>De Droomfabriek · Filmrol 5: Stroom en patroon</strong></p><p>De les bij dit hoofdstuk, met beeld en fragmenten.</p></div></div>
+  </div>
+
+  <footer class="colofon">
+    <p>Foto's: Wikimedia Commons (zie fotoverantwoording). Platenhoezen: Apple Music.</p>
+    <p>De Droomfabriek · Filmmuziek, een verborgen kant van School of Rock · ArtEZ University of the Arts</p>
+  </footer>
+</section>
+<nav class="pager" aria-label="Andere filmrollen"><a href="04.html"><small>← Filmrol 4</small><b>Songs uit de platenkast</b></a><a class="next" href="06.html"><small>Filmrol 6 →</small><b>Van Mumbai tot Mexico-Stad</b></a></nav><a class="mt-step prev" href="04.html" rel="prev" aria-label="Vorige: Filmrol 4, Songs uit de platenkast"><i aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></i><span><small>Filmrol 4</small>Songs uit de platenkast</span></a><a class="mt-step next" href="06.html" rel="next" aria-label="Volgende: Filmrol 6, Van Mumbai tot Mexico-Stad"><i aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i><span><small>Filmrol 6</small>Van Mumbai tot Mexico-Stad</span></a>
+
+</div><footer class="sitefoot"><div class="wrap"><p>De Droomfabriek · Filmmuziek, een verborgen kant van School of Rock · Jan-Wolter Smit · ArtEZ University of the Arts</p></div></footer><script src="../../assets/player.js"></script><script src="../../assets/anchor-notes.js"></script><script src="../../assets/chapter.js"></script><script>document.querySelectorAll('.qr[data-url]').forEach(function(el){if(typeof QRCode==='undefined'){return;}new QRCode(el,{text:el.dataset.url,width:256,height:256,colorDark:'#1C1B19',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.M});});</script></body></html>
