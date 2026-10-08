@@ -1,0 +1,20 @@
+/* Jazzkaart (Blue Hour): zwart-wit met koper */
+:root { --yellow: #D9894A; --red: #B5642C; --red-deep: #8E4C1F; }
+.sitenav .brand img { width: 28px; height: 28px; }
+body .sor-play { background: #B5642C; }
+/* Netwerk: bands als vierkantjes, lijnen van musicus naar band */
+.knet line { stroke: #6B655C; stroke-width: 1; opacity: .45; }
+.knet line.hl { stroke: #D9894A; opacity: .95; stroke-width: 1.6; }
+.dim .knet line:not(.hl) { opacity: .08; }
+.band rect.sq { fill: #1C1B19; stroke: #D9894A; stroke-width: 1.6; }
+.band text { font: 600 12px/1 "Oswald", sans-serif; fill: #EDE9E1; paint-order: stroke; stroke: #121110; stroke-width: 3px; letter-spacing: .02em; }
+.band { cursor: pointer; }
+.band.sel rect.sq, .band.hl rect.sq { fill: #D9894A; }
+.dim .band:not(.hl):not(.sel) { opacity: .25; }
+.netmode .link, .netmode .node.netoff { display: none; }
+.knet, .gbands { display: none; }
+.netmode .knet, .netmode .gbands { display: inline; }
+/* Invloeden duidelijk zichtbaar: koperen stippellijnen met pijlpunt */
+.link.invloed { stroke-dasharray: 5 3; stroke-width: 1.2; stroke-opacity: .22; }
+.dim .link.invloed:not(.hl) { stroke-opacity: .07; }
+.link.invloed.hl { stroke-opacity: 1; stroke-width: 2.4; marker-end: url(#k-arrow); }
