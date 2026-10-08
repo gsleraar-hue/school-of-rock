@@ -65,6 +65,51 @@
    ]
   },
   {
+   "id": "saxofoon",
+   "name": "Saxofoon",
+   "lane": "instrumenten",
+   "year": 1846,
+   "place": {
+    "name": "Parijs",
+    "lat": 48.8566,
+    "lon": 2.3522
+   },
+   "who": "Adolphe Sax",
+   "text": "De Belgische instrumentmaker Adolphe Sax, geboren in Dinant, verhuisde in 1842 naar Parijs. Daar ontwierp hij een koperen blaasinstrument met een riet en kleppen, zoals bij een klarinet. In 1846 kreeg hij er patent op. De saxofoon was bedoeld voor militaire kapellen: luid genoeg voor buiten, maar soepeler dan een trompet. In de jazz werd hij een stem die kon zingen, schreeuwen en fluisteren. Coleman Hawkins maakte de tenorsaxofoon tot solo-instrument, en Charlie Parker speelde er de razendsnelle lijnen van de bebop op. Na de oorlog gaf de gierende sax de rhythm-and-blues en de vroege rock-'n-roll hun kracht.",
+   "enabled": [
+    "swing",
+    "bebop",
+    "jump-blues",
+    "rhythm-and-blues",
+    "rock-n-roll"
+   ],
+   "after": [],
+   "listen": "Drie keer een saxofoon: wanneer klinkt hij als een zingende stem, en wanneer als een schreeuw?",
+   "tracks": [
+    {
+     "title": "Body and Soul",
+     "artist": "Coleman Hawkins and His Orchestra",
+     "year": 1939,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2e/ca/bd/2ecabd2c-8c59-689d-9f0f-568c0be09464/mzaf_6155508596369779471.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/cc/c8/92/mzi.bmfudpbr.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Ko-Ko",
+     "artist": "Charlie Parker's Reboppers",
+     "year": 1945,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/87/ae/f8/87aef832-5e80-899d-527a-1cc646d02fb1/mzaf_9185479423519802843.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/b7/d4/10/mzi.vyfnkgmn.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Yakety Yak",
+     "artist": "The Coasters",
+     "year": 1958,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b8/b7/0d/b8b70dbc-38dd-ac66-a94f-3838fffe46e6/mzaf_1623239583480547227.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5d/7e/02/5d7e02e4-e886-fb45-1d06-e0f4a64a7d96/603497871063.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": "grammofoon",
    "name": "Grammofoon en 78-toerenplaat",
    "lane": "verspreiden",
@@ -111,6 +156,90 @@
    ]
   },
   {
+   "id": "bladmuziek",
+   "name": "Bladmuziek van Tin Pan Alley",
+   "lane": "verspreiden",
+   "year": 1890,
+   "place": {
+    "name": "West 28th Street, New York",
+    "lat": 40.7454,
+    "lon": -73.9897
+   },
+   "who": "Muziekuitgevers als M. Witmark & Sons",
+   "text": "Voordat de grammofoon gewoon werd, kocht je een liedje op papier. Veel gezinnen uit de middenklasse hadden een piano in de huiskamer en speelden de nieuwste hits zelf. Vanaf de jaren tachtig van de negentiende eeuw vestigden muziekuitgevers zich in Manhattan, en tegen 1900 zaten de meeste in West 28th Street. Uit de open ramen klonk zoveel gerammel van piano's dat de straat de bijnaam Tin Pan Alley kreeg, steeg van de blikken pannen. Uitgevers hadden vaste liedjesschrijvers in dienst en betaalden pianisten om nieuwe nummers in winkels en theaters voor te spelen. After the Ball van Charles K. Harris uit 1892 werd een van de grootste hits.",
+   "enabled": [
+    "tin-pan-alley",
+    "ragtime"
+   ],
+   "after": [],
+   "listen": "Deze liedjes werden vooral als bladmuziek verkocht: zijn ze makkelijk mee te zingen en thuis na te spelen op een piano?",
+   "tracks": [
+    {
+     "title": "Give My Regards to Broadway",
+     "artist": "Billy Murray",
+     "year": 1905,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/25/50/d1/2550d152-2a89-e0e6-a4ca-073a51d1d704/mzaf_1418910416120416600.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/43/be/96/43be96bd-758c-3ec4-108b-f1b0b84b6fce/8447181855326.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Shine On, Harvest Moon",
+     "artist": "Ada Jones & Billy Murray",
+     "year": 1909,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/c2/6d/96/c26d9693-cc82-73a6-2b86-52299f0fe13d/mzaf_16533319191736173066.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/25/9e/ba/259eba89-0027-a17b-741c-7e6259ef27e1/687927089907.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Alexander's Ragtime Band",
+     "artist": "Arthur Collins & Byron G. Harlan",
+     "year": 1911,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/6c/51/26/mzm.rhkahczi.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/ae/0d/c6/mzi.hdsizuvp.tif/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "pianola",
+   "name": "Pianola en pianorol",
+   "lane": "verspreiden",
+   "year": 1898,
+   "place": {
+    "name": "Detroit",
+    "lat": 42.3314,
+    "lon": -83.0458
+   },
+   "who": "Edwin Votey; Aeolian Company",
+   "text": "In 1895 bouwde Edwin Votey in Detroit een apparaat dat een piano zelf liet spelen. Een rol papier met gaatjes liep langs een rij openingen; waar lucht door een gaatje kon, ging een toets omlaag. De Aeolian Company bracht de Pianola in 1898 op de markt. Wie geen piano kon spelen, kon nu toch thuis de nieuwste ragtime horen. In de jaren twintig was de speelpiano in Amerika een gewoon meubelstuk, en Scott Joplin en George Gershwin speelden zelf rollen in. Later schreef Conlon Nancarrow muziek die zo snel en ingewikkeld was dat alleen een speelpiano haar kan spelen.",
+   "enabled": [
+    "ragtime",
+    "tin-pan-alley"
+   ],
+   "after": [],
+   "listen": "Hier speelt geen pianist maar een rol papier: hoor je dat aan het ritme of aan de aanslag?",
+   "tracks": [
+    {
+     "title": "Maple Leaf Rag",
+     "artist": "Scott Joplin",
+     "year": 1916,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/7a/1d/83/7a1d836a-d582-9cdd-e9b8-c9da7497df61/mzaf_7162661965569876002.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/fa/b8/29/fab829f2-1ce2-f865-35c8-3576fb5923be/cover.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Swanee",
+     "artist": "George Gershwin",
+     "year": 1920,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2b/a2/d6/2ba2d636-f51d-608a-84b6-22ded030c844/mzaf_4114661572479074707.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/26/9e/6b/269e6bb0-45df-d9ce-a620-b6f2db25947e/mzi.vxdfiicg.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Study No. 3a",
+     "artist": "Conlon Nancarrow",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/ee/f0/5b/eef05b1d-3d6b-0d0b-ae70-8b7713585996/mzaf_8474382574607958451.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/29/b3/30/29b330dd-6ab8-d702-12b1-d9b210e1a251/195497887415.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": "elektrische-opname",
    "name": "Elektrische opname en microfoon",
    "lane": "opnemen",
@@ -152,6 +281,50 @@
      "year": 1931,
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/aa/1a/2a/aa1a2af3-3a18-d878-c00c-c2b8d7cd91ad/mzaf_9264324474815107844.plus.aac.p.m4a",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d7/13/4d/d7134d72-7283-e204-3846-e0c189a1c143/06UMGIM04667.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "drumstel",
+   "name": "Drumstel met voetpedaal",
+   "lane": "instrumenten",
+   "year": 1909,
+   "place": {
+    "name": "Chicago",
+    "lat": 41.8781,
+    "lon": -87.6298
+   },
+   "who": "William F. Ludwig en Theobald Ludwig",
+   "text": "Rond 1900 had een orkest vaak meerdere slagwerkers: een voor de grote trom, een voor de kleine trom en de bekkens. William F. Ludwig speelde in Chicago in circus- en theaterorkesten en vond de houten pedalen van zijn tijd te traag voor ragtime. In 1909 kreeg hij patent op een pedaal met een veer, dat na elke slag vanzelf terugveert. Met zijn broer Theobald begon hij een drumbedrijf. Nu speelde één musicus met zijn voet de grote trom en met zijn handen de rest. Zo ontstond het drumstel. Chick Webb en Gene Krupa maakten er in de swing een instrument voor spectaculaire solo's van.",
+   "enabled": [
+    "new-orleans-jazz",
+    "swing",
+    "rock-n-roll",
+    "surfrock"
+   ],
+   "after": [],
+   "listen": "Luister naar de grote trom: hoor je de voet van de drummer, en wat doen zijn handen tegelijk?",
+   "tracks": [
+    {
+     "title": "Liza (All the Clouds'll Roll Away)",
+     "artist": "Chick Webb",
+     "year": 1938,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/6c/1a/93/mzm.apoezedy.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/5e/1a/d4/mzi.kbquonbc.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Drum Boogie",
+     "artist": "Gene Krupa and His Orchestra",
+     "year": 1941,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e1/c0/d5/e1c0d55a-d47b-28dd-2445-c26413ca7d7b/mzaf_10790952099921668817.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music69/v4/3a/59/eb/3a59eb79-2cf0-cf27-f710-5ce81f16ebb7/dj.stcogozm.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Wipe Out",
+     "artist": "The Surfaris",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/ad/15/e9ad1556-36f2-d1b7-ed27-23bdd1cf3671/mzaf_13511627077007768116.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/09/66/d5/0966d538-5d4f-29ca-81fb-75926d3ca71a/00602567403234.rgb.jpg/600x600bb.jpg"
     }
    ]
   },
@@ -289,6 +462,50 @@
    ]
   },
   {
+   "id": "plaatgalm",
+   "name": "Plaatgalm (EMT 140)",
+   "lane": "opnemen",
+   "year": 1957,
+   "place": {
+    "name": "Lahr, Duitsland",
+    "lat": 48.3392,
+    "lon": 7.8728
+   },
+   "who": "EMT (Wilhelm Franz), naar een ontwerp van Walter Kuhl",
+   "text": "Galm is het geluid dat na een noot nog door een zaal zweeft. Studio's maakten galm met een aparte echokamer, maar zo'n kamer kost ruimte en klinkt altijd hetzelfde. Het Duitse bedrijf EMT in Lahr bracht in 1957 de EMT 140 uit: een dunne stalen plaat van ongeveer een bij twee meter, opgehangen in een houten kast. Een element laat de plaat trillen en opnemers vangen de galm op. Met een demper maak je de galm korter of langer. In RCA Studio B in Nashville gaf technicus Bill Porter met zo'n plaat de stemmen van Roy Orbison, de Everly Brothers en Elvis Presley een heldere glans.",
+   "enabled": [
+    "rock-n-roll",
+    "country"
+   ],
+   "after": [
+    "slapback-echo"
+   ],
+   "listen": "Luister naar de stem aan het eind van een zin: hoe lang klinkt hij nog na, en klinkt dat als een echte zaal?",
+   "tracks": [
+    {
+     "title": "Only the Lonely",
+     "artist": "Roy Orbison",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/be/f7/3c/bef73c19-bf71-feee-34ca-0c37dceb9bb0/mzaf_4880900542887399713.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/14/2b/8b/142b8bb0-26aa-98bd-c3fa-c225765e1d4b/dj.yqpjjpif.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Cathy's Clown",
+     "artist": "The Everly Brothers",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/52/86/07/5286076e-b2e2-4cdd-288d-40bdc41a86a0/mzaf_9196864549150981781.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/10/16/b8/1016b84a-2feb-06d7-1e5a-e2eddd0f8210/093624516422.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Are You Lonesome Tonight?",
+     "artist": "Elvis Presley",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d0/8e/c1/d08ec1f4-dd33-3a58-a4fd-66d5a8c0d0de/mzaf_7802186878467531332.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c8/94/6d/c8946d44-19ef-d662-9a76-2373c03d19ba/886445009880.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": "lp",
    "name": "Langspeelplaat (lp)",
    "lane": "verspreiden",
@@ -331,6 +548,50 @@
      "year": 1967,
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/1c/d7/011cd729-a50b-9311-52f3-06fe99c81946/mzaf_4509223857921685574.plus.aac.p.m4a",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6f/79/8d/6f798d84-7475-8525-fc91-f7b51b2b5a9b/00602567725428.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stereo",
+   "name": "Stereo",
+   "lane": "verspreiden",
+   "year": 1958,
+   "place": {
+    "name": "New York",
+    "lat": 40.7128,
+    "lon": -74.006
+   },
+   "who": "Alan Blumlein (idee, 1931); Westrex (45/45-groef)",
+   "text": "Al in 1931 vroeg de Britse ingenieur Alan Blumlein patent aan op een manier om geluid met twee kanalen vast te leggen, zodat je hoort waar een instrument staat. Een product werd het pas na de lp. Westrex ontwikkelde een groef waarin twee kanalen tegelijk zitten. Eind 1957 perste het label Audio Fidelity in New York de eerste stereoplaat, en in 1958 volgden de grote platenmaatschappijen. Eerst waren het vooral demonstratieplaten waarop percussie van links naar rechts stuiterde. In de jaren zestig ontdekten rockbands de mogelijkheden. Producers zetten zang en drums helemaal links of rechts, en psychedelische bands lieten klanken door de kamer zweven.",
+   "enabled": [
+    "psychedelic-rock",
+    "art-rock"
+   ],
+   "after": [
+    "lp"
+   ],
+   "listen": "Luister met een koptelefoon: wat hoor je links, wat rechts, en beweegt er iets van de ene kant naar de andere?",
+   "tracks": [
+    {
+     "title": "Taboo",
+     "artist": "Terry Snyder & The All Stars",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2f/5e/2c/2f5e2ced-b189-a39b-35ad-507dbe24d6af/mzaf_5162545966531435712.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/d1/f2/f6/mzi.vbwazejq.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Taxman",
+     "artist": "The Beatles",
+     "year": 1966,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/de/dd/58/dedd5821-3d2b-8e8e-a2bc-09fdb1edc7f0/mzaf_5061022832788239345.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/58/4a/10/584a1058-de0a-6a6b-d0bd-da09a028b8bc/00602567705499.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Bold as Love",
+     "artist": "The Jimi Hendrix Experience",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/85/bc/3f/85bc3f89-11ca-3062-32b6-a69a7e8e70ba/mzaf_5545414689480167246.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c9/7d/b2/c97db2b6-99d8-d57a-4ca9-a6040997f537/884977517798.jpg/600x600bb.jpg"
     }
    ]
   },
@@ -471,6 +732,89 @@
      "year": 1950,
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e4/06/a5/e406a531-0be5-8365-350d-a5bde637070c/mzaf_11776901813465118166.plus.aac.p.m4a",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/96/2d/9f/962d9fcb-f1a7-8280-8faa-2fdf048dae95/14UMGIM55917.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "steelgitaar",
+   "name": "Steelgitaar: lapsteel en pedal steel",
+   "lane": "instrumenten",
+   "year": 1889,
+   "place": {
+    "name": "Honolulu",
+    "lat": 21.3069,
+    "lon": -157.8583
+   },
+   "who": "Joseph Kekuku; later Bud Isaacs (pedal steel)",
+   "text": "Volgens de overlevering ontdekte de Hawaïaanse scholier Joseph Kekuku rond 1889 in Honolulu dat hij een gitaar kon bespelen door een stuk metaal over de snaren te laten glijden. Hij legde de gitaar plat op schoot. Zo'n lapsteel speelt glijdende tonen die klinken als een zuchtende stem. Hawaïaanse muzikanten namen het instrument mee op tournee door Amerika en Europa, en in de jaren dertig kreeg het een elektrisch element. In de country werd het onmisbaar. Later kwamen er pedalen bij die de stemming van losse snaren veranderen. Bud Isaacs liet die pedal steel in 1954 horen op Slowly van Webb Pierce, en sindsdien huilt hij in bijna elk countrynummer.",
+   "enabled": [
+    "country",
+    "country-rock"
+   ],
+   "after": [],
+   "listen": "Luister naar de glijdende tonen: klinkt de gitaar als een instrument, of meer als een stem die zucht?",
+   "tracks": [
+    {
+     "title": "Steel Guitar Rag",
+     "artist": "Bob Wills and His Texas Playboys",
+     "year": 1936,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/73/79/a9/7379a9ed-741a-429c-d7c4-362553f55c98/mzaf_2908972540163468835.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/7a/d5/89/mzi.bmpaqznk.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Slowly",
+     "artist": "Webb Pierce",
+     "year": 1954,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/55/ae/38/55ae384e-5359-6b99-6228-9225430526af/mzaf_2678640172799237571.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/cb/68/6c/cb686c80-c0da-738b-9eea-947cfbc1050f/4066004350912_3000.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Sleep Walk",
+     "artist": "Santo & Johnny",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/84/85/2a/84852ae7-7baf-ff8a-880c-5c0ef59e2293/mzaf_2912627958427450962.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music5/v4/94/9c/f9/949cf91b-7de8-b9d9-945f-677872062697/cover.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "steelpan",
+   "name": "Steelpan",
+   "lane": "instrumenten",
+   "year": 1939,
+   "place": {
+    "name": "Port of Spain, Trinidad",
+    "lat": 10.6549,
+    "lon": -61.5019
+   },
+   "who": "Winston 'Spree' Simon, Ellie Mannette en de steelbands van Port of Spain",
+   "text": "In Trinidad werden Afrikaanse trommels bij het carnaval in de jaren tachtig van de negentiende eeuw verboden. Feestvierders sloegen daarom op bamboestokken, en in de jaren dertig ook op blikken, vuilnisbakken en autodelen. In 1939 trok de eerste band die alleen op metaal speelde door Port of Spain. Jongens als Winston Spree Simon ontdekten dat een ingedeukt stuk metaal verschillende tonen geeft. Rond 1947 maakten Ellie Mannette en anderen pannen van olievaten, die na de oorlog overal lagen. In 1951 liet een steelband uit Trinidad het instrument in Londen horen. De steelband werd het geluid van carnaval en calypso.",
+   "enabled": [
+    "calypso"
+   ],
+   "after": [],
+   "listen": "Je hoort alleen metalen pannen: welke spelen de melodie, en welke de bas en het ritme?",
+   "tracks": [
+    {
+     "title": "Trinidad Jump Up",
+     "artist": "Steel Band of Trinidad",
+     "year": 1958,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music3/v4/79/b2/e8/79b2e8ef-3845-87f9-45c9-b98a22b15e66/mzaf_3673110579744917500.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music1/v4/42/a7/bc/42a7bccd-4676-d477-56ae-8edc42727e26/cover.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "I Want You Back",
+     "artist": "Esso Trinidad Steel Band",
+     "year": 1971,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/43/ee/80/43ee80de-572d-dd4d-093e-7fc773124a17/mzaf_13491329638600092422.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/89/31/90/893190c1-dae5-bb6a-5e3a-282ba985d163/mzi.cmcegplx.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "The Pan in Me",
+     "artist": "Amoco Renegades Steel Orchestra",
+     "year": 1989,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bf/30/e2/bf30e2da-1aaf-c892-bfc7-9c8677c80e19/mzaf_3100453727108151517.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a0/79/10/a079109d-e01a-e6fe-85d8-c201d05a5c40/013491401423.png/600x600bb.jpg"
     }
    ]
   },
@@ -1201,6 +1545,51 @@
    ]
   },
   {
+   "id": "talkbox",
+   "name": "Talkbox",
+   "lane": "instrumenten",
+   "year": 1973,
+   "place": {
+    "name": "Marissa, Illinois",
+    "lat": 38.25,
+    "lon": -89.75
+   },
+   "who": "Bob Heil; later Peter Frampton en Roger Troutman (Zapp)",
+   "text": "Een talkbox laat een gitaar praten. Een luidspreker blaast het geluid door een plastic slangetje in de mond van de muzikant. Die vormt met lippen en tong klinkers, en een microfoon vangt het resultaat op. Het idee bestond al sinds eind jaren dertig, maar de apparaten waren te zacht voor een rockpodium. In 1973 bouwde geluidstechnicus Bob Heil uit Marissa, Illinois een krachtige versie voor Joe Walsh, die hem gebruikte op Rocky Mountain Way. Peter Frampton maakte er een publiekstrekker van. In de funk liet Roger Troutman van Zapp een synthesizer door de talkbox zingen, en die klank keerde terug in de G-funk.",
+   "enabled": [
+    "funk",
+    "g-funk",
+    "softrock-aor"
+   ],
+   "after": [
+    "elektrische-gitaar"
+   ],
+   "listen": "Hoor je waar de gitaar ophoudt en de stem begint? Welke woorden of klinkers kun je verstaan?",
+   "tracks": [
+    {
+     "title": "Rocky Mountain Way",
+     "artist": "Joe Walsh",
+     "year": 1973,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2d/5a/0b/2d5a0bf3-b2ed-47c8-9c43-a433de51bf09/mzaf_6685295762428212058.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/25/22/29/2522299d-2d43-5a63-d576-03461e86f049/00602567833659.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Show Me the Way",
+     "artist": "Peter Frampton",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f1/75/42/f17542c7-2de7-cf50-6627-bff4db88bb6c/mzaf_4525589663783802365.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/58/a9/71/58a971dc-0c7e-9df3-1bd4-3103eb9886d2/00602517372535.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "More Bounce to the Ounce",
+     "artist": "Zapp",
+     "year": 1980,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d7/51/31/d7513169-707d-f2ab-4821-9d80b647ff57/mzaf_9386056648208955088.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/6c/96/c6/6c96c6cf-d87b-22e2-ca61-f04cc0c437c1/842474169346.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": "rhodes",
    "name": "Fender Rhodes",
    "lane": "instrumenten",
@@ -1382,6 +1771,48 @@
      "year": 1979,
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/76/e1/c676e178-0304-3e9a-a555-918230b4b86a/mzaf_13881814480050126046.plus.aac.p.m4a",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6d/48/fd/6d48fdae-76f8-cb9b-62c6-51606741c7d5/607618001063.png/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "ritmebox",
+   "name": "Ritmebox",
+   "lane": "elektronisch",
+   "year": 1959,
+   "place": {
+    "name": "Cincinnati, Ohio",
+    "lat": 39.1031,
+    "lon": -84.512
+   },
+   "who": "Wurlitzer (Side Man); later Maestro (Rhythm King)",
+   "text": "In 1959 bracht orgelfabrikant Wurlitzer de Side Man uit, een kast met een draaiende schijf die elektronische drumklanken aanstuurde in het ritme van een wals, rumba of foxtrot. Hij was bedoeld voor organisten in bars en restaurants, die zo geen drummer hoefden te betalen. Later kregen elektronische orgels zulke ritmes ingebouwd. In 1971 maakte Sly Stone van een Maestro Rhythm King de basis van zijn plaat There's a Riot Goin' On. Het stijve, droge ritme klonk opeens moe en dreigend. Timmy Thomas zette een orgel met ingebouwde ritmes op bossanova, en Shuggie Otis jamde urenlang mee met zijn eigen ritmebox.",
+   "enabled": [
+    "funk",
+    "soul"
+   ],
+   "after": [],
+   "listen": "Het ritme komt uit een machine: klinkt het als een drummer, of hoor je juist het mechanische ervan?",
+   "tracks": [
+    {
+     "title": "Family Affair",
+     "artist": "Sly & The Family Stone",
+     "year": 1971,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6b/af/28/6baf2844-11fd-b09e-19e4-88c409da3994/mzaf_5822370202417577768.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e1/54/d7/e154d7bf-7eb9-b674-1a97-cfe192952b5b/886445314007.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Why Can't We Live Together",
+     "artist": "Timmy Thomas",
+     "year": 1972,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/61/4a/96/614a96bd-48fb-d8e3-58ad-8e3ccaae2c3b/mzaf_13518720956112356638.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2005/m09/d07/h16/mzi.wlzuaojg.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Inspiration Information",
+     "artist": "Shuggie Otis",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music7/v4/e1/04/89/e10489e0-f59b-4124-653c-1b2f80a4e05a/mzaf_7422725779077782799.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/29/fd/60/29fd6080-072b-b9ea-e1f8-5fdd7a538c17/00724385047350.jpg/600x600bb.jpg"
     }
    ]
   },
@@ -1573,6 +2004,142 @@
    ]
   },
   {
+   "id": "prophet-5",
+   "name": "Sequential Prophet-5",
+   "lane": "elektronisch",
+   "year": 1978,
+   "place": {
+    "name": "San Jose, Californië",
+    "lat": 37.3382,
+    "lon": -121.8863
+   },
+   "who": "Dave Smith en John Bowen (Sequential Circuits)",
+   "text": "De Minimoog kon maar één toon tegelijk spelen. Dave Smith en John Bowen van Sequential Circuits in San Jose bouwden een synthesizer die vijf tonen tegelijk speelt, dus ook akkoorden. Dat heet polyfoon. Nieuw was vooral het geheugen: een kleine computer onthield alle instellingen van een klank, zodat je met één druk op de knop van klank wisselde, ook op het podium. Smith liet de Prophet-5 in januari 1978 zien op de NAMM-beurs in Californië. Hij werd een geluid van new wave en synthpop, van The Cars en Japan tot Talking Heads, en later van Michael Jackson en Madonna.",
+   "enabled": [
+    "new-wave",
+    "synthpop",
+    "new-romantic"
+   ],
+   "after": [
+    "minimoog"
+   ],
+   "listen": "Luister naar de toetsen: speelt de synthesizer losse melodieën of volle akkoorden, en hoe verandert de klank?",
+   "tracks": [
+    {
+     "title": "Let's Go",
+     "artist": "The Cars",
+     "year": 1979,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/04/83/15/04831511-8341-4684-6b80-d496362b0d31/mzaf_1461068100933852947.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e0/25/6a/e0256a45-7361-261c-6af2-ca712d68ae1b/603497879090.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Ghosts",
+     "artist": "Japan",
+     "year": 1981,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6c/26/19/6c2619b1-aaaa-a3cf-9450-b5707bc2568f/mzaf_3815084362484888570.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/4c/ef/58/4cef5804-81e8-7a53-4104-fa970a4f4e26/05099924298551.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "This Must Be the Place (Naive Melody)",
+     "artist": "Talking Heads",
+     "year": 1983,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/22/ff/c1/22ffc1bc-5503-b2a3-85f7-ca8f5668c808/mzaf_14010734033508734679.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/23/8a/83/238a8346-7a18-a507-ccb7-a86cbaee9d7c/mzi.orgozngz.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "walkman",
+   "name": "Sony Walkman",
+   "lane": "verspreiden",
+   "year": 1979,
+   "place": {
+    "name": "Tokio",
+    "lat": 35.6762,
+    "lon": 139.6503
+   },
+   "who": "Sony (Nobutoshi Kihara, Kozo Ohsone; idee van Masaru Ibuka en Akio Morita)",
+   "text": "Sony-oprichter Masaru Ibuka wilde op lange vliegreizen naar muziek luisteren. Technici in Tokio bouwden daarvoor een kleine cassettespeler zonder luidspreker en zonder opnameknop, met een lichte koptelefoon. Op 1 juli 1979 lag de Walkman in Japan in de winkel. Binnen Sony twijfelden velen: wie wil er een cassettespeler die niet kan opnemen? Hij werd een wereldsucces. Muziek werd iets persoonlijks, een soundtrack bij je eigen wandeling of busrit. De stad werd het decor van je muziek. Jongeren draaiden er hun zelfgemaakte cassettes op, vol new wave, postpunk en synthpop.",
+   "enabled": [
+    "new-wave",
+    "postpunk",
+    "synthpop"
+   ],
+   "after": [
+    "cassette"
+   ],
+   "listen": "Stel je voor dat je dit hoort op een koptelefoon terwijl je door de stad loopt: wat doet de muziek met wat je ziet?",
+   "tracks": [
+    {
+     "title": "Once in a Lifetime",
+     "artist": "Talking Heads",
+     "year": 1980,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e0/31/66/e0316603-d04b-6d7f-06a4-322b16e2cb3d/mzaf_8848157553075282502.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/87/5f/5b/mzi.zzquknhm.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "A Forest",
+     "artist": "The Cure",
+     "year": 1980,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f8/c8/01/f8c8018f-f751-1d2c-4155-90f2fc82f027/mzaf_14546259290398234287.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/64/dc/dc/64dcdcb2-bab8-629e-3087-6e216f2a1dfa/00042282535429.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Just Can't Get Enough",
+     "artist": "Depeche Mode",
+     "year": 1981,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/df/01/a6/df01a693-b844-6575-c41f-4410397c51b6/mzaf_16786502216973236959.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/19/b8/13/19b81309-d81c-66f7-25b5-ecf545bc2db7/0094635797954.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "portastudio",
+   "name": "TASCAM Portastudio",
+   "lane": "opnemen",
+   "year": 1979,
+   "place": {
+    "name": "Musashino, Tokio",
+    "lat": 35.7022,
+    "lon": 139.5606
+   },
+   "who": "TEAC (merknaam TASCAM)",
+   "text": "Een studio met meerdere sporen was in de jaren zeventig duur en groot. In september 1979 liet TEAC onder de merknaam TASCAM de 144 Portastudio zien: een mengtafel en een recorder voor gewone cassettes in één kastje. Je kon vier sporen apart opnemen en over elkaar leggen, voor 899 dollar. Muzikanten maakten voortaan thuis hun demo's. Op 3 januari 1982 nam Bruce Springsteen in zijn slaapkamer in Colts Neck liedjes op een Portastudio op. Die opnames verschenen bijna onbewerkt als de plaat Nebraska. In de jaren negentig maakten Guided by Voices en Elliott Smith hele platen op vierspoorsrecorders. Dat ruwe thuisgeluid heet lo-fi.",
+   "enabled": [
+    "indie-shoegaze",
+    "singer-songwriter",
+    "heartland-rock"
+   ],
+   "after": [
+    "cassette",
+    "meersporen"
+   ],
+   "listen": "Hoor je de ruis en de kamer? Wat voegt dat thuisgeluid toe aan het liedje?",
+   "tracks": [
+    {
+     "title": "Atlantic City",
+     "artist": "Bruce Springsteen",
+     "year": 1982,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2f/78/ac/2f78ac29-cfc8-dadd-f372-eb0633ee9e76/mzaf_11255967961861789634.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/76/2d/e5/762de50e-0967-4d24-c4da-752164312cd2/074643835824.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Echos Myron",
+     "artist": "Guided by Voices",
+     "year": 1994,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bd/f4/67/bdf46718-367b-a8cf-9bde-7340f5290f89/mzaf_5728924967594590509.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/30/64/8c/30648c51-8175-bd35-06df-2f93614c24ba/mzi.yujsojxq.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Roman Candle",
+     "artist": "Elliott Smith",
+     "year": 1994,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1d/a2/b4/1da2b4b2-ecf3-42f5-a48a-ab8c6bb26a9f/mzaf_4576695974111328262.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/92/a9/02/92a90294-c928-56a4-1061-eeee49f399f8/00602547529459.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": "linndrum",
    "name": "Linn LM-1",
    "lane": "elektronisch",
@@ -1612,6 +2179,51 @@
      "year": 1984,
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0f/d3/ae/0fd3ae2b-542d-170e-f148-f4d08949a006/mzaf_2606432863197016679.plus.aac.p.m4a",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/00/17/f2/0017f24f-e580-b77a-71a8-1bc7b75881bf/603497822065.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gated-reverb",
+   "name": "Gated reverb",
+   "lane": "opnemen",
+   "year": 1980,
+   "place": {
+    "name": "Townhouse Studios, Londen",
+    "lat": 51.504,
+    "lon": -0.2245
+   },
+   "who": "Hugh Padgham, Steve Lillywhite, Phil Collins en Peter Gabriel",
+   "text": "Gated reverb betekent galm met een poort. In 1979 nam Peter Gabriel in de Townhouse Studios in Londen zijn derde soloplaat op, met Phil Collins op drums. De nieuwe mengtafel had een microfoon in de opnameruimte om met de musici te praten. Die maakte zachte geluiden even hard als harde, en blies zo elke slag en de galm van de kamer op. Technicus Hugh Padgham zette er een poort op die het geluid abrupt afkapt. Zo klonk elke slag enorm, met daarna plotseling stilte. Gabriel bouwde Intruder rond dat geluid, en Collins gebruikte het in In the Air Tonight. Het werd de drumklank van de jaren tachtig.",
+   "enabled": [
+    "art-rock",
+    "softrock-aor",
+    "new-wave"
+   ],
+   "after": [
+    "plaatgalm"
+   ],
+   "listen": "Luister naar de drums: hoe groot klinkt een slag, en hoe snel is de galm daarna weg?",
+   "tracks": [
+    {
+     "title": "Intruder",
+     "artist": "Peter Gabriel",
+     "year": 1980,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ae/6d/aa/ae6daa9b-74ff-4250-56d5-3a468cd3cb1b/mzaf_14911268581808941368.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music5/v4/65/f2/34/65f23453-a2be-dd86-a10b-2ac1dd6f4f40/884108003459.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "In the Air Tonight",
+     "artist": "Phil Collins",
+     "year": 1981,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/05/3b/80/053b8034-f220-2952-6220-8f4117d6e126/mzaf_9473828645058223239.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d2/d8/d6/d2d8d6ad-85d4-7024-9726-e1f312beb522/603497889754.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Mama",
+     "artist": "Genesis",
+     "year": 1983,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/39/57/d3/3957d37b-ebaf-e1ca-1908-56cec81425e9/mzaf_10560114467946624507.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/8b/7b/ce/8b7bcee5-4c31-aab1-7a65-82e757057e83/mzi.ykiyfzna.jpg/600x600bb.jpg"
     }
    ]
   },
@@ -1790,11 +2402,11 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/76/41/b9/7641b9cb-650e-8c9c-bad8-7196f8193a7d/25UMGIM39996.rgb.jpg/600x600bb.jpg"
     },
     {
-     "title": "La Sagrada Familia",
+     "title": "Standing on Higher Ground",
      "artist": "The Alan Parsons Project",
      "year": 1987,
-     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/da/2c/29/da2c2989-7e33-0655-3ad7-bafc5e29e4d7/mzaf_17684236241618007265.plus.aac.p.m4a",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/07/72/b7/0772b789-b6de-ef0d-ab63-71c5ab687d23/dj.nyhpxnta.jpg/600x600bb.jpg"
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/4a/7c/2e4a7cc3-3323-8c9b-e73c-b1f72e77de81/mzaf_2485137466213502745.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features/a7/0d/74/dj.qlunepev.jpg/600x600bb.jpg"
     }
    ]
   },
@@ -2077,6 +2689,97 @@
      "year": 2010,
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/48/1d/f2/481df22a-e26c-8d82-df42-b245415f0e52/mzaf_17921545611228568896.plus.aac.p.m4a",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/ac/7f/06/mzi.cmuaapze.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "fl-studio",
+   "name": "FL Studio (FruityLoops)",
+   "lane": "opnemen",
+   "year": 1998,
+   "place": {
+    "name": "Gent",
+    "lat": 51.0543,
+    "lon": 3.7174
+   },
+   "who": "Didier Dambrin (Image-Line)",
+   "text": "Bij het Gentse softwarebedrijf Image-Line schreef de negentienjarige Didier Dambrin een eenvoudig programma om drumritmes te maken. Begin 1998 kwam FruityLoops uit: een raster van vakjes waarin je met de muis aanklikt waar een slag moet vallen. Het groeide uit tot een complete studio en heet sinds 2003 FL Studio. Er bestond een gratis proefversie, en een generatie slaapkamerproducers leerde er beats mee maken. Soulja Boy maakte Crank That met die proefversie, de Nederlander Martin Garrix werkte erin aan Animals, en YoungKio bouwde er de beat van Old Town Road mee, die hij voor een paar tientjes online verkocht.",
+   "enabled": [
+    "trap",
+    "southern-hiphop",
+    "edm",
+    "tiktok-pop"
+   ],
+   "after": [
+    "daw"
+   ],
+   "listen": "Deze beats zijn op een computer thuis gemaakt: hoor je het patroon dat steeds opnieuw wordt herhaald?",
+   "tracks": [
+    {
+     "title": "Crank That (Soulja Boy)",
+     "artist": "Soulja Boy Tell 'Em",
+     "year": 2007,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/da/0b/f6/da0bf61b-ee3d-8ec0-e03e-ae2dce8f7aee/mzaf_10463055398875004834.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ec/4e/2f/ec4e2f2a-d74c-8d6d-3ec1-b8fe83eb8053/07UMGIM13400.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Animals",
+     "artist": "Martin Garrix",
+     "year": 2013,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8f/ca/53/8fca53bf-328f-4006-fb9c-eef2feee7790/mzaf_17242236602085711440.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6e/1e/f0/6e1ef055-195a-bb73-d5a8-5926058366a5/8712944577525.png/600x600bb.jpg"
+    },
+    {
+     "title": "Old Town Road",
+     "artist": "Lil Nas X",
+     "year": 2018,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/47/7d/fd/477dfdf3-9261-cb11-d14f-b7eb454d2c5d/mzaf_4800633009593423692.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/71/3f/d3/713fd3d1-7ffc-ba46-73bf-aa577309ca52/886447622827.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "ableton",
+   "name": "Ableton Live",
+   "lane": "opnemen",
+   "year": 2001,
+   "place": {
+    "name": "Berlijn",
+    "lat": 52.52,
+    "lon": 13.405
+   },
+   "who": "Gerhard Behles, Robert Henke en Bernd Roggendorf",
+   "text": "Gerhard Behles en Robert Henke maakten in Berlijn techno als Monolake. Ze schreven hun eigen software om met een computer live op te treden. Samen met Bernd Roggendorf werkten ze dat idee uit tot Ableton Live, dat in 2001 uitkwam. Andere programma's waren gemaakt voor de studio, Live vooral voor het podium. Je start losse stukjes muziek, loops, en ze lopen altijd in de maat. Het programma rekt opnames ook uit of drukt ze in tot ze in het tempo passen. Dj's en producers gingen er zowel mee optreden als componeren. Skrillex maakte zijn ep Bangarang in 2011 grotendeels op tournee, met Live op een laptop.",
+   "enabled": [
+    "edm",
+    "berlin-techno",
+    "dubstep"
+   ],
+   "after": [
+    "daw"
+   ],
+   "listen": "Luister naar de herhaalde stukjes: hoe worden losse loops op elkaar gestapeld en weer weggehaald?",
+   "tracks": [
+    {
+     "title": "Infinite Snow",
+     "artist": "Monolake",
+     "year": 2009,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ae/48/6e/ae486e70-0789-9a7f-2ced-6a1319e1e90d/mzaf_10733362981122924140.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/8d/43/c9/mzi.sipfnpbb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Summit (feat. Ellie Goulding)",
+     "artist": "Skrillex",
+     "year": 2011,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f4/a3/8d/f4a38d3d-f3f1-0504-dd73-d665a8f2933f/mzaf_15108657986362265102.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b4/c3/e8/b4c3e867-a787-7662-d8a4-45b3a30deb54/mzi.dsikpckg.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Never Be Like You (feat. Kai)",
+     "artist": "Flume",
+     "year": 2016,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e5/9f/69/e59f69e0-1d9f-74a1-7a7b-1e91e29436c9/mzaf_14407953723361349533.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/e1/5a/19/e15a1903-5ce5-924b-836b-67d86502cdf8/0653738049928_cover.jpg/600x600bb.jpg"
     }
    ]
   },
