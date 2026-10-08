@@ -66,7 +66,7 @@
       if (matchMedia('(hover: hover)').matches) {
         const go = document.createElement('button'); go.type = 'button'; go.className = 'ra-go'; go.setAttribute('aria-label', 'Luisterboek vanaf deze alinea'); go.title = 'Luister vanaf hier'; go.innerHTML = SOR.playIcon;
         document.body.appendChild(go); let target = -1;
-        ps.forEach((p, i) => p.addEventListener('mouseenter', () => { const r = p.getBoundingClientRect(); target = i; go.style.left = (r.left + scrollX - 30) + 'px'; go.style.top = (r.top + scrollY + 1) + 'px'; go.style.opacity = '.55'; }));
+        ps.forEach((p, i) => p.addEventListener('mouseenter', () => { const r = p.getBoundingClientRect(); target = i; go.style.left = (r.left + scrollX - 46) + 'px'; go.style.top = (r.top + scrollY + 1) + 'px'; go.style.opacity = '.55'; }));
         ps.forEach(p => p.addEventListener('mouseleave', e => { if (e.relatedTarget !== go) go.style.opacity = '0'; }));
         go.addEventListener('mouseleave', () => { go.style.opacity = '0'; });
         go.addEventListener('click', () => { if (target >= 0 && times[target] != null) SOR.playBook(N, Math.max(0, times[target] + 3), SET); });
