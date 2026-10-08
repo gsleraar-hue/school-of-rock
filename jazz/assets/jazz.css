@@ -21,3 +21,6 @@ body .sor-play { background: #B5642C; }
 /* lichte familiekleur in de kop van het paneel: donkere tekst, anders is het onleesbaar */
 .kp-head.light h2, .kp-head.light .meta, .kp-head.light .fam { color: #1C1B19 !important; }
 .kp-head.light .kp-close { background: rgba(0,0,0,.18); color: #1C1B19; }
+/* familieknoppen: schuiven kan, maar zonder zichtbare scrollbalk (zoals op de andere kaarten) */
+.k-fams { scrollbar-width: none; }
+.k-fams::-webkit-scrollbar { display: none; }
