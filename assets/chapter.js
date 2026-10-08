@@ -48,7 +48,7 @@
   function meelezen(row) {
     const path = (SET === 'film' ? 'film/data/sync/' : 'data/sync/') + String(N).padStart(2, '0') + '.json';
     SOR.load(path).then(sync => {
-      const ps = paragraphs(), times = sync.p || [];
+      const ps = paragraphs(), times = sync.p || [], ends = sync.e || [];
       if (!times.length || Math.abs(times.length - ps.length) > 2) return; // tekst en tijden horen bij elkaar
       const store = { get() { try { return localStorage.getItem('sor-meelezen') === '1'; } catch (e) { return false; } }, set(v) { try { localStorage.setItem('sor-meelezen', v ? '1' : '0'); } catch (e) {} } };
       const lab = document.createElement('label'); lab.className = 'sor-sync';
@@ -81,18 +81,22 @@
         const t = SOR.media.currentTime; let i = -1;
         for (let k = 0; k < times.length; k++) { if (times[k] <= t + 0.5) i = k; else break; }
         const p = ps[i] || null;
-        // hoe ver het voorlezen in de alinea is: het lijntje groeit mee
-        if (p) { const end = times[i + 1] != null ? times[i + 1] : (SOR.media.duration || t + 60); p.style.setProperty('--ra', Math.min(1, Math.max(0.04, (t - times[i]) / Math.max(1, end - times[i]))).toFixed(3)); }
-        if (p === cur && !jumped) return;
+        // hoe ver het voorlezen in de alinea is: het lijntje groeit mee tot het einde van de alinea
+        // en blijft daarna staan (tijdens een voorgelezen luistertip of muziek)
+        let ra = 0;
+        if (p) { const end = ends[i] != null ? ends[i] : times[i + 1] != null ? times[i + 1] : (SOR.media.duration || t + 60); ra = Math.min(1, Math.max(0.04, (t - times[i]) / Math.max(1, end - times[i]))); p.style.setProperty('--ra', ra.toFixed(3)); }
         if (cur && cur !== p) { cur.classList.remove('ra-now'); cur.style.removeProperty('--ra'); }
         cur = p; if (!p) { jumped = false; return; }
         p.classList.add('ra-now');
-        const r = p.getBoundingClientRect(), out = r.top < 70 || r.top > innerHeight * 0.75;
-        if (out && (jumped || Date.now() - lastUser > 6000)) {
-          const far = Math.abs(r.top) > innerHeight * 2;
-          scrollTo({ top: scrollY + r.top - innerHeight * 0.3, behavior: far ? 'instant' : 'smooth' });
+        // het leespunt (waar het lijntje nu is) in beeld houden. Alleen vooruit meescrollen:
+        // nooit terug naar een eerdere alinea, behalve als je zelf in de player verspringt
+        const at = () => { const r = p.getBoundingClientRect(); return r.top + r.height * ra; };
+        const y = at(), below = y > innerHeight * 0.72, above = y < 70;
+        if (jumped ? (below || above) : (below && Date.now() - lastUser > 6000)) {
+          const far = Math.abs(y - innerHeight / 2) > innerHeight * 2;
+          scrollTo({ top: scrollY + y - innerHeight * 0.35, behavior: far ? 'instant' : 'smooth' });
           // foto's die net laden verschuiven de pagina: na een grote sprong nog één keer bijstellen
-          if (far) setTimeout(() => { const q = p.getBoundingClientRect(); if (q.top < 70 || q.top > innerHeight * 0.75) scrollTo({ top: scrollY + q.top - innerHeight * 0.3, behavior: 'instant' }); }, 900);
+          if (far) setTimeout(() => { const q = at(); if (q < 70 || q > innerHeight * 0.72) scrollTo({ top: scrollY + q - innerHeight * 0.35, behavior: 'instant' }); }, 900);
         }
         jumped = false;
       };
