@@ -503,6 +503,13 @@
     syncButtons();
   }
   let panelTracks = [];
+  function contrast() {
+    const h = panel.querySelector('.kp-head'); if (!h) return;
+    const m = (h.style.getPropertyValue('--c') || '').trim().match(/^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})/i); if (!m) return;
+    const [r, g, b] = m.slice(1).map(x => parseInt(x, 16) / 255);
+    h.classList.toggle('light', .2126 * r + .7152 * g + .0722 * b > .6);
+  }
+  new MutationObserver(contrast).observe(panel, { childList: true });
   const bandChip = b => `<button class="kp-chip" type="button" data-band="${b.id}" style="--c:${famById.get(b.family)?.color}"><i></i>${b.name} <small>${b.years[0]}${b.years[1] && b.years[1] !== b.years[0] ? '–' + b.years[1] : ''}</small></button>`;
   function renderBandPanel(b) {
     const f = famById.get(b.family), lead = byId.get(b.leader);
