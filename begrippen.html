@@ -129,7 +129,7 @@
 <div class="term" data-k="varispeed"><dt>Varispeed</dt><dd>Een band sneller of langzamer afspelen, waardoor tempo én toonhoogte veranderen</dd><a class="src" href="mixtape/03.html">Mixtape 3</a></div>
 <div class="term" data-k="vocoder"><dt>Vocoder</dt><dd>Apparaat dat de klankkleur van een stem op een synthesizer legt</dd><a class="src" href="mixtape/08.html">Mixtape 8</a></div>
 <div class="term" data-k="wall of sound"><dt>Wall of Sound</dt><dd>Productiestijl van Phil Spector, met verdubbelde instrumenten en galm</dd><a class="src" href="mixtape/12.html">Mixtape 12</a></div></dl>
-</main><footer class="sitefoot"><div class="wrap"><p>School of Rock · De geschiedenis van popmuziek in mixtapes · Jan-Wolter Smit · ArtEZ University of the Arts</p><p><a href="./pdf/school-of-rock-reader.pdf">Download de reader (pdf)</a></p></div></footer><script>
+</main><footer class="sitefoot"><div class="wrap"><p>School of Rock · De geschiedenis van popmuziek in mixtapes · Jan-Wolter Smit · ArtEZ University of the Arts</p><p><a href="./pdf/school-of-rock-reader.pdf">Download de reader (pdf)</a><!--seo--> · <a href="film/kaart.html">Filmmuziekkaart</a><!--/seo--></p></div></footer><script>
   const q = document.getElementById('q'), items = [...document.querySelectorAll('.term')], c = document.getElementById('count');
   const strip = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   function f() { const v = strip(q.value.trim()); let k = 0; items.forEach(i => { const hit = !v || strip(i.innerText).includes(v); i.hidden = !hit; if (hit) k++; }); c.textContent = k + ' begrippen'; }
