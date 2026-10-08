@@ -2011,6 +2011,118 @@
    ]
   },
   {
+   "id": "poolse-jazz",
+   "name": "Poolse jazz",
+   "family": "europa",
+   "year": 1956,
+   "peak": [
+    1956,
+    1980
+   ],
+   "place": {
+    "name": "Warschau",
+    "lat": 52.23,
+    "lon": 21.01
+   },
+   "parents": [
+    "bebop",
+    "cool",
+    "hard-bop",
+    "free-jazz"
+   ],
+   "films": [
+    "Astigmatic – Krzysztof Komeda Quintet (1965)",
+    "The Andrzej Trzaskowski Quintet – Polish Jazz, Vol. 4 (1965)",
+    "Winobranie – Zbigniew Namysłowski (1973)",
+    "Man of the Light – Zbigniew Seifert (1976)",
+    "January – Marcin Wasilewski Trio (2008)"
+   ],
+   "text": "In Polen gold jazz rond 1950 als verdachte Amerikaanse muziek. Musici speelden in kelders en bij mensen thuis, en luisterden 's nachts naar de jazzuitzendingen van Willis Conover op de Voice of America. Na de dood van Stalin ging de deur open. In augustus 1956 vond in Sopot het eerste Poolse jazzfestival plaats, en in 1958 begon in Warschau de Jazz Jamboree, een van de oudste jazzfestivals van Europa. Pianist Krzysztof Komeda zocht een eigen Europese klank, met Slavische melodieën, trage tempo's en veel ruimte. Vanaf 1965 verscheen bij het staatslabel Polskie Nagrania de plaatreeks Polish Jazz. Later werden trompettist Tomasz Stańko, saxofonist Zbigniew Namysłowski, violist Zbigniew Seifert en het duo Michał Urbaniak en Urszula Dudziak ook buiten Polen bekend. Het trio van pianist Marcin Wasilewski zet die lijn sinds de jaren negentig voort.",
+   "listen": "Luister naar de melodie: vaak weemoedig en zangerig, boven een jazzritme.",
+   "tracks": [
+    {
+     "film": "The Andrzej Trzaskowski Quintet (Polish Jazz, Vol. 4)",
+     "title": "Requiem dla Scotta LaFaro",
+     "artist": "Andrzej Trzaskowski Quintet",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5b/aa/6b/5baa6b15-48ae-bffa-d330-b620907ed12a/mzaf_11355639524211259556.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/c9/f0/25/c9f0255a-6c06-7f92-987f-740e9377fc7e/190296891229.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Man of the Light",
+     "title": "Man of the Light",
+     "artist": "Zbigniew Seifert",
+     "year": 1976,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/7b/96/2c/7b962cb0-018c-1b56-99ca-27af41b43e09/mzaf_12766467222952283912.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/1d/b6/ab/1db6abbe-ace4-d969-3960-c54fa9c14ffc/cover.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "January",
+     "title": "January",
+     "artist": "Marcin Wasilewski Trio",
+     "year": 2008,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3f/df/5b/3fdf5b73-c9cf-6082-08c8-9d5d73d19ae8/mzaf_8247402236121559222.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a3/74/13/a37413a7-9bd4-e249-6bb1-4a9ca429b965/00602517373457.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "japanse-jazz",
+   "name": "Japanse jazz",
+   "family": "wereld",
+   "year": 1953,
+   "peak": [
+    1965,
+    1985
+   ],
+   "place": {
+    "name": "Tokio",
+    "lat": 35.68,
+    "lon": 139.69
+   },
+   "parents": [
+    "bebop",
+    "hard-bop",
+    "bigband",
+    "free-jazz"
+   ],
+   "films": [
+    "Toshiko's Piano – Toshiko Akiyoshi (1953)",
+    "Poo-Sun – Masabumi Kikuchi (1970)",
+    "Misty – Tsuyoshi Yamamoto Trio (1974)",
+    "Scenery – Ryo Fukui (1976)",
+    "Another Mind – Hiromi (2003)"
+   ],
+   "text": "In Japan klonk jazz al in de jaren twintig, in de danszalen van Osaka en Kobe. Tijdens de Tweede Wereldoorlog gold het als muziek van de vijand. Na 1945 speelden Japanse musici in clubs voor de Amerikaanse bezettingssoldaten en leerden ze zo swing en bebop. Typisch Japans is de <strong>jazz kissa</strong>: een café waar je stil naar platen luistert op een goede geluidsinstallatie. Pianiste Toshiko Akiyoshi vertrok in 1956 naar Berklee in Boston; saxofonist Sadao Watanabe volgde in 1962 en bracht bij zijn terugkeer bossa nova en nieuwe theorie mee. In de jaren zeventig nam het label Three Blind Mice Japanse trio's op met veel zorg voor het geluid. Yosuke Yamashita speelde free jazz, Terumasa Hino later ook fusion. Na 2000 werd pianiste Hiromi over de hele wereld bekend.",
+   "listen": "Luister naar de pianotrio's: helder opgenomen, met veel aandacht voor elke toon.",
+   "tracks": [
+    {
+     "film": "Poo-Sun",
+     "title": "Dancing Mist",
+     "artist": "Masabumi Kikuchi",
+     "year": 1970,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/4c/73/77/4c737718-a082-457c-79a8-ef073573b745/mzaf_5422078880279999654.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/a4/20/a1/a420a119-1267-f016-7296-fafd9acd5883/00600406643179.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Misty",
+     "title": "Misty",
+     "artist": "Tsuyoshi Yamamoto Trio",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7e/e2/1e/7ee21e72-194d-5d1c-dcea-1dfb82d3dde2/mzaf_6467300423372170348.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/92/40/87/924087a9-b280-d938-ec3e-d67c4933eeea/4547366831177.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Scenery",
+     "title": "Early Summer",
+     "artist": "Ryo Fukui",
+     "year": 1976,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/88/9f/10/889f1086-a155-221d-9046-1deb6bdc078d/mzaf_11407878353487004294.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/13/07/89/1307897d-b463-5a49-0af9-d8d895259c84/D000000002855.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": "pianotrio",
    "name": "Het nieuwe pianotrio",
    "family": "europa",
@@ -10083,6 +10195,582 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/04/ff/1a/04ff1abd-6039-742b-3c7b-a783b6a15ef1/075597914689.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "krzysztof-komeda",
+   "name": "Krzysztof Komeda",
+   "born": 1931,
+   "died": 1969,
+   "year": 1965,
+   "stroming": "poolse-jazz",
+   "alsoIn": [
+    "cool"
+   ],
+   "place": {
+    "name": "Poznań → Warschau",
+    "lat": 52.23,
+    "lon": 21.01
+   },
+   "influences": [],
+   "films": [
+    "Mes in het water (Nóż w wodzie) – filmmuziek (1962)",
+    "Astigmatic (1965)",
+    "Rosemary's Baby – filmmuziek (1968)"
+   ],
+   "text": "Krzysztof Komeda heette eigenlijk Krzysztof Trzciński en werd in 1931 in Poznań geboren. Hij was opgeleid als keel-, neus- en oorarts en gebruikte zijn artiestennaam om zijn jazzwerk gescheiden te houden van zijn baan. In 1956 speelde zijn sextet op het eerste jazzfestival in Sopot. Komeda zocht een Europese jazz met Slavische melodieën, trage tempo's en veel ruimte. Zijn album Astigmatic (1965), met Tomasz Stańko en Zbigniew Namysłowski, geldt als hoogtepunt van de Poolse jazz. Hij schreef de muziek voor films van Roman Polański, zoals Mes in het water (1962) en Rosemary's Baby (1968). Na een val in Los Angeles raakte hij in coma; hij stierf in 1969 in Warschau.",
+   "listen": "Luister naar de trage, sombere melodie en de ruimte tussen de tonen.",
+   "tracks": [
+    {
+     "film": "Live at the Jazz Jamboree Festival 1961–1967",
+     "title": "Ballad for Bernt (live, Jazz Jamboree)",
+     "artist": "Krzysztof Komeda",
+     "year": 1962,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/61/30/5e/61305e43-a98b-a5fb-7050-f2c7a3a5e40d/mzaf_3053042265969651437.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/32/3e/65/323e65f8-679f-fc84-8907-8948e62cbbc1/190296687709.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Astigmatic",
+     "title": "Astigmatic",
+     "artist": "Krzysztof Komeda Quintet",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ee/18/dc/ee18dcb9-3d6b-2a68-2a09-b050a582fbc9/mzaf_15385607777043989319.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/bf/dd/9e/bfdd9efd-f059-a60c-a0fd-458f83b702fb/190295936761.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Rosemary's Baby (filmmuziek)",
+     "title": "Lullaby from Rosemary's Baby",
+     "artist": "Krzysztof Komeda & Mia Farrow",
+     "year": 1968,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4a/2f/72/4a2f7275-e1a8-c94f-1c65-61b7fa8b5a02/mzaf_1408426894536788411.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b7/6f/3f/b76f3fe3-e695-136e-08b4-b0cd21df99c2/21UMGIM51545.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "tomasz-stanko",
+   "name": "Tomasz Stańko",
+   "born": 1942,
+   "died": 2018,
+   "year": 1975,
+   "stroming": "poolse-jazz",
+   "alsoIn": [
+    "free-jazz",
+    "ecm"
+   ],
+   "place": {
+    "name": "Rzeszów → Warschau",
+    "lat": 52.25,
+    "lon": 21.03
+   },
+   "influences": [
+    "ornette-coleman",
+    "miles-davis",
+    "krzysztof-komeda"
+   ],
+   "films": [
+    "Astigmatic – met Krzysztof Komeda (1965)",
+    "Balladyna (1976)",
+    "Litania – Music of Krzysztof Komeda (1997)",
+    "Soul of Things (2002)"
+   ],
+   "text": "Trompettist Tomasz Stańko werd in 1942 in Rzeszów geboren. In 1962 richtte hij met pianist Adam Makowicz de groep Jazz Darings op, geïnspireerd door de vrije jazz van Ornette Coleman. Van 1963 tot 1967 speelde hij in het kwintet van Krzysztof Komeda, onder meer op Astigmatic. Ook Miles Davis was een belangrijk voorbeeld. Voor ECM nam hij in 1975 Balladyna op, met bassist Dave Holland, en in 1997 Litania, een eerbetoon aan Komeda. Voor Soul of Things (opgenomen in 2001) koos hij het jonge trio van pianist Marcin Wasilewski. Zijn toon is donker en hees, met lange pauzes. Hij stierf in 2018 in Warschau.",
+   "listen": "Hoor de donkere, hese trompettoon en de stiltes tussen de frasen.",
+   "tracks": [
+    {
+     "film": "Balladyna",
+     "title": "Balladyna",
+     "artist": "Tomasz Stańko, Tomasz Szukalski, Dave Holland & Edward Vesala",
+     "year": 1976,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/45/93/64/459364b1-7a27-694b-02ca-987fc642ef29/mzaf_11433336467030727248.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e7/62/af/e762af62-cc25-3fc4-eacb-44f7220a634b/25UM1IM98147.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Litania – Music of Krzysztof Komeda",
+     "title": "Sleep Safe and Warm",
+     "artist": "Tomasz Stańko Septet",
+     "year": 1997,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/36/1a/d4/361ad4ed-5c09-b7b0-151c-96fe38dbb09e/mzaf_10246750188901729216.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/82/94/83/82948336-1035-6262-b9e7-a1967f587505/00602567870609.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Soul of Things",
+     "title": "Soul of Things, Var. 1",
+     "artist": "Tomasz Stańko Quartet",
+     "year": 2002,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b5/74/88/b574884f-e135-80ac-1894-6a9fe4bcc85a/mzaf_2927584441602028162.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/b3/52/6c/b3526c34-8f4e-8009-b86e-be798b4a8088/00044001637421.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "zbigniew-namyslowski",
+   "name": "Zbigniew Namysłowski",
+   "born": 1939,
+   "died": 2022,
+   "year": 1973,
+   "stroming": "poolse-jazz",
+   "alsoIn": [
+    "hard-bop"
+   ],
+   "place": {
+    "name": "Warschau",
+    "lat": 52.21,
+    "lon": 20.99
+   },
+   "influences": [],
+   "films": [
+    "Lola (1964)",
+    "Astigmatic – met Krzysztof Komeda (1965)",
+    "Winobranie (1973)",
+    "Kujaviak Goes Funky (1975)"
+   ],
+   "text": "Altsaxofonist Zbigniew Namysłowski werd in 1939 in Warschau geboren. Hij speelde eerst piano, cello en trombone voordat hij overstapte op de saxofoon. Met zijn kwartet nam hij in 1964 in Londen Lola op, voor Decca: een van de eerste Poolse jazzplaten die in het Westen verscheen. In 1965 speelde hij op Astigmatic van Krzysztof Komeda. Namysłowski verwerkte Poolse volksdansen in zijn muziek, zoals de oberek en de kujawiak, vaak in ongewone maatsoorten van vijf of zeven tellen. Dat hoor je op Winobranie (1973) en Kujaviak Goes Funky (1975). Hij bleef tot op hoge leeftijd optreden en stierf in 2022.",
+   "listen": "Tel mee: de maat heeft hier vaak geen vier tellen, maar vijf of zeven.",
+   "tracks": [
+    {
+     "film": "Lola",
+     "title": "Piękna Lola, kwiat północy",
+     "artist": "Zbigniew Namysłowski Modern Jazz Quartet",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0e/b0/8b/0eb08b3c-c1e0-9940-6917-66a1a9002af0/mzaf_15056358062909137079.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/09/49/c6/0949c62b-6e86-62ed-1a60-ad500e910b4c/25UMGIM64008.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Winobranie",
+     "title": "Winobranie / Jak nie ma szmalu to jest łaź",
+     "artist": "Zbigniew Namysłowski",
+     "year": 1973,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/13/6b/52/136b5254-679b-b88b-2788-f59504e84bed/mzaf_12642605535611919780.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/63/e2/ca/63e2ca33-8bf8-5dd3-b033-9f252ff931fe/190295731397.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Kujaviak Goes Funky",
+     "title": "Kujaviak Goes Funky",
+     "artist": "Zbigniew Namysłowski Quintet",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/54/79/4f/54794fef-27ac-5f25-990c-51ad5d6a9eff/mzaf_10498617801951019712.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/79/3d/34/793d3461-a65c-83ca-3b81-72126691a09b/190296891878.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "michal-urbaniak",
+   "name": "Michał Urbaniak",
+   "born": 1943,
+   "died": 2025,
+   "year": 1974,
+   "stroming": "poolse-jazz",
+   "alsoIn": [
+    "fusion"
+   ],
+   "place": {
+    "name": "Warschau → New York",
+    "lat": 40.73,
+    "lon": -73.99
+   },
+   "influences": [],
+   "films": [
+    "Paratyphus B (1973)",
+    "Fusion (1974)",
+    "Fusion III (1975)",
+    "Tutu – met Miles Davis (1986)",
+    "Urbanator (1993)"
+   ],
+   "text": "Michał Urbaniak werd in 1943 in Warschau geboren en speelde viool en saxofoon. In de jaren zestig speelde hij in Poolse jazzgroepen en begon hij een eigen band met zangeres Urszula Dudziak, met wie hij trouwde. In 1973 verhuisden ze naar New York. Daar maakte Urbaniak voor Columbia platen als Fusion (1974), waarin jazzrock en Poolse volksmelodieën samenkomen. Hij speelde elektrische viool, vaak met effecten. In 1986 speelde hij viool op Tutu van Miles Davis. Met zijn project Urbanator bracht hij begin jaren negentig jazz en hiphop samen. Hij stierf in december 2025.",
+   "listen": "Luister naar de elektrische viool die klinkt als een gitaar in een rockband.",
+   "tracks": [
+    {
+     "film": "Paratyphus B",
+     "title": "Paratyphus B",
+     "artist": "Michał Urbaniak",
+     "year": 1973,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/5a/db/ad/5adbad6d-297c-a110-bdaf-fe1fd00e7ef8/mzaf_17337543803424973652.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/e5/c8/cb/e5c8cbe9-ce47-e9a7-b472-3ebc75a829fb/cover.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Fusion",
+     "title": "Fusion",
+     "artist": "Michał Urbaniak",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/96/15/de/9615de6c-b6bd-9867-6a4b-faef52b49836/mzaf_7436065997915409429.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/00/ca/42/mzi.wgnjvwjb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Fusion III",
+     "title": "Chinatown (Part I)",
+     "artist": "Michał Urbaniak",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5a/ad/fb/5aadfbc0-7f99-d77b-c799-469d1ca741df/mzaf_16470606570689649316.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/9d/58/31/mzi.snvvbalu.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "urszula-dudziak",
+   "name": "Urszula Dudziak",
+   "born": 1943,
+   "died": null,
+   "year": 1975,
+   "stroming": "poolse-jazz",
+   "alsoIn": [
+    "vocal-jazz",
+    "fusion"
+   ],
+   "place": {
+    "name": "Straconka → New York",
+    "lat": 40.69,
+    "lon": -74.03
+   },
+   "influences": [],
+   "films": [
+    "New Faces in Polish Jazz – Jazz Jamboree '69 (1969)",
+    "Urszula Dudziak (1975)",
+    "Future Talk (1979)"
+   ],
+   "text": "Urszula Dudziak werd in 1943 geboren in Straconka, in het zuiden van Polen. Ze begon als zangeres van jazzstandards en zong vanaf de jaren zestig in de groep van violist Michał Urbaniak, met wie ze trouwde. Ze ontwikkelde een eigen stijl, vaak zonder woorden: ze gebruikt haar stem als instrument, met hoge uithalen, ritmische klanken en elektronische effecten als echo. In 1973 verhuisde ze met Urbaniak naar New York. Papaya (1975) werd haar bekendste nummer. Later zong ze met het orkest van Gil Evans en met het Vienna Art Orchestra. Ze is een van de bekendste jazzzangeressen van Polen.",
+   "listen": "Hoor hoe de stem geen tekst zingt, maar klinkt als een instrument met effecten.",
+   "tracks": [
+    {
+     "film": "New Faces in Polish Jazz (Jazz Jamboree '69)",
+     "title": "Misty (live)",
+     "artist": "Urszula Dudziak, Michał Urbaniak & Adam Makowicz",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/ff/ae/6c/ffae6c9d-4893-746b-0e20-e2f40cccde62/mzaf_5443179477014431623.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/a9/f0/72/a9f07241-602d-2293-7ad0-47ceb6c4daba/190296865565.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Urszula Dudziak",
+     "title": "Papaya",
+     "artist": "Urszula Dudziak",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/de/a3/30/dea330fb-5e8a-3236-82c9-b8dd9e580aa1/mzaf_17932117311226002389.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/11/73/e4/1173e4c5-3e8f-a628-2855-2db9fdc7404d/196873671055.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Future Talk",
+     "title": "Future Talk",
+     "artist": "Urszula Dudziak",
+     "year": 1979,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f8/a4/81/f8a481c8-696f-03e3-a7a5-538aa0e093c7/mzaf_13854240512066446620.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/03/5d/1a/mzi.msfywtjp.tif/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "leszek-mozdzer",
+   "name": "Leszek Możdżer",
+   "born": 1971,
+   "died": null,
+   "year": 2004,
+   "stroming": "poolse-jazz",
+   "alsoIn": [
+    "pianotrio"
+   ],
+   "place": {
+    "name": "Gdańsk",
+    "lat": 54.35,
+    "lon": 18.65
+   },
+   "influences": [
+    "krzysztof-komeda"
+   ],
+   "films": [
+    "Chopin – Impresje (1994)",
+    "Piano (2004)",
+    "The Time – met Lars Danielsson & Zohar Fresco (2005)",
+    "Komeda (2011)"
+   ],
+   "text": "Pianist Leszek Możdżer werd in 1971 in Gdańsk geboren en kreeg een klassieke opleiding aan de muziekacademie van zijn stad. Vanaf 1991 speelde hij in de groep Miłość, die in de jaren negentig ook met trompettist Lester Bowie optrad en opnam. Hij werd bekend met eigen bewerkingen van Chopin en met soloplaten als Piano (2004). Met de Zweedse bassist Lars Danielsson en de Israëlische percussionist Zohar Fresco nam hij in 2005 The Time op; als trio spelen ze sindsdien samen. Op het album Komeda (2011) speelt hij solo de muziek van Krzysztof Komeda. Zijn spel combineert klassieke techniek met jazzimprovisatie.",
+   "listen": "Luister naar de heldere, klassieke aanslag, terwijl de muziek vrij geïmproviseerd is.",
+   "tracks": [
+    {
+     "film": "Piano",
+     "title": "Exploris",
+     "artist": "Leszek Możdżer",
+     "year": 2004,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/8c/ea/44/8cea44a8-759a-1c14-49e0-e87afdef0c32/mzaf_11850741845357408338.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d3/fb/6d/d3fb6d68-3a45-c112-97d1-7be95b09a4f2/cover.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "The Time",
+     "title": "Asta",
+     "artist": "Leszek Możdżer, Lars Danielsson & Zohar Fresco",
+     "year": 2005,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/23/b8/42/23b8420b-4422-d0a9-bad0-4746b83e6511/mzaf_7404274936677897141.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d9/bf/ac/d9bfac5b-65a9-51f3-7af0-96c48afc67a4/cover.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Komeda",
+     "title": "Svantetic",
+     "artist": "Leszek Możdżer",
+     "year": 2011,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b2/4a/17/b24a172a-4a23-8861-e692-c549e5354392/mzaf_15394430032118426266.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9f/cb/16/9fcb166e-7a9d-8394-4f8a-2d417f39df9b/cover.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "toshiko-akiyoshi",
+   "name": "Toshiko Akiyoshi",
+   "born": 1929,
+   "died": null,
+   "year": 1974,
+   "stroming": "japanse-jazz",
+   "alsoIn": [
+    "bebop",
+    "bigband"
+   ],
+   "place": {
+    "name": "Liaoyang → Tokio → Los Angeles",
+    "lat": 34.07,
+    "lon": -118.3
+   },
+   "influences": [
+    "bud-powell"
+   ],
+   "films": [
+    "Toshiko's Piano (1953)",
+    "Toshiko Mariano Quartet (1960)",
+    "Kogun – Akiyoshi-Tabackin Big Band (1974)",
+    "Long Yellow Road – Akiyoshi-Tabackin Big Band (1975)"
+   ],
+   "text": "Toshiko Akiyoshi werd in 1929 in Mantsjoerije geboren, waar haar Japanse familie woonde. Na de oorlog keerde het gezin terug naar Japan. Ze speelde piano in dansclubs voor Amerikaanse soldaten en leerde de bebop van platen van Bud Powell. Toen pianist Oscar Peterson haar in Tokio hoorde, liet producer Norman Granz haar in 1953 een plaat opnemen. In 1956 ging ze als eerste Japanse studente naar Berklee in Boston. Met haar man, saxofonist Lew Tabackin, begon ze in 1973 in Los Angeles een bigband. Daarvoor schreef ze stukken met Japanse elementen, zoals Kogun (1974), waarin trommels en stemmen uit het nō-theater klinken.",
+   "listen": "Luister hoe Japanse trommels en stemmen samengaan met de klank van een Amerikaanse bigband.",
+   "tracks": [
+    {
+     "film": "Toshiko's Piano",
+     "title": "What Is This Thing Called Love?",
+     "artist": "Toshiko Akiyoshi",
+     "year": 1953,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/af/be/89/afbe892c-bde7-db8c-9e9b-b3bc8d55cb98/mzaf_14188262111375241203.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ca/37/17/ca3717db-032c-e33d-6246-e151ab09fc8e/BL00001067.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Toshiko Mariano Quartet",
+     "title": "Long Yellow Road",
+     "artist": "Toshiko Mariano Quartet",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6c/e7/60/6ce76012-d633-72c1-535d-dfa8da1af779/mzaf_13286122832432076449.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2f/11/17/2f111759-a3f6-b38a-df01-19bee31d7039/110814.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Kogun",
+     "title": "Kogun",
+     "artist": "Toshiko Akiyoshi–Lew Tabackin Big Band",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/98/c9/89/98c98925-706c-a30c-6bfc-32797fdb9340/mzaf_16225694727938601484.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b8/7b/f5/b87bf5c0-5927-d6bb-abf6-398f331ba72f/4547366717112.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "sadao-watanabe",
+   "name": "Sadao Watanabe",
+   "born": 1933,
+   "died": null,
+   "year": 1978,
+   "stroming": "japanse-jazz",
+   "alsoIn": [
+    "bebop",
+    "bossa-nova",
+    "fusion"
+   ],
+   "place": {
+    "name": "Utsunomiya → Tokio",
+    "lat": 35.7,
+    "lon": 139.72
+   },
+   "influences": [
+    "charlie-parker"
+   ],
+   "films": [
+    "Jazz & Bossa (1967)",
+    "Bossa Nova Concert (1967)",
+    "Dedicated to Charlie Parker (1969)",
+    "California Shower (1978)"
+   ],
+   "text": "Altsaxofonist Sadao Watanabe werd in 1933 in Utsunomiya geboren. In 1953 kwam hij in het Cozy Quartet van Toshiko Akiyoshi, dat hij overnam toen zij in 1956 naar Amerika vertrok. Charlie Parker was zijn grote voorbeeld; in 1969 droeg hij een liveplaat aan hem op. Van 1962 tot 1965 studeerde hij aan Berklee in Boston en speelde hij onder anderen met Chico Hamilton en Gary McFarland. Terug in Tokio bracht hij bossa nova en de theorie van Berklee mee en gaf hij les aan jonge musici. Eind jaren zeventig werd hij in Japan heel populair met fusionplaten als California Shower (1978).",
+   "listen": "Hoor de heldere altsaxofoon die soepel tussen bebop en bossa nova beweegt.",
+   "tracks": [
+    {
+     "film": "Bossa Nova Concert",
+     "title": "The Girl from Ipanema (live)",
+     "artist": "Sadao Watanabe",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8a/b9/ab/8ab9abde-a39b-8704-2a87-cbe1975f958c/mzaf_16622414527662001904.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ff/a2/85/ffa285de-80e8-066c-1dda-6ab6c039a6c2/COKM-46212.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Dedicated to Charlie Parker",
+     "title": "Parker's Mood (live)",
+     "artist": "Sadao Watanabe",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/aa/32/5b/aa325b9c-7728-fe72-6a30-66ed6036dfe2/mzaf_10922828478458111038.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/18/17/63/181763ba-c715-8cf2-dd30-371cd2ffd12b/COKM-46217.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "California Shower",
+     "title": "California Shower",
+     "artist": "Sadao Watanabe",
+     "year": 1978,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/3c/ab/78/3cab7865-f417-83a2-b82e-5571c8d51df0/mzaf_18013471486305802868.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3f/08/c7/3f08c77c-f5cc-fccd-b268-10d624d433f9/VICJ-77076.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "terumasa-hino",
+   "name": "Terumasa Hino",
+   "born": 1942,
+   "died": null,
+   "year": 1969,
+   "stroming": "japanse-jazz",
+   "alsoIn": [
+    "hard-bop",
+    "fusion"
+   ],
+   "place": {
+    "name": "Tokio → New York",
+    "lat": 40.75,
+    "lon": -73.98
+   },
+   "influences": [],
+   "films": [
+    "Hi-Nology (1969)",
+    "Hogiuta (1976)",
+    "City Connection (1979)"
+   ],
+   "text": "Trompettist Terumasa Hino werd in 1942 in Tokio geboren. Zijn vader was tapdanser en trompettist, en Hino begon als kind met tapdansen voordat hij trompet ging spelen. Als tiener speelde hij in clubs voor Amerikaanse soldaten. Eind jaren zestig werd hij in Japan bekend met zijn kwintet; Hi-Nology (1969) was zijn doorbraak. In 1975 verhuisde hij naar New York, waar hij speelde met onder anderen Gil Evans, Elvin Jones en Jackie McLean. Hij volgde de ontwikkelingen van zijn tijd, van hard bop en modale jazz tot fusion: City Connection (1979) werd een groot succes. Zijn broer Motohiko Hino was drummer.",
+   "listen": "Luister naar de felle trompet boven een strakke, elektrische groove.",
+   "tracks": [
+    {
+     "film": "Hi-Nology",
+     "title": "Hi-Nology (live)",
+     "artist": "Terumasa Hino",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b2/6d/9d/b26d9d7f-c19a-05b9-17d8-07d8fc330445/mzaf_9501012113232412182.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f5/89/ed/f589eda5-4ce9-bafb-fed7-b403ad845e55/COKM-46531.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Hogiuta",
+     "title": "Hohjoh",
+     "artist": "Terumasa Hino",
+     "year": 1976,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c4/e4/ad/c4e4adc5-2dea-a0a1-47d6-6d6ffaf3378f/mzaf_14404137613884240055.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/66/0b/4b/660b4b67-d044-a468-1f20-e9c1d8101511/00044007945926.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "City Connection",
+     "title": "City Connection",
+     "artist": "Terumasa Hino",
+     "year": 1979,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b1/a6/7b/b1a67ba9-3eb6-8836-10d6-af13b38d2e12/mzaf_6895615838874368161.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e0/94/05/e09405ae-cd63-081c-e518-6736a7c07078/VICJ-77014.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "yosuke-yamashita",
+   "name": "Yosuke Yamashita",
+   "born": 1942,
+   "died": null,
+   "year": 1974,
+   "stroming": "japanse-jazz",
+   "alsoIn": [
+    "free-jazz"
+   ],
+   "place": {
+    "name": "Tokio",
+    "lat": 35.66,
+    "lon": 139.7
+   },
+   "influences": [],
+   "films": [
+    "Jazz in Tokyo '69 (1969)",
+    "Clay – live in Moers (1974)",
+    "Chiasma – live in Heidelberg (1975)"
+   ],
+   "text": "Pianist Yosuke Yamashita werd in 1942 in Tokio geboren. In 1969 vormde hij een trio zonder bas dat free jazz speelde, met saxofonist Seiichi Nakamura en drummer Takeo Moriyama; begin jaren zeventig kwam altsaxofonist Akira Sakata erbij. Yamashita speelt met grote energie en hamert snelle, harde akkoorden, vaak vergeleken met het spel van Cecil Taylor. In 1974 maakte het trio zijn eerste Europese tournee en speelde het op het festival in het Duitse Moers; die opname verscheen als Clay. Chiasma werd in 1975 live opgenomen op de Jazztage in Heidelberg. Het trio bestond tot 1983. Later schreef Yamashita pianoconcerten, die hij speelde onder leiding van dirigent Yutaka Sado.",
+   "listen": "Hoor hoe de piano bijna als een slagwerkinstrument wordt bespeeld.",
+   "tracks": [
+    {
+     "film": "Jazz in Tokyo '69",
+     "title": "Mina's Second Theme (live)",
+     "artist": "Yosuke Yamashita Trio",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/85/54/71/85547128-36ec-4a0a-62be-b07682d4562b/mzaf_4165101575955517077.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2f/6f/0b/2f6f0be9-6b68-5a9d-43d5-29887fc9c245/COKM-45184.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Jazzfestival Ljubljana '74",
+     "title": "Gugan (live)",
+     "artist": "Yosuke Yamashita Trio",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music5/v4/07/7a/8c/077a8cf2-aa13-21d3-2897-f30772a0fe84/mzaf_8428173999636705037.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5c/20/15/5c2015e7-9192-fe93-4951-6278afd3a1f2/3850126062720.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Chiasma",
+     "title": "Chiasma (live)",
+     "artist": "Yosuke Yamashita Trio",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/3a/c6/90/3ac69021-3214-e01a-20f9-f5cbd29cba4d/mzaf_5882945882430320201.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/cb/0b/c5/cb0bc594-a70d-a09d-f37c-72af22bfb3ea/cover.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "hiromi",
+   "name": "Hiromi",
+   "born": 1979,
+   "died": null,
+   "year": 2003,
+   "stroming": "japanse-jazz",
+   "alsoIn": [
+    "fusion"
+   ],
+   "place": {
+    "name": "Hamamatsu → Boston",
+    "lat": 34.71,
+    "lon": 137.73
+   },
+   "influences": [
+    "chick-corea"
+   ],
+   "films": [
+    "Another Mind (2003)",
+    "Brain (2004)",
+    "Duet – met Chick Corea (2008)",
+    "Spark (2016)"
+   ],
+   "text": "Hiromi Uehara werd in 1979 in Hamamatsu geboren en kreeg als kind pianoles. Op haar zeventiende ontmoette ze in Tokio Chick Corea, die haar de volgende dag liet meespelen op zijn concert. Ze studeerde aan Berklee in Boston, waar pianist Ahmad Jamal haar opmerkte. Haar debuut Another Mind (2003) verscheen bij het label Telarc. Hiromi speelt met grote snelheid en mengt jazz met rock, klassieke muziek en elektronische klanken. Met Chick Corea maakte ze de duetplaat Duet (2008), en ze speelde in het trio van bassist Stanley Clarke. Vanaf 2011 werkte ze met bassist Anthony Jackson en drummer Simon Phillips in The Trio Project.",
+   "listen": "Luister naar de snelle loopjes en de plotselinge wisselingen van stijl.",
+   "tracks": [
+    {
+     "film": "Another Mind",
+     "title": "XYZ",
+     "artist": "Hiromi",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d4/69/a4/d469a4dc-48e3-45fe-1ca3-1cbfb4c47934/mzaf_15144199739478399740.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4d/bc/4e/4dbc4e7e-a715-74ff-e507-21813422a036/00888072051522.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Brain",
+     "title": "Kung-Fu World Champion",
+     "artist": "Hiromi",
+     "year": 2004,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/74/86/4b/74864b81-77c6-73fe-1e86-63ac3cc6164e/mzaf_8737927647934779263.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/8d/1e/f6/8d1ef646-62f9-551c-ec31-ab2ab02ac9ac/09UMGIM09454.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Spark",
+     "title": "Spark",
+     "artist": "Hiromi",
+     "year": 2016,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/43/e8/44/43e84411-8083-1e84-2aca-326cd9c6e4bd/mzaf_5298065928003308990.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/93/a7/49/93a749e5-6de9-1654-b5ae-fef95da653ae/00888072382497.rgb.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
@@ -10885,6 +11573,84 @@
    ],
    "members": [
     "femi-koleoso"
+   ]
+  },
+  {
+   "id": "komeda-astigmatic",
+   "name": "Krzysztof Komeda Quintet (Astigmatic)",
+   "leader": "krzysztof-komeda",
+   "years": [
+    1965,
+    1965
+   ],
+   "members": [
+    "krzysztof-komeda",
+    "tomasz-stanko",
+    "zbigniew-namyslowski"
+   ]
+  },
+  {
+   "id": "balladyna",
+   "name": "Tomasz Stańko Quartet (Balladyna)",
+   "leader": "tomasz-stanko",
+   "years": [
+    1975,
+    1975
+   ],
+   "members": [
+    "tomasz-stanko",
+    "dave-holland"
+   ]
+  },
+  {
+   "id": "urbaniak-dudziak",
+   "name": "Michał Urbaniak Group (met Urszula Dudziak)",
+   "leader": "michal-urbaniak",
+   "years": [
+    1969,
+    1975
+   ],
+   "members": [
+    "michal-urbaniak",
+    "urszula-dudziak"
+   ]
+  },
+  {
+   "id": "cozy-quartet",
+   "name": "Toshiko Akiyoshi Cozy Quartet",
+   "leader": "toshiko-akiyoshi",
+   "years": [
+    1953,
+    1956
+   ],
+   "members": [
+    "toshiko-akiyoshi",
+    "sadao-watanabe"
+   ]
+  },
+  {
+   "id": "akiyoshi-tabackin",
+   "name": "Toshiko Akiyoshi–Lew Tabackin Big Band",
+   "leader": "toshiko-akiyoshi",
+   "years": [
+    1973,
+    1982
+   ],
+   "members": [
+    "toshiko-akiyoshi"
+   ]
+  },
+  {
+   "id": "stanley-clarke-trio",
+   "name": "Stanley Clarke Trio (Jazz in the Garden)",
+   "leader": "stanley-clarke",
+   "years": [
+    2009,
+    2010
+   ],
+   "members": [
+    "stanley-clarke",
+    "hiromi"
    ]
   }
  ]
