@@ -1,11 +1,12 @@
-/* School of Rock · Genrekaart: stamboom en wereldkaart van dezelfde genres. */
+/* School of Rock · Genrekaart (met TECHNIEK-weergave): stamboom en wereldkaart van dezelfde genres. */
 (async function () {
   const SOR = window.SOR;
   const $ = s => document.querySelector(s);
-  const [data, mixtapes, order, world] = await Promise.all([
+  const [data, mixtapes, order, tech, world] = await Promise.all([
     SOR.load('data/genres.json'),
     SOR.load('data/mixtapes.json'),
     SOR.load('data/order.json').catch(() => ({})),
+    SOR.load('data/tech.json').catch(() => null),
     fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(r => r.json()).catch(() => null)
   ]);
 
@@ -49,6 +50,8 @@
   const gGrid = root.append('g');      // decennia
   const gLinks = root.append('g');
   const gPath = root.append('g');
+  const gTechLinks = root.append('g').attr('class', 'tech-links');
+  const gTech = root.append('g').attr('class', 'tech-items');
   const gNodes = root.append('g');
   const gCities = root.append('g').attr('class', 'cities');
   const gLaneNames = svg.append('g');  // vast aan de linkerkant
@@ -94,6 +97,28 @@
   const treeH = layoutTree();
   const treeW = tx(YMAX) + 160;
 
+  // ---------- TECHNIEK: uitvindingen in vier banen boven de stamboom ----------
+  const TL = tech ? tech.lanes : [], TI = tech ? tech.items.map(d => ({ ...d })) : [];
+  const tById = new Map(TI.map(d => [d.id, d]));
+  const tLaneById = new Map(TL.map(l => [l.id, l]));
+  const techFor = gid => TI.filter(d => (d.enabled || []).includes(gid));
+  let techLanes = [], techTop = 0;
+  (function layoutTech() {
+    const heights = TL.map(l => {
+      const rows = [];
+      TI.filter(d => d.lane === l.id).sort((a, b) => a.year - b.year).forEach(d => {
+        const x = tx(d.year), w = 16 + d.name.length * 6.6;
+        let r = rows.findIndex(e => e < x - 8); if (r < 0) { r = rows.length; rows.push(0); } rows[r] = x + w; d.row = r;
+      });
+      return Math.max(1, rows.length) * ROW + LANE_PAD * 2;
+    });
+    const total = heights.reduce((a, b) => a + b, 0) + 24;
+    let y = 40 - total; techTop = y;
+    techLanes = TL.map((l, i) => { const lane = { f: { name: l.name, color: l.color }, y, h: heights[i], alt: i % 2 === 1, tech: true }; TI.filter(d => d.lane === l.id).forEach(d => { d.pos = { x: tx(d.year), y: y + LANE_PAD + d.row * ROW + ROW / 2 }; }); y += heights[i]; return lane; });
+  })();
+  const techLinks = TI.flatMap(d => (d.enabled || []).filter(id => byId.has(id)).map(id => ({ s: d, g: byId.get(id) })));
+  const techAfter = TI.flatMap(d => (d.after || []).filter(id => tById.has(id)).map(id => ({ s: tById.get(id), t: d })));
+
   // ---------- Wereld ----------
   let projection = null, countries = null;
   function layoutWorld() {
@@ -117,12 +142,65 @@
   });
   const linkSel = gLinks.selectAll('path.link').data(links).join('path').attr('class', 'link').attr('stroke', d => famById.get(d.target.family)?.color || '#888');
 
+  const techCss = document.createElement('style');
+  techCss.textContent = '.tech-links,.tech-items{display:none}.techmode .tech-links,.techmode .tech-items{display:inline}' +
+    '.titem{cursor:pointer}.titem rect{stroke:#121110;stroke-width:1.5}.titem text{font:12px Inter,sans-serif;fill:#EDE9E1;paint-order:stroke;stroke:#121110;stroke-width:3px}' +
+    '.titem.sel rect{stroke:#fff;stroke-width:2.5}.dim .titem:not(.hl){opacity:.18}' +
+    '.tlink{fill:none;stroke-width:1.2;stroke-opacity:0;stroke-dasharray:4 3}.tlink.hl{stroke-opacity:.9;stroke-width:1.8}.tafter{fill:none;stroke:#8A857C;stroke-opacity:.35;stroke-width:1.2}.dim .tafter:not(.hl){stroke-opacity:.05}.tafter.hl{stroke:#F2D500;stroke-opacity:.9}' +
+    '.lane-bg.tech{fill:#0E0D0C}.lane-bg.tech.alt{fill:#131210}';
+  document.head.appendChild(techCss);
+  const tAfterSel = gTechLinks.selectAll('path.tafter').data(techAfter).join('path').attr('class', 'tafter');
+  const tLinkSel = gTechLinks.selectAll('path.tlink').data(techLinks).join('path').attr('class', 'tlink').attr('stroke', l => tLaneById.get(l.s.lane)?.color || '#999');
+  const tSel = gTech.selectAll('g.titem').data(TI, d => d.id).join(enter => {
+    const n = enter.append('g').attr('class', 'titem').attr('tabindex', 0).attr('role', 'button').attr('aria-label', d => `${d.name}, ${d.year}`);
+    n.append('rect').attr('x', -6).attr('y', -6).attr('width', 12).attr('height', 12).attr('rx', 2).attr('transform', 'rotate(45)').attr('fill', d => tLaneById.get(d.lane)?.color || '#999');
+    n.append('text').attr('x', 12).attr('dy', '.35em').text(d => d.name);
+    return n;
+  });
+  tSel.on('click', (ev, d) => { ev.stopPropagation(); selectTech(d, false); }).on('keydown', (ev, d) => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); selectTech(d, false); } })
+    .on('mouseenter', (ev, d) => { if (!state.sel && !state.tsel && !state.path) highlightTech(d); })
+    .on('mouseleave', () => { if (!state.sel && !state.tsel && !state.path) highlight(null); });
+  function PT(d) { return { x: T.applyX(d.pos.x), y: T.applyY(d.pos.y) }; }
+  function techChain(d) { const s = new Set([d.id]); (function up(n) { (n.after || []).forEach(a => { if (tById.has(a) && !s.has(a)) { s.add(a); up(tById.get(a)); } }); })(d); TI.forEach(o => { if ((o.after || []).includes(d.id)) s.add(o.id); }); return s; }
+  function highlightTech(d) {
+    const ts = techChain(d), gs = new Set(d.enabled || []);
+    root.classed('dim', true);
+    tSel.classed('hl', o => ts.has(o.id)); tAfterSel.classed('hl', l => ts.has(l.s.id) && ts.has(l.t.id));
+    tLinkSel.classed('hl', l => l.s === d);
+    nodeSel.classed('hl', x => gs.has(x.id)); linkSel.classed('hl', false);
+    cullLabels();
+  }
+  function renderTechPanel(d) {
+    const lane = tLaneById.get(d.lane), tracks = (d.tracks || []).filter(x => x.audio);
+    const tchip = o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`;
+    const after = (d.after || []).map(id => tById.get(id)).filter(Boolean), next = TI.filter(o => (o.after || []).includes(d.id));
+    const gen = (d.enabled || []).map(id => byId.get(id)).filter(Boolean);
+    panel.innerHTML = `<div class="kp-head" style="--c:${lane?.color}"><button class="kp-close" type="button" aria-label="Sluit">×</button><div class="fam">Techniek · ${lane?.name || ''}</div><h2>${d.name}</h2><div class="meta">${d.year}${d.who ? ' · ' + d.who : ''}${d.place?.name ? ' · ' + d.place.name : ''}</div></div>
+      <div class="kp-body"><p>${d.text}</p>${d.listen ? `<p class="kp-listen">${d.listen}</p>` : ''}
+      ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((x, i) => `<div class="kp-track${x.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${x.artist}">${SOR.playIcon}</button>${x.cover ? `<img src="${x.cover}" alt="" loading="lazy">` : ''}<div><b>${x.artist}</b><span>${x.title}${x.year ? ' · ' + x.year : ''}</span></div></div>`).join('')}</div></div>` : ''}
+      ${gen.length ? `<div><p class="kp-h">Maakte mogelijk</p><div class="kp-links">${gen.map(chip).join('')}</div></div>` : ''}
+      ${after.length ? `<div><p class="kp-h">Bouwt voort op</p><div class="kp-links">${after.map(tchip).join('')}</div></div>` : ''}
+      ${next.length ? `<div><p class="kp-h">Leidde tot</p><div class="kp-links">${next.map(tchip).join('')}</div></div>` : ''}</div>`;
+    panel.hidden = false; panel.scrollTop = 0;
+    panel.querySelectorAll('.sor-play').forEach(b => b.addEventListener('click', () => { const x = tracks[+b.dataset.t]; SOR.play({ audio: x.audio, artist: x.artist, title: x.title, cover: x.cover, year: x.year }); }));
+  }
+  function selectTech(d, center) {
+    if (!d) return;
+    if (state.mode !== 'tech') setMode('tech');
+    if (state.path) { sel.value = ''; state.path = null; gPath.selectAll('*').remove(); }
+    state.sel = null; nodeSel.classed('sel', false);
+    state.tsel = d; tSel.classed('sel', o => o === d);
+    highlightTech(d); renderTechPanel(d); resizeStage();
+    if (center) setTimeout(() => { const k = Math.max(d3.zoomTransform(svg.node()).k, 1); svg.transition().duration(650).call(zoom.transform, d3.zoomIdentity.translate(W / 2 - d.pos.x * k, H / 2 - d.pos.y * k).scale(k)); }, 50);
+    history.replaceState(null, '', '#tech/' + d.id);
+  }
+
   nodeSel.on('click', (ev, d) => { ev.stopPropagation(); select(d, false); })
     .on('keydown', (ev, d) => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); select(d, false); } })
     .on('mouseenter', (ev, d) => { if (!state.sel && !state.path) highlight(d); })
     .on('mouseleave', () => { if (!state.sel && !state.path) highlight(null); });
 
-  function pos(d) { return state.mode === 'tree' ? d.tree : d.world; }
+  function pos(d) { return state.mode === 'world' ? d.world : d.tree; }
   function P(d) { const p = pos(d); return { x: T.applyX(p.x), y: T.applyY(p.y) }; }
   function linkPath(l) {
     const a = P(l.source), b = P(l.target);
@@ -136,14 +214,16 @@
   function drawBack() {
     gBack.selectAll('*').remove(); gGrid.selectAll('*').remove(); gLaneNames.selectAll('*').remove(); gCities.selectAll('*').remove();
     root.classed('world', state.mode === 'world');
-    if (state.mode === 'tree') {
-      gBack.selectAll('rect').data(lanes).join('rect').attr('class', d => 'lane-bg' + (d.alt ? ' alt' : '')).attr('x', -4000).attr('width', treeW + 8000).attr('y', d => d.y).attr('height', d => d.h);
+    root.classed('techmode', state.mode === 'tech');
+    if (state.mode === 'tree' || state.mode === 'tech') {
+      const LL = state.mode === 'tech' ? [...techLanes, ...lanes] : lanes;
+      gBack.selectAll('rect').data(LL).join('rect').attr('class', d => 'lane-bg' + (d.alt ? ' alt' : '') + (d.tech ? ' tech' : '')).attr('x', -4000).attr('width', treeW + 8000).attr('y', d => d.y).attr('height', d => d.h);
       const decades = d3.range(Math.ceil(YMIN / 10) * 10, YMAX, 10).filter(d => d >= SPLIT || d % 50 === 0);
       const dg = gGrid.selectAll('g').data(decades).join('g').attr('class', 'decade');
       dg.append('line');
       dg.append('text').attr('y', 16).text(d => d);
       updateGrid();
-      const ln = gLaneNames.selectAll('g').data(lanes).join('g');
+      const ln = gLaneNames.selectAll('g').data(LL).join('g');
       ln.append('rect').attr('class', 'bg').attr('x', 0).attr('width', 158).attr('fill', '#121110').attr('opacity', .92);
       ln.append('rect').attr('class', 'bar').attr('x', 0).attr('width', 5).attr('fill', d => d.f.color);
       ln.append('text').attr('class', 'lane-name').attr('x', 14).attr('y', d => d.y + 22).attr('fill', d => d.f.color).text(d => d.f.name);
@@ -158,7 +238,7 @@
     }
   }
   function stickLaneNames(t) {
-    if (state.mode !== 'tree') { gLaneNames.attr('display', 'none'); return; }
+    if (state.mode === 'world') { gLaneNames.attr('display', 'none'); return; }
     gLaneNames.attr('display', null);
     gLaneNames.selectAll('g').each(function (d) {
       const top = t.y + d.y * t.k, h = d.h * t.k, g = d3.select(this);
@@ -168,7 +248,7 @@
     });
   }
   function updateGrid() {
-    gGrid.selectAll('g.decade').each(function (d) { const x = T.applyX(tx(d)); const g = d3.select(this); g.select('line').attr('x1', x).attr('x2', x).attr('y1', Math.max(22, T.applyY(26))).attr('y2', T.applyY(treeH)); g.select('text').attr('x', x + 4); });
+    gGrid.selectAll('g.decade').each(function (d) { const x = T.applyX(tx(d)); const g = d3.select(this); g.select('line').attr('x1', x).attr('x2', x).attr('y1', Math.max(22, T.applyY(state.mode === 'tech' ? techTop : 26))).attr('y2', T.applyY(treeH)); g.select('text').attr('x', x + 4); });
   }
   function updateCities() {
     const placed = [];
@@ -184,6 +264,11 @@
     const t = animate ? d3.transition().duration(900).ease(d3.easeCubicInOut) : null;
     (t ? nodeSel.transition(t) : nodeSel).attr('transform', d => { const q = P(d); return `translate(${q.x},${q.y})`; });
     (t ? linkSel.transition(t) : linkSel).attr('d', linkPath);
+    if (state.mode === 'tech') {
+      tSel.attr('transform', d => { const q = PT(d); return `translate(${q.x},${q.y})`; });
+      tAfterSel.attr('d', l => { const a = PT(l.s), b = PT(l.t), mx = (a.x + b.x) / 2; return `M${a.x},${a.y} C${mx},${a.y} ${mx},${b.y} ${b.x},${b.y}`; });
+      tLinkSel.attr('d', l => { const a = PT(l.s), b = P(l.g), my = (a.y + b.y) / 2; return `M${a.x},${a.y} C${a.x},${my} ${b.x},${my} ${b.x},${b.y}`; });
+    }
     drawPath();
     if (!animate) cullLabels(); else setTimeout(cullLabels, 950);
   }
@@ -203,6 +288,16 @@
       if (free) { placed.push(box); show.add(d.id); }
     });
     nodeSel.select('text').attr('visibility', d => show.has(d.id) ? null : 'hidden');
+    // namen van uitvindingen: dezelfde regel, de geselecteerde en gemarkeerde gaan voor
+    if (state.mode === 'tech') {
+      const tp = [], tprio = d => (d === state.tsel ? 0 : root.classed('dim') && tSel.filter(x => x === d).classed('hl') ? 1 : 2);
+      const tshow = new Set();
+      TI.map(d => ({ d, q: PT(d), p: tprio(d) })).sort((a, b) => a.p - b.p || a.d.year - b.d.year).forEach(({ d, q }) => {
+        const box = [q.x - 8, q.y - 8, q.x + d.name.length * 6.6 + 14, q.y + 8];
+        if (!tp.some(b => !(box[2] < b[0] || box[0] > b[2] || box[3] < b[1] || box[1] > b[3]))) { tp.push(box); tshow.add(d.id); }
+      });
+      tSel.select('text').attr('visibility', d => tshow.has(d.id) ? null : 'hidden');
+    }
     // plaatsnamen wijken voor genrenamen
     if (state.mode === 'world') {
       updateCities();
@@ -217,7 +312,10 @@
   function fit(animate) { const t = fitTransform(); (animate ? svg.transition().duration(700) : svg).call(zoom.transform, t); }
   function fitTransform() {
     let t;
-    if (state.mode === 'tree') {
+    if (state.mode === 'tech') {
+      const hh = treeH - techTop + 20, kk = Math.max(Math.min(1, (H - 20) / hh), Math.min(1, (W - 190) / (treeW - LEFT + 40)), .35);
+      t = d3.zoomIdentity.translate(170 - LEFT * kk, 10 - techTop * kk).scale(kk);
+    } else if (state.mode === 'tree') {
       // de tijdlijn begint rechts van de kolom met familienamen
       const kk = Math.max(Math.min(1, (H - 20) / (treeH + 10)), Math.min(1, (W - 190) / (treeW - LEFT + 40)));
       t = d3.zoomIdentity.translate(170 - LEFT * kk, 0).scale(kk);
@@ -279,6 +377,7 @@
         <p>${d.text}</p>
         ${d.listen ? `<p class="kp-listen">${d.listen}</p>` : ''}
         ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((t, i) => `<div class="kp-track${t.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${t.artist}">${SOR.playIcon}</button>${t.cover ? `<img src="${t.cover}" alt="" loading="lazy" onerror="this.remove();this.parentNode&&0">` : ''}<div><b>${t.artist}</b><span>${t.title}${t.year ? ' · ' + t.year : ''}</span></div></div>`).join('')}</div></div>` : ''}
+        ${techFor(d.id).length ? `<div><p class="kp-h">Techniek die dit mogelijk maakte</p><div class="kp-links">${techFor(d.id).map(o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`).join('')}</div></div>` : ''}
         ${(d.parents || []).length ? `<div><p class="kp-h">Komt voort uit</p><div class="kp-links">${d.parents.map(chip).join('')}</div></div>` : ''}
         ${d.children.length ? `<div><p class="kp-h">Leidde tot</p><div class="kp-links">${d.children.map(chip).join('')}</div></div>` : ''}
         ${(d.mixtapes || []).length ? `<div><p class="kp-h">Lees in de reader</p><div class="kp-read">${d.mixtapes.map(m => { const mx = mixById.get(m.n); return `<a href="mixtape/${String(m.n).padStart(2, '0')}.html#${SOR.slug(m.heading)}"><small>${String(m.n).padStart(2, '0')}</small><b>${m.heading}</b><span>Mixtape ${m.n} · ${mx ? mx.title : ''} · ${m.track || ''}</span></a>`; }).join('')}</div></div>` : ''}
@@ -290,6 +389,7 @@
     syncButtons();
   }
   panel.addEventListener('click', e => {
+    const tc = e.target.closest('[data-tech]'); if (tc) { selectTech(tById.get(tc.dataset.tech), true); return; }
     const c = e.target.closest('[data-id]'); if (c) { select(byId.get(c.dataset.id), true); return; }
     const s = e.target.closest('[data-step]'); if (s) { goStep(state.step + +s.dataset.step, true); return; }
     if (e.target.closest('.kp-close')) clearSelection();
@@ -312,6 +412,8 @@
     nodeSel.classed('sel', x => x === d);
     if (state.path) highlight(null, new Set([...state.path.list.map(g => g.id)]));
     else highlight(d);
+    state.tsel = null; tSel.classed('sel', false);
+    if (state.mode === 'tech') { const ts = new Set(techFor(d.id).map(x => x.id)); tSel.classed('hl', o => ts.has(o.id)); tLinkSel.classed('hl', l => l.g === d); tAfterSel.classed('hl', false); }
     renderPanel(d);
     resizeStage();
     if (center) centerOn(d);
@@ -320,13 +422,14 @@
   }
   function clearSelection() {
     state.sel = null; nodeSel.classed('sel', false);
+    state.tsel = null; tSel.classed('sel', false).classed('hl', false); tLinkSel.classed('hl', false); tAfterSel.classed('hl', false);
     if (state.path) highlight(null, new Set(state.path.list.map(g => g.id))); else highlight(null);
     panel.hidden = true; resizeStage();
     history.replaceState(null, '', location.pathname + (state.path ? '#mixtape-' + state.path.n : ''));
   }
   function centerOn(d) {
     const p = pos(d), t = d3.zoomTransform(svg.node());
-    const k = Math.max(t.k, state.mode === 'tree' ? 1 : 1.6);
+    const k = Math.max(t.k, state.mode === 'world' ? 1.6 : 1);
     svg.transition().duration(650).call(zoom.transform, d3.zoomIdentity.translate(W / 2 - p.x * k, H / 2 - p.y * k).scale(k));
   }
 
@@ -363,13 +466,16 @@
   sel.addEventListener('change', () => setPath(+sel.value || null));
 
   // ---------- Modus ----------
-  document.querySelectorAll('[data-mode]').forEach(b => b.addEventListener('click', () => {
-    if (state.mode === b.dataset.mode) return;
-    state.mode = b.dataset.mode;
-    document.querySelectorAll('[data-mode]').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
-    drawBack(); svg.interrupt(); suppress = true; svg.call(zoom.transform, fitTransform()); place(true); setTimeout(() => { suppress = false; cullLabels(); }, 950); setTimeout(cullLabels, 1300);
+  function setMode(m) {
+    if (state.mode === m) return;
+    if (state.tsel && m !== 'tech') clearSelection();
+    state.mode = m;
+    document.querySelectorAll('[data-mode]').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.mode === m)));
+    drawBack(); svg.interrupt(); suppress = true; svg.call(zoom.transform, fitTransform()); place(true); setTimeout(() => { suppress = false; cullLabels(); place(false); }, 950); setTimeout(cullLabels, 1300);
     if (state.sel) setTimeout(() => centerOn(state.sel), 950);
-  }));
+  }
+  if (!TI.length) document.querySelector('[data-mode=tech]')?.remove();
+  document.querySelectorAll('[data-mode]').forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)));
   $('#k-zin').addEventListener('click', () => svg.transition().call(zoom.scaleBy, 1.4));
   $('#k-zout').addEventListener('click', () => svg.transition().call(zoom.scaleBy, 1 / 1.4));
   $('#k-fit').addEventListener('click', () => fit(true));
@@ -428,11 +534,12 @@
     if (!h) return;
     const m = h.match(/^mixtape-(\d+)(?:\/(.+))?$/);
     if (m) { sel.value = m[1]; setPath(+m[1]); if (m[2] && byId.has(m[2])) select(byId.get(m[2]), true); return; }
+    const tm = h.match(/^tech\/(.+)$/); if (tm) { if (tById.has(tm[1])) selectTech(tById.get(tm[1]), true); else setMode('tech'); return; }
     if (byId.has(h)) select(byId.get(h), true);
   }
   fromHash();
   window.addEventListener('hashchange', fromHash);
-  if (new URLSearchParams(location.search).get('mode') === 'world') document.querySelector('[data-mode=world]').click();
+  const qm = new URLSearchParams(location.search).get('mode'); if (qm === 'world' || qm === 'tech') setMode(qm);
   document.addEventListener('keydown', e => {
     if (e.target.matches('input, select')) return;
     if (e.key === 'Escape') { intro.hidden = true; clearSelection(); }

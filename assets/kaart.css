@@ -13,8 +13,8 @@ body.kaart .sitefoot { display: none; }
 .k-seg button[aria-pressed="true"] { background: var(--yellow); color: var(--ink); }
 .k-field { display: flex; align-items: center; gap: 8px; font: 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: #9C978D; }
 .k-field select, .k-field input { font: 14px/1.2 var(--body); color: #fff; background: #232120; border: 1px solid #3A3833; border-radius: 4px; padding: 8px 10px; min-width: 0; }
-.k-field input { width: 210px; }
-.k-field select { max-width: 280px; }
+.k-field input { width: 180px; }
+.k-field select { max-width: 220px; }
 .k-spacer { flex: 1; }
 .k-help { font: 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: #CFCAC0; background: none; border: 1px solid #3A3833; border-radius: 4px; padding: 9px 12px; cursor: pointer; }
 
