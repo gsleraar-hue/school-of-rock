@@ -1293,6 +1293,51 @@
    ]
   },
   {
+   "id": "symfonische-rock",
+   "name": "Symfonische rock",
+   "family": "rock",
+   "year": 1967,
+   "peak": [
+    1967,
+    1978
+   ],
+   "place": {
+    "name": "Londen",
+    "lat": 51.51,
+    "lon": -0.13
+   },
+   "parents": [
+    "psychedelic-rock",
+    "europese-kunstmuziek"
+   ],
+   "text": "Symfonische rock haalde de klassieke muziek de popmuziek in: orkesten, kerkorgel, mellotron en thema's van Bach of Beethoven. De orgelpartij van Procol Harums A Whiter Shade of Pale (1967) is geïnspireerd op Bach, en The Moody Blues namen Days of Future Passed (1967) op met een orkest. In Nederland speelde Ekseption Beethovens Vijfde als rocknummer, en groepen als Focus en Kayak maakten symfo tot een Nederlandse specialiteit.",
+   "listen": "Hoor in A Whiter Shade of Pale hoe het Hammondorgel een melodie speelt die klinkt als barokmuziek, terwijl de bas stap voor stap omlaag loopt.",
+   "tracks": [
+    {
+     "artist": "Procol Harum",
+     "title": "A Whiter Shade of Pale",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4a/88/88/4a888838-a629-25bf-fdc2-7e9c9cac5c8b/mzaf_14022015103656263181.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/10/0a/c0/100ac08f-a358-76a5-673f-2f0e229e58cb/239.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "The Moody Blues",
+     "title": "Nights in White Satin",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5e/43/83/5e438307-f346-d223-d03c-55760a683744/mzaf_6324717274174283160.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/d4/03/17/d403171f-fb40-89dc-53e5-5b2c9ab50aca/00602567103356.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Ekseption",
+     "title": "The 5th",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/f1/e5/2e/f1e52e64-b895-3fd2-7f99-585035a5cb54/mzaf_5501223929367396080.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ed/30/e9/ed30e972-50cc-d681-3aa3-4eb80c3f0afe/23UMGIM65896.rgb.jpg/600x600bb.jpg"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
    "id": "prog-rock",
    "name": "Progressieve rock",
    "family": "rock",
@@ -6288,7 +6333,8 @@
    },
    "parents": [
     "hard-rock",
-    "prog-rock"
+    "prog-rock",
+    "symfonische-rock"
    ],
    "text": "Symfonische metal combineert zware gitaren en drums met orkestklanken, koren en een klassiek geschoolde zangstem. Nederland werd een centrum van de stijl: Within Temptation, in 1996 opgericht rond zangeres Sharon den Adel, en Epica, opgericht in 2002, spelen op festivals over de hele wereld.",
    "listen": "Hoor in Mother Earth hoe orkest en koor boven de vervormde gitaren uitkomen, met de heldere stem van Sharon den Adel.",
