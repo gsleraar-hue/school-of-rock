@@ -39,8 +39,35 @@
   const sel = $('#k-path');
   sel.innerHTML = '<option value="">Alle genres</option>' + mixtapes.map(m => `<option value="${m.n}">Mixtape ${m.n} · ${m.title}</option>`).join('');
   const dl = $('#k-genres');
-  dl.innerHTML = G.slice().sort((a, b) => a.name.localeCompare(b.name, 'nl')).map(g => `<option value="${g.name}">`).join('');
-  $('#k-search').addEventListener('change', e => { const v = SOR.norm(e.target.value); const g = G.find(x => SOR.norm(x.name) === v) || G.find(x => SOR.norm(x.name).includes(v)); if (g) { select(g, true); e.target.value = ''; } });
+  // zoeken op genre, uitvinding of artiest (de artiesten van de luisterfragmenten)
+  let searchList = [];
+  function buildSearch() {
+    const seen = new Set(), L = [];
+    const add = (label, go, kind, who) => { const k = SOR.norm(label); if (!seen.has(k)) { seen.add(k); L.push({ label, k, go, kind, a: who ? SOR.norm(who) : k }); } };
+    G.forEach(g => add(g.name, () => select(g, true), 0));
+    TI.forEach(d => add(d.name, () => selectTech(d, true), 1));
+    G.forEach(g => (g.tracks || []).forEach(x => x.artist && add(`${x.artist} · ${g.name}`, () => select(g, true), 2, x.artist)));
+    TI.forEach(d => (d.tracks || []).forEach(x => x.artist && add(`${x.artist} · ${d.name}`, () => selectTech(d, true), 3, x.artist)));
+    searchList = L;
+    dl.innerHTML = L.slice().sort((a, b) => a.kind - b.kind || a.label.localeCompare(b.label, 'nl')).map(o => `<option value="${o.label.replace(/"/g, '&quot;')}">`).join('');
+  }
+  $('#k-search').addEventListener('change', e => {
+    const v = SOR.norm(e.target.value); if (!v) return;
+    const done = () => { e.target.value = ''; e.target.blur(); };
+    const o = searchList.find(x => x.k === v) || searchList.find(x => x.kind < 2 && x.k.includes(v)) || searchList.find(x => x.kind >= 2 && x.a === v);
+    if (o) { o.go(); done(); return; }
+    // daarna de naam als los woord in de teksten (eerst genres, dan uitvindingen), niet als begin van een langere naam
+    const raw = e.target.value.trim().toLowerCase();
+    if (raw.length >= 3) {
+      const re = new RegExp('(^|[^a-zà-ÿ])' + raw.replace(/[^a-z0-9à-ÿ ]/g, '.') + '(?=$|[^a-zà-ÿ])', 'gi');
+      const has = s => { s = (s || '').replace(/<[^>]+>/g, ''); for (const m of s.matchAll(re)) if (!/^ [A-Z]/.test(s.slice(m.index + m[0].length))) return true; return false; };
+      const g = G.find(x => has(x.text)); if (g) { select(g, true); done(); return; }
+      const d = TI.find(x => has(x.text)); if (d) { selectTech(d, true); done(); return; }
+    }
+    const o2 = searchList.find(x => x.kind >= 2 && x.a.startsWith(v)) || searchList.find(x => x.kind >= 2 && x.a.includes(v)) || searchList.find(x => x.k.includes(v));
+    if (o2) { o2.go(); done(); return; }
+    e.target.animate([{ borderColor: '#E0603F' }, { borderColor: '#3A3833' }], { duration: 900 });
+  });
 
   // ---------- SVG ----------
   const stage = $('.k-stage');
@@ -118,6 +145,7 @@
   })();
   const techLinks = TI.flatMap(d => (d.enabled || []).filter(id => byId.has(id)).map(id => ({ s: d, g: byId.get(id) })));
   const techAfter = TI.flatMap(d => (d.after || []).filter(id => tById.has(id)).map(id => ({ s: tById.get(id), t: d })));
+  buildSearch();
 
   // ---------- Wereld ----------
   let projection = null, countries = null;
