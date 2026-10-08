@@ -2841,9 +2841,7 @@
    },
    "who": "Fraunhofer-Institut (Karlheinz Brandenburg); Shawn Fanning en Sean Parker",
    "text": "Aan het Fraunhofer-Institut in Erlangen ontwikkelden onder anderen Karlheinz Brandenburg en zijn collega's de mp3: een bestandsformaat dat weglaat wat het oor nauwelijks hoort. Een nummer wordt zo ongeveer tien keer kleiner. In juni 1999 bracht student Shawn Fanning in Boston met Sean Parker Napster uit, een programma waarmee miljoenen mensen mp3's gratis van elkaars computers haalden. Metallica en de platenmaatschappijen stapten naar de rechter, en in 2001 ging Napster offline. Het delen ging door, en de cd-verkoop herstelde nooit meer.",
-   "enabled": [
-    "alternative-rock"
-   ],
+   "enabled": [],
    "after": [
     "cd"
    ],
@@ -2884,9 +2882,7 @@
    },
    "who": "Apple",
    "text": "In oktober 2001 presenteerde Apple de iPod: een kleine speler met een harde schijf en een draaiwiel, met 'duizend nummers in je broekzak'. In april 2003 opende de iTunes Store, waar je legaal nummers kon downloaden voor 99 cent per stuk. Je kocht voortaan één nummer in plaats van een heel album, en de single kwam terug als bestand. De reclames van Apple, met silhouetten die dansen op muziek van bands als Jet en Feist, werden zelf een manier om een hit te maken.",
-   "enabled": [
-    "alternative-rock"
-   ],
+   "enabled": [],
    "after": [
     "mp3-napster"
    ],
