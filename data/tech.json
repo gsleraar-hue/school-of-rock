@@ -34,7 +34,8 @@
    },
    "who": "Thomas Edison",
    "text": "In 1877 bouwde Thomas Edison in zijn laboratorium in Menlo Park een apparaat dat geluid kon vastleggen en terugspelen. Een naald kraste de trillingen van een stem in een laagje tinfolie, later in een wasrol. Voor het eerst kon je muziek horen zonder dat er een musicus in de kamer stond. De rollen waren lastig te kopiëren en klonken dun, maar ze maakten van een uitvoering iets wat je kon bewaren, verkopen en meenemen. Fanfares, populaire liedjes en voordrachten waren de eerste muziek die zo werd verkocht.",
-   "enabled": [
+   "enabled": [],
+   "shaped": [
     "tin-pan-alley",
     "marsmuziek"
    ],
@@ -83,6 +84,7 @@
     "rhythm-and-blues",
     "rock-n-roll"
    ],
+   "shaped": [],
    "after": [],
    "listen": "Drie keer een saxofoon: wanneer klinkt hij als een zingende stem, en wanneer als een schreeuw?",
    "tracks": [
@@ -122,8 +124,10 @@
    "who": "Emile Berliner",
    "text": "Emile Berliner legde geluid niet vast op een rol maar op een platte schijf. Het voordeel: van één origineel kon je met een pers duizenden kopieën maken. Rond 1925 werd 78 toeren per minuut de gangbare snelheid. Een kant van zo'n schellakplaat bevat ongeveer drie minuten muziek, en die lengte bepaalde decennialang hoe lang een popnummer duurt. De plaat maakte van muziek een massaproduct. Jazz en blues bereikten via grammofoonplaten een publiek dat de musici nooit live had gezien.",
    "enabled": [
+    "classic-blues"
+   ],
+   "shaped": [
     "new-orleans-jazz",
-    "classic-blues",
     "tin-pan-alley",
     "marsmuziek"
    ],
@@ -171,6 +175,7 @@
     "tin-pan-alley",
     "ragtime"
    ],
+   "shaped": [],
    "after": [],
    "listen": "Deze liedjes werden vooral als bladmuziek verkocht: zijn ze makkelijk mee te zingen en thuis na te spelen op een piano?",
    "tracks": [
@@ -209,7 +214,8 @@
    },
    "who": "Edwin Votey; Aeolian Company",
    "text": "In 1895 bouwde Edwin Votey in Detroit een apparaat dat een piano zelf liet spelen. Een rol papier met gaatjes liep langs een rij openingen; waar lucht door een gaatje kon, ging een toets omlaag. De Aeolian Company bracht de Pianola in 1898 op de markt. Wie geen piano kon spelen, kon nu toch thuis de nieuwste ragtime horen. In de jaren twintig was de speelpiano in Amerika een gewoon meubelstuk, en Scott Joplin en George Gershwin speelden zelf rollen in. Later schreef Conlon Nancarrow muziek die zo snel en ingewikkeld was dat alleen een speelpiano haar kan spelen.",
-   "enabled": [
+   "enabled": [],
+   "shaped": [
     "ragtime",
     "tin-pan-alley"
    ],
@@ -256,6 +262,7 @@
     "country",
     "chanson"
    ],
+   "shaped": [],
    "after": [
     "grammofoon"
    ],
@@ -297,10 +304,11 @@
    "who": "William F. Ludwig en Theobald Ludwig",
    "text": "Rond 1900 had een orkest vaak meerdere slagwerkers: een voor de grote trom, een voor de kleine trom en de bekkens. William F. Ludwig speelde in Chicago in circus- en theaterorkesten en vond de houten pedalen van zijn tijd te traag voor ragtime. In 1909 kreeg hij patent op een pedaal met een veer, dat na elke slag vanzelf terugveert. Met zijn broer Theobald begon hij een drumbedrijf. Nu speelde één musicus met zijn voet de grote trom en met zijn handen de rest. Zo ontstond het drumstel. Chick Webb en Gene Krupa maakten er in de swing een instrument voor spectaculaire solo's van.",
    "enabled": [
-    "new-orleans-jazz",
     "swing",
-    "rock-n-roll",
-    "surfrock"
+    "rock-n-roll"
+   ],
+   "shaped": [
+    "new-orleans-jazz"
    ],
    "after": [],
    "listen": "Luister naar de grote trom: hoor je de voet van de drummer, en wat doen zijn handen tegelijk?",
@@ -342,7 +350,9 @@
    "text": "In november 1920 begon het station KDKA in Pittsburgh met geregelde uitzendingen; in Den Haag zond Hanso Idzerda al in 1919 muziek uit. In de jaren twintig kwam er in miljoenen huiskamers een radiotoestel. Muziek was ineens gratis en overal tegelijk te horen. Bigbands speelden live voor de radio en werden zo landelijk bekend, en programma's als de Grand Ole Opry in Nashville maakten van plattelandsmuziek een nationaal genre. Wie op de radio kwam, kon in één avond een heel land bereiken.",
    "enabled": [
     "swing",
-    "country",
+    "country"
+   ],
+   "shaped": [
     "tin-pan-alley"
    ],
    "after": [],
@@ -388,6 +398,7 @@
     "rhythm-and-blues",
     "swing"
    ],
+   "shaped": [],
    "after": [
     "grammofoon",
     "elektrische-opname"
@@ -433,6 +444,7 @@
     "elektronische-studio",
     "radiophonic"
    ],
+   "shaped": [],
    "after": [
     "elektrische-opname"
    ],
@@ -473,7 +485,8 @@
    },
    "who": "EMT (Wilhelm Franz), naar een ontwerp van Walter Kuhl",
    "text": "Galm is het geluid dat na een noot nog door een zaal zweeft. Studio's maakten galm met een aparte echokamer, maar zo'n kamer kost ruimte en klinkt altijd hetzelfde. Het Duitse bedrijf EMT in Lahr bracht in 1957 de EMT 140 uit: een dunne stalen plaat van ongeveer een bij twee meter, opgehangen in een houten kast. Een element laat de plaat trillen en opnemers vangen de galm op. Met een demper maak je de galm korter of langer. In RCA Studio B in Nashville gaf technicus Bill Porter met zo'n plaat de stemmen van Roy Orbison, de Everly Brothers en Elvis Presley een heldere glans.",
-   "enabled": [
+   "enabled": [],
+   "shaped": [
     "rock-n-roll",
     "country"
    ],
@@ -523,6 +536,7 @@
     "prog-rock",
     "singer-songwriter"
    ],
+   "shaped": [],
    "after": [
     "grammofoon"
    ],
@@ -563,7 +577,8 @@
    },
    "who": "Alan Blumlein (idee, 1931); Westrex (45/45-groef)",
    "text": "Al in 1931 vroeg de Britse ingenieur Alan Blumlein patent aan op een manier om geluid met twee kanalen vast te leggen, zodat je hoort waar een instrument staat. Een product werd het pas na de lp. Westrex ontwikkelde een groef waarin twee kanalen tegelijk zitten. Eind 1957 perste het label Audio Fidelity in New York de eerste stereoplaat, en in 1958 volgden de grote platenmaatschappijen. Eerst waren het vooral demonstratieplaten waarop percussie van links naar rechts stuiterde. In de jaren zestig ontdekten rockbands de mogelijkheden. Producers zetten zang en drums helemaal links of rechts, en psychedelische bands lieten klanken door de kamer zweven.",
-   "enabled": [
+   "enabled": [],
+   "shaped": [
     "psychedelic-rock",
     "art-rock"
    ],
@@ -613,6 +628,7 @@
     "rockabilly",
     "brill-building"
    ],
+   "shaped": [],
    "after": [
     "grammofoon",
     "lp"
@@ -656,9 +672,10 @@
    "text": "In zijn kleine Sun-studio in Memphis gebruikte Sam Phillips twee bandrecorders om een korte echo te maken: het geluid werd opgenomen en een fractie later nog een keer afgespeeld. Die ene snelle herhaling, de slapback, gaf stemmen en gitaren een ruimtelijke, stuiterende klank. Hij werd het geluid van de vroege platen van Elvis Presley en van de rockabilly. Kort daarna kwamen er losse echoapparaten met een bandlus, zoals de Echoplex en de Italiaanse Meazzi, die gitaristen van de indorock en de surf vaak gebruikten.",
    "enabled": [
     "rockabilly",
-    "rock-n-roll",
-    "indorock",
-    "surfrock"
+    "indorock"
+   ],
+   "shaped": [
+    "rock-n-roll"
    ],
    "after": [
     "magneetband"
@@ -704,7 +721,9 @@
     "bebop",
     "chicago-blues",
     "rhythm-and-blues",
-    "jump-blues",
+    "jump-blues"
+   ],
+   "shaped": [
     "country"
    ],
    "after": [
@@ -751,6 +770,7 @@
     "country",
     "country-rock"
    ],
+   "shaped": [],
    "after": [],
    "listen": "Luister naar de glijdende tonen: klinkt de gitaar als een instrument, of meer als een stem die zucht?",
    "tracks": [
@@ -789,7 +809,8 @@
    },
    "who": "Winston 'Spree' Simon, Ellie Mannette en de steelbands van Port of Spain",
    "text": "In Trinidad werden Afrikaanse trommels bij het carnaval in de jaren tachtig van de negentiende eeuw verboden. Feestvierders sloegen daarom op bamboestokken, en in de jaren dertig ook op blikken, vuilnisbakken en autodelen. In 1939 trok de eerste band die alleen op metaal speelde door Port of Spain. Jongens als Winston Spree Simon ontdekten dat een ingedeukt stuk metaal verschillende tonen geeft. Rond 1947 maakten Ellie Mannette en anderen pannen van olievaten, die na de oorlog overal lagen. In 1951 liet een steelband uit Trinidad het instrument in Londen horen. De steelband werd het geluid van carnaval en calypso.",
-   "enabled": [
+   "enabled": [],
+   "shaped": [
     "calypso"
    ],
    "after": [],
@@ -836,6 +857,7 @@
     "soul",
     "reggae"
    ],
+   "shaped": [],
    "after": [
     "elektrische-gitaar"
    ],
@@ -878,8 +900,10 @@
    "text": "De holle elektrische gitaar ging rondzingen als de versterker hard stond. In Fullerton bouwde radiomonteur Leo Fender in 1950 een gitaar van een massieve plank hout, eerst Esquire en Broadcaster genoemd, vanaf 1951 Telecaster. De hals zat met bouten vast en de gitaar werd in een fabriek uit losse onderdelen gemaakt. Daardoor was hij betrouwbaar en betaalbaar. De Telecaster klinkt scherp en twangy. Hij werd het instrument van countrygitaristen in Bakersfield en Nashville, en later van pubrockers en punks.",
    "enabled": [
     "rock-n-roll",
+    "country-rock"
+   ],
+   "shaped": [
     "country",
-    "country-rock",
     "punk"
    ],
    "after": [
@@ -927,6 +951,7 @@
     "hard-rock",
     "british-beat"
    ],
+   "shaped": [],
    "after": [
     "telecaster",
     "elektrische-gitaar"
@@ -969,10 +994,12 @@
    "who": "Leo Fender",
    "text": "In 1954 volgde de Stratocaster: een solid body met een afgeronde vorm, drie elementen en een tremolo-arm waarmee je de toon kunt laten zakken en terugveren. Door te schakelen tussen de elementen klinkt dezelfde gitaar helder en glazig of warm en rond. Buddy Holly maakte de Strat bekend in de rock-'n-roll, Hank Marvin van The Shadows in Europa. Jimi Hendrix gebruikte de tremolo-arm en feedback om tonen te laten janken en duiken. De Stratocaster is sindsdien een van de meest nagebouwde gitaren ter wereld.",
    "enabled": [
-    "rock-n-roll",
     "surfrock",
     "psychedelic-rock",
     "blues-rock"
+   ],
+   "shaped": [
+    "rock-n-roll"
    ],
    "after": [
     "telecaster"
@@ -1021,6 +1048,7 @@
     "heavy-metal-80s",
     "punk"
    ],
+   "shaped": [],
    "after": [
     "elektrische-gitaar",
     "les-paul"
@@ -1068,6 +1096,7 @@
     "grunge",
     "indie-shoegaze"
    ],
+   "shaped": [],
    "after": [
     "versterker"
    ],
@@ -1115,6 +1144,7 @@
     "prog-rock",
     "hard-rock"
    ],
+   "shaped": [],
    "after": [],
    "listen": "Hoor je het zweven en golven van het orgel? Dat is de draaiende Leslie-luidspreker.",
    "tracks": [
@@ -1159,6 +1189,7 @@
     "psychedelic-rock",
     "softrock-aor"
    ],
+   "shaped": [],
    "after": [
     "magneetband"
    ],
@@ -1199,7 +1230,8 @@
    },
    "who": "Regency (I.D.E.A.) en Texas Instruments",
    "text": "De Regency TR-1 uit 1954 was de eerste transistorradio die in de winkel lag. Transistors vervingen de grote radiobuizen, waardoor een radio in je jaszak paste en op batterijen werkte. Tieners konden voortaan naar hun eigen muziek luisteren, buiten het zicht van hun ouders: op het strand, op straat, in hun slaapkamer. Producers stemden hun platen af op dat kleine luidsprekertje. Bij Motown controleerde men mixen op goedkope speakers, en Phil Spector bouwde een geluid dat ook door een piepklein radiootje vol klonk.",
-   "enabled": [
+   "enabled": [],
+   "shaped": [
     "motown",
     "surfrock",
     "british-beat",
@@ -1245,7 +1277,8 @@
    },
    "who": "Lev Termen (Léon Theremin)",
    "text": "De Russische natuurkundige Lev Termen bouwde rond 1920 een instrument dat je bespeelt zonder het aan te raken. Twee antennes meten de afstand tot je handen: de ene regelt de toonhoogte, de andere het volume. Het geluid is een glijdende, zingende toon die aan een stem of een zingende zaag doet denken. Clara Rockmore speelde er klassieke muziek op. In Hollywood werd de theremin in de jaren veertig en vijftig het geluid van spanning, waanzin en vliegende schotels. Robert Moog begon in de jaren vijftig met het bouwen van theremins, voordat hij synthesizers maakte. Later gebruikten ook rockmuzikanten als Jimmy Page de theremin.",
-   "enabled": [
+   "enabled": [],
+   "shaped": [
     "moog"
    ],
    "after": [],
@@ -1292,6 +1325,7 @@
     "italo-disco",
     "synthpop"
    ],
+   "shaped": [],
    "after": [],
    "listen": "Waar hoor je de robotstem? Klinkt het als een zingende synthesizer of als een sprekende machine?",
    "tracks": [
@@ -1335,6 +1369,7 @@
     "art-rock",
     "psychedelic-rock"
    ],
+   "shaped": [],
    "after": [
     "magneetband"
    ],
@@ -1375,7 +1410,8 @@
    },
    "who": "Phil Spector",
    "text": "Producer Phil Spector liet in Gold Star Studios in Los Angeles meerdere gitaristen, pianisten en drummers tegelijk dezelfde partij spelen, en stuurde het geluid door een galmkamer. Zo smolten alle instrumenten samen tot één dikke muur van klank, de Wall of Sound. Het was gemaakt om ook uit een kleine radio overweldigend te klinken. Spector behandelde de studio niet als een plek om een band vast te leggen, maar als een instrument op zich. Girlgroups als The Ronettes kregen zo hun grootse geluid, en later bouwde Bruce Springsteen erop voort.",
-   "enabled": [
+   "enabled": [],
+   "shaped": [
     "brill-building",
     "heartland-rock"
    ],
@@ -1426,6 +1462,7 @@
     "hiphop",
     "indie-shoegaze"
    ],
+   "shaped": [],
    "after": [
     "magneetband"
    ],
@@ -1471,6 +1508,7 @@
     "prog-rock",
     "ambient"
    ],
+   "shaped": [],
    "after": [
     "theremin"
    ],
@@ -1511,7 +1549,8 @@
    },
    "who": "Bill Lear (Lear Jet), met Ford en Motorola",
    "text": "Vliegtuigbouwer Bill Lear ontwierp in 1964 de Stereo 8: een cassette met een eindeloze lus magneetband en acht sporen, vier stereoprogramma's naast elkaar. Ford bood de speler vanaf de modellen van 1966 aan in zijn auto's, en voor het eerst koos je zelf wat je onderweg hoorde. In de Verenigde Staten was de 8-track in de jaren zeventig enorm populair, vooral in de auto. Omdat een album over vier programma's werd verdeeld, klonk er soms midden in een nummer een klik, waarna het lied verderging. Rond 1980 verdrong de compacte cassette het formaat.",
-   "enabled": [
+   "enabled": [],
+   "shaped": [
     "softrock-aor",
     "southern-rock",
     "heartland-rock"
@@ -1557,8 +1596,10 @@
    "who": "Bob Heil; later Peter Frampton en Roger Troutman (Zapp)",
    "text": "Een talkbox laat een gitaar praten. Een luidspreker blaast het geluid door een plastic slangetje in de mond van de muzikant. Die vormt met lippen en tong klinkers, en een microfoon vangt het resultaat op. Het idee bestond al sinds eind jaren dertig, maar de apparaten waren te zacht voor een rockpodium. In 1973 bouwde geluidstechnicus Bob Heil uit Marissa, Illinois een krachtige versie voor Joe Walsh, die hem gebruikte op Rocky Mountain Way. Peter Frampton maakte er een publiekstrekker van. In de funk liet Roger Troutman van Zapp een synthesizer door de talkbox zingen, en die klank keerde terug in de G-funk.",
    "enabled": [
+    "g-funk"
+   ],
+   "shaped": [
     "funk",
-    "g-funk",
     "softrock-aor"
    ],
    "after": [
@@ -1607,6 +1648,7 @@
     "smooth-jazz",
     "softrock-aor"
    ],
+   "shaped": [],
    "after": [
     "elektrische-gitaar"
    ],
@@ -1652,6 +1694,7 @@
     "art-rock",
     "prog-rock"
    ],
+   "shaped": [],
    "after": [
     "meersporen",
     "wall-of-sound"
@@ -1694,10 +1737,12 @@
    "who": "Brad Plunkett (Warwick Electronics / Thomas Organ Company)",
    "text": "In 1966 ontwikkelde Brad Plunkett bij de Thomas Organ Company een pedaal met een filter dat je met je voet open en dicht beweegt. De gitaar klinkt daardoor alsof hij 'wa-wa' zegt, als een trompet met een demper. Het pedaal werd verkocht onder de merken Vox en Cry Baby. Jimi Hendrix maakte er een sprekende, jankende stem van. In funk en soul speelden gitaristen de wah begin jaren zeventig juist ritmisch, en zo werd hij het geluid van blaxploitationfilms als Shaft.",
    "enabled": [
-    "funk",
     "psychedelic-rock",
     "blues-rock",
     "philly-soul"
+   ],
+   "shaped": [
+    "funk"
    ],
    "after": [
     "versterker"
@@ -1741,10 +1786,12 @@
    "text": "De grote modulaire Moog was een kast vol kabels voor een studio. In 1970 kwam de Minimoog: een draagbare synthesizer met de belangrijkste onderdelen vast ingebouwd, zonder snoeren. Je zette hem op een podium naast het orgel, en de synthesizer werd een gewoon bandinstrument. De Minimoog speelt één toon tegelijk en is beroemd om zijn vette baslijnen en scherpe leadklanken. Bernie Worrell speelde er de bas mee in de funk van Parliament, Kraftwerk gebruikte hem op Autobahn, en Gary Numan bracht hem in de synthpop.",
    "enabled": [
     "kraftwerk",
-    "funk",
     "synthpop",
     "prog-rock",
     "fusion"
+   ],
+   "shaped": [
+    "funk"
    ],
    "after": [
     "moog"
@@ -1786,7 +1833,8 @@
    },
    "who": "Wurlitzer (Side Man); later Maestro (Rhythm King)",
    "text": "In 1959 bracht orgelfabrikant Wurlitzer de Side Man uit, een kast met een draaiende schijf die elektronische drumklanken aanstuurde in het ritme van een wals, rumba of foxtrot. Hij was bedoeld voor organisten in bars en restaurants, die zo geen drummer hoefden te betalen. Later kregen elektronische orgels zulke ritmes ingebouwd. In 1971 maakte Sly Stone van een Maestro Rhythm King de basis van zijn plaat There's a Riot Goin' On. Het stijve, droge ritme klonk opeens moe en dreigend. Timmy Thomas zette een orgel met ingebouwde ritmes op bossanova, en Shuggie Otis jamde urenlang mee met zijn eigen ritmebox.",
-   "enabled": [
+   "enabled": [],
+   "shaped": [
     "funk",
     "soul"
    ],
@@ -1834,6 +1882,7 @@
     "electro",
     "chicago-house"
    ],
+   "shaped": [],
    "after": [
     "single",
     "lp"
@@ -1877,7 +1926,9 @@
    "text": "In Kingston maakten producers voor de B-kant van singles een instrumentale versie zonder zang. Technicus King Tubby ging verder: in zijn kleine studio liet hij instrumenten op de mengtafel in en uit vallen, zette er lange echo en galm op en filterde het geluid. Zo werd van een bestaande opname een nieuw nummer gemaakt: dub. Het mengpaneel was zijn instrument. Ideeën uit dub, zoals ruimte, een zware bas en de remix, kwamen terug in hiphop, jungle, triphop en dubstep.",
    "enabled": [
     "dub",
-    "dancehall",
+    "dancehall"
+   ],
+   "shaped": [
     "jungle-dnb",
     "dubstep",
     "triphop"
@@ -1929,6 +1980,7 @@
     "dancehall",
     "hiphop"
    ],
+   "shaped": [],
    "after": [
     "single"
    ],
@@ -1971,7 +2023,9 @@
    "text": "De Australiërs Peter Vogel en Kim Ryrie brachten in 1979 de Fairlight CMI uit, een computer met toetsenbord en lichtpen. Hij kon een echt geluid digitaal opnemen en dat onder de toetsen zetten, op elke toonhoogte: een sampler. Het idee van de Mellotron werkte nu zonder bandjes, met elk geluid dat je maar kon opnemen. De Fairlight was zo duur dat alleen sterren en grote studio's hem konden betalen. Peter Gabriel, Kate Bush en producer Trevor Horn bouwden er hele platen mee op.",
    "enabled": [
     "synthpop",
-    "new-romantic",
+    "new-romantic"
+   ],
+   "shaped": [
     "art-rock"
    ],
    "after": [
@@ -2020,6 +2074,7 @@
     "synthpop",
     "new-romantic"
    ],
+   "shaped": [],
    "after": [
     "minimoog"
    ],
@@ -2060,7 +2115,8 @@
    },
    "who": "Sony (Nobutoshi Kihara, Kozo Ohsone; idee van Masaru Ibuka en Akio Morita)",
    "text": "Sony-oprichter Masaru Ibuka wilde op lange vliegreizen naar muziek luisteren. Technici in Tokio bouwden daarvoor een kleine cassettespeler zonder luidspreker en zonder opnameknop, met een lichte koptelefoon. Op 1 juli 1979 lag de Walkman in Japan in de winkel. Binnen Sony twijfelden velen: wie wil er een cassettespeler die niet kan opnemen? Hij werd een wereldsucces. Muziek werd iets persoonlijks, een soundtrack bij je eigen wandeling of busrit. De stad werd het decor van je muziek. Jongeren draaiden er hun zelfgemaakte cassettes op, vol new wave, postpunk en synthpop.",
-   "enabled": [
+   "enabled": [],
+   "shaped": [
     "new-wave",
     "postpunk",
     "synthpop"
@@ -2106,7 +2162,9 @@
    "who": "TEAC (merknaam TASCAM)",
    "text": "Een studio met meerdere sporen was in de jaren zeventig duur en groot. In september 1979 liet TEAC onder de merknaam TASCAM de 144 Portastudio zien: een mengtafel en een recorder voor gewone cassettes in één kastje. Je kon vier sporen apart opnemen en over elkaar leggen, voor 899 dollar. Muzikanten maakten voortaan thuis hun demo's. Op 3 januari 1982 nam Bruce Springsteen in zijn slaapkamer in Colts Neck liedjes op een Portastudio op. Die opnames verschenen bijna onbewerkt als de plaat Nebraska. In de jaren negentig maakten Guided by Voices en Elliott Smith hele platen op vierspoorsrecorders. Dat ruwe thuisgeluid heet lo-fi.",
    "enabled": [
-    "indie-shoegaze",
+    "indie-shoegaze"
+   ],
+   "shaped": [
     "singer-songwriter",
     "heartland-rock"
    ],
@@ -2152,8 +2210,10 @@
    "who": "Roger Linn",
    "text": "Roger Linn bracht in 1980 de LM-1 uit, de eerste drumcomputer met digitale opnames van echte drums in plaats van elektronisch nagebootste klanken. Je programmeerde een patroon en de machine speelde het strak en eindeloos af, met een ingebouwde mogelijkheid om het ritme een beetje swing te geven. In 1982 volgde de goedkopere LinnDrum. De machines zijn te horen op talloze hits uit de jaren tachtig, van The Human League en Michael Jackson tot Prince, die de drums vaak ongewoon gestemd en bewerkt gebruikte.",
    "enabled": [
+    "modern-rnb"
+   ],
+   "shaped": [
     "synthpop",
-    "modern-rnb",
     "new-wave"
    ],
    "after": [],
@@ -2194,7 +2254,8 @@
    },
    "who": "Hugh Padgham, Steve Lillywhite, Phil Collins en Peter Gabriel",
    "text": "Gated reverb betekent galm met een poort. In 1979 nam Peter Gabriel in de Townhouse Studios in Londen zijn derde soloplaat op, met Phil Collins op drums. De nieuwe mengtafel had een microfoon in de opnameruimte om met de musici te praten. Die maakte zachte geluiden even hard als harde, en blies zo elke slag en de galm van de kamer op. Technicus Hugh Padgham zette er een poort op die het geluid abrupt afkapt. Zo klonk elke slag enorm, met daarna plotseling stilte. Gabriel bouwde Intruder rond dat geluid, en Collins gebruikte het in In the Air Tonight. Het werd de drumklank van de jaren tachtig.",
-   "enabled": [
+   "enabled": [],
+   "shaped": [
     "art-rock",
     "softrock-aor",
     "new-wave"
@@ -2243,7 +2304,9 @@
     "electro",
     "trap",
     "southern-hiphop",
-    "modern-rnb",
+    "modern-rnb"
+   ],
+   "shaped": [
     "hiphop"
    ],
    "after": [],
@@ -2290,6 +2353,7 @@
     "trance",
     "gabber"
    ],
+   "shaped": [],
    "after": [
     "tr-808"
    ],
@@ -2331,9 +2395,11 @@
    "who": "Warner-Amex Satellite Entertainment",
    "text": "Op 1 augustus 1981 begon in de Verenigde Staten MTV, een televisiezender die de hele dag videoclips uitzond. De eerste clip was Video Killed the Radio Star van The Buggles. Een popster moest voortaan ook goed in beeld komen, met kleding, kapsel en verhaal. Britse synthpop- en New Romantic-groepen, die al met beeld bezig waren, veroverden zo de Amerikaanse hitlijsten. MTV draaide in de eerste jaren bijna alleen witte rock; pas toen de clips van Michael Jackson op de zender kwamen, veranderde dat.",
    "enabled": [
+    "glam-metal"
+   ],
+   "shaped": [
     "new-romantic",
     "synthpop",
-    "glam-metal",
     "british-eurobeat"
    ],
    "after": [
@@ -2376,7 +2442,8 @@
    },
    "who": "Philips en Sony",
    "text": "Philips en Sony ontwikkelden samen de compact disc, die in 1982 op de markt kwam. Muziek staat erop als digitale code: 44.100 metingen per seconde per kanaal, uitgelezen door een laser. Een cd ruist niet en slijt niet, en bevat ruim een uur muziek. In de jaren negentig werd de cd de standaard en verdiende de industrie meer dan ooit, ook doordat mensen hun oude platen opnieuw kochten. Maar een digitale kopie is precies gelijk aan het origineel. Met een cd-brander en een computer lag de weg naar gratis kopiëren open.",
-   "enabled": [
+   "enabled": [],
+   "shaped": [
     "britpop",
     "pop-stockholm",
     "boybands-girlbands"
@@ -2422,7 +2489,8 @@
    },
    "who": "Yamaha, naar de FM-synthese van John Chowning (Stanford)",
    "text": "De Yamaha DX7 uit 1983 werkte niet met filters, maar met FM-synthese: de ene golf laat de frequentie van een andere heel snel op en neer gaan. Het principe kwam van John Chowning van Stanford University. De klank is helder, glazig en metalig, goed voor elektrische piano's, bellen en felle bassen. De DX7 was betaalbaar en betrouwbaar en werd een van de best verkochte synthesizers ooit. Omdat programmeren lastig was, gebruikten veel muzikanten de fabrieksklanken, zoals de elektrische piano en de slapbas. Die bepaalden het geluid van de jaren tachtig.",
-   "enabled": [
+   "enabled": [],
+   "shaped": [
     "synthpop",
     "softrock-aor",
     "modern-rnb"
@@ -2468,9 +2536,11 @@
    "who": "Dave Smith (Sequential) en Ikutaro Kakehashi (Roland)",
    "text": "Tot 1983 konden synthesizers van verschillende merken niet met elkaar praten. Dave Smith van Sequential en Ikutaro Kakehashi van Roland stelden een gezamenlijke standaard voor, MIDI, die in januari 1983 op de muziekbeurs NAMM in Anaheim voor het eerst werd gedemonstreerd. Via MIDI vertellen instrumenten en computers elkaar welke noot er klinkt, hoe hard en hoe lang. Met één toetsenbord kon je meerdere synthesizers bespelen, of een computer alles laten afspelen. Thuisstudio's met een Atari-computer en een sampler werden zo betaalbaar. Elke DAW werkt nog steeds met MIDI.",
    "enabled": [
-    "synthpop",
-    "big-beat",
     "chicago-house"
+   ],
+   "shaped": [
+    "synthpop",
+    "big-beat"
    ],
    "after": [
     "tr-808",
@@ -2515,10 +2585,12 @@
    "text": "De TR-909 uit 1983 was de opvolger van de 808. Bassdrum, snare en toms worden nog elektronisch opgewekt, maar de bekkens en hi-hats zijn digitale opnames. De machine had bovendien MIDI. Ook de 909 verkocht slecht en werd tweedehands goedkoop. Producers in Chicago en Detroit gebruikten de stevige, droge bassdrum op elke tel en de sissende open hi-hat ertussen. Dat patroon werd de basis van house en techno, en daarna van bijna alle Europese dansmuziek.",
    "enabled": [
     "chicago-house",
-    "detroit-techno",
     "berlin-techno",
     "french-house",
     "gabber"
+   ],
+   "shaped": [
+    "detroit-techno"
    ],
    "after": [
     "tr-808",
@@ -2568,6 +2640,7 @@
     "neo-soul",
     "g-funk"
    ],
+   "shaped": [],
    "after": [
     "fairlight",
     "linndrum",
@@ -2612,7 +2685,9 @@
    "text": "In 1969 speelde drummer Gregory Coleman op Amen, Brother van The Winstons een drumsolo van een paar seconden. Hiphopproducers sampleden die break eind jaren tachtig. Begin jaren negentig gingen producers in Londen verder: ze versnelden de Amen-break en andere breaks tot ver boven de 160 slagen per minuut en hakten ze met samplers in kleine stukjes, die ze in nieuwe volgordes zetten. Daaronder legden ze zware basslijnen uit de dub. Zo ontstond jungle, en daaruit drum-and-bass.",
    "enabled": [
     "jungle-dnb",
-    "big-beat",
+    "big-beat"
+   ],
+   "shaped": [
     "golden-age-hiphop"
    ],
    "after": [
@@ -2663,6 +2738,7 @@
     "dubstep",
     "trap"
    ],
+   "shaped": [],
    "after": [
     "meersporen",
     "midi"
@@ -2706,8 +2782,10 @@
    "text": "Bij het Gentse softwarebedrijf Image-Line schreef de negentienjarige Didier Dambrin een eenvoudig programma om drumritmes te maken. Begin 1998 kwam FruityLoops uit: een raster van vakjes waarin je met de muis aanklikt waar een slag moet vallen. Het groeide uit tot een complete studio en heet sinds 2003 FL Studio. Er bestond een gratis proefversie, en een generatie slaapkamerproducers leerde er beats mee maken. Soulja Boy maakte Crank That met die proefversie, de Nederlander Martin Garrix werkte erin aan Animals, en YoungKio bouwde er de beat van Old Town Road mee, die hij voor een paar tientjes online verkocht.",
    "enabled": [
     "trap",
+    "edm"
+   ],
+   "shaped": [
     "southern-hiphop",
-    "edm",
     "tiktok-pop"
    ],
    "after": [
@@ -2751,7 +2829,9 @@
    "who": "Gerhard Behles, Robert Henke en Bernd Roggendorf",
    "text": "Gerhard Behles en Robert Henke maakten in Berlijn techno als Monolake. Ze schreven hun eigen software om met een computer live op te treden. Samen met Bernd Roggendorf werkten ze dat idee uit tot Ableton Live, dat in 2001 uitkwam. Andere programma's waren gemaakt voor de studio, Live vooral voor het podium. Je start losse stukjes muziek, loops, en ze lopen altijd in de maat. Het programma rekt opnames ook uit of drukt ze in tot ze in het tempo passen. Dj's en producers gingen er zowel mee optreden als componeren. Skrillex maakte zijn ep Bangarang in 2011 grotendeels op tournee, met Live op een laptop.",
    "enabled": [
-    "edm",
+    "edm"
+   ],
+   "shaped": [
     "berlin-techno",
     "dubstep"
    ],
@@ -2796,8 +2876,10 @@
    "who": "Andy Hildebrand (Antares Audio Technologies)",
    "text": "Andy Hildebrand gebruikte wiskunde uit de olie-industrie om de toonhoogte van een stem te meten. Zijn software Auto-Tune, uitgebracht in 1997, schuift valse noten ongemerkt naar de juiste toon. Bij Believe van Cher zetten de producers de correctiesnelheid op nul. De stem sprong daardoor zonder overgang van toon naar toon, met een hoorbaar knikje. Wat onhoorbaar moest zijn, werd een effect. T-Pain maakte het zijn handelsmerk, en in trap, afrobeats en hyperpop werd Auto-Tune een gewoon onderdeel van de stem.",
    "enabled": [
+    "hyperpop"
+   ],
+   "shaped": [
     "trap",
-    "hyperpop",
     "afrobeats",
     "tiktok-pop"
    ],
@@ -2842,6 +2924,7 @@
    "who": "Fraunhofer-Institut (Karlheinz Brandenburg); Shawn Fanning en Sean Parker",
    "text": "Aan het Fraunhofer-Institut in Erlangen ontwikkelden onder anderen Karlheinz Brandenburg en zijn collega's de mp3: een bestandsformaat dat weglaat wat het oor nauwelijks hoort. Een nummer wordt zo ongeveer tien keer kleiner. In juni 1999 bracht student Shawn Fanning in Boston met Sean Parker Napster uit, een programma waarmee miljoenen mensen mp3's gratis van elkaars computers haalden. Metallica en de platenmaatschappijen stapten naar de rechter, en in 2001 ging Napster offline. Het delen ging door, en de cd-verkoop herstelde nooit meer.",
    "enabled": [],
+   "shaped": [],
    "after": [
     "cd"
    ],
@@ -2883,6 +2966,7 @@
    "who": "Apple",
    "text": "In oktober 2001 presenteerde Apple de iPod: een kleine speler met een harde schijf en een draaiwiel, met 'duizend nummers in je broekzak'. In april 2003 opende de iTunes Store, waar je legaal nummers kon downloaden voor 99 cent per stuk. Je kocht voortaan één nummer in plaats van een heel album, en de single kwam terug als bestand. De reclames van Apple, met silhouetten die dansen op muziek van bands als Jet en Feist, werden zelf een manier om een hit te maken.",
    "enabled": [],
+   "shaped": [],
    "after": [
     "mp3-napster"
    ],
@@ -2924,7 +3008,9 @@
    "who": "Chad Hurley, Steve Chen en Jawed Karim",
    "text": "YouTube begon in 2005 als website waar iedereen video's kon delen. Binnen een paar jaar was het de plek waar de videoclip naartoe verhuisde, en voor veel jongeren de belangrijkste manier om muziek te luisteren. Artiesten konden zonder platenmaatschappij een publiek vinden: Justin Bieber werd ontdekt via filmpjes op YouTube. Chicagose drillrappers als Chief Keef werden in 2012 bekend met zelfgemaakte clips. Gangnam Style van PSY was de eerste video die meer dan een miljard keer werd bekeken, en bracht K-pop wereldwijd onder de aandacht.",
    "enabled": [
-    "drill",
+    "drill"
+   ],
+   "shaped": [
     "k-pop",
     "tiktok-pop"
    ],
@@ -2969,8 +3055,10 @@
    "who": "Alexander Ljung en Eric Wahlforss",
    "text": "SoundCloud werd in 2007 opgericht door de Zweden Alexander Ljung en Eric Wahlforss en kreeg zijn thuisbasis in Berlijn. Op het platform kan iedereen gratis eigen tracks uploaden, en luisteraars kunnen op een precies moment in een nummer reageren. Rond 2015 groeide er een nieuwe rapscene uit, de SoundCloud-rap: jonge artiesten die thuis opnamen, met vervormde 808's, korte nummers en veel Auto-Tune. Ook hyperpop vond er zijn eerste publiek. Een track kon er viraal gaan zonder label of radio.",
    "enabled": [
+    "hyperpop"
+   ],
+   "shaped": [
     "trap",
-    "hyperpop",
     "drill"
    ],
    "after": [
@@ -3015,7 +3103,9 @@
    "who": "Daniel Ek en Martin Lorentzon",
    "text": "In oktober 2008 startte in Stockholm Spotify. Je kocht geen nummers meer, maar betaalde voor toegang tot de hele catalogus, of luisterde gratis met reclame. De playlist nam de rol over van het album, en een algoritme kiest mee wat je hoort. Een stream telt pas na dertig seconden, en dat veranderde de vorm van popnummers: kortere intro's, de hook vroeg, kortere nummers. Artiesten worden per stream betaald. Tegelijk konden muziek uit Lagos of Johannesburg via playlists een wereldpubliek bereiken.",
    "enabled": [
-    "tiktok-pop",
+    "tiktok-pop"
+   ],
+   "shaped": [
     "afrobeats",
     "amapiano"
    ],
@@ -3060,7 +3150,8 @@
    },
    "who": "ByteDance",
    "text": "TikTok, de app voor korte filmpjes van het Chinese bedrijf ByteDance, brak in 2018 wereldwijd door. Gebruikers kiezen een geluidsfragment en maken daar een filmpje bij. Een paar seconden van een nummer kunnen zo miljoenen keren rondgaan, gemaakt door gebruikers zelf. Old Town Road van Lil Nas X werd in 2019 op die manier een wereldhit. Platenmaatschappijen zoeken sindsdien naar nummers met een moment dat in een kort filmpje werkt, en artiesten brengen soms eerst een fragment uit om te zien of het aanslaat.",
-   "enabled": [
+   "enabled": [],
+   "shaped": [
     "tiktok-pop",
     "hyperpop",
     "amapiano"

@@ -128,7 +128,9 @@
   const TL = tech ? tech.lanes : [], TI = tech ? tech.items.map(d => ({ ...d })) : [];
   const tById = new Map(TI.map(d => [d.id, d]));
   const tLaneById = new Map(TL.map(l => [l.id, l]));
+  // enabled: maakte het genre mogelijk; shaped: speelde er een rol in (verspreidde of veranderde het)
   const techFor = gid => TI.filter(d => (d.enabled || []).includes(gid));
+  const techShaped = gid => TI.filter(d => (d.shaped || []).includes(gid));
   let techLanes = [], techTop = 0;
   (function layoutTech() {
     const heights = TL.map(l => {
@@ -143,7 +145,7 @@
     let y = 40 - total; techTop = y;
     techLanes = TL.map((l, i) => { const lane = { f: { name: l.name, color: l.color }, y, h: heights[i], alt: i % 2 === 1, tech: true }; TI.filter(d => d.lane === l.id).forEach(d => { d.pos = { x: tx(d.year), y: y + LANE_PAD + d.row * ROW + ROW / 2 }; }); y += heights[i]; return lane; });
   })();
-  const techLinks = TI.flatMap(d => (d.enabled || []).filter(id => byId.has(id)).map(id => ({ s: d, g: byId.get(id) })));
+  const techLinks = TI.flatMap(d => [...(d.enabled || []).map(id => [id, false]), ...(d.shaped || []).map(id => [id, true])].filter(([id]) => byId.has(id)).map(([id, sh]) => ({ s: d, g: byId.get(id), sh })));
   const techAfter = TI.flatMap(d => (d.after || []).filter(id => tById.has(id)).map(id => ({ s: tById.get(id), t: d })));
   buildSearch();
 
@@ -174,11 +176,11 @@
   techCss.textContent = '.tech-links,.tech-items{display:none}.techmode .tech-links,.techmode .tech-items{display:inline}' +
     '.titem{cursor:pointer}.titem rect{stroke:#121110;stroke-width:1.5}.titem text{font:12px Inter,sans-serif;fill:#EDE9E1;paint-order:stroke;stroke:#121110;stroke-width:3px}' +
     '.titem.sel rect{stroke:#fff;stroke-width:2.5}.dim .titem:not(.hl){opacity:.18}' +
-    '.tlink{fill:none;stroke-width:1.2;stroke-opacity:0;stroke-dasharray:4 3}.tlink.hl{stroke-opacity:.9;stroke-width:1.8}.tafter{fill:none;stroke:#8A857C;stroke-opacity:.35;stroke-width:1.2}.dim .tafter:not(.hl){stroke-opacity:.05}.tafter.hl{stroke:#F2D500;stroke-opacity:.9}' +
+    '.tlink{fill:none;stroke-width:1.2;stroke-opacity:0;stroke-dasharray:4 3}.tlink{stroke-dasharray:none}.tlink.sh{stroke-dasharray:2 5}.tlink.hl{stroke-opacity:.9;stroke-width:1.8}.tafter{fill:none;stroke:#8A857C;stroke-opacity:.35;stroke-width:1.2}.dim .tafter:not(.hl){stroke-opacity:.05}.tafter.hl{stroke:#F2D500;stroke-opacity:.9}' +
     '.lane-bg.tech{fill:#0E0D0C}.lane-bg.tech.alt{fill:#131210}';
   document.head.appendChild(techCss);
   const tAfterSel = gTechLinks.selectAll('path.tafter').data(techAfter).join('path').attr('class', 'tafter');
-  const tLinkSel = gTechLinks.selectAll('path.tlink').data(techLinks).join('path').attr('class', 'tlink').attr('stroke', l => tLaneById.get(l.s.lane)?.color || '#999');
+  const tLinkSel = gTechLinks.selectAll('path.tlink').data(techLinks).join('path').attr('class', l => 'tlink' + (l.sh ? ' sh' : '')).attr('stroke', l => tLaneById.get(l.s.lane)?.color || '#999');
   const tSel = gTech.selectAll('g.titem').data(TI, d => d.id).join(enter => {
     const n = enter.append('g').attr('class', 'titem').attr('tabindex', 0).attr('role', 'button').attr('aria-label', d => `${d.name}, ${d.year}`);
     n.append('rect').attr('x', -6).attr('y', -6).attr('width', 12).attr('height', 12).attr('rx', 2).attr('transform', 'rotate(45)').attr('fill', d => tLaneById.get(d.lane)?.color || '#999');
@@ -191,7 +193,7 @@
   function PT(d) { return { x: T.applyX(d.pos.x), y: T.applyY(d.pos.y) }; }
   function techChain(d) { const s = new Set([d.id]); (function up(n) { (n.after || []).forEach(a => { if (tById.has(a) && !s.has(a)) { s.add(a); up(tById.get(a)); } }); })(d); TI.forEach(o => { if ((o.after || []).includes(d.id)) s.add(o.id); }); return s; }
   function highlightTech(d) {
-    const ts = techChain(d), gs = new Set(d.enabled || []);
+    const ts = techChain(d), gs = new Set([...(d.enabled || []), ...(d.shaped || [])]);
     root.classed('dim', true);
     tSel.classed('hl', o => ts.has(o.id)); tAfterSel.classed('hl', l => ts.has(l.s.id) && ts.has(l.t.id));
     tLinkSel.classed('hl', l => l.s === d);
@@ -202,12 +204,12 @@
     const lane = tLaneById.get(d.lane), tracks = (d.tracks || []).filter(x => x.audio);
     const tchip = o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`;
     const after = (d.after || []).map(id => tById.get(id)).filter(Boolean), next = TI.filter(o => (o.after || []).includes(d.id));
-    const gen = (d.enabled || []).map(id => byId.get(id)).filter(Boolean);
+    const gen = (d.enabled || []).filter(id => byId.has(id)), shp = (d.shaped || []).filter(id => byId.has(id));
     panel.innerHTML = `<div class="kp-head" style="--c:${lane?.color}"><button class="kp-close" type="button" aria-label="Sluit">×</button><div class="fam">Techniek · ${lane?.name || ''}</div><h2>${d.name}</h2><div class="meta">${d.year}${d.who ? ' · ' + d.who : ''}${d.place?.name ? ' · ' + d.place.name : ''}</div></div>
       <div class="kp-body"><p>${d.text}</p>${d.listen ? `<p class="kp-listen">${d.listen}</p>` : ''}
       ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((x, i) => `<div class="kp-track${x.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${x.artist}">${SOR.playIcon}</button>${x.cover ? `<img src="${x.cover}" alt="" loading="lazy">` : ''}<div><b>${x.artist}</b><span>${x.title}${x.year ? ' · ' + x.year : ''}</span></div></div>`).join('')}</div></div>` : ''}
-      ${gen.filter(g => g.year >= d.year - 3).length ? `<div><p class="kp-h">Maakte mogelijk</p><div class="kp-links">${gen.filter(g => g.year >= d.year - 3).map(g => chip(g.id)).join('')}</div></div>` : ''}
-      ${gen.filter(g => g.year < d.year - 3).length ? `<div><p class="kp-h">Veranderde ook</p><div class="kp-links">${gen.filter(g => g.year < d.year - 3).map(g => chip(g.id)).join('')}</div></div>` : ''}
+      ${gen.length ? `<div><p class="kp-h">Maakte mogelijk</p><div class="kp-links">${gen.map(chip).join('')}</div></div>` : ''}
+      ${shp.length ? `<div><p class="kp-h">Speelde ook een rol bij</p><div class="kp-links">${shp.map(chip).join('')}</div></div>` : ''}
       ${after.length ? `<div><p class="kp-h">Bouwt voort op</p><div class="kp-links">${after.map(tchip).join('')}</div></div>` : ''}
       ${next.length ? `<div><p class="kp-h">Leidde tot</p><div class="kp-links">${next.map(tchip).join('')}</div></div>` : ''}</div>`;
     panel.hidden = false; panel.scrollTop = 0;
@@ -406,8 +408,8 @@
         <p>${d.text}</p>
         ${d.listen ? `<p class="kp-listen">${d.listen}</p>` : ''}
         ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((t, i) => `<div class="kp-track${t.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${t.artist}">${SOR.playIcon}</button>${t.cover ? `<img src="${t.cover}" alt="" loading="lazy" onerror="this.remove();this.parentNode&&0">` : ''}<div><b>${t.artist}</b><span>${t.title}${t.year ? ' · ' + t.year : ''}</span></div></div>`).join('')}</div></div>` : ''}
-        ${techFor(d.id).filter(o => o.year <= d.year + 3).length ? `<div><p class="kp-h">Techniek die dit mogelijk maakte</p><div class="kp-links">${techFor(d.id).filter(o => o.year <= d.year + 3).map(o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`).join('')}</div></div>` : ''}
-        ${techFor(d.id).filter(o => o.year > d.year + 3).length ? `<div><p class="kp-h">Techniek die dit later veranderde</p><div class="kp-links">${techFor(d.id).filter(o => o.year > d.year + 3).map(o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`).join('')}</div></div>` : ''}
+        ${techFor(d.id).length ? `<div><p class="kp-h">Techniek die dit mogelijk maakte</p><div class="kp-links">${techFor(d.id).map(o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`).join('')}</div></div>` : ''}
+        ${techShaped(d.id).length ? `<div><p class="kp-h">Techniek die er ook een rol in speelde</p><div class="kp-links">${techShaped(d.id).map(o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`).join('')}</div></div>` : ''}
         ${(d.parents || []).length ? `<div><p class="kp-h">Komt voort uit</p><div class="kp-links">${d.parents.map(chip).join('')}</div></div>` : ''}
         ${d.children.length ? `<div><p class="kp-h">Leidde tot</p><div class="kp-links">${d.children.map(chip).join('')}</div></div>` : ''}
         ${(d.mixtapes || []).length ? `<div><p class="kp-h">Lees in de reader</p><div class="kp-read">${d.mixtapes.map(m => { const mx = mixById.get(m.n); return `<a href="mixtape/${String(m.n).padStart(2, '0')}.html#${SOR.slug(m.heading)}"><small>${String(m.n).padStart(2, '0')}</small><b>${m.heading}</b><span>Mixtape ${m.n} · ${mx ? mx.title : ''} · ${m.track || ''}</span></a>`; }).join('')}</div></div>` : ''}
@@ -443,7 +445,7 @@
     if (state.path) highlight(null, new Set([...state.path.list.map(g => g.id)]));
     else highlight(d);
     state.tsel = null; tSel.classed('sel', false);
-    if (state.mode === 'tech') { const ts = new Set(techFor(d.id).map(x => x.id)); tSel.classed('hl', o => ts.has(o.id)); tLinkSel.classed('hl', l => l.g === d); tAfterSel.classed('hl', false); }
+    if (state.mode === 'tech') { const ts = new Set([...techFor(d.id), ...techShaped(d.id)].map(x => x.id)); tSel.classed('hl', o => ts.has(o.id)); tLinkSel.classed('hl', l => l.g === d); tAfterSel.classed('hl', false); }
     renderPanel(d);
     resizeStage();
     if (center) centerOn(d);
@@ -502,7 +504,7 @@
     state.mode = m;
     document.querySelectorAll('[data-mode]').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.mode === m)));
     drawBack(); svg.interrupt(); suppress = true; svg.call(zoom.transform, fitTransform()); place(true); setTimeout(() => { suppress = false; cullLabels(); place(false); }, 950); setTimeout(cullLabels, 1300);
-    if (state.sel) setTimeout(() => centerOn(state.sel), 950);
+    if (state.sel) { const s0 = state.sel; select(s0, false); setTimeout(() => { if (state.sel === s0) centerOn(s0); }, 950); }
   }
   if (!TI.length) document.querySelector('[data-mode=tech]')?.remove();
   document.querySelectorAll('[data-mode]').forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)));
