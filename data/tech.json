@@ -1,0 +1,2357 @@
+{
+ "lanes": [
+  {
+   "id": "opnemen",
+   "name": "Opnemen & studio",
+   "color": "#E8B04B"
+  },
+  {
+   "id": "instrumenten",
+   "name": "Instrumenten & versterking",
+   "color": "#E0603F"
+  },
+  {
+   "id": "elektronisch",
+   "name": "Elektronische klank",
+   "color": "#5BC0D6"
+  },
+  {
+   "id": "verspreiden",
+   "name": "Dragers & verspreiding",
+   "color": "#9D8CE0"
+  }
+ ],
+ "items": [
+  {
+   "id": "fonograaf",
+   "name": "Fonograaf",
+   "lane": "opnemen",
+   "year": 1877,
+   "place": {
+    "name": "Menlo Park, New Jersey",
+    "lat": 40.5596,
+    "lon": -74.3365
+   },
+   "who": "Thomas Edison",
+   "text": "In 1877 bouwde Thomas Edison in zijn laboratorium in Menlo Park een apparaat dat geluid kon vastleggen en terugspelen. Een naald kraste de trillingen van een stem in een laagje tinfolie, later in een wasrol. Voor het eerst kon je muziek horen zonder dat er een musicus in de kamer stond. De rollen waren lastig te kopiëren en klonken dun, maar ze maakten van een uitvoering iets wat je kon bewaren, verkopen en meenemen. Fanfares, populaire liedjes en voordrachten waren de eerste muziek die zo werd verkocht.",
+   "enabled": [
+    "tin-pan-alley",
+    "marsmuziek"
+   ],
+   "after": [],
+   "listen": "Luister door het geruis heen: wat is er van de muziek over, en wat ontbreekt er vergeleken met een moderne opname?",
+   "tracks": [
+    {
+     "title": "The Preacher and the Bear",
+     "artist": "Arthur Collins",
+     "year": 1912,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music5/v4/79/4a/c1/794ac1fb-7b4d-b503-2ea8-0b8502429f4e/mzaf_5841841803855820307.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/65/69/f2/6569f2dc-0c36-26e1-c323-96daa21bb3a7/680474245758.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Meet Me in St. Louis, Louis",
+     "artist": "Billy Murray",
+     "year": 1904,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3e/ca/1a/3eca1a5a-f874-43ec-8690-4c7a89735154/mzaf_5045958474600311842.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/18/9e/1d/189e1d01-a34b-e15c-4ce5-486771b54172/887396310605.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Mary Had a Little Lamb",
+     "artist": "Thomas Edison",
+     "year": 1927,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/83/91/38/mzm.qiboayuv.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/31/d4/3b/mzi.qepauybf.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "grammofoon",
+   "name": "Grammofoon en 78-toerenplaat",
+   "lane": "verspreiden",
+   "year": 1887,
+   "place": {
+    "name": "Washington D.C.",
+    "lat": 38.9072,
+    "lon": -77.0369
+   },
+   "who": "Emile Berliner",
+   "text": "Emile Berliner legde geluid niet vast op een rol maar op een platte schijf. Het voordeel: van één origineel kon je met een pers duizenden kopieën maken. Rond 1925 werd 78 toeren per minuut de gangbare snelheid. Een kant van zo'n schellakplaat bevat ongeveer drie minuten muziek, en die lengte bepaalde decennialang hoe lang een popnummer duurt. De plaat maakte van muziek een massaproduct. Jazz en blues bereikten via grammofoonplaten een publiek dat de musici nooit live had gezien.",
+   "enabled": [
+    "new-orleans-jazz",
+    "classic-blues",
+    "tin-pan-alley",
+    "marsmuziek"
+   ],
+   "after": [
+    "fonograaf"
+   ],
+   "listen": "Let op de lengte: past het nummer in ongeveer drie minuten, en hoor je dat de muzikanten daarop gerekend hebben?",
+   "tracks": [
+    {
+     "title": "Vesti la giubba (Pagliacci)",
+     "artist": "Enrico Caruso",
+     "year": 1907,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/a5/e8/04/a5e804c7-21f2-aa52-8fe4-9246b5e8dd9e/mzaf_5468088654447991109.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/9b/68/99/9b6899d7-7939-a7ad-bef0-80401605c2b3/887396199293.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Livery Stable Blues",
+     "artist": "Original Dixieland Jazz Band",
+     "year": 1917,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/9c/af/b8/mzm.mgsowvhm.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features/8d/ba/22/dj.igivctun.tif/600x600bb.jpg"
+    },
+    {
+     "title": "Crazy Blues",
+     "artist": "Mamie Smith",
+     "year": 1920,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/61/b4/9b/61b49bd0-65e2-269f-967f-2986d2ce1076/mzaf_13421626842995066777.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f8/fd/63/f8fd63c6-f2ba-c77d-679e-2e6ed14a27b5/669910112854.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "elektrische-opname",
+   "name": "Elektrische opname en microfoon",
+   "lane": "opnemen",
+   "year": 1925,
+   "place": {
+    "name": "New York",
+    "lat": 40.7128,
+    "lon": -74.006
+   },
+   "who": "Western Electric (Bell Labs)",
+   "text": "Tot 1925 zongen musici in een grote trechter, die de trillingen rechtstreeks in de plaat kraste. Wie zacht speelde, kwam er niet op. Western Electric ontwikkelde een systeem met een elektrische microfoon en een versterker, en de platenmaatschappijen Victor en Columbia namen het in 1925 over. Opnames klonken voortaan voller en helderder, met lage tonen en zachte details. Zangers konden dicht bij de microfoon intiem zingen. Die manier van zingen heet crooning, en ze werd het geluid van de populaire muziek van de jaren dertig.",
+   "enabled": [
+    "swing",
+    "country",
+    "chanson"
+   ],
+   "after": [
+    "grammofoon"
+   ],
+   "listen": "De zanger hoeft niet te roepen: hoor je hoe zacht en dichtbij de stem klinkt?",
+   "tracks": [
+    {
+     "title": "My Blue Heaven",
+     "artist": "Gene Austin",
+     "year": 1927,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9a/3c/98/9a3c9821-656c-a046-c8d3-71a85edb7eb5/mzaf_15061301711018028015.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/b5/58/39b55846-a04b-84ca-08fd-eb85cd332be8/3661318038757.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Blue Yodel No. 1 (T for Texas)",
+     "artist": "Jimmie Rodgers",
+     "year": 1927,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d1/9b/7f/d19b7ff1-23ae-4469-efd2-e383d320183f/mzaf_2006627208352320300.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/71/e3/db/71e3dbc6-a022-4dbd-b2fd-63ff627341d5/886444299114.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Where the Blue of the Night (Meets the Gold of the Day)",
+     "artist": "Bing Crosby",
+     "year": 1931,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/aa/1a/2a/aa1a2af3-3a18-d878-c00c-c2b8d7cd91ad/mzaf_9264324474815107844.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d7/13/4d/d7134d72-7283-e204-3846-e0c189a1c143/06UMGIM04667.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "name": "Radio",
+   "lane": "verspreiden",
+   "year": 1920,
+   "place": {
+    "name": "Pittsburgh",
+    "lat": 40.4406,
+    "lon": -79.9959
+   },
+   "who": "Westinghouse (zender KDKA)",
+   "text": "In november 1920 begon het station KDKA in Pittsburgh met geregelde uitzendingen; in Den Haag zond Hanso Idzerda al in 1919 muziek uit. In de jaren twintig kwam er in miljoenen huiskamers een radiotoestel. Muziek was ineens gratis en overal tegelijk te horen. Bigbands speelden live voor de radio en werden zo landelijk bekend, en programma's als de Grand Ole Opry in Nashville maakten van plattelandsmuziek een nationaal genre. Wie op de radio kwam, kon in één avond een heel land bereiken.",
+   "enabled": [
+    "swing",
+    "country",
+    "tin-pan-alley"
+   ],
+   "after": [],
+   "listen": "Stel je voor dat je dit hoort uit een kastje in de huiskamer: welk instrument draagt het beste over een kleine luidspreker?",
+   "tracks": [
+    {
+     "title": "Sing, Sing, Sing (With a Swing)",
+     "artist": "Benny Goodman",
+     "year": 1937,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/19/f7/40/19f7402a-5637-33dc-3ee6-f1fd6e80e172/mzaf_7892257756555099873.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/20/da/71/mzi.fbovsgpx.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Wildwood Flower",
+     "artist": "The Carter Family",
+     "year": 1928,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7c/28/72/7c287230-eadd-578d-9090-2a1f9c263b00/mzaf_6831128524010022083.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1e/aa/58/1eaa58a5-6dd8-2b54-5ea5-72b8da20bab0/mzi.kkozivwz.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Lovesick Blues",
+     "artist": "Hank Williams",
+     "year": 1949,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e4/7f/33/e47f3367-6697-856a-d7db-ad195c1001ac/mzaf_7574110990126434778.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/f6/4b/e0/f64be098-4f51-cf46-0ef2-64de1f3ad8e2/06UMGIM15743.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "jukebox",
+   "name": "Jukebox",
+   "lane": "verspreiden",
+   "year": 1927,
+   "place": {
+    "name": "Grand Rapids, Michigan",
+    "lat": 42.9634,
+    "lon": -85.6681
+   },
+   "who": "AMI (Automatic Musical Instrument Company)",
+   "text": "In 1927 bracht AMI een muntautomaat op de markt die elektrisch versterkt was en uit tien platen kon kiezen. In de jaren dertig en veertig stonden zulke jukeboxen in cafés, wegrestaurants en bars door heel Amerika. Voor een paar cent koos het publiek zelf wat er klonk. Daardoor wisten platenmaatschappijen precies welke nummers aansloegen, en Billboard hield vanaf de jaren veertig aparte jukeboxlijsten bij. Snelle, dansbare platen van jumpbluesbands als die van Louis Jordan werden in zwarte buurten grijsgedraaid.",
+   "enabled": [
+    "jump-blues",
+    "rhythm-and-blues",
+    "swing"
+   ],
+   "after": [
+    "grammofoon",
+    "elektrische-opname"
+   ],
+   "listen": "Waarom zou dit nummer goed werken in een rumoerig café met een muntautomaat in de hoek?",
+   "tracks": [
+    {
+     "title": "In the Mood",
+     "artist": "Glenn Miller",
+     "year": 1939,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e3/5d/ca/e35dca37-0efc-ab78-2f84-38d1e1ca52dd/mzaf_4861346961312726316.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1d/c8/ff/1dc8ff05-307c-0734-17ed-6a5f7bd645ff/mzi.varbrygk.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Caldonia",
+     "artist": "Louis Jordan",
+     "year": 1945,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d6/b9/1e/d6b91ef8-2a87-8c71-ac77-0b7844eabc2a/mzaf_10816694532171418872.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/58/25/f4/5825f4e3-0abb-0687-a96e-f13a57165747/00602567824428.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Good Rockin' Tonight",
+     "artist": "Wynonie Harris",
+     "year": 1948,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview71/v4/17/19/c6/1719c623-5156-cbc8-0fea-5c960ecdb297/mzaf_8151839340329305631.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/c6/4c/30/c64c301f-bb61-fade-153d-83d322205964/2320.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "magneetband",
+   "name": "Magneetband",
+   "lane": "opnemen",
+   "year": 1935,
+   "place": {
+    "name": "Berlijn",
+    "lat": 52.52,
+    "lon": 13.405
+   },
+   "who": "AEG en BASF (Magnetophon); na 1945 Ampex",
+   "text": "Op de radiotentoonstelling in Berlijn toonde AEG in 1935 de Magnetophon, een recorder die geluid vastlegde op een band met een magnetisch laagje van BASF. Na de oorlog bouwde het Amerikaanse Ampex de techniek na; de Ampex 200 kwam in 1948 op de markt. Band was een revolutie: je kon een opname knippen, plakken, achterstevoren afspelen en opnieuw opnemen. Componisten in Parijs en Keulen maakten er nieuwe muziek mee uit geluiden en tapelussen. Popstudio's gebruikten band om de beste stukken van verschillende takes aan elkaar te zetten.",
+   "enabled": [
+    "elektronische-studio",
+    "radiophonic"
+   ],
+   "after": [
+    "elektrische-opname"
+   ],
+   "listen": "Hier is de band zelf het instrument: welke klanken komen uit knippen, versnellen of over elkaar opnemen?",
+   "tracks": [
+    {
+     "title": "How High the Moon",
+     "artist": "Les Paul & Mary Ford",
+     "year": 1951,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/42/36/f4/4236f429-b202-35a6-1e3c-658e2c40e09a/mzaf_7751820042099122975.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e7/b6/d2/e7b6d243-802a-35a7-e496-e6620d4d6d85/00602547207869.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Gesang der Jünglinge",
+     "artist": "Karlheinz Stockhausen",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/3a/ec/e2/3aece271-377e-b8cd-d916-e3b36e00ecfc/mzaf_9673403280686862699.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/81/50/d9/8150d959-14ae-0c91-7293-0b06c4dd7073/cover.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Forbidden Planet (Main Title)",
+     "artist": "Louis & Bebe Barron",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/d8/83/54/mzm.pwvittwj.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/a9/bc/75/a9bc7514-fe4c-0b93-757a-bbbfbc9aae23/886788758537.tif/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "lp",
+   "name": "Langspeelplaat (lp)",
+   "lane": "verspreiden",
+   "year": 1948,
+   "place": {
+    "name": "New York",
+    "lat": 40.7128,
+    "lon": -74.006
+   },
+   "who": "Columbia Records (Peter Goldmark)",
+   "text": "In 1948 presenteerde Columbia de langspeelplaat: een plaat van vinyl met fijnere groeven die op 33⅓ toeren draait. Op één kant paste ruim twintig minuten muziek in plaats van drie. Eerst was de lp vooral bedoeld voor klassieke muziek, maar jazzmusici gebruikten de ruimte voor lange improvisaties en zangers als Frank Sinatra maakten albums rond één stemming. In de jaren zestig werd het album in de rock een kunstvorm: een samenhangend geheel met een hoes, een volgorde en soms een concept.",
+   "enabled": [
+    "cool-jazz",
+    "art-rock",
+    "prog-rock",
+    "singer-songwriter"
+   ],
+   "after": [
+    "grammofoon"
+   ],
+   "listen": "Dit nummer is gemaakt voor een album: wat zou er verloren gaan als je het los op de radio hoort?",
+   "tracks": [
+    {
+     "title": "In the Wee Small Hours of the Morning",
+     "artist": "Frank Sinatra",
+     "year": 1955,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/04/54/b1/0454b18e-8f5e-c7cb-ec80-1bdf8cbe80e6/mzaf_2523905459698006241.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/eb/1d/d3/eb1dd3bc-b806-a32c-fdf8-7a38c1eae9d2/13UABIM59248.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "So What",
+     "artist": "Miles Davis",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/54/e8/0a/54e80a8b-1d60-6b59-e908-6fd65c4ff783/mzaf_2469862574651846302.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/7f/9f/d6/mzi.vtnaewef.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "A Day in the Life",
+     "artist": "The Beatles",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/1c/d7/011cd729-a50b-9311-52f3-06fe99c81946/mzaf_4509223857921685574.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6f/79/8d/6f798d84-7475-8525-fc91-f7b51b2b5a9b/00602567725428.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "single",
+   "name": "45-toerensingle",
+   "lane": "verspreiden",
+   "year": 1949,
+   "place": {
+    "name": "Camden, New Jersey",
+    "lat": 39.9259,
+    "lon": -75.1196
+   },
+   "who": "RCA Victor",
+   "text": "RCA Victor antwoordde in 1949 op de lp met een kleine vinylplaat met een groot gat, die op 45 toeren draait. Op elke kant paste één nummer van een paar minuten. De single was goedkoop, onbreekbaar en paste in jukeboxen en draagbare platenspelers. Daarmee werd hij het product voor tieners met zakgeld. Rock-'n-roll was in de jaren vijftig vooral singlemuziek: een A-kant voor de radio, een B-kant erbij, en elke week een nieuwe hitlijst. De vorm van het popliedje van drie minuten bleef zo bestaan.",
+   "enabled": [
+    "rock-n-roll",
+    "doo-wop",
+    "rockabilly",
+    "brill-building"
+   ],
+   "after": [
+    "grammofoon",
+    "lp"
+   ],
+   "listen": "Hoe snel is het nummer ter zake? Tel hoeveel seconden het duurt voor de zang begint.",
+   "tracks": [
+    {
+     "title": "Rock Around the Clock",
+     "artist": "Bill Haley & His Comets",
+     "year": 1954,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/d2/fb/d7/d2fbd7f8-84d9-1261-b0dd-2af364c52b98/mzaf_228467968979699478.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/25/09/64/25096470-8f48-ab2f-320d-9cb6e20dc1cd/00076732016121.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Maybellene",
+     "artist": "Chuck Berry",
+     "year": 1955,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/12/50/52/125052f0-2940-8685-1250-d433e50e401b/mzaf_11536774450188596346.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/47/3e/0e/473e0eaa-5612-946a-7560-12f82e0b232d/20UMGIM70476.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Heartbreak Hotel",
+     "artist": "Elvis Presley",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/00/42/15/004215c8-a328-64bd-d8e5-bc86a0aa2af4/mzaf_1763054997972899063.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3e/63/93/3e6393fb-5fe2-1ef4-1c0d-6452919a351c/828768904824.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "slapback-echo",
+   "name": "Slapback-echo",
+   "lane": "opnemen",
+   "year": 1954,
+   "place": {
+    "name": "Memphis",
+    "lat": 35.1495,
+    "lon": -90.049
+   },
+   "who": "Sam Phillips (Sun Records)",
+   "text": "In zijn kleine Sun-studio in Memphis gebruikte Sam Phillips twee bandrecorders om een korte echo te maken: het geluid werd opgenomen en een fractie later nog een keer afgespeeld. Die ene snelle herhaling, de slapback, gaf stemmen en gitaren een ruimtelijke, stuiterende klank. Hij werd het geluid van de vroege platen van Elvis Presley en van de rockabilly. Kort daarna kwamen er losse echoapparaten met een bandlus, zoals de Echoplex en de Italiaanse Meazzi, die gitaristen van de indorock en de surf vaak gebruikten.",
+   "enabled": [
+    "rockabilly",
+    "rock-n-roll",
+    "indorock",
+    "surfrock"
+   ],
+   "after": [
+    "magneetband"
+   ],
+   "listen": "Luister naar het eind van elk woord: hoor je de korte tweede klap vlak achter de stem?",
+   "tracks": [
+    {
+     "title": "Blue Moon of Kentucky",
+     "artist": "Elvis Presley",
+     "year": 1954,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/eb/45/54/eb4554f6-a80b-900d-f429-3d39b980c9ec/mzaf_2878694346220382123.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/bf/fe/46/bffe46b6-50b9-a2ff-d341-80acd2bd9d0a/00015047800889_Cover.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Mystery Train",
+     "artist": "Elvis Presley",
+     "year": 1955,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/92/98/ca/9298ca48-e471-d39e-558a-20e2b12df561/mzaf_15834172158092952142.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/77/0d/7a/770d7a56-f5dc-c177-8d9e-65c38d608435/887396243798.tif/600x600bb.jpg"
+    },
+    {
+     "title": "Rock Little Baby of Mine",
+     "artist": "Tielman Brothers",
+     "year": 1958,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/a7/2a/54/a72a54a0-2454-5044-f869-99cd128208c6/mzaf_15869743071341236739.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ba/a1/a2/baa1a2e8-41c0-2037-b782-9da34703e477/8445281681760.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "elektrische-gitaar",
+   "name": "Elektrische gitaar",
+   "lane": "instrumenten",
+   "year": 1936,
+   "place": {
+    "name": "Kalamazoo, Michigan",
+    "lat": 42.2917,
+    "lon": -85.5872
+   },
+   "who": "George Beauchamp en Adolph Rickenbacker; Gibson (ES-150)",
+   "text": "Een akoestische gitaar verdween in een bigband achter de blazers. Begin jaren dertig bouwden George Beauchamp en Adolph Rickenbacker in Los Angeles een lapsteelgitaar met een elementopnemer, een magneet met een spoel die de trilling van de snaar omzet in stroom. In 1936 bracht Gibson de ES-150 uit, een holle jazzgitaar met zo'n element. Charlie Christian liet in de band van Benny Goodman horen dat de gitaar nu een solo-instrument kon zijn. In Chicago maakten bluesmuzikanten als Muddy Waters er na de oorlog een rauw, luid stadsgeluid mee.",
+   "enabled": [
+    "bebop",
+    "chicago-blues",
+    "rhythm-and-blues",
+    "jump-blues",
+    "country"
+   ],
+   "after": [
+    "elektrische-opname"
+   ],
+   "listen": "De gitaar staat vooraan: speelt hij akkoorden, of lange melodielijnen zoals een blazer?",
+   "tracks": [
+    {
+     "title": "Solo Flight",
+     "artist": "Benny Goodman Orchestra met Charlie Christian",
+     "year": 1941,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/dc/a9/a5/dca9a567-b148-c2ee-7f2c-10ec2904363d/mzaf_12133885932653382540.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/e3/d4/b4/e3d4b46a-30fa-4f80-46ed-6edba33e1d1d/886446716787.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Call It Stormy Monday",
+     "artist": "T-Bone Walker",
+     "year": 1947,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/31/ec/1c/31ec1c15-823f-d67f-4216-9429ae0f6ed8/mzaf_15390731760965909718.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/4b/33/8a/4b338ace-2087-dd8a-383c-ed56ac058e5c/0859381179092.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Rollin' Stone",
+     "artist": "Muddy Waters",
+     "year": 1950,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e4/06/a5/e406a531-0be5-8365-350d-a5bde637070c/mzaf_11776901813465118166.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/96/2d/9f/962d9fcb-f1a7-8280-8faa-2fdf048dae95/14UMGIM55917.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "precision-bass",
+   "name": "Fender Precision Bass",
+   "lane": "instrumenten",
+   "year": 1951,
+   "place": {
+    "name": "Fullerton, Californië",
+    "lat": 33.8704,
+    "lon": -117.9242
+   },
+   "who": "Leo Fender",
+   "text": "Een contrabas is groot, zacht en lastig mee te nemen. Leo Fender bracht in 1951 de Precision Bass uit: een elektrische basgitaar met frets, gebouwd als een solid body. Door de frets speelde een bassist 'precies' op toon, vandaar de naam. Met een versterker kon de bas eindelijk boven drums en gitaren uitkomen. In de jaren zestig werd de basgitaar een melodisch instrument. James Jamerson speelde in de studio van Motown in Detroit beweeglijke, syncopische baslijnen die het hart van de hits vormen.",
+   "enabled": [
+    "motown",
+    "funk",
+    "soul",
+    "reggae"
+   ],
+   "after": [
+    "elektrische-gitaar"
+   ],
+   "listen": "Volg alleen de bas: speelt hij één toon per tel, of een eigen melodie met loopjes?",
+   "tracks": [
+    {
+     "title": "My Girl",
+     "artist": "The Temptations",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/99/b3/ef/99b3ef00-3e74-5dfa-0d2e-4128ef5a9f0c/mzaf_12879689053309664622.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/84/2d/f1/842df19d-e5f4-3b9f-9405-6779bbc43fe0/06UMGIM07353.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Bernadette",
+     "artist": "Four Tops",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e0/8f/53/e08f537f-7fc6-ab36-33ee-61cc1042c902/mzaf_3681665474505703235.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/58/14/ef/5814ef0b-2110-d9a9-33a4-a319d9d6be3f/08UMGIM16418.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "What's Going On",
+     "artist": "Marvin Gaye",
+     "year": 1971,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/08/f3/f4/08f3f452-b24f-e25b-92bc-15850f1bdc6a/mzaf_14002930736666872327.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/76/36/2d/76362d74-cb7a-8ef9-104e-cde1d858e9a9/20UMGIM95279.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "telecaster",
+   "name": "Fender Telecaster",
+   "lane": "instrumenten",
+   "year": 1950,
+   "place": {
+    "name": "Fullerton, Californië",
+    "lat": 33.8704,
+    "lon": -117.9242
+   },
+   "who": "Leo Fender",
+   "text": "De holle elektrische gitaar ging rondzingen als de versterker hard stond. In Fullerton bouwde radiomonteur Leo Fender in 1950 een gitaar van een massieve plank hout, eerst Esquire en Broadcaster genoemd, vanaf 1951 Telecaster. De hals zat met bouten vast en de gitaar werd in een fabriek uit losse onderdelen gemaakt. Daardoor was hij betrouwbaar en betaalbaar. De Telecaster klinkt scherp en twangy. Hij werd het instrument van countrygitaristen in Bakersfield en Nashville, en later van pubrockers en punks.",
+   "enabled": [
+    "rock-n-roll",
+    "country",
+    "country-rock",
+    "punk"
+   ],
+   "after": [
+    "elektrische-gitaar"
+   ],
+   "listen": "Hoor je de scherpe, bijtende aanslag van de gitaar, die tussen de andere instrumenten door snijdt?",
+   "tracks": [
+    {
+     "title": "Act Naturally",
+     "artist": "Buck Owens",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2b/36/ca/2b36ca63-bb62-5a97-6dce-12f45dfa93e3/mzaf_9743929894454241334.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/cf/15/0d/cf150d6d-1257-a661-50e8-1d092a13466a/715187734227.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Hello Mary Lou",
+     "artist": "Ricky Nelson",
+     "year": 1961,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e6/9f/c5/e69fc502-8cdf-b71e-3c7d-4f1d1e034e00/mzaf_1556218179845642485.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/0a/c7/e3/0ac7e311-837f-1f71-a074-baec02da1553/20UMGIM01777.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Roxette",
+     "artist": "Dr. Feelgood",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1e/73/49/1e7349d5-4aa2-1729-a0ae-c02d455c81c6/mzaf_16599649049042202107.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d3/78/fd/d378fdca-fce4-9725-9f01-715168a9d81e/094636395159.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "les-paul",
+   "name": "Gibson Les Paul",
+   "lane": "instrumenten",
+   "year": 1952,
+   "place": {
+    "name": "Kalamazoo, Michigan",
+    "lat": 42.2917,
+    "lon": -85.5872
+   },
+   "who": "Gibson, in samenwerking met Les Paul",
+   "text": "Gibson antwoordde in 1952 op Fender met een eigen solid body, ontworpen in samenwerking met de gitarist en uitvinder Les Paul. De Les Paul is zwaarder dan een Fender, met een gewelfd blad en later dubbele elementen, humbuckers, die minder bromden. Hij houdt een toon lang vast en klinkt vol en warm. In de jaren zestig ontdekten Britse bluesgitaristen dat een Les Paul door een hard opengedraaide versterker een dikke, zingende toon gaf. Daarmee werd hij de gitaar van de bluesrock en de hardrock.",
+   "enabled": [
+    "blues-rock",
+    "hard-rock",
+    "british-beat"
+   ],
+   "after": [
+    "telecaster",
+    "elektrische-gitaar"
+   ],
+   "listen": "Luister hoe lang de gitaartonen blijven hangen voordat ze wegsterven.",
+   "tracks": [
+    {
+     "title": "Hide Away",
+     "artist": "Freddie King",
+     "year": 1961,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/02/d2/1c/02d21c3f-eb71-36de-bb4f-7537c272c247/mzaf_14699141787546577409.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/dc/a9/38/dca938b9-fa2c-5a7b-5132-ef03b7327ab9/224.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Hideaway",
+     "artist": "John Mayall",
+     "year": 1966,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0b/6c/09/0b6c09da-4431-7293-f9ea-88180b7dd5bf/mzaf_931275286864094608.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/0c/11/ca/0c11ca20-7902-b9ef-f65c-5e60c3010234/00602567827191.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "All Right Now",
+     "artist": "Free",
+     "year": 1970,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/70/07/c37007b5-6b36-dcd4-86cd-9ac2c93823ba/mzaf_8257531102751756853.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/8a/3a/73/8a3a73f3-dc5f-8646-bfa6-9903ff56c3f1/16UMGIM14876.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stratocaster",
+   "name": "Fender Stratocaster",
+   "lane": "instrumenten",
+   "year": 1954,
+   "place": {
+    "name": "Fullerton, Californië",
+    "lat": 33.8704,
+    "lon": -117.9242
+   },
+   "who": "Leo Fender",
+   "text": "In 1954 volgde de Stratocaster: een solid body met een afgeronde vorm, drie elementen en een tremolo-arm waarmee je de toon kunt laten zakken en terugveren. Door te schakelen tussen de elementen klinkt dezelfde gitaar helder en glazig of warm en rond. Buddy Holly maakte de Strat bekend in de rock-'n-roll, Hank Marvin van The Shadows in Europa. Jimi Hendrix gebruikte de tremolo-arm en feedback om tonen te laten janken en duiken. De Stratocaster is sindsdien een van de meest nagebouwde gitaren ter wereld.",
+   "enabled": [
+    "rock-n-roll",
+    "surfrock",
+    "psychedelic-rock",
+    "blues-rock"
+   ],
+   "after": [
+    "telecaster"
+   ],
+   "listen": "Hoor je de heldere, wat glazige klank van de gitaar, en ergens een toon die buigt of zakt?",
+   "tracks": [
+    {
+     "title": "That'll Be the Day",
+     "artist": "Buddy Holly & The Crickets",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e2/d1/79/e2d17994-3384-dd8e-f026-63d2ea43fee5/mzaf_3163611089629443049.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f4/cd/08/f4cd084a-0a05-1bfc-6880-39ade16200ce/00602567823322.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Little Wing",
+     "artist": "The Jimi Hendrix Experience",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/09/67/94/0967943b-3407-bb2a-97c4-c74c0f469cd6/mzaf_7175495451266454830.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e6/14/97/e614976f-c5cf-837c-2b64-c4ed08c304c3/mzm.asghqict.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Sultans of Swing",
+     "artist": "Dire Straits",
+     "year": 1978,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/97/ac/b697ac92-6cf1-19a4-803c-efe05b04dcd9/mzaf_3948405866313408921.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/67/6d/fb/676dfbc7-b763-582b-f60b-dab170b3c75e/06UMGIM60282.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "versterker",
+   "name": "Versterker en overdrive",
+   "lane": "instrumenten",
+   "year": 1962,
+   "place": {
+    "name": "Londen (Hanwell)",
+    "lat": 51.5067,
+    "lon": -0.3379
+   },
+   "who": "Leo Fender (versterkers vanaf de jaren veertig), Jim Marshall (JTM45, 1962)",
+   "text": "Een versterker hoort een signaal groter te maken zonder het te veranderen. Draai je hem verder open dan bedoeld, dan worden de toppen van de geluidsgolf afgekapt en klinkt de gitaar ruw en scheurend: overdrive. Link Wray prikte al in 1958 gaten in zijn luidspreker om dat geluid te krijgen. In 1962 bouwde Jim Marshall in zijn muziekwinkel in Hanwell, in West-Londen, een versterker die rockgitaristen hard en vervormd konden laten klinken. Uit dat geluid groeiden hardrock en heavy metal, met de powerchord als basis.",
+   "enabled": [
+    "hard-rock",
+    "blues-rock",
+    "garagerock",
+    "heavy-metal-80s",
+    "punk"
+   ],
+   "after": [
+    "elektrische-gitaar",
+    "les-paul"
+   ],
+   "listen": "Is de gitaar schoon of vervormd? Hoor je het verschil tussen losse tonen en de zware akkoorden?",
+   "tracks": [
+    {
+     "title": "Rumble",
+     "artist": "Link Wray & His Ray Men",
+     "year": 1958,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/19/90/6f/19906f75-1457-077b-fb73-a467e27ce802/mzaf_6564379907522233020.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/8f/b8/a7/mzi.iolrqjup.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "You Really Got Me",
+     "artist": "The Kinks",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/eb/b5/c2/ebb5c281-c64c-8093-659e-a90202bb876d/mzaf_10741802642975788884.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/5b/84/2b/5b842bd9-2e36-912c-b791-e3574785bfe8/4050538365245.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Highway to Hell",
+     "artist": "AC/DC",
+     "year": 1979,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d0/54/a9/d054a909-fe00-757a-b5fb-3760ea7cdf13/mzaf_15087080229874880055.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b9/c8/ef/b9c8ef42-bbc9-64df-11f8-717571f6730f/886443673458.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "fuzz",
+   "name": "Fuzzpedaal",
+   "lane": "instrumenten",
+   "year": 1962,
+   "place": {
+    "name": "Nashville",
+    "lat": 36.1627,
+    "lon": -86.7816
+   },
+   "who": "Glenn Snoddy en Revis Hobbs; Gibson (Maestro FZ-1)",
+   "text": "Tijdens een opname van Marty Robbins in Nashville ging een kanaal van de mengtafel kapot. De gitaarsolo in Don't Worry, een hit in 1961, klonk daardoor zoemend en vervormd, en het publiek vond het prachtig. Geluidstechnicus Glenn Snoddy en Revis Hobbs bouwden een schakeling die dat effect expres maakte. Gibson verkocht die vanaf 1962 als Maestro FZ-1 Fuzz-Tone, een van de eerste effectpedalen. Vanaf dan kon elke gitarist met één voetschakelaar kiezen tussen schoon en vuil. De fuzz werd het geluid van garagerock, psychedelica en later grunge.",
+   "enabled": [
+    "garagerock",
+    "psychedelic-rock",
+    "grunge",
+    "indie-shoegaze"
+   ],
+   "after": [
+    "versterker"
+   ],
+   "listen": "Vergelijk het fuzzgeluid met een gewone versterkte gitaar: zoemt het, kraakt het, klinkt het als een blazer?",
+   "tracks": [
+    {
+     "title": "Don't Worry",
+     "artist": "Marty Robbins",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/4f/c8/7d/4fc87d6a-e649-cecf-c05a-9c7a8ef98ebc/mzaf_125644766366361509.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/40/dd/81/40dd81b2-f6ea-6b7c-4f7b-1f0d79b659be/5099752035922.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "(I Can't Get No) Satisfaction",
+     "artist": "The Rolling Stones",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ee/4d/28/ee4d28cd-a465-1334-2863-efda9ea9669b/mzaf_8440807812349084607.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/6b/8c/5b/6b8c5bc2-cbf3-5d48-ac10-565dd728802b/13ABKIM00023.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Cherub Rock",
+     "artist": "The Smashing Pumpkins",
+     "year": 1993,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/c6/02/70c6025b-0aee-3506-0857-4f62387ca0ce/mzaf_12241401809215360870.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3a/dc/08/3adc08b0-e98c-b5dd-943e-a37c7ed06205/13UABIM03615.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "hammond",
+   "name": "Hammondorgel en Leslie",
+   "lane": "instrumenten",
+   "year": 1935,
+   "place": {
+    "name": "Chicago",
+    "lat": 41.8781,
+    "lon": -87.6298
+   },
+   "who": "Laurens Hammond; Don Leslie (Leslie-luidspreker)",
+   "text": "Laurens Hammond bouwde in 1935 in Chicago een elektrisch orgel voor kerken die geen pijporgel konden betalen. Draaiende schijfjes, tonewheels, wekken de tonen op, en met schuiven, drawbars, meng je de boventonen bij. Don Leslie bedacht een luidsprekerkast met draaiende hoorns die het orgel een zwevend, golvend geluid geeft. Jimmy Smith maakte het Hammond tot een jazzinstrument, Booker T. Jones tot het tweede leadgeluid van de soul bij Stax. In de Britse rock klonk het plechtig als in een kerk, of juist vervormd en hard.",
+   "enabled": [
+    "soul",
+    "stax",
+    "hard-bop",
+    "prog-rock",
+    "hard-rock"
+   ],
+   "after": [],
+   "listen": "Hoor je het zweven en golven van het orgel? Dat is de draaiende Leslie-luidspreker.",
+   "tracks": [
+    {
+     "title": "The Sermon",
+     "artist": "Jimmy Smith",
+     "year": 1958,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/e2/0d/f9/e20df93e-1d9c-b543-33f5-babad84daec0/mzaf_8052007591577752163.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/6d/02/46/6d024651-4b6d-6a95-df26-0a2570773f0a/Cover.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Green Onions",
+     "artist": "Booker T. & The M.G.'s",
+     "year": 1962,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/99/e4/2b/99e42b56-bea5-ec56-ccf8-6187e00fb1fd/mzaf_13596210360837261359.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/80/1f/25/801f2544-c688-6024-05a8-5340ab6f5849/mzi.ffuwcujj.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "A Whiter Shade of Pale",
+     "artist": "Procol Harum",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4a/88/88/4a888838-a629-25bf-fdc2-7e9c9cac5c8b/mzaf_14022015103656263181.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/10/0a/c0/100ac08f-a358-76a5-673f-2f0e229e58cb/239.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "meersporen",
+   "name": "Meersporenopname",
+   "lane": "opnemen",
+   "year": 1957,
+   "place": {
+    "name": "Redwood City, Californië",
+    "lat": 37.4852,
+    "lon": -122.2364
+   },
+   "who": "Ampex (Ross Snyder, Sel-Sync) en Les Paul",
+   "text": "Les Paul nam al rond 1950 partijen over elkaar heen op, door van de ene bandrecorder naar de andere te kopiëren. Bij Ampex bedacht Ross Snyder een manier om op een tweede spoor op te nemen terwijl je het eerste synchroon terughoort. In 1957 kreeg Les Paul de eerste achtsporenrecorder. Daarmee hoefde een band niet meer tegelijk te spelen: elke partij kon apart worden opgenomen, overgedaan en later gemengd. Popmuziek werd zo iets wat je in lagen bouwt, met tientallen stemmen en instrumenten die nooit samen in een ruimte stonden.",
+   "enabled": [
+    "prog-rock",
+    "art-rock",
+    "psychedelic-rock",
+    "softrock-aor"
+   ],
+   "after": [
+    "magneetband"
+   ],
+   "listen": "Probeer de lagen te tellen: hoeveel stemmen en instrumenten hoor je die onmogelijk tegelijk live gespeeld kunnen zijn?",
+   "tracks": [
+    {
+     "title": "Tubular Bells, Pt. 1",
+     "artist": "Mike Oldfield",
+     "year": 1973,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ec/f0/02/ecf002b9-5c47-08e5-f24a-2a2049310531/mzaf_12422808507319837625.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/e5/26/e9/e526e9ee-23a0-c828-38c3-4da56978ba16/09UMGIM14647.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Bohemian Rhapsody",
+     "artist": "Queen",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7d/14/18/7d1418e4-64c0-b06f-8837-fbba23749dd2/mzaf_14988402499380729715.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/dd/86/92/dd86925d-484d-8ee7-3985-ef3264214269/602527644264.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Good Vibrations",
+     "artist": "The Beach Boys",
+     "year": 1966,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/00/b3/53/00b35396-9e28-7d58-df02-ce6364688bc8/mzaf_16955730533358859023.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ef/b9/c5/efb9c577-61e6-b381-ca38-b1615081d677/13UABIM03827.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "transistorradio",
+   "name": "Transistorradio",
+   "lane": "verspreiden",
+   "year": 1954,
+   "place": {
+    "name": "Indianapolis",
+    "lat": 39.7684,
+    "lon": -86.1581
+   },
+   "who": "Regency (I.D.E.A.) en Texas Instruments",
+   "text": "De Regency TR-1 uit 1954 was de eerste transistorradio die in de winkel lag. Transistors vervingen de grote radiobuizen, waardoor een radio in je jaszak paste en op batterijen werkte. Tieners konden voortaan naar hun eigen muziek luisteren, buiten het zicht van hun ouders: op het strand, op straat, in hun slaapkamer. Producers stemden hun platen af op dat kleine luidsprekertje. Bij Motown controleerde men mixen op goedkope speakers, en Phil Spector bouwde een geluid dat ook door een piepklein radiootje vol klonk.",
+   "enabled": [
+    "motown",
+    "surfrock",
+    "british-beat",
+    "brill-building"
+   ],
+   "after": [
+    "radio"
+   ],
+   "listen": "Zet dit nummer op een telefoonspeaker: wat blijft er overeind, en wat valt weg?",
+   "tracks": [
+    {
+     "title": "Where Did Our Love Go",
+     "artist": "The Supremes",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d5/80/a7/d580a739-e524-989c-768c-cff5972e4bc6/mzaf_15755444933100972375.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/5d/c2/4d/5dc24de8-15d7-16e0-7585-72a2bcc721de/14UMGIM62198.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "I Get Around",
+     "artist": "The Beach Boys",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/be/72/83/be728392-331c-f15a-12f6-c3dbfaf47b9c/mzaf_12167566381878335089.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/21/f1/32/21f13205-b60b-9afa-742e-4b15dc1dd767/13UMGIM24815.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Dancing in the Street",
+     "artist": "Martha Reeves & The Vandellas",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a3/29/1f/a3291ff5-d1f7-4f30-1af8-c52000c115d4/mzaf_13717919433816832292.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/22/ba/a8/22baa8b5-0f31-6416-73df-f78e10f1bee0/00602537424900.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "theremin",
+   "name": "Theremin",
+   "lane": "elektronisch",
+   "year": 1920,
+   "place": {
+    "name": "Petrograd (Sint-Petersburg)",
+    "lat": 59.9343,
+    "lon": 30.3351
+   },
+   "who": "Lev Termen (Léon Theremin)",
+   "text": "De Russische natuurkundige Lev Termen bouwde rond 1920 een instrument dat je bespeelt zonder het aan te raken. Twee antennes meten de afstand tot je handen: de ene regelt de toonhoogte, de andere het volume. Het geluid is een glijdende, zingende toon die aan een stem of een zingende zaag doet denken. Clara Rockmore speelde er klassieke muziek op. In Hollywood werd de theremin in de jaren veertig en vijftig het geluid van spanning, waanzin en vliegende schotels. Later gebruikten ook rockmuzikanten als Jimmy Page hem.",
+   "enabled": [
+    "elektronische-studio"
+   ],
+   "after": [],
+   "listen": "De toon glijdt van noot naar noot zonder sprongen: waaraan doet die klank je denken?",
+   "tracks": [
+    {
+     "title": "The Swan",
+     "artist": "Clara Rockmore",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/6a/a4/59/6aa45950-65a7-a12f-4f82-23aff65562df/mzaf_7193973741744279973.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/43/28/d9/4328d98b-bfe8-35d8-a3cb-53ebd96ca4ec/675754037062.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "The Day the Earth Stood Still: Prelude / Outer Space / Radar",
+     "artist": "Bernard Herrmann",
+     "year": 1951,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/7e/90/2e/7e902e97-95f4-d485-548d-22488f741e22/mzaf_16149017432961918221.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/32/f5/96/mzi.rdhnvcwy.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Whole Lotta Love",
+     "artist": "Led Zeppelin",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8a/15/37/8a1537e5-9d18-7e44-4ca8-3295942263b6/mzaf_2401048427177636441.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1a/3d/bb/1a3dbb86-c1f8-737e-571f-d6b647a230be/dj.rhubuvkd.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "vocoder",
+   "name": "Vocoder",
+   "lane": "elektronisch",
+   "year": 1938,
+   "place": {
+    "name": "New York (Bell Labs)",
+    "lat": 40.7364,
+    "lon": -74.0094
+   },
+   "who": "Homer Dudley (Bell Labs)",
+   "text": "Homer Dudley ontwikkelde bij Bell Labs in de jaren dertig de vocoder, bedoeld om spraak efficiënt over telefoonlijnen te sturen. Het apparaat splitst een stem in frequentiebanden en legt het verloop daarvan op een ander geluid, bijvoorbeeld een synthesizer. Het resultaat is een sprekende machine. Wendy Carlos gebruikte de vocoder begin jaren zeventig in de muziek van A Clockwork Orange, en Kraftwerk maakte er het geluid van de mens-machine van. In electro en italo disco klonk de robotstem daarna overal.",
+   "enabled": [
+    "kraftwerk",
+    "electro",
+    "italo-disco",
+    "synthpop"
+   ],
+   "after": [],
+   "listen": "Waar hoor je de robotstem? Klinkt het als een zingende synthesizer of als een sprekende machine?",
+   "tracks": [
+    {
+     "title": "The Robots",
+     "artist": "Kraftwerk",
+     "year": 1978,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2c/f9/18/2cf9186f-19ba-5493-2bb1-7214b64ad611/mzaf_926537768433990309.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b7/c1/48/b7c1481a-5a92-4b71-ee35-ab7c890770da/5099996602256.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Mr. Blue Sky",
+     "artist": "Electric Light Orchestra",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/97/1e/46/971e4694-70f7-1ce7-1296-a679baca2c7d/mzaf_8404578978997779091.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2c/0f/f9/2c0ff9b3-693b-5690-a17d-641076ae3140/886445593945.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "O Superman",
+     "artist": "Laurie Anderson",
+     "year": 1981,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/53/41/cd/5341cdc9-9585-4579-102b-195465fe731f/mzaf_13230432915553702103.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d2/bc/83/d2bc8338-1acb-b518-ad8b-68d16cea0d62/075597996630.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "mellotron",
+   "name": "Mellotron",
+   "lane": "instrumenten",
+   "year": 1963,
+   "place": {
+    "name": "Birmingham",
+    "lat": 52.4862,
+    "lon": -1.8904
+   },
+   "who": "Leslie, Frank en Norman Bradley (Streetly Electronics), naar de Chamberlin van Harry Chamberlin",
+   "text": "Onder elke toets van een Mellotron zit een stukje geluidsband met een opname van een echt instrument: een viool, een fluit, een koor. Druk je een toets in, dan loopt dat bandje langs een afspeelkop. Na ongeveer acht seconden is het op. Het instrument werd vanaf 1963 in Birmingham gebouwd, naar het voorbeeld van de Amerikaanse Chamberlin. De strijkers en koren klinken net niet echt en zweven een beetje, en precies dat werd een eigen klank. De Mellotron is een voorloper van de sampler en werd het geluid van de progrock.",
+   "enabled": [
+    "prog-rock",
+    "art-rock",
+    "psychedelic-rock"
+   ],
+   "after": [
+    "magneetband"
+   ],
+   "listen": "Klinken de strijkers of koren als een echt orkest? Let op hoe de tonen een beetje zweven.",
+   "tracks": [
+    {
+     "title": "Nights in White Satin",
+     "artist": "The Moody Blues",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e4/a6/93/e4a69345-6c85-bd52-6dda-b28ceef6045f/mzaf_7293959112581740896.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/3b/69/1a/3b691ad6-7072-28a9-8eaa-16b38e238862/00602527917993.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Epitaph",
+     "artist": "King Crimson",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/4c/bd/c34cbda2-93d1-df8d-40c0-6e781ebdb4d8/mzaf_15356552359665599890.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music5/v4/2f/c7/19/2fc71988-6871-be2c-6731-a3d0f2a6b232/Court_2500px.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Watcher of the Skies",
+     "artist": "Genesis",
+     "year": 1972,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/50/f8/02/50f8025f-41ac-2045-637c-0f164e18b9c2/mzaf_9958733121228488416.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/c1/f0/f7/mzi.bgnwakyx.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "wall-of-sound",
+   "name": "Wall of Sound",
+   "lane": "opnemen",
+   "year": 1963,
+   "place": {
+    "name": "Los Angeles (Gold Star Studios)",
+    "lat": 34.0901,
+    "lon": -118.3176
+   },
+   "who": "Phil Spector",
+   "text": "Producer Phil Spector liet in Gold Star Studios in Los Angeles meerdere gitaristen, pianisten en drummers tegelijk dezelfde partij spelen, en stuurde het geluid door een galmkamer. Zo smolten alle instrumenten samen tot één dikke muur van klank, de Wall of Sound. Het was gemaakt om ook uit een kleine radio overweldigend te klinken. Spector behandelde de studio niet als een plek om een band vast te leggen, maar als een instrument op zich. Girlgroups als The Ronettes kregen zo hun grootse geluid, en later bouwde Bruce Springsteen erop voort.",
+   "enabled": [
+    "brill-building",
+    "heartland-rock"
+   ],
+   "after": [
+    "meersporen",
+    "transistorradio"
+   ],
+   "listen": "Probeer losse instrumenten te onderscheiden. Lukt het, of hoor je vooral één grote massa?",
+   "tracks": [
+    {
+     "title": "Be My Baby",
+     "artist": "The Ronettes",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/06/ce/70/06ce701e-ac41-6211-e2f5-2d8ad2c9a214/mzaf_1045130405855876957.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/17/05/50/17055031-c0c1-7e73-42d9-5e3517236f02/886443431355.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "You've Lost That Lovin' Feelin'",
+     "artist": "The Righteous Brothers",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/27/94/88/27948864-ce63-2adb-49a6-22956cf5746f/mzaf_8491636246613322854.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/be/95/6b/be956b6b-23e6-d27d-356e-c81b22216abf/00602527149899.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "River Deep - Mountain High",
+     "artist": "Ike & Tina Turner",
+     "year": 1966,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9f/f0/1c/9ff01c5b-44ef-92f5-c77a-8cc7b66f0c2d/mzaf_11013347127098198484.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6a/4f/34/6a4f34da-eda3-de03-e633-f402fddd4ad6/00602527639543.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "cassette",
+   "name": "Compact cassette",
+   "lane": "verspreiden",
+   "year": 1963,
+   "place": {
+    "name": "Hasselt",
+    "lat": 50.9307,
+    "lon": 5.3378
+   },
+   "who": "Philips (team van Lou Ottens)",
+   "text": "Het team van Lou Ottens bij Philips in Hasselt ontwikkelde een klein plastic doosje met magneetband, dat in 1963 werd gepresenteerd. Philips gaf het formaat vrij aan andere fabrikanten, en de cassette werd een wereldstandaard. Iedereen kon voortaan thuis muziek opnemen, kopiëren en een eigen mixtape maken. Na de Sony Walkman uit 1979 nam je die muziek ook mee op straat. Bands brachten hun eerste demo's uit op cassette, en in Algerije verspreidde raï zich vooral via goedkope cassettes buiten de radio om.",
+   "enabled": [
+    "rai",
+    "punk",
+    "hiphop",
+    "indie-shoegaze"
+   ],
+   "after": [
+    "magneetband"
+   ],
+   "listen": "Dit nummer verspreidde zich via kopieën en bandjes: wat zegt het geluid over voor wie het bedoeld was?",
+   "tracks": [
+    {
+     "title": "C30 C60 C90 Go",
+     "artist": "Bow Wow Wow",
+     "year": 1980,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f0/c6/c2/f0c6c2e1-c308-80e8-275a-d470ef3a650c/mzaf_12937649823346787822.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/65/76/1d/65761d17-e0f4-7edd-fe53-5ea9f0bda9b8/0724382722359_1400x1400_300dpi.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Didi",
+     "artist": "Khaled",
+     "year": 1992,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9d/61/8a/9d618ac8-0ef3-109a-0a3b-c9fa4385b153/mzaf_5933319126833270422.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/65/42/61/6542610d-1f3f-5e90-b075-10d28ffa6c86/21UMGIM40583.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Haoulou",
+     "artist": "Cheb Mami",
+     "year": 1990,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9e/0e/a4/9e0ea400-37c1-2af5-2d79-5867813d000f/mzaf_17627484743486852800.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/cc/b7/fe/ccb7fef3-460d-ecd8-ca14-91eb594645a1/724384712259.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "moog",
+   "name": "Moog-synthesizer",
+   "lane": "elektronisch",
+   "year": 1964,
+   "place": {
+    "name": "Trumansburg, New York",
+    "lat": 42.5423,
+    "lon": -76.6663
+   },
+   "who": "Robert Moog",
+   "text": "Robert Moog bouwde vanaf 1964 in Trumansburg synthesizers uit losse modules die je met snoeren verbond. Een oscillator maakt een toon, een filter haalt er boventonen uit, een envelope bepaalt hoe de toon aanzet en wegsterft. De modules sturen elkaar met elektrische spanning. Wendy Carlos liet in 1968 met Switched-On Bach horen wat het instrument kon, en het album werd een enorm succes. Daarna gebruikten rockbands de Moog voor solo's en nieuwe klankkleuren. Het kenmerkende geluid zit vooral in het filter, dat een toon laat 'opengaan'.",
+   "enabled": [
+    "moog",
+    "prog-rock",
+    "ambient"
+   ],
+   "after": [
+    "theremin"
+   ],
+   "listen": "Hoor je een toon die van dof naar helder opengaat? Dat is het filter van de Moog.",
+   "tracks": [
+    {
+     "title": "Strange Days",
+     "artist": "The Doors",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/35/fd/37/35fd37ff-96aa-10ec-0621-6d76ae9fd172/mzaf_14320538022486256535.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/e8/49/28/e84928b3-d1d7-1742-f572-82837bbb0a0b/603497838745.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Here Comes the Sun",
+     "artist": "The Beatles",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cd/7d/83/cd7d834f-34bf-7be0-1647-0fb0920d25a7/mzaf_5281747653026802926.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/df/db/61/dfdb615d-47f8-06e9-9533-b96daccc029f/18UMGIM31076.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Lucky Man",
+     "artist": "Emerson, Lake & Palmer",
+     "year": 1970,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/be/e6/7d/bee67da8-c8ca-fde3-b2ee-57908c10f4d8/mzaf_10089964705634244669.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/bc/0f/08/bc0f08cd-d003-af13-1d60-5cc0b8e20f4a/4050538184976.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "rhodes",
+   "name": "Fender Rhodes",
+   "lane": "instrumenten",
+   "year": 1965,
+   "place": {
+    "name": "Fullerton, Californië",
+    "lat": 33.8704,
+    "lon": -117.9242
+   },
+   "who": "Harold Rhodes, met Fender",
+   "text": "Harold Rhodes ontwikkelde een elektrische piano zonder snaren. Een hamertje slaat tegen een dun metalen staafje, en een element zet die trilling om in stroom, net als bij een gitaar. Na een basversie uit 1959 kwam in 1965 de volledige Fender Rhodes op de markt. De klank is warm en zacht klokkend, en gaat grommen als je harder aanslaat. Miles Davis liet zijn pianisten eind jaren zestig op de Rhodes spelen, en het instrument werd vast onderdeel van jazzrock en soul, en later van neo-soul.",
+   "enabled": [
+    "fusion",
+    "neo-soul",
+    "smooth-jazz",
+    "softrock-aor"
+   ],
+   "after": [
+    "elektrische-gitaar"
+   ],
+   "listen": "Luister naar de toetsenpartij: hoor je de zachte, klokkende klank, en het grommen bij harde aanslag?",
+   "tracks": [
+    {
+     "title": "In a Silent Way",
+     "artist": "Miles Davis",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2d/44/52/2d4452eb-09b6-23cc-20a0-f785d3b31e03/mzaf_1693825392874386614.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/f3/91/31/f391312d-0abf-bd64-3d19-8e6ba0d9774f/MilesDavis_InASilentWay_G010000669542M_F_001_RGB.jpeg/600x600bb.jpg"
+    },
+    {
+     "title": "Riders on the Storm",
+     "artist": "The Doors",
+     "year": 1971,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/11/5a/43/115a4319-c508-25d8-d39c-d1372dc17838/mzaf_17386827050456345735.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/af/19/0c/af190c65-23fc-4f5f-a317-ef983601f7c0/603497838691.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "You Are the Sunshine of My Life",
+     "artist": "Stevie Wonder",
+     "year": 1972,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/c6/09/aac609b1-e959-ecc4-eaa4-a217b11ef12a/mzaf_5768445052689851350.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/62/61/61/626161c0-f4d7-e6ff-8586-768340ef278f/00602537002382.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "studio-instrument",
+   "name": "De studio als instrument",
+   "lane": "opnemen",
+   "year": 1966,
+   "place": {
+    "name": "Londen (Abbey Road)",
+    "lat": 51.532,
+    "lon": -0.1779
+   },
+   "who": "The Beatles met George Martin en de technici van EMI; Brian Wilson in Los Angeles",
+   "text": "In 1966 hielden de Beatles op met optreden en gingen ze vooral in de studio werken. Met producer George Martin en technici van EMI gebruikten ze tapelussen, achterstevoren afgespeelde band, gevarieerde bandsnelheid en ADT, een trucje waarmee een tweede bandrecorder een stem automatisch verdubbelt. In Los Angeles bouwde Brian Wilson van The Beach Boys Pet Sounds op met studiomuzikanten. Een plaat was niet langer een verslag van een optreden, maar een werk dat alleen in de studio kon bestaan. Daar groeiden psychedelische rock en art rock uit.",
+   "enabled": [
+    "psychedelic-rock",
+    "art-rock",
+    "prog-rock"
+   ],
+   "after": [
+    "meersporen",
+    "wall-of-sound"
+   ],
+   "listen": "Welke klanken op deze opname kan geen band live op een podium spelen?",
+   "tracks": [
+    {
+     "title": "Tomorrow Never Knows",
+     "artist": "The Beatles",
+     "year": 1966,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/06/32/5c/06325cdd-595a-1d3c-70cb-edbf95f12180/mzaf_12201596573310501527.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/58/4a/10/584a1058-de0a-6a6b-d0bd-da09a028b8bc/00602567705499.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "God Only Knows",
+     "artist": "The Beach Boys",
+     "year": 1966,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a6/d0/40/a6d040a3-40f1-c2cf-c6c1-3e9fd3f484aa/mzaf_11838690916794001351.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/35/bb/c4/35bbc4eb-9387-97b0-b138-64b7a949ea43/13UABIM03512.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Money",
+     "artist": "Pink Floyd",
+     "year": 1973,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5b/ef/88/5bef88e5-2177-f2bd-403e-11b9b23430dc/mzaf_10616705930074106033.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/49/86/18/49861852-877b-0992-fa27-58b25fa032b5/196589805232.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "wah-wah",
+   "name": "Wah-wahpedaal",
+   "lane": "instrumenten",
+   "year": 1966,
+   "place": {
+    "name": "Sepulveda, Los Angeles",
+    "lat": 34.2133,
+    "lon": -118.4706
+   },
+   "who": "Brad Plunkett (Warwick Electronics / Thomas Organ Company)",
+   "text": "In 1966 ontwikkelde Brad Plunkett bij de Thomas Organ Company een pedaal met een filter dat je met je voet open en dicht beweegt. De gitaar klinkt daardoor alsof hij 'wa-wa' zegt, als een trompet met een demper. Het pedaal werd verkocht onder de merken Vox en Cry Baby. Jimi Hendrix maakte er een sprekende, jankende stem van. In funk en soul speelden gitaristen de wah begin jaren zeventig juist ritmisch, en zo werd hij het geluid van blaxploitationfilms als Shaft.",
+   "enabled": [
+    "funk",
+    "psychedelic-rock",
+    "blues-rock",
+    "philly-soul"
+   ],
+   "after": [
+    "versterker"
+   ],
+   "listen": "Hoor je de gitaar 'praten'? Let op hoe het geluid opent en sluit op het ritme.",
+   "tracks": [
+    {
+     "title": "Voodoo Child (Slight Return)",
+     "artist": "The Jimi Hendrix Experience",
+     "year": 1968,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f1/32/97/f13297c3-a924-17f8-5474-d58cf349bfb5/mzaf_1241301881066225662.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4e/3a/4f/4e3a4fbb-7824-2cb6-9cc7-5ff3490140fc/mzi.yzsqzxhe.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "White Room",
+     "artist": "Cream",
+     "year": 1968,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/34/9e/d5/349ed5b9-e9aa-9d26-c64e-c6ab6228b07d/mzaf_15062683168602368065.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c3/3d/f7/c33df7d6-72be-fefe-d517-907633e2aa59/00602537803163.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Theme from Shaft",
+     "artist": "Isaac Hayes",
+     "year": 1971,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bf/05/91/bf05914e-a677-8cb4-ae98-1975f8d0a381/mzaf_14838525544075494134.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/33/0c/65/330c651a-328b-fb78-6869-976fdb6bf25c/00888072024588.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "minimoog",
+   "name": "Minimoog",
+   "lane": "elektronisch",
+   "year": 1970,
+   "place": {
+    "name": "Trumansburg, New York",
+    "lat": 42.5423,
+    "lon": -76.6663
+   },
+   "who": "R.A. Moog Inc. (Robert Moog, Bill Hemsath, Jim Scott, Chad Hunt)",
+   "text": "De grote modulaire Moog was een kast vol kabels voor een studio. In 1970 kwam de Minimoog: een draagbare synthesizer met de belangrijkste onderdelen vast ingebouwd, zonder snoeren. Je zette hem op een podium naast het orgel, en de synthesizer werd een gewoon bandinstrument. De Minimoog speelt één toon tegelijk en is beroemd om zijn vette baslijnen en scherpe leadklanken. Bernie Worrell speelde er de bas mee in de funk van Parliament, Kraftwerk gebruikte hem op Autobahn, en Gary Numan bracht hem in de synthpop.",
+   "enabled": [
+    "kraftwerk",
+    "funk",
+    "synthpop",
+    "prog-rock",
+    "fusion"
+   ],
+   "after": [
+    "moog"
+   ],
+   "listen": "Zoek de diepe, ronde synthesizerbas of de felle synthmelodie: welke speelt de Minimoog?",
+   "tracks": [
+    {
+     "title": "Autobahn",
+     "artist": "Kraftwerk",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/59/76/f0/5976f0df-62c8-3c8b-d512-84dee6200c2e/mzaf_13420799019023363204.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/49/a6/b0/49a6b061-cbd8-ede5-446d-dae8b50e3b32/5099996601457.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Flash Light",
+     "artist": "Parliament",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b3/0f/ae/b30fae51-ff94-ef3c-a985-982cbdc083c6/mzaf_5365387214449879649.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/15/68/31/15683110-5d60-1a2a-e196-18be48cf5c30/00602567825920.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Cars",
+     "artist": "Gary Numan",
+     "year": 1979,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/76/e1/c676e178-0304-3e9a-a555-918230b4b86a/mzaf_13881814480050126046.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6d/48/fd/6d48fdae-76f8-cb9b-62c6-51606741c7d5/607618001063.png/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "technics",
+   "name": "Technics SL-1200 en scratchen",
+   "lane": "instrumenten",
+   "year": 1972,
+   "place": {
+    "name": "Osaka (Kadoma)",
+    "lat": 34.7381,
+    "lon": 135.5826
+   },
+   "who": "Matsushita (Technics, team van Shuichi Obata); dj's in de Bronx",
+   "text": "Matsushita bracht in 1972 onder de naam Technics de SL-1200 uit, een draaitafel met directe aandrijving. De motor is sterk en houdt de snelheid vast, ook als je de plaat met je hand tegenhoudt of terugdraait. Dj's in de Bronx gebruikten twee draaitafels om de drumbreak van een funkplaat eindeloos te herhalen. Door de plaat ritmisch heen en weer te bewegen ontstond het scratchen, waarmee de draaitafel een instrument werd. De SL-1200 werd de standaard in hiphop- en clubdj-booths over de hele wereld.",
+   "enabled": [
+    "hiphop",
+    "golden-age-hiphop",
+    "electro",
+    "chicago-house"
+   ],
+   "after": [
+    "single",
+    "lp"
+   ],
+   "listen": "Hoor je het krassende scratchgeluid? Daar beweegt een dj een plaat met de hand heen en weer.",
+   "tracks": [
+    {
+     "title": "The Adventures of Grandmaster Flash on the Wheels of Steel",
+     "artist": "Grandmaster Flash",
+     "year": 1981,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/92/2d/85/922d85d0-5eff-3af1-4978-76be6f7c486b/mzaf_14918989349601431988.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/76/9e/db/769edb01-ae5b-f160-a02b-a777ec21cc7d/5050159108909.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Rockit",
+     "artist": "Herbie Hancock",
+     "year": 1983,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/45/c2/e9/45c2e9c4-c3b6-2bd3-a581-487392cd3e04/mzaf_5703566645168058789.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ca/33/c1/ca33c117-0019-208b-8265-8812d1f6e36c/827969459324.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Peter Piper",
+     "artist": "Run-DMC",
+     "year": 1986,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c8/5d/68/c85d6825-7084-1264-29d2-4249d295fd24/mzaf_3430438062034503190.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/da/76/21/da762101-ee6b-d3b5-954e-9dab4c16c45a/078221640824.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "dub",
+   "name": "Mengtafel als instrument (dub)",
+   "lane": "opnemen",
+   "year": 1973,
+   "place": {
+    "name": "Kingston",
+    "lat": 17.9714,
+    "lon": -76.7936
+   },
+   "who": "King Tubby, Lee 'Scratch' Perry",
+   "text": "In Kingston maakten producers voor de B-kant van singles een instrumentale versie zonder zang. Technicus King Tubby ging verder: in zijn kleine studio liet hij instrumenten op de mengtafel in en uit vallen, zette er lange echo en galm op en filterde het geluid. Zo werd van een bestaande opname een nieuw nummer gemaakt: dub. Het mengpaneel was zijn instrument. Ideeën uit dub, zoals ruimte, een zware bas en de remix, kwamen terug in hiphop, jungle, triphop en dubstep.",
+   "enabled": [
+    "dub",
+    "dancehall",
+    "jungle-dnb",
+    "dubstep",
+    "triphop"
+   ],
+   "after": [
+    "meersporen",
+    "soundsystem"
+   ],
+   "listen": "Let op wat er wegvalt en terugkomt: welk instrument verdwijnt in de echo, en wanneer?",
+   "tracks": [
+    {
+     "title": "King Tubby Meets Rockers Uptown",
+     "artist": "Augustus Pablo",
+     "year": 1976,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f8/b7/8b/f8b78b08-3bde-a133-a608-4556f3ef986c/mzaf_10079801202145289307.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music69/v4/ac/60/09/ac600972-01a6-9bae-3629-04cf5c6e7779/054645703567.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Blackboard Jungle Dub",
+     "artist": "The Upsetters",
+     "year": 1973,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/57/de/1c/57de1ce2-7e07-be0c-e89e-b40052702c8f/mzaf_14001524848420521009.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/c6/5a/d4/mzi.lbmwiowb.tif/600x600bb.jpg"
+    },
+    {
+     "title": "Dub From the Roots",
+     "artist": "King Tubby",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/03/3e/9d/033e9dfe-5394-b892-8472-db343d16944f/mzaf_14701631383483881531.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/80/8f/85/mzi.rtmvbljs.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "soundsystem",
+   "name": "Soundsystem",
+   "lane": "instrumenten",
+   "year": 1950,
+   "place": {
+    "name": "Kingston",
+    "lat": 17.9714,
+    "lon": -76.7936
+   },
+   "who": "o.a. Tom the Great Sebastian, Duke Reid, Coxsone Dodd",
+   "text": "In de arme wijken van Kingston draaiden vanaf de jaren vijftig soundsystems: rijdende discotheken met zelfgebouwde versterkers en enorme luidsprekerkasten. Eerst speelden ze Amerikaanse rhythm-and-blues, later eigen Jamaicaanse platen. Eigenaars als Duke Reid en Coxsone Dodd begonnen zelf platen op te nemen om iets te hebben wat de concurrent niet had. De deejay praatte en toastte over de muziek, een voorloper van rap. DJ Kool Herc nam die gewoonte mee naar de Bronx, waar ze uitgroeide tot hiphop.",
+   "enabled": [
+    "reggae",
+    "dub",
+    "dancehall",
+    "hiphop"
+   ],
+   "after": [
+    "single"
+   ],
+   "listen": "De deejay praat en roept over een bestaande plaat heen: hoor je hoe de stem een instrument wordt?",
+   "tracks": [
+    {
+     "title": "Wake the Town",
+     "artist": "U-Roy",
+     "year": 1970,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/39/c9/31/39c931f0-20e8-8427-37f9-0e62b52a7555/mzaf_4820680777590531906.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/6f/76/d1/6f76d10c-5b16-760b-6ceb-62640b727e0a/5050159905621.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "S.90 Skank",
+     "artist": "Big Youth",
+     "year": 1972,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/90/fd/83/90fd83c0-a8ae-2e9e-aba8-c49736eed0de/mzaf_6062690295709970283.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/04/fd/e4/04fde4a2-d6b0-84c3-6fca-d3a0601b6534/5414939927966.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Zungguzungguguzungguzeng",
+     "artist": "Yellowman",
+     "year": 1982,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ec/53/52/ec535202-565c-b4b7-182c-f808bc21e7ec/mzaf_14889509995442752253.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/57/1b/d4/571bd443-ebab-ca85-9970-9540ba55cb54/054645416269.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "fairlight",
+   "name": "Fairlight CMI",
+   "lane": "elektronisch",
+   "year": 1979,
+   "place": {
+    "name": "Sydney",
+    "lat": -33.8688,
+    "lon": 151.2093
+   },
+   "who": "Peter Vogel en Kim Ryrie",
+   "text": "De Australiërs Peter Vogel en Kim Ryrie brachten in 1979 de Fairlight CMI uit, een computer met toetsenbord en lichtpen. Hij kon een echt geluid digitaal opnemen en dat onder de toetsen zetten, op elke toonhoogte: een sampler. Het idee van de Mellotron werkte nu zonder bandjes, met elk geluid dat je maar kon opnemen. De Fairlight was zo duur dat alleen sterren en grote studio's hem konden betalen. Peter Gabriel, Kate Bush en producer Trevor Horn bouwden er hele platen mee op.",
+   "enabled": [
+    "synthpop",
+    "new-romantic",
+    "art-rock"
+   ],
+   "after": [
+    "mellotron",
+    "minimoog"
+   ],
+   "listen": "Hoor je geluiden die als echte instrumenten of geluiden beginnen, maar onnatuurlijk precies herhaald worden?",
+   "tracks": [
+    {
+     "title": "Shock the Monkey",
+     "artist": "Peter Gabriel",
+     "year": 1982,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/33/b9/be/33b9beed-6f28-ac82-2082-1be9bf8729a9/mzaf_13225526633298706530.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music1/v4/fb/43/28/fb432825-9561-0763-c750-65c8a7aa82a3/884108003473.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Relax",
+     "artist": "Frankie Goes to Hollywood",
+     "year": 1983,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6d/b6/48/6db648ab-8b25-648a-420a-15fd086f0947/mzaf_17017095599203750844.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/cf/70/59/cf7059f9-ea77-d9ae-0769-81c62c6e7f20/18UMGIM12100.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Running Up That Hill (A Deal With God)",
+     "artist": "Kate Bush",
+     "year": 1985,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9d/b4/87/9db487bc-9aa6-390d-911d-7e234bc227f0/mzaf_571823162673168934.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2c/3e/c9/2c3ec991-0f6e-bec3-7eff-750f50c5b3a6/cover.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "linndrum",
+   "name": "Linn LM-1",
+   "lane": "elektronisch",
+   "year": 1980,
+   "place": {
+    "name": "Los Angeles",
+    "lat": 34.0522,
+    "lon": -118.2437
+   },
+   "who": "Roger Linn",
+   "text": "Roger Linn bracht in 1980 de LM-1 uit, de eerste drumcomputer met digitale opnames van echte drums in plaats van elektronisch nagebootste klanken. Je programmeerde een patroon en de machine speelde het strak en eindeloos af, met een ingebouwde mogelijkheid om het ritme een beetje swing te geven. In 1982 volgde de goedkopere LinnDrum. De machines zijn te horen op talloze hits uit de jaren tachtig, van The Human League en Michael Jackson tot Prince, die de drums vaak ongewoon gestemd en bewerkt gebruikte.",
+   "enabled": [
+    "synthpop",
+    "modern-rnb",
+    "new-wave"
+   ],
+   "after": [],
+   "listen": "Klinken de drums als een drummer of als een machine? Let op hoe gelijk elke slag is.",
+   "tracks": [
+    {
+     "title": "Don't You Want Me",
+     "artist": "The Human League",
+     "year": 1981,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fb/bd/8f/fbbd8f96-b30d-40f6-c91a-7668330390bb/mzaf_5831637823041295870.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/60/b1/b0/60b1b052-1a98-b1c7-7554-dc68d91da6e7/13UABIM56819.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Billie Jean",
+     "artist": "Michael Jackson",
+     "year": 1982,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/dc/bc/8a/dcbc8a3e-4ce1-c00d-cc02-eda2212053c7/mzaf_8347559338388601510.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "When Doves Cry",
+     "artist": "Prince & The Revolution",
+     "year": 1984,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0f/d3/ae/0fd3ae2b-542d-170e-f148-f4d08949a006/mzaf_2606432863197016679.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/00/17/f2/0017f24f-e580-b77a-71a8-1bc7b75881bf/603497822065.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "tr-808",
+   "name": "Roland TR-808",
+   "lane": "elektronisch",
+   "year": 1980,
+   "place": {
+    "name": "Osaka",
+    "lat": 34.6937,
+    "lon": 135.5023
+   },
+   "who": "Roland (Tadao Kikumoto, Makoto Muroi)",
+   "text": "De Roland TR-808 kwam in 1980 op de markt als hulpmiddel voor demo's. Hij gebruikt geen opnames van echte drums: elk geluid wordt elektronisch opgewekt. Muzikanten vonden het nep klinken en Roland stopte na een paar jaar met de productie. Tweedehands werd hij goedkoop, en jonge producers ontdekten de bassdrum die lang en laag uitklinkt, een sub-bas die je meer voelt dan hoort. De 808 werd de basis van electro, Miami bass en trap, en '808' betekent in de hiphop nu gewoon: een diepe, lange bas.",
+   "enabled": [
+    "electro",
+    "trap",
+    "southern-hiphop",
+    "modern-rnb",
+    "hiphop"
+   ],
+   "after": [],
+   "listen": "Luister naar de bassdrum: is het een korte klap, of een lange lage toon die langzaam wegsterft?",
+   "tracks": [
+    {
+     "title": "Sexual Healing",
+     "artist": "Marvin Gaye",
+     "year": 1982,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/c7/d2/00/c7d200c2-7726-5a38-1b13-81dc6cbbda24/mzaf_13927014083609634281.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/63/e3/3b/mzi.mwgwudzp.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Planet Rock",
+     "artist": "Afrika Bambaataa & The Soulsonic Force",
+     "year": 1982,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/91/a5/22/91a522da-8cd6-387e-46b6-e095e5484e3d/mzaf_11279334351897539720.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c1/f3/03/c1f303f2-4d0d-372e-83d8-1586629ee844/603497907281.png/600x600bb.jpg"
+    },
+    {
+     "title": "Love Lockdown",
+     "artist": "Kanye West",
+     "year": 2008,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/95/3c/eb/953ceb05-96c1-8ded-e82d-b644e68c5acf/mzaf_5781120797947159708.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fb/5c/f2/fb5cf235-2ae9-34c3-1ddb-ef896fb14175/16UMGIM58688.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "tb-303",
+   "name": "Roland TB-303",
+   "lane": "elektronisch",
+   "year": 1981,
+   "place": {
+    "name": "Osaka",
+    "lat": 34.6937,
+    "lon": 135.5023
+   },
+   "who": "Roland (Tadao Kikumoto)",
+   "text": "De TB-303 Bass Line was bedoeld voor gitaristen die alleen oefenden en een bassist misten. Het kastje heeft één oscillator, een filter en een sequencer waarin je een baslijn noot voor noot programmeert, met accenten en glijdende tonen. Het klonk niet als een basgitaar en flopte; in 1984 ging hij uit productie. In Chicago ontdekten producers dat je tijdens het spelen aan de knoppen voor cutoff en resonance kon draaien. Dezelfde baslijn gaat dan piepen, kwaken en janken. Dat geluid kreeg de naam acid.",
+   "enabled": [
+    "acid-house",
+    "rave",
+    "trance",
+    "gabber"
+   ],
+   "after": [
+    "tr-808"
+   ],
+   "listen": "De noten blijven bijna gelijk, maar de klank verandert steeds: hoor je het filter open- en dichtgaan?",
+   "tracks": [
+    {
+     "title": "Acid Tracks",
+     "artist": "Phuture",
+     "year": 1987,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b6/12/38/b612389a-be83-25ea-ba69-1d0b39316f7a/mzaf_16166663817180313334.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/72/37/f1/7237f186-8a65-8713-507f-74a4e59fcf47/888831194842.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Acperience 1",
+     "artist": "Hardfloor",
+     "year": 1992,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b6/ab/29/b6ab2960-b400-0a61-5e92-d254242fa807/mzaf_9924453691037160278.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/0d/41/fc/mzi.yshxprcn.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Higher State of Consciousness (Tweekin Acid Funk Mix)",
+     "artist": "Josh Wink",
+     "year": 1995,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/d7/fa/1d/d7fa1dad-042c-2642-b78e-91b8d4a46afa/mzaf_17681874199413628082.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/c9/ac/8c/c9ac8c5f-e9aa-596f-495e-e45d69c54972/0732183232168.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "mtv",
+   "name": "MTV en de videoclip",
+   "lane": "verspreiden",
+   "year": 1981,
+   "place": {
+    "name": "New York",
+    "lat": 40.7128,
+    "lon": -74.006
+   },
+   "who": "Warner-Amex Satellite Entertainment",
+   "text": "Op 1 augustus 1981 begon in de Verenigde Staten MTV, een televisiezender die de hele dag videoclips uitzond. De eerste clip was Video Killed the Radio Star van The Buggles. Een popster moest voortaan ook goed in beeld komen, met kleding, kapsel en verhaal. Britse synthpop- en New Romantic-groepen, die al met beeld bezig waren, veroverden zo de Amerikaanse hitlijsten. MTV draaide in de eerste jaren bijna alleen witte rock; pas toen de clips van Michael Jackson op de zender kwamen, veranderde dat.",
+   "enabled": [
+    "new-romantic",
+    "synthpop",
+    "glam-metal",
+    "british-eurobeat"
+   ],
+   "after": [
+    "radio"
+   ],
+   "listen": "Dit nummer werd groot met een videoclip: welke beelden horen er in je hoofd bij?",
+   "tracks": [
+    {
+     "title": "Video Killed the Radio Star",
+     "artist": "The Buggles",
+     "year": 1979,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f8/86/41/f8864178-e88b-c457-ba5e-d3735c24b64b/mzaf_11658591132409709159.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/16/21/ea/1621eaf0-f7c8-c9e9-5eaf-e11a7ec87610/06UMGIM01037.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Beat It",
+     "artist": "Michael Jackson",
+     "year": 1982,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/88/cd/46/88cd46bd-dba7-1dc2-a63b-e8c111ac4fc3/mzaf_4042555053237612653.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Money for Nothing",
+     "artist": "Dire Straits",
+     "year": 1985,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/42/b5/0e/42b50ec2-9d89-70f9-684a-55feb3820075/mzaf_15303419763425883726.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/76/41/b9/7641b9cb-650e-8c9c-bad8-7196f8193a7d/25UMGIM39996.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "cd",
+   "name": "Compact disc (cd)",
+   "lane": "verspreiden",
+   "year": 1982,
+   "place": {
+    "name": "Eindhoven",
+    "lat": 51.4416,
+    "lon": 5.4697
+   },
+   "who": "Philips en Sony",
+   "text": "Philips en Sony ontwikkelden samen de compact disc, die in 1982 op de markt kwam. Muziek staat erop als digitale code: 44.100 metingen per seconde per kanaal, uitgelezen door een laser. Een cd ruist niet en slijt niet, en bevat ruim een uur muziek. In de jaren negentig werd de cd de standaard en verdiende de industrie meer dan ooit, ook doordat mensen hun oude platen opnieuw kochten. Maar een digitale kopie is precies gelijk aan het origineel. Met een cd-brander en een computer lag de weg naar gratis kopiëren open.",
+   "enabled": [
+    "britpop",
+    "pop-stockholm",
+    "boybands-girlbands"
+   ],
+   "after": [
+    "lp",
+    "cassette"
+   ],
+   "listen": "Luister naar de stiltes en de zachte stukken: hoor je ruis of tikken, zoals bij een plaat of cassette?",
+   "tracks": [
+    {
+     "title": "My Life",
+     "artist": "Billy Joel",
+     "year": 1978,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/29/76/b2/2976b22c-50c2-5acf-c1b5-eb3903096ffd/mzaf_54673202754025077.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d6/02/07/d60207ae-a49f-8f20-c8e6-d58e794b9ae5/dj.lzzblgca.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "The Visitors",
+     "artist": "ABBA",
+     "year": 1981,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fd/fc/21/fdfc2183-fa40-5771-cc8f-b228f29b0d5f/mzaf_12006525396458906163.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e0/9b/13/e09b134a-0de4-f95d-d751-cf10cea4f343/12UMGIM11986.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Brothers in Arms",
+     "artist": "Dire Straits",
+     "year": 1985,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4b/a5/2d/4ba52d75-4d7f-6d93-4d20-7035df13ecaf/mzaf_15774609647100936395.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/76/41/b9/7641b9cb-650e-8c9c-bad8-7196f8193a7d/25UMGIM39996.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "dx7",
+   "name": "Yamaha DX7",
+   "lane": "elektronisch",
+   "year": 1983,
+   "place": {
+    "name": "Hamamatsu",
+    "lat": 34.7108,
+    "lon": 137.7261
+   },
+   "who": "Yamaha, naar de FM-synthese van John Chowning (Stanford)",
+   "text": "De Yamaha DX7 uit 1983 werkte niet met filters, maar met FM-synthese: de ene golf laat de frequentie van een andere heel snel op en neer gaan. Het principe kwam van John Chowning van Stanford University. De klank is helder, glazig en metalig, goed voor elektrische piano's, bellen en felle bassen. De DX7 was betaalbaar en betrouwbaar en werd een van de best verkochte synthesizers ooit. Omdat programmeren lastig was, gebruikten veel muzikanten de fabrieksklanken, zoals de elektrische piano en de slapbas. Die bepaalden het geluid van de jaren tachtig.",
+   "enabled": [
+    "synthpop",
+    "softrock-aor",
+    "modern-rnb"
+   ],
+   "after": [
+    "minimoog"
+   ],
+   "listen": "Zoek de heldere, wat metalige synthklank of de pittige synthbas: zo klinkt FM.",
+   "tracks": [
+    {
+     "title": "What's Love Got to Do with It",
+     "artist": "Tina Turner",
+     "year": 1984,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ba/09/17/ba091764-1af3-618f-262a-74faf26b1f30/mzaf_16893314707240902732.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/66/3e/86/663e8609-192f-a35c-54ce-0911bbafb3de/825646112883.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Take On Me",
+     "artist": "a-ha",
+     "year": 1985,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2b/38/02/2b3802d7-c646-e2ba-d85d-e968c4149bb2/mzaf_1456367453160287920.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/86/98/7d/86987d9d-320b-0246-4f4e-343b32056b8d/mzi.qmnpjmnr.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Take My Breath Away (Love Theme from Top Gun)",
+     "artist": "Berlin",
+     "year": 1986,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fb/74/fb/fb74fb0b-83f3-186a-4833-e0ebdb86cf10/mzaf_6965137412837280913.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/81/2f/27/812f27f8-4c88-7b16-8a54-5113fa169781/dj.jvcruggi.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "midi",
+   "name": "MIDI",
+   "lane": "elektronisch",
+   "year": 1983,
+   "place": {
+    "name": "Anaheim, Californië",
+    "lat": 33.8366,
+    "lon": -117.9143
+   },
+   "who": "Dave Smith (Sequential) en Ikutaro Kakehashi (Roland)",
+   "text": "Tot 1983 konden synthesizers van verschillende merken niet met elkaar praten. Dave Smith van Sequential en Ikutaro Kakehashi van Roland stelden een gezamenlijke standaard voor, MIDI, die in januari 1983 op de muziekbeurs NAMM in Anaheim voor het eerst werd gedemonstreerd. Via MIDI vertellen instrumenten en computers elkaar welke noot er klinkt, hoe hard en hoe lang. Met één toetsenbord kon je meerdere synthesizers bespelen, of een computer alles laten afspelen. Thuisstudio's met een Atari-computer en een sampler werden zo betaalbaar. Elke DAW werkt nog steeds met MIDI.",
+   "enabled": [
+    "synthpop",
+    "big-beat",
+    "eurodance",
+    "chicago-house"
+   ],
+   "after": [
+    "tr-808",
+    "minimoog"
+   ],
+   "listen": "Alles in dit nummer loopt strak samen: welke partijen zou een computer hier aansturen?",
+   "tracks": [
+    {
+     "title": "Right Here, Right Now",
+     "artist": "Fatboy Slim",
+     "year": 1998,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/89/6d/ad/896dad1d-c721-430e-ae28-8142f8a2e70c/mzaf_14620595002834114074.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/97/04/52/97045290-59ff-5f50-6cee-28594a376ae3/5025425551130.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "The Rockafeller Skank",
+     "artist": "Fatboy Slim",
+     "year": 1998,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7a/aa/ad/7aaaade6-82f8-00d1-11cb-f188bd6cfe51/mzaf_6648132432493367123.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/97/04/52/97045290-59ff-5f50-6cee-28594a376ae3/5025425551130.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Praise You",
+     "artist": "Fatboy Slim",
+     "year": 1998,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ae/4d/a8/ae4da883-692e-845a-9521-82fe3359057f/mzaf_3427027005974056596.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/97/04/52/97045290-59ff-5f50-6cee-28594a376ae3/5025425551130.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "tr-909",
+   "name": "Roland TR-909",
+   "lane": "elektronisch",
+   "year": 1983,
+   "place": {
+    "name": "Osaka",
+    "lat": 34.6937,
+    "lon": 135.5023
+   },
+   "who": "Roland (Tadao Kikumoto)",
+   "text": "De TR-909 uit 1983 was de opvolger van de 808. Bassdrum, snare en toms worden nog elektronisch opgewekt, maar de bekkens en hi-hats zijn digitale opnames. De machine had bovendien MIDI. Ook de 909 verkocht slecht en werd tweedehands goedkoop. Producers in Chicago en Detroit gebruikten de stevige, droge bassdrum op elke tel en de sissende open hi-hat ertussen. Dat patroon werd de basis van house en techno, en daarna van bijna alle Europese dansmuziek.",
+   "enabled": [
+    "chicago-house",
+    "detroit-techno",
+    "berlin-techno",
+    "french-house",
+    "gabber"
+   ],
+   "after": [
+    "tr-808",
+    "midi"
+   ],
+   "listen": "Tel mee met de bassdrum op elke tel, en luister naar de hi-hat die er steeds tussen sist.",
+   "tracks": [
+    {
+     "title": "Can You Feel It",
+     "artist": "Mr. Fingers",
+     "year": 1986,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/20/11/a8/2011a847-6530-d3a3-f692-93964167b92c/mzaf_3911902257412834512.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f1/e8/c1/f1e8c10a-df1a-2a90-4dc6-0c903d6432ac/827170141889.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "The Bells",
+     "artist": "Jeff Mills",
+     "year": 1997,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/05/89/f1/0589f1c5-d452-944d-2fcd-0e18f843d19f/mzaf_18228041146557263852.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6c/6e/58/6c6e5867-beaf-2b29-95d2-b2e76ac34bb9/5021620912981.png/600x600bb.jpg"
+    },
+    {
+     "title": "Revolution 909",
+     "artist": "Daft Punk",
+     "year": 1997,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a3/33/db/a333dbde-e62a-31d9-7c35-268bee4c4ff4/mzaf_4861833288436582197.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/34/8d/c7/348dc71c-d75e-9baf-671a-994e9e74b018/dj.pimdxdmf.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "beatsampler",
+   "name": "Beatsampler (SP-1200, MPC)",
+   "lane": "elektronisch",
+   "year": 1987,
+   "place": {
+    "name": "Scotts Valley, Californië",
+    "lat": 37.0511,
+    "lon": -122.0147
+   },
+   "who": "E-mu Systems (SP-1200); Akai met Roger Linn (MPC60, 1988)",
+   "text": "Met de E-mu SP-1200 uit 1987 en de Akai MPC60 uit 1988 kon een producer een stukje van een plaat opnemen, in stukken knippen en die op pads leggen. Door op de pads te tikken speel je de stukjes als een drumstel van samples, en een ingebouwde sequencer zet ze in een patroon. Hiphop werd zo een collage van drums, blazers en baslijnen uit oude platen. De korte sampletijd en de wat korrelige klank van de SP-1200 werden een eigen geluid. J Dilla speelde de pads met de hand in, zonder quantize, waardoor zijn beats losjes swingen.",
+   "enabled": [
+    "golden-age-hiphop",
+    "triphop",
+    "nu-jazz",
+    "neo-soul",
+    "g-funk"
+   ],
+   "after": [
+    "fairlight",
+    "linndrum",
+    "technics"
+   ],
+   "listen": "Welke stukjes komen van oude platen? Hoor je de korrel en de herhaling van een sample?",
+   "tracks": [
+    {
+     "title": "They Reminisce Over You (T.R.O.Y.)",
+     "artist": "Pete Rock & C.L. Smooth",
+     "year": 1992,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/52/b8/51/52b85198-a70c-eed9-776a-039309e0ce93/mzaf_12437832700950408275.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f4/af/9e/f4af9e48-72fc-3a4b-eec2-3e49cc812f1f/mzi.fftpsysp.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Building Steam with a Grain of Salt",
+     "artist": "DJ Shadow",
+     "year": 1996,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/7f/45/f67f45e6-452c-8a3b-0a65-4e9e3b144c93/mzaf_7518486072204083774.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/0d/14/6d/0d146d5c-44c5-22e2-c596-2242180f4774/5400863103361_cover.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Mass Appeal",
+     "artist": "Gang Starr",
+     "year": 1994,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5a/c6/41/5ac64179-0c71-c07f-833a-34edcdae14db/mzaf_913104939012741066.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/87/9d/a0/879da0f2-a8a8-7fb7-6d6e-bb07fd4f9138/13UABIM53984.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "breakbeat",
+   "name": "Breakbeat-sampling (Amen-break)",
+   "lane": "elektronisch",
+   "year": 1992,
+   "place": {
+    "name": "Londen",
+    "lat": 51.5074,
+    "lon": -0.1278
+   },
+   "who": "producers in de Britse rave- en junglescene",
+   "text": "In 1969 speelde drummer Gregory Coleman op Amen, Brother van The Winstons een drumsolo van een paar seconden. Hiphopproducers sampleden die break eind jaren tachtig. Begin jaren negentig gingen producers in Londen verder: ze versnelden de Amen-break en andere breaks tot ver boven de 160 slagen per minuut en hakten ze met samplers in kleine stukjes, die ze in nieuwe volgordes zetten. Daaronder legden ze zware basslijnen uit de dub. Zo ontstond jungle, en daaruit drum-and-bass.",
+   "enabled": [
+    "jungle-dnb",
+    "big-beat",
+    "golden-age-hiphop"
+   ],
+   "after": [
+    "beatsampler",
+    "technics"
+   ],
+   "listen": "Herken je dezelfde drumbreak in een ander tempo? Luister hoe de stukjes in een nieuwe volgorde zijn geknipt.",
+   "tracks": [
+    {
+     "title": "Amen, Brother",
+     "artist": "The Winstons",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/13/a9/95/13a995f1-f13c-7310-8f28-98afc6650d3f/mzaf_12501176371929270962.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/76/97/b6/mzi.luuhcssz.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Straight Outta Compton",
+     "artist": "N.W.A",
+     "year": 1988,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/de/3f/7ade3fef-eaaf-29d7-177f-44053f47da4a/mzaf_2815859573567003534.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/4c/b1/32/4cb13290-7d01-1949-57e9-a8a1874e60a2/19UMGIM79184.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Terrorist",
+     "artist": "Renegade",
+     "year": 1994,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a6/ce/63/a6ce6321-9335-6ba9-f4af-3f7ae10a1b18/mzaf_2568888001277673077.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b3/ff/c2/b3ffc25e-b36f-3019-5e4b-3defb01b8eeb/dj.ibuqeymv.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "daw",
+   "name": "Pro Tools en de DAW",
+   "lane": "opnemen",
+   "year": 1991,
+   "place": {
+    "name": "Menlo Park, Californië",
+    "lat": 37.453,
+    "lon": -122.1817
+   },
+   "who": "Digidesign (Peter Gotcher en Evan Brooks)",
+   "text": "Digidesign bracht in 1991 Pro Tools uit, een systeem waarmee je op een Apple-computer meersporen kon opnemen en bewerken zonder band. Zo'n programma heet een digital audio workstation, of DAW. Livin' la Vida Loca van Ricky Martin werd in 1999 de eerste nummer 1-hit die helemaal in Pro Tools was opgenomen en gemixt. Later maakten programma's als Logic, Cubase, FL Studio en Ableton Live van elke laptop een studio. Een bedroom producer kan nu thuis een complete plaat maken, met plug-ins die oude synthesizers en drumcomputers nadoen.",
+   "enabled": [
+    "edm",
+    "hyperpop",
+    "tiktok-pop",
+    "dubstep",
+    "trap"
+   ],
+   "after": [
+    "meersporen",
+    "midi"
+   ],
+   "listen": "Dit nummer is in de computer gemaakt: hoor je hoe strak geknipt en precies alles op zijn plek staat?",
+   "tracks": [
+    {
+     "title": "Livin' la Vida Loca",
+     "artist": "Ricky Martin",
+     "year": 1999,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/08/a7/cb/08a7cb6d-0618-3c01-6b80-2b92aaca7406/mzaf_15654413058067067771.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ab/3c/ed/ab3cedd0-03a6-0802-ec42-2f48c4eb118c/074646989128.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "bad guy",
+     "artist": "Billie Eilish",
+     "year": 2019,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/87/1f/c3871f7e-3260-d615-1c66-5fdca2c3a48f/mzaf_10721331211699880949.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1a/37/d1/1a37d1b1-8508-54f2-f541-bf4e437dda76/19UMGIM05028.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Scary Monsters and Nice Sprites",
+     "artist": "Skrillex",
+     "year": 2010,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/48/1d/f2/481df22a-e26c-8d82-df42-b245415f0e52/mzaf_17921545611228568896.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/ac/7f/06/mzi.cmuaapze.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "auto-tune",
+   "name": "Auto-Tune",
+   "lane": "opnemen",
+   "year": 1997,
+   "place": {
+    "name": "Scotts Valley, Californië",
+    "lat": 37.0511,
+    "lon": -122.0147
+   },
+   "who": "Andy Hildebrand (Antares Audio Technologies)",
+   "text": "Andy Hildebrand gebruikte wiskunde uit de olie-industrie om de toonhoogte van een stem te meten. Zijn software Auto-Tune, uitgebracht in 1997, schuift valse noten ongemerkt naar de juiste toon. Bij Believe van Cher zetten de producers de correctiesnelheid op nul. De stem sprong daardoor zonder overgang van toon naar toon, met een hoorbaar knikje. Wat onhoorbaar moest zijn, werd een effect. T-Pain maakte het zijn handelsmerk, en in trap, afrobeats en hyperpop werd Auto-Tune een gewoon onderdeel van de stem.",
+   "enabled": [
+    "trap",
+    "hyperpop",
+    "afrobeats",
+    "tiktok-pop"
+   ],
+   "after": [
+    "daw"
+   ],
+   "listen": "Luister naar de lange noten: glijdt de stem natuurlijk, of springt hij met een knikje van toon naar toon?",
+   "tracks": [
+    {
+     "title": "Believe",
+     "artist": "Cher",
+     "year": 1998,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9c/52/d8/9c52d83d-242e-abc4-68fc-273eeb8f0358/mzaf_10714034642820090237.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/bb/90/f3/bb90f392-b78d-f180-ba6b-f04d2d1e62fd/s05.kfnyrece.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Buy U a Drank (Shawty Snappin')",
+     "artist": "T-Pain feat. Yung Joc",
+     "year": 2007,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bc/60/5e/bc605ede-ecda-fedf-768e-dd9a84b0de13/mzaf_10084103049860749705.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/00/f0/e1/00f0e199-13d5-33c4-bc76-edf88b3876b5/886449120666.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Lollipop",
+     "artist": "Lil Wayne",
+     "year": 2008,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c0/c2/f1/c0c2f146-9884-0621-580c-a731dd9eea30/mzaf_4094925966192690879.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f9/6c/dc/f96cdc5c-09fe-06b6-4629-be4afeb71cca/08UMGIM15512.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "mp3-napster",
+   "name": "Mp3 en Napster",
+   "lane": "verspreiden",
+   "year": 1999,
+   "place": {
+    "name": "Boston",
+    "lat": 42.3398,
+    "lon": -71.0892
+   },
+   "who": "Fraunhofer-Institut (Karlheinz Brandenburg); Shawn Fanning en Sean Parker",
+   "text": "Aan het Fraunhofer-Institut in Erlangen ontwikkelden onder anderen Karlheinz Brandenburg en zijn collega's de mp3: een bestandsformaat dat weglaat wat het oor nauwelijks hoort. Een nummer wordt zo ongeveer tien keer kleiner. In juni 1999 bracht student Shawn Fanning in Boston met Sean Parker Napster uit, een programma waarmee miljoenen mensen mp3's gratis van elkaars computers haalden. Metallica en de platenmaatschappijen stapten naar de rechter, en in 2001 ging Napster offline. Het delen ging door, en de cd-verkoop herstelde nooit meer.",
+   "enabled": [
+    "alternative-rock",
+    "nu-metal"
+   ],
+   "after": [
+    "cd"
+   ],
+   "listen": "Dit nummer had een rol in de geschiedenis van de mp3 en Napster. Lees de uitleg en bedenk waarom juist dit nummer.",
+   "tracks": [
+    {
+     "title": "Tom's Diner",
+     "artist": "Suzanne Vega",
+     "year": 1987,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/39/b8/b5/39b8b5c0-418b-abc5-d99a-e5d58bd5eb91/mzaf_16795076917487923449.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/a6/b4/1aa6b49e-6018-f8ba-c346-713d3c4ba24b/00075021513624.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "I Disappear",
+     "artist": "Metallica",
+     "year": 2000,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/38/96/3e/38963e01-0bd0-e61d-8721-7c5074477c7f/mzaf_17101463267487764332.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/d2/23/2f/d2232f28-11b7-a5a4-db82-33927a079427/00602517839342.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Everything in Its Right Place",
+     "artist": "Radiohead",
+     "year": 2000,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c5/eb/e3/c5ebe37f-2f48-0daf-dfe3-2a138386925d/mzaf_12219830978364632777.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/bd/8e/13/bd8e1358-b367-a689-cb84-cebd0b067dc4/634904078263.png/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "ipod-itunes",
+   "name": "iPod en iTunes Store",
+   "lane": "verspreiden",
+   "year": 2001,
+   "place": {
+    "name": "Cupertino, Californië",
+    "lat": 37.323,
+    "lon": -122.0322
+   },
+   "who": "Apple",
+   "text": "In oktober 2001 presenteerde Apple de iPod: een kleine speler met een harde schijf en een draaiwiel, met 'duizend nummers in je broekzak'. In april 2003 opende de iTunes Store, waar je legaal nummers kon downloaden voor 99 cent per stuk. Je kocht voortaan één nummer in plaats van een heel album, en de single kwam terug als bestand. De reclames van Apple, met silhouetten die dansen op muziek van bands als Jet en Feist, werden zelf een manier om een hit te maken.",
+   "enabled": [
+    "alternative-rock",
+    "indie-shoegaze"
+   ],
+   "after": [
+    "mp3-napster"
+   ],
+   "listen": "Dit nummer klonk in een iPod-reclame: waarom past het goed bij een beeld van iemand die met oordopjes danst?",
+   "tracks": [
+    {
+     "title": "Are You Gonna Be My Girl",
+     "artist": "Jet",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/de/e5/cbdee5d2-84dc-7c19-9451-bc23d8f984f4/mzaf_3703499201510363096.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a2/7d/13/a27d131f-ee4f-bae1-e810-07e829c33498/0075596289269.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Vertigo",
+     "artist": "U2",
+     "year": 2004,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/4e/6c/7a4e6cfd-8c82-d84b-e532-4dc251be3b0d/mzaf_4729366778423265194.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/21/96/14/21961489-3856-0329-410e-22e4e293bb02/17UMGIM87715.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "1234",
+     "artist": "Feist",
+     "year": 2007,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c2/e9/a7/c2e9a72a-b393-0e77-37cb-d8c41701f80e/mzaf_8321851034703142008.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/e6/6d/ff/e66dff47-8233-7148-d78f-a9e5d2fa1411/00602527878751.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "youtube",
+   "name": "YouTube",
+   "lane": "verspreiden",
+   "year": 2005,
+   "place": {
+    "name": "San Mateo, Californië",
+    "lat": 37.563,
+    "lon": -122.3255
+   },
+   "who": "Chad Hurley, Steve Chen en Jawed Karim",
+   "text": "YouTube begon in 2005 als website waar iedereen video's kon delen. Binnen een paar jaar was het de plek waar de videoclip naartoe verhuisde, en voor veel jongeren de belangrijkste manier om muziek te luisteren. Artiesten konden zonder platenmaatschappij een publiek vinden: Justin Bieber werd ontdekt via filmpjes op YouTube. Chicagose drillrappers als Chief Keef werden in 2012 bekend met zelfgemaakte clips. Gangnam Style van PSY was de eerste video die meer dan een miljard keer werd bekeken, en bracht K-pop wereldwijd onder de aandacht.",
+   "enabled": [
+    "drill",
+    "k-pop",
+    "tiktok-pop"
+   ],
+   "after": [
+    "mtv"
+   ],
+   "listen": "Dit nummer werd groot via een video: wat aan het geluid of de hook maakt het geschikt om te delen?",
+   "tracks": [
+    {
+     "title": "One Time",
+     "artist": "Justin Bieber",
+     "year": 2009,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bc/90/53/bc9053bc-b9f7-efed-bb04-e705cddf1688/mzaf_17637001759847086496.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/79/76/c7/7976c73b-ba8e-c97f-2c49-0a7534b8c580/10UMGIM06203.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Gangnam Style",
+     "artist": "PSY",
+     "year": 2012,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7e/57/4f/7e574f27-ea0a-7512-e10a-603a2a0331fa/mzaf_8938211254903191199.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/96/6f/e4/966fe470-154e-8276-527d-094e84fcd3ea/12UMGIM50914.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "I Don't Like (feat. Lil Reese)",
+     "artist": "Chief Keef",
+     "year": 2012,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2a/16/54/2a165494-4b0a-63d7-2a91-747aab06be0d/mzaf_2277812724105935449.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/0a/4c/c2/0a4cc286-d3fa-9782-ec88-6f36be8e6750/12UMGIM59937.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "soundcloud",
+   "name": "SoundCloud",
+   "lane": "verspreiden",
+   "year": 2007,
+   "place": {
+    "name": "Berlijn",
+    "lat": 52.52,
+    "lon": 13.405
+   },
+   "who": "Alexander Ljung en Eric Wahlforss",
+   "text": "SoundCloud werd in 2007 opgericht door de Zweden Alexander Ljung en Eric Wahlforss en kreeg zijn thuisbasis in Berlijn. Op het platform kan iedereen gratis eigen tracks uploaden, en luisteraars kunnen op een precies moment in een nummer reageren. Rond 2015 groeide er een nieuwe rapscene uit, de SoundCloud-rap: jonge artiesten die thuis opnamen, met vervormde 808's, korte nummers en veel Auto-Tune. Ook hyperpop vond er zijn eerste publiek. Een track kon er viraal gaan zonder label of radio.",
+   "enabled": [
+    "trap",
+    "hyperpop",
+    "drill"
+   ],
+   "after": [
+    "daw",
+    "youtube"
+   ],
+   "listen": "Hoor je dat dit thuis is gemaakt? Let op de vervormde bas en hoe kort en direct het nummer is.",
+   "tracks": [
+    {
+     "title": "Look at Me!",
+     "artist": "XXXTENTACION",
+     "year": 2015,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/09/ce/95/09ce95c7-9fe1-ee28-e29c-2cda8d1aa1a9/mzaf_10442314575225369415.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/70/aa/87/70aa8723-81da-ca48-c395-ab1cb19bbc9b/888915347232_cover.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Lucid Dreams",
+     "artist": "Juice WRLD",
+     "year": 2017,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/39/5e/29/395e29ce-0a7e-dacc-0921-d8a34ac16df8/mzaf_2883164581580888931.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/f8/6c/2a/f86c2ae0-b4eb-578c-1f02-3acb8409b815/21UMGIM53733.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "ocean eyes",
+     "artist": "Billie Eilish",
+     "year": 2015,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d6/59/2b/d6592b0b-1e7e-4743-b2e4-f2af038fd783/mzaf_7697277787797935735.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/02/1d/30/021d3036-5503-3ed3-df00-882f2833a6ae/17UM1IM17026.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "spotify",
+   "name": "Streaming (Spotify)",
+   "lane": "verspreiden",
+   "year": 2008,
+   "place": {
+    "name": "Stockholm",
+    "lat": 59.3293,
+    "lon": 18.0686
+   },
+   "who": "Daniel Ek en Martin Lorentzon",
+   "text": "In oktober 2008 startte in Stockholm Spotify. Je kocht geen nummers meer, maar betaalde voor toegang tot de hele catalogus, of luisterde gratis met reclame. De playlist nam de rol over van het album, en een algoritme kiest mee wat je hoort. Een stream telt pas na dertig seconden, en dat veranderde de vorm van popnummers: kortere intro's, de hook vroeg, kortere nummers. Artiesten worden per stream betaald. Tegelijk konden muziek uit Lagos of Johannesburg via playlists een wereldpubliek bereiken.",
+   "enabled": [
+    "tiktok-pop",
+    "afrobeats",
+    "amapiano"
+   ],
+   "after": [
+    "mp3-napster",
+    "ipod-itunes"
+   ],
+   "listen": "Hoe snel zit de hook erin? Tel de seconden tot je weet waar het nummer over gaat.",
+   "tracks": [
+    {
+     "title": "One Dance (feat. Wizkid & Kyla)",
+     "artist": "Drake",
+     "year": 2016,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ed/1b/68/ed1b680f-8ae3-0cbf-c249-0aff56cc96fe/mzaf_17999620630731562813.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/95/f5/87/95f587f7-21c3-d5f9-d81a-4350f9caa020/16UMGIM27643.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Shape of You",
+     "artist": "Ed Sheeran",
+     "year": 2017,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cc/be/d1/ccbed15d-fec9-e47f-b110-947b068e1e82/mzaf_3029954038976757358.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music111/v4/2d/1c/4f/2d1c4fd7-018c-0529-693b-c67fea53b698/190295851286.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Blinding Lights",
+     "artist": "The Weeknd",
+     "year": 2019,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0c/c5/03/0cc503b5-9299-b207-a13c-ba5358733c56/mzaf_18217607061023109918.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2b/b9/fe/2bb9fef5-d7f3-8345-25a9-db0e79fde4e4/20UMGIM11048.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "tiktok",
+   "name": "TikTok",
+   "lane": "verspreiden",
+   "year": 2018,
+   "place": {
+    "name": "Peking",
+    "lat": 39.9042,
+    "lon": 116.4074
+   },
+   "who": "ByteDance",
+   "text": "TikTok, de app voor korte filmpjes van het Chinese bedrijf ByteDance, brak in 2018 wereldwijd door. Gebruikers kiezen een geluidsfragment en maken daar een filmpje bij. Een paar seconden van een nummer kunnen zo miljoenen keren rondgaan, gemaakt door gebruikers zelf. Old Town Road van Lil Nas X werd in 2019 op die manier een wereldhit. Platenmaatschappijen zoeken sindsdien naar nummers met een moment dat in een kort filmpje werkt, en artiesten brengen soms eerst een fragment uit om te zien of het aanslaat.",
+   "enabled": [
+    "tiktok-pop",
+    "hyperpop",
+    "amapiano"
+   ],
+   "after": [
+    "spotify",
+    "youtube"
+   ],
+   "listen": "Welk fragment van dit nummer zou je kiezen voor een filmpje van vijftien seconden?",
+   "tracks": [
+    {
+     "title": "Old Town Road",
+     "artist": "Lil Nas X",
+     "year": 2018,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/47/7d/fd/477dfdf3-9261-cb11-d14f-b7eb454d2c5d/mzaf_4800633009593423692.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/71/3f/d3/713fd3d1-7ffc-ba46-73bf-aa577309ca52/886447622827.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Say So",
+     "artist": "Doja Cat",
+     "year": 2019,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ff/47/3c/ff473c7d-528e-0086-de52-6028bcb62973/mzaf_9830857886973437464.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/f3/03/40/f30340af-55d6-11bb-f59c-b03705360715/886447991831.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "drivers license",
+     "artist": "Olivia Rodrigo",
+     "year": 2021,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/62/61/366261be-0996-d73d-de6f-03417867c800/mzaf_8201528327761821135.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/02/ed/8c/02ed8cab-c089-2fdd-7ce6-ab334a9a4e19/21UMGIM26093.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  }
+ ]
+}

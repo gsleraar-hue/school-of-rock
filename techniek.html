@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="sor-root" content=".">
+<title>Techniekkaart (proef) · School of Rock</title>
+<link rel="icon" href="assets/cassette.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/kaart.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="assets/player.js"></script><script src="assets/nav.js"></script>
+<style>
+  .t-lane-name { font: 600 13px/1 Oswald, sans-serif; letter-spacing: .04em; text-transform: uppercase; }
+  .t-item circle.dot { stroke: #121110; stroke-width: 1.5; }
+  .t-item text { font: 12px/1 Inter, sans-serif; fill: #EDE9E1; paint-order: stroke; stroke: #121110; stroke-width: 3px; }
+  .t-item { cursor: pointer; }
+  .t-item.sel circle.dot { stroke: #fff; stroke-width: 2.5; }
+  .t-link { fill: none; stroke: #8A857C; stroke-opacity: .35; stroke-width: 1.2; }
+  .dim .t-item:not(.hl) { opacity: .2; } .dim .t-link:not(.hl) { stroke-opacity: .05; }
+  .t-link.hl { stroke: #F2D500; stroke-opacity: .9; stroke-width: 2; }
+  .t-decade line { stroke: #2A2825; } .t-decade text { font: 11px "Space Mono", monospace; fill: #6E6A62; }
+  .t-proef { position: absolute; left: 16px; bottom: 12px; font: 11px "Space Mono", monospace; color: #9C978D; letter-spacing: .04em; }
+  .kp-genres a { text-decoration: none; }
+</style>
+</head>
+<body class="kaart">
+<header class="sitenav"><a class="brand" href="index.html"><img src="assets/cassette.png" alt=""><span>School of Rock</span></a><nav aria-label="Hoofdmenu"><a href="index.html#mixtapes">Mixtapes</a><a href="kaart.html">Genrekaart</a><a href="techniek.html" aria-current="page">Techniek</a><a href="begrippen.html">Begrippen</a></nav></header>
+<div class="k-app" style="grid-template-rows:auto 1fr">
+  <div class="k-top">
+    <div class="k-title"><h1>Techniekkaart</h1><p>Instrumenten en muziektechnologie · klik een uitvinding</p></div>
+    <span class="k-spacer"></span>
+  </div>
+  <div class="k-main">
+    <div class="k-stage">
+      <div class="k-zoom"><button id="k-zin" type="button" aria-label="Inzoomen">+</button><button id="k-zout" type="button" aria-label="Uitzoomen">−</button><button id="k-fit" type="button" aria-label="Alles tonen">⤢</button></div>
+      <div class="t-proef">PROEFVERSIE · lijnen = bouwt voort op · klik een uitvinding voor tekst, fragmenten en genres</div>
+    </div>
+    <aside class="k-panel" hidden aria-live="polite"></aside>
+  </div>
+</div>
+<script>
+(async function () {
+  const SOR = window.SOR;
+  const [data, genres] = await Promise.all([SOR.load('data/tech.json'), SOR.load('data/genres.json')]);
+  const gById = new Map(genres.genres.map(g => [g.id, g]));
+  const famColor = new Map(genres.families.map(f => [f.id, f.color]));
+  const lanes = data.lanes, laneById = new Map(lanes.map(l => [l.id, l]));
+  const items = data.items.map(d => ({ ...d }));
+  const byId = new Map(items.map(d => [d.id, d]));
+  const links = items.flatMap(d => (d.after || []).filter(a => byId.has(a)).map(a => ({ s: byId.get(a), t: d })));
+  const Y0 = 1870, Y1 = 2026, PX = 14, LEFT = 190, LANE_H = 150, TOP = 40;
+  const x = y => LEFT + (y - Y0) * PX;
+  // binnen een baan in rijen leggen, zodat namen niet over elkaar vallen
+  let yy = TOP;
+  lanes.forEach(l => {
+    const list = items.filter(d => d.lane === l.id).sort((a, b) => a.year - b.year); const rows = [];
+    list.forEach(d => { const xx = x(d.year), w = 16 + d.name.length * 6.6; let r = rows.findIndex(e => e < xx - 8); if (r < 0) { r = rows.length; rows.push(0); } rows[r] = xx + w; d.pos = { x: xx, y: yy + 44 + r * 26 }; });
+    l.y = yy; l.h = 60 + rows.length * 26; yy += l.h;
+  });
+  const TOTAL = yy;
+  const stage = document.querySelector('.k-stage'), panel = document.querySelector('.k-panel');
+  const svg = d3.select(stage).append('svg').attr('role', 'img').attr('aria-label', 'Techniekkaart');
+  const root = svg.append('g');
+  const W = () => stage.clientWidth, H = () => stage.clientHeight;
+  const gBack = root.append('g'), gGrid = root.append('g'), gLinks = root.append('g'), gItems = root.append('g');
+  gBack.selectAll('rect').data(lanes).join('rect').attr('x', -3000).attr('width', x(Y1) + 6000).attr('y', l => l.y).attr('height', l => l.h).attr('fill', (l, i) => i % 2 ? '#161513' : '#121110');
+  gBack.selectAll('text').data(lanes).join('text').attr('class', 't-lane-name').attr('x', 16).attr('y', l => l.y + 24).attr('fill', l => l.color).text(l => l.name);
+  const dec = gGrid.selectAll('g').data(d3.range(1870, 2030, 10)).join('g').attr('class', 't-decade');
+  dec.append('line').attr('x1', d => x(d)).attr('x2', d => x(d)).attr('y1', 20).attr('y2', TOTAL);
+  dec.append('text').attr('x', d => x(d) + 4).attr('y', 16).text(d => d);
+  const linkSel = gLinks.selectAll('path').data(links).join('path').attr('class', 't-link')
+    .attr('d', l => { const a = l.s.pos, b = l.t.pos, mx = (a.x + b.x) / 2; return `M${a.x},${a.y} C${mx},${a.y} ${mx},${b.y} ${b.x},${b.y}`; });
+  const itemSel = gItems.selectAll('g').data(items).join('g').attr('class', 't-item').attr('transform', d => `translate(${d.pos.x},${d.pos.y})`).attr('tabindex', 0).attr('role', 'button')
+    .attr('aria-label', d => `${d.name}, ${d.year}`);
+  itemSel.append('circle').attr('class', 'dot').attr('r', 7).attr('fill', d => laneById.get(d.lane).color);
+  itemSel.append('text').attr('x', 11).attr('dy', '.35em').text(d => d.name);
+  const zoom = d3.zoom().scaleExtent([0.3, 6]).on('zoom', e => root.attr('transform', e.transform));
+  svg.call(zoom).on('dblclick.zoom', null);
+  function fit(anim) { const w = W(), h = H(), k = Math.min(1, (h - 20) / TOTAL, (w - 20) / (x(Y1) - LEFT + 200)); const t = d3.zoomIdentity.translate(10 - (LEFT - 180) * k, 6).scale(Math.max(k, .45)); (anim ? svg.transition().duration(600) : svg).call(zoom.transform, t); }
+  document.getElementById('k-fit').onclick = () => fit(true);
+  document.getElementById('k-zin').onclick = () => svg.transition().call(zoom.scaleBy, 1.4);
+  document.getElementById('k-zout').onclick = () => svg.transition().call(zoom.scaleBy, 1 / 1.4);
+  fit(false);
+  // keten: waarop het voortbouwt en wat erop voortbouwde
+  function chain(d) { const s = new Set([d.id]); (function up(n) { (n.after || []).forEach(a => { if (byId.has(a) && !s.has(a)) { s.add(a); up(byId.get(a)); } }); })(d); items.forEach(o => { if ((o.after || []).includes(d.id)) s.add(o.id); }); return s; }
+  let panelTracks = [];
+  function select(d) {
+    const s = chain(d);
+    root.classed('dim', true);
+    itemSel.classed('hl', o => s.has(o.id)).classed('sel', o => o === d);
+    linkSel.classed('hl', l => s.has(l.s.id) && s.has(l.t.id));
+    const lane = laneById.get(d.lane);
+    const tracks = (d.tracks || []).filter(t => t.audio); panelTracks = tracks;
+    const gen = (d.enabled || []).map(id => gById.get(id)).filter(Boolean);
+    const after = (d.after || []).map(id => byId.get(id)).filter(Boolean), next = items.filter(o => (o.after || []).includes(d.id));
+    const chip = o => `<button class="kp-chip" type="button" data-id="${o.id}" style="--c:${laneById.get(o.lane).color}"><i></i>${o.name}</button>`;
+    panel.innerHTML = `<div class="kp-head" style="--c:${lane.color}"><button class="kp-close" type="button" aria-label="Sluit">×</button><div class="fam">${lane.name}</div><h2>${d.name}</h2><div class="meta">${d.year} · ${d.who || ''} · ${d.place?.name || ''}</div></div>
+      <div class="kp-body"><p>${d.text}</p>${d.listen ? `<p class="kp-listen">${d.listen}</p>` : ''}
+      ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((t, i) => `<div class="kp-track"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${t.title}">${SOR.playIcon}</button>${t.cover ? `<img src="${t.cover}" alt="" loading="lazy">` : ''}<div><b>${t.artist}</b><span>${t.title}${t.year ? ' · ' + t.year : ''}</span></div></div>`).join('')}</div></div>` : ''}
+      ${gen.length ? `<div><p class="kp-h">Maakte mogelijk (op de genrekaart)</p><div class="kp-links kp-genres">${gen.map(g => `<a class="kp-chip" href="kaart.html#${g.id}" style="--c:${famColor.get(g.family) || '#999'}"><i></i>${g.name}</a>`).join('')}</div></div>` : ''}
+      ${after.length ? `<div><p class="kp-h">Bouwt voort op</p><div class="kp-links">${after.map(chip).join('')}</div></div>` : ''}
+      ${next.length ? `<div><p class="kp-h">Leidde tot</p><div class="kp-links">${next.map(chip).join('')}</div></div>` : ''}</div>`;
+    panel.hidden = false;
+    panel.querySelectorAll('.sor-play').forEach(b => b.onclick = () => { const t = tracks[+b.dataset.t]; SOR.play({ audio: t.audio, artist: t.artist, title: t.title, cover: t.cover, year: t.year }); });
+    history.replaceState(null, '', '#' + d.id);
+  }
+  function clear() { root.classed('dim', false); itemSel.classed('hl', false).classed('sel', false); linkSel.classed('hl', false); panel.hidden = true; history.replaceState(null, '', location.pathname); }
+  itemSel.on('click', (e, d) => { e.stopPropagation(); select(d); }).on('keydown', (e, d) => { if (e.key === 'Enter') select(d); });
+  svg.on('click', e => { if (e.target === svg.node()) clear(); });
+  panel.addEventListener('click', e => { const c = e.target.closest('button[data-id]'); if (c) select(byId.get(c.dataset.id)); if (e.target.closest('.kp-close')) clear(); });
+  const h = decodeURIComponent(location.hash.slice(1)); if (byId.has(h)) select(byId.get(h));
+})();
+</script>
+</body>
+</html>
