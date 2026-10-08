@@ -1156,6 +1156,51 @@
    ]
   },
   {
+   "id": "8-track",
+   "name": "8-track",
+   "lane": "verspreiden",
+   "year": 1965,
+   "place": {
+    "name": "Detroit, Michigan",
+    "lat": 42.3314,
+    "lon": -83.0458
+   },
+   "who": "Bill Lear (Lear Jet), met Ford en Motorola",
+   "text": "Vliegtuigbouwer Bill Lear ontwierp in 1964 de Stereo 8: een cassette met een eindeloze lus magneetband en acht sporen, vier stereoprogramma's naast elkaar. Ford bood de speler vanaf de modellen van 1966 aan in zijn auto's, en voor het eerst koos je zelf wat je onderweg hoorde. In de Verenigde Staten was de 8-track in de jaren zeventig enorm populair, vooral in de auto. Omdat een album over vier programma's werd verdeeld, klonk er soms midden in een nummer een klik, waarna het lied verderging. Rond 1980 verdrong de compacte cassette het formaat.",
+   "enabled": [
+    "softrock-aor",
+    "southern-rock",
+    "heartland-rock"
+   ],
+   "after": [
+    "magneetband"
+   ],
+   "listen": "Dit hoorde je in de jaren zeventig uit de luidsprekers van de auto: waarom werkt deze muziek zo goed op de snelweg?",
+   "tracks": [
+    {
+     "title": "Take It Easy",
+     "artist": "Eagles",
+     "year": 1972,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8a/69/a4/8a69a49b-db4a-22bb-4485-5209a1722724/mzaf_7773642911906509237.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/8f/e7/f4/8fe7f417-d464-8879-b00e-3d4965a9cfd1/075596062329.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Sweet Home Alabama",
+     "artist": "Lynyrd Skynyrd",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/cc/f4/d9ccf45e-462c-7e85-351e-70187d4cc280/mzaf_319857925551916975.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c9/2d/c9/c92dc94d-145d-bedf-a475-2f1d9690d7b6/06UMGIM02068.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "Go Your Own Way",
+     "artist": "Fleetwood Mac",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d1/37/68/d1376853-ec1e-cce0-4ac9-2e98fc9d9c51/mzaf_7672022765745493173.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": "rhodes",
    "name": "Fender Rhodes",
    "lane": "instrumenten",
@@ -1731,18 +1776,11 @@
    "listen": "Luister naar de stiltes en de zachte stukken: hoor je ruis of tikken, zoals bij een plaat of cassette?",
    "tracks": [
     {
-     "title": "My Life",
-     "artist": "Billy Joel",
-     "year": 1978,
-     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/29/76/b2/2976b22c-50c2-5acf-c1b5-eb3903096ffd/mzaf_54673202754025077.plus.aac.p.m4a",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d6/02/07/d60207ae-a49f-8f20-c8e6-d58e794b9ae5/dj.lzzblgca.jpg/600x600bb.jpg"
-    },
-    {
-     "title": "The Visitors",
-     "artist": "ABBA",
-     "year": 1981,
-     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fd/fc/21/fdfc2183-fa40-5771-cc8f-b228f29b0d5f/mzaf_12006525396458906163.plus.aac.p.m4a",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e0/9b/13/e09b134a-0de4-f95d-d751-cf10cea4f343/12UMGIM11986.rgb.jpg/600x600bb.jpg"
+     "title": "I.G.Y.",
+     "artist": "Donald Fagen",
+     "year": 1982,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2b/40/c0/2b40c0c2-1f84-6686-c298-f7e9393b51be/mzaf_657647059062855488.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/98/d0/87/98d0877d-3e15-0f41-ba27-3264e5ae3b09/093624943952.jpg/600x600bb.jpg"
     },
     {
      "title": "Brothers in Arms",
@@ -1750,6 +1788,13 @@
      "year": 1985,
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4b/a5/2d/4ba52d75-4d7f-6d93-4d20-7035df13ecaf/mzaf_15774609647100936395.plus.aac.p.m4a",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/76/41/b9/7641b9cb-650e-8c9c-bad8-7196f8193a7d/25UMGIM39996.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "title": "La Sagrada Familia",
+     "artist": "The Alan Parsons Project",
+     "year": 1987,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/da/2c/29/da2c2989-7e33-0655-3ad7-bafc5e29e4d7/mzaf_17684236241618007265.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/07/72/b7/0772b789-b6de-ef0d-ab63-71c5ab687d23/dj.nyhpxnta.jpg/600x600bb.jpg"
     }
    ]
   },
