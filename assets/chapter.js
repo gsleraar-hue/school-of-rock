@@ -2,8 +2,8 @@
 (function () {
   const SOR = window.SOR;
   const RAW = document.body.dataset.mixtape || '';
-  const SET = RAW.startsWith('film-') ? 'film' : 'pop';
-  const N = +RAW.replace('film-', '');
+  const SET = RAW.startsWith('film-') ? 'film' : RAW.startsWith('jazz-') ? 'jazz' : 'pop';
+  const N = +RAW.replace(/^(film|jazz)-/, '');
 
   // Ankers per track, zodat de kaart naar een track kan linken.
   document.querySelectorAll('.flow .head h3').forEach(h => {
@@ -46,7 +46,7 @@
     return [...document.querySelectorAll('.flow p')].filter(p => !p.closest('aside, figure, .head, .opener, .deck, header') && p.textContent.trim().length > 40);
   }
   function meelezen(row) {
-    const path = (SET === 'film' ? 'film/data/sync/' : 'data/sync/') + String(N).padStart(2, '0') + '.json';
+    const path = (SET === 'pop' ? 'data/sync/' : SET + '/data/sync/') + String(N).padStart(2, '0') + '.json';
     SOR.load(path).then(sync => {
       const ps = paragraphs(), times = sync.p || [], ends = sync.e || [];
       if (!times.length || Math.abs(times.length - ps.length) > 2) return; // tekst en tijden horen bij elkaar
