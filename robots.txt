@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sorock.nl/sitemap.xml
