@@ -732,7 +732,7 @@
     {
      "title": "Don't Worry",
      "artist": "Marty Robbins",
-     "year": 1960,
+     "year": 1961,
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/4f/c8/7d/4fc87d6a-e649-cecf-c05a-9c7a8ef98ebc/mzaf_125644766366361509.plus.aac.p.m4a",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/40/dd/81/40dd81b2-f6ea-6b7c-4f7b-1f0d79b659be/5099752035922.jpg/600x600bb.jpg"
     },
@@ -900,9 +900,9 @@
     "lon": 30.3351
    },
    "who": "Lev Termen (Léon Theremin)",
-   "text": "De Russische natuurkundige Lev Termen bouwde rond 1920 een instrument dat je bespeelt zonder het aan te raken. Twee antennes meten de afstand tot je handen: de ene regelt de toonhoogte, de andere het volume. Het geluid is een glijdende, zingende toon die aan een stem of een zingende zaag doet denken. Clara Rockmore speelde er klassieke muziek op. In Hollywood werd de theremin in de jaren veertig en vijftig het geluid van spanning, waanzin en vliegende schotels. Later gebruikten ook rockmuzikanten als Jimmy Page hem.",
+   "text": "De Russische natuurkundige Lev Termen bouwde rond 1920 een instrument dat je bespeelt zonder het aan te raken. Twee antennes meten de afstand tot je handen: de ene regelt de toonhoogte, de andere het volume. Het geluid is een glijdende, zingende toon die aan een stem of een zingende zaag doet denken. Clara Rockmore speelde er klassieke muziek op. In Hollywood werd de theremin in de jaren veertig en vijftig het geluid van spanning, waanzin en vliegende schotels. Robert Moog begon in de jaren vijftig met het bouwen van theremins, voordat hij synthesizers maakte. Later gebruikten ook rockmuzikanten als Jimmy Page de theremin.",
    "enabled": [
-    "elektronische-studio"
+    "moog"
    ],
    "after": [],
    "listen": "De toon glijdt van noot naar noot zonder sprongen: waaraan doet die klank je denken?",
@@ -910,7 +910,7 @@
     {
      "title": "The Swan",
      "artist": "Clara Rockmore",
-     "year": 1977,
+     "year": 1979,
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/6a/a4/59/6aa45950-65a7-a12f-4f82-23aff65562df/mzaf_7193973741744279973.plus.aac.p.m4a",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/43/28/d9/4328d98b-bfe8-35d8-a3cb-53ebd96ca4ec/675754037062.jpg/600x600bb.jpg"
     },
@@ -1776,11 +1776,11 @@
    "listen": "Zoek de heldere, wat metalige synthklank of de pittige synthbas: zo klinkt FM.",
    "tracks": [
     {
-     "title": "What's Love Got to Do with It",
-     "artist": "Tina Turner",
-     "year": 1984,
-     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ba/09/17/ba091764-1af3-618f-262a-74faf26b1f30/mzaf_16893314707240902732.plus.aac.p.m4a",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/66/3e/86/663e8609-192f-a35c-54ce-0911bbafb3de/825646112883.jpg/600x600bb.jpg"
+     "title": "Danger Zone",
+     "artist": "Kenny Loggins",
+     "year": 1986,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8d/c8/19/8dc81935-5620-0b29-3f4c-acc3f6479796/mzaf_14998514993249023640.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/81/2f/27/812f27f8-4c88-7b16-8a54-5113fa169781/dj.jvcruggi.jpg/600x600bb.jpg"
     },
     {
      "title": "Take On Me",
@@ -1813,7 +1813,6 @@
    "enabled": [
     "synthpop",
     "big-beat",
-    "eurodance",
     "chicago-house"
    ],
    "after": [
@@ -1823,11 +1822,11 @@
    "listen": "Alles in dit nummer loopt strak samen: welke partijen zou een computer hier aansturen?",
    "tracks": [
     {
-     "title": "Right Here, Right Now",
-     "artist": "Fatboy Slim",
-     "year": 1998,
-     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/89/6d/ad/896dad1d-c721-430e-ae28-8142f8a2e70c/mzaf_14620595002834114074.plus.aac.p.m4a",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/97/04/52/97045290-59ff-5f50-6cee-28594a376ae3/5025425551130.jpg/600x600bb.jpg"
+     "title": "Move Your Body",
+     "artist": "Marshall Jefferson",
+     "year": 1986,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/83/ca/26/83ca268c-c4c2-7023-d118-60f1599935ac/mzaf_2528553144233835264.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1f/b9/db/1fb9db01-804f-6f37-7e66-ce50016e9473/196626085405.jpg/600x600bb.jpg"
     },
     {
      "title": "The Rockafeller Skank",
@@ -2042,9 +2041,9 @@
    "lane": "opnemen",
    "year": 1997,
    "place": {
-    "name": "Scotts Valley, Californië",
-    "lat": 37.0511,
-    "lon": -122.0147
+    "name": "Los Gatos, Californië",
+    "lat": 37.2358,
+    "lon": -121.9624
    },
    "who": "Andy Hildebrand (Antares Audio Technologies)",
    "text": "Andy Hildebrand gebruikte wiskunde uit de olie-industrie om de toonhoogte van een stem te meten. Zijn software Auto-Tune, uitgebracht in 1997, schuift valse noten ongemerkt naar de juiste toon. Bij Believe van Cher zetten de producers de correctiesnelheid op nul. De stem sprong daardoor zonder overgang van toon naar toon, met een hoorbaar knikje. Wat onhoorbaar moest zijn, werd een effect. T-Pain maakte het zijn handelsmerk, en in trap, afrobeats en hyperpop werd Auto-Tune een gewoon onderdeel van de stem.",
@@ -2095,8 +2094,7 @@
    "who": "Fraunhofer-Institut (Karlheinz Brandenburg); Shawn Fanning en Sean Parker",
    "text": "Aan het Fraunhofer-Institut in Erlangen ontwikkelden onder anderen Karlheinz Brandenburg en zijn collega's de mp3: een bestandsformaat dat weglaat wat het oor nauwelijks hoort. Een nummer wordt zo ongeveer tien keer kleiner. In juni 1999 bracht student Shawn Fanning in Boston met Sean Parker Napster uit, een programma waarmee miljoenen mensen mp3's gratis van elkaars computers haalden. Metallica en de platenmaatschappijen stapten naar de rechter, en in 2001 ging Napster offline. Het delen ging door, en de cd-verkoop herstelde nooit meer.",
    "enabled": [
-    "alternative-rock",
-    "nu-metal"
+    "alternative-rock"
    ],
    "after": [
     "cd"
@@ -2139,8 +2137,7 @@
    "who": "Apple",
    "text": "In oktober 2001 presenteerde Apple de iPod: een kleine speler met een harde schijf en een draaiwiel, met 'duizend nummers in je broekzak'. In april 2003 opende de iTunes Store, waar je legaal nummers kon downloaden voor 99 cent per stuk. Je kocht voortaan één nummer in plaats van een heel album, en de single kwam terug als bestand. De reclames van Apple, met silhouetten die dansen op muziek van bands als Jet en Feist, werden zelf een manier om een hit te maken.",
    "enabled": [
-    "alternative-rock",
-    "indie-shoegaze"
+    "alternative-rock"
    ],
    "after": [
     "mp3-napster"
