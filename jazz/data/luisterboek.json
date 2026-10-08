@@ -1,4 +1,6 @@
 [
  {"n": 1, "title": "Uit New Orleans", "file": "jazz/audio/sessie-01.mp3?v=1", "duration": 4790},
- {"n": 2, "title": "Na middernacht", "file": "jazz/audio/sessie-02.mp3?v=1", "duration": 5141}
+ {"n": 2, "title": "Na middernacht", "file": "jazz/audio/sessie-02.mp3?v=1", "duration": 5141},
+ {"n": 3, "title": "Vrij spel", "file": "jazz/audio/sessie-03.mp3?v=1", "duration": 5181},
+ {"n": 4, "title": "Overal jazz", "file": "jazz/audio/sessie-04.mp3?v=1", "duration": 4446}
 ]
