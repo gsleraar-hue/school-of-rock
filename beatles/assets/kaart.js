@@ -1,4 +1,4 @@
-/* Beatles-tijdlijn. GEMAAKT DOOR beatles/maak.ts uit site/assets/kaart.js; niet met de hand bewerken. */
+/* The Beatles · tijdlijn. GEMAAKT DOOR tijdlijnen/maak.ts uit site/assets/kaart.js; niet met de hand bewerken. */
 (async function () {
   const SOR = window.SOR;
   const $ = s => document.querySelector(s);
@@ -110,7 +110,7 @@
 
   // ---------- SVG ----------
   const stage = $('.k-stage');
-  const svg = d3.select(stage).append('svg').attr('role', 'img').attr('aria-label', 'Beatles-tijdlijn');
+  const svg = d3.select(stage).append('svg').attr('role', 'img').attr('aria-label', "The Beatles · tijdlijn");
   const root = svg.append('g');
   const gBack = root.append('g');      // banen of landen
   const gGrid = root.append('g');      // decennia
@@ -135,13 +135,13 @@
   let W = 0, H = 0;
   // ---------- Stamboom: tijd horizontaal, families als banen ----------
   const PX_PER_YEAR = 15, ROW = 22, LANE_PAD = 14, LEFT = 290;
-  // Beatles-tijdlijn: 1956-1971 breed uitgetrokken (ongeveer 22 pixels per maand), daarvoor en daarna samengedrukt
-  const SEG = [[1940, 10], [1955, 60], [1956, 260], [1971, 30], [YMAX + 1, 30]];
+  // The Beatles · tijdlijn: 1956-1971 breed uitgetrokken, daarvoor en daarna samengedrukt
+  const SEG = [[1940,10],[1955,60],[1956,260],[1971,30],[2027,30]];
   const SEGX = []; { let x = 0; SEG.forEach(([y], i) => { SEGX.push(x); if (i < SEG.length - 1) x += (SEG[i + 1][0] - y) * SEG[i][1]; }); }
   const tx = y => { y = Math.max(SEG[0][0], y); let i = SEG.length - 2; while (i > 0 && y < SEG[i][0]) i--; return LEFT + SEGX[i] + (y - SEG[i][0]) * SEG[i][1]; };
   const xToYear = x => { x -= LEFT; let i = SEG.length - 2; while (i > 0 && x < SEGX[i]) i--; return SEG[i][0] + (x - SEGX[i]) / SEG[i][1]; };
   const MAAND = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
-  const fmtD = d => { if (!d.date) return String(Math.floor(d.year)); const [y, m, dd] = d.date.split('-').map(Number); return (dd ? dd + ' ' : '') + (m ? MAAND[m - 1] + ' ' : '') + y; };
+  const fmtD = d => { if (!d.date) return String(Math.floor(d.year)); const [y, m, dd] = String(d.date).split('-').map(Number); return (dd ? dd + ' ' : '') + (m ? MAAND[m - 1] + ' ' : '') + y; };
   const fmtT = y => { const j = Math.floor(y), m = Math.min(11, Math.floor((y - j) * 12)); return j >= 1956 && j < 1971 ? MAAND[m].slice(0, 3) + ' ' + j : String(j); };
   let lanes = [];
   function layoutTree() {
@@ -293,7 +293,7 @@
     if (state.mode === 'tree' || state.mode === 'tech') {
       const LL = state.mode === 'tech' ? [...techLanes, ...lanes] : lanes;
       gBack.selectAll('rect').data(LL).join('rect').attr('class', d => 'lane-bg' + (d.alt ? ' alt' : '') + (d.tech ? ' tech' : '')).attr('x', -4000).attr('width', treeW + 8000).attr('y', d => d.y).attr('height', d => d.h);
-      const decades = [1940, 1945, 1950, ...d3.range(1955, 1971), ...d3.range(1975, YMAX, 5)];
+      const decades = [1940,1950,1955,1956,1957,1958,1959,1960,1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1975,1980,1985,1990,1995,2000,2005,2010,2015,2020,2025];
       const dg = gGrid.selectAll('g').data(decades).join('g').attr('class', 'decade');
       dg.append('line');
       dg.append('text').attr('y', 16).text(d => d);
