@@ -50,3 +50,8 @@ img { max-width: 100%; }
 .sitefoot a { color: var(--white); }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 [hidden] { display: none !important; }
+
+/* Kaarten: geen rechthoekige focusrand om punten (die toonde een leeg vlak waar het label verborgen is);
+   bij navigeren met het toetsenbord een gloed om het punt zelf */
+.k-stage svg [tabindex]:focus { outline: none; }
+.k-stage svg [tabindex]:focus-visible { filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 2px #fff); }
