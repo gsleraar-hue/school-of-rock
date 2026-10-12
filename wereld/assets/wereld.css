@@ -1,0 +1,4 @@
+/* Wereldarchief: accentkleur oker */
+:root { --accent: #C9A86A; }
+.sitenav { border-bottom-color: #C9A86A; }
+.sitenav nav a[aria-current="page"], .k-seg button[aria-pressed="true"], .k-speed button[aria-pressed="true"] { background: #C9A86A; color: #121110; }

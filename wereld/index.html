@@ -1,13 +1,35 @@
-<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content="."><title>Wereldarchief · alle muziek op één kaart</title><meta name="robots" content="noindex"><link rel="icon" href="./assets/icon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="../assets/site.css"><link rel="stylesheet" href="../assets/kaart.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script><script src="../assets/player.js"></script><script src="../assets/nav.js"></script></head><body class="kaart"><header class="sitenav"><a class="brand" href="./index.html"><img src="./assets/icon.svg" alt=""><span>Wereldarchief</span></a><nav aria-label="Hoofdmenu"><a href="./index.html" aria-current="page">Kaart</a><a href="../index.html">← School of Rock</a></nav></header><div class="k-app">
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="sor-root" content=".">
+<title>Wereldarchief · alle muziek op één kaart</title><meta name="robots" content="noindex">
+
+<link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="./assets/kaart.css">
+<link rel="stylesheet" href="./assets/wereld.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script src="../assets/player.js"></script><script src="../assets/nav.js"></script>
+</head>
+<body class="kaart">
+<header class="sitenav"><a class="brand" href="./index.html"><img src="./assets/icon.svg" alt=""><span>Wereldarchief</span></a><nav aria-label="Hoofdmenu"><a href="./index.html" aria-current="page">Kaart</a><a href="../index.html">← School of Rock</a></nav></header>
+<div class="k-app">
   <div class="k-top">
     <div class="k-title"><h1>Wereldarchief</h1><p>Alle muziek · van de eerste fluit tot nu</p></div>
-    <div class="k-seg" role="group" aria-label="Weergave"><button type="button" data-mode="tree" aria-pressed="true">Stamboom</button><button type="button" data-mode="world" aria-pressed="false">Wereld</button><button type="button" data-mode="tech" aria-pressed="false" title="Instrumenten en muziektechnologie boven de stamboom">Techniek</button></div>
+    <div class="k-seg" role="group" aria-label="Weergave"><button type="button" data-mode="tree" aria-pressed="true">Stamboom</button><button type="button" data-mode="world" aria-pressed="false">Wereld</button><button type="button" data-mode="net" aria-pressed="false" title="Wie speelde met wie: bands en hun musici">Wie met wie</button></div>
     <label class="k-field">Leerpad <select id="k-path"></select></label>
-    <label class="k-field">Zoek <input id="k-search" list="k-genres" placeholder="Stijl of artiest" autocomplete="off"><datalist id="k-genres"></datalist></label>
+    <label class="k-field">Zoek <input id="k-search" list="k-genres" placeholder="Stijl, musicus of werk, bv. gamelan of Bach" autocomplete="off"><datalist id="k-genres"></datalist></label>
+    <label class="k-comps"><input type="checkbox" id="k-comps" checked> Musici</label>
     <span class="k-spacer"></span>
     <button class="k-help" type="button">Uitleg</button>
   </div>
-  <div class="k-fams" aria-label="Genrefamilies"></div>
+  <div class="k-fams" aria-label="Families"></div>
   <div class="k-main">
     <div class="k-stage">
       <div class="k-yearbig" aria-hidden="true"></div>
@@ -19,14 +41,7 @@
     <button class="k-playbtn" id="k-play" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Speel de geschiedenis af</button>
     <span class="k-year" id="k-yearlbl">nu</span>
     <input id="k-range" type="range" step="1" aria-label="Jaar">
-    <div class="k-speed" role="group" aria-label="Tempo">
-      <span>Tempo</span>
-      <button type="button" data-speed="0.25" aria-pressed="false">¼×</button>
-      <button type="button" data-speed="0.5" aria-pressed="false">½×</button>
-      <button type="button" data-speed="1" aria-pressed="true">1×</button>
-      <button type="button" data-speed="2" aria-pressed="false">2×</button>
-      <button type="button" data-speed="4" aria-pressed="false">4×</button>
-    </div>
+    <div class="k-speed" role="group" aria-label="Tempo"><span>Tempo</span><button type="button" data-speed="0.25" aria-pressed="false">¼×</button><button type="button" data-speed="0.5" aria-pressed="false">½×</button><button type="button" data-speed="1" aria-pressed="true">1×</button><button type="button" data-speed="2" aria-pressed="false">2×</button><button type="button" data-speed="4" aria-pressed="false">4×</button></div>
     <label class="k-sound"><input type="checkbox" id="k-sound"> met geluid</label>
   </div>
   <div class="k-intro" hidden role="dialog" aria-labelledby="k-intro-h">
@@ -34,10 +49,13 @@
     <h2 id="k-intro-h">Alle muziek, van de eerste fluit tot nu</h2>
     <ol>
       <li><b>De verborgen kaart</b> van School of Rock: de genres uit de reader, de jazz van Blue Hour en de filmmuziek van De Droomfabriek, samen met alles wat eraan voorafging en ernaast bestond. Van de prehistorie tot nu, van Bagdad tot Java.</li>
-      <li><b>Klik een stijl</b> om erover te lezen en fragmenten te horen. De lijnen laten zien waar hij vandaan komt en wat eruit voortkwam.</li>
-      <li><b>De tijd is samengedrukt</b>: hoe verder terug, hoe meer jaren er op dezelfde breedte passen. Kies stamboom, wereld of techniek voor dezelfde muziek langs de tijd, op de plek waar ze ontstond, of met de uitvindingen erboven.</li>
+      <li><b>Klik een stijl of musicus</b> om erover te lezen en fragmenten te horen. De lijnen laten zien waar iets vandaan komt en wat eruit voortkwam; gestippelde lijnen tonen wie door wie werd beïnvloed. Zet de musici uit voor een rustiger beeld.</li>
+      <li><b>De tijd is samengedrukt</b>: hoe verder terug, hoe meer jaren er op dezelfde breedte passen. Kies stamboom, wereld of wie met wie, of volg een <b>leerpad</b> stap voor stap.</li>
       <li><b>Speel de geschiedenis af</b> en zie veertigduizend jaar muziek ontstaan. Zet het geluid aan om mee te luisteren.</li>
     </ol>
     <button class="btn solid" type="button" data-close-intro>Begin</button>
   </div>
-</div><script src="assets/kaart.js"></script></body></html>
+</div>
+<script src="./assets/kaart.js"></script>
+</body>
+</html>
