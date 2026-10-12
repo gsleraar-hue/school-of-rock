@@ -106,13 +106,14 @@
   // Easter eggs: vijf keer snel klikken.
   // - op het logo: wisselt tussen School of Rock en De Droomfabriek (sorock.nl/film/); vanuit een verborgen deel terug naar School of Rock
   // - op de cassette van Mixtape 5 (Jazz Festival): opent Blue Hour (sorock.nl/jazz/)
+  // - op de cassette van Mixtape 1 (het ontstaan van popmuziek): opent Wereldarchief (sorock.nl/wereld/), de kaart van alle muziek
   // De teller hoort bij het soort knop (logo of cassette), niet bij het element: een klik op het logo laadt de pagina
   // opnieuw, en dan is het logo een nieuw element. In sessionStorage, zodat de teller ook een volledige herlaadbeurt overleeft.
   const eggKey = 'sor-egg';
   const eggGet = () => { try { return JSON.parse(sessionStorage.getItem(eggKey) || '{}'); } catch (x) { return {}; } };
   const eggSet = v => { try { sessionStorage.setItem(eggKey, JSON.stringify(v)); } catch (x) {} };
   document.addEventListener('click', e => {
-    const b = e.target.closest('.sitenav .brand') || e.target.closest('body[data-mixtape="5"] .opener.cover .cassette');
+    const b = e.target.closest('.sitenav .brand') || e.target.closest('body[data-mixtape="5"] .opener.cover .cassette, body[data-mixtape="1"] .opener.cover .cassette');
     if (!b) return;
     const now = Date.now(), kind = b.classList.contains('cassette') ? 'cassette' : 'logo';
     const st = eggGet(); let egg = st.kind === kind ? (st.t || []) : [];
@@ -121,10 +122,10 @@
     eggSet({}); e.preventDefault(); e.stopImmediatePropagation();
     const img = b.tagName === 'IMG' ? b : b.querySelector('img'); if (img && img.animate) img.animate([{ transform: 'rotate(0)' }, { transform: 'rotate(360deg)' }], { duration: 600, easing: 'ease-in-out' });
     const root = (document.querySelector('meta[name="sor-root"]') || {}).content || '.';
-    const hidden = /\/(film|jazz)\//.test(location.pathname);
+    const hidden = /\/(film|jazz|wereld)\//.test(location.pathname);
     let target;
-    if (b.classList.contains('cassette')) target = new URL(root + '/jazz/index.html', location.href);
-    else if (hidden) target = new URL(location.pathname.replace(/\/(film|jazz)\/.*$/, '/index.html'), location.href);
+    if (b.classList.contains('cassette')) target = new URL(root + (document.body.dataset.mixtape === '1' ? '/wereld/index.html' : '/jazz/index.html'), location.href);
+    else if (hidden) target = new URL(location.pathname.replace(/\/(film|jazz|wereld)\/.*$/, '/index.html'), location.href);
     else target = new URL(root + '/film/index.html', location.href);
     setTimeout(() => go(target.href, true), 500);
   }, true);
