@@ -30,7 +30,12 @@
       fromStart.hidden = !here || on;
       info.textContent = here && !on ? 'bij ' + SOR.fmt(here) + ' van ' + SOR.fmt(dur) : dur ? Math.round(dur / 60) + ' minuten' : '';
     }
-    SOR.bookChapters(SET).then(list => { const c = list.find(x => x.n === N); if (!c) { row.remove(); return; } dur = c.duration; label(); meelezen(row); });
+    SOR.bookChapters(SET).then(list => {
+      const c = list.find(x => x.n === N); if (!c) { row.remove(); return; }
+      // de knop naar de podcastaflevering (zelfde opname, maar in Spotify) hoort bij het luisterboek
+      const pod = deck.querySelector('.sor-pod'); if (pod) fromStart.after(pod);
+      dur = c.duration; label(); meelezen(row);
+    });
     go.addEventListener('click', () => SOR.playBook(N, undefined, SET));
     fromStart.addEventListener('click', () => SOR.playBook(N, 0, SET));
     SOR.onChange(label);
