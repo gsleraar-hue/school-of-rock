@@ -49,9 +49,48 @@
     G.forEach(g => (g.tracks || []).forEach(x => x.artist && add(`${x.artist} · ${g.name}`, () => select(g, true), 2, x.artist)));
     TI.forEach(d => (d.tracks || []).forEach(x => x.artist && add(`${x.artist} · ${d.name}`, () => selectTech(d, true), 3, x.artist)));
     searchList = L;
-    dl.innerHTML = L.slice().sort((a, b) => a.kind - b.kind || a.label.localeCompare(b.label, 'nl')).map(o => `<option value="${o.label.replace(/"/g, '&quot;')}">`).join('');
   }
-  $('#k-search').addEventListener('change', e => {
+  // Eigen suggestielijst in plaats van een datalist: met ruim 900 opties haperde het typen.
+  // Toont hooguit tien treffers, pas na een korte pauze in het typen.
+  const sInput = $('#k-search');
+  sInput.removeAttribute('list'); dl.remove();
+  const sBox = document.createElement('ul');
+  sBox.className = 'k-sugg'; sBox.hidden = true; sBox.setAttribute('role', 'listbox');
+  sInput.parentElement.style.position = 'relative';
+  sInput.parentElement.appendChild(sBox);
+  const sCss = document.createElement('style');
+  sCss.textContent = '.k-sugg{position:absolute;top:100%;right:0;z-index:60;min-width:260px;max-width:360px;margin:4px 0 0;padding:4px 0;list-style:none;background:#232120;border:1px solid #3A3833;border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.4);font:14px/1.3 Inter,sans-serif;text-transform:none;letter-spacing:0}' +
+    '.k-sugg li{padding:7px 12px;color:#EDE9E1;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.k-sugg li small{color:#9C978D;margin-left:6px}.k-sugg li.on,.k-sugg li:hover{background:#3A3833}';
+  document.head.appendChild(sCss);
+  let sHits = [], sOn = -1, sTimer = 0;
+  const KIND = ['genre', 'techniek', '', ''];
+  function suggest() {
+    const v = SOR.norm(sInput.value);
+    if (!v) { sBox.hidden = true; sHits = []; return; }
+    // begin van de naam eerst, dan het begin van een los woord erin (dus "pri" vindt Prince, niet Rites of Spring)
+    const raw = SOR.slug(sInput.value);
+    const word = s => SOR.slug(s).split('-').some(w => w.startsWith(raw.split('-')[0])) && SOR.norm(s).includes(v);
+    const rank = o => (o.kind < 2 ? (o.k.startsWith(v) ? 0 : word(o.label) ? 2 : 9) : (o.a.startsWith(v) ? 1 : word(o.label.split(' · ')[0]) ? 3 : 9));
+    sHits = searchList.map(o => [rank(o), o]).filter(([r]) => r < 9).sort((a, b) => a[0] - b[0] || a[1].label.length - b[1].label.length).slice(0, 10).map(([, o]) => o);
+    sOn = -1;
+    sBox.innerHTML = sHits.map((o, i) => `<li role="option" data-i="${i}">${o.label}${KIND[o.kind] ? `<small>${KIND[o.kind]}</small>` : ''}</li>`).join('');
+    sBox.hidden = !sHits.length;
+  }
+  function pick(o) { o.go(); sInput.value = ''; sBox.hidden = true; sHits = []; sInput.blur(); }
+  sInput.addEventListener('input', () => { clearTimeout(sTimer); sTimer = setTimeout(suggest, 90); });
+  sInput.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      if (!sHits.length) return; e.preventDefault();
+      sOn = (sOn + (e.key === 'ArrowDown' ? 1 : -1) + sHits.length) % sHits.length;
+      sBox.querySelectorAll('li').forEach((li, i) => li.classList.toggle('on', i === sOn));
+    } else if (e.key === 'Enter') {
+      e.preventDefault(); clearTimeout(sTimer);
+      if (sOn >= 0 && sHits[sOn]) pick(sHits[sOn]); else { sBox.hidden = true; sInput.dispatchEvent(new Event('k-go')); }
+    } else if (e.key === 'Escape') { sBox.hidden = true; }
+  });
+  sBox.addEventListener('mousedown', e => { const li = e.target.closest('li'); if (li) { e.preventDefault(); pick(sHits[+li.dataset.i]); } });
+  sInput.addEventListener('blur', () => setTimeout(() => { sBox.hidden = true; }, 150));
+  sInput.addEventListener('k-go', e => {
     const v = SOR.norm(e.target.value); if (!v) return;
     const done = () => { e.target.value = ''; e.target.blur(); };
     const o = searchList.find(x => x.k === v) || searchList.find(x => x.kind < 2 && x.k.includes(v)) || searchList.find(x => x.kind >= 2 && x.a === v);

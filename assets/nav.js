@@ -53,6 +53,7 @@
     cleanup();
     try { await swap(doc); } catch (e) { console.error(e); location.reload(); return; }
     document.documentElement.classList.remove('sor-loading');
+    document.dispatchEvent(new Event('sor:ready'));
     const hash = new URL(url).hash;
     const target = hash && document.getElementById(decodeURIComponent(hash.slice(1)));
     if (target) target.scrollIntoView(); else if (!push && history.state && history.state.y) scrollTo(0, history.state.y); else scrollTo(0, 0);
@@ -127,6 +128,39 @@
     else target = new URL(root + '/film/index.html', location.href);
     setTimeout(() => go(target.href, true), 500);
   }, true);
+
+  // Kaarten op volledig scherm: knop boven de zoomknoppen. Verbergt het sitemenu, de familieknoppen en de tijdbalk,
+  // en vraagt de browser om echt volledig scherm (waar dat kan; op de iPhone blijft het bij het verbergen van de menu's).
+  const fullCss = document.createElement('style');
+  fullCss.setAttribute('data-persist', '');
+  fullCss.textContent = 'html.k-full .sitenav{display:none}html.k-full .k-app{inset:0;grid-template-rows:auto minmax(0,1fr)}html.k-full .k-main{grid-row:2}html.k-full .k-fams,html.k-full .k-time,html.k-full .k-title p{display:none}' +
+    'html.k-full .k-list{inset:0}.k-zoom .k-full-btn{font-size:16px}';
+  document.head.appendChild(fullCss);
+  const fsEl = () => document.fullscreenElement || document.webkitFullscreenElement;
+  function setFull(on) {
+    document.documentElement.classList.toggle('k-full', on);
+    const b = document.querySelector('.k-full-btn');
+    if (b) { b.textContent = on ? '✕' : '⛶'; b.setAttribute('aria-label', on ? 'Volledig scherm sluiten' : 'Volledig scherm'); b.title = b.getAttribute('aria-label'); }
+    try {
+      if (on && !fsEl()) { const r = document.documentElement; (r.requestFullscreen || r.webkitRequestFullscreen || function () {}).call(r); }
+      if (!on && fsEl()) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+    } catch (x) {}
+    setTimeout(() => window.dispatchEvent(new Event('resize')), 60);
+  }
+  function kaartFull() {
+    const z = document.querySelector('.k-zoom');
+    if (!z) { if (document.documentElement.classList.contains('k-full')) setFull(false); return; }
+    if (z.querySelector('.k-full-btn')) return;
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'k-full-btn';
+    b.addEventListener('click', () => setFull(!document.documentElement.classList.contains('k-full')));
+    z.insertBefore(b, z.firstChild);
+    setFull(document.documentElement.classList.contains('k-full'));
+  }
+  ['fullscreenchange', 'webkitfullscreenchange'].forEach(t => document.addEventListener(t, () => { if (!fsEl() && document.documentElement.classList.contains('k-full')) setFull(false); }));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && document.documentElement.classList.contains('k-full') && !fsEl()) setFull(false); });
+  document.addEventListener('sor:ready', kaartFull);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', kaartFull); else kaartFull();
 
   // Vanaf hier hoort elke luisteraar op window/document bij de pagina (de eigen luisteraars hierboven en die van de speler niet).
   tracking = true;
