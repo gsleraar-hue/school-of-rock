@@ -162,6 +162,53 @@
   document.addEventListener('sor:ready', kaartFull);
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', kaartFull); else kaartFull();
 
+  // Zoeken op de kaarten: een datalist met honderden namen laat het typen haperen. Daarom een eigen lijst met hooguit
+  // tien treffers. De namen komen uit de bestaande datalist (die de kaart zelf vult); kiezen zet de naam in het veld
+  // en stuurt 'change', zodat de zoeklogica van de kaart zelf blijft werken.
+  const zCss = document.createElement('style');
+  zCss.setAttribute('data-persist', '');
+  zCss.textContent = '.k-sugg{position:absolute;top:100%;right:0;z-index:60;min-width:260px;max-width:380px;margin:4px 0 0;padding:4px 0;list-style:none;background:#232120;border:1px solid #3A3833;border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.4);font:14px/1.3 Inter,sans-serif;text-transform:none;letter-spacing:0}' +
+    '.k-sugg li{padding:7px 12px;color:#EDE9E1;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.k-sugg li small{color:#9C978D;margin-right:6px}.k-sugg li.on,.k-sugg li:hover{background:#3A3833}';
+  document.head.appendChild(zCss);
+  const zSlug = s => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/&/g, ' en ').replace(/[^a-z0-9]+/g, ' ').trim();
+  function kaartZoek() {
+    const inp = document.querySelector('.k-app input[list]');
+    if (!inp || inp.dataset.zoek) return;
+    const dl = document.getElementById(inp.getAttribute('list'));
+    if (!dl) return;
+    inp.dataset.zoek = '1'; inp.removeAttribute('list');
+    const box = document.createElement('ul'); box.className = 'k-sugg'; box.hidden = true; box.setAttribute('role', 'listbox');
+    inp.parentElement.style.position = 'relative'; inp.parentElement.appendChild(box);
+    let hits = [], on = -1, t = 0;
+    const split = v => { const m = v.match(/^(Film|Band|Album):\s*(.*)$/); return m ? [m[1].toLowerCase(), m[2]] : ['', v]; };
+    function show() {
+      const q = zSlug(inp.value); if (!q) { box.hidden = true; hits = []; return; }
+      const qw = q.split(' ');
+      const scored = [];
+      for (const o of dl.options) {
+        const [kind, name] = split(o.value), s = zSlug(name);
+        let r = s.startsWith(q) ? 0 : (' ' + s).includes(' ' + q) ? 1 : qw.every(w => (' ' + s).includes(' ' + w)) ? 2 : 9;
+        if (r < 9) scored.push([r + (kind ? 0.5 : 0), name.length, o.value, kind, name]);
+      }
+      hits = scored.sort((a, b) => a[0] - b[0] || a[1] - b[1]).slice(0, 10); on = -1;
+      box.innerHTML = hits.map((h, i) => `<li role="option" data-i="${i}">${h[3] ? `<small>${h[3]}</small>` : ''}${h[4].replace(/</g, '&lt;')}</li>`).join('');
+      box.hidden = !hits.length;
+    }
+    function pick(h) { inp.value = h[2]; box.hidden = true; hits = []; inp.dispatchEvent(new Event('change', { bubbles: true })); inp.blur(); }
+    inp.addEventListener('input', () => { clearTimeout(t); t = setTimeout(show, 90); });
+    inp.addEventListener('keydown', e => {
+      if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && hits.length) {
+        e.preventDefault(); on = (on + (e.key === 'ArrowDown' ? 1 : -1) + hits.length) % hits.length;
+        box.querySelectorAll('li').forEach((li, i) => li.classList.toggle('on', i === on));
+      } else if (e.key === 'Enter' && on >= 0 && hits[on]) { e.preventDefault(); pick(hits[on]); }
+      else if (e.key === 'Enter' || e.key === 'Escape') box.hidden = true;
+    });
+    box.addEventListener('mousedown', e => { const li = e.target.closest('li'); if (li) { e.preventDefault(); pick(hits[+li.dataset.i]); } });
+    inp.addEventListener('blur', () => setTimeout(() => { box.hidden = true; }, 150));
+  }
+  document.addEventListener('sor:ready', kaartZoek);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', kaartZoek); else kaartZoek();
+
   // Vanaf hier hoort elke luisteraar op window/document bij de pagina (de eigen luisteraars hierboven en die van de speler niet).
   tracking = true;
 
