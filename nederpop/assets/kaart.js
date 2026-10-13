@@ -121,8 +121,9 @@
   const gNodes = root.append('g');
   const gCities = root.append('g').attr('class', 'cities');
   const gLaneNames = svg.append('g');  // vast aan de linkerkant
-  let T = d3.zoomIdentity, suppress = false;
+  let T = d3.zoomIdentity, suppress = false, userPan = 0;
   const zoom = d3.zoom().scaleExtent([0.3, 14]).on('zoom', ev => {
+    if (ev.sourceEvent) userPan = Date.now();
     T = ev.transform;
     gBack.attr('transform', T);
     updateGrid(); updateCities(); stickLaneNames(T);
@@ -569,6 +570,11 @@
   function setSpeed(v) { speed = v; speedBtns.forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.speed === v))); try { localStorage.setItem('sor-kaart-tempo', String(v)); } catch (e) {} }
   speedBtns.forEach(b => b.addEventListener('click', () => setSpeed(+b.dataset.speed)));
   try { const v = +localStorage.getItem('sor-kaart-tempo'); if (speedBtns.some(b => +b.dataset.speed === v)) setSpeed(v); } catch (e) {}
+  function follow(start) {
+    if (state.mode !== 'tree' || Date.now() - userPan < 4000) return;
+    const t = d3.zoomTransform(svg.node()), sx = t.applyX(tx(state.year)), doel = W * (start ? 0.3 : 0.6);
+    if (start ? (sx < 60 || sx > W - 60) : sx > doel) svg.call(zoom.transform, t.translate((doel - sx) / t.k, 0));
+  }
   const playBtn = $('#k-play');
   function stopTape() { clearTimeout(timer); timer = null; state.playing = false; playBtn.innerHTML = playBtn.dataset.play; }
   playBtn.dataset.play = playBtn.innerHTML;
@@ -577,10 +583,10 @@
     if (state.path) { sel.value = ''; setPath(null); }
     clearSelection();
     if (state.year >= YMAX) state.year = Math.max(YMIN, xToYear(tx(d3.min(G.filter(g => state.fams.has(g.family)), g => g.year) ?? YMIN) - 24));
-    state.playing = true;
+    state.playing = true; follow(true);
     playBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg>Pauze';
     const tick = () => {
-      const prev = state.year; state.year = Math.min(YMAX, xToYear(tx(prev) + 12)); syncYear(); applyVisibility();
+      const prev = state.year; state.year = Math.min(YMAX, xToYear(tx(prev) + 12)); syncYear(); applyVisibility(); follow(false);
       const born = G.filter(g => g.year > prev && g.year <= state.year && state.fams.has(g.family));
       if (born.length) {
         nodeSel.filter(d => born.includes(d)).classed('pulse', false).each(function () { void this.getBBox(); }).classed('pulse', true);
