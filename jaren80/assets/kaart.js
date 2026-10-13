@@ -570,10 +570,23 @@
   function setSpeed(v) { speed = v; speedBtns.forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.speed === v))); try { localStorage.setItem('sor-kaart-tempo', String(v)); } catch (e) {} }
   speedBtns.forEach(b => b.addEventListener('click', () => setSpeed(+b.dataset.speed)));
   try { const v = +localStorage.getItem('sor-kaart-tempo'); if (speedBtns.some(b => +b.dataset.speed === v)) setSpeed(v); } catch (e) {}
+  let meeScrollen = true; try { meeScrollen = localStorage.getItem('sor-tijdlijn-mee') !== '0'; } catch (e) {}
+  const meeBox = $('#k-mee'); if (meeBox) { meeBox.checked = meeScrollen; meeBox.addEventListener('change', () => { meeScrollen = meeBox.checked; try { localStorage.setItem('sor-tijdlijn-mee', meeScrollen ? '1' : '0'); } catch (e) {} if (meeScrollen) { userPan = 0; follow(true); } }); }
+  let volgFrame = 0;
   function follow(start) {
-    if (state.mode !== 'tree' || Date.now() - userPan < 4000) return;
-    const t = d3.zoomTransform(svg.node()), sx = t.applyX(tx(state.year)), doel = W * (start ? 0.3 : 0.6);
-    if (start ? (sx < 60 || sx > W - 60) : sx > doel) svg.call(zoom.transform, t.translate((doel - sx) / t.k, 0));
+    if (!meeScrollen || state.mode !== 'tree') return;
+    const t = d3.zoomTransform(svg.node()), sx = t.applyX(tx(state.year));
+    if (start && (sx < 60 || sx > W - 60)) { svg.call(zoom.transform, t.translate((W * 0.3 - sx) / t.k, 0)); }
+    if (!volgFrame) volgFrame = requestAnimationFrame(volg);
+  }
+  function volg() {
+    volgFrame = 0;
+    if (!state.playing || !meeScrollen || state.mode !== 'tree') return;
+    if (Date.now() - userPan > 4000) {
+      const t = d3.zoomTransform(svg.node()), sx = t.applyX(tx(state.year)), doel = W * 0.6;
+      if (sx > doel + 0.5) svg.call(zoom.transform, t.translate(-Math.max(0.6, (sx - doel) * 0.08) / t.k, 0));
+    }
+    volgFrame = requestAnimationFrame(volg);
   }
   const playBtn = $('#k-play');
   function stopTape() { clearTimeout(timer); timer = null; state.playing = false; playBtn.innerHTML = playBtn.dataset.play; }
@@ -586,7 +599,7 @@
     state.playing = true; follow(true);
     playBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg>Pauze';
     const tick = () => {
-      const prev = state.year; state.year = Math.min(YMAX, xToYear(tx(prev) + 12)); syncYear(); applyVisibility(); follow(false);
+      const prev = state.year; state.year = Math.min(YMAX, xToYear(tx(prev) + 12)); syncYear(); applyVisibility();
       const born = G.filter(g => g.year > prev && g.year <= state.year && state.fams.has(g.family));
       if (born.length) {
         nodeSel.filter(d => born.includes(d)).classed('pulse', false).each(function () { void this.getBBox(); }).classed('pulse', true);
