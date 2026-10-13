@@ -115,13 +115,14 @@
   // - op de cassette van Mixtape 10 (vrouwen in de popmuziek): opent de tijdlijn van vrouwen in de popmuziek (sorock.nl/vrouwen/)
   // - op de cassette van Mixtape 4 (toen rock nog pop was): opent de tijdlijn van de rockalbums (sorock.nl/rockalbum/)
   // - op de cassette van Mixtape 11 (Nederpop): opent de tijdlijn van de Nederpop (sorock.nl/nederpop/)
+  // - op de cassette van Mixtape 12 (de hitfabriek): opent de stamboom van de hitfabriek (sorock.nl/hitfabriek/)
   // De teller hoort bij het soort knop (logo of cassette), niet bij het element: een klik op het logo laadt de pagina
   // opnieuw, en dan is het logo een nieuw element. In sessionStorage, zodat de teller ook een volledige herlaadbeurt overleeft.
   const eggKey = 'sor-egg';
   const eggGet = () => { try { return JSON.parse(sessionStorage.getItem(eggKey) || '{}'); } catch (x) { return {}; } };
   const eggSet = v => { try { sessionStorage.setItem(eggKey, JSON.stringify(v)); } catch (x) {} };
   document.addEventListener('click', e => {
-    const b = e.target.closest('.sitenav .brand') || e.target.closest('body[data-mixtape="5"] .opener.cover .cassette, body[data-mixtape="1"] .opener.cover .cassette, body[data-mixtape="3"] .opener.cover .cassette, body[data-mixtape="2"] .opener.cover .cassette, body[data-mixtape="7"] .opener.cover .cassette, body[data-mixtape="13"] .opener.cover .cassette, body[data-mixtape="6"] .opener.cover .cassette, body[data-mixtape="10"] .opener.cover .cassette, body[data-mixtape="4"] .opener.cover .cassette, body[data-mixtape="11"] .opener.cover .cassette');
+    const b = e.target.closest('.sitenav .brand') || e.target.closest('body[data-mixtape="5"] .opener.cover .cassette, body[data-mixtape="1"] .opener.cover .cassette, body[data-mixtape="3"] .opener.cover .cassette, body[data-mixtape="2"] .opener.cover .cassette, body[data-mixtape="7"] .opener.cover .cassette, body[data-mixtape="13"] .opener.cover .cassette, body[data-mixtape="6"] .opener.cover .cassette, body[data-mixtape="10"] .opener.cover .cassette, body[data-mixtape="4"] .opener.cover .cassette, body[data-mixtape="11"] .opener.cover .cassette, body[data-mixtape="12"] .opener.cover .cassette');
     if (!b) return;
     const now = Date.now(), kind = b.classList.contains('cassette') ? 'cassette' : 'logo';
     const st = eggGet(); let egg = st.kind === kind ? (st.t || []) : [];
@@ -130,11 +131,11 @@
     eggSet({}); e.preventDefault(); e.stopImmediatePropagation();
     const img = b.tagName === 'IMG' ? b : b.querySelector('img'); if (img && img.animate) img.animate([{ transform: 'rotate(0)' }, { transform: 'rotate(360deg)' }], { duration: 600, easing: 'ease-in-out' });
     const root = (document.querySelector('meta[name="sor-root"]') || {}).content || '.';
-    const hidden = /\/(film|jazz|wereld|beatles|jeugd|jaren80|cloud|blackplanet|vrouwen|rockalbum|nederpop)\//.test(location.pathname);
-    const CASSETTE = { '1': '/wereld/index.html', '2': '/jeugd/index.html', '3': '/beatles/index.html', '5': '/jazz/index.html', '7': '/jaren80/index.html', '13': '/cloud/index.html', '6': '/blackplanet/index.html', '10': '/vrouwen/index.html', '4': '/rockalbum/index.html', '11': '/nederpop/index.html' };
+    const hidden = /\/(film|jazz|wereld|beatles|jeugd|jaren80|cloud|blackplanet|vrouwen|rockalbum|nederpop|hitfabriek)\//.test(location.pathname);
+    const CASSETTE = { '1': '/wereld/index.html', '2': '/jeugd/index.html', '3': '/beatles/index.html', '5': '/jazz/index.html', '7': '/jaren80/index.html', '13': '/cloud/index.html', '6': '/blackplanet/index.html', '10': '/vrouwen/index.html', '4': '/rockalbum/index.html', '11': '/nederpop/index.html', '12': '/hitfabriek/index.html' };
     let target;
     if (b.classList.contains('cassette')) target = new URL(root + CASSETTE[document.body.dataset.mixtape], location.href);
-    else if (hidden) target = new URL(location.pathname.replace(/\/(film|jazz|wereld|beatles|jeugd|jaren80|cloud|blackplanet|vrouwen|rockalbum|nederpop)\/.*$/, '/index.html'), location.href);
+    else if (hidden) target = new URL(location.pathname.replace(/\/(film|jazz|wereld|beatles|jeugd|jaren80|cloud|blackplanet|vrouwen|rockalbum|nederpop|hitfabriek)\/.*$/, '/index.html'), location.href);
     else target = new URL(root + '/film/index.html', location.href);
     setTimeout(() => go(target.href, true), 500);
   }, true);
