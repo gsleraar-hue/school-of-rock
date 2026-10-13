@@ -137,7 +137,7 @@
   // ---------- Stamboom: tijd horizontaal, families als banen ----------
   const PX_PER_YEAR = 15, ROW = 22, LANE_PAD = 14, LEFT = 290;
   // Toen rock nog pop was · tijdlijn: 1965-2010 breed uitgetrokken, daarvoor en daarna samengedrukt
-  const SEG = [[1963,60],[1965,130],[2027,130]];
+  const SEG = [[1964,75],[1966,220],[1970,145],[1972,180],[1974,145],[1976,220],[1978,145],[1982,180],[1984,75],[1986,145],[1992,75],[1994,145],[1996,110],[1998,75],[2000,145],[2002,110],[2006,145],[2008,110],[2010,5],[2027,5]];
   const SEGX = []; { let x = 0; SEG.forEach(([y], i) => { SEGX.push(x); if (i < SEG.length - 1) x += (SEG[i + 1][0] - y) * SEG[i][1]; }); }
   const tx = y => { y = Math.max(SEG[0][0], y); let i = SEG.length - 2; while (i > 0 && y < SEG[i][0]) i--; return LEFT + SEGX[i] + (y - SEG[i][0]) * SEG[i][1]; };
   const xToYear = x => { x -= LEFT; let i = SEG.length - 2; while (i > 0 && x < SEGX[i]) i--; return SEG[i][0] + (x - SEGX[i]) / SEG[i][1]; };

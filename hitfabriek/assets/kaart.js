@@ -137,7 +137,7 @@
   // ---------- Stamboom: tijd horizontaal, families als banen ----------
   const PX_PER_YEAR = 15, ROW = 22, LANE_PAD = 14, LEFT = 290;
   // De hitfabriek · stamboom: 1950-2026 breed uitgetrokken, daarvoor en daarna samengedrukt
-  const SEG = [[1690,1.5],[1880,22],[1950,70],[2000,45],[2027,45]];
+  const SEG = [[1699,75],[1701,5],[1891,75],[1893,5],[1903,75],[1905,5],[1909,75],[1915,5],[1919,75],[1921,5],[1941,75],[1943,5],[1957,110],[1959,75],[1961,110],[1963,180],[1965,5],[1967,75],[1969,5],[1971,75],[1977,5],[1981,75],[1983,5],[1985,75],[1987,110],[1989,5],[1991,75],[1993,5],[1997,75],[2001,5],[2007,75],[2021,5],[2023,75],[2025,5],[2027,5]];
   const SEGX = []; { let x = 0; SEG.forEach(([y], i) => { SEGX.push(x); if (i < SEG.length - 1) x += (SEG[i + 1][0] - y) * SEG[i][1]; }); }
   const tx = y => { y = Math.max(SEG[0][0], y); let i = SEG.length - 2; while (i > 0 && y < SEG[i][0]) i--; return LEFT + SEGX[i] + (y - SEG[i][0]) * SEG[i][1]; };
   const xToYear = x => { x -= LEFT; let i = SEG.length - 2; while (i > 0 && x < SEGX[i]) i--; return SEG[i][0] + (x - SEGX[i]) / SEG[i][1]; };
@@ -395,7 +395,7 @@
     } else if (state.mode === 'tree') {
       // de tijdlijn begint rechts van de kolom met familienamen
       const kk = Math.max(Math.min(1, (H - 20) / (treeH + 10)), Math.min(1, (W - 190) / (treeW - LEFT + 40)));
-      t = d3.zoomIdentity.translate(170 - tx(1890) * kk, 0).scale(kk);
+      t = d3.zoomIdentity.translate(170 - tx(1698) * kk, 0).scale(kk);
     } else {
       const xs = G.map(g => g.world.x), ys = G.map(g => g.world.y);
       const x0 = d3.min(xs) - 60, x1 = d3.max(xs) + 60, y0 = d3.min(ys) - 50, y1 = d3.max(ys) + 50;

@@ -137,7 +137,7 @@
   // ---------- Stamboom: tijd horizontaal, families als banen ----------
   const PX_PER_YEAR = 15, ROW = 22, LANE_PAD = 14, LEFT = 290;
   // Vrouwen in de popmuziek · tijdlijn: 1920-2026 breed uitgetrokken, daarvoor en daarna samengedrukt
-  const SEG = [[1915,20],[1920,42],[2027,42]];
+  const SEG = [[1919,110],[1921,5],[1923,110],[1925,75],[1927,5],[1929,75],[1931,5],[1937,110],[1939,75],[1941,5],[1943,75],[1945,5],[1947,75],[1951,110],[1953,5],[1957,145],[1959,5],[1961,145],[1965,5],[1967,145],[1969,110],[1971,145],[1973,110],[1975,145],[1977,110],[1979,145],[1981,5],[1983,110],[1985,75],[1991,145],[1993,5],[1995,75],[1997,145],[1999,5],[2001,110],[2003,5],[2005,110],[2007,75],[2009,5],[2011,110],[2017,145],[2019,75],[2023,5],[2027,5]];
   const SEGX = []; { let x = 0; SEG.forEach(([y], i) => { SEGX.push(x); if (i < SEG.length - 1) x += (SEG[i + 1][0] - y) * SEG[i][1]; }); }
   const tx = y => { y = Math.max(SEG[0][0], y); let i = SEG.length - 2; while (i > 0 && y < SEG[i][0]) i--; return LEFT + SEGX[i] + (y - SEG[i][0]) * SEG[i][1]; };
   const xToYear = x => { x -= LEFT; let i = SEG.length - 2; while (i > 0 && x < SEGX[i]) i--; return SEG[i][0] + (x - SEGX[i]) / SEG[i][1]; };

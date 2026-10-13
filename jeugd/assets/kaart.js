@@ -137,7 +137,7 @@
   // ---------- Stamboom: tijd horizontaal, families als banen ----------
   const PX_PER_YEAR = 15, ROW = 22, LANE_PAD = 14, LEFT = 290;
   // Jeugdculturen · tijdlijn: 1948-1982 breed uitgetrokken, daarvoor en daarna samengedrukt
-  const SEG = [[1935,15],[1948,150],[1982,40],[1984,40]];
+  const SEG = [[1945,75],[1947,110],[1949,145],[1951,215],[1953,180],[1955,220],[1961,110],[1963,220],[1967,215],[1969,220],[1971,110],[1973,180],[1975,220],[1979,180],[1981,75],[1984,75]];
   const SEGX = []; { let x = 0; SEG.forEach(([y], i) => { SEGX.push(x); if (i < SEG.length - 1) x += (SEG[i + 1][0] - y) * SEG[i][1]; }); }
   const tx = y => { y = Math.max(SEG[0][0], y); let i = SEG.length - 2; while (i > 0 && y < SEG[i][0]) i--; return LEFT + SEGX[i] + (y - SEG[i][0]) * SEG[i][1]; };
   const xToYear = x => { x -= LEFT; let i = SEG.length - 2; while (i > 0 && x < SEGX[i]) i--; return SEG[i][0] + (x - SEGX[i]) / SEG[i][1]; };
