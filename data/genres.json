@@ -4659,7 +4659,8 @@
     "rave",
     "eurodance",
     "big-beat",
-    "dubstep"
+    "dubstep",
+    "dutch-house"
    ],
    "text": "Rond 2010 werd elektronische dansmuziek in de Verenigde Staten het grote nieuwe genre, onder de naam EDM. Festivals trokken honderdduizenden bezoekers en de dj werd een popster met een eigen lichtshow. Avicii bouwde Levels op een zangsample van Etta James, en Martin Garrix maakte Animals op een laptop in zijn slaapkamer.",
    "listen": "Hoor de opbouw en de drop: het moment waarop de beat en de bas weer inzetten.",
@@ -8673,6 +8674,543 @@
      "year": 2024,
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6a/b2/36/6ab236ac-6b8e-60e4-aa77-8e73c7127ebc/mzaf_17637473173165118705.plus.aac.p.m4a",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7e/d5/09/7ed50926-eadd-40a8-cf87-85c17f212bb4/075679634283.jpg/600x600bb.jpg"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "barbershop",
+   "name": "Barbershop",
+   "family": "pop",
+   "year": 1895,
+   "peak": [
+    1900,
+    1925
+   ],
+   "place": {
+    "name": "Verenigde Staten",
+    "lat": 36.16,
+    "lon": -86.78
+   },
+   "parents": [
+    "gospel",
+    "minstrel",
+    "tin-pan-alley"
+   ],
+   "text": "Barbershop is zang voor vier mannen zonder instrumenten: de lead zingt de melodie, de tenor zingt erboven, de bariton en de bas vullen het akkoord aan. Rond 1900 zongen vooral zwarte Amerikanen zo, in kapperszaken, op straat en in de kerk, en ook latere jazzmuzikanten leerden er harmonie mee. Het kenmerk is het barbershopakkoord, een septiemakkoord dat zo zuiver klinkt dat het lijkt te zoemen. Het Haydn Quartet had er in 1904 een grote hit mee met Sweet Adeline.",
+   "listen": "Hoor in Sweet Adeline hoe vier stemmen samen één akkoord vormen en hoe de lange slotnoten blijven hangen, terwijl de andere stemmen om de melodie heen bewegen.",
+   "tracks": [
+    {
+     "artist": "Haydn Quartet",
+     "title": "Sweet Adeline",
+     "year": 1904,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/16/56/c4/1656c452-9736-a066-83f6-88498f6a0044/mzaf_10433584174812090519.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/1c/26/05/1c2605fc-67ad-db43-5049-d8a895abe428/888831095767.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "American Quartet",
+     "title": "It's a Long Way to Tipperary",
+     "year": 1914,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a7/7e/d3/a77ed3fd-4a9a-eeee-d6dc-2f1e250fbf90/mzaf_304297513013623496.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/4c/ba/64/4cba64ec-3070-f314-285f-604b3f6d9583/859724974773_cover.jpg/600x600bb.jpg"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "fado",
+   "name": "Fado",
+   "family": "pop",
+   "year": 1840,
+   "peak": [
+    1930,
+    1970
+   ],
+   "place": {
+    "name": "Lissabon (Mouraria en Alfama)",
+    "lat": 38.716,
+    "lon": -9.135
+   },
+   "parents": [],
+   "text": "Fado ontstond in de eerste helft van de negentiende eeuw in de arme havenwijken van Lissabon, zoals Mouraria en Alfama. Het woord betekent noodlot. Een zanger of zangeres, de fadista, zingt over gemis en verlangen, in het Portugees saudade, begeleid door een Portugese gitaar met twaalf snaren en een gewone gitaar. Maria Severa werd rond 1840 de eerste beroemde fadista. Amália Rodrigues maakte fado vanaf de jaren veertig wereldberoemd. Sinds 2011 staat fado op de UNESCO-lijst van immaterieel erfgoed.",
+   "listen": "Hoor in Barco Negro hoe de Portugese gitaar met heldere, trillende tonen om de stem heen speelt, en hoe Amália Rodrigues de lange noten laat aanzwellen.",
+   "tracks": [
+    {
+     "artist": "Amália Rodrigues",
+     "title": "Barco Negro",
+     "year": 1955,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/45/1a/b2/451ab2ce-ff99-f7d1-4122-51fdcbb45213/mzaf_3969104763727216925.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/8d/bc/68/8dbc68d8-4a16-ee00-01c2-0277e0e6ce56/5605231024020.png/600x600bb.jpg"
+    },
+    {
+     "artist": "Amália Rodrigues",
+     "title": "Estranha Forma de Vida",
+     "year": 1962,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/1b/74/da/1b74da43-4b09-d354-36bd-ca11e948ad4d/mzaf_10944677876654327609.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/31/e9/48/31e9484a-661e-e417-f27c-2089cdde6f06/5605231018722.png/600x600bb.jpg"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "rebetiko",
+   "name": "Rebetiko",
+   "family": "pop",
+   "year": 1922,
+   "peak": [
+    1932,
+    1955
+   ],
+   "place": {
+    "name": "Piraeus (haven van Athene)",
+    "lat": 37.94,
+    "lon": 23.65
+   },
+   "parents": [],
+   "text": "Rebetiko is de muziek van de Griekse havenwijken, vooral Piraeus bij Athene. Na 1922 kwamen meer dan een miljoen Griekse vluchtelingen uit Klein-Azië, het huidige Turkije, naar Griekenland, met hun cafémuziek vol oosterse toonladders. In de jaren dertig maakte Markos Vamvakaris de bouzouki, een luit met een lange hals, tot het hoofdinstrument. De liedjes gaan over armoede, liefde, de gevangenis en hasj. Na de oorlog maakte Vassilis Tsitsanis rebetiko populair in heel Griekenland.",
+   "listen": "Hoor in Frangosyriani de heldere, tokkelende bouzouki en het rustige dansritme van de hasapiko, een oude Griekse dans.",
+   "tracks": [
+    {
+     "artist": "Vassilis Tsitsanis & Marika Ninou",
+     "title": "Synnefiasmeni Kyriaki",
+     "year": 1954,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4c/b9/3e/4cb93e34-9f25-eb2a-2b0d-9fdc42be18f9/mzaf_15346394411910113973.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/74/59/50/74595042-95c9-fc58-1da6-67bca7a29178/5206999030379.jpg/600x600bb.jpg"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "garagerock-revival",
+   "name": "Garagerock-revival",
+   "family": "rock",
+   "year": 2001,
+   "peak": [
+    2001,
+    2006
+   ],
+   "place": {
+    "name": "New York (Lower East Side)",
+    "lat": 40.715,
+    "lon": -73.985
+   },
+   "parents": [
+    "garagerock",
+    "punk",
+    "postpunk"
+   ],
+   "text": "In 2001 klonk gitaarrock ineens weer rauw en kort. The Strokes uit New York brachten Is This It uit en The White Stripes, een duo uit Detroit met alleen gitaar en drums, White Blood Cells. Ze grepen terug op de garagerock van de jaren zestig en op punk: weinig akkoorden, een droge opname en geen lange solo's. Er volgden meer bands met 'The' in hun naam, zoals The Hives uit Zweden en The Vines uit Australië, en daarna Yeah Yeah Yeahs.",
+   "listen": "Hoor in Last Nite de twee gitaren die strak in elkaar haken, de droge drums en de stem van Julian Casablancas, die klinkt alsof hij door een oude telefoon zingt.",
+   "tracks": [
+    {
+     "artist": "The Strokes",
+     "title": "Last Nite",
+     "year": 2001,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/54/44/71/54447120-b23c-5e9b-197b-9a7fe39441bf/mzaf_7501543230215004927.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/cf/18/7b/cf187bcd-029d-5167-bab6-87219f32d95a/078636804521.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "The White Stripes",
+     "title": "Seven Nation Army",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fe/2d/58/fe2d587f-6344-3fb3-43f7-d318a6253dcc/mzaf_16825320951570507954.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/07/25/09/0725098a-09f4-f240-e551-94384a590371/886448799009.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Yeah Yeah Yeahs",
+     "title": "Maps",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7b/ed/e0/7bede0d1-5590-9095-8d75-905dd402ddfe/mzaf_9912538917134585825.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c7/e7/86/c7e78676-f2b4-0eef-18b9-b13d35b2617b/00602567028376.rgb.jpg/600x600bb.jpg"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "electroclash",
+   "name": "Electroclash",
+   "family": "electronic",
+   "year": 2001,
+   "peak": [
+    2001,
+    2004
+   ],
+   "place": {
+    "name": "New York (Williamsburg, club Luxx)",
+    "lat": 40.714,
+    "lon": -73.961
+   },
+   "parents": [
+    "synthpop",
+    "electro",
+    "new-wave"
+   ],
+   "text": "Electroclash was rond 2001 een botsing tussen elektronische dansmuziek en punk. Dj Larry Tee bedacht de naam en organiseerde in oktober 2001 het Electroclash Festival in Williamsburg, een wijk van Brooklyn in New York. De muziek leent de koele synthesizers en drumcomputers van synthpop en electro uit de jaren tachtig, met afstandelijke, half gesproken zang. Fischerspooner, Peaches, Miss Kittin & The Hacker en de Britse band Ladytron waren de bekendste namen. Kleding en show waren minstens zo belangrijk als de muziek.",
+   "listen": "Hoor in Emerge de strakke drumcomputer en de synthesizerlijnen die steeds verder opbouwen, met zang die eerder koel dan warm klinkt.",
+   "tracks": [
+    {
+     "artist": "Fischerspooner",
+     "title": "Emerge",
+     "year": 2001,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b9/17/be/b917be99-dafc-8b87-dfe9-05933647efb8/mzaf_6783324644115674997.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/dc/8e/8a/dc8e8aaa-2ac9-d988-f5b2-3a146801c4f6/cover.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Felix da Housecat",
+     "title": "Silver Screen (Shower Scene)",
+     "year": 2001,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/46/45/fa/4645fa33-ec9f-531c-c1b4-d9f7c2535769/mzaf_5046620665017817072.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b9/29/11/b9291123-2abb-7ab7-b19c-3abd01903fd8/5060519685698.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Ladytron",
+     "title": "Seventeen",
+     "year": 2002,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6d/43/c2/6d43c282-ccba-6056-1f96-9ee369c6fc79/mzaf_24010779177315515.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/23/31/c0/2331c0bb-da0e-776a-9e2c-cf7d1225d32d/067003320665.png/600x600bb.jpg"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "hardstyle",
+   "name": "Hardstyle",
+   "family": "electronic",
+   "year": 2000,
+   "peak": [
+    2003,
+    2015
+   ],
+   "place": {
+    "name": "Zaandam (Qlubtempo)",
+    "lat": 52.44,
+    "lon": 4.83
+   },
+   "parents": [
+    "gabber",
+    "trance"
+   ],
+   "text": "Rond 2000 ontstond in Nederland hardstyle, uit de Duitse hard trance en de Nederlandse hardcore. De organisatie Q-dance gaf feesten als Qlubtempo en Qlimax, liet in 2002 de naam hardstyle vastleggen en begon in 2003 het festival Defqon.1. De basis is een harde, vervormde bassdrum, eerst rond 140 tot 150 bpm en later sneller. Ertussen valt een reverse bass: een bastoon die precies tussen de bassdrums klinkt. Daarboven komen grote synthesizermelodieën. Headhunterz, Showtek en Brennan Heart werden de bekendste namen.",
+   "listen": "Hoor in Just Begun hoe de bas steeds tussen de harde bassdrums in valt: de reverse bass die hardstyle herkenbaar maakt.",
+   "tracks": [
+    {
+     "artist": "DJ Duro",
+     "title": "Just Begun",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music2/v4/df/32/aa/df32aa90-3bd1-6ce1-7afa-61651901c11c/mzaf_8767706685019158566.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/be/3a/93/mzi.fxkdfosl.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Headhunterz & Wildstylez",
+     "title": "Blame It On the Muzic",
+     "year": 2008,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c2/1b/b0/c21bb005-8fd4-d003-e7b1-c39a76855836/mzaf_7825891987387885883.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/3b/4c/d1/3b4cd1c3-d5dd-8565-5d57-e9e852284823/8718868387134.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Brennan Heart & Jonathan Mendelsohn",
+     "title": "Imaginary",
+     "year": 2013,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/eb/32/d9/eb32d9cf-0898-679c-b57f-a11f413844f1/mzaf_14062916609632986979.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/c8/eb/4f/c8eb4f58-f714-8288-7c44-a0adb40ca9b1/8715576152382.jpg/600x600bb.jpg"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "dutch-house",
+   "name": "Dutch house",
+   "family": "electronic",
+   "year": 2008,
+   "peak": [
+    2008,
+    2013
+   ],
+   "place": {
+    "name": "Amsterdam",
+    "lat": 52.37,
+    "lon": 4.9
+   },
+   "parents": [
+    "chicago-house",
+    "trance-nl"
+   ],
+   "text": "Rond 2008 maakten Nederlandse dj's als Chuckie, Afrojack, Laidback Luke en Hardwell een eigen soort house, ook wel dirty Dutch genoemd, naar de feesten van Chuckie. Dutch house heeft schelle, piepende synthesizergeluiden, een zware bas en Latijns-Amerikaanse ritmes in de percussie. Een nummer bouwt op naar een drop, het moment waarop de beat en de bas weer losbarsten. Afrojack scoorde in 2010 met Take Over Control, en het geluid werd een bouwsteen van de Amerikaanse EDM.",
+   "listen": "Hoor in Take Over Control de hoge, schelle synthesizerlijn en hoe alles even stilvalt voordat de zware bas weer inzet.",
+   "tracks": [
+    {
+     "artist": "AFROJACK",
+     "title": "Take Over Control",
+     "year": 2010,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f1/7d/63/f17d633f-a705-f211-bc2c-1df1e734ad39/mzaf_18179154188693605930.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/4b/01/10/4b01102e-d54a-49d3-6c98-c8d65d05283e/8712944416350.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Hardwell",
+     "title": "Spaceman",
+     "year": 2012,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/d8/eb/36d8eb45-9089-e822-42ba-337f0c4f2b17/mzaf_11664365645797085033.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/92/c0/fc/92c0fcb5-6038-8e9d-e59c-2dabb66afa7a/8717931684644.png/600x600bb.jpg"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "indie-folk",
+   "name": "Indiefolk",
+   "family": "country",
+   "year": 2008,
+   "peak": [
+    2007,
+    2013
+   ],
+   "place": {
+    "name": "Seattle",
+    "lat": 47.61,
+    "lon": -122.33
+   },
+   "parents": [
+    "folk-revival",
+    "folk-rock",
+    "singer-songwriter",
+    "indie-shoegaze"
+   ],
+   "text": "Rond 2008 brachten jonge muzikanten akoestische folk terug, met de aanpak van de indierock: zelf opnemen en uitbrengen bij kleine platenlabels. Fleet Foxes uit Seattle zongen op hun debuut uit 2008 meerstemmig als een koor. Bon Iver nam zijn eerste album op in een jachthut in Wisconsin, en Mumford & Sons uit Londen maakten de banjo en de mandoline populair op grote festivals. De nummers beginnen vaak zacht en groeien naar een uitbundig slot.",
+   "listen": "Hoor in White Winter Hymnal hoe de stemmen dezelfde regel na elkaar inzetten, als een canon, terwijl de drums steeds voller worden.",
+   "tracks": [
+    {
+     "artist": "Fleet Foxes",
+     "title": "White Winter Hymnal",
+     "year": 2008,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/09/aa/17/09aa1789-ce81-fa09-2993-2bffe15c10ef/mzaf_9953465677109042745.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music111/v4/b4/3c/0f/b43c0f0e-3c49-dc3f-1c83-8e3085310815/075597937138.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Bon Iver",
+     "title": "Skinny Love",
+     "year": 2007,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c3/53/ef/c353ef07-9302-e169-0c7d-e9873f99c1db/mzaf_15074454966550904398.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/21/2f/ea/212fea18-5fdc-ba4d-5dd7-1b07aaa88b67/656605211565.tif/600x600bb.jpg"
+    },
+    {
+     "artist": "Mumford & Sons",
+     "title": "The Cave",
+     "year": 2009,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/37/98/59/379859ba-5d52-7ac4-c49c-4f3ca1c8cfe4/mzaf_12066479895425675224.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/78/a2/5a78a265-77e7-690d-8493-948b68232951/195081787015.jpg/600x600bb.jpg"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "moombahton",
+   "name": "Moombahton",
+   "family": "electronic",
+   "year": 2009,
+   "peak": [
+    2010,
+    2016
+   ],
+   "place": {
+    "name": "Washington D.C.",
+    "lat": 38.91,
+    "lon": -77.04
+   },
+   "parents": [
+    "dutch-house",
+    "reggaeton"
+   ],
+   "text": "Eind 2009 draaide dj Dave Nada in Washington op een feest van zijn neef. De gasten wilden reggaeton horen, dus vertraagde hij een Nederlandse housetrack, de remix van Moombah door Afrojack, van ongeveer 128 naar 108 bpm. Zo ontstond moombahton, een naam uit Moombah en reggaeton. Het tempo is traag, het ritme is de dembow van reggaeton en de klanken komen uit Dutch house. Major Lazer bracht het geluid in 2015 naar de hitlijsten met Lean On.",
+   "listen": "Hoor in Que Que het langzame, wiegende dembowritme onder de harde synthesizers van Dutch house.",
+   "tracks": [
+    {
+     "artist": "Dillon Francis & Diplo",
+     "title": "Que Que",
+     "year": 2011,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/02/08/ae/0208aeab-7bbb-1c9e-e6bc-8a137c6b9ad9/mzaf_1588797594554449447.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/43/ae/56/43ae563f-0062-4e2c-351d-0b91ba5f6984/483.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Munchi",
+     "title": "Sandungueo",
+     "year": 2011,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/cc/3a/0c/cc3a0cc6-9148-156c-bd20-8b1b3543f7ef/mzaf_7258223640525887675.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/a8/1c/33/a81c33ae-13e6-be3f-2864-412ea35b754e/cover.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Major Lazer, MØ & DJ Snake",
+     "title": "Lean On",
+     "year": 2015,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1a/ae/34/1aae34ef-82e4-defa-626c-41def8be9f90/mzaf_17579690887450399528.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/38/3d/90/383d906a-2d08-0abf-c29d-46c30ca88110/5060525439629_cover.jpg/600x600bb.jpg"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "vaporwave",
+   "name": "Vaporwave",
+   "family": "electronic",
+   "year": 2011,
+   "peak": [
+    2011,
+    2016
+   ],
+   "place": {
+    "name": "Portland (Oregon)",
+    "lat": 45.52,
+    "lon": -122.68
+   },
+   "parents": [
+    "smooth-jazz",
+    "modern-rnb",
+    "ambient"
+   ],
+   "text": "Vaporwave ontstond rond 2010 op internet. Daniel Lopatin vertraagde als Chuck Person stukjes uit popliedjes uit de jaren tachtig en liet ze eindeloos herhalen. In december 2011 bracht Ramona Xavier als Macintosh Plus het album Floral Shoppe uit, vol vertraagde soul, liftmuziek en reclamedeuntjes. De naam verwijst naar vaporware: software die wordt aangekondigd maar nooit verschijnt. Vaporwave speelt met het gevoel van oude computers, winkelcentra en reclames, en is half grap, half kritiek op de consumptiemaatschappij.",
+   "listen": "Hoor in Lisa Frank 420 / Modern Computing hoe een vertraagd stukje uit It's Your Move van Diana Ross steeds opnieuw begint, alsof de plaat blijft hangen.",
+   "tracks": [
+    {
+     "artist": "Macintosh Plus",
+     "title": "リサフランク420 / 現代のコンピュー",
+     "year": 2011,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f8/66/32/f8663292-ef2c-1304-82c1-79a368a948a0/mzaf_16499941145885627614.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/38/aa/63/38aa6316-6142-089b-e94d-b1c91044eada/820200967367.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "James Ferraro",
+     "title": "Global Lunch",
+     "year": 2011,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/0c/37/7a0c37d4-b0d3-68f7-6121-3a3a06b65f4e/mzaf_10156334655423282812.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/9c/b7/9a/9cb79ae5-cf89-3e9a-bd6d-c1a504e8b808/5060331221166_Cover.jpg/600x600bb.jpg"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "lofi-hiphop",
+   "name": "Lofi hiphop",
+   "family": "hiphop",
+   "year": 2013,
+   "peak": [
+    2017,
+    2022
+   ],
+   "place": {
+    "name": "Lyon (Lofi Girl)",
+    "lat": 45.77,
+    "lon": 4.83
+   },
+   "parents": [
+    "golden-age-hiphop",
+    "nu-jazz",
+    "downtempo"
+   ],
+   "text": "Lofi hiphop is rustige, instrumentale hiphop om bij te studeren of te ontspannen. Lofi staat voor low fidelity: de klank is expres wat dof, met het geruis en gekraak van een oude plaat. De beats zijn traag en klinken een beetje slordig, met samples van jazzpiano en gitaar. Grote voorbeelden waren de Japanse producer Nujabes en de Amerikaan J Dilla. Vanaf 2017 maakte het Franse YouTube-kanaal ChilledCow, nu Lofi Girl, het genre wereldberoemd met een livestream die dag en nacht doorloopt.",
+   "listen": "Hoor in Time: The Donut of the Heart hoe J Dilla een stukje soul van The Jackson 5 tot een trage, licht slepende loop maakt.",
+   "tracks": [
+    {
+     "artist": "J Dilla",
+     "title": "Time: The Donut of the Heart",
+     "year": 2006,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/83/0d/91/830d9165-43ed-d8fd-2528-f20acdf13fd5/mzaf_48590175490041571.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/63/d3/c5/63d3c537-ac30-86e7-8e69-8a03a5346209/792.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Nujabes",
+     "title": "Aruarian Dance",
+     "year": 2004,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b7/37/ae/b737ae78-5aee-043e-807a-af878993ca7e/mzaf_4175871691801697475.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/be/59/2b/be592b54-496f-bd59-9e46-49fa2f45a717/VICL-61411.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Jinsang",
+     "title": "Affection",
+     "year": 2016,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/27/7f/5a/277f5a90-6ca3-a8e8-931c-8dd7c1d472fd/mzaf_4569701282117560653.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/33/a5/2f/33a52fc2-d77b-9408-6d5b-af389ee28c43/cover_4018939360092.jpg/600x600bb.jpg"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "latin-trap",
+   "name": "Latin trap",
+   "family": "jamaica",
+   "year": 2016,
+   "peak": [
+    2016,
+    2020
+   ],
+   "place": {
+    "name": "San Juan (Puerto Rico)",
+    "lat": 18.47,
+    "lon": -66.11
+   },
+   "parents": [
+    "trap",
+    "reggaeton"
+   ],
+   "text": "Latin trap is trap in het Spaans, uit Puerto Rico. Al rond 2007 rapten De La Ghetto en Arcángel over trapbeats, maar rond 2016 werd het een golf, via SoundCloud en YouTube. Je hoort de 808-bas en ratelende hi-hats van de trap uit Atlanta, met de taal en soms het ritme van reggaeton. Bad Bunny brak in 2016 door met Soy Peor en Anuel AA met Sola. In 2018 kwam I Like It van Cardi B, Bad Bunny en J Balvin op nummer één in Amerika.",
+   "listen": "Hoor in Sola de trage beat met de diepe 808-bas en snelle hi-hats onder de Spaanse zang.",
+   "tracks": [
+    {
+     "artist": "Anuel AA",
+     "title": "Sola",
+     "year": 2016,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b7/a2/ee/b7a2ee8b-4070-32e0-4c05-c216302d9cff/mzaf_9735099424851316285.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/31/aa/63/31aa633f-1ffd-facf-c666-c7e8c349835f/050742352752_cover.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Bad Bunny",
+     "title": "Estamos Bien",
+     "year": 2018,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fc/2b/1f/fc2b1f38-b2af-4ba6-e144-26e8442f8586/mzaf_16057425778477285662.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/cf/3a/db/cf3adbe6-8ea1-f60f-60fd-713eefda3962/193483317984.jpg/600x600bb.jpg"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "baile-funk",
+   "name": "Baile funk",
+   "family": "jamaica",
+   "year": 1989,
+   "peak": [
+    1995,
+    2010
+   ],
+   "place": {
+    "name": "Rio de Janeiro (favela's)",
+    "lat": -22.91,
+    "lon": -43.17
+   },
+   "parents": [
+    "electro",
+    "hiphop"
+   ],
+   "text": "Baile funk, in Brazilië funk carioca genoemd, ontstond eind jaren tachtig op de dansfeesten (bailes) in de favela's van Rio de Janeiro. Dj's draaiden eerst Amerikaanse Miami bass, snelle hiphop met de drumcomputer. In 1989 bracht DJ Marlboro het album Funk Brasil uit, met teksten in het Portugees. Eind jaren negentig kwam de tamborzão, een ritme met trommels uit de Afro-Braziliaanse traditie. Cidinho & Doca zongen over het leven in de favela, en later bracht Anitta funk naar de Braziliaanse pop.",
+   "listen": "Hoor in Rap da Felicidade de bonkende drumcomputer onder het refrein Eu só quero é ser feliz: ik wil alleen maar gelukkig zijn.",
+   "tracks": [
+    {
+     "artist": "Cidinho & Doca & DJ Marlboro",
+     "title": "Rap da Felicidade",
+     "year": 1995,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b2/35/6b/b2356bb5-60d4-4cd2-e0a8-debe2f4c87f7/mzaf_1760727512099548574.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f4/0b/be/f40bbe18-09d6-896b-0bc4-f19a984fbac8/195843.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Mc Feeling Carioca Funk",
+     "title": "Glamurosa",
+     "year": 2001,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/26/b2/79/26b27932-119a-a956-da04-a7953e642393/mzaf_10211817332285483953.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2a/4d/96/2a4d9623-c04d-8605-b61c-ed89191bac5c/612891028874.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Anitta",
+     "title": "Show das Poderosas",
+     "year": 2013,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/54/24/1b/54241bdf-0c2b-0b2f-173e-c089be508b3c/mzaf_3965719555603875073.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/d2/b7/f3/d2b7f329-e79f-33ea-7d0a-1bfa5c245e18/825646428915.jpg/600x600bb.jpg"
     }
    ],
    "mixtapes": []
