@@ -135,9 +135,11 @@
   let W = 0, H = 0;
   // ---------- Stamboom: tijd horizontaal, families als banen ----------
   const PX_PER_YEAR = 15, ROW = 22, LANE_PAD = 14, LEFT = 290;
-  // vóór 1880 gaat de tijd vier keer zo snel, anders wordt de stamboom te breed
-  const SPLIT = Math.max(YMIN, 1880), EARLY = PX_PER_YEAR / 4;
-  const tx = y => LEFT + (y < SPLIT ? (y - YMIN) * EARLY : (SPLIT - YMIN) * EARLY + (y - SPLIT) * PX_PER_YEAR);
+  // tijdas naar dichtheid: per vijf jaar meer ruimte waar veel genres en uitvindingen ontstaan, lege stukken smal
+  const SPLIT = Math.max(YMIN, 1880);
+  const SEG = (() => { const ys = [...G.map(g => g.year), ...((tech && tech.items) || []).map(d => d.year)], out = []; for (let y = YMIN; y < YMAX + 5; y += 5) { const n = ys.filter(v => v >= y && v < y + 5).length, px = n === 0 ? 2 : Math.min(24, 5 + 1.6 * n); if (!out.length || out[out.length - 1][1] !== px) out.push([y, px]); } return out; })();
+  const SEGX = []; { let x = 0; SEG.forEach(([y], i) => { SEGX.push(x); if (i < SEG.length - 1) x += (SEG[i + 1][0] - y) * SEG[i][1]; }); }
+  const tx = y => { y = Math.max(SEG[0][0], y); let i = SEG.length - 1; while (i > 0 && y < SEG[i][0]) i--; return LEFT + SEGX[i] + (y - SEG[i][0]) * SEG[i][1]; };
   let lanes = [];
   function layoutTree() {
     let y = 40;
@@ -288,7 +290,7 @@
     if (state.mode === 'tree' || state.mode === 'tech') {
       const LL = state.mode === 'tech' ? [...techLanes, ...lanes] : lanes;
       gBack.selectAll('rect').data(LL).join('rect').attr('class', d => 'lane-bg' + (d.alt ? ' alt' : '') + (d.tech ? ' tech' : '')).attr('x', -4000).attr('width', treeW + 8000).attr('y', d => d.y).attr('height', d => d.h);
-      const decades = d3.range(Math.ceil(YMIN / 10) * 10, YMAX, 10).filter(d => d >= SPLIT || d % 50 === 0);
+      const decades = d3.range(Math.ceil(YMIN / 10) * 10, YMAX, 10).filter(d => tx(d + 10) - tx(d) >= 34 || d % 50 === 0);
       const dg = gGrid.selectAll('g').data(decades).join('g').attr('class', 'decade');
       dg.append('line');
       dg.append('text').attr('y', 16).text(d => d);
@@ -319,6 +321,8 @@
   }
   function updateGrid() {
     gGrid.selectAll('g.decade').each(function (d) { const x = T.applyX(tx(d)); const g = d3.select(this); g.select('line').attr('x1', x).attr('x2', x).attr('y1', Math.max(22, T.applyY(state.mode === 'tech' ? techTop : 26))).attr('y2', T.applyY(treeH)); g.select('text').attr('x', x + 4); });
+    // jaartallen boven het raster die elkaar zouden raken weglaten
+    { let last = -1e9; gGrid.selectAll('g.decade text').each(function () { const x = +this.getAttribute('x'), w = this.getComputedTextLength ? this.getComputedTextLength() : 40; if (x > last + 10) { this.removeAttribute('visibility'); last = x + w; } else this.setAttribute('visibility', 'hidden'); }); }
   }
   function updateCities() {
     const placed = [];

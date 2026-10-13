@@ -325,6 +325,7 @@
   }
   function updateGrid() {
     gGrid.selectAll('g.decade').each(function (d) { const x = T.applyX(tx(d)); const g = d3.select(this); g.select('line').attr('x1', x).attr('x2', x).attr('y1', Math.max(22, T.applyY(state.mode === 'tech' ? techTop : 26))).attr('y2', T.applyY(treeH)); g.select('text').attr('x', x + 4); });
+    // jaartallen boven het raster die elkaar zouden raken weglaten
     { let last = -1e9; gGrid.selectAll('g.decade text').each(function () { const x = +this.getAttribute('x'), w = this.getComputedTextLength ? this.getComputedTextLength() : 40; if (x > last + 10) { this.removeAttribute('visibility'); last = x + w; } else this.setAttribute('visibility', 'hidden'); }); }
   }
   function updateCities() {
