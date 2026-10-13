@@ -137,7 +137,7 @@
   // ---------- Stamboom: tijd horizontaal, families als banen ----------
   const PX_PER_YEAR = 15, ROW = 22, LANE_PAD = 14, LEFT = 290;
   // Van cassette tot cloud · tijdlijn: 1992-2026 breed uitgetrokken, daarvoor en daarna samengedrukt
-  const SEG = [[1991,110],[1993,145],[1995,215],[1997,220],[2001,215],[2009,110],[2013,220],[2015,110],[2017,215],[2019,220],[2021,110],[2023,215],[2025,75],[2027,75]];
+  const SEG = [[1991,110],[1993,145],[1995,215],[1997,220],[2001,215],[2005,220],[2009,110],[2013,220],[2015,110],[2017,220],[2025,75],[2027,75]];
   const SEGX = []; { let x = 0; SEG.forEach(([y], i) => { SEGX.push(x); if (i < SEG.length - 1) x += (SEG[i + 1][0] - y) * SEG[i][1]; }); }
   const tx = y => { y = Math.max(SEG[0][0], y); let i = SEG.length - 2; while (i > 0 && y < SEG[i][0]) i--; return LEFT + SEGX[i] + (y - SEG[i][0]) * SEG[i][1]; };
   const xToYear = x => { x -= LEFT; let i = SEG.length - 2; while (i > 0 && x < SEGX[i]) i--; return SEG[i][0] + (x - SEGX[i]) / SEG[i][1]; };
