@@ -32,6 +32,8 @@
     }
     SOR.bookChapters(SET).then(list => {
       const c = list.find(x => x.n === N); if (!c) { row.remove(); return; }
+      // de knop naar de podcastaflevering (zelfde opname, maar in Spotify) hoort bij het luisterboek
+      const pod = deck.querySelector('.sor-pod'); if (pod) fromStart.after(pod);
       dur = c.duration; label(); meelezen(row);
     });
     go.addEventListener('click', () => SOR.playBook(N, undefined, SET));
