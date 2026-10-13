@@ -84,10 +84,12 @@
   audio.addEventListener('play', paint);
   audio.addEventListener('pause', () => { savePos(true); paint(); });
   // Automix voor fragmenten (niet het luisterboek): 2,5 seconde zacht in, 4 seconde zacht uit,
-  // en bij een wissel loopt het vorige fragment nog even door terwijl het volgende opkomt (crossfade).
+  // en bij een wissel gaat het vorige fragment eerst in 0,25 seconde zacht weg (een harde overgang gaf een tikje).
   const FADE = 4, FADE_IN = 2.5, XFADE = 3;
   const ease = x => Math.sin(Math.max(0, Math.min(1, x)) * Math.PI / 2); // vloeiende curve (gelijke luidheid bij overlap)
+  let uitfaden = false, volgende = null;
   function fade() {
+    if (uitfaden) return;
     const frag = current && !current.book && isFinite(audio.duration) && audio.duration > FADE * 2;
     const rest = frag ? audio.duration - audio.currentTime : Infinity;
     const vin = current && !current.book ? ease(audio.currentTime / FADE_IN) : 1;
@@ -95,15 +97,11 @@
     if (Math.abs(audio.volume - v) > .01) audio.volume = v;
   }
   let tail = null;
-  function crossfadeOut() {
-    if (!current || current.book || audio.paused || !audio.currentSrc) return;
+  // bij een wissel van fragment: het oude nummer in 0,25 s zacht weg, dan pas het nieuwe (zonder tik)
+  function zachtUit(klaar) {
     if (tail) { tail.pause(); tail = null; }
-    const t = tail = new Audio(audio.currentSrc); t.preload = 'auto'; t.volume = audio.volume;
-    const from = audio.currentTime, v0 = audio.volume || 1;
-    t.addEventListener('loadedmetadata', () => { try { t.currentTime = from; } catch (e) {} }, { once: true });
-    t.play().catch(() => {});
-    const t0 = Date.now();
-    const iv = setInterval(() => { const k = Math.min(1, (Date.now() - t0) / (XFADE * 1000)); if (tail !== t || k >= 1 || t.paused) { clearInterval(iv); t.pause(); if (tail === t) tail = null; return; } t.volume = Math.max(0, v0 * ease(1 - k)); }, 40);
+    const v0 = audio.volume, t0 = performance.now(); uitfaden = true;
+    const iv = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / 250); audio.volume = Math.max(0, v0 * (1 - ease(k))); if (k >= 1) { clearInterval(iv); audio.pause(); uitfaden = false; klaar(); } }, 15);
   }
   function fadeLoop() { fade(); if (!audio.paused) requestAnimationFrame(fadeLoop); }
   audio.addEventListener('play', () => requestAnimationFrame(fadeLoop));
@@ -116,7 +114,7 @@
   function seekBy(s) { if (!audio.duration) return; audio.currentTime = Math.min(audio.duration - 1, Math.max(0, audio.currentTime + s)); progress(); savePos(true); }
   bar.addEventListener('click', e => {
     if (e.target.closest('.sp-toggle')) { audio.paused ? audio.play() : audio.pause(); }
-    if (e.target.closest('.sp-close')) { audio.pause(); if (tail) { tail.pause(); tail = null; } bar.hidden = true; }
+    if (e.target.closest('.sp-close')) { volgende = null; audio.pause(); if (tail) { tail.pause(); tail = null; } bar.hidden = true; }
     if (e.target.closest('.sp-back')) seekBy(-15);
     if (e.target.closest('.sp-fwd')) seekBy(30);
     if (e.target.closest('.sp-next') && current && current.book && current.book < (current.bookMax || 13)) SOR.playBook(current.book + 1, 0, current.bookSet || 'pop');
@@ -149,8 +147,14 @@
     play(track, startAt) {
       if (!track || !track.audio) return;
       if (current && current.audio === track.audio) { if (audio.paused || bar.hidden) { bar.hidden = false; audio.play().catch(() => paint()); } else audio.pause(); return; }
+      volgende = [track, startAt];
+      if (uitfaden) return; // de lopende uitfade start straks het laatst gekozen nummer
+      if (current && !current.book && !audio.paused) { zachtUit(() => { const v = volgende; volgende = null; if (v) SOR._start(v[0], v[1]); }); return; }
+      SOR._start(track, startAt);
+    },
+    _start(track, startAt) {
       savePos(true);
-      if (!track.book) crossfadeOut(); else if (tail) { tail.pause(); tail = null; }
+      if (tail) { tail.pause(); tail = null; }
       current = track;
       audio.volume = track.book ? 1 : 0;
       audio.src = track.audio;
@@ -179,8 +183,8 @@
     bookChapters: book,
     bookPosition(set = 'pop') { return store.get(SETS[set].key); },
     bookPlaying(n, set = 'pop') { return !!(current && current.book === n && (current.bookSet || 'pop') === set && !audio.paused); },
-    stop() { audio.pause(); if (tail) { tail.pause(); tail = null; } },
-    pause() { audio.pause(); if (tail) { tail.pause(); tail = null; } },
+    stop() { volgende = null; audio.pause(); if (tail) { tail.pause(); tail = null; } },
+    pause() { volgende = null; audio.pause(); if (tail) { tail.pause(); tail = null; } },
     isPlaying(track) { return !!(current && track && current.audio === track.audio && !audio.paused); },
     onChange(fn) { listeners.add(fn); return () => listeners.delete(fn); },
     playIcon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>',
