@@ -576,7 +576,7 @@
     if (state.playing) { stopTape(); return; }
     if (state.path) { sel.value = ''; setPath(null); }
     clearSelection();
-    if (state.year >= YMAX) state.year = YMIN;
+    if (state.year >= YMAX) state.year = Math.max(YMIN, xToYear(tx(d3.min(G.filter(g => state.fams.has(g.family)), g => g.year) ?? YMIN) - 24));
     state.playing = true;
     playBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg>Pauze';
     const tick = () => {
