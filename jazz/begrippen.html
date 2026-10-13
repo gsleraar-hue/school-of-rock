@@ -1,4 +1,4 @@
-<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content=".."><title>Begrippen · Blue Hour</title><link rel="icon" href="../jazz/assets/icon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="../assets/site.css"><style>
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content=".."><title>Begrippen · After Hours</title><link rel="icon" href="../jazz/assets/icon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="../assets/site.css"><style>
   :root { --red: #B5642C; }
   .terms-page { padding-block: 48px 0; }
   .search { width: 100%; max-width: 520px; font: 18px/1.2 var(--body); padding: 14px 16px; border: 2px solid var(--ink); border-radius: 3px; background: var(--white); margin: 24px 0 8px; }
@@ -8,10 +8,10 @@
   .term dt { font: 600 19px/1.2 var(--display); }
   .term dd { margin: 4px 0 6px; color: var(--ink-soft); }
   .term .src { font: 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--red); text-decoration: none; }
-</style><script src="../assets/player.js"></script><script src="../assets/nav.js"></script></head><body><header class="sitenav"><a class="brand" href="./index.html"><img src="./assets/icon.svg" alt=""><span>Blue Hour</span></a><nav aria-label="Hoofdmenu"><a href="./index.html">Sessies</a><a href="./kaart.html">Kaart</a><a href="./begrippen.html" aria-current="page">Begrippen</a><a href="./pdf/bluehour-reader.pdf">Reader (pdf)</a></nav></header><main class="wrap terms-page">
+</style><script src="../assets/player.js"></script><script src="../assets/nav.js"></script></head><body><header class="sitenav"><a class="brand" href="./index.html"><img src="./assets/icon.svg" alt=""><span>After Hours</span></a><nav aria-label="Hoofdmenu"><a href="./index.html">Sessies</a><a href="./kaart.html">Kaart</a><a href="./begrippen.html" aria-current="page">Begrippen</a><a href="./pdf/afterhours-reader.pdf">Reader (pdf)</a></nav></header><main class="wrap terms-page">
   <p class="kicker">Alle sessies</p>
   <h1 class="h-sec">Begrippen</h1>
-  <p class="lede">Alle begrippen uit Blue Hour op één plek. Typ om te zoeken; de link brengt je naar het hoofdstuk.</p>
+  <p class="lede">Alle begrippen uit After Hours op één plek. Typ om te zoeken; de link brengt je naar het hoofdstuk.</p>
   <input class="search" id="q" type="search" placeholder="Zoek een begrip, bijvoorbeeld bebop of walking bass" autocomplete="off">
   <p class="count" id="count"></p>
   <dl class="termlist" id="list"><div class="term" data-k="aacm"><dt>AACM</dt><dd>Vereniging van musici uit Chicago (1965) die zelf concerten, les en nieuwe muziek organiseerde.</dd><a class="src" href="sessie/03.html">Sessie 3</a></div>
@@ -88,7 +88,7 @@
 <div class="term" data-k="vrije improvisatie"><dt>Vrije improvisatie</dt><dd>Samen improviseren zonder vooraf afgesproken thema, akkoorden of tempo.</dd><a class="src" href="sessie/02.html">Sessie 2</a></div>
 <div class="term" data-k="vrije improvisatie"><dt>Vrije improvisatie</dt><dd>Improvisatie zonder thema of stijl, zoals in de Europese improvisatie vanaf eind jaren zestig.</dd><a class="src" href="sessie/03.html">Sessie 3</a></div>
 <div class="term" data-k="young lions"><dt>Young Lions</dt><dd>Jonge musici die in de jaren tachtig in pak akoestische jazz speelden, rond Wynton Marsalis.</dd><a class="src" href="sessie/04.html">Sessie 4</a></div></dl>
-</main><footer class="sitefoot"><div class="wrap"><p>Blue Hour · Jazz, een verborgen kant van <a href="/index.html">School of Rock</a> · Jan-Wolter Smit · ArtEZ University of the Arts</p><p><a href="/index.html">← Terug naar School of Rock</a></p></div></footer><script>
+</main><footer class="sitefoot"><div class="wrap"><p>After Hours · Jazz, een verborgen kant van <a href="/index.html">School of Rock</a> · Jan-Wolter Smit · ArtEZ University of the Arts</p><p><a href="/index.html">← Terug naar School of Rock</a></p></div></footer><script>
   (function () { const q = document.getElementById('q'), items = [...document.querySelectorAll('.term')], c = document.getElementById('count');
   const s = x => x.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   function f() { const v = s(q.value.trim()); let k = 0; items.forEach(i => { const hit = !v || s(i.innerText).includes(v); i.hidden = !hit; if (hit) k++; }); c.textContent = k + ' begrippen'; }

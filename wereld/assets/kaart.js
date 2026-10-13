@@ -495,7 +495,7 @@
         ${d.listen ? `<p class="kp-listen">${d.listen}</p>` : ''}
         ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((t, i) => `<div class="kp-track${t.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${t.title}">${SOR.playIcon}</button>${t.cover ? `<img src="${t.cover}" alt="" loading="lazy" onerror="this.remove()">` : ''}<div><b>${t.film || t.artist}</b><span>${t.title}${t.year ? ' · ' + t.year : ''}</span></div></div>`).join('')}</div></div>` : ''}
         ${films(d)}
-        ${d.link ? `<div class="kp-links"><a class="kp-chip" href="${d.link}"><i style="background:${famById.get(d.family)?.color}"></i>Meer op de ${d.bron === 'jazz' ? 'jazzkaart van Blue Hour' : 'filmmuziekkaart van De Droomfabriek'}</a></div>` : ''}
+        ${d.link ? `<div class="kp-links"><a class="kp-chip" href="${d.link}"><i style="background:${famById.get(d.family)?.color}"></i>Meer op de ${d.bron === 'jazz' ? 'jazzkaart van After Hours' : 'filmmuziekkaart van De Droomfabriek'}</a></div>` : ''}
         ${topByComp.has(d.id) ? `<div><p class="kp-h">In de Top 400 van NPO Klassiek</p><div class="kp-tops">${topByComp.get(d.id).map(topChip).join('')}</div></div>` : ''}
         ${mem.length ? `<div><p class="kp-h">Musici</p><div class="kp-links">${mem.map(c => chip(c.id)).join('')}</div></div>` : ''}
         ${isComp(d) && bandsOf(d.id).length ? `<div><p class="kp-h">Speelde in</p><div class="kp-links">${bandsOf(d.id).map(bandChip).join('')}</div></div>` : ''}

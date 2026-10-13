@@ -1,4 +1,4 @@
-/* Jazzkaart (Blue Hour): stijlen en musici als stamboom, op de wereldkaart en als netwerk van wie met wie speelde. */
+/* Jazzkaart (After Hours): stijlen en musici als stamboom, op de wereldkaart en als netwerk van wie met wie speelde. */
 (async function () {
   const SOR = window.SOR;
   const $ = s => document.querySelector(s);
