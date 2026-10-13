@@ -121,7 +121,7 @@
   const gNodes = root.append('g');
   const gCities = root.append('g').attr('class', 'cities');
   const gLaneNames = svg.append('g');  // vast aan de linkerkant
-  let T = d3.zoomIdentity, suppress = false, userPan = 0;
+  let T = d3.zoomIdentity, suppress = false, userPan = 0, lichtPan = false, lastCull = 0;
   const zoom = d3.zoom().scaleExtent([0.3, 14]).on('zoom', ev => {
     if (ev.sourceEvent) userPan = Date.now();
     T = ev.transform;
@@ -347,7 +347,7 @@
       tLinkSel.attr('d', l => { const a = PT(l.s), b = P(l.g), my = (a.y + b.y) / 2; return `M${a.x},${a.y} C${a.x},${my} ${b.x},${my} ${b.x},${b.y}`; });
     }
     drawPath();
-    if (!animate) cullLabels(); else setTimeout(cullLabels, 950);
+    if (!animate) { if (!lichtPan || performance.now() - lastCull > 400) { lastCull = performance.now(); cullLabels(); } } else setTimeout(cullLabels, 950);
   }
   // Namen die over elkaar zouden vallen weglaten; geselecteerde en gemarkeerde genres gaan voor.
   function cullLabels() {
@@ -572,7 +572,7 @@
   try { const v = +localStorage.getItem('sor-kaart-tempo'); if (speedBtns.some(b => +b.dataset.speed === v)) setSpeed(v); } catch (e) {}
   let meeScrollen = true; try { meeScrollen = localStorage.getItem('sor-tijdlijn-mee') !== '0'; } catch (e) {}
   const meeBox = $('#k-mee'); if (meeBox) { meeBox.checked = meeScrollen; meeBox.addEventListener('change', () => { meeScrollen = meeBox.checked; try { localStorage.setItem('sor-tijdlijn-mee', meeScrollen ? '1' : '0'); } catch (e) {} if (meeScrollen) { userPan = 0; follow(true); } }); }
-  let volgFrame = 0;
+  let volgFrame = 0, lastTick = 0;
   function follow(start) {
     if (!meeScrollen || state.mode !== 'tree') return;
     const t = d3.zoomTransform(svg.node()), sx = t.applyX(tx(state.year));
@@ -583,8 +583,14 @@
     volgFrame = 0;
     if (!state.playing || !meeScrollen || state.mode !== 'tree') return;
     if (Date.now() - userPan > 4000) {
-      const t = d3.zoomTransform(svg.node()), sx = t.applyX(tx(state.year)), doel = W * 0.6;
-      if (sx > doel + 0.5) svg.call(zoom.transform, t.translate(-Math.max(0.6, (sx - doel) * 0.08) / t.k, 0));
+      const t = d3.zoomTransform(svg.node());
+      const f = Math.min(1, (performance.now() - lastTick) / (220 / speed));
+      const px = tx(state.year) - 12 + 12 * f;
+      const achter = t.x - (W * 0.6 - px * t.k);
+      if (achter > 0.05) {
+        const stap = achter > 30 ? Math.max(2, achter * 0.1) : achter;
+        lichtPan = true; svg.call(zoom.transform, d3.zoomIdentity.translate(t.x - stap, t.y).scale(t.k)); lichtPan = false;
+      }
     }
     volgFrame = requestAnimationFrame(volg);
   }
@@ -607,7 +613,7 @@
         if (state.sound && now - lastSound > 5000 / Math.min(speed, 2)) { const g = born.find(x => x.tracks && x.tracks[0]); if (g) { SOR.play({ ...g.tracks[0] }); lastSound = now; } }
       }
       if (state.year >= YMAX) { state.year = YMAX; syncYear(); stopTape(); return; }
-      timer = setTimeout(tick, 220 / speed);
+      lastTick = performance.now(); timer = setTimeout(tick, 220 / speed);
     };
     tick();
   });
