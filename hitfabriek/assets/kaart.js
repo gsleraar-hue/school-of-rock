@@ -271,8 +271,8 @@
     history.replaceState(null, '', '#tech/' + d.id);
   }
 
-  nodeSel.on('click', (ev, d) => { ev.stopPropagation(); select(d, false); })
-    .on('keydown', (ev, d) => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); select(d, false); } })
+  nodeSel.on('click', (ev, d) => { ev.stopPropagation(); kiesMoment(d); })
+    .on('keydown', (ev, d) => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); kiesMoment(d); } })
     .on('mouseenter', (ev, d) => { if (!state.sel && !state.path) highlight(d); })
     .on('mouseleave', () => { if (!state.sel && !state.path) highlight(null); });
 
@@ -562,7 +562,7 @@
   const range = $('#k-range'), yearLbl = $('#k-yearlbl'), yearBig = $('.k-yearbig');
   range.min = Math.round(tx(YMIN)); range.max = Math.round(tx(YMAX)); range.step = 1; range.value = range.max;
   function syncYear() { range.value = Math.round(tx(state.year)); yearLbl.textContent = state.year >= YMAX ? 'nu' : fmtT(state.year); yearBig.textContent = state.year >= YMAX ? '' : fmtT(state.year); }
-  range.addEventListener('input', () => { state.year = Math.min(YMAX, xToYear(+range.value)); syncYear(); applyVisibility(); });
+  range.addEventListener('input', () => { state.year = Math.min(YMAX, xToYear(+range.value)); syncYear(); applyVisibility(); knopTekst(); });
   $('#k-sound').addEventListener('change', e => { state.sound = e.target.checked; });
   let timer = null, lastSound = 0, speed = 1;
   // Tempo: aantal jaren per seconde, onthouden per bezoeker
@@ -595,7 +595,13 @@
     volgFrame = requestAnimationFrame(volg);
   }
   const playBtn = $('#k-play');
-  function stopTape() { clearTimeout(timer); timer = null; state.playing = false; playBtn.innerHTML = playBtn.dataset.play; }
+  function knopTekst() { const b = $('#k-play'); if (b && b.dataset.play && !state.playing) b.innerHTML = state.year < YMAX ? b.dataset.play.replace('Speel de geschiedenis af', 'Verder') : b.dataset.play; }
+  function stopTape() { clearTimeout(timer); timer = null; state.playing = false; knopTekst(); }
+  function kiesMoment(d) {
+    const liep = state.playing; if (liep) stopTape();
+    select(d, false);
+    if (liep && state.sound && d.tracks && d.tracks[0]) SOR.play({ ...d.tracks[0] });
+  }
   playBtn.dataset.play = playBtn.innerHTML;
   playBtn.addEventListener('click', () => {
     if (state.playing) { stopTape(); return; }
