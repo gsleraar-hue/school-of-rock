@@ -749,7 +749,8 @@
     if (state.playing) { stopTape(); return; }
     if (state.path) { sel.value = ''; setPath(null); }
     clearSelection();
-    if (state.year >= YMAX) state.year = state.mode === 'top' ? Math.floor(topYmin) : YMIN;
+    // afspelen begint twee jaar voor het eerste zichtbare punt, niet bij het ronde jaartal ver daarvoor
+    if (state.year >= YMAX) state.year = state.mode === 'top' ? Math.floor(topYmin) : Math.max(YMIN, Math.floor(d3.min(G.filter(g => state.fams.has(g.family)), g => g.year) ?? YMIN) - 2);
     state.playing = true;
     playBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg>Pauze';
     const tick = () => {
