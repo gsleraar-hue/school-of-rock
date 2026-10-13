@@ -143,8 +143,9 @@
   let W = 0, H = 0;
   // ---------- Stamboom: tijd horizontaal, families als banen; componisten op eigen rijen onder de stromingen ----------
   const PX_PER_YEAR = 17, ROW = 22, ROWC = 16, LANE_PAD = 14, LEFT = 290;
+  const autoSeg = (from, to) => { const ys = G.map(g => g.year).filter(v => v >= from), w = [], out = []; for (let y = from; y < to + 5; y += 5) w.push([y, ys.filter(v => v >= y && v < y + 5).length]); const vol = w.filter(([, n]) => n), gem = vol.reduce((s, [, n]) => s + n, 0) / Math.max(1, vol.length); for (const [y, n] of w) { const px = n === 0 ? 3 : Math.round(Math.max(8, Math.min(34, PX_PER_YEAR * n / gem))); if (!out.length || out[out.length - 1][1] !== px) out.push([y, px]); } return out; };
   // Wereldarchief: hoe verder terug, hoe meer de tijd is samengedrukt (pixels per jaar per tijdvak)
-  const SEG = [[-40000, 160 / 37000], [-3000, 0.12], [0, 0.35], [1000, 1.2], [1600, 3], [1880, PX_PER_YEAR], [YMAX + 1, PX_PER_YEAR]];
+  const SEG = [[-40000, 160 / 37000], [-3000, 0.12], [0, 0.35], [1000, 1.2], [1600, 3], ...autoSeg(1880, YMAX), [YMAX + 6, 8]];
   const SEGX = []; { let x = 0; SEG.forEach(([y], i) => { SEGX.push(x); if (i < SEG.length - 1) x += (SEG[i + 1][0] - y) * SEG[i][1]; }); }
   const tx = y => { y = Math.max(SEG[0][0], y); let i = SEG.length - 2; while (i > 0 && y < SEG[i][0]) i--; return LEFT + SEGX[i] + (y - SEG[i][0]) * SEG[i][1]; };
   const xToYear = x => { x -= LEFT; let i = SEG.length - 2; while (i > 0 && x < SEGX[i]) i--; return Math.round(SEG[i][0] + (x - SEGX[i]) / SEG[i][1]); };
@@ -309,6 +310,8 @@
   function updateGrid() {
     const bottom = state.mode === 'top' ? topH() : treeH;
     gGrid.selectAll('g.decade').each(function (d) { const x = T.applyX(tx(d)); const g = d3.select(this); g.select('line').attr('x1', x).attr('x2', x).attr('y1', Math.max(22, T.applyY(26))).attr('y2', T.applyY(bottom)); g.select('text').attr('x', x + 4); });
+    { let last = -1e9; gGrid.selectAll('g.decade text').each(function () { const x = +this.getAttribute('x'), w = this.getComputedTextLength ? this.getComputedTextLength() : 40; if (x > last + 10) { this.removeAttribute('visibility'); last = x + w; } else this.setAttribute('visibility', 'hidden'); }); }
+    // jaartallen boven het raster die elkaar zouden raken weglaten
     { let last = -1e9; gGrid.selectAll('g.decade text').each(function () { const x = +this.getAttribute('x'), w = this.getComputedTextLength ? this.getComputedTextLength() : 40; if (x > last + 10) { this.removeAttribute('visibility'); last = x + w; } else this.setAttribute('visibility', 'hidden'); }); }
     // plaatsen in de lijst als lijnen, met het getal links in beeld
     const x0 = Math.max(44, T.applyX(tx(topYmin)));

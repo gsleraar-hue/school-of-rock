@@ -141,7 +141,11 @@
   let W = 0, H = 0;
   // ---------- Stamboom: tijd horizontaal, families als banen; componisten op eigen rijen onder de stromingen ----------
   const PX_PER_YEAR = 17, ROW = 22, ROWC = 16, LANE_PAD = 14, LEFT = 290;
-  const tx = y => LEFT + (y - YMIN) * PX_PER_YEAR;
+  // tijdas naar dichtheid: per vijf jaar meer ruimte waar veel stromingen en musici beginnen, lege stukken smal
+  const autoSeg = (from, to) => { const ys = G.map(g => g.year), w = [], out = []; for (let y = from; y < to + 5; y += 5) w.push([y, ys.filter(v => v >= y && v < y + 5).length]); const vol = w.filter(([, n]) => n), gem = vol.reduce((s, [, n]) => s + n, 0) / Math.max(1, vol.length); for (const [y, n] of w) { const px = n === 0 ? 3 : Math.round(Math.max(8, Math.min(34, PX_PER_YEAR * n / gem))); if (!out.length || out[out.length - 1][1] !== px) out.push([y, px]); } return out; };
+  const SEG = autoSeg(YMIN, YMAX);
+  const SEGX = []; { let x = 0; SEG.forEach(([y], i) => { SEGX.push(x); if (i < SEG.length - 1) x += (SEG[i + 1][0] - y) * SEG[i][1]; }); }
+  const tx = y => { y = Math.max(SEG[0][0], y); let i = SEG.length - 1; while (i > 0 && y < SEG[i][0]) i--; return LEFT + SEGX[i] + (y - SEG[i][0]) * SEG[i][1]; };
   let lanes = [], treeH = 0;
   function rowsFor(list, charW, base, rowH, y0) {
     const rows = [];
@@ -303,6 +307,8 @@
   function updateGrid() {
     const bottom = state.mode === 'top' ? topH() : treeH;
     gGrid.selectAll('g.decade').each(function (d) { const x = T.applyX(tx(d)); const g = d3.select(this); g.select('line').attr('x1', x).attr('x2', x).attr('y1', Math.max(22, T.applyY(26))).attr('y2', T.applyY(bottom)); g.select('text').attr('x', x + 4); });
+    // jaartallen boven het raster die elkaar zouden raken weglaten
+    { let last = -1e9; gGrid.selectAll('g.decade text').each(function () { const x = +this.getAttribute('x'), w = this.getComputedTextLength ? this.getComputedTextLength() : 40; if (x > last + 10) { this.removeAttribute('visibility'); last = x + w; } else this.setAttribute('visibility', 'hidden'); }); }
     // plaatsen in de lijst als lijnen, met het getal links in beeld
     const x0 = Math.max(44, T.applyX(tx(topYmin)));
     gGrid.selectAll('g.rank').each(function (d) { const y = T.applyY(topY(d)); const g = d3.select(this); g.select('line').attr('x1', x0).attr('x2', T.applyX(tx(YMAX))).attr('y1', y).attr('y2', y); g.select('text').attr('x', x0 - 6).attr('y', y); });
