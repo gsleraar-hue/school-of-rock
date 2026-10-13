@@ -116,7 +116,7 @@
   function seekBy(s) { if (!audio.duration) return; audio.currentTime = Math.min(audio.duration - 1, Math.max(0, audio.currentTime + s)); progress(); savePos(true); }
   bar.addEventListener('click', e => {
     if (e.target.closest('.sp-toggle')) { audio.paused ? audio.play() : audio.pause(); }
-    if (e.target.closest('.sp-close')) { audio.pause(); bar.hidden = true; }
+    if (e.target.closest('.sp-close')) { audio.pause(); if (tail) { tail.pause(); tail = null; } bar.hidden = true; }
     if (e.target.closest('.sp-back')) seekBy(-15);
     if (e.target.closest('.sp-fwd')) seekBy(30);
     if (e.target.closest('.sp-next') && current && current.book && current.book < (current.bookMax || 13)) SOR.playBook(current.book + 1, 0, current.bookSet || 'pop');
@@ -148,7 +148,7 @@
     slug, norm, fmt, get root() { return root(); }, media: audio,
     play(track, startAt) {
       if (!track || !track.audio) return;
-      if (current && current.audio === track.audio) { audio.paused ? audio.play() : audio.pause(); return; }
+      if (current && current.audio === track.audio) { if (audio.paused || bar.hidden) { bar.hidden = false; audio.play().catch(() => paint()); } else audio.pause(); return; }
       savePos(true);
       if (!track.book) crossfadeOut(); else if (tail) { tail.pause(); tail = null; }
       current = track;

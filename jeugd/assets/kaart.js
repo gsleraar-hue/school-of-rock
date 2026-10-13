@@ -18,7 +18,7 @@
   const links = [];
   G.forEach(g => (g.parents || []).forEach(p => byId.has(p) && links.push({ source: byId.get(p), target: g })));
   const YMIN = Math.floor((d3.min(G, g => g.year) - 8) / 10) * 10;
-  const YMAX = 2026;
+  const YMAX = 1983;
   const mixById = new Map(mixtapes.map(m => [m.n, m]));
 
   const state = { mode: 'tree', year: YMAX, fams: new Set(fams.map(f => f.id)), sel: null, path: null, step: 0, playing: false, sound: false };
@@ -137,7 +137,7 @@
   // ---------- Stamboom: tijd horizontaal, families als banen ----------
   const PX_PER_YEAR = 15, ROW = 22, LANE_PAD = 14, LEFT = 290;
   // Jeugdculturen · tijdlijn: 1948-1982 breed uitgetrokken, daarvoor en daarna samengedrukt
-  const SEG = [[1935,15],[1948,150],[1982,40],[2027,40]];
+  const SEG = [[1935,15],[1948,150],[1982,40],[1984,40]];
   const SEGX = []; { let x = 0; SEG.forEach(([y], i) => { SEGX.push(x); if (i < SEG.length - 1) x += (SEG[i + 1][0] - y) * SEG[i][1]; }); }
   const tx = y => { y = Math.max(SEG[0][0], y); let i = SEG.length - 2; while (i > 0 && y < SEG[i][0]) i--; return LEFT + SEGX[i] + (y - SEG[i][0]) * SEG[i][1]; };
   const xToYear = x => { x -= LEFT; let i = SEG.length - 2; while (i > 0 && x < SEGX[i]) i--; return SEG[i][0] + (x - SEGX[i]) / SEG[i][1]; };
@@ -294,7 +294,7 @@
     if (state.mode === 'tree' || state.mode === 'tech') {
       const LL = state.mode === 'tech' ? [...techLanes, ...lanes] : lanes;
       gBack.selectAll('rect').data(LL).join('rect').attr('class', d => 'lane-bg' + (d.alt ? ' alt' : '') + (d.tech ? ' tech' : '')).attr('x', -4000).attr('width', treeW + 8000).attr('y', d => d.y).attr('height', d => d.h);
-      const decades = [1935,1940,1945,1948,1949,1950,1951,1952,1953,1954,1955,1956,1957,1958,1959,1960,1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1985,1990,1995,2000,2005,2010,2015,2020,2025];
+      const decades = [1935,1940,1945,1948,1949,1950,1951,1952,1953,1954,1955,1956,1957,1958,1959,1960,1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982];
       const dg = gGrid.selectAll('g').data(decades).join('g').attr('class', 'decade');
       dg.append('line');
       dg.append('text').attr('y', 16).text(d => d);
@@ -561,7 +561,7 @@
   // ---------- Tijdlijn: speel de geschiedenis af ----------
   const range = $('#k-range'), yearLbl = $('#k-yearlbl'), yearBig = $('.k-yearbig');
   range.min = Math.round(tx(YMIN)); range.max = Math.round(tx(YMAX)); range.step = 1; range.value = range.max;
-  function syncYear() { range.value = Math.round(tx(state.year)); yearLbl.textContent = state.year >= YMAX ? 'nu' : fmtT(state.year); yearBig.textContent = state.year >= YMAX ? '' : fmtT(state.year); }
+  function syncYear() { range.value = Math.round(tx(state.year)); yearLbl.textContent = state.year >= YMAX ? "1983" : fmtT(state.year); yearBig.textContent = state.year >= YMAX ? '' : fmtT(state.year); }
   range.addEventListener('input', () => { state.year = Math.min(YMAX, xToYear(+range.value)); syncYear(); applyVisibility(); knopTekst(); });
   $('#k-sound').addEventListener('change', e => { state.sound = e.target.checked; });
   let timer = null, lastSound = 0, speed = 1;

@@ -561,7 +561,7 @@
   // ---------- Tijdlijn: speel de geschiedenis af ----------
   const range = $('#k-range'), yearLbl = $('#k-yearlbl'), yearBig = $('.k-yearbig');
   range.min = Math.round(tx(YMIN)); range.max = Math.round(tx(YMAX)); range.step = 1; range.value = range.max;
-  function syncYear() { range.value = Math.round(tx(state.year)); yearLbl.textContent = state.year >= YMAX ? 'nu' : fmtT(state.year); yearBig.textContent = state.year >= YMAX ? '' : fmtT(state.year); }
+  function syncYear() { range.value = Math.round(tx(state.year)); yearLbl.textContent = state.year >= YMAX ? "nu" : fmtT(state.year); yearBig.textContent = state.year >= YMAX ? '' : fmtT(state.year); }
   range.addEventListener('input', () => { state.year = Math.min(YMAX, xToYear(+range.value)); syncYear(); applyVisibility(); knopTekst(); });
   $('#k-sound').addEventListener('change', e => { state.sound = e.target.checked; });
   let timer = null, lastSound = 0, speed = 1;
