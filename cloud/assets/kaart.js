@@ -414,9 +414,14 @@
 
   // ---------- Zichtbaarheid: families, tijd, selectie ----------
   function visible(d) { return state.fams.has(d.family) && d.year <= state.year; }
+  // komen er genres bij of vallen er weg (afspelen, tijdbalk, familieknoppen), dan de namen opnieuw verdelen
+  var shownCount; // var: applyVisibility() loopt al tijdens het opstarten
   function applyVisibility() {
     nodeSel.classed('future', d => !visible(d));
     linkSel.classed('future', l => !visible(l.source) || !visible(l.target));
+    const n = G.reduce((s, d) => s + (visible(d) ? 1 : 0), 0);
+    if (shownCount !== undefined && n !== shownCount) cullLabels();
+    shownCount = n;
   }
   function lineage(d) {
     const up = new Set(), down = new Set();

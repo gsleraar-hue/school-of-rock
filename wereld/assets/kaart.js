@@ -436,6 +436,8 @@
   }
   document.querySelectorAll('[data-topn]').forEach(b => b.addEventListener('click', () => { if (state.topSel && state.topSel.pos > +b.dataset.topn) clearSelection(); setTopN(+b.dataset.topn); }));
   setTopN(topN, false);
+  // komen er stijlen bij of vallen er weg (afspelen, tijdbalk, familieknoppen), dan de namen opnieuw verdelen
+  var shownCount; // var: applyVisibility() loopt al tijdens het opstarten
   function applyVisibility() {
     nodeSel.classed('future', d => !visible(d));
     nodeSel.classed('netoff', d => state.mode === 'net' && !d.net);
@@ -443,6 +445,9 @@
     netSel.classed('future', l => l.band.year > state.year || !visible(l.m));
     linkSel.classed('future', l => !visible(l.source) || !visible(l.target));
     topSel.classed('future', t => !topVisible(t));
+    const n = G.reduce((s, d) => s + (visible(d) ? 1 : 0), 0);
+    if (shownCount !== undefined && n !== shownCount) cullLabels();
+    shownCount = n;
   }
   // bij een notering lichten ook de andere noteringen van dezelfde componist(en) op
   function highlightTop(t) {
