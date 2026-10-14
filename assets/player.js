@@ -113,8 +113,8 @@
   });
   function seekBy(s) { if (!audio.duration) return; audio.currentTime = Math.min(audio.duration - 1, Math.max(0, audio.currentTime + s)); progress(); savePos(true); }
   bar.addEventListener('click', e => {
-    if (e.target.closest('.sp-toggle')) { audio.paused ? audio.play() : audio.pause(); }
-    if (e.target.closest('.sp-close')) { volgende = null; audio.pause(); if (tail) { tail.pause(); tail = null; } bar.hidden = true; }
+    if (e.target.closest('.sp-toggle')) { if (audio.paused) audio.play(); else { audio.pause(); document.dispatchEvent(new Event('sor:userpause')); } }
+    if (e.target.closest('.sp-close')) { document.dispatchEvent(new Event('sor:userpause')); volgende = null; audio.pause(); if (tail) { tail.pause(); tail = null; } bar.hidden = true; }
     if (e.target.closest('.sp-back')) seekBy(-15);
     if (e.target.closest('.sp-fwd')) seekBy(30);
     if (e.target.closest('.sp-next') && current && current.book && current.book < (current.bookMax || 13)) SOR.playBook(current.book + 1, 0, current.bookSet || 'pop');
@@ -132,7 +132,7 @@
     try {
       navigator.mediaSession.metadata = new MediaMetadata({ title: track.title || '', artist: track.artist || '', album: track.book ? setOf(track).album : 'School of Rock', artwork: track.cover ? [{ src: track.cover, sizes: '512x512' }] : [] });
       const h = (a, f) => { try { navigator.mediaSession.setActionHandler(a, f); } catch (e) {} };
-      h('play', () => audio.play()); h('pause', () => audio.pause());
+      h('play', () => audio.play()); h('pause', () => { audio.pause(); document.dispatchEvent(new Event('sor:userpause')); });
       h('seekbackward', track.book ? () => seekBy(-15) : null); h('seekforward', track.book ? () => seekBy(30) : null);
       h('nexttrack', track.book && track.book < (track.bookMax || 13) ? () => SOR.playBook(track.book + 1, 0, track.bookSet || 'pop') : null);
       h('previoustrack', track.book && track.book > 1 ? () => SOR.playBook(track.book - 1, 0, track.bookSet || 'pop') : null);

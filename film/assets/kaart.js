@@ -631,6 +631,10 @@
   const playBtn = $('#k-play');
   function stopTape() { clearTimeout(timer); timer = null; state.playing = false; playBtn.innerHTML = playBtn.dataset.play; }
   playBtn.dataset.play = playBtn.innerHTML;
+  // weg van deze pagina (de site wisselt pagina's zonder herladen): het afspelen van de geschiedenis stopt
+  document.addEventListener('sor:leave', () => { if (state.playing) stopTape(); });
+  // zet iemand de speler zelf op pauze of klikt hem weg, dan stopt ook het geluid van de afspeelknop
+  document.addEventListener('sor:userpause', () => { if (!state.sound) return; state.sound = false; const b = document.getElementById('k-sound'); if (b) b.checked = false; });
   playBtn.addEventListener('click', () => {
     if (state.playing) { stopTape(); return; }
     if (state.path) { sel.value = ''; setPath(null); }
