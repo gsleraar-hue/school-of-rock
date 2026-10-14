@@ -9214,6 +9214,51 @@
     }
    ],
    "mixtapes": []
+  },
+  {
+   "id": "neoprog",
+   "name": "Neoprog",
+   "family": "rock",
+   "year": 1981,
+   "peak": [
+    1983,
+    1987
+   ],
+   "place": {
+    "name": "Aylesbury",
+    "lat": 51.816,
+    "lon": -0.812
+   },
+   "parents": [
+    "prog-rock",
+    "symfonische-rock"
+   ],
+   "text": "Neoprog ontstond rond 1981 in Engeland, toen progressieve rock uit de mode was geraakt. Jonge bands als Marillion, IQ, Pallas, Pendragon en Twelfth Night namen het vroege Genesis en Camel als voorbeeld, maar speelden met de energie en het geluid van de jaren tachtig: kortere nummers, glanzende synthesizers en een zanger die op het podium een rol speelde. Marillion uit Aylesbury werd de grootste. Het conceptalbum Misplaced Childhood (1985) stond op nummer 1 in Engeland, en Kayleigh haalde de tweede plaats.",
+   "listen": "Hoor in Kayleigh hoe de gitaar met een helder, galmend geluid de melodie draagt, terwijl Fish zijn tekst zingt als een brief aan een verloren liefde.",
+   "tracks": [
+    {
+     "artist": "Marillion",
+     "title": "Garden Party",
+     "year": 1983,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5e/da/51/5eda51ab-fe36-eaaf-25cb-01d459bde7a5/mzaf_11304657210060898529.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/df/40/47/df4047bc-7a10-b6bb-360f-95a23098d23e/5099922661357_1416x1416_300dpi.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "Marillion",
+     "title": "Kayleigh",
+     "year": 1985,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fa/72/f4/fa72f463-444d-0e7d-1ec2-8ffb1fa75e25/mzaf_13963780528101117162.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/71/00/53/7100536e-2102-3d1f-dff8-7a368ac79855/190295721541.jpg/600x600bb.jpg"
+    },
+    {
+     "artist": "IQ",
+     "title": "The Wake",
+     "year": 1985,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/96/81/60/968160a1-096f-17e5-6094-fdeaaa28336d/mzaf_202971476085225605.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/30/0b/88/300b882c-53d7-30d6-3c56-23d4c4820c5c/mzi.smhrfcup.jpg/600x600bb.jpg"
+    }
+   ],
+   "mixtapes": []
   }
  ]
 }
