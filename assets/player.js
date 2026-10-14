@@ -139,6 +139,32 @@
     } catch (e) {}
   }
 
+  // Geintje op de kaarten en tijdlijnen: wie zelf op Never Gonna Give You Up klikt, wordt gerickrolld.
+  // Niet bij het afspelen van de geschiedenis (geen klik van de bezoeker) en niet in de hoofdstukken.
+  // play() onthoudt het aangeklikte nummer, _start() laat Rick pas zien als het echt begint (na het uitfaden van het vorige).
+  let rick = null, rickTrack = null;
+  function rickWeg() { if (rick) { rick.remove(); rick = null; } }
+  function rickKlik(track) {
+    const klik = !navigator.userActivation || navigator.userActivation.isActive;
+    rickTrack = !track.book && klik && /never gonna give you up/i.test(track.title || '') && document.querySelector('.k-app') ? track : null;
+  }
+  function rickroll(track) {
+    if (track !== rickTrack) { rickWeg(); return; }
+    rickTrack = null;
+    rickWeg();
+    rick = document.createElement('div');
+    rick.setAttribute('role', 'img'); rick.setAttribute('aria-label', 'Rick Astley danst: je bent gerickrolld');
+    rick.style.cssText = 'position:fixed;inset:0;z-index:9999;display:grid;place-items:center;pointer-events:none';
+    rick.innerHTML = '<img src="https://i.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif" alt="" style="width:min(70vw,420px);border-radius:10px;box-shadow:0 12px 40px rgba(0,0,0,.6);pointer-events:auto;cursor:pointer" title="Klik om te sluiten">';
+    rick.querySelector('img').addEventListener('click', rickWeg);
+    rick.querySelector('img').onerror = rickWeg;
+    document.body.appendChild(rick);
+  }
+  // een nieuw nummer laden geeft ook een pause-event (met tijd 0): alleen echt pauzeren haalt Rick weg
+  audio.addEventListener('pause', () => { if (audio.currentTime > 0) rickWeg(); });
+  audio.addEventListener('ended', rickWeg);
+  document.addEventListener('sor:leave', rickWeg);
+
   const chapters = {};
   const book = (set = 'pop') => chapters[set] || (chapters[set] = fetch(abs(SETS[set].data)).then(r => r.json()).catch(() => { delete chapters[set]; return []; }));
 
@@ -146,7 +172,8 @@
     slug, norm, fmt, get root() { return root(); }, media: audio,
     play(track, startAt) {
       if (!track || !track.audio) return;
-      if (current && current.audio === track.audio) { if (audio.paused || bar.hidden) { bar.hidden = false; audio.play().catch(() => paint()); } else audio.pause(); return; }
+      rickKlik(track);
+      if (current && current.audio === track.audio) { if (audio.paused || bar.hidden) { bar.hidden = false; audio.play().catch(() => paint()); rickroll(track); } else audio.pause(); return; }
       volgende = [track, startAt];
       if (uitfaden) return; // de lopende uitfade start straks het laatst gekozen nummer
       if (current && !current.book && !audio.paused) { zachtUit(() => { const v = volgende; volgende = null; if (v) SOR._start(v[0], v[1]); }); return; }
@@ -170,6 +197,7 @@
       if (startAt > 0) { const go = () => { try { audio.currentTime = startAt; } catch (e) {} audio.removeEventListener('loadedmetadata', go); }; audio.addEventListener('loadedmetadata', go); }
       mediaSession(track);
       audio.play().catch(() => paint());
+      rickroll(track);
       paint();
     },
     // Luisterboek: hoofdstuk n, vanaf seconde t (zonder t: waar je gebleven was in dit hoofdstuk)
