@@ -37,7 +37,7 @@
   css.textContent = `
     .sor-player{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:80;width:min(560px,calc(100% - 24px));display:flex;align-items:center;gap:12px;padding:8px 10px 8px 8px;background:#1C1B19;color:#fff;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.35);border-left:5px solid #F2D500;font-family:Inter,Segoe UI,Arial,sans-serif}
     .sor-player[hidden]{display:none}
-    .sor-player .sp-store{flex:none;display:block;line-height:0}.sor-player .sp-store[hidden]{display:none}.sor-player .sp-store{color:#fff}.sor-player .sp-store svg{width:20px;height:20px;fill:currentColor;display:block}
+    .sor-player .sp-store{flex:none;display:block;line-height:0}.sor-player .sp-store[hidden]{display:none}.sor-player .sp-store{color:#000}.sor-player .sp-store svg{width:20px;height:20px;fill:currentColor;display:block}
     .kp-track{position:relative}.kp-track:has(.kp-store){padding-right:32px}.kp-store{position:absolute;right:8px;bottom:8px;color:#1C1B19;line-height:0}.kp-store svg{width:18px;height:18px;fill:currentColor;display:block}.kp-store:hover{opacity:.7}
     .sor-player .sp-toggle{flex:none;width:40px;height:40px;border-radius:50%;border:0;background:#D63A31;color:#fff;display:grid;place-items:center;cursor:pointer}
     .sor-player .sp-toggle svg{width:18px;height:18px;fill:currentColor}
@@ -199,7 +199,7 @@
       $('.sp-title').textContent = [track.title, track.year].filter(Boolean).join(' · ');
       $('.sp-time').textContent = '';
       $('.sp-bar i').style.width = '0%';
-      { const st = $('.sp-store'); if (track.store) { st.href = track.store; st.hidden = false; if (!st.firstChild) st.innerHTML = APPLE_ICON; st.setAttribute('aria-label', 'Luister naar ' + (track.title || '') + ' op Apple Music'); } else { st.removeAttribute('href'); st.hidden = true; } }
+      { const st = $('.sp-store'); if (track.store) { st.href = track.store; st.hidden = false; if (!st.firstChild) st.innerHTML = APPLE_ICON.replace('<path', '<rect x="60" y="40" width="240" height="280" fill="#fff"/><path'); st.setAttribute('aria-label', 'Luister naar ' + (track.title || '') + ' op Apple Music'); } else { st.removeAttribute('href'); st.hidden = true; } }
       { const im = $('.sp-cover'); if (track.cover) { im.src = track.cover; im.hidden = false; } else { im.removeAttribute('src'); im.hidden = true; } }
       bar.hidden = false;
       if (startAt > 0) { const go = () => { try { audio.currentTime = startAt; } catch (e) {} audio.removeEventListener('loadedmetadata', go); }; audio.addEventListener('loadedmetadata', go); }
