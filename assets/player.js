@@ -23,7 +23,7 @@
     <button class="sp-toggle" type="button" aria-label="Afspelen of pauzeren"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-pause" d="M7 5h3v14H7zM14 5h3v14h-3z"/><path class="i-play" d="M8 5l11 7-11 7z"/></svg></button>
     <img class="sp-cover" alt="" hidden onerror="this.hidden=true">
     <div class="sp-meta"><span class="sp-artist"></span><span class="sp-title"></span><div class="sp-bar" role="slider" aria-label="Positie" tabindex="-1"><i></i></div><span class="sp-time mono"></span></div>
-    <a class="sp-store" target="_blank" rel="noopener" hidden><img alt="Apple Music" width="20" height="20"></a>
+    <a class="sp-store" target="_blank" rel="noopener" hidden></a>
     <span class="sp-book">
       <button type="button" class="sp-back" aria-label="15 seconden terug" title="15 s terug">−15</button>
       <button type="button" class="sp-fwd" aria-label="30 seconden vooruit" title="30 s vooruit">+30</button>
@@ -37,8 +37,8 @@
   css.textContent = `
     .sor-player{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:80;width:min(560px,calc(100% - 24px));display:flex;align-items:center;gap:12px;padding:8px 10px 8px 8px;background:#1C1B19;color:#fff;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.35);border-left:5px solid #F2D500;font-family:Inter,Segoe UI,Arial,sans-serif}
     .sor-player[hidden]{display:none}
-    .sor-player .sp-store{flex:none;display:block;line-height:0}.sor-player .sp-store[hidden]{display:none}.sor-player .sp-store img{width:20px;height:20px}
-    .kp-store{display:block;width:max-content;margin-top:6px;line-height:0}.kp-store img{height:16px;width:auto}
+    .sor-player .sp-store{flex:none;display:block;line-height:0}.sor-player .sp-store[hidden]{display:none}.sor-player .sp-store{color:#fff}.sor-player .sp-store svg{width:20px;height:20px;fill:currentColor;display:block}
+    .kp-track{position:relative}.kp-track:has(.kp-store){padding-right:32px}.kp-store{position:absolute;right:8px;bottom:8px;color:#1C1B19;line-height:0}.kp-store svg{width:18px;height:18px;fill:currentColor;display:block}.kp-store:hover{opacity:.7}
     .sor-player .sp-toggle{flex:none;width:40px;height:40px;border-radius:50%;border:0;background:#D63A31;color:#fff;display:grid;place-items:center;cursor:pointer}
     .sor-player .sp-toggle svg{width:18px;height:18px;fill:currentColor}
     .sor-player .sp-toggle .i-play{display:none}.sor-player.paused .i-play{display:block}.sor-player.paused .i-pause{display:none}
@@ -171,6 +171,10 @@
   const chapters = {};
   const book = (set = 'pop') => chapters[set] || (chapters[set] = fetch(abs(SETS[set].data)).then(r => r.json()).catch(() => { delete chapters[set]; return []; }));
 
+  // Officieel Apple Music-icoon (Apple marketing toolbox, app-icon-music zwart/wit), inline zodat het meteen staat.
+  // Apple vraagt bij de iTunes-fragmenten om een link naar de winkel: zwart in het paneel, wit in de spelerbalk.
+  const APPLE_ICON = '<svg viewBox="0 0 361 361" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M359.98,99.71c-0.02-3.62-0.06-7.24-0.16-10.86c-0.21-7.89-0.68-15.84-2.08-23.64 c-1.42-7.92-3.75-15.29-7.41-22.49c-3.6-7.07-8.3-13.53-13.91-19.14c-5.61-5.61-12.08-10.31-19.15-13.91 c-7.19-3.66-14.56-5.98-22.47-7.41c-7.8-1.4-15.76-1.87-23.65-2.08c-3.62-0.1-7.24-0.14-10.86-0.16C255.99,0,251.69,0,247.39,0 H112.61c-4.3,0-8.6,0-12.9,0.02c-3.62,0.02-7.24,0.06-10.86,0.16C80.96,0.4,73,0.86,65.2,2.27c-7.92,1.42-15.28,3.75-22.47,7.41 c-7.07,3.6-13.54,8.3-19.15,13.91c-5.61,5.61-10.31,12.07-13.91,19.14c-3.66,7.2-5.99,14.57-7.41,22.49 c-1.4,7.8-1.87,15.76-2.08,23.64c-0.1,3.62-0.14,7.24-0.16,10.86C0,104.01,0,108.31,0,112.61v134.77c0,4.3,0,8.6,0.02,12.9 c0.02,3.62,0.06,7.24,0.16,10.86c0.21,7.89,0.68,15.84,2.08,23.64c1.42,7.92,3.75,15.29,7.41,22.49 c3.6,7.07,8.3,13.53,13.91,19.14c5.61,5.61,12.08,10.31,19.15,13.91c7.19,3.66,14.56,5.98,22.47,7.41 c7.8,1.4,15.76,1.87,23.65,2.08c3.62,0.1,7.24,0.14,10.86,0.16c4.3,0.03,8.6,0.02,12.9,0.02h134.77c4.3,0,8.6,0,12.9-0.02 c3.62-0.02,7.24-0.06,10.86-0.16c7.89-0.21,15.85-0.68,23.65-2.08c7.92-1.42,15.28-3.74,22.47-7.41 c7.07-3.6,13.54-8.3,19.15-13.91c5.61-5.61,10.31-12.07,13.91-19.14c3.66-7.2,5.99-14.57,7.41-22.49 c1.4-7.8,1.87-15.76,2.08-23.64c0.1-3.62,0.14-7.24,0.16-10.86c0.03-4.3,0.02-8.6,0.02-12.9V112.61 C360,108.31,360,104.01,359.98,99.71z M263.54,234.26c0,4.56-0.04,8.7-1,13.26c-0.93,4.43-2.63,8.6-5.24,12.35 c-2.61,3.74-5.95,6.81-9.85,9.11c-3.95,2.33-8.08,3.66-12.5,4.55c-8.3,1.67-13.97,2.05-19.31,0.98c-5.14-1.03-9.5-3.4-12.99-6.6 c-5.17-4.74-8.39-11.14-9.09-17.82c-0.82-7.84,1.79-16.21,7.67-22.38c2.97-3.11,6.7-5.57,11.68-7.51 c5.21-2.02,10.96-3.23,19.8-5.01c2.33-0.47,4.66-0.94,6.99-1.41c3.06-0.62,5.69-1.4,7.81-3.99c2.13-2.61,2.17-5.78,2.17-8.92 l0-79.29c0-6.07-2.72-7.72-8.52-6.61c-4.14,0.81-93.09,18.75-93.09,18.75c-5.02,1.21-6.78,2.85-6.78,9.08l0,116.15 c0,4.56-0.24,8.7-1.19,13.26c-0.93,4.43-2.63,8.6-5.24,12.35c-2.61,3.74-5.95,6.81-9.85,9.11c-3.95,2.33-8.08,3.72-12.5,4.61 c-8.3,1.67-13.97,2.05-19.31,0.98c-5.14-1.03-9.5-3.47-12.99-6.66c-5.17-4.74-8.17-11.14-8.88-17.82 c-0.82-7.84,1.57-16.21,7.46-22.38c2.97-3.11,6.7-5.57,11.68-7.51c5.21-2.02,10.96-3.23,19.8-5.01c2.33-0.47,4.66-0.94,6.99-1.41 c3.06-0.62,5.69-1.4,7.81-3.99c2.12-2.59,2.37-5.64,2.37-8.76c0-24.6,0-133.92,0-133.92c0-1.8,0.15-3.02,0.24-3.62 c0.43-2.82,1.56-5.24,3.6-6.95c1.7-1.42,3.88-2.41,6.67-3l0.04-0.01l107-21.59c0.93-0.19,8.66-1.56,9.53-1.64 c5.78-0.5,9.03,3.3,9.03,9.46V234.26z"/></svg>';
+
   const SOR = window.SOR = {
     slug, norm, fmt, get root() { return root(); }, media: audio,
     play(track, startAt) {
@@ -195,7 +199,7 @@
       $('.sp-title').textContent = [track.title, track.year].filter(Boolean).join(' · ');
       $('.sp-time').textContent = '';
       $('.sp-bar i').style.width = '0%';
-      { const st = $('.sp-store'); if (track.store) { st.href = track.store; st.hidden = false; st.firstChild.src = abs('assets/apple/icoon-wit.svg'); st.setAttribute('aria-label', 'Luister naar ' + (track.title || '') + ' op Apple Music'); } else { st.removeAttribute('href'); st.hidden = true; } }
+      { const st = $('.sp-store'); if (track.store) { st.href = track.store; st.hidden = false; if (!st.firstChild) st.innerHTML = APPLE_ICON; st.setAttribute('aria-label', 'Luister naar ' + (track.title || '') + ' op Apple Music'); } else { st.removeAttribute('href'); st.hidden = true; } }
       { const im = $('.sp-cover'); if (track.cover) { im.src = track.cover; im.hidden = false; } else { im.removeAttribute('src'); im.hidden = true; } }
       bar.hidden = false;
       if (startAt > 0) { const go = () => { try { audio.currentTime = startAt; } catch (e) {} audio.removeEventListener('loadedmetadata', go); }; audio.addEventListener('loadedmetadata', go); }
@@ -219,7 +223,7 @@
     pause() { volgende = null; audio.pause(); if (tail) { tail.pause(); tail = null; } },
     isPlaying(track) { return !!(current && track && current.audio === track.audio && !audio.paused); },
     onChange(fn) { listeners.add(fn); return () => listeners.delete(fn); },
-    storeBadge: '<img src="' + abs('assets/apple/compact.svg') + '" alt="Luister op Apple Music" height="16">',
+    storeBadge: APPLE_ICON,
     playIcon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>',
     pauseIcon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg>',
     load(path) { return fetch(root() + '/' + path).then(r => r.json()); }
