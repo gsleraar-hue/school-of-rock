@@ -23,7 +23,7 @@
     <button class="sp-toggle" type="button" aria-label="Afspelen of pauzeren"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-pause" d="M7 5h3v14H7zM14 5h3v14h-3z"/><path class="i-play" d="M8 5l11 7-11 7z"/></svg></button>
     <img class="sp-cover" alt="" hidden onerror="this.hidden=true">
     <div class="sp-meta"><span class="sp-artist"></span><span class="sp-title"></span><div class="sp-bar" role="slider" aria-label="Positie" tabindex="-1"><i></i></div><span class="sp-time mono"></span></div>
-    <a class="sp-store" target="_blank" rel="noopener" hidden><img alt="Apple Music" width="28" height="28"></a>
+    <a class="sp-store" target="_blank" rel="noopener" hidden><img alt="Apple Music" width="20" height="20"></a>
     <span class="sp-book">
       <button type="button" class="sp-back" aria-label="15 seconden terug" title="15 s terug">−15</button>
       <button type="button" class="sp-fwd" aria-label="30 seconden vooruit" title="30 s vooruit">+30</button>
@@ -37,7 +37,7 @@
   css.textContent = `
     .sor-player{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:80;width:min(560px,calc(100% - 24px));display:flex;align-items:center;gap:12px;padding:8px 10px 8px 8px;background:#1C1B19;color:#fff;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.35);border-left:5px solid #F2D500;font-family:Inter,Segoe UI,Arial,sans-serif}
     .sor-player[hidden]{display:none}
-    .sor-player .sp-store{flex:none;display:block;line-height:0}.sor-player .sp-store[hidden]{display:none}.sor-player .sp-store img{width:28px;height:28px;border-radius:7px}
+    .sor-player .sp-store{flex:none;display:block;line-height:0}.sor-player .sp-store[hidden]{display:none}.sor-player .sp-store img{width:20px;height:20px}
     .kp-store{display:block;width:max-content;margin-top:6px;line-height:0}.kp-store img{height:16px;width:auto}
     .sor-player .sp-toggle{flex:none;width:40px;height:40px;border-radius:50%;border:0;background:#D63A31;color:#fff;display:grid;place-items:center;cursor:pointer}
     .sor-player .sp-toggle svg{width:18px;height:18px;fill:currentColor}
@@ -195,7 +195,7 @@
       $('.sp-title').textContent = [track.title, track.year].filter(Boolean).join(' · ');
       $('.sp-time').textContent = '';
       $('.sp-bar i').style.width = '0%';
-      { const st = $('.sp-store'); if (track.store) { st.href = track.store; st.hidden = false; st.firstChild.src = abs('assets/apple/icoon.png'); st.setAttribute('aria-label', 'Luister naar ' + (track.title || '') + ' op Apple Music'); } else { st.removeAttribute('href'); st.hidden = true; } }
+      { const st = $('.sp-store'); if (track.store) { st.href = track.store; st.hidden = false; st.firstChild.src = abs('assets/apple/icoon-wit.svg'); st.setAttribute('aria-label', 'Luister naar ' + (track.title || '') + ' op Apple Music'); } else { st.removeAttribute('href'); st.hidden = true; } }
       { const im = $('.sp-cover'); if (track.cover) { im.src = track.cover; im.hidden = false; } else { im.removeAttribute('src'); im.hidden = true; } }
       bar.hidden = false;
       if (startAt > 0) { const go = () => { try { audio.currentTime = startAt; } catch (e) {} audio.removeEventListener('loadedmetadata', go); }; audio.addEventListener('loadedmetadata', go); }
