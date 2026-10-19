@@ -104,6 +104,7 @@
   .mg-tile.groot .tx { display: flex; flex-direction: column; justify-content: center; padding: clamp(24px, 4vw, 48px); }
   .mg-tile.groot h3 { font-size: clamp(36px, 4vw, 60px); }
   .mg-tile.later { pointer-events: none; }
+  @media (min-width: 761px) { .mg-tiles.drie { grid-template-columns: repeat(3, minmax(0, 1fr)); } .mg-tiles.drie .mg-tile.groot { grid-template-columns: 1.6fr 1fr; } }
   .mg-tile.later .im img { filter: grayscale(1); opacity: .55; }
   @media (max-width: 760px) { .mg-tiles, .mg-tile.groot, .mg-hero { grid-template-columns: 1fr; } .mg-hero .ft { min-height: 60vh; order: -1; } .mg-tile.groot .im { min-height: 0; aspect-ratio: 4 / 3; } }
   .mg-dark { background: var(--ink); color: #fff; }
