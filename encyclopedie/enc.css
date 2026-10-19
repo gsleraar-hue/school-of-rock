@@ -107,3 +107,13 @@ body { background: var(--paper); }
 .vermeld { list-style: none; padding: 0; margin: 0; }
 .vermeld li { padding: 10px 0; border-top: 1px solid var(--line); }
 .vermeld q { display: block; quotes: none; margin-top: 6px; padding-left: 14px; border-left: 3px solid var(--yellow); color: var(--ink-soft); font-size: 15px; }
+
+/* tracklijst bij albums */
+.tl { list-style: none; padding: 0; margin: 0 0 10px; }
+.tl li { display: grid; grid-template-columns: 28px 34px 1fr auto auto; gap: 10px; align-items: center; padding: 5px 0; border-top: 1px solid var(--line); }
+.tl .n { font: 13px/1 var(--mono); color: var(--red); text-align: right; }
+.tl button { width: 32px; height: 32px; border-radius: 50%; border: 0; background: var(--red); color: var(--white); cursor: pointer; display: grid; place-items: center; }
+.tl button svg { width: 14px; height: 14px; fill: currentColor; }
+.tl .d { font: 12px/1 var(--mono); color: var(--ink-soft); }
+.tl .ap { font: 11px/1 var(--mono); }
+@media (max-width: 720px) { .tl li { grid-template-columns: 24px 34px 1fr auto; } .tl .ap { display: none; } }
