@@ -228,6 +228,7 @@
   .hz-tx h2::before { content: ""; display: block; width: 48px; height: 6px; background: var(--mg); margin-bottom: 14px; }
   .hz-tx p { font: 400 calc(clamp(16px, 1.2vw, 19px) * var(--s, 1))/1.55 var(--serif); margin: 0 0 14px; max-width: 62ch; }
   .hz-tx .mg-frag { margin: 14px 0; max-width: 640px; }
+  .hz-tx > :last-child { margin-bottom: 0; }
   .hz-duo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .hz-duo.om .hz-tx { order: 2; }
   .hz-duo:not(.om) .hz-tx { padding-right: clamp(24px, 3vw, 48px); } .hz-duo.om .hz-tx { padding-left: clamp(24px, 3vw, 48px); }
@@ -383,5 +384,5 @@ if(e.key==='Home'){naar(0);}if(e.key==='End'){naar(p.length-1);}});
 var rust=0;hz.addEventListener('wheel',function(e){if(matchMedia('(max-width: 760px)').matches)return;if(Math.abs(e.deltaX)>Math.abs(e.deltaY))return;
 var tx=e.target.closest('.hz-tx');if(tx&&tx.scrollHeight>tx.clientHeight+2){var onder=tx.scrollTop+tx.clientHeight>=tx.scrollHeight-2,boven=tx.scrollTop<=0;if((e.deltaY>0&&!onder)||(e.deltaY<0&&!boven))return;}
 e.preventDefault();var t=Date.now();if(t-rust<(anim?900:450))return;rust=t;naar(index()+(e.deltaY>0?1:-1));},{passive:false});
-function plaats(){var c=hz.getBoundingClientRect();[l,r].forEach(function(b){b.style.top=(c.top+c.height/2)+'px';});}function past(){if(innerWidth<=760)return;[].forEach.call(hz.querySelectorAll('.hz-tx'),function(t){t.style.removeProperty('--s');t.style.columns='';var k=1;var te=function(){return t.scrollWidth>t.clientWidth+2||t.scrollHeight>t.clientHeight+16;};while(te()&&k>.8){k-=.04;t.style.setProperty('--s',k);}if(t.scrollWidth>t.clientWidth+2)t.style.columns='auto';});}
+function plaats(){var c=hz.getBoundingClientRect();[l,r].forEach(function(b){b.style.top=(c.top+c.height/2)+'px';});}function past(){if(innerWidth<=760)return;[].forEach.call(hz.querySelectorAll('.hz-tx'),function(t){t.style.removeProperty('--s');t.style.columns='';var k=1;var te=function(){return t.scrollWidth>t.clientWidth+2||(t.scrollHeight>t.clientHeight+2&&t.offsetHeight>=t.parentElement.clientHeight-2);};while(te()&&k>.8){k-=.04;t.style.setProperty('--s',k);}if(t.scrollWidth>t.clientWidth+2)t.style.columns='auto';});}
 plaats();past();if(document.fonts)document.fonts.ready.then(past);addEventListener('resize',function(){plaats();past();naar(index(),true);});})();</script></body></html>
