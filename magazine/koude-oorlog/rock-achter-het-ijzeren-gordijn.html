@@ -135,6 +135,21 @@
   ol.mg-tl b { display: block; font: 700 21px/1.15 var(--disp); text-transform: uppercase; margin: 4px 0 6px; }
   ol.mg-tl p { font: 400 17px/1.55 var(--serif); margin: 0; }
   .mg-tl-a { display: inline-block; margin-top: 8px; font: 700 12px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mg); }
+  ol.mg-tl::after { content: ""; position: absolute; left: 41px; top: 8px; width: 4px; height: calc((100% - 16px) * var(--p, 0)); background: var(--mg); }
+  ol.mg-tl li { transition: opacity .4s; }
+  .js ol.mg-tl.actief li:not(.nu) { opacity: .45; }
+  ol.mg-tl li.nu .j { transform: scale(1.18); box-shadow: 0 0 0 6px color-mix(in srgb, var(--mg) 22%, transparent); }
+  ol.mg-tl .j { transition: transform .3s, box-shadow .3s; }
+  /* jaarbalk boven de tijdlijn: blijft staan, klik een jaar om ernaartoe te gaan */
+  .mg-tlbalk { position: sticky; top: calc(var(--nav-h, 56px) + 42px + env(safe-area-inset-top, 0px)); z-index: 20; background: var(--paper); padding: 12px 0 8px; margin: 28px 0 -8px; border-bottom: 1px solid #0002; }
+  .mg-tlbalk .as { position: relative; height: 34px; margin: 0 14px; }
+  .mg-tlbalk .as::before { content: ""; position: absolute; left: 0; right: 0; top: 16px; height: 2px; background: #0003; }
+  .mg-tlbalk button { all: unset; cursor: pointer; position: absolute; top: 9px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%; background: var(--paper); border: 3px solid var(--mg); box-sizing: border-box; transition: transform .2s, background .2s; }
+  .mg-tlbalk button:hover, .mg-tlbalk button.nu { background: var(--mg); transform: scale(1.3); }
+  .mg-tlbalk button:focus-visible { outline: 2px solid var(--mg); outline-offset: 3px; }
+  .mg-tlbalk .lab { display: flex; justify-content: space-between; font: 700 11px/1 var(--mono); letter-spacing: .1em; color: #6B675E; margin: 0 6px; }
+  .mg-tlbalk .lab b { color: var(--mg); font-size: 13px; }
+  @media (max-width: 520px) { ol.mg-tl::after { left: 30px; } }
   @media (max-width: 520px) { ol.mg-tl li { grid-template-columns: 64px 1fr; gap: 12px; } ol.mg-tl::before { left: 30px; } ol.mg-tl .j { font-size: 13px; padding: 7px 7px 6px; } }
   /* film op volle breedte */
   figure.mg-film.lus { width: 100vw; margin: 56px 0 56px 50%; }
@@ -195,7 +210,7 @@
 <figure class="mg-frag" data-track="{&quot;artist&quot;:&quot;Кино&quot;,&quot;title&quot;:&quot;Хочу перемен&quot;,&quot;year&quot;:1986,&quot;audio&quot;:&quot;https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fa/fb/8b/fafb8ba8-69ad-e486-24b0-2ea6f6d9a4ea/mzaf_5283461596914250645.plus.aac.p.m4a&quot;,&quot;cover&quot;:&quot;../../magazine/img/hoes/1333009930.jpg&quot;,&quot;store&quot;:&quot;https://music.apple.com/nl/album/%D1%85%D0%BE%D1%87%D1%83-%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD/1333009843?i=1333009930&quot;}"><span class="mg-cover"><img src="../../magazine/img/hoes/1333009930.jpg" alt="" loading="lazy"><button class="sor-play" type="button" aria-label="Speel Кино – Хочу перемен"></button></span><figcaption><b>Кино</b><span class="mg-t">Хочу перемен · 1986</span><p class="mg-tip">Een strak, bijna mechanisch ritme en een stem zonder versiering. Tsoi zingt dat onze harten om verandering vragen, onze ogen om verandering vragen. Meer hoefde hij niet te zeggen.</p></figcaption><a class="kp-store" href="https://music.apple.com/nl/album/%D1%85%D0%BE%D1%87%D1%83-%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD/1333009843?i=1333009930" target="_blank" rel="noopener" aria-label="Luister op Apple Music" title="Luister op Apple Music"></a></figure>
 </article><div class="mg-next"><a href="./leven-met-de-bom.html"><div class="tx"><p class="mg-k">Lees verder · verhaal 3</p><h3>Leven met de bom</h3></div><div class="im"><img src="../../magazine/img/castle-bravo.jpg" alt="" loading="lazy" style="object-position:50% 40%"></div></a></div><a class="mg-back" href="./index.html">← Koude Oorlog: alle verhalen</a></main><footer class="sitefoot"><div class="wrap"><p>SoR Magazine · School of Rock · Jan-Wolter Smit</p><p><a href="../../magazine/index.html">Alle nummers</a></p></div></footer><script>(function(){function go(){if(!window.SOR)return setTimeout(go,50);var bs=[].slice.call(document.querySelectorAll('.mg-frag'));bs.forEach(function(f){var t=JSON.parse(f.dataset.track);var b=f.querySelector('.sor-play');b.innerHTML=SOR.playIcon;b.addEventListener('click',function(){SOR.play(t)});var a=f.querySelector('.kp-store');if(a)a.innerHTML=SOR.storeBadge;});SOR.onChange(function(){bs.forEach(function(f){var t=JSON.parse(f.dataset.track),b=f.querySelector('.sor-play'),on=SOR.isPlaying(t);b.classList.toggle('on',on);b.innerHTML=on?SOR.pauseIcon:SOR.playIcon;});});}go();})();</script><script>(function(){
 var rust=matchMedia('(prefers-reduced-motion: reduce)').matches;
-var els=[].slice.call(document.querySelectorAll('.mg-body > figure, .mg-body > blockquote, .mg-frag, .mg-tile, .mg-next a, ol.mg-tl li'));
+var els=[].slice.call(document.querySelectorAll('.mg-body > figure, .mg-body > blockquote, .mg-frag, .mg-tile, .mg-next a'));
 if('IntersectionObserver' in window&&!rust){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(el){el.classList.add('rv');io.observe(el);});}
 var breed=[].slice.call(document.querySelectorAll('figure.mg-img.breed img'));
 if(!rust&&breed.length){var tik=false;function schuif(){tik=false;var h=innerHeight;breed.forEach(function(im){var r=im.parentNode.getBoundingClientRect();if(r.bottom<0||r.top>h)return;var d=(r.top+r.height/2-h/2)/h;im.style.transform='translateY('+(d*-6).toFixed(2)+'%) scale(1.12)';});}
@@ -207,4 +222,13 @@ var pop=document.createElement('div');pop.className='mg-pop';pop.hidden=true;pop
 function dicht(){pop.hidden=true;if(open)open.setAttribute('aria-expanded','false');open=null;}
 document.addEventListener('click',function(e){var k=e.target.closest('.mg-uit');if(k){e.preventDefault();if(open===k){dicht();return;}dicht();open=k;k.setAttribute('aria-expanded','true');pop.innerHTML='<b></b><span></span>';pop.firstChild.textContent=k.textContent;pop.lastChild.textContent=k.dataset.uitleg;pop.hidden=false;var r=k.getBoundingClientRect(),w=Math.min(340,innerWidth-24);pop.style.left=Math.max(12,Math.min(r.left+scrollX,scrollX+innerWidth-w-12))+'px';pop.style.top=(r.bottom+scrollY+10)+'px';return;}if(!e.target.closest('.mg-pop'))dicht();});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')dicht();});
+[].slice.call(document.querySelectorAll('ol.mg-tl')).forEach(function(ol){var li=[].slice.call(ol.children);if(!li.length)return;
+var jr=li.map(function(l){return parseInt(l.querySelector('.j').textContent,10);}),a=+ol.dataset.van||Math.min.apply(0,jr),z=+ol.dataset.tot||Math.max.apply(0,jr);
+var balk=document.createElement('div');balk.className='mg-tlbalk';balk.innerHTML='<div class="as"></div><div class="lab"><span>'+a+'</span><b></b><span>'+z+'</span></div>';ol.parentNode.insertBefore(balk,ol);
+var as=balk.firstChild,lab=balk.querySelector('.lab b'),knop={};
+li.forEach(function(l,i){var j=jr[i];if(knop[j])return;var b=document.createElement('button');b.type='button';b.style.left=((j-a)/(z-a||1)*100)+'%';b.title=j+': '+l.querySelector('b').textContent;b.setAttribute('aria-label',b.title);b.addEventListener('click',function(){var y=l.getBoundingClientRect().top+scrollY-innerHeight*.4;scrollTo({top:y,behavior:rust?'auto':'smooth'});});as.appendChild(b);knop[j]=b;});
+var nu=-1;function stand(){var r=ol.getBoundingClientRect(),m=innerHeight*.5;ol.style.setProperty('--p',Math.max(0,Math.min(1,(m-r.top)/r.height)).toFixed(3));
+var k=-1;li.forEach(function(l,i){if(l.getBoundingClientRect().top<m)k=i;});var binnen=r.top<m&&r.bottom>m*.6;ol.classList.toggle('actief',binnen&&k>=0);
+if(k!==nu){if(nu>=0)li[nu].classList.remove('nu');Object.keys(knop).forEach(function(j){knop[j].classList.remove('nu');});nu=k;if(k>=0){li[k].classList.add('nu');knop[jr[k]].classList.add('nu');lab.textContent=jr[k]+' · '+li[k].querySelector('b').textContent;}else lab.textContent='';}}
+var t=false;addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(function(){t=false;stand();});}},{passive:true});stand();});
 })();</script></body></html>

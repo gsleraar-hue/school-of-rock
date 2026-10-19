@@ -135,6 +135,21 @@
   ol.mg-tl b { display: block; font: 700 21px/1.15 var(--disp); text-transform: uppercase; margin: 4px 0 6px; }
   ol.mg-tl p { font: 400 17px/1.55 var(--serif); margin: 0; }
   .mg-tl-a { display: inline-block; margin-top: 8px; font: 700 12px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mg); }
+  ol.mg-tl::after { content: ""; position: absolute; left: 41px; top: 8px; width: 4px; height: calc((100% - 16px) * var(--p, 0)); background: var(--mg); }
+  ol.mg-tl li { transition: opacity .4s; }
+  .js ol.mg-tl.actief li:not(.nu) { opacity: .45; }
+  ol.mg-tl li.nu .j { transform: scale(1.18); box-shadow: 0 0 0 6px color-mix(in srgb, var(--mg) 22%, transparent); }
+  ol.mg-tl .j { transition: transform .3s, box-shadow .3s; }
+  /* jaarbalk boven de tijdlijn: blijft staan, klik een jaar om ernaartoe te gaan */
+  .mg-tlbalk { position: sticky; top: calc(var(--nav-h, 56px) + 42px + env(safe-area-inset-top, 0px)); z-index: 20; background: var(--paper); padding: 12px 0 8px; margin: 28px 0 -8px; border-bottom: 1px solid #0002; }
+  .mg-tlbalk .as { position: relative; height: 34px; margin: 0 14px; }
+  .mg-tlbalk .as::before { content: ""; position: absolute; left: 0; right: 0; top: 16px; height: 2px; background: #0003; }
+  .mg-tlbalk button { all: unset; cursor: pointer; position: absolute; top: 9px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%; background: var(--paper); border: 3px solid var(--mg); box-sizing: border-box; transition: transform .2s, background .2s; }
+  .mg-tlbalk button:hover, .mg-tlbalk button.nu { background: var(--mg); transform: scale(1.3); }
+  .mg-tlbalk button:focus-visible { outline: 2px solid var(--mg); outline-offset: 3px; }
+  .mg-tlbalk .lab { display: flex; justify-content: space-between; font: 700 11px/1 var(--mono); letter-spacing: .1em; color: #6B675E; margin: 0 6px; }
+  .mg-tlbalk .lab b { color: var(--mg); font-size: 13px; }
+  @media (max-width: 520px) { ol.mg-tl::after { left: 30px; } }
   @media (max-width: 520px) { ol.mg-tl li { grid-template-columns: 64px 1fr; gap: 12px; } ol.mg-tl::before { left: 30px; } ol.mg-tl .j { font-size: 13px; padding: 7px 7px 6px; } }
   /* film op volle breedte */
   figure.mg-film.lus { width: 100vw; margin: 56px 0 56px 50%; }
