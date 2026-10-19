@@ -136,6 +136,17 @@
     if (!suppress) place(false);
   });
   svg.call(zoom).on('dblclick.zoom', null);
+  // trackpad: twee vingers verschuiven de kaart, knijpen (of Ctrl + wiel) zoomt; een muiswiel blijft zoomen.
+  // Boven de namenbalk links is het altijd scrollen.
+  const laneBarW = () => gLaneNames.attr('display') === 'none' ? 0 : +(gLaneNames.select('rect.bg').attr('width') || 0);
+  const isPanWheel = ev => !ev.ctrlKey && (ev.offsetX < laneBarW() || ev.shiftKey || (ev.deltaMode === 0 && (ev.deltaX !== 0 || !Number.isInteger(ev.deltaY) || Math.abs(ev.deltaY) < 50)));
+  zoom.filter(ev => ev.type === 'wheel' ? !isPanWheel(ev) : (!ev.ctrlKey && !ev.button));
+  svg.node().addEventListener('wheel', ev => {
+    if (!isPanWheel(ev)) return;
+    ev.preventDefault();
+    const k = d3.zoomTransform(svg.node()).k, dx = ev.shiftKey && !ev.deltaX ? ev.deltaY : ev.deltaX, dy = ev.shiftKey && !ev.deltaX ? 0 : ev.deltaY;
+    svg.call(zoom.translateBy, -dx / k, -dy / k);
+  }, { passive: false });
   svg.on('click', ev => { if (ev.target === svg.node()) clearSelection(); });
 
   let W = 0, H = 0;
@@ -285,6 +296,9 @@
       ln.append('rect').attr('class', 'bar').attr('x', 0).attr('width', 5).attr('fill', d => d.f.color);
       ln.append('text').attr('class', 'lane-name').attr('x', 14).attr('y', d => d.y + 22).attr('fill', d => d.f.color).text(d => d.f.name);
       stickLaneNames(d3.zoomTransform(svg.node()));
+      // breedte van het naamvlak afstemmen op de langste naam (ook als het lettertype later binnenkomt)
+      const fitNames = () => { const w = d3.max(ln.selectAll('text').nodes(), n => n.getComputedTextLength()) || 0; ln.selectAll('rect.bg').attr('width', Math.max(158, Math.ceil(w) + 30)); };
+      fitNames(); if (document.fonts) document.fonts.ready.then(fitNames);
     } else if (state.mode === 'world') {
       const path = d3.geoPath(projection);
       gBack.append('path').attr('class', 'graticule').attr('d', path(d3.geoGraticule10()));
@@ -497,7 +511,7 @@
         ${isComp(d) ? `<div class="kp-links">${[d.stroming, ...(d.alsoIn || [])].map(chip).join('')}</div>` : ''}
         ${d.text ? `<p>${d.text}</p>` : ''}
         ${d.listen ? `<p class="kp-listen">${d.listen}</p>` : ''}
-        ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((t, i) => `<div class="kp-track${t.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${t.title}">${SOR.playIcon}</button>${t.cover ? `<img src="${t.cover}" alt="" loading="lazy" onerror="this.remove()">` : ''}<div><b>${t.film || t.artist}</b><span>${t.title}${t.year ? ' · ' + t.year : ''}</span></div></div>`).join('')}</div></div>` : ''}
+        ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((t, i) => `<div class="kp-track${t.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${t.title}">${SOR.playIcon}</button>${t.cover ? `<img src="${SOR.thumb(t.cover)}" alt="" loading="lazy" onerror="this.remove()">` : ''}<div><b>${t.film || t.artist}</b><span>${t.title}${t.year ? ' · ' + t.year : ''}</span>${SOR.storeOf(t) ? `<a class="kp-store" href="${SOR.storeOf(t)}" target="_blank" rel="noopener" aria-label="Luister op Apple Music" title="Luister op Apple Music">${SOR.storeBadge}</a>` : ''}</div></div>`).join('')}</div></div>` : ''}
         ${films(d)}
         ${topByComp.has(d.id) ? `<div><p class="kp-h">In de Top 400 van NPO Klassiek</p><div class="kp-tops">${topByComp.get(d.id).map(topChip).join('')}</div></div>` : ''}
         ${mem.length ? `<div><p class="kp-h">Musici</p><div class="kp-links">${mem.map(c => chip(c.id)).join('')}</div></div>` : ''}
@@ -583,7 +597,7 @@
         <p class="kp-rank"><b>${t.pos}</b><span>${move}</span></p>
         ${spark(t)}
         ${t.note ? `<p>${t.note}</p>` : ''}
-        ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((x, i) => `<div class="kp-track${x.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${x.title}">${SOR.playIcon}</button>${x.cover ? `<img src="${x.cover}" alt="" loading="lazy" onerror="this.remove()">` : ''}<div><b>${x.own ? x.label : (x.film || x.artist)}</b><span>${x.own ? t.artist : x.title}</span></div></div>`).join('')}</div></div>` : ''}
+        ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((x, i) => `<div class="kp-track${x.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${x.title}">${SOR.playIcon}</button>${x.cover ? `<img src="${SOR.thumb(x.cover)}" alt="" loading="lazy" onerror="this.remove()">` : ''}<div><b>${x.own ? x.label : (x.film || x.artist)}</b><span>${x.own ? t.artist : x.title}</span>${SOR.storeOf(x) ? `<a class="kp-store" href="${SOR.storeOf(x)}" target="_blank" rel="noopener" aria-label="Luister op Apple Music" title="Luister op Apple Music">${SOR.storeBadge}</a>` : ''}</div></div>`).join('')}</div></div>` : ''}
         ${t.comps.length ? `<div><p class="kp-h">Op de kaart</p><div class="kp-links">${t.comps.map(chip).join('')}${f ? '' : ''}</div></div>` : `<p class="kp-listen">${t.artist} staat (nog) niet als componist op de kaart.</p>`}
         ${others.length ? `<div><p class="kp-h">Meer van ${t.comps.length === 1 ? byId.get(t.comps[0]).name : 'deze componisten'} in de lijst</p><div class="kp-tops">${others.map(topChip).join('')}</div></div>` : ''}
       </div>`;

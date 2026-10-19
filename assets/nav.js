@@ -51,16 +51,23 @@
     if (push) { history.replaceState(Object.assign({}, history.state, { sor: true, y: scrollY }), ''); history.pushState({ sor: true, y: 0 }, '', url); }
     shown = location.pathname + location.search;
     cleanup();
-    try { await swap(doc); } catch (e) { console.error(e); location.reload(); return; }
+    // meteen op de goede plek zetten zodra de nieuwe inhoud er staat, niet pas na het laden van de scripts
+    // (anders zie je de nieuwe pagina even op de scrollpositie van de vorige)
+    const hash = new URL(url).hash;
+    const place = () => {
+      const target = hash && document.getElementById(decodeURIComponent(hash.slice(1)));
+      if (target) target.scrollIntoView(); else if (!push && history.state && history.state.y) scrollTo(0, history.state.y); else scrollTo(0, 0);
+      return target;
+    };
+    try { await swap(doc, place); } catch (e) { console.error(e); location.reload(); return; }
     document.documentElement.classList.remove('sor-loading');
     document.dispatchEvent(new Event('sor:ready'));
-    const hash = new URL(url).hash;
-    const target = hash && document.getElementById(decodeURIComponent(hash.slice(1)));
-    if (target) target.scrollIntoView(); else if (!push && history.state && history.state.y) scrollTo(0, history.state.y); else scrollTo(0, 0);
+    // anker of terug in de geschiedenis: na het laden nog eens, want kaarten en afbeeldingen kunnen de hoogte veranderen
+    const target = (hash || !push) ? place() : null;
     if (hash && !target) window.dispatchEvent(new HashChangeEvent('hashchange'));
   }
 
-  async function swap(doc) {
+  async function swap(doc, place) {
     document.title = doc.title;
     // meta-tags (o.a. sor-root, dat per map verschilt)
     doc.head.querySelectorAll('meta[name]').forEach(m => { const cur = document.head.querySelector('meta[name="' + m.name + '"]'); if (cur) cur.content = m.content; else document.head.appendChild(m.cloneNode()); });
@@ -83,6 +90,7 @@
     const frag = document.createDocumentFragment();
     [...doc.body.childNodes].forEach(n => frag.appendChild(document.adoptNode(n)));
     body.insertBefore(frag, persist[0] || null);
+    if (place) place();
     // scripts uit de kop die nog niet geladen zijn (bv. d3 voor de genrekaart), daarna die uit de body, op volgorde
     for (const s of doc.head.querySelectorAll('script[src]')) await run(s, null);
     for (const s of [...body.querySelectorAll('script')]) await run(s, s);

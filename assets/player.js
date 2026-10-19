@@ -1,6 +1,7 @@
 /* Gedeelde speler: fragmenten en het luisterboek, met een balk onderin het scherm die blijft staan bij navigeren. */
 (function () {
   if (window.SOR) return; // al geladen: de speler blijft staan bij navigeren binnen de site
+  const SCRIPT_SRC = (document.currentScript && document.currentScript.src) || new URL('/assets/player.js', location.href).href;
   const root = () => document.querySelector('meta[name="sor-root"]')?.content || '.';
   const abs = p => new URL(root() + '/' + p, location.href).href;
   const slug = s => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/&/g, ' en ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -175,8 +176,23 @@
   // Apple vraagt bij de iTunes-fragmenten om een link naar de winkel: zwart in het paneel, wit in de spelerbalk.
   const APPLE_ICON = '<svg viewBox="0 0 361 361" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M359.98,99.71c-0.02-3.62-0.06-7.24-0.16-10.86c-0.21-7.89-0.68-15.84-2.08-23.64 c-1.42-7.92-3.75-15.29-7.41-22.49c-3.6-7.07-8.3-13.53-13.91-19.14c-5.61-5.61-12.08-10.31-19.15-13.91 c-7.19-3.66-14.56-5.98-22.47-7.41c-7.8-1.4-15.76-1.87-23.65-2.08c-3.62-0.1-7.24-0.14-10.86-0.16C255.99,0,251.69,0,247.39,0 H112.61c-4.3,0-8.6,0-12.9,0.02c-3.62,0.02-7.24,0.06-10.86,0.16C80.96,0.4,73,0.86,65.2,2.27c-7.92,1.42-15.28,3.75-22.47,7.41 c-7.07,3.6-13.54,8.3-19.15,13.91c-5.61,5.61-10.31,12.07-13.91,19.14c-3.66,7.2-5.99,14.57-7.41,22.49 c-1.4,7.8-1.87,15.76-2.08,23.64c-0.1,3.62-0.14,7.24-0.16,10.86C0,104.01,0,108.31,0,112.61v134.77c0,4.3,0,8.6,0.02,12.9 c0.02,3.62,0.06,7.24,0.16,10.86c0.21,7.89,0.68,15.84,2.08,23.64c1.42,7.92,3.75,15.29,7.41,22.49 c3.6,7.07,8.3,13.53,13.91,19.14c5.61,5.61,12.08,10.31,19.15,13.91c7.19,3.66,14.56,5.98,22.47,7.41 c7.8,1.4,15.76,1.87,23.65,2.08c3.62,0.1,7.24,0.14,10.86,0.16c4.3,0.03,8.6,0.02,12.9,0.02h134.77c4.3,0,8.6,0,12.9-0.02 c3.62-0.02,7.24-0.06,10.86-0.16c7.89-0.21,15.85-0.68,23.65-2.08c7.92-1.42,15.28-3.74,22.47-7.41 c7.07-3.6,13.54-8.3,19.15-13.91c5.61-5.61,10.31-12.07,13.91-19.14c3.66-7.2,5.99-14.57,7.41-22.49 c1.4-7.8,1.87-15.76,2.08-23.64c0.1-3.62,0.14-7.24,0.16-10.86c0.03-4.3,0.02-8.6,0.02-12.9V112.61 C360,108.31,360,104.01,359.98,99.71z M263.54,234.26c0,4.56-0.04,8.7-1,13.26c-0.93,4.43-2.63,8.6-5.24,12.35 c-2.61,3.74-5.95,6.81-9.85,9.11c-3.95,2.33-8.08,3.66-12.5,4.55c-8.3,1.67-13.97,2.05-19.31,0.98c-5.14-1.03-9.5-3.4-12.99-6.6 c-5.17-4.74-8.39-11.14-9.09-17.82c-0.82-7.84,1.79-16.21,7.67-22.38c2.97-3.11,6.7-5.57,11.68-7.51 c5.21-2.02,10.96-3.23,19.8-5.01c2.33-0.47,4.66-0.94,6.99-1.41c3.06-0.62,5.69-1.4,7.81-3.99c2.13-2.61,2.17-5.78,2.17-8.92 l0-79.29c0-6.07-2.72-7.72-8.52-6.61c-4.14,0.81-93.09,18.75-93.09,18.75c-5.02,1.21-6.78,2.85-6.78,9.08l0,116.15 c0,4.56-0.24,8.7-1.19,13.26c-0.93,4.43-2.63,8.6-5.24,12.35c-2.61,3.74-5.95,6.81-9.85,9.11c-3.95,2.33-8.08,3.72-12.5,4.61 c-8.3,1.67-13.97,2.05-19.31,0.98c-5.14-1.03-9.5-3.47-12.99-6.66c-5.17-4.74-8.17-11.14-8.88-17.82 c-0.82-7.84,1.57-16.21,7.46-22.38c2.97-3.11,6.7-5.57,11.68-7.51c5.21-2.02,10.96-3.23,19.8-5.01c2.33-0.47,4.66-0.94,6.99-1.41 c3.06-0.62,5.69-1.4,7.81-3.99c2.12-2.59,2.37-5.64,2.37-8.76c0-24.6,0-133.92,0-133.92c0-1.8,0.15-3.02,0.24-3.62 c0.43-2.82,1.56-5.24,3.6-6.95c1.7-1.42,3.88-2.41,6.67-3l0.04-0.01l107-21.59c0.93-0.19,8.66-1.56,9.53-1.64 c5.78-0.5,9.03,3.3,9.03,9.46V234.26z"/></svg>';
 
+  // Apple Music-links van alle fragmenten op de site (data/apple.json, gemaakt door applelinks-site.ts):
+  // sleutel = bestandsnaam van het fragment, waarde [trackId, albumId] of [trackId, albumId, nieuw fragmentadres] als Apple het verplaatste.
+  let APPLE = null;
+  const appleKlaar = fetch(new URL('../data/apple.json', SCRIPT_SRC).href).then(r => r.ok ? r.json() : {}).catch(() => ({})).then(m => { APPLE = m; return m; });
+  const appleVan = t => t && t.audio && APPLE ? APPLE[t.audio.split('/').pop().replace(/\.[a-z0-9]+$/i, '')] : null;
+  const storeOf = t => { if (!t || t.book) return ''; if (t.store) return t.store; const v = appleVan(t); return v ? `https://music.apple.com/nl/album/${v[1]}?i=${v[0]}` : ''; };
+  function toonStore(track) {
+    const st = $('.sp-store'), url = storeOf(track);
+    if (url) { st.href = url; st.hidden = false; if (!st.firstChild) st.innerHTML = APPLE_ICON.replace('<path', '<rect x="60" y="40" width="240" height="280" fill="#fff"/><path'); st.setAttribute('aria-label', 'Luister naar ' + (track.title || '') + ' op Apple Music'); }
+    else { st.removeAttribute('href'); st.hidden = true; }
+  }
+
   const SOR = window.SOR = {
     slug, norm, fmt, get root() { return root(); }, media: audio,
+    storeOf, appleKlaar,
+    // hoezen van Apple klein ophalen (200×200 in plaats van 600×600): in de panelen staan ze op ±50 pixels
+    thumb: (u, n = 200) => (u || '').replace(/\/\d+x\d+bb\.(jpe?g|png|webp)$/, `/${n}x${n}bb.jpg`),
     play(track, startAt) {
       if (!track || !track.audio) return;
       rickKlik(track);
@@ -191,7 +207,7 @@
       if (tail) { tail.pause(); tail = null; }
       current = track;
       audio.volume = track.book ? 1 : 0;
-      audio.src = track.audio;
+      { const v = appleVan(track); audio.src = (v && v[2]) || track.audio; } // door Apple verplaatst fragment: nieuw adres
       bar.classList.toggle('book', !!track.book);
       audio.playbackRate = track.book ? (store.get('tempo') || 1) : 1;
       $('.sp-rate').textContent = String(audio.playbackRate).replace('.', ',') + '×';
@@ -199,8 +215,8 @@
       $('.sp-title').textContent = [track.title, track.year].filter(Boolean).join(' · ');
       $('.sp-time').textContent = '';
       $('.sp-bar i').style.width = '0%';
-      { const st = $('.sp-store'); if (track.store) { st.href = track.store; st.hidden = false; if (!st.firstChild) st.innerHTML = APPLE_ICON.replace('<path', '<rect x="60" y="40" width="240" height="280" fill="#fff"/><path'); st.setAttribute('aria-label', 'Luister naar ' + (track.title || '') + ' op Apple Music'); } else { st.removeAttribute('href'); st.hidden = true; } }
-      { const im = $('.sp-cover'); if (track.cover) { im.src = track.cover; im.hidden = false; } else { im.removeAttribute('src'); im.hidden = true; } }
+      toonStore(track); if (!APPLE) appleKlaar.then(() => { if (current === track) toonStore(track); });
+      { const im = $('.sp-cover'); if (track.cover) { im.src = SOR.thumb(track.cover); im.hidden = false; } else { im.removeAttribute('src'); im.hidden = true; } }
       bar.hidden = false;
       if (startAt > 0) { const go = () => { try { audio.currentTime = startAt; } catch (e) {} audio.removeEventListener('loadedmetadata', go); }; audio.addEventListener('loadedmetadata', go); }
       mediaSession(track);

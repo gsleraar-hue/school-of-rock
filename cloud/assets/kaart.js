@@ -131,6 +131,17 @@
     if (!suppress) place(false);
   });
   svg.call(zoom).on('dblclick.zoom', null);
+  // trackpad: twee vingers verschuiven de kaart, knijpen (of Ctrl + wiel) zoomt; een muiswiel blijft zoomen.
+  // Boven de namenbalk links is het altijd scrollen.
+  const laneBarW = () => gLaneNames.attr('display') === 'none' ? 0 : +(gLaneNames.select('rect.bg').attr('width') || 0);
+  const isPanWheel = ev => !ev.ctrlKey && (ev.offsetX < laneBarW() || ev.shiftKey || (ev.deltaMode === 0 && (ev.deltaX !== 0 || !Number.isInteger(ev.deltaY) || Math.abs(ev.deltaY) < 50)));
+  zoom.filter(ev => ev.type === 'wheel' ? !isPanWheel(ev) : (!ev.ctrlKey && !ev.button));
+  svg.node().addEventListener('wheel', ev => {
+    if (!isPanWheel(ev)) return;
+    ev.preventDefault();
+    const k = d3.zoomTransform(svg.node()).k, dx = ev.shiftKey && !ev.deltaX ? ev.deltaY : ev.deltaX, dy = ev.shiftKey && !ev.deltaX ? 0 : ev.deltaY;
+    svg.call(zoom.translateBy, -dx / k, -dy / k);
+  }, { passive: false });
   svg.on('click', ev => { if (ev.target === svg.node()) { clearSelection(); } });
 
   let W = 0, H = 0;
@@ -252,7 +263,7 @@
     const gen = (d.enabled || []).filter(id => byId.has(id)), shp = (d.shaped || []).filter(id => byId.has(id));
     panel.innerHTML = `<div class="kp-head" style="--c:${lane?.color}"><button class="kp-close" type="button" aria-label="Sluit">×</button><div class="fam">Techniek · ${lane?.name || ''}</div><h2>${d.name}</h2><div class="meta">${d.year}${d.who ? ' · ' + d.who : ''}${d.place?.name ? ' · ' + d.place.name : ''}</div></div>
       <div class="kp-body"><p>${d.text}</p>${d.listen ? `<p class="kp-listen">${d.listen}</p>` : ''}
-      ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((x, i) => `<div class="kp-track${x.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${x.artist}">${SOR.playIcon}</button>${x.cover ? `<img src="${x.cover}" alt="" loading="lazy">` : ''}<div><b>${x.artist}</b><span>${x.title}${x.year ? ' · ' + x.year : ''}</span>${x.store ? `<a class="kp-store" href="${x.store}" target="_blank" rel="noopener" aria-label="Luister op Apple Music" title="Luister op Apple Music">${SOR.storeBadge}</a>` : ''}</div></div>`).join('')}</div></div>` : ''}
+      ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((x, i) => `<div class="kp-track${x.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${x.artist}">${SOR.playIcon}</button>${x.cover ? `<img src="${SOR.thumb(x.cover)}" alt="" loading="lazy">` : ''}<div><b>${x.artist}</b><span>${x.title}${x.year ? ' · ' + x.year : ''}</span>${SOR.storeOf(x) ? `<a class="kp-store" href="${SOR.storeOf(x)}" target="_blank" rel="noopener" aria-label="Luister op Apple Music" title="Luister op Apple Music">${SOR.storeBadge}</a>` : ''}</div></div>`).join('')}</div></div>` : ''}
       ${gen.length ? `<div><p class="kp-h">Maakte mogelijk</p><div class="kp-links">${gen.map(chip).join('')}</div></div>` : ''}
       ${shp.length ? `<div><p class="kp-h">Speelde ook een rol bij</p><div class="kp-links">${shp.map(chip).join('')}</div></div>` : ''}
       ${after.length ? `<div><p class="kp-h">Bouwt voort op</p><div class="kp-links">${after.map(tchip).join('')}</div></div>` : ''}
@@ -304,6 +315,9 @@
       ln.append('rect').attr('class', 'bar').attr('x', 0).attr('width', 5).attr('fill', d => d.f.color);
       ln.append('text').attr('class', 'lane-name').attr('x', 14).attr('y', d => d.y + 22).attr('fill', d => d.f.color).text(d => d.f.name);
       stickLaneNames(d3.zoomTransform(svg.node()));
+      // breedte van het naamvlak afstemmen op de langste naam (ook als het lettertype later binnenkomt)
+      const fitNames = () => { const w = d3.max(ln.selectAll('text').nodes(), n => n.getComputedTextLength()) || 0; ln.selectAll('rect.bg').attr('width', Math.max(158, Math.ceil(w) + 30)); };
+      fitNames(); if (document.fonts) document.fonts.ready.then(fitNames);
     } else {
       const path = d3.geoPath(projection);
       gBack.append('path').attr('class', 'graticule').attr('d', path(d3.geoGraticule10()));
@@ -459,7 +473,7 @@
         ${step}
         <p>${d.text}</p>
         ${d.listen ? `<p class="kp-listen">${d.listen}</p>` : ''}
-        ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((t, i) => `<div class="kp-track${t.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${t.artist}">${SOR.playIcon}</button>${t.cover ? `<img src="${t.cover}" alt="" loading="lazy" onerror="this.remove();this.parentNode&&0">` : ''}<div><b>${t.artist}</b><span>${t.title}${t.year ? ' · ' + t.year : ''}</span>${t.store ? `<a class="kp-store" href="${t.store}" target="_blank" rel="noopener" aria-label="Luister op Apple Music" title="Luister op Apple Music">${SOR.storeBadge}</a>` : ''}</div></div>`).join('')}</div></div>` : ''}
+        ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((t, i) => `<div class="kp-track${t.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${t.artist}">${SOR.playIcon}</button>${t.cover ? `<img src="${SOR.thumb(t.cover)}" alt="" loading="lazy" onerror="this.remove();this.parentNode&&0">` : ''}<div><b>${t.artist}</b><span>${t.title}${t.year ? ' · ' + t.year : ''}</span>${SOR.storeOf(t) ? `<a class="kp-store" href="${SOR.storeOf(t)}" target="_blank" rel="noopener" aria-label="Luister op Apple Music" title="Luister op Apple Music">${SOR.storeBadge}</a>` : ''}</div></div>`).join('')}</div></div>` : ''}
         ${techFor(d.id).length ? `<div><p class="kp-h">Techniek die dit mogelijk maakte</p><div class="kp-links">${techFor(d.id).map(o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`).join('')}</div></div>` : ''}
         ${techShaped(d.id).length ? `<div><p class="kp-h">Techniek die er ook een rol in speelde</p><div class="kp-links">${techShaped(d.id).map(o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`).join('')}</div></div>` : ''}
         ${(d.parents || []).length ? `<div><p class="kp-h">Komt voort uit</p><div class="kp-links">${d.parents.map(chip).join('')}</div></div>` : ''}

@@ -131,13 +131,24 @@
     if (!suppress) place(false);
   });
   svg.call(zoom).on('dblclick.zoom', null);
+  // trackpad: twee vingers verschuiven de kaart, knijpen (of Ctrl + wiel) zoomt; een muiswiel blijft zoomen.
+  // Boven de namenbalk links is het altijd scrollen.
+  const laneBarW = () => gLaneNames.attr('display') === 'none' ? 0 : +(gLaneNames.select('rect.bg').attr('width') || 0);
+  const isPanWheel = ev => !ev.ctrlKey && (ev.offsetX < laneBarW() || ev.shiftKey || (ev.deltaMode === 0 && (ev.deltaX !== 0 || !Number.isInteger(ev.deltaY) || Math.abs(ev.deltaY) < 50)));
+  zoom.filter(ev => ev.type === 'wheel' ? !isPanWheel(ev) : (!ev.ctrlKey && !ev.button));
+  svg.node().addEventListener('wheel', ev => {
+    if (!isPanWheel(ev)) return;
+    ev.preventDefault();
+    const k = d3.zoomTransform(svg.node()).k, dx = ev.shiftKey && !ev.deltaX ? ev.deltaY : ev.deltaX, dy = ev.shiftKey && !ev.deltaX ? 0 : ev.deltaY;
+    svg.call(zoom.translateBy, -dx / k, -dy / k);
+  }, { passive: false });
   svg.on('click', ev => { if (ev.target === svg.node()) { clearSelection(); } });
 
   let W = 0, H = 0;
   // ---------- Stamboom: tijd horizontaal, families als banen ----------
   const PX_PER_YEAR = 15, ROW = 22, LANE_PAD = 14, LEFT = 290;
   // De hitfabriek · stamboom: 1950-2026 breed uitgetrokken, daarvoor en daarna samengedrukt
-  const SEG = [[1699,75],[1701,5],[1891,75],[1893,5],[1899,75],[1901,5],[1903,75],[1905,5],[1909,75],[1915,5],[1919,75],[1921,5],[1939,75],[1941,110],[1943,75],[1945,5],[1951,75],[1955,5],[1957,145],[1959,75],[1961,110],[1963,180],[1965,75],[1969,5],[1971,75],[1977,5],[1981,75],[1983,5],[1985,145],[1987,110],[1991,75],[1993,5],[1997,110],[1999,75],[2001,5],[2005,75],[2007,110],[2011,75],[2019,110],[2021,5],[2023,110],[2025,5],[2027,5]];
+  const SEG = [[1891,75],[1893,5],[1899,75],[1901,5],[1903,75],[1905,5],[1909,75],[1915,5],[1919,75],[1921,5],[1939,75],[1941,110],[1943,75],[1945,5],[1951,75],[1955,5],[1957,145],[1959,75],[1961,110],[1963,180],[1965,75],[1969,5],[1971,75],[1977,5],[1981,75],[1983,5],[1985,145],[1987,110],[1991,75],[1993,5],[1997,110],[1999,75],[2001,5],[2005,75],[2007,110],[2009,75],[2019,110],[2021,5],[2023,110],[2025,5],[2027,5]];
   const SEGX = []; { let x = 0; SEG.forEach(([y], i) => { SEGX.push(x); if (i < SEG.length - 1) x += (SEG[i + 1][0] - y) * SEG[i][1]; }); }
   const tx = y => { y = Math.max(SEG[0][0], y); let i = SEG.length - 2; while (i > 0 && y < SEG[i][0]) i--; return LEFT + SEGX[i] + (y - SEG[i][0]) * SEG[i][1]; };
   const xToYear = x => { x -= LEFT; let i = SEG.length - 2; while (i > 0 && x < SEGX[i]) i--; return SEG[i][0] + (x - SEGX[i]) / SEG[i][1]; };
@@ -252,7 +263,7 @@
     const gen = (d.enabled || []).filter(id => byId.has(id)), shp = (d.shaped || []).filter(id => byId.has(id));
     panel.innerHTML = `<div class="kp-head" style="--c:${lane?.color}"><button class="kp-close" type="button" aria-label="Sluit">×</button><div class="fam">Techniek · ${lane?.name || ''}</div><h2>${d.name}</h2><div class="meta">${d.year}${d.who ? ' · ' + d.who : ''}${d.place?.name ? ' · ' + d.place.name : ''}</div></div>
       <div class="kp-body"><p>${d.text}</p>${d.listen ? `<p class="kp-listen">${d.listen}</p>` : ''}
-      ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((x, i) => `<div class="kp-track${x.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${x.artist}">${SOR.playIcon}</button>${x.cover ? `<img src="${x.cover}" alt="" loading="lazy">` : ''}<div><b>${x.artist}</b><span>${x.title}${x.year ? ' · ' + x.year : ''}</span>${x.store ? `<a class="kp-store" href="${x.store}" target="_blank" rel="noopener" aria-label="Luister op Apple Music" title="Luister op Apple Music">${SOR.storeBadge}</a>` : ''}</div></div>`).join('')}</div></div>` : ''}
+      ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((x, i) => `<div class="kp-track${x.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${x.artist}">${SOR.playIcon}</button>${x.cover ? `<img src="${SOR.thumb(x.cover)}" alt="" loading="lazy">` : ''}<div><b>${x.artist}</b><span>${x.title}${x.year ? ' · ' + x.year : ''}</span>${SOR.storeOf(x) ? `<a class="kp-store" href="${SOR.storeOf(x)}" target="_blank" rel="noopener" aria-label="Luister op Apple Music" title="Luister op Apple Music">${SOR.storeBadge}</a>` : ''}</div></div>`).join('')}</div></div>` : ''}
       ${gen.length ? `<div><p class="kp-h">Maakte mogelijk</p><div class="kp-links">${gen.map(chip).join('')}</div></div>` : ''}
       ${shp.length ? `<div><p class="kp-h">Speelde ook een rol bij</p><div class="kp-links">${shp.map(chip).join('')}</div></div>` : ''}
       ${after.length ? `<div><p class="kp-h">Bouwt voort op</p><div class="kp-links">${after.map(tchip).join('')}</div></div>` : ''}
@@ -294,7 +305,7 @@
     if (state.mode === 'tree' || state.mode === 'tech') {
       const LL = state.mode === 'tech' ? [...techLanes, ...lanes] : lanes;
       gBack.selectAll('rect').data(LL).join('rect').attr('class', d => 'lane-bg' + (d.alt ? ' alt' : '') + (d.tech ? ' tech' : '')).attr('x', -4000).attr('width', treeW + 8000).attr('y', d => d.y).attr('height', d => d.h);
-      const decades = [1700,1800,1880,1890,1900,1910,1920,1930,1940,1950,1952,1954,1956,1958,1960,1962,1964,1966,1968,1970,1972,1974,1976,1978,1980,1982,1984,1986,1988,1990,1992,1994,1996,1998,2000,2002,2004,2006,2008,2010,2012,2014,2016,2018,2020,2022,2024];
+      const decades = [1880,1890,1900,1910,1920,1930,1940,1950,1952,1954,1956,1958,1960,1962,1964,1966,1968,1970,1972,1974,1976,1978,1980,1982,1984,1986,1988,1990,1992,1994,1996,1998,2000,2002,2004,2006,2008,2010,2012,2014,2016,2018,2020,2022,2024];
       const dg = gGrid.selectAll('g').data(decades).join('g').attr('class', 'decade');
       dg.append('line');
       dg.append('text').attr('y', 16).text(d => d);
@@ -304,6 +315,9 @@
       ln.append('rect').attr('class', 'bar').attr('x', 0).attr('width', 5).attr('fill', d => d.f.color);
       ln.append('text').attr('class', 'lane-name').attr('x', 14).attr('y', d => d.y + 22).attr('fill', d => d.f.color).text(d => d.f.name);
       stickLaneNames(d3.zoomTransform(svg.node()));
+      // breedte van het naamvlak afstemmen op de langste naam (ook als het lettertype later binnenkomt)
+      const fitNames = () => { const w = d3.max(ln.selectAll('text').nodes(), n => n.getComputedTextLength()) || 0; ln.selectAll('rect.bg').attr('width', Math.max(158, Math.ceil(w) + 30)); };
+      fitNames(); if (document.fonts) document.fonts.ready.then(fitNames);
     } else {
       const path = d3.geoPath(projection);
       gBack.append('path').attr('class', 'graticule').attr('d', path(d3.geoGraticule10()));
@@ -396,7 +410,7 @@
     } else if (state.mode === 'tree') {
       // de tijdlijn begint rechts van de kolom met familienamen
       const kk = Math.max(Math.min(1, (H - 20) / (treeH + 10)), Math.min(1, (W - 190) / (treeW - LEFT + 40)));
-      t = d3.zoomIdentity.translate(170 - tx(1698) * kk, 0).scale(kk);
+      t = d3.zoomIdentity.translate(170 - tx(1880) * kk, 0).scale(kk);
     } else {
       const xs = G.map(g => g.world.x), ys = G.map(g => g.world.y);
       const x0 = d3.min(xs) - 60, x1 = d3.max(xs) + 60, y0 = d3.min(ys) - 50, y1 = d3.max(ys) + 50;
@@ -459,7 +473,7 @@
         ${step}
         <p>${d.text}</p>
         ${d.listen ? `<p class="kp-listen">${d.listen}</p>` : ''}
-        ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((t, i) => `<div class="kp-track${t.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${t.artist}">${SOR.playIcon}</button>${t.cover ? `<img src="${t.cover}" alt="" loading="lazy" onerror="this.remove();this.parentNode&&0">` : ''}<div><b>${t.artist}</b><span>${t.title}${t.year ? ' · ' + t.year : ''}</span>${t.store ? `<a class="kp-store" href="${t.store}" target="_blank" rel="noopener" aria-label="Luister op Apple Music" title="Luister op Apple Music">${SOR.storeBadge}</a>` : ''}</div></div>`).join('')}</div></div>` : ''}
+        ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((t, i) => `<div class="kp-track${t.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${t.artist}">${SOR.playIcon}</button>${t.cover ? `<img src="${SOR.thumb(t.cover)}" alt="" loading="lazy" onerror="this.remove();this.parentNode&&0">` : ''}<div><b>${t.artist}</b><span>${t.title}${t.year ? ' · ' + t.year : ''}</span>${SOR.storeOf(t) ? `<a class="kp-store" href="${SOR.storeOf(t)}" target="_blank" rel="noopener" aria-label="Luister op Apple Music" title="Luister op Apple Music">${SOR.storeBadge}</a>` : ''}</div></div>`).join('')}</div></div>` : ''}
         ${techFor(d.id).length ? `<div><p class="kp-h">Techniek die dit mogelijk maakte</p><div class="kp-links">${techFor(d.id).map(o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`).join('')}</div></div>` : ''}
         ${techShaped(d.id).length ? `<div><p class="kp-h">Techniek die er ook een rol in speelde</p><div class="kp-links">${techShaped(d.id).map(o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`).join('')}</div></div>` : ''}
         ${(d.parents || []).length ? `<div><p class="kp-h">Komt voort uit</p><div class="kp-links">${d.parents.map(chip).join('')}</div></div>` : ''}

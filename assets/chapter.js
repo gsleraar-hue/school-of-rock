@@ -146,7 +146,20 @@
       else if (rec) { cov.classList.add('no-img'); cov.append(b); rec.style.removeProperty('grid-template-columns'); rec.prepend(cov); }
       else { const tag = note.querySelector('.tag'); cov.append(b); (tag || note.firstChild).after(cov); }
       buttons.push([b, t]);
+      // Apple Music-icoon achter de titel (voorwaarde van Apple voor de fragmenten)
+      SOR.appleKlaar.then(() => {
+        const url = SOR.storeOf(t); if (!url) return;
+        const a = document.createElement('a'); a.className = 'note-store'; a.href = url; a.target = '_blank'; a.rel = 'noopener';
+        a.title = 'Luister op Apple Music'; a.setAttribute('aria-label', 'Luister naar ' + title + ' op Apple Music'); a.innerHTML = SOR.storeBadge;
+        const plek = rec && rec.querySelector(':scope > div:last-child');
+        if (plek) plek.append(' ', a); else note.append(' ', a);
+      });
     });
+    if (buttons.length && !document.getElementById('note-store-css')) {
+      const css = document.createElement('style'); css.id = 'note-store-css';
+      css.textContent = '.note-store{display:inline-block;margin-left:4px;vertical-align:-2px;color:#1C1B19;line-height:0}.note-store svg{width:13px;height:13px;fill:currentColor;display:block}.note-store:hover{opacity:.7}@media print{.note-store{display:none}}';
+      document.head.append(css);
+    }
     SOR.onChange(() => buttons.forEach(([b, t]) => { const on = SOR.isPlaying(t); b.classList.toggle('on', on); b.innerHTML = on ? SOR.pauseIcon : SOR.playIcon; }));
   });
 
