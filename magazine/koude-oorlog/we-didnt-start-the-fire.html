@@ -237,6 +237,12 @@
   .hz-balk button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
   .hz-balk .wat { min-width: 18ch; text-align: right; color: #fff; }
   .hz-balk a { color: #F2C14E; }
+  /* fragmenten over de foto: luisterkaarten onderaan, bijschrift en fotomaker dan bovenaan */
+  .hz-luister { position: absolute; left: clamp(14px, 2vw, 28px); right: clamp(14px, 2vw, 28px); bottom: clamp(14px, 2vw, 28px); z-index: 2; display: grid; gap: 10px; }
+  .hz-luister .mg-frag { margin: 0; background: #FFFFFFF2; backdrop-filter: blur(6px); box-shadow: 0 10px 30px #0006; }
+  .met-frag .hz-foto figcaption { top: 0; bottom: auto; padding: 22px 24px 60px; background: linear-gradient(#000c, transparent); }
+  .met-frag .hz-foto small { top: 8px; bottom: auto; }
+  .met-frag .hz-foto figcaption + small, .met-frag .hz-foto .im small { display: none; }
   /* tijdlijn: vier punten op een lijn */
   .hz-tl { background: var(--paper); display: flex; align-items: center; }
   .hz-tlw { width: 100%; padding: 0 clamp(40px, 6vw, 96px); }
@@ -259,6 +265,7 @@
     .hz-duo.om .hz-tx { order: 0; }
     .hz-beeld { height: 70vh; } .hz-film { height: 60vh; } .hz-citaat { min-height: 50vh; }
     .hz-tx { height: auto; }
+    .hz-luister { position: static; padding: 16px; background: #1C1B19; }
     .hz-solo .hz-tx { columns: 1; }
     .hz-pijl, .hz-balk .stip { display: none; }
     ol.hz-tlr { grid-template-columns: 1fr; }
