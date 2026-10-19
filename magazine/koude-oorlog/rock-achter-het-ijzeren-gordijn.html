@@ -266,7 +266,8 @@
   /* film op het hele scherm */
   .hz-film { background: #000; display: flex; flex-direction: column; }
   .hz-film figure.mg-film { width: 100%; height: 100%; margin: 0; transform: none; translate: none; opacity: 1; display: flex; flex-direction: column; }
-  .hz-film figure.mg-film .im { flex: 1; aspect-ratio: auto; height: auto; max-height: none; }
+  .hz-film figure.mg-film .im { flex: 1; width: 100%; aspect-ratio: auto; height: auto; max-height: none; }
+  .hz-film figure.mg-film.lus video { object-fit: contain; }
   .hz-film figure.mg-film figcaption { color: #CFCAC0; margin: 0; padding: 10px 24px 14px; max-width: none; }
   .hz-film figure.mg-film figcaption a { color: #fff; }
   .hz-eind { display: flex; flex-direction: column; justify-content: center; background: var(--paper); }
