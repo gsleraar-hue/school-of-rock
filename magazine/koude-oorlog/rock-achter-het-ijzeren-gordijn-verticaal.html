@@ -122,6 +122,44 @@
   .mg-extra iframe { width: 100%; border: 0; border-radius: 12px; }
   .mg-extra .les { position: relative; aspect-ratio: 16 / 10; background: #000; }
   .mg-extra .les iframe { position: absolute; inset: 0; height: 100%; border-radius: 0; }
+  /* horizontale tijdlijn: kaarten langs een lijn, schuiven met pijlen, decennia, slepen of het scrollwiel */
+  .mg-htl { max-width: none; padding: 40px 0 48px; background: var(--ink); color: #fff; }
+  .mg-htl-kop { max-width: 1180px; margin: 0 auto 18px; padding: 0 20px; display: flex; align-items: end; justify-content: space-between; gap: 16px; }
+  .mg-htl .mg-k { color: #F2C14E; margin: 0 0 6px; }
+  .mg-htl h2 { font: 700 clamp(34px, 4vw, 56px)/1 var(--disp); text-transform: uppercase; margin: 0; }
+  .mg-htl-pijl { display: flex; gap: 10px; }
+  .mg-htl-pijl button { width: 48px; height: 48px; border-radius: 50%; border: 2px solid #fff; background: transparent; color: #fff; font: 700 20px/1 var(--disp); cursor: pointer; }
+  .mg-htl-pijl button:hover { background: var(--mg); border-color: var(--mg); }
+  .mg-htl-pijl button[disabled] { opacity: .25; cursor: default; background: transparent; border-color: #fff; }
+  .mg-htl-baan { overflow-x: auto; overflow-y: hidden; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--mg) transparent; padding: 0 max(20px, calc((100vw - 1180px) / 2 + 20px)); cursor: grab; outline: none; }
+  .mg-htl-baan.sleep { cursor: grabbing; scroll-snap-type: none; user-select: none; }
+  .mg-htl-rij { list-style: none; margin: 0; padding: 26px 0 8px; display: flex; gap: 24px; position: relative; width: max-content; }
+  .mg-htl-rij::before { content: ""; position: absolute; left: 0; right: 0; top: 43px; height: 4px; background: var(--mg); }
+  .mg-htl-rij > li { width: 300px; flex: 0 0 300px; scroll-snap-align: start; position: relative; }
+  .mg-htl-rij .j { position: relative; display: inline-block; background: var(--mg); color: #fff; font: 700 17px/1 var(--mono); padding: 10px 12px 9px; box-shadow: 0 0 0 6px var(--ink); }
+  .mg-htl-rij .kaart { margin-top: 18px; background: #fff; color: var(--ink); padding: 18px 18px 20px; border-top: 5px solid var(--mg); }
+  .mg-htl-rij b { display: block; font: 700 22px/1.05 var(--disp); text-transform: uppercase; margin-bottom: 8px; }
+  .mg-htl-rij p { font: 400 15.5px/1.5 var(--serif); margin: 0 0 10px; }
+  .mg-htl-rij .mg-frag { grid-template-columns: 56px 1fr; gap: 10px; padding: 10px; margin: 12px 0 8px; box-shadow: none; border-top-width: 3px; background: #F4EFE6; }
+  .mg-htl-rij .mg-frag .mg-cover, .mg-htl-rij .mg-frag img { width: 56px; height: 56px; }
+  .mg-htl-rij .mg-frag b { font-size: 14px; margin: 0; }
+  .mg-htl-rij .mg-frag .mg-t { font-size: 13px; margin: 0; }
+  .mg-htl-rij .mg-frag .kp-store { right: 8px; bottom: 8px; }
+  .mg-htl-a { display: block; margin-top: 6px; font: 700 11px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mg); }
+  .mg-htl-rij li.eind .kaart { background: var(--mg); color: #fff; border-color: #fff; }
+  .mg-htl-rij li.eind .mg-htl-a { color: #fff; }
+  .mg-htl-dec { max-width: 1180px; margin: 18px auto 0; padding: 0 20px; display: flex; gap: 6px; }
+  .mg-htl-dec button { all: unset; cursor: pointer; flex: 1; text-align: center; font: 700 12px/1 var(--mono); color: #CFCAC0; padding: 10px 0 8px; border-top: 4px solid #ffffff30; }
+  .mg-htl-dec button.nu, .mg-htl-dec button:hover { color: #fff; border-color: var(--mg); }
+  .mg-htl-dec button:focus-visible { outline: 2px solid #fff; }
+  /* als hoofdstuk: de tijdlijn vult het scherm */
+  .mg-tlpagina .mg-htl.vol { min-height: calc(100dvh - var(--nav-h, 56px) - 42px); display: flex; flex-direction: column; justify-content: center; }
+  .mg-tlpagina .sitefoot { margin-top: 0; }
+  .mg-htl-kop, .mg-htl-dec { width: 100%; box-sizing: border-box; }
+  .mg-htl.vol .mg-htl-rij > li { width: 340px; flex-basis: 340px; }
+  .mg-htl.vol .mg-htl-rij p { font-size: 17px; }
+  .mg-htl.vol .mg-htl-rij b { font-size: 25px; }
+  @media (max-width: 640px) { .mg-htl-rij > li { width: 260px; flex-basis: 260px; } .mg-htl-dec button { font-size: 10px; } }
   /* les als tegel; klikken opent het venster zoals bij de mixtapes */
   .mg-lesknop { display: block; width: 100%; border: 0; padding: 0; cursor: pointer; overflow: hidden; }
   .mg-lesknop img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .7; transition: transform .5s, opacity .3s; }
@@ -201,7 +239,7 @@
   .mg-mast h1 { font: 700 clamp(64px, 13vw, 190px)/.85 var(--disp); text-transform: uppercase; margin: 0; letter-spacing: -.02em; }
   .mg-mast h1 em { font-style: normal; color: #F2C14E; }
   .mg-mast p { font: 400 clamp(18px, 2vw, 24px)/1.4 var(--serif); font-style: italic; margin: 16px auto 0; max-width: 40ch; }
-</style><script src="../../assets/player.js"></script><script src="../../assets/nav.js"></script></head><body class="magazine" style="--mg:#B3261E"><header class="sitenav"><a class="brand" href="../../index.html"><img src="../../assets/cassette.png" alt=""><span>School of Rock</span></a><nav aria-label="Hoofdmenu"><a href="../../index.html#mixtapes">Mixtapes</a><a href="../../kaart.html">Genrekaart</a><a href="../../magazine/index.html" aria-current="page">Magazine</a><a href="../../begrippen.html">Begrippen</a><a href="../../opdrachten.html">Opdrachten</a></nav></header><nav class="mg-in" aria-label="In dit nummer"><div class="w"><a class="nr" href="./index.html">#1 Koude Oorlog</a><a href="./jazz-als-geheim-wapen.html"><i>1</i>Jazz als geheim wapen</a><a href="./rock-achter-het-ijzeren-gordijn.html" aria-current="page"><i>2</i>Rock achter het IJzeren Gordijn</a><a href="./leven-met-de-bom.html"><i>3</i>Leven met de bom</a><a href="./nederpop-in-de-koude-oorlog.html"><i>4</i>Nederpop in de Koude Oorlog</a><a href="./we-didnt-start-the-fire.html"><i>5</i>We Didn't Start the Fire</a><a href="./index.html#luister">Luister en leer</a><a href="./bronnen.html">Bronnen</a></div></nav><header class="mg-hero"><div class="tx"><p class="mg-k">SoR Magazine #1 · Koude Oorlog · verhaal 2 van 5</p><h1>Rock achter het IJzeren Gordijn</h1><p class="lead">Langharige bands die de cel in gingen, een zanger die niet meer naar huis mocht en een concert van Bruce Springsteen in Oost-Berlijn: hoe rock in het Oostblok een daad van verzet werd.</p></div><div class="ft"><img src="../../magazine/img/tsoi-muur.jpg" alt="" style="object-position:50% 50%"><small>Foto: <a href="https://commons.wikimedia.org/wiki/File:Arbat_Tsoi_Wall_2010.jpg" target="_blank" rel="noopener">Hshuvaeva</a> · Public domain</small></div></header><main><article class="mg-body"><h2>Een band die niet mocht bestaan</h2>
+</style><script src="../../assets/player.js"></script><script src="../../assets/nav.js"></script></head><body class="magazine" style="--mg:#B3261E"><header class="sitenav"><a class="brand" href="../../index.html"><img src="../../assets/cassette.png" alt=""><span>School of Rock</span></a><nav aria-label="Hoofdmenu"><a href="../../index.html#mixtapes">Mixtapes</a><a href="../../kaart.html">Genrekaart</a><a href="../../magazine/index.html" aria-current="page">Magazine</a><a href="../../begrippen.html">Begrippen</a><a href="../../opdrachten.html">Opdrachten</a></nav></header><nav class="mg-in" aria-label="In dit nummer"><div class="w"><a class="nr" href="./index.html">#1 Koude Oorlog</a><a href="./jazz-als-geheim-wapen.html"><i>1</i>Jazz als geheim wapen</a><a href="./rock-achter-het-ijzeren-gordijn.html" aria-current="page"><i>2</i>Rock achter het IJzeren Gordijn</a><a href="./leven-met-de-bom.html"><i>3</i>Leven met de bom</a><a href="./nederpop-in-de-koude-oorlog.html"><i>4</i>Nederpop in de Koude Oorlog</a><a href="./we-didnt-start-the-fire.html"><i>5</i>We Didn't Start the Fire</a><a href="./tijdlijn.html"><i>6</i>Tijdlijn</a><a href="./index.html#luister">Luister en leer</a><a href="./bronnen.html">Bronnen</a></div></nav><header class="mg-hero"><div class="tx"><p class="mg-k">SoR Magazine #1 · Koude Oorlog · verhaal 2 van 5</p><h1>Rock achter het IJzeren Gordijn</h1><p class="lead">Langharige bands die de cel in gingen, een zanger die niet meer naar huis mocht en een concert van Bruce Springsteen in Oost-Berlijn: hoe rock in het Oostblok een daad van verzet werd.</p></div><div class="ft"><img src="../../magazine/img/tsoi-muur.jpg" alt="" style="object-position:50% 50%"><small>Foto: <a href="https://commons.wikimedia.org/wiki/File:Arbat_Tsoi_Wall_2010.jpg" target="_blank" rel="noopener">Hshuvaeva</a> · Public domain</small></div></header><main><article class="mg-body"><h2>Een band die niet mocht bestaan</h2>
 <p>In augustus 1968 rolden tanks van de Sovjet-Unie en haar bondgenoten Praag binnen. Het korte voorjaar van vrijheid in Tsjecho-Slowakije was voorbij. Minder dan een maand later richtte de zeventienjarige bassist Milan Hlavsa een band op. Hij noemde die naar een nummer van Frank Zappa: The Plastic People of the Universe. Hun grote voorbeeld was The Velvet Underground uit New York.</p>
 <p>In 1970 nam de regering de band de vergunning af. Wie geen vergunning had, mocht niet als muzikant optreden en had officieel geen beroep. The Plastic People speelden toch, op plekken buiten het zicht van de overheid, voor een publiek dat van mond tot mond hoorde waar ze speelden. Hun teksten kwamen van Egon Bondy, een dichter wiens werk ook verboden was.</p>
 <figure class="mg-img breed"><div class="im"><img src="../../magazine/img/plastic-people.jpg" alt="The Plastic People of the Universe, bijna vijftig jaar na hun oprichting nog altijd op het podium." loading="lazy"><small>Foto: <a href="https://commons.wikimedia.org/wiki/File:The_Plastic_People_of_the_Universe_(2016-2017).jpg" target="_blank" rel="noopener">Jiripichl</a> · CC BY-SA 4.0</small></div><figcaption>The Plastic People of the Universe, bijna vijftig jaar na hun oprichting nog altijd op het podium.</figcaption></figure>
