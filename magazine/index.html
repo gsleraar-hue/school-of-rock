@@ -113,6 +113,17 @@
   @media (max-width: 760px) { .mg-dark .mg-frags { grid-template-columns: 1fr; } }
   .mg-dark .mg-frag { color: var(--ink); margin: 12px 0; }
   .mg-spotify { display: block; border: 0; border-radius: 12px; max-width: 900px; }
+  /* playlist en les (zelfde blok als in #2) */
+  .mg-extra { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+  .mg-extra > div { background: #fff; color: var(--ink); padding: clamp(20px, 3vw, 32px); border-top: 6px solid var(--mg); }
+  .mg-extra h3 { font: 700 clamp(24px, 2.4vw, 32px)/1 var(--disp); text-transform: uppercase; margin: 8px 0 12px; }
+  .mg-extra p { font: 400 17px/1.5 var(--serif); margin: 0 0 14px; }
+  .mg-extra .mg-k { color: var(--mg); }
+  .mg-extra iframe { width: 100%; border: 0; border-radius: 12px; }
+  .mg-extra .les { position: relative; aspect-ratio: 16 / 10; background: #000; }
+  .mg-extra .les iframe { position: absolute; inset: 0; height: 100%; border-radius: 0; }
+  .mg-extra .later { font: 700 12px/1.4 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: #6B675E; border: 2px dashed #CFCAC0; padding: 28px 16px; text-align: center; }
+  @media (max-width: 760px) { .mg-extra { grid-template-columns: 1fr; } }
   /* beweging: openingsscherm zoomt langzaam in, tekst schuift op; beeld schuift in beeld bij het scrollen */
   @keyframes mg-zoom { from { transform: scale(1.14); } to { transform: scale(1); } }
   @keyframes mg-op { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
