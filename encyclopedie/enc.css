@@ -1,0 +1,109 @@
+/* Popencyclopedie: Wikipedia-opbouw in de huisstijl van School of Rock (tokens uit assets/site.css). */
+body { background: var(--paper); }
+.wk { max-width: 1180px; margin: 0 auto; padding: 0 16px 64px; color: var(--ink); font: 17px/1.65 var(--body); }
+.wk a { color: var(--red-deep); text-decoration: underline; text-decoration-color: rgba(214,58,49,.35); text-underline-offset: 3px; }
+.wk a:hover { color: var(--red); text-decoration-color: var(--red); background: rgba(242,213,0,.35); }
+.wkbar { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; padding: 20px 0 16px; }
+.wkbar .logo { font: 700 30px/1 var(--display); text-transform: uppercase; letter-spacing: .01em; color: var(--ink); text-decoration: none; background: none; }
+.wkbar .logo small { display: block; font: 11px/1.6 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--red); }
+.wkbar > a:not(.logo) { font: 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--ink); text-decoration: none; border: 2px solid var(--ink); padding: 8px 10px; border-radius: 99px; }
+.wkbar > a:not(.logo):hover { background: var(--yellow); }
+.zoek { position: relative; flex: 1; min-width: 220px; max-width: 520px; }
+.zoek input { width: 100%; font: 17px/1.2 var(--body); padding: 11px 14px; border: 2px solid var(--ink); border-radius: 3px; background: var(--white); }
+.zoek ul { position: absolute; left: 0; right: 0; top: 100%; z-index: 20; list-style: none; margin: 0; padding: 0; background: var(--white); border: 2px solid var(--ink); border-top: 0; max-height: 360px; overflow: auto; }
+.zoek li a { display: block; padding: 7px 14px; color: var(--ink); text-decoration: none; }
+.zoek li a:hover, .zoek li a.act { background: var(--yellow); }
+.zoek li small { font: 10px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--red); margin-left: 8px; }
+.blad { background: var(--white); border-top: 6px solid var(--ink); padding: 28px 32px 40px; }
+.blad h1 { font: 700 clamp(38px, 6vw, 64px)/1 var(--display); margin: 0; }
+.tag { font: 11px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--red); margin: 10px 0 22px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.blad h2 { font: 600 28px/1.15 var(--display); margin: 34px 0 12px; padding-bottom: 6px; border-bottom: 3px solid var(--ink); }
+.blad h3 { font: 700 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .08em; margin: 18px 0 8px; }
+.blad p { margin: 0 0 14px; }
+.info { float: right; clear: right; width: 300px; margin: 0 0 18px 28px; border: 2px solid var(--ink); background: var(--paper); font-size: 14px; line-height: 1.45; }
+.info .kop { background: var(--ink); color: var(--yellow); text-align: center; font: 600 20px/1.2 var(--display); padding: 10px 8px; }
+.info.genre .kop { background: var(--red); color: var(--white); }
+.info.werk .kop { background: var(--yellow); color: var(--ink); }
+.info.techniek .kop, .info.begrip .kop { background: var(--ink-soft); color: var(--white); }
+.info img { display: block; width: 100%; height: auto; border-bottom: 2px solid var(--ink); }
+.info .fcap { font: 10px/1.4 var(--mono); color: var(--ink-soft); padding: 5px 8px 7px; text-align: center; }
+.info table { width: 100%; border-collapse: collapse; }
+.info th { text-align: left; vertical-align: top; padding: 7px 8px 7px 10px; width: 38%; font: 700 10px/1.6 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); }
+.info td { padding: 6px 10px 6px 0; vertical-align: top; }
+.info tr + tr { border-top: 1px solid var(--line); }
+.toc { display: inline-block; background: var(--paper); border-left: 4px solid var(--yellow); padding: 10px 20px 12px 14px; margin: 6px 0 8px; font-size: 15px; }
+.toc b { display: block; font: 700 11px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--red); margin-bottom: 6px; }
+.toc ol { margin: 0; padding-left: 22px; }
+.stub { clear: both; display: flex; gap: 14px; align-items: center; border-left: 4px solid var(--yellow); background: var(--paper); padding: 10px 14px; font-size: 14px; margin: 26px 0 0; }
+.stub span { font: 600 24px/1 var(--hand); color: var(--red); }
+.tip { background: var(--ink); color: var(--white); padding: 14px 18px; margin: 10px 0 16px; border-radius: 3px; }
+.tip b { display: block; font: 700 11px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--yellow); margin-bottom: 8px; }
+.wk .tip a { color: var(--yellow); }
+.frags { list-style: none; padding: 0; margin: 0; }
+.frags li { display: grid; grid-template-columns: 40px 44px 1fr auto; gap: 12px; align-items: center; padding: 6px 0; border-top: 1px solid var(--line); }
+.frags button { width: 40px; height: 40px; border-radius: 50%; border: 0; background: var(--red); color: var(--white); cursor: pointer; display: grid; place-items: center; }
+.frags button svg { width: 18px; height: 18px; fill: currentColor; }
+.frags img { width: 44px; height: 44px; object-fit: cover; background: var(--line); border-radius: 2px; }
+.frags .w b { font: 600 17px/1.2 var(--display); }
+.frags .w span { color: var(--ink-soft); font-size: 14px; }
+.frags .ap { font: 11px/1 var(--mono); }
+.disco { columns: 2 240px; column-gap: 32px; margin: 0; padding-left: 0; list-style: none; }
+.disco li { break-inside: avoid; padding: 4px 0; border-top: 1px solid var(--line); }
+.disco .j { display: inline-block; width: 50px; font: 13px/1 var(--mono); color: var(--red); }
+.klein { font: 11px/1.5 var(--mono); color: var(--ink-soft); }
+.bron { font-size: 14px; padding-left: 26px; }
+.bron li { margin: 3px 0; }
+.ziezook { columns: 3 200px; padding-left: 20px; margin: 0; }
+.cats { clear: both; border-top: 3px solid var(--ink); padding: 10px 0 0; margin-top: 32px; font: 12px/1.8 var(--mono); }
+.wk .cats a { display: inline-block; text-decoration: none; border: 1px solid var(--ink); border-radius: 99px; padding: 0 10px; margin: 0 4px 4px 0; color: var(--ink); }
+.wk .cats a:hover { background: var(--yellow); }
+
+/* hoofdpagina */
+.welkom { padding: 4px 0 22px; margin-bottom: 22px; border-bottom: 3px solid var(--ink); }
+.welkom .kicker { margin: 0 0 6px; }
+.welkom h1 { font-size: clamp(42px, 7vw, 80px); }
+.welkom .lede { margin: 12px 0 0; max-width: 720px; }
+.hp { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; }
+.vak { margin-bottom: 22px; border: 2px solid var(--ink); }
+.vak > h2 { margin: 0; padding: 8px 12px; font: 700 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .08em; border: 0; }
+.vak.geel > h2 { background: var(--yellow); }
+.vak.groen > h2 { background: var(--red); color: var(--white); }
+.vak.blauw > h2 { background: var(--ink); color: var(--yellow); }
+.vak.paars > h2 { background: var(--paper); border-bottom: 2px solid var(--ink); }
+.vak .in { padding: 12px 14px; }
+.vak .in::after { content: ""; display: block; clear: both; }
+.vak img.dag { float: left; width: 130px; height: 160px; object-fit: cover; margin: 4px 14px 6px 0; border: 2px solid var(--ink); }
+.portalen { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+.wk .portalen a { display: block; background: var(--ink); color: var(--white); text-decoration: none; padding: 14px; font: 11px/1.3 var(--mono); text-transform: uppercase; letter-spacing: .06em; border-radius: 3px; }
+.wk .portalen a:hover { background: var(--red); }
+.portalen b { display: block; font: 700 34px/1 var(--display); color: var(--yellow); margin-bottom: 6px; }
+.wist { padding-left: 18px; margin: 0; }
+.wist li { margin-bottom: 8px; }
+
+/* alle lemma's A-Z */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 12px; }
+.chips button { font: 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; padding: 9px 12px; border: 2px solid var(--ink); background: transparent; border-radius: 99px; cursor: pointer; }
+.chips button[aria-pressed="true"] { background: var(--ink); color: var(--yellow); }
+.az { display: flex; flex-wrap: wrap; gap: 2px; margin: 6px 0 14px; position: sticky; top: var(--nav-h); background: var(--white); padding: 8px 0; z-index: 5; border-bottom: 1px solid var(--line); }
+.wk .az a { font: 700 14px/1 var(--mono); padding: 6px 7px; text-decoration: none; color: var(--ink); }
+.wk .az a:hover { background: var(--yellow); }
+.wk .az a.leeg { color: var(--line); pointer-events: none; }
+.groep h2 { color: var(--red); font-size: 40px; border: 0; scroll-margin-top: calc(var(--nav-h) + 60px); }
+.lijst { columns: 3 240px; column-gap: 28px; padding: 0; list-style: none; margin: 0; font-size: 15px; }
+.lijst li { break-inside: avoid; padding: 3px 0; border-top: 1px solid var(--line); }
+.wk .lijst a { text-decoration: none; color: var(--ink); font-weight: 600; }
+.wk .lijst a:hover { color: var(--red); }
+.lijst .t { font: 10px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--red); margin-left: 6px; }
+
+@media (max-width: 720px) {
+  .info { float: none; width: auto; margin: 0 0 18px; }
+  .blad { padding: 18px 16px; }
+  .hp { grid-template-columns: 1fr; }
+  .frags li { grid-template-columns: 40px 1fr; }
+  .frags img, .frags .ap { display: none; }
+}
+
+/* vermeldingen met de zin uit SoR */
+.vermeld { list-style: none; padding: 0; margin: 0; }
+.vermeld li { padding: 10px 0; border-top: 1px solid var(--line); }
+.vermeld q { display: block; quotes: none; margin-top: 6px; padding-left: 14px; border-left: 3px solid var(--yellow); color: var(--ink-soft); font-size: 15px; }
