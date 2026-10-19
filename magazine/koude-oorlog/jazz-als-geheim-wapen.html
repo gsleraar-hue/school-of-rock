@@ -198,7 +198,9 @@
   .hz-open .ft img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: mg-zoom 14s cubic-bezier(.2,.6,.2,1) both; }
   .hz-open .ft small { position: absolute; right: 10px; bottom: 8px; font: 11px/1.3 var(--mono); color: #fff; opacity: .8; }
   .hz-open .ft small a { color: inherit; }
-  .hz-open .tx::after { content: "Blader verder →"; font: 700 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; opacity: .85; margin-top: 18px; animation: hz-wenk 1.6s ease-in-out infinite alternate; }
+  .hz-vorig { order: 9; align-self: flex-start; color: #fff; opacity: .8; font: 700 12px/1.3 var(--mono); letter-spacing: .1em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid #fff8; padding-bottom: 2px; }
+  .hz-vorig:hover { opacity: 1; }
+  .hz-open .tx::after { order: 10; content: "Blader verder →"; font: 700 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; opacity: .85; margin-top: 18px; animation: hz-wenk 1.6s ease-in-out infinite alternate; }
   @keyframes hz-wenk { to { transform: translateX(10px); } }
   /* tekst */
   .hz-tx { padding: clamp(20px, 3vw, 48px) clamp(24px, 4vw, 72px); display: flex; flex-direction: column; justify-content: center; height: 100%; overflow-y: auto; }
@@ -318,7 +320,7 @@ function naar(i){i=Math.max(0,Math.min(p.length-1,i));hz.scrollTo({left:i*hz.cli
 var vorig=hz.dataset.vorig,verder=hz.dataset.verder;
 function knop(b,ja,boven,titel,pijl){b.classList.toggle('verhaal',!!ja);b.innerHTML=ja?(pijl==='←'?'<small>'+boven+'</small>← '+titel:'<small>'+boven+'</small>'+titel+' →'):pijl;b.setAttribute('aria-label',ja?boven+': '+titel:(pijl==='←'?'Vorig scherm':'Volgend scherm'));}
 function stand(){var i=index(),eerste=i===0,laatste=i===p.length-1;l.disabled=eerste&&!vorig;r.disabled=laatste&&!verder;
-knop(l,eerste&&vorig,'Vorig verhaal',hz.dataset.vorigTitel,'←');knop(r,laatste&&verder,hz.dataset.verder==='./index.html'?'Terug naar':'Volgend verhaal',hz.dataset.verderTitel,'→');knoppen.forEach(function(b,k){b.classList.toggle('ok',k<=i);});wat.textContent=(i+1)+' / '+p.length+(p[i].dataset.kop?' · '+p[i].dataset.kop:'');}
+knop(l,false,'','','←');if(eerste&&vorig){l.setAttribute('aria-label','Vorig verhaal: '+hz.dataset.vorigTitel);l.title='Vorig verhaal: '+hz.dataset.vorigTitel;}else l.removeAttribute('title');knop(r,laatste&&verder,hz.dataset.verder==='./index.html'?'Terug naar':'Volgend verhaal',hz.dataset.verderTitel,'→');knoppen.forEach(function(b,k){b.classList.toggle('ok',k<=i);});wat.textContent=(i+1)+' / '+p.length+(p[i].dataset.kop?' · '+p[i].dataset.kop:'');}
 hz.addEventListener('scroll',function(){requestAnimationFrame(stand);},{passive:true});stand();
 function terug(){if(index()===0&&vorig)location.href=vorig;else naar(index()-1);}function door(){if(index()===p.length-1&&verder)location.href=verder;else naar(index()+1);}
 l.addEventListener('click',terug);r.addEventListener('click',door);
