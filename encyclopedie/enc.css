@@ -117,3 +117,13 @@ body { background: var(--paper); }
 .tl .d { font: 12px/1 var(--mono); color: var(--ink-soft); }
 .tl .ap { font: 11px/1 var(--mono); }
 @media (max-width: 720px) { .tl li { grid-template-columns: 24px 34px 1fr auto; } .tl .ap { display: none; } }
+
+/* blokken naast de infobox: niet eronder doorlopen, maar ernaast stoppen (zoals op Wikipedia) */
+.blad h2, .tip, .frags, .tl, .disco, .vermeld, .ziezook, .bron, .stub { overflow: hidden; }
+.blad h3 { overflow: hidden; }
+.tag { margin-top: 14px; }
+.blad h1 { line-height: 1.05; }
+.blad .tag { margin: 16px 0 22px; }
+@media (max-width: 720px) {
+  .info img { max-height: 240px; object-fit: contain; background: var(--ink); }
+}
