@@ -218,6 +218,7 @@
   @keyframes hz-wenk { to { transform: translateX(10px); } }
   .tl-e { position: relative; flex: 0 0 auto; width: 320px; margin-left: 24px; }
   .tl-e .tp { position: absolute; left: 0; right: -28px; top: 50%; margin-top: -40px; font: 700 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mg); white-space: nowrap; }
+  .tl-e.boven .tp { margin-top: 26px; right: auto; }
   .tl-e .jr { position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 2; background: var(--mg); color: #fff; font: 700 20px/1 var(--mono); padding: 10px 12px 9px; box-shadow: 0 0 0 6px var(--paper); cursor: pointer; border: 0; }
   .tl-e .kr { position: absolute; left: 0; width: 320px; background: #fff; box-shadow: 0 8px 26px rgba(0,0,0,.1); border-top: 6px solid var(--mg); transition: transform .3s, box-shadow .3s; }
   .tl-e.boven .kr { bottom: calc(50% + 34px); }
@@ -261,7 +262,7 @@
     .tl-baan::before { left: 30px; right: auto; top: 0; bottom: 0; width: 4px; height: auto; margin: 0; }
     .tl-open { width: auto; }
     .tl-e { width: auto; margin: 0; padding: 28px 16px 0 64px; }
-    .tl-e .tp { position: static; margin: 0 0 8px; }
+    .tl-e .tp, .tl-e.boven .tp { position: static; margin: 0 0 8px; }
     .tl-e .jr { position: relative; top: 0; transform: none; margin-left: -50px; margin-bottom: 10px; }
     .tl-e .kr, .tl-e.boven .kr, .tl-e.onder .kr, .tl-e.mf .kr { position: static; width: auto; }
     .tl-e.mf { width: auto; } .tl-e.mf .kr { display: block; } .tl-e .kr img.f { height: 160px; }
