@@ -19,7 +19,8 @@ body.kaart .sitefoot { display: none; }
 .k-help { font: 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: #CFCAC0; background: none; border: 1px solid #3A3833; border-radius: 4px; padding: 9px 12px; cursor: pointer; }
 
 /* Families */
-.k-fams { display: flex; flex-wrap: nowrap; gap: 6px; padding: 8px 18px; background: #181715; border-bottom: 1px solid #2A2825; overflow-x: auto; scrollbar-width: thin; }
+.k-fams { display: flex; flex-wrap: nowrap; gap: 6px; padding: 8px 18px; background: #181715; border-bottom: 1px solid #2A2825; overflow-x: auto; scrollbar-width: none; }
+.k-fams::-webkit-scrollbar { display: none; }
 .k-fam { flex: none; --c: #999; display: inline-flex; align-items: center; gap: 7px; font: 12px/1 var(--body); color: #EDE9E1; background: rgba(24,23,21,.86); border: 1px solid #2E2C29; border-radius: 999px; padding: 6px 10px 6px 8px; cursor: pointer; backdrop-filter: blur(4px); }
 .k-fam i { width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
 .k-fam[aria-pressed="false"] { opacity: .4; }
