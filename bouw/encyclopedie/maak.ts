@@ -263,7 +263,7 @@ function hoofdpagina() {
 // Bewerkpagina: haalt de tekst uit de pagina zelf (hs-bron), bewaart naar GitHub (bouw/encyclopedie/bewerkt/) en start de bouw.
 function bewerkPagina() {
   const b = `<h1>Pagina bewerken</h1>
-<div id="bw-instel" hidden><p>Eenmalig: plak een GitHub-sleutel (fine-grained token voor gsleraar-hue/school-of-rock met Contents: lezen en schrijven, en Actions: lezen en schrijven). De sleutel blijft alleen in deze browser.</p><p><input id="bw-token" type="password" style="width:100%" placeholder="github_pat_..."><button id="bw-bewaar-token">Sleutel opslaan</button></p></div>
+<div id="bw-instel" hidden><p>Eenmalig: plak een GitHub-sleutel (fine-grained token voor gsleraar-hue/school-of-rock met Contents: lezen en schrijven). De sleutel blijft alleen in deze browser.</p><p><input id="bw-token" type="password" style="width:100%" placeholder="github_pat_..."><button id="bw-bewaar-token">Sleutel opslaan</button></p></div>
 <div id="bw-form" hidden>
 <p><a id="bw-terug" href="#">← terug naar de pagina</a> · <a href="#" id="bw-uit">sleutel verwijderen</a></p>
 <p><label>Naam<br><input id="bw-naam" style="width:100%"></label></p>
@@ -298,7 +298,7 @@ $("bw-opslaan").onclick=async function(){
     var p=await api(pad,{method:"PUT",body:JSON.stringify({message:"Bewerkt via HitStory: "+id,content:b64(JSON.stringify(body,null,1)),branch:"main",sha:sha})});
     if(!p.ok)throw new Error("opslaan mislukt ("+p.status+")");
     var w=await api("/actions/workflows/pages.yml/dispatches",{method:"POST",body:JSON.stringify({ref:"main",inputs:{publiceer:"true"}})});
-    if(!w.ok)throw new Error("bouw starten mislukt ("+w.status+")");
+    
     st("Opgeslagen. De bouw loopt; over ongeveer twee minuten staat het online.")
   }catch(e){st("Fout: "+e.message)}
 };

@@ -2,6 +2,9 @@
 # Invoer: bouw/encyclopedie (script, stijl, factcheck) + release-bestand "bron" (lemmas.json en hoezen.json, gemaakt door verzamel.ts op de pc).
 name: Site bouwen en publiceren
 on:
+  push:
+    branches: [main]
+    paths: ["bouw/encyclopedie/bewerkt/**"]
   workflow_dispatch:
     inputs:
       publiceer:
@@ -55,7 +58,7 @@ jobs:
           path: .
   publiceer:
     needs: bouw
-    if: inputs.publiceer
+    if: github.event_name == 'push' || inputs.publiceer
     runs-on: ubuntu-latest
     environment:
       name: github-pages
