@@ -1,0 +1,65 @@
+# Bouwt de HitStory-pagina's (sorock.nl/encyclopedie) op GitHub en publiceert de hele site.
+# Invoer: bouw/encyclopedie (script, stijl, factcheck) + release-bestand "bron" (lemmas.json en hoezen.json, gemaakt door verzamel.ts op de pc).
+name: Site bouwen en publiceren
+on:
+  workflow_dispatch:
+    inputs:
+      publiceer:
+        description: "Ook publiceren (anders alleen bouwen en tellen)"
+        type: boolean
+        default: true
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  bouw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Bron ophalen
+        run: |
+          mkdir -p bouw/encyclopedie/data
+          curl -fsSL -o bron.tgz "https://github.com/${{ github.repository }}/releases/download/bron/bron.tgz"
+          tar -xzf bron.tgz -C bouw/encyclopedie/data
+          ls -la bouw/encyclopedie/data
+      - name: Bewerkte teksten toepassen
+        run: deno run -A bouw/encyclopedie/pas-toe.ts
+      - name: Pagina's bouwen
+        run: deno run -A bouw/encyclopedie/maak.ts
+      - name: Samenvoegen met de site en sitemap bijwerken
+        run: |
+          rm -rf encyclopedie
+          mv bouw/site/encyclopedie encyclopedie
+          deno eval '
+            const x = Deno.readTextFileSync("sitemap.xml").split("\n").filter((r) => !r.includes("/encyclopedie/"));
+            const nu = new Date().toISOString().slice(0, 10);
+            const p: string[] = JSON.parse(Deno.readTextFileSync("bouw/encyclopedie/data/sitemap.json"));
+            const i = x.findIndex((r) => r.includes("</urlset>"));
+            x.splice(i, 0, ...p.map((q) => `<url><loc>https://sorock.nl/encyclopedie/${q}</loc><lastmod>${nu}</lastmod></url>`));
+            Deno.writeTextFileSync("sitemap.xml", x.join("\n"));
+          '
+          rm -rf bouw bron.tgz .git .github
+          echo "pagina's in encyclopedie: $(find encyclopedie -name '*.html' | wc -l)"
+          test "$(find encyclopedie -name '*.html' | wc -l)" -gt 15000
+          test -s encyclopedie/zoek.json
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+  publiceer:
+    needs: bouw
+    if: inputs.publiceer
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
