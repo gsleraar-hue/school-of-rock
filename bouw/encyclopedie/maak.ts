@@ -294,10 +294,13 @@ $("bw-opslaan").onclick=async function(){
   try{
     st("Bezig met opslaan…");var pad="/contents/bouw/encyclopedie/bewerkt/"+id+".json";
     var body={name:$("bw-naam").value.trim(),text:$("bw-tekst").value.split(String.fromCharCode(13)).join("").trim(),listen:$("bw-luister").value.trim()};
-    var g=await api(pad+"?ref=main"),sha=g.ok?(await g.json()).sha:undefined;
-    var p=await api(pad,{method:"PUT",body:JSON.stringify({message:"Bewerkt via HitStory: "+id,content:b64(JSON.stringify(body,null,1)),branch:"main",sha:sha})});
+    var p,pogingen=0;
+    do{
+      var g=await api(pad+"?ref=main&t="+Date.now(),{cache:"no-store"}),sha=g.ok?(await g.json()).sha:undefined;
+      var p=await api(pad,{method:"PUT",body:JSON.stringify({message:"Bewerkt via HitStory: "+id,content:b64(JSON.stringify(body,null,1)),branch:"main",sha:sha})});
+      pogingen++;if(p.status===409)await new Promise(function(r){setTimeout(r,1500)})
+    }while(p.status===409&&pogingen<4);
     if(!p.ok)throw new Error("opslaan mislukt ("+p.status+")");
-    var w=await api("/actions/workflows/pages.yml/dispatches",{method:"POST",body:JSON.stringify({ref:"main",inputs:{publiceer:"true"}})});
     
     st("Opgeslagen. De bouw loopt; over ongeveer twee minuten staat het online.")
   }catch(e){st("Fout: "+e.message)}
