@@ -136,3 +136,7 @@ body { background: var(--paper); }
 .talen ul { position: absolute; right: 0; top: calc(100% + 6px); min-width: 160px; margin: 0; padding: 6px 0; list-style: none; background: var(--white); border: 2px solid var(--ink); border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,.15); }
 .talen li a { display: block; padding: 8px 14px; text-decoration: none; font: 600 15px/1.2 var(--body); }
 .talen li a[aria-current] { background: var(--yellow); }
+
+/* Verwijzing naar een Nederlandstalige pagina vanuit de Engelse versie */
+.nltag { font: 600 9px/1 var(--mono); letter-spacing: .06em; color: var(--red); margin-left: 3px; vertical-align: super; text-transform: uppercase; }
+.sitenav .nltag { color: inherit; opacity: .6; }
