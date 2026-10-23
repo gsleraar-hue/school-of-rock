@@ -4,7 +4,7 @@ name: Site bouwen en publiceren
 on:
   push:
     branches: [main]
-    paths: ["bouw/encyclopedie/bewerkt/**"]
+    paths: ["bouw/encyclopedie/bewerkt/**", "bouw/encyclopedie/bewerkt-en/**"]
   workflow_dispatch:
     inputs:
       publiceer:

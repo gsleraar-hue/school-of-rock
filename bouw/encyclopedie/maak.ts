@@ -21,6 +21,15 @@ const baseVan = (taal: Taal) => taal === "en" ? "en/encyclopedie" : "encyclopedi
 const WL: any = exists(ED + "en/bron/woordenlijst-en.json") ? r(ED + "en/bron/woordenlijst-en.json") : { names: {}, subs: {}, places: {}, who: {}, defs: {}, labels: {} };
 const TR: Record<string, any> = {};
 if (exists(ED + "en/vertaald")) for (const f of Deno.readDirSync(ED + "en/vertaald")) if (f.name.endsWith(".json")) Object.assign(TR, r(ED + "en/vertaald/" + f.name));
+// Handmatige correcties op de Engelse tekst (bewerkt-en/<type>/<slug>.json, gemaakt door /en/encyclopedie/bewerk.html): overschrijven vertaling en naam
+let BEWERKT_EN = 0;
+if (exists(ED + "bewerkt-en")) for (const t of Deno.readDirSync(ED + "bewerkt-en")) if (t.isDirectory) for (const f of Deno.readDirSync(ED + "bewerkt-en/" + t.name)) {
+  if (!f.name.endsWith(".json")) continue;
+  const id = t.name + "/" + f.name.replace(/\.json$/, ""), o = r(ED + "bewerkt-en/" + t.name + "/" + f.name);
+  if (typeof o.name === "string" && o.name.trim()) WL.names[id] = o.name.trim();
+  if (typeof o.text === "string" || typeof o.listen === "string") TR[id] = { ...(TR[id] || {}), ...(typeof o.text === "string" ? { text: o.text } : {}), ...(typeof o.listen === "string" ? { listen: o.listen } : {}) };
+  BEWERKT_EN++;
+}
 const EN_STUBS = true; // beginnetjes (zonder tekst) krijgen ook een Engelse pagina (kan sinds de luisterboeken naar sor-audio zijn verhuisd)
 const heeftEn = (l: any) => !!TR[l.id] || l.type === "begrip" && !!WL.defs[l.id] || (EN_STUBS && !l.text);
 
@@ -383,7 +392,8 @@ function hoofdpagina() {
 
 // Bewerkpagina: haalt de tekst uit de pagina zelf (hs-bron), bewaart naar GitHub (bouw/encyclopedie/bewerkt/) en start de bouw.
 function bewerkPagina() {
-  const b = `<h1>Pagina bewerken</h1>
+  const MAP = LANG === "en" ? "bewerkt-en" : "bewerkt";
+  const b = `<h1>${LANG === "en" ? "Pagina bewerken (Engels)" : "Pagina bewerken"}</h1>
 <div id="bw-instel" hidden><p>Eenmalig: plak een GitHub-sleutel (fine-grained token voor gsleraar-hue/school-of-rock met Contents: lezen en schrijven). De sleutel blijft alleen in deze browser.</p><p><input id="bw-token" type="password" style="width:100%" placeholder="github_pat_..."><button id="bw-bewaar-token">Sleutel opslaan</button></p></div>
 <div id="bw-form" hidden>
 <p><a id="bw-terug" href="#">← terug naar de pagina</a> · <a href="#" id="bw-uit">sleutel verwijderen</a></p>
@@ -404,7 +414,7 @@ async function laad(){
   var t=location.pathname.replace("bewerk.html","")+id+".html";$("bw-terug").href=t;
   var h=await (await fetch(t,{cache:"no-store"})).text();var k='id="hs-bron">',i=h.indexOf(k),m=null;if(i>=0){var e=h.indexOf("<"+"/script>",i);m=h.slice(i+k.length,e)}
   var d=m?JSON.parse(m):{name:"",text:"",listen:""};
-  var r=await api("/contents/bouw/encyclopedie/bewerkt/"+id+".json?ref=main");
+  var r=await api("/contents/bouw/encyclopedie/${MAP}/"+id+".json?ref=main");
   if(r.ok){var j=JSON.parse(decodeURIComponent(escape(atob((await r.json()).content.split(String.fromCharCode(10)).join("")))));d=Object.assign(d,j)}
   $("bw-naam").value=d.name||"";$("bw-tekst").value=d.text||"";$("bw-luister").value=d.listen||"";
   document.title="Bewerk: "+(d.name||id)
@@ -413,7 +423,7 @@ $("bw-bewaar-token").onclick=function(){var v=$("bw-token").value.trim();if(v){l
 $("bw-uit").onclick=function(e){e.preventDefault();localStorage.removeItem("hs_token");toon()};
 $("bw-opslaan").onclick=async function(){
   try{
-    st("Bezig met opslaan…");var pad="/contents/bouw/encyclopedie/bewerkt/"+id+".json";
+    st("Bezig met opslaan…");var pad="/contents/bouw/encyclopedie/${MAP}/"+id+".json";
     var body={name:$("bw-naam").value.trim(),text:$("bw-tekst").value.split(String.fromCharCode(13)).join("").trim(),listen:$("bw-luister").value.trim()};
     var p,pogingen=0;
     do{
@@ -427,7 +437,7 @@ $("bw-opslaan").onclick=async function(){
   }catch(e){st("Fout: "+e.message)}
 };
 toon()})()</script>`;
-  return page("..", "Bewerken", "Bewerkpagina voor de eigenaar.", b, js, false);
+  return page(ROOT0, "Bewerken", "Bewerkpagina voor de eigenaar.", b, js, false);
 }
 
 function allePagina() {
@@ -461,9 +471,9 @@ function init(taal: Taal) {
   initLinks();
 }
 let ALLES: any[] = [];
-// Bewerkmodus (alleen voor de eigenaar, alleen Nederlands): elke pagina draagt zijn eigen tekst als JSON; een knop verschijnt alleen als er een GitHub-sleutel in de browser staat
-const bewerkKnop = (l: any) => '<script type="application/json" id="hs-bron">' + JSON.stringify({ id: l.id, name: l.name, text: l.text || "", listen: l.listen || "" }).replace(/</g, "<") + '</script>' +
-  '<script>try{if(localStorage.getItem("hs_token")){var m=document.querySelector("main.blad");if(m){var a=document.createElement("a");a.href=document.querySelector("meta[name=sor-root]").content+"/encyclopedie/bewerk.html?id="+encodeURIComponent("' + l.id + '");a.textContent="✎ Bewerk deze pagina";a.style.cssText="float:right;font:600 13px Inter,sans-serif;padding:4px 10px;border:1px solid currentColor;border-radius:6px;text-decoration:none";m.insertBefore(a,m.firstChild)}}}catch(e){}</script>';
+// Bewerkmodus (alleen voor de eigenaar, nl en en met eigen bewerkmap): elke pagina draagt zijn eigen tekst als JSON; een knop verschijnt alleen als er een GitHub-sleutel in de browser staat
+const bewerkKnop = (l: any) => '<script type="application/json" id="hs-bron">' + JSON.stringify({ id: l.id, name: l.name, text: l.text || "", listen: l.listen || "" }).replace(/</g, "\u003c") + '</script>' +
+  '<script>try{if(localStorage.getItem("hs_token")){var m=document.querySelector("main.blad");if(m){var a=document.createElement("a");a.href=document.querySelector("meta[name=sor-root]").content+"/' + baseVan(LANG) + '/bewerk.html?id="+encodeURIComponent("' + l.id + '");a.textContent="✎ Bewerk deze pagina";a.style.cssText="float:right;font:600 13px Inter,sans-serif;padding:4px 10px;border:1px solid currentColor;border-radius:6px;text-decoration:none";m.insertBefore(a,m.firstChild)}}}catch(e){}</script>';
 
 for (const taal of ["nl", "en"] as Taal[]) {
   init(taal);
@@ -478,10 +488,10 @@ for (const taal of ["nl", "en"] as Taal[]) {
   Deno.writeTextFileSync(OUT + "zoek.json", JSON.stringify(ALLES.map((l) => taal === "en" && !GEBOUWD.has(l.id) ? [l.id, l.name, label(l), 1] : [l.id, l.name, label(l)])));
   const HASH: Record<string, string> = {};
   const hash = async (t: string) => [...new Uint8Array(await crypto.subtle.digest("SHA-1", new TextEncoder().encode(t)))].slice(0, 6).map((x) => x.toString(16).padStart(2, "0")).join("");
-  for (const l of L) { const h = lemmaPage(l).replace("</body>", (taal === "nl" ? bewerkKnop(l) : "") + "</body>"); Deno.writeTextFileSync(OUT + l.id + ".html", h); HASH[l.id + ".html"] = await hash(h); }
+  for (const l of L) { const h = lemmaPage(l).replace("</body>", bewerkKnop(l) + "</body>"); Deno.writeTextFileSync(OUT + l.id + ".html", h); HASH[l.id + ".html"] = await hash(h); }
   for (const f of ["index.html", "alle.html"]) HASH[f] = await hash(Deno.readTextFileSync(OUT + f));
   Deno.writeTextFileSync(OUT + "hash.json", JSON.stringify(HASH));
-  if (taal === "nl") Deno.writeTextFileSync(OUT + "bewerk.html", bewerkPagina());
+  Deno.writeTextFileSync(OUT + "bewerk.html", bewerkPagina());
   // voor de sitemap: hoofdpagina, A-Z en alle lemma's die geen beginnetje zijn
   Deno.writeTextFileSync(ED + "data/sitemap" + (taal === "en" ? "-en" : "") + ".json", JSON.stringify(["index.html", "alle.html", ...L.filter((l) => !l.stub).map((l) => l.id + ".html")]));
   console.log(taal, "geschreven:", L.length, "lemma-pagina's + hoofdpagina + A-Z in", OUT);
