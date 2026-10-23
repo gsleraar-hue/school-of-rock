@@ -5,29 +5,89 @@
 // Gebruik: deno run -A encyclopedie/maak.ts   (vanuit SoR-werk)
 
 const W = new URL("..", import.meta.url).pathname.replace(/^\/([A-Z]:)/, "$1");
-const OUT = W + "site/encyclopedie/";
-const L: any[] = JSON.parse(Deno.readTextFileSync(W + "encyclopedie/data/lemmas.json"));
-const byId = new Map(L.map((l) => [l.id, l]));
+const ED = new URL(".", import.meta.url).pathname.replace(/^\/([A-Z]:)/, "$1"); // map van dit script (SoR-werk\encyclopedie of bouw/encyclopedie)
 const r = (p: string) => JSON.parse(Deno.readTextFileSync(p).replace(/^\uFEFF/, ""));
 const exists = (p: string) => { try { Deno.statSync(p); return true; } catch { return false; } };
+const LNL: any[] = JSON.parse(Deno.readTextFileSync(ED + "data/lemmas.json"));
+
+// ---------- Taal: nl (sorock.nl/encyclopedie) en en (sorock.nl/en/encyclopedie), net als Wikipedia: elk artikel heeft een taallink als de vertaling bestaat ----------
+type Taal = "nl" | "en";
+let LANG: Taal = "nl";
+const nt = (nl: string, en: string) => LANG === "en" ? en : nl;
+const SITE = "https://sorock.nl/";
+const OUTDIR = (taal: Taal) => taal === "en" ? W + "site/en/encyclopedie/" : W + "site/encyclopedie/";
+const baseVan = (taal: Taal) => taal === "en" ? "en/encyclopedie" : "encyclopedie";
+// Engelse invoer: woordenlijst (namen, categorieen, plaatsen, definities) en vertaalde artikelen (en/vertaald/*.json: id -> {text, listen, extra})
+const WL: any = exists(ED + "en/bron/woordenlijst-en.json") ? r(ED + "en/bron/woordenlijst-en.json") : { names: {}, subs: {}, places: {}, who: {}, defs: {}, labels: {} };
+const TR: Record<string, any> = {};
+if (exists(ED + "en/vertaald")) for (const f of Deno.readDirSync(ED + "en/vertaald")) if (f.name.endsWith(".json")) Object.assign(TR, r(ED + "en/vertaald/" + f.name));
+const EN_STUBS = false; // beginnetjes (zonder tekst) krijgen geen Engelse pagina: de site blijft onder de 1 GB van GitHub Pages; links gaan dan naar de Nederlandse pagina
+const heeftEn = (l: any) => !!TR[l.id] || l.type === "begrip" && !!WL.defs[l.id] || (EN_STUBS && !l.text);
+
+// De Nederlandse bron verwijst naar "de cursus" (= School of Rock zelf); in het Engels leest "the course" vreemd
+const schoon = (t: string) => t
+  .replace(/\b([Ii])n the course\b/g, "$1n School of Rock")
+  .replace(/\bthe course (mentions|calls|names|notes|says|treats|discusses|describes)\b/g, "School of Rock $1")
+  .replace(/\b([Ff])rom the course\b/g, "$1rom School of Rock");
+// Engelse lemma-set: namen, categorieen en plaatsen uit de woordenlijst, tekst uit de vertalingen
+function maakEn(): any[] {
+  return LNL.map((l) => {
+    const o: any = { ...l };
+    if (WL.names[l.id]) o.name = WL.names[l.id];
+    if (o.sub && (l.type === "genre" || l.type === "techniek")) o.sub = WL.subs[o.sub] || o.sub;
+    if (o.place) o.place = WL.places[o.place] || o.place;
+    if (WL.who[l.id]) o.who = WL.who[l.id];
+    if (l.defs && WL.defs[l.id]) o.defs = l.defs.map((d: any, i: number) => ({ ...d, text: WL.defs[l.id][i] ?? d.text }));
+    const tr = TR[l.id];
+    o.text = schoon(tr?.text || ""); o.listen = schoon(tr?.listen || "");
+    if (l.extra?.length) o.extra = tr?.extra?.length ? l.extra.map((e: any, i: number) => ({ ...e, titel: tr.extra[i]?.titel ?? e.titel, text: schoon(tr.extra[i]?.text ?? e.text) })) : [];
+    o.refs = (l.refs || []).map((x: any) => ({ ...x, label: WL.labels[x.label] || x.label, zin: undefined }));
+    o.stub = l.stub && !tr;
+    return o;
+  });
+}
+// "Genoemd in andere artikelen" in het Engels: de zin komt uit de Engelse tekst van het noemende artikel
+function vermeldEn(L: any[], byId: Map<string, any>, gebouwd: Set<string>) {
+  for (const l of L) {
+    if (!l.vermeld?.length) continue;
+    const naam = l.name.toLowerCase();
+    l.vermeld = l.vermeld.map((v: any) => {
+      const bron = byId.get(v.id);
+      if (!bron || !gebouwd.has(v.id)) return null;
+      const zin = String(bron.text || "").split(/\n\n+/).flatMap((p: string) => p.split(/(?<=[.!?])\s+/)).find((z: string) => z.toLowerCase().includes(naam));
+      return zin ? { id: v.id, zin } : null;
+    }).filter(Boolean);
+  }
+}
+
+// Alles wat per taal verschilt, wordt in init() gezet
+let L: any[] = [], byId = new Map<string, any>(), GEBOUWD = new Set<string>(), ROOT = "../..", ROOT0 = "..";
+let TYPE: Record<string, [string, string]> = {}, SOORT: Record<string, string> = {};
+let exact = new Map<string, string>(), klein = new Map<string, string>(), LINKRE = /(?!)/g, albumsVan = new Map<string, Map<string, string>>();
 
 const esc = (s: unknown) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-const TYPE: Record<string, [string, string]> = { // id -> [enkelvoud, meervoud]
-  artiest: ["Artiest", "Artiesten"], genre: ["Genre", "Genres"], werk: ["Album of nummer", "Albums en nummers"],
-  begrip: ["Begrip", "Begrippen"], techniek: ["Techniek", "Techniek"],
+const TYPE_TAAL: Record<Taal, Record<string, [string, string]>> = {
+  nl: { artiest: ["Artiest", "Artiesten"], genre: ["Genre", "Genres"], werk: ["Album of nummer", "Albums en nummers"], begrip: ["Begrip", "Begrippen"], techniek: ["Techniek", "Techniek"] },
+  en: { artiest: ["Artist", "Artists"], genre: ["Genre", "Genres"], werk: ["Album or song", "Albums and songs"], begrip: ["Term", "Terms"], techniek: ["Technology", "Technology"] },
 };
-const SOORT: Record<string, string> = { album: "Album", nummer: "Nummer", musical: "Musical", radioshow: "Radioshow" };
+const SOORT_TAAL: Record<Taal, Record<string, string>> = {
+  nl: { album: "Album", nummer: "Nummer", musical: "Musical", radioshow: "Radioshow" },
+  en: { album: "Album", nummer: "Song", musical: "Musical", radioshow: "Radio show" },
+};
+const ord = (n: number) => n + (n % 100 >= 11 && n % 100 <= 13 ? "th" : ["th", "st", "nd", "rd"][n % 10] || "th");
+const winkel = (u?: string) => LANG === "en" && u ? u.replace("music.apple.com/nl/", "music.apple.com/gb/") : u; // Engelse pagina's verwijzen naar de Britse Apple Music-winkel
 const sortKey = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/^(the|de|het|'t)\s+/i, "").replace(/^[^a-z0-9]+/i, "").toLowerCase();
 const letter = (s: string) => { const c = sortKey(s)[0] || "#"; return /[a-z]/.test(c) ? c.toUpperCase() : "#"; };
-const label = (l: any) => l.type === "werk" ? SOORT[l.soort] || "Werk" : TYPE[l.type][0];
+const label = (l: any) => l.type === "werk" ? SOORT[l.soort] || nt("Werk", "Work") : TYPE[l.type][0];
 const jaren = (l: any) => l.born ? `${l.born}${l.died ? "–" + l.died : ""}` : l.year ? String(Math.floor(l.year)) : "";
 const isGroep = (l: any) => l.soortArtiest === "groep" || (!l.born && /^(the|de|het)\s|\s(&|and|en)\s|band|orchestra|orkest|ensemble|brothers|sisters|boys|girls|quartet|trio|five|four/i.test(l.name));
 const sub = (l: any) => l.type === "werk" ? [l.sub, jaren(l)].filter(Boolean).join(" · ")
   : l.type === "artiest" ? [jaren(l), l.links.genre?.map((g: string) => byId.get(g)?.name).slice(0, 2).join(", ")].filter(Boolean).join(" · ")
   : l.type === "begrip" ? (l.defs?.[0]?.text || "") : [l.sub, jaren(l)].filter(Boolean).join(" · ");
-const href = (id: string, root = "../..") => `${root}/encyclopedie/${id}.html`;
+// Links gaan naar de pagina in de eigen taal; bestaat die niet (beginnetjes in het Engels), dan naar de Nederlandse pagina
+const href = (id: string, root = ROOT) => `${root}/${LANG === "en" && !GEBOUWD.has(id) ? baseVan("nl") : baseVan(LANG)}/${id}.html`;
 const a = (id: string, root?: string) => { const x = byId.get(id); return x ? `<a href="${href(id, root)}">${esc(x.name)}</a>` : ""; };
-const lijstNL = (xs: string[]) => xs.length < 2 ? xs.join("") : xs.slice(0, -1).join(", ") + " en " + xs[xs.length - 1];
+const lijstNL = (xs: string[]) => xs.length < 2 ? xs.join("") : xs.slice(0, -1).join(", ") + nt(" en ", " and ") + xs[xs.length - 1];
 
 // ---------- Bronnen uit de factcheck (per artiestnaam) ----------
 const BRONNEN = new Map<string, string[]>();
@@ -52,27 +112,29 @@ const bronNaam = (u: string) => {
 // ---------- Interne links in lopende tekst ----------
 // Artiesten en werken hoofdlettergevoelig; genres, begrippen en techniek ook in kleine letters (vanaf 5 tekens).
 const DUBBEL = new Set((exists(W + "encyclopedie/dubbelzinnig.json") ? r(W + "encyclopedie/dubbelzinnig.json") : []).map((x: string) => x.toLowerCase()));
-const exact = new Map<string, string>(), klein = new Map<string, string>();
 // Bandnamen die ook gewone woorden zijn, maar met hoofdletter midden in een zin vrijwel altijd de band: die linken we met een voorzichtige regel (zie linkBasis)
 const VEILIG_DUBBEL = new Set(["Queen", "Cream", "Chic", "Madness", "Muse", "Kiss"]);
-for (const l of L) {
-  const n = l.name.trim();
-  if (l.type === "artiest" && VEILIG_DUBBEL.has(n) && !exact.has(n)) { exact.set(n, l.id); continue; }
-  if (n.length < 4 || DUBBEL.has(n.toLowerCase()) || l.album) continue;
-  if (l.type === "artiest" || l.type === "werk") { if (!exact.has(n)) exact.set(n, l.id); }
-  else if (n.length >= 5 && !klein.has(n.toLowerCase())) klein.set(n.toLowerCase(), l.id);
-}
-const alle = [...new Set([...exact.keys(), ...klein.keys()])].sort((x, y) => y.length - x.length);
 const reEsc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-const LINKRE = new RegExp("(?<![\\p{L}\\d])(" + alle.map(reEsc).join("|") + ")(?![\\p{L}\\d])", "giu");
-// Albums alleen linken in de context van hun artiest: in het artikel over die artiest (of een ander album van hem),
-// of in een alinea waarin de artiest zelf genoemd wordt. Zo wordt "Help!" of "Thriller" niet overal een link.
-const albumsVan = new Map<string, Map<string, string>>(); // artiest-id -> titel -> album-id
-for (const l of L) {
-  const art = l.album && l.links?.artiest?.[0];
-  const n = l.name.trim();
-  if (!art || (n.length < 4 && !/s/.test(n)) || n === byId.get(art)?.name) continue;
-  (albumsVan.get(art) || albumsVan.set(art, new Map()).get(art)!).set(n, l.id);
+function initLinks() {
+  exact = new Map(); klein = new Map();
+  for (const l of L) {
+    const n = l.name.trim();
+    if (l.type === "artiest" && VEILIG_DUBBEL.has(n) && !exact.has(n)) { exact.set(n, l.id); continue; }
+    if (n.length < 4 || DUBBEL.has(n.toLowerCase()) || l.album) continue;
+    if (l.type === "artiest" || l.type === "werk") { if (!exact.has(n)) exact.set(n, l.id); }
+    else if (n.length >= 5 && !klein.has(n.toLowerCase())) klein.set(n.toLowerCase(), l.id);
+  }
+  const alle = [...new Set([...exact.keys(), ...klein.keys()])].sort((x, y) => y.length - x.length);
+  LINKRE = new RegExp("(?<![\\p{L}\\d])(" + alle.map(reEsc).join("|") + ")(?![\\p{L}\\d])", "giu");
+  // Albums alleen linken in de context van hun artiest: in het artikel over die artiest (of een ander album van hem),
+  // of in een alinea waarin de artiest zelf genoemd wordt. Zo wordt "Help!" of "Thriller" niet overal een link.
+  albumsVan = new Map(); // artiest-id -> titel -> album-id
+  for (const l of L) {
+    const art = l.album && l.links?.artiest?.[0];
+    const n = l.name.trim();
+    if (!art || (n.length < 4 && !/s/.test(n)) || n === byId.get(art)?.name) continue;
+    (albumsVan.get(art) || albumsVan.set(art, new Map()).get(art)!).set(n, l.id);
+  }
 }
 // Artiesten bij een pagina: de artiest zelf, of de artiest(en) van een werk. Hun eigen naam wordt in die context altijd gelinkt, ook als de naam dubbelzinnig is (zoals Queen).
 const artiestenVan = (id: string): string[] => id.startsWith("artiest/") ? [id] : (byId.get(id)?.links?.artiest || []).slice(0, 3);
@@ -118,11 +180,26 @@ const vet = (html: string, naam: string) => { const i = html.indexOf(esc(naam));
 
 const CSS = Deno.readTextFileSync(W + "encyclopedie/stijl.css"); // SoR-huisstijl, Wikipedia-opbouw
 
-const ZOEK_JS = (root: string) => `<script>(function(){const R=${JSON.stringify(root)};let data=null;const get=()=>data?Promise.resolve(data):fetch(R+'/encyclopedie/zoek.json').then(r=>r.json()).then(j=>data=j);const n=s=>s.normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase();document.querySelectorAll('.zoek').forEach(z=>{const i=z.querySelector('input'),u=z.querySelector('ul');let k=-1;const go=async()=>{const v=n(i.value.trim());if(!v){u.hidden=true;return}const d=await get();const a=[],b=[];for(const x of d){const m=n(x[1]);if(m.startsWith(v))a.push(x);else if(m.includes(v))b.push(x);if(a.length>=10)break}const res=a.concat(b).slice(0,10);u.innerHTML=res.map(x=>'<li><a href="'+R+'/encyclopedie/'+x[0]+'.html">'+x[1].replace(/</g,'&lt;')+'<small>'+x[2]+'</small></a></li>').join('');u.hidden=!res.length;k=-1};i.addEventListener('input',go);i.addEventListener('keydown',e=>{const l=[...u.querySelectorAll('a')];if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();k=Math.max(0,Math.min(l.length-1,k+(e.key==='ArrowDown'?1:-1)));l.forEach((x,j)=>x.classList.toggle('act',j===k))}if(e.key==='Enter'&&l.length){location.href=(l[k]||l[0]).href}});document.addEventListener('click',e=>{if(!z.contains(e.target))u.hidden=true})});document.querySelectorAll('.rnd').forEach(a=>a.onclick=async e=>{e.preventDefault();const d=await get();location.href=R+'/encyclopedie/'+d[Math.floor(Math.random()*d.length)][0]+'.html'})})();</script>`;
+const ZOEK_JS = (root: string) => `<script>(function(){const R=${JSON.stringify(root)},B=${JSON.stringify(baseVan(LANG))};let data=null;const get=()=>data?Promise.resolve(data):fetch(R+'/'+B+'/zoek.json').then(r=>r.json()).then(j=>data=j);const n=s=>s.normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase();document.querySelectorAll('.zoek').forEach(z=>{const i=z.querySelector('input'),u=z.querySelector('ul');let k=-1;const go=async()=>{const v=n(i.value.trim());if(!v){u.hidden=true;return}const d=await get();const a=[],b=[];for(const x of d){const m=n(x[1]);if(m.startsWith(v))a.push(x);else if(m.includes(v))b.push(x);if(a.length>=10)break}const res=a.concat(b).slice(0,10);u.innerHTML=res.map(x=>'<li><a href="'+R+'/'+(x[3]?'encyclopedie':B)+'/'+x[0]+'.html">'+x[1].replace(/</g,'&lt;')+'<small>'+x[2]+'</small></a></li>').join('');u.hidden=!res.length;k=-1};i.addEventListener('input',go);i.addEventListener('keydown',e=>{const l=[...u.querySelectorAll('a')];if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();k=Math.max(0,Math.min(l.length-1,k+(e.key==='ArrowDown'?1:-1)));l.forEach((x,j)=>x.classList.toggle('act',j===k))}if(e.key==='Enter'&&l.length){location.href=(l[k]||l[0]).href}});document.addEventListener('click',e=>{if(!z.contains(e.target))u.hidden=true})});document.querySelectorAll('.rnd').forEach(a=>a.onclick=async e=>{e.preventDefault();const d=(await get()).filter(x=>!x[3]);location.href=R+'/'+B+'/'+d[Math.floor(Math.random()*d.length)][0]+'.html'})})();</script>`;
 
-const page = (root: string, title: string, desc: string, body: string, script = "", index = true) => `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content="${root}"><title>${esc(title)} – HitStory | School of Rock</title><meta name="description" content="${esc(desc)}">${index ? "" : '<meta name="robots" content="noindex, follow">'}<link rel="icon" href="${root}/assets/cassette.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="${root}/assets/site.css"><link rel="stylesheet" href="${root}/encyclopedie/enc.css"><script src="${root}/assets/player.js"></script><script src="${root}/assets/nav.js"></script></head><body><header class="sitenav"><a class="brand" href="${root}/index.html"><img src="${root}/assets/cassette.png" alt=""><span>School of Rock</span></a><nav aria-label="Hoofdmenu"><a href="${root}/index.html#mixtapes">Mixtapes</a><a href="${root}/kaart.html">Genrekaart</a><a href="${root}/magazine/index.html">Magazine</a><a href="${root}/encyclopedie/index.html" aria-current="page">Encyclopedie</a><a href="${root}/begrippen.html">Begrippen</a><a href="${root}/opdrachten.html">Opdrachten</a></nav></header>
-<div class="wk"><div class="wkbar"><a class="logo" href="${root}/encyclopedie/index.html">HitStory<small>popencyclopedie van School of Rock</small></a><div class="zoek"><input type="search" placeholder="Zoeken in HitStory" aria-label="Zoeken" autocomplete="off"><ul hidden></ul></div><a class="rnd" href="#">Willekeurig artikel</a> <a href="${root}/encyclopedie/alle.html">Alle artikelen A–Z</a></div>
-<main class="blad">${body}</main></div><footer class="sitefoot"><div class="wrap"><p>HitStory, de popencyclopedie van School of Rock · De geschiedenis van popmuziek in mixtapes · Jan-Wolter Smit · ArtEZ University of the Arts</p><p>Teksten gecontroleerd aan de hand van de genoemde bronnen. Discografieën: MusicBrainz (CC0). Foto's: Wikimedia Commons, met maker en licentie bij elke foto.</p></div></footer>${ZOEK_JS(root)}${script}</body></html>`;
+// rel = pad van de pagina binnen de encyclopedie (bijv. "artiest/x.html"); bepaalt taalwisselaar en hreflang. null = geen tegenhanger.
+const ENIDS = new Set<string>(LNL.filter(heeftEn).map((l) => l.id));
+const heeftAlt = (rel: string | null) => !!rel && (/^(index|alle)\.html$/.test(rel) || LANG === "en" || ENIDS.has(rel.replace(/\.html$/, "")));
+const taalBlok = (root: string, rel: string | null) => {
+  if (!heeftAlt(rel)) return { head: "", knop: "" };
+  const urls: Record<Taal, string> = { nl: `${baseVan("nl")}/${rel}`, en: `${baseVan("en")}/${rel}` };
+  const head = (["nl", "en"] as Taal[]).map((x) => `<link rel="alternate" hreflang="${x}" href="${SITE}${urls[x]}">`).join("") + `<link rel="alternate" hreflang="x-default" href="${SITE}${urls.nl}">`;
+  const li = (x: Taal, naam: string) => `<li><a lang="${x}" hreflang="${x}" href="${root}/${urls[x]}"${x === LANG ? ' aria-current="true"' : ""}>${naam}</a></li>`;
+  const knop = `<details class="talen"><summary aria-label="${nt("Taal wisselen", "Change language")}"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12.9 15.1 10.8 13c1.5-1.7 2.6-3.6 3.2-5.7H17V5.3h-7V3H8v2.3H1v2h11.2a14.700 14.700 0 0 1-2.200 4.300 14.600 14.600 0 0 1-1.700-2.500H6.300a17.700 17.700 0 0 0 2.400 3.700l-4.400 4.400L5.700 19l4.300-4.300 2.500 2.500zM18.500 10h-2L12 22h2l1.100-3h4.800l1.100 3h2zm-2.600 7 1.600-4.300 1.600 4.300z"/></svg> ${nt("2 talen", "2 languages")}</summary><ul>${li("nl", "Nederlands")}${li("en", "English")}</ul></details>`;
+  return { head, knop };
+};
+const page = (root: string, title: string, desc: string, body: string, script = "", index = true, rel: string | null = null) => {
+  const talen = taalBlok(root, rel);
+  const E = `${root}/${baseVan(LANG)}`;
+  return `<!doctype html><html lang="${LANG}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content="${root}"><title>${esc(title)} – HitStory | School of Rock</title><meta name="description" content="${esc(desc)}">${index ? "" : '<meta name="robots" content="noindex, follow">'}${talen.head}<link rel="icon" href="${root}/assets/cassette.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="${root}/assets/site.css"><link rel="stylesheet" href="${root}/encyclopedie/enc.css"><script src="${root}/assets/player.js"></script><script src="${root}/assets/nav.js"></script></head><body><header class="sitenav"><a class="brand" href="${root}/index.html"><img src="${root}/assets/cassette.png" alt=""><span>School of Rock</span></a><nav aria-label="${nt("Hoofdmenu", "Main menu")}"><a href="${root}/index.html#mixtapes">Mixtapes</a><a href="${root}/kaart.html">${nt("Genrekaart", "Genre map")}</a><a href="${root}/magazine/index.html">Magazine</a><a href="${E}/index.html" aria-current="page">${nt("Encyclopedie", "Encyclopedia")}</a><a href="${root}/begrippen.html">${nt("Begrippen", "Glossary")}</a><a href="${root}/opdrachten.html">${nt("Opdrachten", "Assignments")}</a></nav></header>
+<div class="wk"><div class="wkbar"><a class="logo" href="${E}/index.html">HitStory<small>${nt("popencyclopedie van School of Rock", "the pop encyclopedia of School of Rock")}</small></a><div class="zoek"><input type="search" placeholder="${nt("Zoeken in HitStory", "Search HitStory")}" aria-label="${nt("Zoeken", "Search")}" autocomplete="off"><ul hidden></ul></div><a class="rnd" href="#">${nt("Willekeurig artikel", "Random article")}</a> <a href="${E}/alle.html">${nt("Alle artikelen A–Z", "All articles A–Z")}</a></div>
+<main class="blad">${talen.knop}${body}</main></div><footer class="sitefoot"><div class="wrap"><p>${nt("HitStory, de popencyclopedie van School of Rock · De geschiedenis van popmuziek in mixtapes · Jan-Wolter Smit · ArtEZ University of the Arts", "HitStory, the pop encyclopedia of School of Rock · The history of popular music in mixtapes · Jan-Wolter Smit · ArtEZ University of the Arts")}</p><p>${nt("Teksten gecontroleerd aan de hand van de genoemde bronnen. Discografieën: MusicBrainz (CC0). Foto's: Wikimedia Commons, met maker en licentie bij elke foto.", "Texts checked against the sources listed. Discographies: MusicBrainz (CC0). Photos: Wikimedia Commons, with photographer and licence given for each photo.")}</p></div></footer>${ZOEK_JS(root)}${script}</body></html>`;
+};
 
 const FRAG_JS = `<script>(function(){const T=JSON.parse(document.getElementById('frags-data').textContent);document.querySelectorAll('.frags button').forEach(b=>{const t=T[+b.dataset.t];const paint=()=>{b.innerHTML=SOR.isPlaying(t)?SOR.pauseIcon:SOR.playIcon};paint();b.onclick=()=>{SOR.isPlaying(t)?SOR.pause():SOR.play(t)};SOR.onChange(paint)})})();</script>`;
 
@@ -139,29 +216,29 @@ function infobox(l: any) {
   const rij = (k: string, v: string) => v ? `<tr><th>${k}</th><td>${v}</td></tr>` : "";
   const links = (rel: string, max = 6) => (l.links[rel] || []).slice(0, max).map((id: string) => a(id)).filter(Boolean).join(", ");
   const mixtapes = [...new Set((l.refs || []).filter((x: any) => x.kind !== "kaart").map((x: any) => {
-    const m = x.label.match(/^Mixtape (\d+)/); return m ? `<a href="../../${esc(x.href.split("#")[0])}">Mixtape ${m[1]}</a>` : x.kind === "magazine" ? `<a href="../../${esc(x.href.split("#")[0])}">Magazine</a>` : "";
+    const m = x.label.match(/^Mixtape (\d+)/); return m ? `<a href="${ROOT}/${esc(x.href.split("#")[0])}">Mixtape ${m[1]}</a>` : x.kind === "magazine" ? `<a href="${ROOT}/${esc(x.href.split("#")[0])}">Magazine</a>` : "";
   }).filter(Boolean))].join(", ");
   let rows = "";
   if (l.type === "artiest") {
     const groep = isGroep(l);
-    rows += groep ? rij("Opgericht", l.year ? String(Math.floor(l.year)) : "") + rij("Herkomst", esc(l.place || ""))
-      : rij("Geboren", [l.born, l.place].filter(Boolean).map(esc).join(", ")) + rij("Overleden", l.died ? String(l.died) : "");
+    rows += groep ? rij(nt("Opgericht", "Formed"), l.year ? String(Math.floor(l.year)) : "") + rij(nt("Herkomst", "Origin"), esc(l.place || ""))
+      : rij(nt("Geboren", "Born"), [l.born, l.place].filter(Boolean).map(esc).join(", ")) + rij(nt("Overleden", "Died"), l.died ? String(l.died) : "");
     rows += rij("Genre", links("genre"));
-    if (l.disco?.length) { const js = l.disco.map((x: any) => x.jaar).filter(Boolean); rows += rij("Studioalbums", `${l.disco.length}${js.length ? ` (${Math.min(...js)}–${Math.max(...js)})` : ""}`); }
-    rows += rij("Bekende werken", links("werk", 5)) + rij("Beïnvloed door", links("invloed", 4)) + rij("Ook gespeld als", (l.ook || []).map(esc).join(", "));
+    if (l.disco?.length) { const js = l.disco.map((x: any) => x.jaar).filter(Boolean); rows += rij(nt("Studioalbums", "Studio albums"), `${l.disco.length}${js.length ? ` (${Math.min(...js)}–${Math.max(...js)})` : ""}`); }
+    rows += rij(nt("Bekende werken", "Notable works"), links("werk", 5)) + rij(nt("Beïnvloed door", "Influenced by"), links("invloed", 4)) + rij(nt("Ook gespeld als", "Also spelled"), (l.ook || []).map(esc).join(", "));
   } else if (l.type === "genre") {
-    rows += rij("Ontstaan", [l.year ? String(Math.floor(l.year)) : "", l.place].filter(Boolean).map(esc).join(", ")) + rij("Familie", esc(l.sub || "")) + rij("Wortels", links("wortels")) + rij("Daarna", links("daarna")) + rij("Artiesten", links("artiest", 6));
+    rows += rij(nt("Ontstaan", "Originated"), [l.year ? String(Math.floor(l.year)) : "", l.place].filter(Boolean).map(esc).join(", ")) + rij(nt("Familie", "Family"), esc(l.sub || "")) + rij(nt("Wortels", "Roots"), links("wortels")) + rij(nt("Daarna", "Led to"), links("daarna")) + rij(nt("Artiesten", "Artists"), links("artiest", 6));
   } else if (l.type === "werk") {
-    const t = l.tracklijst;
-    const duur = t ? Math.round(t.tracks.reduce((s: number, x: any) => s + (x.ms || 0), 0) / 60000) : 0;
-    rows += rij("Soort", l.nr ? `${l.nr}e studioalbum` : SOORT[l.soort] || "Werk") + rij("Artiest", (l.links.artiest || []).map((id: string) => a(id)).join(", ") || esc(l.sub)) + rij("Jaar", l.year ? String(l.year) : "") + rij("Schrijver/producer", (l.links.maker || []).map((id: string) => a(id)).join(", "));
-    if (t) rows += rij("Genre", esc(t.genre || "")) + rij("Nummers", `${t.tracks.length}${duur ? ` (${duur} min.)` : ""}`) + rij("Vorige", l.vorige ? a(l.vorige) : "") + rij("Volgende", l.volgende ? a(l.volgende) : "");
+    const tr = l.tracklijst;
+    const duur = tr ? Math.round(tr.tracks.reduce((s: number, x: any) => s + (x.ms || 0), 0) / 60000) : 0;
+    rows += rij(nt("Soort", "Type"), l.nr ? nt(`${l.nr}e studioalbum`, `${ord(l.nr)} studio album`) : SOORT[l.soort] || nt("Werk", "Work")) + rij(nt("Artiest", "Artist"), (l.links.artiest || []).map((id: string) => a(id)).join(", ") || esc(l.sub)) + rij(nt("Jaar", "Year"), l.year ? String(l.year) : "") + rij(nt("Schrijver/producer", "Writer/producer"), (l.links.maker || []).map((id: string) => a(id)).join(", "));
+    if (tr) rows += rij("Genre", esc(tr.genre || "")) + rij(nt("Nummers", "Tracks"), `${tr.tracks.length}${duur ? ` (${duur} min.)` : ""}`) + rij(nt("Vorige", "Previous"), l.vorige ? a(l.vorige) : "") + rij(nt("Volgende", "Next"), l.volgende ? a(l.volgende) : "");
   } else if (l.type === "techniek") {
-    rows += rij("Jaar", l.year ? String(Math.floor(l.year)) : "") + rij("Plaats", esc(l.place || "")) + rij("Bedenker", esc(l.who || "")) + rij("Categorie", esc(l.sub || "")) + rij("Genres", links("genre"));
+    rows += rij(nt("Jaar", "Year"), l.year ? String(Math.floor(l.year)) : "") + rij(nt("Plaats", "Place"), esc(l.place || "")) + rij(nt("Bedenker", "Inventor"), esc(l.who || "")) + rij(nt("Categorie", "Category"), esc(l.sub || "")) + rij(nt("Genres", "Genres"), links("genre"));
   }
-  rows += rij("In School of Rock", mixtapes);
+  rows += rij(nt("In School of Rock", "In School of Rock"), mixtapes);
   if (!rows && !l.foto) return "";
-  const foto = !l.foto && l.tracklijst?.cover ? `<img src="${esc(hoes(l.tracklijst.cover))}" alt="Hoes van ${esc(l.name)}">` : l.foto ? `<img src="${BEELD}${esc(l.foto.src)}" alt="${esc(l.name)}"><div class="fcap">${esc(l.foto.maker).slice(0, 80)} · <a href="${esc(l.foto.bron)}" target="_blank" rel="noopener">${esc(l.foto.licentie)}</a></div>` : "";
+  const foto = !l.foto && l.tracklijst?.cover ? `<img src="${esc(hoes(l.tracklijst.cover))}" alt="${nt("Hoes van", "Cover of")} ${esc(l.name)}">` : l.foto ? `<img src="${BEELD}${esc(l.foto.src)}" alt="${esc(l.name)}"><div class="fcap">${esc(l.foto.maker).slice(0, 80)} · <a href="${esc(l.foto.bron)}" target="_blank" rel="noopener">${esc(l.foto.licentie)}</a></div>` : "";
   return `<aside class="info ${l.type}"><div class="kop">${esc(l.name)}</div>${foto}<table>${rows}</table></aside>`;
 }
 
@@ -171,12 +248,13 @@ function stubLead(l: any) {
   const hoofdst = [...new Set((l.refs || []).filter((x: any) => x.kind === "hoofdstuk").map((x: any) => x.label.replace(/:.*/, "")))] as string[];
   if (l.album) {
     const art = (l.links.artiest || []).map((id: string) => a(id)).join(", ") || esc(l.artist || "");
-    return `<p><b>${esc(l.name)}</b> is ${l.nr ? `het ${l.nr}e studioalbum` : "een studioalbum"} van ${art}${l.year ? `, uitgebracht in ${l.year}` : ""}.${l.tracklijst ? ` Het album telt ${l.tracklijst.tracks.length} nummers.` : ""}</p>`;
+    return nt(`<p><b>${esc(l.name)}</b> is ${l.nr ? `het ${l.nr}e studioalbum` : "een studioalbum"} van ${art}${l.year ? `, uitgebracht in ${l.year}` : ""}.${l.tracklijst ? ` Het album telt ${l.tracklijst.tracks.length} nummers.` : ""}</p>`,
+      `<p><b>${esc(l.name)}</b> is ${l.nr ? `the ${ord(l.nr)} studio album` : "a studio album"} by ${art}${l.year ? `, released in ${l.year}` : ""}.${l.tracklijst ? ` The album has ${l.tracklijst.tracks.length} tracks.` : ""}</p>`);
   }
-  const wat = l.type === "artiest" ? (isGroep(l) ? "een muziekgroep" : "een artiest") : label(l).toLowerCase();
+  const wat = l.type === "artiest" ? (isGroep(l) ? nt("een muziekgroep", "a band") : nt("een artiest", "an artist")) : (LANG === "en" ? "a " : "") + label(l).toLowerCase();
   let s = `<b>${esc(l.name)}</b>${l.born ? ` (${jaren(l)})` : ""} is ${wat}`;
   if (genres.length) s += ` (${genres.length > 1 ? "genres" : "genre"}: ${lijstNL(genres)})`;
-  s += hoofdst.length ? `. School of Rock noemt ${isGroep(l) ? "de groep" : l.type === "artiest" ? "deze artiest" : "dit artikel"} in ${lijstNL(hoofdst)}.` : ".";
+  s += hoofdst.length ? nt(`. School of Rock noemt ${isGroep(l) ? "de groep" : l.type === "artiest" ? "deze artiest" : "dit artikel"} in ${lijstNL(hoofdst)}.`, `. School of Rock mentions ${isGroep(l) ? "the band" : l.type === "artiest" ? "this artist" : "this article"} in ${lijstNL(hoofdst)}.`) : ".";
   return `<p>${s}</p>`;
 }
 
@@ -191,53 +269,55 @@ function lemmaPage(l: any) {
     const html = alineas.map((p) => linkify(p, l.id, gezien));
     if (l.type === "artiest" && html.length === 3) {
       lead += `<p>${vet(html[0], l.name)}</p>`;
-      secties.push(["muziek", "Muziek en doorbraak", `<p>${html[1]}</p>`], ["invloed", "Invloed", `<p>${html[2]}</p>`]);
+      secties.push(["muziek", nt("Muziek en doorbraak", "Music and breakthrough"), `<p>${html[1]}</p>`], ["invloed", nt("Invloed", "Influence"), `<p>${html[2]}</p>`]);
     } else lead += html.map((p, i) => `<p>${i ? p : vet(p, l.name)}</p>`).join("");
   }
   if (!lead) { lead = stubLead(l); for (const id of (l.links.genre || []).slice(0, 3)) gezien.add(id); }
-  if (l.extra?.length) secties.push(["geschiedenis", "Uit de tijdlijnen", l.extra.map((e: any) => `<h3>${esc(e.titel)} (${e.jaar})</h3><p>${linkify(e.text, l.id, gezien)}</p>`).join("")]);
+  if (l.extra?.length) secties.push(["geschiedenis", nt("Uit de tijdlijnen", "From the timelines"), l.extra.map((e: any) => `<h3>${esc(e.titel)} (${e.jaar})</h3><p>${linkify(e.text, l.id, gezien)}</p>`).join("")]);
   const tracks = (l.tracks || []).filter((t: any) => t.audio).slice(0, 12);
   if (l.listen || tracks.length) {
-    let h = l.listen ? `<div class="tip"><b>Luistertip.</b> ${linkify(l.listen, l.id, gezien)}</div>` : "";
-    if (tracks.length) h += `<ul class="frags">${tracks.map((t: any, i: number) => `<li><button data-t="${i}" aria-label="Speel ${esc(t.title)}"></button>${t.cover ? `<img src="${esc(hoes(t.cover))}" alt="" loading="lazy">` : "<span></span>"}<div class="w"><b>${esc(t.title)}</b> <span>· ${esc(t.artist)}${t.year ? ", " + t.year : ""}</span></div>${t.store ? `<a class="ap" href="${esc(t.store)}" target="_blank" rel="noopener">Apple Music ↗</a>` : "<span></span>"}</li>`).join("")}</ul><script type="application/json" id="frags-data">${JSON.stringify(tracks.map((t: any) => ({ audio: t.audio, artist: t.artist, title: t.title, cover: hoes(t.cover), year: t.year }))).replace(/</g, "\\u003c")}</script>`;
-    secties.push(["luisteren", "Luisteren", h]);
+    let h = l.listen ? `<div class="tip"><b>${nt("Luistertip.", "Listening tip.")}</b> ${linkify(l.listen, l.id, gezien)}</div>` : "";
+    if (tracks.length) h += `<ul class="frags">${tracks.map((t: any, i: number) => `<li><button data-t="${i}" aria-label="${nt("Speel", "Play")} ${esc(t.title)}"></button>${t.cover ? `<img src="${esc(hoes(t.cover))}" alt="" loading="lazy">` : "<span></span>"}<div class="w"><b>${esc(t.title)}</b> <span>· ${esc(t.artist)}${t.year ? ", " + t.year : ""}</span></div>${t.store ? `<a class="ap" href="${esc(winkel(t.store))}" target="_blank" rel="noopener">Apple Music ↗</a>` : "<span></span>"}</li>`).join("")}</ul><script type="application/json" id="frags-data">${JSON.stringify(tracks.map((t: any) => ({ audio: t.audio, artist: t.artist, title: t.title, cover: hoes(t.cover), year: t.year }))).replace(/</g, "\\u003c")}</script>`;
+    secties.push(["luisteren", nt("Luisteren", "Listening"), h]);
   }
   if (l.tracklijst) {
     const t = l.tracklijst, discs = new Set(t.tracks.map((x: any) => x.disc)).size;
     const mmss = (ms: number) => ms ? `${Math.floor(ms / 60000)}:${String(Math.round(ms / 1000) % 60).padStart(2, "0")}` : "";
     let h = "", disc = 0;
     t.tracks.forEach((x: any, i: number) => {
-      if (discs > 1 && x.disc !== disc) { if (disc) h += "</ol>"; disc = x.disc; h += `<h3>Cd ${disc}</h3><ol class="tl">`; } else if (!i) h += `<ol class="tl">`;
-      h += `<li><span class="n">${x.n}</span>${x.audio ? `<button data-i="${i}" aria-label="Speel ${esc(x.titel)}"></button>` : "<span></span>"}<span class="t">${esc(x.titel)}</span><span class="d">${mmss(x.ms)}</span>${x.store ? `<a class="ap" href="${esc(x.store)}" target="_blank" rel="noopener">Apple Music ↗</a>` : "<span></span>"}</li>`;
+      if (discs > 1 && x.disc !== disc) { if (disc) h += "</ol>"; disc = x.disc; h += `<h3>${nt("Cd", "CD")} ${disc}</h3><ol class="tl">`; } else if (!i) h += `<ol class="tl">`;
+      h += `<li><span class="n">${x.n}</span>${x.audio ? `<button data-i="${i}" aria-label="${nt("Speel", "Play")} ${esc(x.titel)}"></button>` : "<span></span>"}<span class="t">${esc(x.titel.replace(/ 'T\b/g, " 't").replace(/ 'S\b/g, " 's"))}</span><span class="d">${mmss(x.ms)}</span>${x.store ? `<a class="ap" href="${esc(winkel(x.store))}" target="_blank" rel="noopener">Apple Music ↗</a>` : "<span></span>"}</li>`;
     });
     h += "</ol>";
-    h += `<p class="klein">Fragmenten van 30 seconden via Apple Music.${t.store ? ` <a href="${esc(t.store)}" target="_blank" rel="noopener">Beluister het hele album op Apple Music ↗</a>` : ""}</p>`;
+    h += `<p class="klein">${nt("Fragmenten van 30 seconden via Apple Music.", "30-second previews via Apple Music.")}${t.store ? ` <a href="${esc(winkel(t.store))}" target="_blank" rel="noopener">${nt("Beluister het hele album op Apple Music", "Listen to the whole album on Apple Music")} ↗</a>` : ""}</p>`;
     h += `<script type="application/json" id="tl-data">${JSON.stringify(t.tracks.map((x: any) => ({ audio: x.audio, artist: l.artist || l.sub, title: x.titel, cover: hoes(t.cover), year: l.year }))).replace(/</g, "\u003c")}</script>`;
-    secties.push(["tracklijst", "Tracklijst", h]);
+    secties.push(["tracklijst", nt("Tracklijst", "Track list"), h]);
   }
-  if (l.disco?.length) secties.push(["discografie", "Discografie", `<h3>Studioalbums</h3><ul class="disco">${l.disco.map((x: any) => `<li><span class="j">${x.jaar || "?"}</span><i>${x.id && byId.has(x.id) ? a(x.id) : esc(x.titel)}</i>${x.soort === "soundtrack" ? " (soundtrack)" : ""}</li>`).join("")}</ul>`]);
-  if (l.works?.length) secties.push(["werk", "Werk", `<ul class="disco">${l.works.map((w: string) => `<li>${esc(w)}</li>`).join("")}</ul>`]);
+  if (l.disco?.length) secties.push(["discografie", nt("Discografie", "Discography"), `<h3>${nt("Studioalbums", "Studio albums")}</h3><ul class="disco">${l.disco.map((x: any) => `<li><span class="j">${x.jaar || "?"}</span><i>${x.id && byId.has(x.id) ? a(x.id) : esc(x.titel)}</i>${x.soort === "soundtrack" ? " (soundtrack)" : ""}</li>`).join("")}</ul>`]);
+  if (l.works?.length) secties.push(["werk", nt("Werk", "Works"), `<ul class="disco">${l.works.map((w: string) => `<li>${esc(w)}</li>`).join("")}</ul>`]);
   const sor = (l.refs || []);
   if (sor.length) {
-    const kind: Record<string, string> = { hoofdstuk: "Reader", magazine: "Magazine", kaart: "Kaart" };
-    secties.push(["sor", "In School of Rock", `<ul class="vermeld">${sor.map((x: any) => `<li><a href="../../${esc(x.href)}">${esc(x.label)}</a> <span class="klein">${kind[x.kind] || x.kind}</span>${x.zin ? `<q>${linkify(x.zin, l.id, new Set(gezien))}</q>` : ""}</li>`).join("")}</ul>`]);
+    const kind: Record<string, string> = { hoofdstuk: "Reader", magazine: "Magazine", kaart: nt("Kaart", "Map") };
+    secties.push(["sor", "In School of Rock", `<ul class="vermeld">${sor.map((x: any) => `<li><a href="${ROOT}/${esc(x.href)}">${esc(x.label)}</a> <span class="klein">${kind[x.kind] || x.kind}</span>${x.zin ? `<q>${linkify(x.zin, l.id, new Set(gezien))}</q>` : ""}</li>`).join("")}</ul>`]);
   }
-  if (l.vermeld?.length) secties.push(["vermeld", "Genoemd in andere artikelen", `<ul class="vermeld">${l.vermeld.map((v: any) => `<li>${a(v.id)} <span class="klein">${esc(label(byId.get(v.id) || {}))}</span><q>${linkify(v.zin, l.id, new Set([...gezien, v.id]))}</q></li>`).join("")}</ul>`]);
+  if (l.vermeld?.length) secties.push(["vermeld", nt("Genoemd in andere artikelen", "Mentioned in other articles"), `<ul class="vermeld">${l.vermeld.map((v: any) => `<li>${a(v.id)} <span class="klein">${esc(label(byId.get(v.id) || {}))}</span><q>${linkify(v.zin, l.id, new Set([...gezien, v.id]))}</q></li>`).join("")}</ul>`]);
   const zie = [...new Set(["artiest", "maker", "werk", "wortels", "daarna", "genre", "techniek", "invloed", "invloed-op"].flatMap((k) => l.links[k] || []))].filter((id: string) => !gezien.has(id) && byId.has(id) && !(l.type === "artiest" && byId.get(id).album)).slice(0, 30);
-  if (zie.length) secties.push(["zieook", "Zie ook", `<ul class="ziezook">${zie.map((id) => `<li>${a(id)}</li>`).join("")}</ul>`]);
+  if (zie.length) secties.push(["zieook", nt("Zie ook", "See also"), `<ul class="ziezook">${zie.map((id) => `<li>${a(id)}</li>`).join("")}</ul>`]);
   const bronnen = BRONNEN.get(l.name.toLowerCase()) || [];
-  if (bronnen.length) secties.push(["bronnen", "Bronnen", `<ol class="bron">${bronnen.map((u) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(bronNaam(u))}</a></li>`).join("")}</ol>`]);
+  if (bronnen.length) secties.push(["bronnen", nt("Bronnen", "Sources"), `<ol class="bron">${bronnen.map((u) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(bronNaam(u))}</a></li>`).join("")}</ol>`]);
 
-  let b = `<h1>${esc(l.name)}</h1><p class="tag">Uit HitStory, de popencyclopedie van School of Rock · ${esc(label(l))}</p>`;
+  const strong = (h: string) => h.replace(/&lt;(\/?)strong&gt;/g, "<$1strong>");
+  secties.forEach((x) => { x[2] = strong(x[2]); }); lead = strong(lead);
+  let b = `<h1>${esc(l.name)}</h1><p class="tag">${nt("Uit HitStory, de popencyclopedie van School of Rock", "From HitStory, the pop encyclopedia of School of Rock")} · ${esc(label(l))}</p>`;
   b += infobox(l) + lead;
   const koppen = secties.filter(([id]) => id !== "zieook" && id !== "bronnen");
-  if (koppen.length >= 3) b += `<nav class="toc"><b>Inhoud</b><ol>${secties.map(([id, kop]) => `<li><a href="#${id}">${kop}</a></li>`).join("")}</ol></nav>`;
+  if (koppen.length >= 3) b += `<nav class="toc"><b>${nt("Inhoud", "Contents")}</b><ol>${secties.map(([id, kop]) => `<li><a href="#${id}">${kop}</a></li>`).join("")}</ol></nav>`;
   for (const [id, kop, h] of secties) b += `<h2 id="${id}">${kop}</h2>${h}`;
-  if (l.stub) b += `<div class="stub"><span>beginnetje</span><div>Dit artikel is nog kort. Er komt nog een uitgebreidere tekst over ${esc(l.name)}.</div></div>`;
+  if (l.stub) b += `<div class="stub"><span>${nt("beginnetje", "stub")}</span><div>${nt(`Dit artikel is nog kort. Er komt nog een uitgebreidere tekst over ${esc(l.name)}.`, `This article is still short. A longer text about ${esc(l.name)} is coming.`)}</div></div>`;
   const cats = [TYPE[l.type][1], ...(l.links.genre || []).map((id: string) => byId.get(id)?.name).filter(Boolean)];
-  b += `<div class="cats">Categorieën: <a href="../alle.html#${l.type}">${esc(cats[0])}</a>${(l.links.genre || []).slice(0, 8).map((id: string) => a(id)).join("")}</div>`;
-  const desc = (l.defs?.[0]?.text || alineas[0] || `${l.name} in HitStory, de popencyclopedie van School of Rock.`).slice(0, 155);
-  return page("../..", l.name, desc, b, (tracks.length ? FRAG_JS : "") + (l.tracklijst ? TL_JS : ""), !l.stub);
+  b += `<div class="cats">${nt("Categorieën", "Categories")}: <a href="../alle.html#${l.type}">${esc(cats[0])}</a>${(l.links.genre || []).slice(0, 8).map((id: string) => a(id)).join("")}</div>`;
+  const desc = (l.defs?.[0]?.text || alineas[0] || nt(`${l.name} in HitStory, de popencyclopedie van School of Rock.`, `${l.name} in HitStory, the pop encyclopedia of School of Rock.`)).slice(0, 155);
+  return page(ROOT, l.name, desc, b, (tracks.length ? FRAG_JS : "") + (l.tracklijst ? TL_JS : ""), !l.stub, l.id + ".html");
 }
 
 // ---------- Hoofdpagina ----------
@@ -250,12 +330,12 @@ function hoofdpagina() {
   const uitgelicht = L.filter((l) => l.type === "artiest" && l.bron.includes("eigen") && VOL(l)).map((l) => ({ id: l.id, n: l.name, f: l.foto ? BEELD + l.foto.src : "", t: String(l.text).split(/\n\n/)[0] }));
   const genres = L.filter((l) => l.type === "genre" && VOL(l) && l.links.artiest?.length).map((l) => ({ id: l.id, n: l.name, f: "", t: l.text }));
   const wist = L.filter((l) => (l.type === "techniek" || l.type === "werk") && VOL(l)).map((l) => ({ id: l.id, n: l.name, t: String(l.text).split(/(?<=\.)\s/)[0] }));
-  let b = `<div class="welkom"><p class="kicker">${L.length.toLocaleString("nl-NL")} artikelen</p><h1>Van work songs tot hyperpop</h1><p class="lede">Artiesten, genres, albums, begrippen en uitvindingen uit de mixtapes, kaarten en het magazine van School of Rock.</p></div>`;
-  b += `<div class="portalen">${Object.keys(TYPE).map((t) => `<a href="alle.html#${t}"><b>${(tel[t] || 0).toLocaleString("nl-NL")}</b>${TYPE[t][1]}</a>`).join("")}</div><br>`;
-  b += `<div class="hp"><div><section class="vak geel"><h2>Uitgelicht artikel</h2><div class="in" id="dag"></div></section><section class="vak groen"><h2>Uitgelicht genre</h2><div class="in" id="genre"></div></section></div>`;
-  b += `<div><section class="vak blauw"><h2>Wist je dat…</h2><div class="in"><ul class="wist" id="wist"></ul></div></section><section class="vak paars"><h2>Bladeren</h2><div class="in"><p><a href="alle.html#artiest">Alle artiesten</a> · <a href="alle.html#genre">Alle genres</a> · <a href="alle.html#werk">Albums en nummers</a> · <a href="alle.html#begrip">Begrippen</a> · <a href="alle.html#techniek">Techniek en uitvindingen</a></p><p>Elk artikel verwijst naar het hoofdstuk, de kaart of het magazineverhaal waarin het voorkomt, en laat de fragmenten horen.</p></div></section></div></div>`;
-  const js = `<script>(function(){const U=${JSON.stringify(uitgelicht).replace(/</g, "\\u003c")},G=${JSON.stringify(genres).replace(/</g, "\\u003c")},W=${JSON.stringify(wist).replace(/</g, "\\u003c")};const d=Math.floor(Date.now()/864e5);const e=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');const kaart=(x,el)=>{document.getElementById(el).innerHTML=(x.f?'<img class="dag" src="'+x.f+'" alt="">':'')+'<p><b><a href="'+x.id+'.html">'+e(x.n)+'</a></b>. '+e(x.t.length>520?x.t.slice(0,x.t.lastIndexOf(' ',500))+'…':x.t)+' <a href="'+x.id+'.html">Lees verder</a></p>'};if(U.length)kaart(U[d%U.length],'dag');if(G.length)kaart(G[(d*7)%G.length],'genre');const w=[];for(let i=0;i<5&&W.length;i++){const x=W[(d*13+i*97)%W.length];w.push('<li>…<a href="'+x.id+'.html">'+e(x.n)+'</a>: '+e(x.t)+'</li>')}document.getElementById('wist').innerHTML=w.join('')})();</script>`;
-  return page("..", "Hoofdpagina", "HitStory, de popencyclopedie van School of Rock: artiesten, genres, albums, begrippen en techniek uit de geschiedenis van de popmuziek, met fragmenten en bronnen.", b, js);
+  let b = `<div class="welkom"><p class="kicker">${L.length.toLocaleString(nt("nl-NL", "en-GB"))} ${nt("artikelen", "articles")}</p><h1>${nt("Van work songs tot hyperpop", "From work songs to hyperpop")}</h1><p class="lede">${nt("Artiesten, genres, albums, begrippen en uitvindingen uit de mixtapes, kaarten en het magazine van School of Rock.", "Artists, genres, albums, terms and inventions from the mixtapes, maps and magazine of School of Rock.")}</p></div>`;
+  b += `<div class="portalen">${Object.keys(TYPE).map((t) => `<a href="alle.html#${t}"><b>${(tel[t] || 0).toLocaleString(nt("nl-NL", "en-GB"))}</b>${TYPE[t][1]}</a>`).join("")}</div><br>`;
+  b += `<div class="hp"><div><section class="vak geel"><h2>${nt("Uitgelicht artikel", "Featured article")}</h2><div class="in" id="dag"></div></section><section class="vak groen"><h2>${nt("Uitgelicht genre", "Featured genre")}</h2><div class="in" id="genre"></div></section></div>`;
+  b += `<div><section class="vak blauw"><h2>${nt("Wist je dat…", "Did you know…")}</h2><div class="in"><ul class="wist" id="wist"></ul></div></section><section class="vak paars"><h2>${nt("Bladeren", "Browse")}</h2><div class="in"><p><a href="alle.html#artiest">${nt("Alle artiesten", "All artists")}</a> · <a href="alle.html#genre">${nt("Alle genres", "All genres")}</a> · <a href="alle.html#werk">${nt("Albums en nummers", "Albums and songs")}</a> · <a href="alle.html#begrip">${nt("Begrippen", "Terms")}</a> · <a href="alle.html#techniek">${nt("Techniek en uitvindingen", "Technology and inventions")}</a></p><p>${nt("Elk artikel verwijst naar het hoofdstuk, de kaart of het magazineverhaal waarin het voorkomt, en laat de fragmenten horen.", "Each article links to the chapter, map or magazine story in which it appears, and lets you hear the excerpts.")}</p></div></section></div></div>`;
+  const js = `<script>(function(){const READ=${JSON.stringify(nt("Lees verder", "Read more"))};const U=${JSON.stringify(uitgelicht).replace(/</g, "\\u003c")},G=${JSON.stringify(genres).replace(/</g, "\\u003c")},W=${JSON.stringify(wist).replace(/</g, "\\u003c")};const d=Math.floor(Date.now()/864e5);const e=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');const kaart=(x,el)=>{document.getElementById(el).innerHTML=(x.f?'<img class="dag" src="'+x.f+'" alt="">':'')+'<p><b><a href="'+x.id+'.html">'+e(x.n)+'</a></b>. '+e(x.t.length>520?x.t.slice(0,x.t.lastIndexOf(' ',500))+'…':x.t)+' <a href="'+x.id+'.html">'+READ+'</a></p>'};if(U.length)kaart(U[d%U.length],'dag');if(G.length)kaart(G[(d*7)%G.length],'genre');const w=[];for(let i=0;i<5&&W.length;i++){const x=W[(d*13+i*97)%W.length];w.push('<li>…<a href="'+x.id+'.html">'+e(x.n)+'</a>: '+e(x.t)+'</li>')}document.getElementById('wist').innerHTML=w.join('')})();</script>`;
+  return page(ROOT0, nt("Hoofdpagina", "Home"), nt("HitStory, de popencyclopedie van School of Rock: artiesten, genres, albums, begrippen en techniek uit de geschiedenis van de popmuziek, met fragmenten en bronnen.", "HitStory, the pop encyclopedia of School of Rock: artists, genres, albums, terms and technology from the history of popular music, with excerpts and sources."), b, js, true, "index.html");
 }
 
 // ---------- Alle lemma's A-Z ----------
@@ -316,28 +396,48 @@ function allePagina() {
   const groepen = new Map<string, any[]>();
   for (const l of rows) { const k = letter(l.name); (groepen.get(k) || groepen.set(k, []).get(k)!).push(l); }
   const letters = ["#", ..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-  let b = `<h1>Alle artikelen</h1><p class="tag">${rows.length.toLocaleString("nl-NL")} artikelen · <span id="count"></span></p>`;
-  b += `<div class="chips" id="chips"><button data-f="" aria-pressed="true">Alles (${rows.length})</button>${Object.keys(TYPE).map((t) => `<button data-f="${t}" aria-pressed="false">${TYPE[t][1]} (${tel[t] || 0})</button>`).join("")}</div>`;
+  let b = `<h1>${nt("Alle artikelen", "All articles")}</h1><p class="tag">${rows.length.toLocaleString(nt("nl-NL", "en-GB"))} ${nt("artikelen", "articles")} · <span id="count"></span></p>`;
+  b += `<div class="chips" id="chips"><button data-f="" aria-pressed="true">${nt("Alles", "All")} (${rows.length})</button>${Object.keys(TYPE).map((t) => `<button data-f="${t}" aria-pressed="false">${TYPE[t][1]} (${tel[t] || 0})</button>`).join("")}</div>`;
   b += `<nav class="az">${letters.map((x) => `<a href="#l-${x === "#" ? "0" : x}"${groepen.has(x) ? "" : ' class="leeg"'}>${x}</a>`).join("")}</nav>`;
   for (const x of letters) {
     const g = groepen.get(x); if (!g) continue;
     b += `<section class="groep" id="l-${x === "#" ? "0" : x}"><h2>${x}</h2><ul class="lijst">${g.map((l) => `<li data-t="${l.type}"><a href="${l.id}.html">${esc(l.name)}</a><span class="t">${esc(label(l))}</span></li>`).join("")}</ul></section>`;
   }
-  const js = `<script>(function(){const c=document.getElementById('count'),items=[...document.querySelectorAll('.lijst li')],groups=[...document.querySelectorAll('.groep')],chips=[...document.querySelectorAll('#chips button')];let f=(location.hash.match(/^#(artiest|genre|werk|begrip|techniek)$/)||[])[1]||'';function go(){let k=0;items.forEach(i=>{const hit=!f||i.dataset.t===f;i.hidden=!hit;if(hit)k++});groups.forEach(g=>g.hidden=!g.querySelector('li:not([hidden])'));chips.forEach(b=>b.setAttribute('aria-pressed',b.dataset.f===f));c.textContent=k+' getoond'}chips.forEach(b=>b.onclick=()=>{f=b.dataset.f;history.replaceState(null,'',f?'#'+f:location.pathname);go()});go()})();</script>`;
-  return page("..", "Alle artikelen", "Alle artikelen van HitStory, de popencyclopedie van School of Rock, van A tot Z.", b, js);
+  const js = `<script>(function(){const SHOWN=${JSON.stringify(nt("getoond", "shown"))};const c=document.getElementById('count'),items=[...document.querySelectorAll('.lijst li')],groups=[...document.querySelectorAll('.groep')],chips=[...document.querySelectorAll('#chips button')];let f=(location.hash.match(/^#(artiest|genre|werk|begrip|techniek)$/)||[])[1]||'';function go(){let k=0;items.forEach(i=>{const hit=!f||i.dataset.t===f;i.hidden=!hit;if(hit)k++});groups.forEach(g=>g.hidden=!g.querySelector('li:not([hidden])'));chips.forEach(b=>b.setAttribute('aria-pressed',b.dataset.f===f));c.textContent=k+' '+SHOWN}chips.forEach(b=>b.onclick=()=>{f=b.dataset.f;history.replaceState(null,'',f?'#'+f:location.pathname);go()});go()})();</script>`;
+  return page(ROOT0, nt("Alle artikelen", "All articles"), nt("Alle artikelen van HitStory, de popencyclopedie van School of Rock, van A tot Z.", "All articles of HitStory, the pop encyclopedia of School of Rock, from A to Z."), b, js, true, "alle.html");
 }
 
-// Oude pagina's weg, foto's (img/) blijven staan
-for (const t of Object.keys(TYPE)) { try { Deno.removeSync(OUT + t, { recursive: true }); } catch { /* eerste keer */ } Deno.mkdirSync(OUT + t, { recursive: true }); }
-Deno.writeTextFileSync(OUT + "enc.css", CSS);
-Deno.writeTextFileSync(OUT + "index.html", hoofdpagina());
-Deno.writeTextFileSync(OUT + "alle.html", allePagina());
-Deno.writeTextFileSync(OUT + "zoek.json", JSON.stringify(L.map((l) => [l.id, l.name, label(l)])));
-// Bewerkmodus (alleen voor de eigenaar): elke pagina draagt zijn eigen tekst als JSON; een knop verschijnt alleen als er een GitHub-sleutel in de browser staat
-const bewerkKnop = (l: any) => '<script type="application/json" id="hs-bron">' + JSON.stringify({ id: l.id, name: l.name, text: l.text || "", listen: l.listen || "" }).replace(/</g, "\u003c") + '</script>' +
+// ---------- Bouwen: eerst Nederlands, dan Engels ----------
+function init(taal: Taal) {
+  LANG = taal; ROOT = taal === "en" ? "../../.." : "../.."; ROOT0 = taal === "en" ? "../.." : "..";
+  TYPE = TYPE_TAAL[taal]; SOORT = SOORT_TAAL[taal];
+  const alles = taal === "en" ? maakEn() : LNL;
+  byId = new Map(alles.map((l) => [l.id, l]));
+  GEBOUWD = new Set(taal === "en" ? alles.filter(heeftEn).map((l) => l.id) : alles.map((l) => l.id));
+  if (taal === "en") vermeldEn(alles, byId, GEBOUWD);
+  L = taal === "en" ? alles.filter((l) => GEBOUWD.has(l.id)) : alles;
+  ALLES = alles;
+  initLinks();
+}
+let ALLES: any[] = [];
+// Bewerkmodus (alleen voor de eigenaar, alleen Nederlands): elke pagina draagt zijn eigen tekst als JSON; een knop verschijnt alleen als er een GitHub-sleutel in de browser staat
+const bewerkKnop = (l: any) => '<script type="application/json" id="hs-bron">' + JSON.stringify({ id: l.id, name: l.name, text: l.text || "", listen: l.listen || "" }).replace(/</g, "<") + '</script>' +
   '<script>try{if(localStorage.getItem("hs_token")){var m=document.querySelector("main.blad");if(m){var a=document.createElement("a");a.href=document.querySelector("meta[name=sor-root]").content+"/encyclopedie/bewerk.html?id="+encodeURIComponent("' + l.id + '");a.textContent="✎ Bewerk deze pagina";a.style.cssText="float:right;font:600 13px Inter,sans-serif;padding:4px 10px;border:1px solid currentColor;border-radius:6px;text-decoration:none";m.insertBefore(a,m.firstChild)}}}catch(e){}</script>';
-for (const l of L) Deno.writeTextFileSync(OUT + l.id + ".html", lemmaPage(l).replace("</body>", bewerkKnop(l) + "</body>"));
-Deno.writeTextFileSync(OUT + "bewerk.html", bewerkPagina());
-// voor de sitemap (seo.ts): hoofdpagina, A-Z en alle lemma's die geen beginnetje zijn
-Deno.writeTextFileSync(W + "encyclopedie/data/sitemap.json", JSON.stringify(["index.html", "alle.html", ...L.filter((l) => !l.stub).map((l) => l.id + ".html")]));
-console.log("geschreven:", L.length, "lemma-pagina's + hoofdpagina + A-Z in", OUT);
+
+for (const taal of ["nl", "en"] as Taal[]) {
+  init(taal);
+  const OUT = OUTDIR(taal);
+  // Oude pagina's weg, foto's (img/) blijven staan
+  Deno.mkdirSync(OUT, { recursive: true });
+  for (const ty of Object.keys(TYPE)) { try { Deno.removeSync(OUT + ty, { recursive: true }); } catch { /* eerste keer */ } Deno.mkdirSync(OUT + ty, { recursive: true }); }
+  if (taal === "nl") Deno.writeTextFileSync(OUT + "enc.css", CSS);
+  Deno.writeTextFileSync(OUT + "index.html", hoofdpagina());
+  Deno.writeTextFileSync(OUT + "alle.html", allePagina());
+  // zoeklijst: in het Engels ook de lemma's zonder Engelse pagina (vierde waarde 1 = link naar de Nederlandse pagina)
+  Deno.writeTextFileSync(OUT + "zoek.json", JSON.stringify(ALLES.map((l) => taal === "en" && !GEBOUWD.has(l.id) ? [l.id, l.name, label(l), 1] : [l.id, l.name, label(l)])));
+  for (const l of L) Deno.writeTextFileSync(OUT + l.id + ".html", lemmaPage(l).replace("</body>", (taal === "nl" ? bewerkKnop(l) : "") + "</body>"));
+  if (taal === "nl") Deno.writeTextFileSync(OUT + "bewerk.html", bewerkPagina());
+  // voor de sitemap: hoofdpagina, A-Z en alle lemma's die geen beginnetje zijn
+  Deno.writeTextFileSync(ED + "data/sitemap" + (taal === "en" ? "-en" : "") + ".json", JSON.stringify(["index.html", "alle.html", ...L.filter((l) => !l.stub).map((l) => l.id + ".html")]));
+  console.log(taal, "geschreven:", L.length, "lemma-pagina's + hoofdpagina + A-Z in", OUT);
+}

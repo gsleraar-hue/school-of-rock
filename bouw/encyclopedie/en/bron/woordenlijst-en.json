@@ -1,0 +1,2226 @@
+{
+ "names": {
+  "begrip/12-maten-blues": "12-bar blues",
+  "begrip/5-4-maat": "5/4 time",
+  "begrip/aaba": "AABA",
+  "begrip/aacm": "AACM",
+  "begrip/adt": "ADT",
+  "begrip/afrofuturisme": "Afrofuturism",
+  "begrip/akkoordenschema": "Chord changes",
+  "begrip/algoritme": "Algorithm",
+  "begrip/anempathische-muziek": "Anempathetic music",
+  "begrip/aor": "AOR",
+  "begrip/arpeggio": "Arpeggio",
+  "begrip/atelier": "Atelier system",
+  "begrip/auteurstheorie": "Auteur theory",
+  "begrip/babyboom": "Baby boom",
+  "begrip/backbeat": "Backbeat",
+  "begrip/backstagemusical": "Backstage musical",
+  "begrip/bandmanipulatie": "Tape manipulation",
+  "begrip/bedroom-producer": "Bedroom producer",
+  "begrip/biwa": "Biwa",
+  "begrip/bladmuziek": "Sheet music",
+  "begrip/blaxploitation": "Blaxploitation",
+  "begrip/blockbuster": "Blockbuster",
+  "begrip/blokgolf": "Square wave",
+  "begrip/blue-note": "Blue note",
+  "begrip/blue-notes": "Blue notes",
+  "begrip/bourdon": "Drone (bourdon)",
+  "begrip/bouzouki": "Bouzouki",
+  "begrip/bpm": "BPM",
+  "begrip/braam": "Braam",
+  "begrip/brassband": "Brass band",
+  "begrip/break": "Break",
+  "begrip/british-invasion": "British Invasion",
+  "begrip/bronmuziek": "Source music",
+  "begrip/call-and-response": "Call-and-response",
+  "begrip/canon": "Canon",
+  "begrip/cantopop": "Cantopop",
+  "begrip/catacombe-periode": "Catacomb period",
+  "begrip/celesta": "Celesta",
+  "begrip/chiptune": "Chiptune",
+  "begrip/chopped-and-screwed": "Chopped and screwed",
+  "begrip/chorus": "Chorus",
+  "begrip/chromatiek": "Chromaticism",
+  "begrip/cimbalom": "Cimbalom",
+  "begrip/clave": "Clave",
+  "begrip/click-track": "Click track",
+  "begrip/cluster": "Cluster",
+  "begrip/collectieve-improvisatie": "Collective improvisation",
+  "begrip/coltrane-changes": "Coltrane changes",
+  "begrip/compilatiepartituur": "Compilation score",
+  "begrip/compilatiescore": "Compilation score",
+  "begrip/conceptalbum": "Concept album",
+  "begrip/confessioneel": "Confessional",
+  "begrip/contrafact": "Contrafact",
+  "begrip/contrapunt": "Counterpoint",
+  "begrip/counterculture": "Counterculture",
+  "begrip/credit": "Credit",
+  "begrip/cubop": "Cubop",
+  "begrip/cue-sheet": "Cue sheet",
+  "begrip/cutting-session": "Cutting session",
+  "begrip/diaspora": "Diaspora",
+  "begrip/dilla-feel": "Dilla-feel",
+  "begrip/distortion-fuzz": "Distortion / fuzz",
+  "begrip/diy": "DIY",
+  "begrip/downtempo": "Downtempo",
+  "begrip/drone": "Drone",
+  "begrip/drop": "Drop",
+  "begrip/drop-d": "Drop-D",
+  "begrip/drumcomputer": "Drum machine",
+  "begrip/elementopnemer": "Pickup",
+  "begrip/epic-music": "Epic music",
+  "begrip/erhu": "Erhu",
+  "begrip/fictieve-componist": "Fictional composer",
+  "begrip/flugelhorn": "Flugelhorn",
+  "begrip/fm-synthese": "FM synthesis",
+  "begrip/folkproces": "Folk process",
+  "begrip/four-on-the-floor": "Four-on-the-floor",
+  "begrip/franchise-sound": "Franchise-sound",
+  "begrip/frontline": "Frontline",
+  "begrip/fusion": "Fusion",
+  "begrip/geluidschip": "Sound chip",
+  "begrip/gender-bending": "Gender bending",
+  "begrip/gesynchroniseerde-partituur": "Synchronized score",
+  "begrip/giallo": "Giallo",
+  "begrip/gitaarsynthesizer": "Guitar synthesizer",
+  "begrip/growl": "Growl",
+  "begrip/guajeo": "Guajeo",
+  "begrip/gypsy-jazz": "Gypsy jazz",
+  "begrip/harmolodics": "Harmolodics",
+  "begrip/head": "Head",
+  "begrip/head-arrangement": "Head arrangement",
+  "begrip/hemiool": "Hemiola",
+  "begrip/hi-nrg": "Hi-NRG",
+  "begrip/hidden-track": "Hidden track",
+  "begrip/hook": "Hook",
+  "begrip/hurry-misterioso-agitato": "Hurry, misterioso, agitato",
+  "begrip/hybride-score": "Hybrid score",
+  "begrip/i-v-vi-iv": "I-V-vi-IV",
+  "begrip/i-want-lied": "'I want' song",
+  "begrip/indiefilm": "Indie film",
+  "begrip/instant-composing": "Instant composing",
+  "begrip/interactieve-muziek": "Interactive music",
+  "begrip/jamsessie": "Jam session",
+  "begrip/jazz-kissa": "Jazz kissa",
+  "begrip/jeugdcultuur": "Youth culture",
+  "begrip/jrpg": "JRPG",
+  "begrip/keltische-klanken": "Celtic sounds",
+  "begrip/kinothek": "Kinothek",
+  "begrip/la-pompe": "La pompe",
+  "begrip/leidmotief": "Leitmotif",
+  "begrip/les-six": "Les Six",
+  "begrip/leslie": "Leslie",
+  "begrip/loop": "Loop",
+  "begrip/m-base": "M-Base",
+  "begrip/magisch-realisme": "Magical realism",
+  "begrip/main-title": "Main title",
+  "begrip/marabi": "Marabi",
+  "begrip/masters": "Masters",
+  "begrip/mickey-mousing": "Mickey Mousing",
+  "begrip/modale-harmonie": "Modal harmony",
+  "begrip/modulatie": "Modulation",
+  "begrip/modus": "Mode",
+  "begrip/montage": "Montage",
+  "begrip/motorik": "Motorik",
+  "begrip/mp3": "MP3",
+  "begrip/music-director": "Music director",
+  "begrip/musique-concrete": "Musique concrète",
+  "begrip/musique-d-ameublement": "Musique d'ameublement",
+  "begrip/nasynchroniseren": "Dubbing (post-synchronization)",
+  "begrip/neorealisme": "Neorealism",
+  "begrip/neotraditionalisme": "Neotraditionalism",
+  "begrip/newman-sound": "Newman-sound",
+  "begrip/noh-en-gagaku": "Noh and gagaku",
+  "begrip/nonet": "Nonet",
+  "begrip/on-the-one": "On the one",
+  "begrip/ondes-martenot": "Ondes Martenot",
+  "begrip/one-drop": "One drop",
+  "begrip/open-kwinten": "Open fifths",
+  "begrip/open-stemming": "Open tuning",
+  "begrip/orkestrator": "Orchestrator",
+  "begrip/oscillator": "Oscillator",
+  "begrip/ostinato": "Ostinato",
+  "begrip/ouverture-en-pauzemuziek": "Overture and intermission music",
+  "begrip/overdub": "Overdub",
+  "begrip/parallelle-cinema": "Parallel cinema",
+  "begrip/payola": "Payola",
+  "begrip/peer-to-peer": "Peer-to-peer",
+  "begrip/pentatoniek": "Pentatonic scale",
+  "begrip/playback": "Playback",
+  "begrip/playbackzanger": "Playback singer",
+  "begrip/poetisch-realisme": "Poetic realism",
+  "begrip/poppodium": "Pop venue",
+  "begrip/postproductie": "Post-production",
+  "begrip/powerballad": "Power ballad",
+  "begrip/powerchord": "Power chord",
+  "begrip/pre-chorus": "Pre-chorus",
+  "begrip/prestige-tv": "Prestige TV",
+  "begrip/producer": "Producer",
+  "begrip/publishing": "Publishing",
+  "begrip/quality-control": "Quality control",
+  "begrip/radioformat": "Radio format",
+  "begrip/raga": "Raga",
+  "begrip/rare-groove": "Rare groove",
+  "begrip/recitatief": "Recitative",
+  "begrip/rhythm-changes": "Rhythm changes",
+  "begrip/riddim": "Riddim",
+  "begrip/riff": "Riff",
+  "begrip/ronroco": "Ronroco",
+  "begrip/rude-boys": "Rude boys",
+  "begrip/sample": "Sample",
+  "begrip/sampler": "Sampler",
+  "begrip/sampling": "Sampling",
+  "begrip/scat": "Scat",
+  "begrip/scratchen": "Scratching",
+  "begrip/second-line": "Second line",
+  "begrip/sectie": "Section",
+  "begrip/sequencer": "Sequencer",
+  "begrip/shell-voicing": "Shell voicing",
+  "begrip/silly-symphonies": "Silly Symphonies",
+  "begrip/sirtaki": "Sirtaki",
+  "begrip/ska": "Ska",
+  "begrip/slidegitaar": "Slide guitar",
+  "begrip/socialistisch-realisme": "Socialist realism",
+  "begrip/solid-body": "Solid body",
+  "begrip/song-plugger": "Song plugger",
+  "begrip/sounddesign": "Sounddesign",
+  "begrip/spiritual-jazz": "Spiritual jazz",
+  "begrip/stil-luid-dynamiek": "Quiet-loud dynamics",
+  "begrip/strain": "Strain",
+  "begrip/streaming": "Streaming",
+  "begrip/stride": "Stride",
+  "begrip/studiosysteem": "Studio system",
+  "begrip/subcultuur": "Subculture",
+  "begrip/subtractieve-synthese": "Subtractive synthesis",
+  "begrip/suite": "Suite",
+  "begrip/superproducer": "Superproducer",
+  "begrip/swing": "Swing",
+  "begrip/swing-achtsten": "Swung eighths",
+  "begrip/syncope": "Syncopation",
+  "begrip/synthesizer": "Synthesizer",
+  "begrip/tableau": "Tableau",
+  "begrip/talkie": "Talkie",
+  "begrip/talking-drum": "Talking drum",
+  "begrip/tapeloop": "Tapeloop",
+  "begrip/theaterorgel": "Theatre organ",
+  "begrip/thematische-improvisatie": "Thematic improvisation",
+  "begrip/titelsong": "Title song",
+  "begrip/tokusatsu": "Tokusatsu",
+  "begrip/topliner": "Topliner",
+  "begrip/tremolo": "Tremolo",
+  "begrip/tritonus": "Tritone",
+  "begrip/tritonus-substitutie": "Tritone substitution",
+  "begrip/tsuzumi": "Tsuzumi",
+  "begrip/tv-tune": "Tv-tune",
+  "begrip/twaalfmatenblues": "12-bar blues",
+  "begrip/twaalftoonstechniek": "Twelve-tone technique",
+  "begrip/twaalftoontechniek": "Twelve-tone technique",
+  "begrip/twanggitaar": "Twang guitar",
+  "begrip/underscore": "Underscore",
+  "begrip/unisono": "Unison",
+  "begrip/varispeed": "Varispeed",
+  "begrip/verticale-montage": "Vertical montage",
+  "begrip/vitaphone": "Vitaphone",
+  "begrip/vraag-en-antwoord": "Question and answer",
+  "begrip/vrije-improvisatie": "Free improvisation",
+  "begrip/wah-wah": "Wah-wah",
+  "begrip/wuxia": "Wuxia",
+  "begrip/young-lions": "Young Lions",
+  "genre/2-tone": "2 Tone",
+  "genre/8-bit-en-chiptune": "8-bit and chiptune",
+  "genre/aacm-en-chicago-avant-garde": "AACM and the Chicago avant-garde",
+  "genre/aboriginal-muziek-en-de-didgeridoo": "Aboriginal music and the didgeridoo",
+  "genre/acid-house": "Acid house",
+  "genre/acid-jazz": "Acid jazz",
+  "genre/afrobeat": "Afrobeat",
+  "genre/afrobeats": "Afrobeats",
+  "genre/alternatieve-rock": "Alternative rock",
+  "genre/amapiano": "Amapiano",
+  "genre/ambient-drone-en-nieuw-modernisme": "Ambient, drone and new modernism",
+  "genre/americana": "Americana",
+  "genre/amerikaanse-indiefilm": "American indie film",
+  "genre/andalusische-muziek": "Andalusian music",
+  "genre/andesmuziek": "Andean music",
+  "genre/anime": "Anime",
+  "genre/appalachian-folk-mountain-music": "Appalachian folk (mountain music)",
+  "genre/arabische-klassieke-muziek-maqam": "Arabic classical music (maqam)",
+  "genre/armeense-duduk": "Armenian duduk",
+  "genre/ars-nova": "Ars nova",
+  "genre/art-rock": "Art rock",
+  "genre/atonaliteit-en-twaalftoonsmuziek": "Atonality and twelve-tone music",
+  "genre/azerbeidzjaanse-mugham": "Azerbaijani mugham",
+  "genre/baile-funk": "Baile funk",
+  "genre/balkanbrass": "Balkan brass",
+  "genre/barbershop": "Barbershop",
+  "genre/bebop": "Bebop",
+  "genre/bel-canto-en-italiaanse-opera": "Bel canto and Italian opera",
+  "genre/berlijnse-techno": "Berlin techno",
+  "genre/bhangra": "Bhangra",
+  "genre/big-beat": "Big beat",
+  "genre/bigband": "Big band",
+  "genre/blaxploitation-soul-en-funk": "Blaxploitation: soul and funk",
+  "genre/bluegrass": "Bluegrass",
+  "genre/bluesrock": "Blues rock",
+  "genre/boerenrock": "Boerenrock",
+  "genre/bollywood-pop-en-disco-r-d-burman-tijdperk": "Bollywood pop and disco (R.D. Burman era)",
+  "genre/bond-en-spionagesound": "Bond and spy sound",
+  "genre/boogie-woogie": "Boogie-woogie",
+  "genre/bossa-nova": "Bossa nova",
+  "genre/boybands-en-girlbands": "Boy bands and girl groups",
+  "genre/brill-building-en-girlgroups": "Brill Building and girl groups",
+  "genre/british-eurobeat-stock-aitken-waterman": "British Eurobeat (Stock Aitken Waterman)",
+  "genre/britpop": "Britpop",
+  "genre/britse-beat-en-british-invasion": "British beat and the British Invasion",
+  "genre/britse-concertcomponisten-denham-en-ealing": "British concert composers (Denham and Ealing)",
+  "genre/britse-en-ierse-volksmuziek": "British and Irish folk music",
+  "genre/britse-kostuum-en-literatuurfilm": "British costume drama and literary adaptation",
+  "genre/bulgaarse-vrouwenzang": "Bulgarian women's singing",
+  "genre/byzantijnse-kerkzang": "Byzantine chant",
+  "genre/ca-tru": "Ca trù",
+  "genre/calypso": "Calypso",
+  "genre/cantu-a-tenore": "Cantu a tenore",
+  "genre/cha-cha-cha": "Cha-cha-chá",
+  "genre/chanson": "Chanson",
+  "genre/chicago-blues": "Chicago blues",
+  "genre/chicago-jazz": "Chicago jazz",
+  "genre/chinese-cinema-hongkong-vijfde-generatie-en-wuxia": "Chinese cinema: Hong Kong, Fifth Generation and wuxia",
+  "genre/choro": "Choro",
+  "genre/city-pop": "City pop",
+  "genre/classic-blues": "Classic blues",
+  "genre/concerto-en-sonate": "Concerto and sonata",
+  "genre/congolese-rumba-en-soukous": "Congolese rumba and soukous",
+  "genre/cool-jazz-en-modale-jazz": "Cool Jazz and modal jazz",
+  "genre/country": "Country",
+  "genre/countryrock": "Country rock",
+  "genre/cumbia": "Cumbia",
+  "genre/dancehall": "Dancehall",
+  "genre/delta-blues": "Delta blues",
+  "genre/detroit-techno": "Detroit techno",
+  "genre/dialectpop-en-rock": "Dialect pop and rock",
+  "genre/disco": "Disco",
+  "genre/disco-en-synthpopscore": "Disco and synth-pop scores",
+  "genre/disney-en-klassieke-cartoon-mickey-mousing": "Disney and classic cartoons (Mickey Mousing)",
+  "genre/disney-renaissance": "Disney Renaissance",
+  "genre/doo-wop": "Doo-wop",
+  "genre/downtempo-lounge-en-chill-out": "Downtempo, lounge and chill-out",
+  "genre/drill": "Drill",
+  "genre/dub": "Dub",
+  "genre/dubstep": "Dubstep",
+  "genre/duitse-barok-en-bach": "German Baroque and Bach",
+  "genre/dutch-house": "Dutch house",
+  "genre/ecm-geluid": "ECM sound",
+  "genre/edm": "EDM",
+  "genre/electro": "Electro",
+  "genre/electroclash": "Electroclash",
+  "genre/elektronische-studio-en-musique-concrete": "Electronic studio and musique concrète",
+  "genre/emo": "Emo",
+  "genre/ethio-jazz": "Ethio-jazz",
+  "genre/ethiopische-kerkzang": "Ethiopian church chant",
+  "genre/eurodance": "Eurodance",
+  "genre/europese-arthouse-en-auteursscore": "European arthouse and auteur scores",
+  "genre/europese-kunstmuziek": "European art music",
+  "genre/europese-vrije-improvisatie": "European free improvisation",
+  "genre/fado": "Fado",
+  "genre/fantasy-epos-en-wereldbouw": "Fantasy epic and world-building",
+  "genre/film-d-art-de-eerste-originele-filmscore": "Film d'Art: the first original film score",
+  "genre/film-noir": "Film noir",
+  "genre/filmmusical": "Filmmusical",
+  "genre/filmmuziek-uit-bollywood": "Bollywood film music",
+  "genre/flamenco": "Flamenco",
+  "genre/folk-revival": "Folk revival",
+  "genre/folkrock": "Folk rock",
+  "genre/franco-vlaamse-polyfonie": "Franco-Flemish polyphony",
+  "genre/frans-poetisch-realisme-en-les-six": "French poetic realism and Les Six",
+  "genre/franse-barok": "French Baroque",
+  "genre/free-jazz": "Free jazz",
+  "genre/french-house": "French house",
+  "genre/funk": "Funk",
+  "genre/funkrock": "Funk rock",
+  "genre/fusion-en-jazzrock": "Fusion and jazz rock",
+  "genre/g-funk": "G-funk",
+  "genre/gabber-en-happy-hardcore": "Gabber and happy hardcore",
+  "genre/gagaku": "Gagaku",
+  "genre/gamelan": "Gamelan",
+  "genre/gangsta-rap": "Gangsta rap",
+  "genre/garage": "Garage",
+  "genre/garagerock": "Garage rock",
+  "genre/garagerock-revival": "Garage rock revival",
+  "genre/georgische-polyfonie": "Georgian polyphony",
+  "genre/giallo-en-italiaanse-horror": "Giallo and Italian horror",
+  "genre/glam-metal-en-stadionrock": "Glam metal and stadium rock",
+  "genre/glamrock": "Glam rock",
+  "genre/gnawa": "Gnawa",
+  "genre/golden-age-hiphop": "Golden age hip hop",
+  "genre/golden-age-symfonisch-hollywood-en-leitmotiv": "Golden Age: symphonic Hollywood and leitmotif",
+  "genre/gothic-rock": "Gothic rock",
+  "genre/gouden-eeuw-van-de-hindi-filmmuziek": "Golden age of Hindi film music",
+  "genre/gregoriaans": "Gregorian chant",
+  "genre/grime": "Grime",
+  "genre/griots-en-de-kora": "Griots and the kora",
+  "genre/grunge": "Grunge",
+  "genre/gypsy-jazz-jazz-manouche": "Gypsy jazz (jazz manouche)",
+  "genre/habanera": "Habanera",
+  "genre/hammer-horror-en-britse-genrefilm": "Hammer horror and British genre film",
+  "genre/hard-bop": "Hard bop",
+  "genre/hardcore-punk": "Hardcore punk",
+  "genre/hardrock-en-heavy-metal": "Hard rock and heavy metal",
+  "genre/hardstyle": "Hardstyle",
+  "genre/harlem-renaissance": "Harlem Renaissance",
+  "genre/hawaiaanse-slack-key-en-steelgitaar": "Hawaiian slack key and steel guitar",
+  "genre/heartland-rock": "Heartland rock",
+  "genre/heilig-minimalisme": "Holy minimalism",
+  "genre/het-nederlandstalige-lied": "Dutch-language song",
+  "genre/het-nieuwe-pianotrio": "The new piano trio",
+  "genre/highlife": "Highlife",
+  "genre/himene-tarava": "Himene tārava",
+  "genre/historisch-epos-en-sandalenfilm": "Historical epic and sword-and-sandal film",
+  "genre/hollywoodwestern": "Hollywood Western",
+  "genre/horror-synth-carpenter-school": "Horror synth (Carpenter school)",
+  "genre/house": "House",
+  "genre/hyperpop": "Hyperpop",
+  "genre/idm": "IDM",
+  "genre/ierse-traditionele-muziek": "Irish traditional music",
+  "genre/impressionisme": "Impressionism",
+  "genre/indiase-klassieke-muziek": "Indian classical music",
+  "genre/indiefolk": "Indiefolk",
+  "genre/indiepop-en-shoegaze": "Indie pop and shoegaze",
+  "genre/indopop": "Indopop",
+  "genre/indorock": "Indorock",
+  "genre/industrial": "Industrial",
+  "genre/industrial-en-elektronische-textuurscore": "Industrial and electronic texture scores",
+  "genre/inheemse-muziek-van-noord-amerika": "Native American music",
+  "genre/isicathamiya-en-zuid-afrikaanse-koren": "Isicathamiya and South African choirs",
+  "genre/italiaans-neorealisme": "Italian neorealism",
+  "genre/italiaanse-auteursfilm-fellini-visconti": "Italian auteur cinema (Fellini, Visconti)",
+  "genre/italo-disco": "Italo disco",
+  "genre/j-pop": "J-pop",
+  "genre/japanse-gouden-eeuw-en-tokusatsu": "Japanese golden age and tokusatsu",
+  "genre/japanse-jazz": "Japanese jazz",
+  "genre/japanse-nieuwe-golf-en-arthouse": "Japanese New Wave and arthouse",
+  "genre/jazz-in-film": "Jazz in film",
+  "genre/jazz-in-nederland": "Jazz in the Netherlands",
+  "genre/jazzfunk": "Jazz-funk",
+  "genre/jazzrap": "Jazz rap",
+  "genre/joik": "Joik",
+  "genre/jrpg-en-orkestrale-japanse-gamemuziek": "JRPG and orchestral Japanese game music",
+  "genre/jump-blues": "Jump blues",
+  "genre/jungle-en-drum-and-bass": "Jungle and drum and bass",
+  "genre/k-pop": "K-pop",
+  "genre/kabuki-en-shamisen": "Kabuki and shamisen",
+  "genre/kansas-city-jazz": "Kansas City jazz",
+  "genre/karnatische-muziek": "Carnatic music",
+  "genre/keelzang-van-toeva-en-mongolie": "Throat singing of Tuva and Mongolia",
+  "genre/klankmassa-s-xenakis-ligeti-en-penderecki": "Sound masses: Xenakis, Ligeti and Penderecki",
+  "genre/klassieke-televisiemuziek": "Classic television music",
+  "genre/kleinkunst": "Kleinkunst",
+  "genre/klezmer": "Klezmer",
+  "genre/koreaanse-nieuwe-golf": "Korean New Wave",
+  "genre/kraftwerk-en-de-mens-machine": "Kraftwerk and the man-machine",
+  "genre/krautrock": "Krautrock",
+  "genre/krontjong": "Krontjong",
+  "genre/kulintang": "Kulintang",
+  "genre/laatromantiek": "Late Romanticism",
+  "genre/latin-jazz": "Latin jazz",
+  "genre/latin-trap": "Latin trap",
+  "genre/levenslied-en-smartlap": "Levenslied and smartlap",
+  "genre/live-begeleiding-bioscooppianist-organist-en-cue-sheets": "Live accompaniment: cinema pianists, organists and cue sheets",
+  "genre/lofi-hiphop": "Lo-fi hip hop",
+  "genre/madrigaal": "Madrigaal",
+  "genre/mambo": "Mambo",
+  "genre/maori-waiata-en-haka": "Māori waiata and haka",
+  "genre/mariachi-en-son-jarocho": "Mariachi and son jarocho",
+  "genre/marsmuziek-en-brassbands": "March music and brass bands",
+  "genre/mbira": "Mbira",
+  "genre/mento": "Mento",
+  "genre/merengue": "Merengue",
+  "genre/mesopotamie": "Mesopotamia",
+  "genre/minimal-music": "Minimal music",
+  "genre/minimal-music-in-film": "Minimal music in film",
+  "genre/minstrelshows": "Minstrel shows",
+  "genre/modale-jazz": "Modal jazz",
+  "genre/moderne-r-en-b": "Contemporary R&B",
+  "genre/modernisme-atonaliteit-en-avant-garde": "Modernism, atonality and avant-garde",
+  "genre/moog-en-de-eerste-synthesizerpop": "Moog and the first synthesizer pop",
+  "genre/moombahton": "Moombahton",
+  "genre/motown": "Motown",
+  "genre/muziek-van-papoea-nieuw-guinea": "Music of Papua New Guinea",
+  "genre/nationale-scholen": "Nationalist schools",
+  "genre/nederbeat": "Nederbeat",
+  "genre/nederhop": "Nederhop",
+  "genre/nederlandse-en-vlaamse-filmmuziek": "Dutch and Flemish film music",
+  "genre/nederlandse-trance": "Dutch trance",
+  "genre/nederpop": "Nederpop",
+  "genre/neo-soul": "Neo-soul",
+  "genre/neoclassicisme": "Neoclassicism",
+  "genre/neoprog": "Neo-prog",
+  "genre/neotraditionele-jazz-young-lions": "Neotraditional jazz (Young Lions)",
+  "genre/neue-deutsche-welle": "Neue Deutsche Welle",
+  "genre/new-hollywood": "New Hollywood",
+  "genre/new-jack-swing": "New jack swing",
+  "genre/new-orleans-jazz": "New Orleans jazz",
+  "genre/new-romantic": "New Romantic",
+  "genre/new-wave": "New wave",
+  "genre/nieuwe-jazz-uit-los-angeles": "New jazz from Los Angeles",
+  "genre/nieuwe-latijns-amerikaanse-cinema": "New Latin American cinema",
+  "genre/nieuwe-londense-jazz": "New London jazz",
+  "genre/no": "Noh",
+  "genre/noorse-hardingfele": "Norwegian Hardanger fiddle",
+  "genre/northern-soul": "Northern soul",
+  "genre/nouvelle-vague": "Nouvelle vague",
+  "genre/nu-jazz": "Nu jazz",
+  "genre/nu-metal": "Nu metal",
+  "genre/nwobhm-en-thrash-metal": "NWOBHM and thrash metal",
+  "genre/oost-europese-nieuwe-golven": "Eastern European New Waves",
+  "genre/operette-en-de-wals": "Operetta and the waltz",
+  "genre/organum-en-de-notre-dameschool": "Organum and the Notre-Dame school",
+  "genre/ottomaanse-klassieke-muziek": "Ottoman classical music",
+  "genre/oud-china-klokken-en-hofmuziek": "Ancient China: bells and court music",
+  "genre/oud-egypte": "Ancient Egypt",
+  "genre/oud-griekenland": "Ancient Greece",
+  "genre/palestrina-en-de-romeinse-school": "Palestrina and the Roman school",
+  "genre/pansori": "Pansori",
+  "genre/parallelle-cinema-bengalen": "Parallel cinema (Bengal)",
+  "genre/peking-opera": "Peking opera",
+  "genre/perzische-klassieke-muziek": "Persian classical music",
+  "genre/philly-soul": "Philly soul",
+  "genre/pinpeat": "Pinpeat",
+  "genre/pixar-en-digitale-animatie": "Pixar and digital animation",
+  "genre/polyfonie-van-centraal-afrika": "Central African polyphony",
+  "genre/poolse-jazz": "Polish jazz",
+  "genre/pop-uit-stockholm-max-martin": "Stockholm pop (Max Martin)",
+  "genre/popjazz-lounge-en-crime-tv-mancini-school": "Pop jazz, lounge and crime TV (Mancini school)",
+  "genre/poppunk": "Pop punk",
+  "genre/popsong-rock-en-compilatiescore": "Pop song, rock and compilation score",
+  "genre/postpunk": "Postpunk",
+  "genre/powerpop": "Powerpop",
+  "genre/prehistorische-muziek": "Prehistoric music",
+  "genre/prestige-tv-en-streaming": "Prestige TV and streaming",
+  "genre/progressieve-rock": "Progressive rock",
+  "genre/psalmen-en-tempelzang": "Psalms and temple chant",
+  "genre/psychedelische-rock": "Psychedelic rock",
+  "genre/punk": "Punk",
+  "genre/purcell-handel-en-het-oratorium": "Purcell, Handel and the oratorio",
+  "genre/qawwali": "Qawwali",
+  "genre/radiophonic-workshop": "Radiophonic Workshop",
+  "genre/raga-rock": "Raga rock",
+  "genre/ragtime": "Ragtime",
+  "genre/rai": "Raï",
+  "genre/rave": "Rave",
+  "genre/rebetiko": "Rebetiko",
+  "genre/reggaeton": "Reggaeton",
+  "genre/remote-control-hybride-orkest-en-elektronica": "Remote Control: hybrid orchestra and electronics",
+  "genre/rhythm-and-blues": "Rhythm and blues",
+  "genre/riot-grrrl": "Riot grrrl",
+  "genre/ritme-als-motor-stravinsky-en-bartok": "Rhythm as engine: Stravinsky and Bartók",
+  "genre/rock-in-het-nederlands": "Rock in Dutch",
+  "genre/rock-n-roll": "Rock 'n' roll",
+  "genre/rockabilly": "Rockabilly",
+  "genre/romantiek": "Romanticism",
+  "genre/romeinse-muziek": "Roman music",
+  "genre/salsa": "Salsa",
+  "genre/samba": "Samba",
+  "genre/schlager": "Schlager",
+  "genre/serialisme": "Serialism",
+  "genre/shashmaqam": "Shashmaqam",
+  "genre/singer-songwriters": "Singer-songwriters",
+  "genre/ska-rocksteady-en-reggae": "Ska, rocksteady and reggae",
+  "genre/skiffle": "Skiffle",
+  "genre/smooth-jazz": "Smooth jazz",
+  "genre/soefimuziek": "Sufi music",
+  "genre/softrock-en-aor": "Soft rock and AOR",
+  "genre/son": "Son",
+  "genre/soul": "Soul",
+  "genre/soul-jazz": "Soul jazz",
+  "genre/southern-hiphop-en-crunk": "Southern hip hop and crunk",
+  "genre/southern-rock": "Southern rock",
+  "genre/sovjetfilmmuziek": "Soviet film music",
+  "genre/spaghettiwestern": "Spaghetti Western",
+  "genre/spectralisme": "Spectralism",
+  "genre/spirituals-en-gospel": "Spirituals and gospel",
+  "genre/spirituele-jazz": "Spiritual jazz",
+  "genre/stax-en-memphis-soul": "Stax and Memphis soul",
+  "genre/streamingpop": "Streaming pop",
+  "genre/stride-piano": "Stride piano",
+  "genre/studio-ghibli": "Studio Ghibli",
+  "genre/superhelden-en-franchise-sound": "Superheroes and franchise sound",
+  "genre/surfrock": "Surf rock",
+  "genre/suspense-en-psychologische-thriller-hitchcock": "Suspense and psychological thriller (Hitchcock)",
+  "genre/sutartines": "Sutartinės",
+  "genre/swing-en-big-band": "Swing and big band",
+  "genre/symfonische-metal": "Symphonic metal",
+  "genre/symfonische-rock": "Symphonic rock",
+  "genre/symfonische-stommefilmscore-hollywood-en-weimar": "Symphonic silent film scores (Hollywood and Weimar)",
+  "genre/symfonische-terugkeer-williams-tijdperk": "Symphonic revival (Williams era)",
+  "genre/synthdisco-en-hi-nrg": "Synth disco and Hi-NRG",
+  "genre/synthesizerorkest-ambient-en-new-age": "Synthesizer orchestra, ambient and new age",
+  "genre/synthpop": "Synthpop",
+  "genre/synthwave": "Synthwave",
+  "genre/synthwave-revival": "Synthwave-revival",
+  "genre/tamil-en-zuid-indiase-filmmuziek": "Tamil and South Indian film music",
+  "genre/tango": "Tango",
+  "genre/tarab-de-egyptische-gouden-eeuw": "Tarab: the Egyptian golden age",
+  "genre/thaise-piphat": "Thai piphat",
+  "genre/theremin-tape-en-elektronische-pioniers": "Theremin, tape and electronic pioneers",
+  "genre/third-stream": "Third stream",
+  "genre/tin-pan-alley": "Tin Pan Alley",
+  "genre/toeval-en-stilte-john-cage": "Chance and silence: John Cage",
+  "genre/trailermuziek-en-epic-music": "Trailer music and epic music",
+  "genre/trance": "Trance",
+  "genre/trap": "Trap",
+  "genre/triphop": "Trip hop",
+  "genre/troubadours-en-trouveres": "Troubadours and trouvères",
+  "genre/uk-garage": "UK garage",
+  "genre/vaporwave": "Vaporwave",
+  "genre/vedische-zang": "Vedic chant",
+  "genre/venetiaanse-meerkorigheid": "Venetian polychoral style",
+  "genre/verbunkos-en-roma-orkesten": "Verbunkos and Roma orchestras",
+  "genre/vocale-jazz": "Vocal jazz",
+  "genre/vroege-geluidsfilm-talkies": "Early sound film (talkies)",
+  "genre/vroege-hiphop": "Early hip hop",
+  "genre/vroege-opera": "Early opera",
+  "genre/vroege-synthesizerscores-moog-berlijnse-school-vangelis": "Early synthesizer scores (Moog, Berlin School, Vangelis)",
+  "genre/wagner-en-het-muziekdrama": "Wagner and music drama",
+  "genre/weense-klassiek": "Viennese Classicism",
+  "genre/west-afrikaanse-muziektradities": "West African music traditions",
+  "genre/west-coast-jazz": "West Coast jazz",
+  "genre/westerse-orkestrale-en-indie-gamemuziek": "Western orchestral and indie game music",
+  "genre/work-songs-en-field-hollers": "Work songs and field hollers",
+  "genre/znamenny-gezang": "Znamenny chant",
+  "genre/zuid-afrikaanse-jazz": "South African jazz",
+  "genre/zweedse-pop-abba": "Swedish pop (ABBA)",
+  "techniek/8-track": "8-track",
+  "techniek/ableton": "Ableton Live",
+  "techniek/auto-tune": "Auto-Tune",
+  "techniek/beatsampler": "Beat samplers (SP-1200, MPC)",
+  "techniek/bladmuziek": "Tin Pan Alley sheet music",
+  "techniek/breakbeat": "Breakbeat sampling (Amen break)",
+  "techniek/cassette": "Compact cassette",
+  "techniek/cd": "Compact disc (CD)",
+  "techniek/daw": "Pro Tools and the DAW",
+  "techniek/drumstel": "Drum kit with bass drum pedal",
+  "techniek/dub": "The mixing desk as instrument (dub)",
+  "techniek/dx7": "Yamaha DX7",
+  "techniek/elektrische-gitaar": "Electric guitar",
+  "techniek/elektrische-opname": "Electrical recording and the microphone",
+  "techniek/fairlight": "Fairlight CMI",
+  "techniek/fl-studio": "FL Studio (FruityLoops)",
+  "techniek/fonograaf": "Phonograph",
+  "techniek/fuzz": "Fuzz pedal",
+  "techniek/gated-reverb": "Gated reverb",
+  "techniek/grammofoon": "Gramophone and the 78 rpm record",
+  "techniek/hammond": "Hammond organ and Leslie",
+  "techniek/ipod-itunes": "iPod and the iTunes Store",
+  "techniek/jukebox": "Jukebox",
+  "techniek/les-paul": "Gibson Les Paul",
+  "techniek/linndrum": "Linn LM-1",
+  "techniek/lp": "Long-playing record (LP)",
+  "techniek/magneetband": "Magnetic tape",
+  "techniek/meersporen": "Multitrack recording",
+  "techniek/mellotron": "Mellotron",
+  "techniek/midi": "MIDI",
+  "techniek/minimoog": "Minimoog",
+  "techniek/moog": "Moog-synthesizer",
+  "techniek/mp3-napster": "MP3 and Napster",
+  "techniek/mtv": "MTV and the music video",
+  "techniek/pianola": "Player piano and piano roll",
+  "techniek/plaatgalm": "Plate reverb (EMT 140)",
+  "techniek/portastudio": "TASCAM Portastudio",
+  "techniek/precision-bass": "Fender Precision Bass",
+  "techniek/prophet-5": "Sequential Prophet-5",
+  "techniek/radio": "Radio",
+  "techniek/rhodes": "Fender Rhodes",
+  "techniek/ritmebox": "Drum machine",
+  "techniek/saxofoon": "Saxophone",
+  "techniek/single": "45 rpm single",
+  "techniek/slapback-echo": "Slapback echo",
+  "techniek/soundcloud": "SoundCloud",
+  "techniek/soundsystem": "Soundsystem",
+  "techniek/spotify": "Streaming (Spotify)",
+  "techniek/steelgitaar": "Steel guitar: lap steel and pedal steel",
+  "techniek/steelpan": "Steelpan",
+  "techniek/stereo": "Stereo",
+  "techniek/stratocaster": "Fender Stratocaster",
+  "techniek/studio-instrument": "The studio as instrument",
+  "techniek/talkbox": "Talk box",
+  "techniek/tb-303": "Roland TB-303",
+  "techniek/technics": "Technics SL-1200 and scratching",
+  "techniek/telecaster": "Fender Telecaster",
+  "techniek/theremin": "Theremin",
+  "techniek/tiktok": "TikTok",
+  "techniek/tr-808": "Roland TR-808",
+  "techniek/tr-909": "Roland TR-909",
+  "techniek/transistorradio": "Transistor radio",
+  "techniek/versterker": "Amplifier and overdrive",
+  "techniek/vocoder": "Vocoder",
+  "techniek/wah-wah": "Wah-wah pedal",
+  "techniek/walkman": "Sony Walkman",
+  "techniek/wall-of-sound": "Wall of Sound",
+  "techniek/youtube": "YouTube"
+ },
+ "subs": {
+  "Caribisch & Latijns": "Caribbean & Latin",
+  "Filmmuziek": "Film music",
+  "Jazz": "Jazz",
+  "Inheems Amerika en Oceanië": "Indigenous Americas and Oceania",
+  "Elektronisch & dance": "Electronic & dance",
+  "Afrika & Azië": "Africa & Asia",
+  "Rock": "Rock",
+  "Midden-Oosten en Noord-Afrika": "Middle East and North Africa",
+  "Wortels": "Roots",
+  "Volksmuziek van Europa": "Folk music of Europe",
+  "Middeleeuwen en renaissance": "Middle Ages and Renaissance",
+  "Moderne kunstmuziek": "Modern art music",
+  "Pop & songwriting": "Pop & songwriting",
+  "Classicisme en romantiek": "Classicism and Romanticism",
+  "Country & folk": "Country & folk",
+  "Oost- en Zuidoost-Azië": "East and Southeast Asia",
+  "Barok": "Baroque",
+  "R&B, soul & funk": "R&B, soul & funk",
+  "Hiphop": "Hip hop",
+  "Avant-garde & studio": "Avant-garde & studio",
+  "Afrikaanse tradities": "African traditions",
+  "Zuid- en Centraal-Azië": "South and Central Asia",
+  "Oudheid": "Antiquity",
+  "Dragers & verspreiding": "Formats & distribution",
+  "Opnemen & studio": "Recording & studio",
+  "Elektronische klank": "Electronic sound",
+  "Instrumenten & versterking": "Instruments & amplification"
+ },
+ "places": {
+  "Antwerpen": "Antwerp",
+  "New York": "New York",
+  "Oslo": "Oslo",
+  "Chennai": "Chennai",
+  "New York → Hollywood": "New York → Hollywood",
+  "Stockholm": "Stockholm",
+  "Chicago → New York": "Chicago → New York",
+  "Kaapstad": "Cape Town",
+  "Amsterdam": "Amsterdam",
+  "Namwon → Seoel": "Namwon → Seoul",
+  "Versailles": "Versailles",
+  "Brazilië → New York": "Brazil → New York",
+  "Tokio": "Tokyo",
+  "New York → Burbank": "New York → Burbank",
+  "Los Angeles": "Los Angeles",
+  "Entoto (Addis Abeba)": "Entoto (Addis Ababa)",
+  "Rome": "Rome",
+  "Parijs → Hollywood": "Paris → Hollywood",
+  "Niafunké": "Niafunké",
+  "Detroit → Los Angeles": "Detroit → Los Angeles",
+  "Lissabon": "Lisbon",
+  "Chicago": "Chicago",
+  "Delhi": "Delhi",
+  "Londen": "London",
+  "Wenen": "Vienna",
+  "Praag": "Prague",
+  "Rio de Janeiro": "Rio de Janeiro",
+  "Ospedale della Pietà, Venetië": "Ospedale della Pietà, Venice",
+  "Memphis": "Memphis",
+  "Leiden": "Leiden",
+  "Pittsburgh → New York": "Pittsburgh → New York",
+  "Toledo → New York": "Toledo → New York",
+  "Parijs": "Paris",
+  "Tallinn": "Tallinn",
+  "Pergamino → Cerro Colorado": "Pergamino → Cerro Colorado",
+  "Orlando": "Orlando",
+  "Venetië": "Venice",
+  "Manly (Sydney) → Londen": "Manly (Sydney) → London",
+  "Kansas City → Los Angeles": "Kansas City → Los Angeles",
+  "Faizabad → Lucknow": "Faizabad → Lucknow",
+  "Boedapest": "Budapest",
+  "Detroit → New York": "Detroit → New York",
+  "Chattanooga → New York": "Chattanooga → New York",
+  "Houston": "Houston",
+  "Ariton (Alabama)": "Ariton (Alabama)",
+  "Chester (Pennsylvania)": "Chester (Pennsylvania)",
+  "Baltimore → New York": "Baltimore → New York",
+  "Panama → New York": "Panama → New York",
+  "Varanasi": "Varanasi",
+  "Davenport → Chicago": "Davenport → Chicago",
+  "Vlissingen": "Vlissingen",
+  "Duluth": "Duluth",
+  "Vladičin Han → Guča": "Vladičin Han → Guča",
+  "Sayreville (New Jersey)": "Sayreville (New Jersey)",
+  "Batavia (Jakarta)": "Batavia (Jakarta)",
+  "McComb": "McComb",
+  "Long Branch": "Long Branch",
+  "Harlem, New York": "Harlem, New York",
+  "San Fernando (Cádiz)": "San Fernando (Cádiz)",
+  "Tampa → New York": "Tampa → New York",
+  "Kansas City → Burbank": "Kansas City → Burbank",
+  "Jackson → New York": "Jackson → New York",
+  "Miami → New York": "Miami → New York",
+  "Havana → New York": "Havana → New York",
+  "Los Angeles → New York": "Los Angeles → New York",
+  "Londen → Los Angeles": "London → Los Angeles",
+  "Oklahoma City → New York": "Oklahoma City → New York",
+  "Iowa → Los Angeles": "Iowa → Los Angeles",
+  "Kansas City → New York": "Kansas City → New York",
+  "Mexico-Stad": "Mexico City",
+  "Tessala (Algerije)": "Tessala (Algeria)",
+  "Los Angeles → Amsterdam": "Los Angeles → Amsterdam",
+  "Chelsea, Massachusetts → New York": "Chelsea, Massachusetts → New York",
+  "Kaapstad → Londen": "Cape Town → London",
+  "Montreal → Santa Monica": "Montreal → Santa Monica",
+  "St. Louis": "St. Louis",
+  "Leipzig": "Leipzig",
+  "Mantua": "Mantua",
+  "Wilmington, Delaware": "Wilmington, Delaware",
+  "Coventry": "Coventry",
+  "St. Joseph → New York": "St. Joseph → New York",
+  "Kansas City": "Kansas City",
+  "Glasgow": "Glasgow",
+  "Pisa → Londen": "Pisa → London",
+  "San Francisco": "San Francisco",
+  "Wolverhampton → New York": "Wolverhampton → New York",
+  "Teplyk → New York": "Teplyk → New York",
+  "Philadelphia → Los Angeles": "Philadelphia → Los Angeles",
+  "St. Louis → New York": "St. Louis → New York",
+  "Liverpool": "Liverpool",
+  "Londen (BBC Radiophonic Workshop)": "London (BBC Radiophonic Workshop)",
+  "Los Angeles → Kopenhagen": "Los Angeles → Copenhagen",
+  "Sint-Petersburg → Hollywood": "Saint Petersburg → Hollywood",
+  "Gent": "Ghent",
+  "Staten Island (New York)": "Staten Island (New York)",
+  "Leningrad": "Leningrad",
+  "Los Angeles → Stockholm": "Los Angeles → Stockholm",
+  "Boston": "Boston",
+  "Compton": "Compton",
+  "Port Elizabeth → Londen": "Port Elizabeth → London",
+  "Accra": "Accra",
+  "Pittsburgh → Chicago": "Pittsburgh → Chicago",
+  "Albert Lea (Minnesota)": "Albert Lea (Minnesota)",
+  "Berlijn": "Berlin",
+  "Bergen": "Bergen",
+  "Athene": "Athens",
+  "Pontiac → New York": "Pontiac → New York",
+  "Tupelo": "Tupelo",
+  "Ripley": "Ripley",
+  "Los Angeles → Hilversum": "Los Angeles → Hilversum",
+  "Wenen → Hollywood": "Vienna → Hollywood",
+  "Montmartre, Parijs": "Montmartre, Paris",
+  "Portland → Boston": "Portland → Boston",
+  "Oosterhout": "Oosterhout",
+  "Beiroet": "Beirut",
+  "Rio de Janeiro → Los Angeles": "Rio de Janeiro → Los Angeles",
+  "Nice → Parijs (Montmartre)": "Nice → Paris (Montmartre)",
+  "Nijmegen": "Nijmegen",
+  "Burbank": "Burbank",
+  "Weimar": "Weimar",
+  "Berlijn → Hollywood": "Berlin → Hollywood",
+  "Brussel": "Brussels",
+  "Nieuwkoop": "Nieuwkoop",
+  "Beiroet → Parijs": "Beirut → Paris",
+  "Idaho → New York": "Idaho → New York",
+  "Parijs (en Ealing, Londen)": "Paris (and Ealing, London)",
+  "New York → Los Angeles": "New York → Los Angeles",
+  "Napels": "Naples",
+  "München → Los Angeles": "Munich → Los Angeles",
+  "San Marco, Venetië": "San Marco, Venice",
+  "Lonigo → Berlijn": "Lonigo → Berlin",
+  "Milaan": "Milan",
+  "Den Haag": "The Hague",
+  "New York (South Bronx)": "New York (South Bronx)",
+  "Rodeo (Californië)": "Rodeo (California)",
+  "Buffalo → Philadelphia": "Buffalo → Philadelphia",
+  "Reims": "Reims",
+  "Cambrai": "Cambrai",
+  "Buenos Aires → Los Angeles": "Buenos Aires → Los Angeles",
+  "Frankfurt → Londen → Santa Monica": "Frankfurt → London → Santa Monica",
+  "Chichester → Los Angeles": "Chichester → Los Angeles",
+  "Westminster, Londen": "Westminster, London",
+  "Los Angeles (MGM)": "Los Angeles (MGM)",
+  "Utrecht": "Utrecht",
+  "Rupertsberg, Bingen": "Rupertsberg, Bingen",
+  "Reykjavík → Berlijn": "Reykjavík → Berlin",
+  "Hamamatsu → Boston": "Hamamatsu → Boston",
+  "Toronto → Wellington/Londen": "Toronto → Wellington/London",
+  "Johannesburg → New York": "Johannesburg → New York",
+  "Kuta (Bali)": "Kuta (Bali)",
+  "Detroit": "Detroit",
+  "Zürich": "Zurich",
+  "Tjoemen": "Tyumen",
+  "Fort Lauderdale → New York": "Fort Lauderdale → New York",
+  "Bray Studios": "Bray Studios",
+  "Barnwell": "Barnwell",
+  "Praag → staat New York": "Prague → New York State",
+  "Oude Kerk, Amsterdam": "Oude Kerk, Amsterdam",
+  "Gary (Indiana)": "Gary (Indiana)",
+  "Lyon": "Lyon",
+  "New Orleans → Chicago": "New Orleans → Chicago",
+  "Norristown, Pennsylvania": "Norristown, Pennsylvania",
+  "Seoul": "Seoul",
+  "Juazeiro → Rio de Janeiro": "Juazeiro → Rio de Janeiro",
+  "Wenen → New York": "Vienna → New York",
+  "Philadelphia → New York": "Philadelphia → New York",
+  "Schotland → Londen": "Scotland → London",
+  "Doncaster → New York": "Doncaster → New York",
+  "Fort Macleod": "Fort Macleod",
+  "Oxford": "Oxford",
+  "New York / Los Angeles": "New York / Los Angeles",
+  "Eszterháza": "Eszterháza",
+  "Ladysmith": "Ladysmith",
+  "Salford": "Salford",
+  "Amsterdam → Los Angeles": "Amsterdam → Los Angeles",
+  "IRCAM, Parijs": "IRCAM, Paris",
+  "Keulen": "Cologne",
+  "Allentown → Keulen": "Allentown → Cologne",
+  "Harlem → Parijs": "Harlem → Paris",
+  "Seattle → Los Angeles": "Seattle → Los Angeles",
+  "Semarang": "Semarang",
+  "LaPlace → New Orleans": "LaPlace → New Orleans",
+  "Mount Juliet (bij Nashville)": "Mount Juliet (near Nashville)",
+  "Frankfurt → Santa Monica": "Frankfurt → Santa Monica",
+  "Berlijn → Icking (München)": "Berlin → Icking (Munich)",
+  "Kyoto (Nintendo)": "Kyoto (Nintendo)",
+  "Kyzyl (Toeva)": "Kyzyl (Tuva)",
+  "Düsseldorf": "Düsseldorf",
+  "Poznań → Warschau": "Poznań → Warsaw",
+  "Istanbul → Parijs": "Istanbul → Paris",
+  "Melbourne": "Melbourne",
+  "Buenos Aires → Hollywood": "Buenos Aires → Hollywood",
+  "Seattle": "Seattle",
+  "Gdańsk": "Gdańsk",
+  "Memphis → Chicago": "Memphis → Chicago",
+  "Agoura Hills (Californië)": "Agoura Hills (California)",
+  "Louisville → Los Angeles": "Louisville → Los Angeles",
+  "Belhaven (North Carolina)": "Belhaven (North Carolina)",
+  "Inverness → Los Angeles": "Inverness → Los Angeles",
+  "Turijn": "Turin",
+  "Linköping → Los Angeles": "Linköping → Los Angeles",
+  "Madurai → Chennai": "Madurai → Chennai",
+  "Columbus, Georgia": "Columbus, Georgia",
+  "Essaouira": "Essaouira",
+  "Syros → Piraeus": "Syros → Piraeus",
+  "Chicago → Seattle (Bungie)": "Chicago → Seattle (Bungie)",
+  "Rumoi → Tokio (Toho)": "Rumoi → Tokyo (Toho)",
+  "Parijs → Londen/Hollywood": "Paris → London/Hollywood",
+  "Stenhamra": "Stenhamra",
+  "Londen / Berlijn": "London / Berlin",
+  "Beijing": "Beijing",
+  "San Miguel de Tucumán": "San Miguel de Tucumán",
+  "Warschau → New York": "Warsaw → New York",
+  "New York → Londen": "New York → London",
+  "Mackay (Queensland)": "Mackay (Queensland)",
+  "Berkeley → Los Angeles": "Berkeley → Los Angeles",
+  "Chios → Athene": "Chios → Athens",
+  "Boedapest → Londen → Hollywood": "Budapest → London → Hollywood",
+  "Sint-Petersburg": "Saint Petersburg",
+  "Mashhad → Teheran": "Mashhad → Tehran",
+  "Caïro": "Cairo",
+  "Addis Abeba": "Addis Ababa",
+  "Mosul → Bagdad": "Mosul → Baghdad",
+  "Przemyślany → New York": "Przemyślany → New York",
+  "Lucknow → Mumbai": "Lucknow → Mumbai",
+  "West-Berlijn": "West Berlin",
+  "Australië → Parijs": "Australia → Paris",
+  "New Orleans → New York": "New Orleans → New York",
+  "Tryon → New York": "Tryon → New York",
+  "Cleveland": "Cleveland",
+  "Aberdeen": "Aberdeen",
+  "Hummelo": "Hummelo",
+  "Faisalabad": "Faisalabad",
+  "Manchester": "Manchester",
+  "Église de la Trinité, Parijs": "Église de la Trinité, Paris",
+  "Boston → New York": "Boston → New York",
+  "Fort Worth → New York": "Fort Worth → New York",
+  "Dawson": "Dawson",
+  "Bamako": "Bamako",
+  "Algeciras": "Algeciras",
+  "Plainfield (New Jersey)": "Plainfield (New Jersey)",
+  "Lee's Summit → Boston": "Lee's Summit → Boston",
+  "Uddingston → Londen": "Uddingston → London",
+  "Notre-Dame, Parijs": "Notre-Dame, Paris",
+  "Wuppertal": "Wuppertal",
+  "Little Rock → New York": "Little Rock → New York",
+  "Istanbul → Los Angeles": "Istanbul → Los Angeles",
+  "Moskou": "Moscow",
+  "Chicago → Seattle → Los Angeles": "Chicago → Seattle → Los Angeles",
+  "Mumbai": "Mumbai",
+  "Abingdon": "Abingdon",
+  "Duisburg → Santa Monica": "Duisburg → Santa Monica",
+  "München": "Munich",
+  "Bayreuth": "Bayreuth",
+  "Newton-le-Willows": "Newton-le-Willows",
+  "Saint Michael (Barbados)": "Saint Michael (Barbados)",
+  "Rotterdam → Amsterdam": "Rotterdam → Amsterdam",
+  "Houston → New York": "Houston → New York",
+  "Hazlehurst (Mississippi)": "Hazlehurst (Mississippi)",
+  "Hilversum / Amsterdam": "Hilversum / Amsterdam",
+  "Australië → Londen": "Australia → London",
+  "Waco → New York": "Waco → New York",
+  "Constantinopel → Athene": "Constantinople → Athens",
+  "Tokio → New York": "Tokyo → New York",
+  "Kolkata → Mumbai": "Kolkata → Mumbai",
+  "Utsunomiya → Tokio": "Utsunomiya → Tokyo",
+  "The Bronx, New York": "The Bronx, New York",
+  "Newark → New York": "Newark → New York",
+  "Kolkata": "Kolkata",
+  "Sedalia, Missouri": "Sedalia, Missouri",
+  "Tokio → Hongkong": "Tokyo → Hong Kong",
+  "New Orleans → Parijs": "New Orleans → Paris",
+  "Cotton Plant (Arkansas)": "Cotton Plant (Arkansas)",
+  "Gorssel": "Gorssel",
+  "Johannesburg": "Johannesburg",
+  "Annandale-on-Hudson": "Annandale-on-Hudson",
+  "Mhondoro → Harare": "Mhondoro → Harare",
+  "Helmond · Moergestel": "Helmond · Moergestel",
+  "Birmingham → Chicago → Philadelphia": "Birmingham → Chicago → Philadelphia",
+  "Changsha → New York / Beijing": "Changsha → New York / Beijing",
+  "Gwalior → hof van Akbar": "Gwalior → Akbar's court",
+  "Newcastle upon Tyne": "Newcastle upon Tyne",
+  "Birmingham": "Birmingham",
+  "Crawley": "Crawley",
+  "Passaic (New Jersey)": "Passaic (New Jersey)",
+  "Englewood (New Jersey)": "Englewood (New Jersey)",
+  "Toronto": "Toronto",
+  "Amsterdam · Hilversum": "Amsterdam · Hilversum",
+  "Wellingborough → Oxford": "Wellingborough → Oxford",
+  "Gjoemri → Los Angeles": "Gyumri → Los Angeles",
+  "Manchester (New Hampshire)": "Manchester (New Hampshire)",
+  "Rzeszów → Warschau": "Rzeszów → Warsaw",
+  "Brussel → New York": "Brussels → New York",
+  "Liaoyang → Tokio → Los Angeles": "Liaoyang → Tokyo → Los Angeles",
+  "Bristol": "Bristol",
+  "Thiruvaiyaru": "Thiruvaiyaru",
+  "Straconka → New York": "Straconka → New York",
+  "Pasadena": "Pasadena",
+  "Athene → Londen": "Athens → London",
+  "Chicago → Hollywood": "Chicago → Hollywood",
+  "Santiago de Chile": "Santiago de Chile",
+  "Kreuztal": "Kreuztal",
+  "Brest → Ouessant": "Brest → Ouessant",
+  "Osaka → Tokio": "Osaka → Tokyo",
+  "Warschau": "Warsaw",
+  "Krakau": "Kraków",
+  "Kyoto": "Kyoto",
+  "Bagdad → Córdoba": "Baghdad → Córdoba",
+  "South Side, Chicago": "South Side, Chicago",
+  "Arnhemland": "Arnhem Land",
+  "Lagos": "Lagos",
+  "Lagos, Accra en Londen": "Lagos, Accra and London",
+  "Athens (Georgia)": "Athens (Georgia)",
+  "Pretoria en Johannesburg": "Pretoria and Johannesburg",
+  "Córdoba": "Córdoba",
+  "Cuzco": "Cuzco",
+  "Appalachen": "Appalachia",
+  "Bagdad": "Baghdad",
+  "Jerevan": "Yerevan",
+  "Parijs en Reims": "Paris and Reims",
+  "Shusha": "Shusha",
+  "Rio de Janeiro (favela's)": "Rio de Janeiro (favelas)",
+  "Guča": "Guča",
+  "Verenigde Staten": "United States",
+  "Birmingham en Punjab": "Birmingham and Punjab",
+  "Brighton": "Brighton",
+  "New York / Memphis": "New York / Memphis",
+  "Kentucky en Nashville": "Kentucky and Nashville",
+  "Achterhoek": "Achterhoek",
+  "New York (Broadway)": "New York (Broadway)",
+  "Schotland, Ierland en Engeland": "Scotland, Ireland and England",
+  "Sofia": "Sofia",
+  "Constantinopel": "Constantinople",
+  "Hanoi": "Hanoi",
+  "Trinidad": "Trinidad",
+  "Bitti": "Bitti",
+  "Havana": "Havana",
+  "Hongkong / Beijing": "Hong Kong / Beijing",
+  "Kinshasa": "Kinshasa",
+  "Nashville": "Nashville",
+  "Colombia (Caribische kust)": "Colombia (Caribbean coast)",
+  "Kingston": "Kingston",
+  "Mississippi Delta": "Mississippi Delta",
+  "America (Limburg)": "America (Limburg)",
+  "Ibiza": "Ibiza",
+  "Chicago en Londen": "Chicago and London",
+  "Londen (Croydon)": "London (Croydon)",
+  "New York (Williamsburg, club Luxx)": "New York (Williamsburg, club Luxx)",
+  "Washington": "Washington",
+  "Aksum": "Aksum",
+  "België": "Belgium",
+  "Europa": "Europe",
+  "Wuppertal · Londen · Amsterdam": "Wuppertal · London · Amsterdam",
+  "Lissabon (Mouraria en Alfama)": "Lisbon (Mouraria and Alfama)",
+  "Wellington / Londen": "Wellington / London",
+  "Sevilla": "Seville",
+  "Greenwich Village, New York": "Greenwich Village, New York",
+  "Rotterdam": "Rotterdam",
+  "Nara": "Nara",
+  "Yogyakarta": "Yogyakarta",
+  "Compton (Los Angeles)": "Compton (Los Angeles)",
+  "New York (Lower East Side)": "New York (Lower East Side)",
+  "Gelati": "Gelati",
+  "Metz": "Metz",
+  "Oost-Londen": "East London",
+  "Niani": "Niani",
+  "Los Angeles en Washington": "Los Angeles and Washington",
+  "Zaandam (Qlubtempo)": "Zaandam (Qlubtempo)",
+  "Honolulu": "Honolulu",
+  "New Jersey": "New Jersey",
+  "Nederland": "The Netherlands",
+  "Papeete": "Papeete",
+  "Hollywood / Cinecittà": "Hollywood / Cinecittà",
+  "Londen en internet": "London and the internet",
+  "Sheffield": "Sheffield",
+  "Dublin": "Dublin",
+  "Noord-India": "North India",
+  "Londen, Sheffield en Berlijn": "London, Sheffield and Berlin",
+  "Great Plains": "Great Plains",
+  "Durban": "Durban",
+  "Italië": "Italy",
+  "Los Angeles / New York": "Los Angeles / New York",
+  "San Francisco · Los Angeles": "San Francisco · Los Angeles",
+  "Kautokeino": "Kautokeino",
+  "Seoel": "Seoul",
+  "Kyoto (Shijō-gawara)": "Kyoto (Shijō-gawara)",
+  "Vijayanagara (Hampi)": "Vijayanagara (Hampi)",
+  "Kyzyl": "Kyzyl",
+  "Donaueschingen": "Donaueschingen",
+  "Los Angeles / Londen": "Los Angeles / London",
+  "Galicië": "Galicia",
+  "Cotabato": "Cotabato",
+  "San Juan (Puerto Rico)": "San Juan (Puerto Rico)",
+  "Amsterdam (Jordaan)": "Amsterdam (Jordaan)",
+  "Parijs / New York": "Paris / New York",
+  "Lyon (Lofi Girl)": "Lyon (Lofi Girl)",
+  "Florence": "Florence",
+  "Havana en Mexico-Stad": "Havana and Mexico City",
+  "Rotorua": "Rotorua",
+  "Cocula (Jalisco)": "Cocula (Jalisco)",
+  "Groot-Zimbabwe": "Great Zimbabwe",
+  "Jamaica": "Jamaica",
+  "Santo Domingo": "Santo Domingo",
+  "Ur": "Ur",
+  "New York en San Francisco": "New York and San Francisco",
+  "Trumansburg (New York)": "Trumansburg (New York)",
+  "Washington D.C.": "Washington D.C.",
+  "Mount Hagen": "Mount Hagen",
+  "Amsterdam / Brussel": "Amsterdam / Brussels",
+  "Aylesbury": "Aylesbury",
+  "West-Duitsland": "West Germany",
+  "New Orleans": "New Orleans",
+  "Ullensvang": "Ullensvang",
+  "Wigan": "Wigan",
+  "Warschau / Praag": "Warsaw / Prague",
+  "Parijs, Notre-Dame": "Paris, Notre-Dame",
+  "Istanbul": "Istanbul",
+  "Suizhou, Hubei": "Suizhou, Hubei",
+  "Memphis en Saqqara": "Memphis and Saqqara",
+  "Rome, Vaticaan": "Rome, Vatican",
+  "Jeonju": "Jeonju",
+  "Isfahan": "Isfahan",
+  "Philadelphia": "Philadelphia",
+  "Angkor": "Angkor",
+  "Emeryville": "Emeryville",
+  "Lobaye (Centraal-Afrikaanse Republiek)": "Lobaye (Central African Republic)",
+  "Berkeley (Californië)": "Berkeley (California)",
+  "Cleveland en Memphis": "Cleveland and Memphis",
+  "Geißenklösterle, Schwäbische Alb": "Geißenklösterle, Swabian Jura",
+  "Jeruzalem": "Jerusalem",
+  "Londen (Maida Vale)": "London (Maida Vale)",
+  "Sedalia (Missouri)": "Sedalia (Missouri)",
+  "Oran": "Oran",
+  "Engeland": "England",
+  "Piraeus (haven van Athene)": "Piraeus (port of Athens)",
+  "Santa Monica": "Santa Monica",
+  "Olympia (Washington)": "Olympia (Washington)",
+  "Duitsland en Nederland": "Germany and the Netherlands",
+  "Darmstadt": "Darmstadt",
+  "Bukhara": "Bukhara",
+  "Konya": "Konya",
+  "Santiago de Cuba en Havana": "Santiago de Cuba and Havana",
+  "Zuid-VS": "Southern US",
+  "Atlanta, Houston en Memphis": "Atlanta, Houston and Memphis",
+  "Jacksonville (Florida)": "Jacksonville (Florida)",
+  "Moskou / Leningrad": "Moscow / Leningrad",
+  "Rome / Almería": "Rome / Almería",
+  "Englewood Cliffs, New Jersey": "Englewood Cliffs, New Jersey",
+  "Atlanta en internet": "Atlanta and the internet",
+  "Zuid-Californië": "Southern California",
+  "Anykščiai": "Anykščiai",
+  "Los Angeles / Berlijn": "Los Angeles / Berlin",
+  "Buenos Aires": "Buenos Aires",
+  "Ayutthaya": "Ayutthaya",
+  "Frankfurt en Berlijn": "Frankfurt and Berlin",
+  "Atlanta": "Atlanta",
+  "Poitiers": "Poitiers",
+  "Portland (Oregon)": "Portland (Oregon)",
+  "Punjab": "Punjab",
+  "Venetië, San Marco": "Venice, San Marco",
+  "Pest": "Pest",
+  "Berlijn / Londen": "Berlin / London",
+  "West- en Centraal-Afrika": "West and Central Africa",
+  "Plantages in het zuiden van de VS": "Plantations in the southern US",
+  "Kyiv": "Kyiv",
+  "Johannesburg · Kaapstad": "Johannesburg · Cape Town",
+  "Detroit, Michigan": "Detroit, Michigan",
+  "Los Gatos, Californië": "Los Gatos, California",
+  "Scotts Valley, Californië": "Scotts Valley, California",
+  "West 28th Street, New York": "West 28th Street, New York",
+  "Hasselt": "Hasselt",
+  "Eindhoven": "Eindhoven",
+  "Menlo Park, Californië": "Menlo Park, California",
+  "Hamamatsu": "Hamamatsu",
+  "Kalamazoo, Michigan": "Kalamazoo, Michigan",
+  "Sydney": "Sydney",
+  "Menlo Park, New Jersey": "Menlo Park, New Jersey",
+  "Townhouse Studios, Londen": "Townhouse Studios, London",
+  "Cupertino, Californië": "Cupertino, California",
+  "Grand Rapids, Michigan": "Grand Rapids, Michigan",
+  "Redwood City, Californië": "Redwood City, California",
+  "Anaheim, Californië": "Anaheim, California",
+  "Trumansburg, New York": "Trumansburg, New York",
+  "Lahr, Duitsland": "Lahr, Germany",
+  "Musashino, Tokio": "Musashino, Tokyo",
+  "Fullerton, Californië": "Fullerton, California",
+  "San Jose, Californië": "San Jose, California",
+  "Pittsburgh": "Pittsburgh",
+  "Cincinnati, Ohio": "Cincinnati, Ohio",
+  "Camden, New Jersey": "Camden, New Jersey",
+  "Port of Spain, Trinidad": "Port of Spain, Trinidad",
+  "Londen (Abbey Road)": "London (Abbey Road)",
+  "Marissa, Illinois": "Marissa, Illinois",
+  "Osaka": "Osaka",
+  "Osaka (Kadoma)": "Osaka (Kadoma)",
+  "Petrograd (Sint-Petersburg)": "Petrograd (Saint Petersburg)",
+  "Peking": "Beijing",
+  "Indianapolis": "Indianapolis",
+  "Londen (Hanwell)": "London (Hanwell)",
+  "New York (Bell Labs)": "New York (Bell Labs)",
+  "Sepulveda, Los Angeles": "Sepulveda, Los Angeles",
+  "Los Angeles (Gold Star Studios)": "Los Angeles (Gold Star Studios)",
+  "San Mateo, Californië": "San Mateo, California",
+  "Los Angeles, Harmony Studios": "Los Angeles, Harmony Studios",
+  "Spijkenisse": "Spijkenisse",
+  "Montreal, Hotel2Tango": "Montreal, Hotel2Tango",
+  "Amsterdam, ID&T": "Amsterdam, ID&T",
+  "Londen, PWL Studios": "London, PWL Studios",
+  "Zoutelande": "Zoutelande",
+  "New Jersey, Asbury Park": "New Jersey, Asbury Park",
+  "San Francisco, Wally Heider Studios": "San Francisco, Wally Heider Studios",
+  "Erm, Drenthe": "Erm, Drenthe",
+  "Tel Aviv": "Tel Aviv",
+  "Sausalito, Record Plant": "Sausalito, Record Plant",
+  "Hollywood, Grandmaster Recorders": "Hollywood, Grandmaster Recorders",
+  "Zaandam": "Zaandam",
+  "Berkeley, Californië": "Berkeley, California",
+  "Los Angeles, Sunset Strip": "Los Angeles, Sunset Strip",
+  "Los Angeles, Radio Recorders": "Los Angeles, Radio Recorders",
+  "Minneapolis, Flyte Tyme Studios": "Minneapolis, Flyte Tyme Studios",
+  "Malmö": "Malmö",
+  "Diemen": "Diemen",
+  "Madrid": "Madrid",
+  "New York, Jackson Heights": "New York, Jackson Heights",
+  "Jacksonville, Florida": "Jacksonville, Florida",
+  "Alkmaar": "Alkmaar",
+  "Amstelveen": "Amstelveen",
+  "Stockholm, Cheiron Studios": "Stockholm, Cheiron Studios",
+  "Rochester, New York": "Rochester, New York",
+  "Cassadaga, Tarbox Road Studios": "Cassadaga, Tarbox Road Studios",
+  "Teignmouth": "Teignmouth",
+  "Topanga, Californië": "Topanga, California",
+  "Achterhoek, Varsseveld": "Achterhoek, Varsseveld",
+  "Los Angeles, Gold Star Studios": "Los Angeles, Gold Star Studios",
+  "Londen, Abbey Road": "London, Abbey Road",
+  "Londen, UFO Club": "London, UFO Club",
+  "Rockfield Studios, Wales": "Rockfield Studios, Wales",
+  "Athens, Georgia": "Athens, Georgia",
+  "New York, St. James Theatre": "New York, St. James Theatre",
+  "America, Limburg": "America, Limburg",
+  "Minneapolis, KDWB": "Minneapolis, KDWB",
+  "Drenthe, Schoonoord": "Drenthe, Schoonoord",
+  "Deventer": "Deventer",
+  "New York, Sony Music Studios": "New York, Sony Music Studios",
+  "New York, CBGB": "New York, CBGB",
+  "West Saugerties, Big Pink": "West Saugerties, Big Pink",
+  "Driebergen-Rijsenburg": "Driebergen-Rijsenburg",
+  "Los Angeles, Sunset Sound": "Los Angeles, Sunset Sound",
+  "Las Vegas": "Las Vegas",
+  "Parijs, Pathé Marconi": "Paris, Pathé Marconi",
+  "Warga, Friesland": "Warga, Friesland",
+  "Zwolle": "Zwolle",
+  "Waddinxveen": "Waddinxveen"
+ },
+ "who": {
+  "techniek/8-track": "Bill Lear (Lear Jet), with Ford and Motorola",
+  "techniek/ableton": "Gerhard Behles, Robert Henke and Bernd Roggendorf",
+  "techniek/auto-tune": "Andy Hildebrand (Antares Audio Technologies)",
+  "techniek/beatsampler": "E-mu Systems (SP-1200); Akai with Roger Linn (MPC60, 1988)",
+  "techniek/bladmuziek": "Music publishers such as M. Witmark & Sons",
+  "techniek/breakbeat": "producers in the British rave and jungle scene",
+  "techniek/cassette": "Philips (team of Lou Ottens)",
+  "techniek/cd": "Philips and Sony",
+  "techniek/daw": "Digidesign (Peter Gotcher and Evan Brooks)",
+  "techniek/drumstel": "William F. Ludwig and Theobald Ludwig",
+  "techniek/dub": "King Tubby, Lee 'Scratch' Perry",
+  "techniek/dx7": "Yamaha, based on the FM synthesis of John Chowning (Stanford)",
+  "techniek/elektrische-gitaar": "George Beauchamp and Adolph Rickenbacker; Gibson (ES-150)",
+  "techniek/elektrische-opname": "Western Electric (Bell Labs)",
+  "techniek/fairlight": "Peter Vogel and Kim Ryrie",
+  "techniek/fl-studio": "Didier Dambrin (Image-Line)",
+  "techniek/fonograaf": "Thomas Edison",
+  "techniek/fuzz": "Glenn Snoddy and Revis Hobbs; Gibson (Maestro FZ-1)",
+  "techniek/gated-reverb": "Hugh Padgham, Steve Lillywhite, Phil Collins and Peter Gabriel",
+  "techniek/grammofoon": "Emile Berliner",
+  "techniek/hammond": "Laurens Hammond; Don Leslie (Leslie speaker)",
+  "techniek/ipod-itunes": "Apple",
+  "techniek/jukebox": "AMI (Automatic Musical Instrument Company)",
+  "techniek/les-paul": "Gibson, in collaboration with Les Paul",
+  "techniek/linndrum": "Roger Linn",
+  "techniek/lp": "Columbia Records (Peter Goldmark)",
+  "techniek/magneetband": "AEG and BASF (Magnetophon); after 1945 Ampex",
+  "techniek/meersporen": "Ampex (Ross Snyder, Sel-Sync) and Les Paul",
+  "techniek/mellotron": "Leslie, Frank and Norman Bradley (Streetly Electronics), based on the Chamberlin by Harry Chamberlin",
+  "techniek/midi": "Dave Smith (Sequential) and Ikutaro Kakehashi (Roland)",
+  "techniek/minimoog": "R.A. Moog Inc. (Robert Moog, Bill Hemsath, Jim Scott, Chad Hunt)",
+  "techniek/moog": "Robert Moog",
+  "techniek/mp3-napster": "Fraunhofer Institute (Karlheinz Brandenburg); Shawn Fanning and Sean Parker",
+  "techniek/mtv": "Warner-Amex Satellite Entertainment",
+  "techniek/pianola": "Edwin Votey; Aeolian Company",
+  "techniek/plaatgalm": "EMT (Wilhelm Franz), based on a design by Walter Kuhl",
+  "techniek/portastudio": "TEAC (brand name TASCAM)",
+  "techniek/precision-bass": "Leo Fender",
+  "techniek/prophet-5": "Dave Smith and John Bowen (Sequential Circuits)",
+  "techniek/radio": "Westinghouse (station KDKA)",
+  "techniek/rhodes": "Harold Rhodes, with Fender",
+  "techniek/ritmebox": "Wurlitzer (Side Man); later Maestro (Rhythm King)",
+  "techniek/saxofoon": "Adolphe Sax",
+  "techniek/single": "RCA Victor",
+  "techniek/slapback-echo": "Sam Phillips (Sun Records)",
+  "techniek/soundcloud": "Alexander Ljung and Eric Wahlforss",
+  "techniek/soundsystem": "including Tom the Great Sebastian, Duke Reid, Coxsone Dodd",
+  "techniek/spotify": "Daniel Ek and Martin Lorentzon",
+  "techniek/steelgitaar": "Joseph Kekuku; later Bud Isaacs (pedal steel)",
+  "techniek/steelpan": "Winston 'Spree' Simon, Ellie Mannette and the steelbands of Port of Spain",
+  "techniek/stereo": "Alan Blumlein (idea, 1931); Westrex (45/45 groove)",
+  "techniek/stratocaster": "Leo Fender",
+  "techniek/studio-instrument": "The Beatles with George Martin and the EMI engineers; Brian Wilson in Los Angeles",
+  "techniek/talkbox": "Bob Heil; later Peter Frampton and Roger Troutman (Zapp)",
+  "techniek/tb-303": "Roland (Tadao Kikumoto)",
+  "techniek/technics": "Matsushita (Technics, team of Shuichi Obata); DJs in the Bronx",
+  "techniek/telecaster": "Leo Fender",
+  "techniek/theremin": "Lev Termen (Léon Theremin)",
+  "techniek/tiktok": "ByteDance",
+  "techniek/tr-808": "Roland (Tadao Kikumoto, Makoto Muroi)",
+  "techniek/tr-909": "Roland (Tadao Kikumoto)",
+  "techniek/transistorradio": "Regency (I.D.E.A.) and Texas Instruments",
+  "techniek/versterker": "Leo Fender (amplifiers from the 1940s), Jim Marshall (JTM45, 1962)",
+  "techniek/vocoder": "Homer Dudley (Bell Labs)",
+  "techniek/wah-wah": "Brad Plunkett (Warwick Electronics / Thomas Organ Company)",
+  "techniek/walkman": "Sony (Nobutoshi Kihara, Kozo Ohsone; idea of Masaru Ibuka and Akio Morita)",
+  "techniek/wall-of-sound": "Phil Spector",
+  "techniek/youtube": "Chad Hurley, Steve Chen and Jawed Karim"
+ },
+ "defs": {
+  "begrip/12-maten-blues": [
+   "I–IV–V pattern over 12 bars with an AAB lyric"
+  ],
+  "begrip/5-4-maat": [
+   "Time signature with five beats per bar, as in Mission: Impossible ."
+  ],
+  "begrip/aaba": [
+   "32-bar song form: A twice, a bridge (B), and A again",
+   "32-bar song form with a contrasting bridge"
+  ],
+  "begrip/aacm": [
+   "Association of Chicago musicians (1965) that organized its own concerts, teaching and new music."
+  ],
+  "begrip/adt": [
+   "Automatic double tracking: doubling a voice automatically with a second tape recorder"
+  ],
+  "begrip/afrofuturisme": [
+   "A fusion of the future, space travel and African history, as with Sun Ra."
+  ],
+  "begrip/akkoordenschema": [
+   "Fixed sequence of chords underneath a piece, over which bebop musicians improvised."
+  ],
+  "begrip/algoritme": [
+   "Rule of calculation that decides which music you are offered"
+  ],
+  "begrip/anempathische-muziek": [
+   "Music that seems indifferent to the image and so heightens the contrast."
+  ],
+  "begrip/aor": [
+   "Album-oriented rock: radio that plays album tracks instead of singles"
+  ],
+  "begrip/arpeggio": [
+   "Chord whose notes sound one after another instead of together.",
+   "Chord whose notes sound one after another instead of at the same time."
+  ],
+  "begrip/atelier": [
+   "Way of working in which one composer sets the themes and sound and a team writes out the music."
+  ],
+  "begrip/auteurstheorie": [
+   "The idea that the director is the true author of a film."
+  ],
+  "begrip/babyboom": [
+   "Wave of births after 1945"
+  ],
+  "begrip/backbeat": [
+   "Emphasis on beats 2 and 4"
+  ],
+  "begrip/backstagemusical": [
+   "Musical about putting on a show; the songs are performed in the story as stage numbers."
+  ],
+  "begrip/bandmanipulatie": [
+   "Speeding up, slowing down, reversing, cutting and splicing recorded sound on tape."
+  ],
+  "begrip/bedroom-producer": [
+   "Someone who makes a complete production at home"
+  ],
+  "begrip/biwa": [
+   "Japanese lute with a sharp, percussive sound."
+  ],
+  "begrip/bladmuziek": [
+   "Notated music, the product of Tin Pan Alley"
+  ],
+  "begrip/blaxploitation": [
+   "American action films of the 1970s with Black leads, scored with soul and funk."
+  ],
+  "begrip/blockbuster": [
+   "Big, expensive crowd-pleasing film that aims for massive success."
+  ],
+  "begrip/blokgolf": [
+   "Simple waveform with a sharp, 'beeping' sound, typical of 8-bit."
+  ],
+  "begrip/blue-note": [
+   "Lowered third, fifth or seventh, often sung or played with a bend"
+  ],
+  "begrip/blue-notes": [
+   "Slightly lowered notes, especially the third and seventh, between major and minor."
+  ],
+  "begrip/bourdon": [
+   "Sustained root note beneath a melody, in Indian music usually played on the tanpura."
+  ],
+  "begrip/bouzouki": [
+   "Greek plucked instrument with a long neck."
+  ],
+  "begrip/bpm": [
+   "Beats per minute: the tempo"
+  ],
+  "begrip/braam": [
+   "Low, metallic brass sound that became popular around the Inception trailers."
+  ],
+  "begrip/brassband": [
+   "Marching band from New Orleans that plays at parades, parties and funerals."
+  ],
+  "begrip/break": [
+   "Instrumental section of a funk record that people danced and rapped over",
+   "Instrumental section of a funk record, the basis of hip hop",
+   "Short silence in the band, filled by a single instrument."
+  ],
+  "begrip/british-invasion": [
+   "The wave of British bands that conquered the US from 1964"
+  ],
+  "begrip/bronmuziek": [
+   "Music that sounds within the world of the film, with a visible or audible source.",
+   "Music that sounds in the world of the story and that the characters can hear too, such as a band or a radio."
+  ],
+  "begrip/call-and-response": [
+   "A question and answer between a lead singer or soloist and a group."
+  ],
+  "begrip/canon": [
+   "The list of works regarded as important",
+   "Fixed set of masterpieces and great names regarded as the core of an art form."
+  ],
+  "begrip/cantopop": [
+   "Cantonese pop music from Hong Kong."
+  ],
+  "begrip/catacombe-periode": [
+   "The years from 1949 to the mid-1950s, when jazz in Poland could only be heard in secret."
+  ],
+  "begrip/celesta": [
+   "Keyboard instrument in which little hammers strike metal plates, with a bright, bell-like sound."
+  ],
+  "begrip/chiptune": [
+   "Music made with (or in the style of) the sound chips of old computers and consoles."
+  ],
+  "begrip/chopped-and-screwed": [
+   "Hip hop technique in which a recording is slowed down and pitched down and bits are repeated."
+  ],
+  "begrip/chorus": [
+   "One full pass through the form of a piece, the unit in which a solo is counted."
+  ],
+  "begrip/chromatiek": [
+   "Melody or harmony that moves in semitones, with notes outside the ordinary scale."
+  ],
+  "begrip/cimbalom": [
+   "Large hammered dulcimer from Central Europe whose strings are struck with small hammers.",
+   "Hungarian hammered dulcimer whose strings are struck with small hammers."
+  ],
+  "begrip/clave": [
+   "The rhythmic key pattern of Afro-Cuban music"
+  ],
+  "begrip/click-track": [
+   "Ticking metronome signal during recording, matched to the length of the picture."
+  ],
+  "begrip/cluster": [
+   "Bunch of adjacent notes struck at the same time.",
+   "Chord of closely spaced notes; sounds like a dense smear of sound.",
+   "Chord of notes that lie right next to each other."
+  ],
+  "begrip/collectieve-improvisatie": [
+   "Cornet, clarinet and trombone improvise at the same time, each with its own role.",
+   "All the musicians improvise at once instead of taking turns."
+  ],
+  "begrip/coltrane-changes": [
+   "Chord progression that moves quickly between keys a major third apart."
+  ],
+  "begrip/compilatiepartituur": [
+   "Film music that combines existing pieces and original themes."
+  ],
+  "begrip/compilatiescore": [
+   "Soundtrack made up of existing songs rather than newly composed music."
+  ],
+  "begrip/conceptalbum": [
+   "Album with a continuous idea, story or framework"
+  ],
+  "begrip/confessioneel": [
+   "Personal, autobiographical lyrics"
+  ],
+  "begrip/contrafact": [
+   "A new melody over the chords of an existing song"
+  ],
+  "begrip/contrapunt": [
+   "Two or more independent melodies sounding at the same time."
+  ],
+  "begrip/counterculture": [
+   "The counterculture of the 1960s, against war and materialism"
+  ],
+  "begrip/credit": [
+   "Official acknowledgement of who did what on a recording"
+  ],
+  "begrip/cubop": [
+   "Hybrid of bebop and Afro-Cuban music in 1940s New York."
+  ],
+  "begrip/cue-sheet": [
+   "List for a silent film giving, scene by scene, the kind of music and its duration."
+  ],
+  "begrip/cutting-session": [
+   "Jam session as a contest, in which soloists try to outdo each other."
+  ],
+  "begrip/diaspora": [
+   "Dispersal of a people outside their homeland"
+  ],
+  "begrip/dilla-feel": [
+   "Swaying rhythm placed just off the beat, after the beats of producer J Dilla."
+  ],
+  "begrip/distortion-fuzz": [
+   "Distortion of the guitar signal",
+   "Distortion from an overdriven amplifier or pedal"
+  ],
+  "begrip/diy": [
+   "Do it yourself: recording, releasing and organizing everything yourself"
+  ],
+  "begrip/downtempo": [
+   "Slow, atmospheric electronic music"
+  ],
+  "begrip/drone": [
+   "A sustained note or chord beneath the music",
+   "Note that keeps sounding throughout a piece, like that of the Indian tanpura.",
+   "Long-held note or field of sound as the basis of the music."
+  ],
+  "begrip/drop": [
+   "The moment when, after a build-up, the beat and bass kick in"
+  ],
+  "begrip/drop-d": [
+   "Guitar tuning with the low E lowered by a whole tone"
+  ],
+  "begrip/drumcomputer": [
+   "Device that plays drum patterns, such as the TR-808",
+   "Device that plays back drum patterns (TR-808, LinnDrum)",
+   "Electronic device that plays programmable drum rhythms."
+  ],
+  "begrip/elementopnemer": [
+   "Magnet that converts the vibration of a steel string into current"
+  ],
+  "begrip/epic-music": [
+   "Genre of trailer music with choir, big percussion and a fast climax."
+  ],
+  "begrip/erhu": [
+   "Chinese two-stringed bowed instrument with a nasal, singing tone."
+  ],
+  "begrip/fictieve-componist": [
+   "Invented composer whose music plays a part in the film, such as Van den Budenmayer."
+  ],
+  "begrip/flugelhorn": [
+   "Brass instrument resembling a trumpet, with a rounder, warmer sound."
+  ],
+  "begrip/fm-synthese": [
+   "Making sound by letting waves modulate each other's frequency",
+   "Sound generation in which one wave modulates the frequency of another; typical of the Mega Drive."
+  ],
+  "begrip/folkproces": [
+   "The oral passing on and constant reworking of a song"
+  ],
+  "begrip/four-on-the-floor": [
+   "Bass drum on every beat (disco, house)",
+   "Bass drum on every beat, the basis of disco and house",
+   "Bass drum on every beat, the foundation of disco"
+  ],
+  "begrip/franchise-sound": [
+   "Musical identity that stays recognizable across a whole film series."
+  ],
+  "begrip/frontline": [
+   "The melody instruments of a New Orleans band: cornet, clarinet, trombone"
+  ],
+  "begrip/fusion": [
+   "A blend of jazz with rock and funk",
+   "A blend of jazz with rock and funk, using electric instruments."
+  ],
+  "begrip/geluidschip": [
+   "Chip in a game console that generates simple waveforms."
+  ],
+  "begrip/gender-bending": [
+   "Deliberately playing with masculine and feminine appearance"
+  ],
+  "begrip/gesynchroniseerde-partituur": [
+   "Orchestral music on the film itself that runs exactly in time with the picture."
+  ],
+  "begrip/giallo": [
+   "Italian stylish murder thriller (see Film Reel 5).",
+   "Italian murder thriller, mainly of the 1960s and 1970s, named after the yellow covers of cheap detective paperbacks."
+  ],
+  "begrip/gitaarsynthesizer": [
+   "Guitar that drives a synthesizer, so the guitarist can play other sounds."
+  ],
+  "begrip/growl": [
+   "Raw, growling tone on trumpet or trombone, often with a plunger mute."
+  ],
+  "begrip/guajeo": [
+   "Repeated rhythmic figure on piano or horns in Cuban music, fitted to the clave."
+  ],
+  "begrip/gypsy-jazz": [
+   "Swing in the tradition of Django Reinhardt, with solo and rhythm guitars and double bass."
+  ],
+  "begrip/harmolodics": [
+   "Ornette Coleman's idea that harmony, melody and movement are equally important."
+  ],
+  "begrip/head": [
+   "The theme at the start and end of a jazz performance"
+  ],
+  "begrip/head-arrangement": [
+   "Arrangement that musicians agree on among themselves and play from memory."
+  ],
+  "begrip/hemiool": [
+   "Rhythmic shift in which two groups of three and three groups of two alternate."
+  ],
+  "begrip/hi-nrg": [
+   "Fast electronic dance music from the clubs, the basis of SAW"
+  ],
+  "begrip/hidden-track": [
+   "Track that is not listed on the sleeve and follows after silence"
+  ],
+  "begrip/hook": [
+   "Short, recognizable motif that sticks in your head",
+   "The catchy part you remember"
+  ],
+  "begrip/hurry-misterioso-agitato": [
+   "Types of mood pieces for chases, suspense and danger."
+  ],
+  "begrip/hybride-score": [
+   "Score that blends orchestra, choir and electronics into one sound."
+  ],
+  "begrip/i-v-vi-iv": [
+   "The most widely used chord progression in pop"
+  ],
+  "begrip/i-want-lied": [
+   "Song in which the protagonist tells what she longs for; a fixed element of the Disney musical."
+  ],
+  "begrip/indiefilm": [
+   "Independent film made outside the big studios, on a small budget."
+  ],
+  "begrip/instant-composing": [
+   "Mengelberg's idea of improvisation as composing in the moment."
+  ],
+  "begrip/interactieve-muziek": [
+   "Game music that changes according to what the player does."
+  ],
+  "begrip/jamsessie": [
+   "Unrehearsed playing together by musicians, often after closing time in a club."
+  ],
+  "begrip/jazz-kissa": [
+   "Japanese café where you go to listen to jazz records, often in silence."
+  ],
+  "begrip/jeugdcultuur": [
+   "Group of young people with their own clothing, language, behaviour and music"
+  ],
+  "begrip/jrpg": [
+   "Japanese role-playing game, such as Dragon Quest and Final Fantasy."
+  ],
+  "begrip/keltische-klanken": [
+   "Colours from the folk music of Ireland and Scotland: bagpipes, uilleann pipes, tin whistle, fiddle."
+  ],
+  "begrip/kinothek": [
+   "Becce's library (from 1919) of short pieces, arranged by mood and situation."
+  ],
+  "begrip/la-pompe": [
+   "Short, firm chord strokes on all four beats in gypsy jazz."
+  ],
+  "begrip/leidmotief": [
+   "Short theme associated with a character or idea that returns and changes.",
+   "Short theme associated with a character, place or idea that keeps coming back.",
+   "Fixed musical idea associated with a character or element that keeps returning.",
+   "Theme for a character, place or idea that returns and changes."
+  ],
+  "begrip/les-six": [
+   "Group of young French composers around 1920, including Honegger, Auric and Tailleferre."
+  ],
+  "begrip/leslie": [
+   "Loudspeaker with rotating horns, used with the Hammond organ"
+  ],
+  "begrip/loop": [
+   "Short piece of music repeated endlessly, the basis of much hip hop and now of jazz."
+  ],
+  "begrip/m-base": [
+   "Circle of musicians around Steve Coleman in Brooklyn who sought new rhythmic structures."
+  ],
+  "begrip/magisch-realisme": [
+   "Style in which ordinary reality drifts unnoticed into dream and imagination, as in André Delvaux."
+  ],
+  "begrip/main-title": [
+   "Music under the opening titles; sets the tone of the film."
+  ],
+  "begrip/marabi": [
+   "Music from the townships of Johannesburg on a short, repeated chord sequence."
+  ],
+  "begrip/masters": [
+   "The original recordings, usually owned by the label"
+  ],
+  "begrip/mickey-mousing": [
+   "Music that imitates the on-screen action beat by beat.",
+   "Music that imitates every movement on screen exactly, down to the beat."
+  ],
+  "begrip/modale-harmonie": [
+   "Harmony based on old scales such as Dorian and Aeolian instead of ordinary major and minor."
+  ],
+  "begrip/modulatie": [
+   "Transition to a different key"
+  ],
+  "begrip/modus": [
+   "Scale with its own colour, such as the Dorian, as a basis for improvisation."
+  ],
+  "begrip/montage": [
+   "Putting shots together so that a rhythm or new meaning emerges."
+  ],
+  "begrip/motorik": [
+   "Stoic, continuous 4/4 beat from krautrock"
+  ],
+  "begrip/mp3": [
+   "Compressed audio file, about ten times smaller than a CD track"
+  ],
+  "begrip/music-director": [
+   "In Indian film: the composer who writes the songs and leads the recordings."
+  ],
+  "begrip/musique-concrete": [
+   "Music made from recorded everyday sounds (Paris, 1948)"
+  ],
+  "begrip/musique-d-ameublement": [
+   "Satie's 'furniture music': background music that does not ask for attention."
+  ],
+  "begrip/nasynchroniseren": [
+   "Recording a voice or song afterwards to fit the picture, sometimes by someone other than the actor."
+  ],
+  "begrip/neorealisme": [
+   "Italian postwar film shot on the street, with non-professional actors and little money."
+  ],
+  "begrip/neotraditionalisme": [
+   "A return to the acoustic jazz of swing, blues and bebop, as a reaction to fusion and free jazz."
+  ],
+  "begrip/newman-sound": [
+   "Warm, glossy string sound that Alfred Newman developed at Fox."
+  ],
+  "begrip/noh-en-gagaku": [
+   "Classical Japanese music theatre and ancient Japanese court music."
+  ],
+  "begrip/nonet": [
+   "Group of nine musicians, such as Miles Davis's band for Birth of the Cool."
+  ],
+  "begrip/on-the-one": [
+   "Funk's emphasis on the first beat"
+  ],
+  "begrip/ondes-martenot": [
+   "French electronic instrument from 1928 with gliding, floating tones."
+  ],
+  "begrip/one-drop": [
+   "Reggae rhythm with the bass drum on the third beat"
+  ],
+  "begrip/open-kwinten": [
+   "Sonorities without a third; sound empty and wide-open, typical of Americana."
+  ],
+  "begrip/open-stemming": [
+   "Guitar tuned so that the open strings form a chord"
+  ],
+  "begrip/orkestrator": [
+   "Musician who works out a composer's sketch for the full orchestra.",
+   "Musician who distributes a composer's sketch across the instruments of the orchestra."
+  ],
+  "begrip/oscillator": [
+   "Electronic circuit that generates a tone",
+   "Circuit that generates an electrical oscillation and hence a tone."
+  ],
+  "begrip/ostinato": [
+   "Short motif that is repeated over and over, such as the bass line of A Love Supreme.",
+   "Short musical pattern that is repeated over and over, often as the basis of a piece.",
+   "Short motif that is repeated over and over, such as the bass line of Peter Gunn .",
+   "Short motif or rhythm repeated again and again.",
+   "Short motif that keeps being repeated.",
+   "Short musical figure that is repeated over and over."
+  ],
+  "begrip/ouverture-en-pauzemuziek": [
+   "Music before the start and during the intermission of long epics, as in opera."
+  ],
+  "begrip/overdub": [
+   "Recording an extra part over an existing recording"
+  ],
+  "begrip/parallelle-cinema": [
+   "Indian arthouse film without the songs and stars of Bombay."
+  ],
+  "begrip/payola": [
+   "Paying DJs or radio stations to play records"
+  ],
+  "begrip/peer-to-peer": [
+   "Sharing files directly between users, without a central server"
+  ],
+  "begrip/pentatoniek": [
+   "Five-note scale, widely used in East Asian and folk music.",
+   "Five-note scale without semitones."
+  ],
+  "begrip/playback": [
+   "Actors sing or dance to music that was recorded in advance."
+  ],
+  "begrip/playbackzanger": [
+   "Singer who records the songs that an actor on screen lip-syncs to."
+  ],
+  "begrip/poetisch-realisme": [
+   "French film movement of the 1930s: sombre, atmospheric films about ordinary people."
+  ],
+  "begrip/poppodium": [
+   "Venue for pop concerts, such as Paradiso"
+  ],
+  "begrip/postproductie": [
+   "Editing and processing recordings afterwards, as with In a Silent Way."
+  ],
+  "begrip/powerballad": [
+   "Slow, emotional rock song that builds to a loud climax"
+  ],
+  "begrip/powerchord": [
+   "Chord of root and fifth, without a third"
+  ],
+  "begrip/pre-chorus": [
+   "Build-up between verse and chorus"
+  ],
+  "begrip/prestige-tv": [
+   "Series with the budget and ambition of feature films, from HBO around 2000."
+  ],
+  "begrip/producer": [
+   "The person who shapes the sound and recording of a record"
+  ],
+  "begrip/publishing": [
+   "The rights to the song itself: melody and lyrics"
+  ],
+  "begrip/quality-control": [
+   "The weekly review of new recordings at Motown"
+  ],
+  "begrip/radioformat": [
+   "Fixed kind of music that a station plays for a fixed audience, such as quiet storm or smooth jazz."
+  ],
+  "begrip/raga": [
+   "Melodic framework in Indian classical music, with its own notes, turns of phrase and mood."
+  ],
+  "begrip/rare-groove": [
+   "Rare funk and soul records from the 1970s, played again in London clubs."
+  ],
+  "begrip/recitatief": [
+   "Sung speech, as in opera; in Les parapluies de Cherbourg all the dialogue is sung like this."
+  ],
+  "begrip/rhythm-changes": [
+   "The chords of I Got Rhythm, the basis of countless contrafacts"
+  ],
+  "begrip/riddim": [
+   "The rhythmic foundation of drums and bass in reggae"
+  ],
+  "begrip/riff": [
+   "Short, repeated instrumental motif, often the hook of a rock song",
+   "Short, repeated rhythmic motif, as a theme or behind a soloist.",
+   "Short, repeated melodic figure that a horn section plays behind a soloist."
+  ],
+  "begrip/ronroco": [
+   "Andean lute with double strings from the charango family, played by Santaolalla."
+  ],
+  "begrip/rude-boys": [
+   "Jamaican street culture, linked to ska and rocksteady"
+  ],
+  "begrip/sample": [
+   "A snippet of an existing recording, reused as a building block"
+  ],
+  "begrip/sampler": [
+   "Device that makes recorded sound playable",
+   "Device that records a snippet of sound and can play it back at any rhythm and any pitch."
+  ],
+  "begrip/sampling": [
+   "Reusing recorded sound as a building block"
+  ],
+  "begrip/scat": [
+   "Singing on meaningless sounds, like a wind instrument.",
+   "Vocal improvisation with meaningless syllables, as a horn player would play.",
+   "Singing on meaningless sounds instead of words, as if the voice were an instrument; familiar from jazz."
+  ],
+  "begrip/scratchen": [
+   "Moving a record back and forth by hand under the needle, a hip hop technique."
+  ],
+  "begrip/second-line": [
+   "The dancing crowd that follows behind a brass band."
+  ],
+  "begrip/sectie": [
+   "Group of like instruments in a big band: trumpets, trombones, saxophones or rhythm."
+  ],
+  "begrip/sequencer": [
+   "Device that repeats a series of notes or sounds",
+   "Device that automatically repeats short patterns of notes."
+  ],
+  "begrip/shell-voicing": [
+   "Thinned-out chord of two or three notes, usually the root with the third or seventh."
+  ],
+  "begrip/silly-symphonies": [
+   "Series of short Disney cartoons (from 1929) in which the music is the starting point."
+  ],
+  "begrip/sirtaki": [
+   "Greek dance devised for Zorba the Greek (1964): a slow start that keeps getting faster."
+  ],
+  "begrip/ska": [
+   "Jamaican music with accents on the offbeat"
+  ],
+  "begrip/slidegitaar": [
+   "Guitar playing in which a glass or metal tube (bottleneck) slides over the strings, so the pitch glides continuously."
+  ],
+  "begrip/socialistisch-realisme": [
+   "Prescribed art style in the Eastern Bloc that had to show the socialist state in a positive and understandable light."
+  ],
+  "begrip/solid-body": [
+   "Guitar made of solid wood, less prone to feedback"
+  ],
+  "begrip/song-plugger": [
+   "Pianist who promoted new songs by playing them for customers"
+  ],
+  "begrip/sounddesign": [
+   "Designing sounds and tone colours, on the border between music and sound effect."
+  ],
+  "begrip/spiritual-jazz": [
+   "Jazz focused on faith and meditation, with long modal pieces and instruments from Africa and Asia."
+  ],
+  "begrip/stil-luid-dynamiek": [
+   "Alternation of soft verses and loud choruses (Pixies, Nirvana)"
+  ],
+  "begrip/strain": [
+   "Self-contained 16-bar section in ragtime and march music"
+  ],
+  "begrip/streaming": [
+   "Playing music over the internet without owning the file"
+  ],
+  "begrip/stride": [
+   "Harlem piano style in which the left hand jumps between bass note and chord."
+  ],
+  "begrip/studiosysteem": [
+   "Hollywood studios with their own orchestras, music departments and composers on permanent staff."
+  ],
+  "begrip/subcultuur": [
+   "Smaller group within a culture with deviating norms, not necessarily young"
+  ],
+  "begrip/subtractieve-synthese": [
+   "Making sound by filtering a harmonically rich wave"
+  ],
+  "begrip/suite": [
+   "Series of excerpts from a film score, adapted for the concert hall."
+  ],
+  "begrip/superproducer": [
+   "Producer whose sound matters more than that of the artist"
+  ],
+  "begrip/swing": [
+   "Rhythmic feel of continuous motion, with unevenly divided eighth notes; also the name of the big band era 1935–1945."
+  ],
+  "begrip/swing-achtsten": [
+   "Uneven eighth notes, long–short"
+  ],
+  "begrip/syncope": [
+   "Accent between or before the beat",
+   "Accent that falls between the beats instead of on them."
+  ],
+  "begrip/synthesizer": [
+   "Instrument that generates and shapes sound electronically",
+   "Electronic instrument that generates and shapes sound"
+  ],
+  "begrip/tableau": [
+   "Self-contained section of an early film or score, as in Saint-Saëns's opus 128."
+  ],
+  "begrip/talkie": [
+   "Early sound film with synchronized speech and singing."
+  ],
+  "begrip/talking-drum": [
+   "West African hourglass drum whose pitch changes with tension cords."
+  ],
+  "begrip/tapeloop": [
+   "A piece of recording tape that runs in a circle and repeats endlessly"
+  ],
+  "begrip/theaterorgel": [
+   "Cinema organ that imitates an orchestra, with percussion and sound effects."
+  ],
+  "begrip/thematische-improvisatie": [
+   "Improvising by continually varying and developing a motif from the theme."
+  ],
+  "begrip/titelsong": [
+   "Song under the opening titles that promotes the film as a single, as with High Noon.",
+   "Song under the opening titles, often also released as a hit single."
+  ],
+  "begrip/tokusatsu": [
+   "Japanese film or series with special effects, such as Godzilla."
+  ],
+  "begrip/topliner": [
+   "Writes melody and lyrics over an existing beat"
+  ],
+  "begrip/tremolo": [
+   "Rapid repeated striking of the same note, producing a trembling tone."
+  ],
+  "begrip/tritonus": [
+   "Interval of three whole tones; sounds tense, central to West Side Story ."
+  ],
+  "begrip/tritonus-substitutie": [
+   "Replacing a dominant chord with the dominant a tritone away"
+  ],
+  "begrip/tsuzumi": [
+   "Japanese hand drum from nō theatre, heard in Kogun by Toshiko Akiyoshi."
+  ],
+  "begrip/tv-tune": [
+   "Short signature tune of a series, returning every episode."
+  ],
+  "begrip/twaalfmatenblues": [
+   "Blues form of twelve bars on three chords, often with a lyric in AAB form."
+  ],
+  "begrip/twaalftoonstechniek": [
+   "Composing with a row of all twelve notes, without a tonal centre."
+  ],
+  "begrip/twaalftoontechniek": [
+   "Method of composition in which all twelve notes are placed in a fixed row; there is no tonic or key."
+  ],
+  "begrip/twanggitaar": [
+   "Electric guitar with a hard attack on the low strings and plenty of reverb."
+  ],
+  "begrip/underscore": [
+   "Music that only the viewer hears, not the characters in the film."
+  ],
+  "begrip/unisono": [
+   "Two or more instruments play exactly the same melody at the same time."
+  ],
+  "begrip/varispeed": [
+   "Playing a tape faster or slower, so that both tempo and pitch change"
+  ],
+  "begrip/verticale-montage": [
+   "Eisenstein's idea of image and music as two layers that fit together."
+  ],
+  "begrip/vitaphone": [
+   "Warner Bros. sound system with large discs that ran in sync with the film."
+  ],
+  "begrip/vraag-en-antwoord": [
+   "A phrase from one voice is answered by another, as in church."
+  ],
+  "begrip/vrije-improvisatie": [
+   "Improvising together without a pre-agreed theme, chords or tempo.",
+   "Improvisation without theme or style, as in European improvisation from the late 1960s."
+  ],
+  "begrip/wah-wah": [
+   "Guitar effect with a pedal that makes the sound 'talk'."
+  ],
+  "begrip/wuxia": [
+   "Chinese genre about martial artists and chivalrous heroes."
+  ],
+  "begrip/young-lions": [
+   "Young musicians who played acoustic jazz in suits in the 1980s, around Wynton Marsalis."
+  ],
+  "genre/2-tone": [
+   "British label and movement for the ska revival and against racism (1979)"
+  ],
+  "genre/acid-jazz": [
+   "London movement around 1990 that linked soul jazz and funk with club culture."
+  ],
+  "genre/bebop": [
+   "Fast, harmonically complex jazz from the 1940s",
+   "Modern jazz of the 1940s: fast tempos, rich chords, small combos."
+  ],
+  "genre/bigband": [
+   "Large jazz orchestra with sections of trumpets, trombones and saxophones plus a rhythm section."
+  ],
+  "genre/boerenrock": [
+   "Rock in dialect, such as Normaal"
+  ],
+  "genre/britpop": [
+   "British guitar pop of the 1990s, modelled on the Beatles and the Kinks"
+  ],
+  "genre/calypso": [
+   "Song form from Trinidad with a danceable, syncopated rhythm."
+  ],
+  "genre/classic-blues": [
+   "Urban blues by female singers with a band, 1920s"
+  ],
+  "genre/dub": [
+   "Jamaican studio technique with dropping-out instruments and plenty of echo."
+  ],
+  "genre/ethio-jazz": [
+   "Mulatu Astatke's blend of jazz, Latin and funk with Ethiopian scales."
+  ],
+  "genre/eurodance": [
+   "European dance with rapped verses and a sung chorus"
+  ],
+  "genre/filmmusical": [
+   "Film in which songs and dance drive the story forward."
+  ],
+  "genre/free-jazz": [
+   "Jazz in which fixed agreements about chords, form, metre and tempo are abandoned."
+  ],
+  "genre/g-funk": [
+   "West Coast hip hop with slow funk grooves and synthesizers"
+  ],
+  "genre/gregoriaans": [
+   "Monophonic, unaccompanied church chant from the Middle Ages."
+  ],
+  "genre/hard-bop": [
+   "Bop with more blues, gospel and rhythm and blues, from the mid-1950s."
+  ],
+  "genre/house": [
+   "Electronic dance music from Chicago with a four-on-the-floor beat"
+  ],
+  "genre/indorock": [
+   "Rock 'n' roll by Indo-Dutch musicians, 1950s and 1960s"
+  ],
+  "genre/jazzfunk": [
+   "Jazz over a continuous funk groove, with synthesizers and electric piano."
+  ],
+  "genre/jazzrap": [
+   "Hip hop built on jazz samples or with jazz musicians, such as A Tribe Called Quest and Guru."
+  ],
+  "genre/kleinkunst": [
+   "Dutch-language song with an emphasis on lyrics, from the cabaret tradition"
+  ],
+  "genre/lofi-hiphop": [
+   "Slow, jazzy beats with record crackle, meant as background music for studying."
+  ],
+  "genre/minimal-music": [
+   "Music built from short patterns that are repeated many times and change slowly.",
+   "Movement in which short patterns are repeated for a long time and change slowly."
+  ],
+  "genre/modale-jazz": [
+   "Improvising on scales (modes) instead of fast chord changes",
+   "Improvisation on scales (modes) instead of rapidly changing chords."
+  ],
+  "genre/nederbeat": [
+   "Dutch beat music of the 1960s, mostly in English"
+  ],
+  "genre/nederhop": [
+   "Dutch-language hip hop"
+  ],
+  "genre/nederpop": [
+   "Dutch pop music, mostly in the Dutch language"
+  ],
+  "genre/nouvelle-vague": [
+   "French 'new wave' of young critic-directors from the late 1950s."
+  ],
+  "genre/nu-jazz": [
+   "Hybrid of jazz and electronic dance music, with samples, beats and live instruments."
+  ],
+  "genre/ragtime": [
+   "Written-out piano music with a syncopated melody over a steady left hand."
+  ],
+  "genre/riot-grrrl": [
+   "Feminist punk movement of the 1990s"
+  ],
+  "genre/skiffle": [
+   "British do-it-yourself music with washboard and tea-chest bass (1950s)"
+  ],
+  "genre/soul": [
+   "Gospel and rhythm and blues with secular lyrics"
+  ],
+  "genre/spaghettiwestern": [
+   "Italian Western, often filmed in Spain, cheaper and harder-edged than the American kind."
+  ],
+  "genre/synthwave": [
+   "Music from around 2010 that imitates the synthesizer sound of the 1980s."
+  ],
+  "genre/third-stream": [
+   "Schuller's term (1957) for music that joins jazz and European concert music."
+  ],
+  "techniek/auto-tune": [
+   "Software that corrects pitch, also used as an effect"
+  ],
+  "techniek/midi": [
+   "Standard that lets instruments and computers exchange notes",
+   "Standard (1983) that lets instruments and computers communicate"
+  ],
+  "techniek/theremin": [
+   "Electronic instrument you play by moving your hands in an electric field, without touching it.",
+   "Electronic instrument you play without touching it, with gliding tones."
+  ],
+  "techniek/vocoder": [
+   "Device that lays the tone colour of a voice onto a synthesizer",
+   "Device that makes a voice sound like a synthesizer.",
+   "Device that transfers the tone colour of a voice onto a synthesizer, so that the synthesizer seems to sing."
+  ],
+  "techniek/wall-of-sound": [
+   "Phil Spector's production style, with doubled instruments and reverb"
+  ]
+ },
+ "labels": {
+  "Mixtape 13: Van cassette tot cloud": "Mixtape 13: From Cassette to Cloud",
+  "Mixtape 6: Fear of a Black Planet": "Mixtape 6: Fear of a Black Planet",
+  "Mixtape 7: De jaren 80": "Mixtape 7: The 1980s",
+  "Filmmuziekkaart": "Film Music Map",
+  "De Droomfabriek: Filmrol 6": "The Dream Factory: Film Reel 6",
+  "Mixtape 5: Jazz Festival": "Mixtape 5: Jazz Festival",
+  "After Hours: Sessie 4": "After Hours: Session 4",
+  "Mixtape 10: Vrouwen in de popmuziek": "Mixtape 10: Women in Pop Music",
+  "De Droomfabriek: Filmrol 2": "The Dream Factory: Film Reel 2",
+  "De Droomfabriek: Filmrol 7": "The Dream Factory: Film Reel 7",
+  "After Hours: Sessie 3": "After Hours: Session 3",
+  "Mixtape 12: De hitfabriek": "Mixtape 12: The Hit Factory",
+  "Jazzkaart": "Jazz Map",
+  "De Droomfabriek: Filmrol 8": "The Dream Factory: Film Reel 8",
+  "After Hours: Sessie 1": "After Hours: Session 1",
+  "Mixtape 4: Toen rock nog pop was": "Mixtape 4: When Rock Was Still Pop",
+  "Mixtape 11: Nederpop": "Mixtape 11: Nederpop",
+  "Mixtape 8: Elektronische muziek": "Mixtape 8: Electronic Music",
+  "De Droomfabriek: Filmrol 4": "The Dream Factory: Film Reel 4",
+  "After Hours: Sessie 2": "After Hours: Session 2",
+  "De Droomfabriek: Filmrol 1": "The Dream Factory: Film Reel 1",
+  "Mixtape 3: The Beatles": "Mixtape 3: The Beatles",
+  "De Droomfabriek: Filmrol 5": "The Dream Factory: Film Reel 5",
+  "Mixtape 1: Het ontstaan van popmuziek": "Mixtape 1: The Origins of Pop Music",
+  "De Droomfabriek: Filmrol 3": "The Dream Factory: Film Reel 3",
+  "Mixtape 2: Jeugdculturen 1950-1980": "Mixtape 2: Youth Cultures 1950-1980",
+  "Magazine: Rock achter het IJzeren Gordijn": "Magazine: Rock Behind the Iron Curtain",
+  "Magazine: Nederpop in de Koude Oorlog": "Magazine: Nederpop in the Cold War",
+  "Magazine: Leven met de bom": "Magazine: Living with the Bomb",
+  "Magazine: De hoes is uitgevonden": "Magazine: The Album Cover Is Invented",
+  "Mixtape 9: Het instrument": "Mixtape 9: The Instrument",
+  "Magazine: We Didn't Start the Fire": "Magazine: We Didn't Start the Fire",
+  "Magazine: Jazz als geheim wapen": "Magazine: Jazz as a Secret Weapon",
+  "Magazine: De man die muzikanten ziet": "Magazine: The Man Who Sees Musicians",
+  "Magazine: Wish You Were Here": "Magazine: Wish You Were Here",
+  "Magazine: Knippen, plakken en schandaal": "Magazine: Cut, Paste and Scandal",
+  "Magazine: Hipgnosis": "Magazine: Hipgnosis",
+  "Magazine: Unknown Pleasures": "Magazine: Unknown Pleasures",
+  "Mixtape 1": "Mixtape 1",
+  "Mixtape 12": "Mixtape 12",
+  "Mixtape 3": "Mixtape 3",
+  "Mixtape 13": "Mixtape 13",
+  "Mixtape 4": "Mixtape 4",
+  "Mixtape 2": "Mixtape 2",
+  "Mixtape 10": "Mixtape 10",
+  "Mixtape 8": "Mixtape 8",
+  "Mixtape 7": "Mixtape 7",
+  "Mixtape 6": "Mixtape 6",
+  "Mixtape 5": "Mixtape 5",
+  "Mixtape 9": "Mixtape 9",
+  "Mixtape 11": "Mixtape 11",
+  "Genrekaart": "Genre Map",
+  "Genrekaart · Techniek": "Genre Map · Technology"
+ }
+}

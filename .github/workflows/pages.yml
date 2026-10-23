@@ -38,20 +38,26 @@ jobs:
         run: deno run -A bouw/encyclopedie/maak.ts
       - name: Samenvoegen met de site en sitemap bijwerken
         run: |
-          rm -rf encyclopedie
+          rm -rf encyclopedie en/encyclopedie
           mv bouw/site/encyclopedie encyclopedie
+          mkdir -p en
+          mv bouw/site/en/encyclopedie en/encyclopedie
           deno eval '
             const x = Deno.readTextFileSync("sitemap.xml").split("\n").filter((r) => !r.includes("/encyclopedie/"));
             const nu = new Date().toISOString().slice(0, 10);
             const p: string[] = JSON.parse(Deno.readTextFileSync("bouw/encyclopedie/data/sitemap.json"));
             const i = x.findIndex((r) => r.includes("</urlset>"));
             x.splice(i, 0, ...p.map((q) => `<url><loc>https://sorock.nl/encyclopedie/${q}</loc><lastmod>${nu}</lastmod></url>`));
+            const pe: string[] = JSON.parse(Deno.readTextFileSync("bouw/encyclopedie/data/sitemap-en.json"));
+            x.splice(i, 0, ...pe.map((q) => `<url><loc>https://sorock.nl/en/encyclopedie/${q}</loc><lastmod>${nu}</lastmod></url>`));
             Deno.writeTextFileSync("sitemap.xml", x.join("\n"));
           '
           rm -rf bouw bron.tgz .git .github
           echo "pagina's in encyclopedie: $(find encyclopedie -name '*.html' | wc -l)"
           test "$(find encyclopedie -name '*.html' | wc -l)" -gt 15000
           test -s encyclopedie/zoek.json
+          echo "pagina's in en/encyclopedie: $(find en/encyclopedie -name '*.html' | wc -l)"
+          test -s en/encyclopedie/zoek.json
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

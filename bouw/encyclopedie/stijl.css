@@ -127,3 +127,12 @@ body { background: var(--paper); }
 @media (max-width: 720px) {
   .info img { max-height: 240px; object-fit: contain; background: var(--ink); }
 }
+
+/* Taalwisselaar (zoals Wikipedia: rechtsboven in het artikel) */
+.talen { float: right; position: relative; margin: 0 0 8px 12px; z-index: 15; }
+.talen summary { list-style: none; cursor: pointer; font: 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; border: 2px solid var(--ink); border-radius: 99px; padding: 8px 12px; display: flex; gap: 6px; align-items: center; background: var(--white); }
+.talen summary::-webkit-details-marker { display: none; }
+.talen summary:hover, .talen[open] summary { background: var(--yellow); }
+.talen ul { position: absolute; right: 0; top: calc(100% + 6px); min-width: 160px; margin: 0; padding: 6px 0; list-style: none; background: var(--white); border: 2px solid var(--ink); border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,.15); }
+.talen li a { display: block; padding: 8px 14px; text-decoration: none; font: 600 15px/1.2 var(--body); }
+.talen li a[aria-current] { background: var(--yellow); }
