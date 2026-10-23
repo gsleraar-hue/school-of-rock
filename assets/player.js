@@ -3,7 +3,7 @@
   if (window.SOR) return; // al geladen: de speler blijft staan bij navigeren binnen de site
   const SCRIPT_SRC = (document.currentScript && document.currentScript.src) || new URL('/assets/player.js', location.href).href;
   const root = () => document.querySelector('meta[name="sor-root"]')?.content || '.';
-  const abs = p => new URL(root() + '/' + p, location.href).href;
+  const abs = p => /^https?:\/\//i.test(p) ? p : new URL(root() + '/' + p, location.href).href; // volledige adressen (luisterboek op sor-audio) blijven zoals ze zijn
   const slug = s => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/&/g, ' en ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const norm = s => slug(s).replace(/-/g, '');
   const store = { get(k) { try { return JSON.parse(localStorage.getItem('sor-' + k)); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem('sor-' + k, JSON.stringify(v)); } catch (e) {} } };
