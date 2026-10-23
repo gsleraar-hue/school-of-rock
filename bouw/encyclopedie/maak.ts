@@ -339,7 +339,7 @@ function lemmaPage(l: any) {
   else if (l.type === "begrip") ent = { "@type": "DefinedTerm", name: l.name, description: desc, inDefinedTermSet: E0 + "alle.html#begrip" };
   else ent = { "@type": "Thing", name: l.name, description: desc };
   const ld = [
-    { "@type": "Article", "@id": url + "#artikel", headline: l.name, description: desc, inLanguage: LANG, url, image: afb || OG_STANDAARD, mainEntityOfPage: url, about: ent, dateModified: new Date().toISOString().slice(0, 10), author: { "@type": "Person", name: "Jan-Wolter Smit" }, publisher: { "@type": "Organization", name: "School of Rock", url: SITE } },
+    { "@type": "Article", "@id": url + "#artikel", headline: l.name, description: desc, inLanguage: LANG, url, image: afb || OG_STANDAARD, mainEntityOfPage: url, about: ent, author: { "@type": "Person", name: "Jan-Wolter Smit" }, publisher: { "@type": "Organization", name: "School of Rock", url: SITE } },
     { "@type": "BreadcrumbList", itemListElement: [["School of Rock", SITE], ["HitStory", E0 + "index.html"], [TYPE[l.type][1], E0 + "alle.html"], [l.name, url]].map(([n, u], i) => ({ "@type": "ListItem", position: i + 1, name: n, item: u })) },
   ];
   return page(ROOT, l.name, desc, b, (tracks.length ? FRAG_JS : "") + (l.tracklijst ? TL_JS : ""), !l.stub, l.id + ".html", afb, ld);
@@ -463,7 +463,11 @@ for (const taal of ["nl", "en"] as Taal[]) {
   Deno.writeTextFileSync(OUT + "alle.html", allePagina());
   // zoeklijst: in het Engels ook de lemma's zonder Engelse pagina (vierde waarde 1 = link naar de Nederlandse pagina)
   Deno.writeTextFileSync(OUT + "zoek.json", JSON.stringify(ALLES.map((l) => taal === "en" && !GEBOUWD.has(l.id) ? [l.id, l.name, label(l), 1] : [l.id, l.name, label(l)])));
-  for (const l of L) Deno.writeTextFileSync(OUT + l.id + ".html", lemmaPage(l).replace("</body>", (taal === "nl" ? bewerkKnop(l) : "") + "</body>"));
+  const HASH: Record<string, string> = {};
+  const hash = async (t: string) => [...new Uint8Array(await crypto.subtle.digest("SHA-1", new TextEncoder().encode(t)))].slice(0, 6).map((x) => x.toString(16).padStart(2, "0")).join("");
+  for (const l of L) { const h = lemmaPage(l).replace("</body>", (taal === "nl" ? bewerkKnop(l) : "") + "</body>"); Deno.writeTextFileSync(OUT + l.id + ".html", h); HASH[l.id + ".html"] = await hash(h); }
+  for (const f of ["index.html", "alle.html"]) HASH[f] = await hash(Deno.readTextFileSync(OUT + f));
+  Deno.writeTextFileSync(OUT + "hash.json", JSON.stringify(HASH));
   if (taal === "nl") Deno.writeTextFileSync(OUT + "bewerk.html", bewerkPagina());
   // voor de sitemap: hoofdpagina, A-Z en alle lemma's die geen beginnetje zijn
   Deno.writeTextFileSync(ED + "data/sitemap" + (taal === "en" ? "-en" : "") + ".json", JSON.stringify(["index.html", "alle.html", ...L.filter((l) => !l.stub).map((l) => l.id + ".html")]));
