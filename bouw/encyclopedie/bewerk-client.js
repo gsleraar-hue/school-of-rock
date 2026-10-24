@@ -1,4 +1,4 @@
-// Bewerkpagina van HitStory (alleen voor de eigenaar). Wordt door maak.ts in bewerk.html gezet; __MAP__ en __EN__ worden daar ingevuld.
+// Bewerkpagina van HitStory (alleen voor de eigenaar). Wordt door maak.ts in bewerk.html gezet; de twee waarden hieronder worden daar ingevuld.
 // Bewaart naar bouw/encyclopedie/<MAP>/<type>/<slug>.json in de site-repo (daarna bouwt GitHub Actions) en uploadt afbeeldingen naar de beeld-repo.
 (function () {
   var R = "gsleraar-hue/school-of-rock", RB = "gsleraar-hue/hitstory-beeld", MAP = "__MAP__", EN = __EN__;
@@ -61,7 +61,7 @@
     var h = "";
     if (isNieuw) h += '<p><b>Nieuw lemma</b>: ' + TYPES[type] + '. Adres: <code id="bw-adres"></code></p>';
     h += veld("Naam", inp("f-name", d.name));
-    h += veld("Tekst (lege regel tussen alinea's; [[...]] hoeft niet, namen worden automatisch gelinkt)", '<textarea id="f-text" rows="16" style="width:100%">' + esc(d.text) + "</textarea>");
+    h += veld("Tekst (lege regel tussen alinea's; namen van andere lemma's worden automatisch gelinkt)", '<textarea id="f-text" rows="16" style="width:100%">' + esc(d.text) + "</textarea>");
     h += veld("Luistertip", '<textarea id="f-listen" rows="3" style="width:100%">' + esc(d.listen) + "</textarea>");
     if (!EN) {
       if (type === "artiest") {
