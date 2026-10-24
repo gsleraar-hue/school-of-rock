@@ -117,7 +117,7 @@ if (exists(FC)) for (const f of Deno.readDirSync(FC)) {
   let kop = "";
   for (const regel of Deno.readTextFileSync(FC + f.name).split(/\r?\n/)) {
     const k = regel.match(/^#\s+(.+)$/); if (k) { kop = k[1].trim().toLowerCase(); continue; }
-    if (!kop || /^(twijfel|mogelijke fout)/i.test(kop)) continue;
+    if (!kop || /^(twijfel|mogelijke fout|niet gevonden)/i.test(kop)) continue;
     for (const u of regel.match(/https?:\/\/[^\s;,)]+/g) || []) { const l = BRONNEN.get(kop) || BRONNEN.set(kop, []).get(kop)!; if (!l.includes(u)) l.push(u); }
   }
 }
@@ -335,7 +335,7 @@ function lemmaPage(l: any) {
   if (l.vermeld?.length) secties.push(["vermeld", nt("Genoemd in andere artikelen", "Mentioned in other articles"), `<ul class="vermeld">${l.vermeld.map((v: any) => `<li>${a(v.id)} <span class="klein">${esc(label(byId.get(v.id) || {}))}</span><q>${linkify(v.zin, l.id, new Set([...gezien, v.id]))}</q></li>`).join("")}</ul>`]);
   const zie = [...new Set(["artiest", "maker", "werk", "wortels", "daarna", "genre", "techniek", "invloed", "invloed-op"].flatMap((k) => l.links[k] || []))].filter((id: string) => !gezien.has(id) && byId.has(id) && !(l.type === "artiest" && byId.get(id).album)).slice(0, 30);
   if (zie.length) secties.push(["zieook", nt("Zie ook", "See also"), `<ul class="ziezook">${zie.map((id) => `<li>${a(id)}</li>`).join("")}</ul>`]);
-  const bronnen = BRONNEN.get(l.name.toLowerCase()) || [];
+  const bronnen = BRONNEN.get(l.id.toLowerCase()) || BRONNEN.get(l.name.toLowerCase()) || [];
   if (bronnen.length) secties.push(["bronnen", nt("Bronnen", "Sources"), `<ol class="bron">${bronnen.map((u) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(bronNaam(u))}</a></li>`).join("")}</ol>`]);
 
   const strong = (h: string) => h.replace(/&lt;(\/?)strong&gt;/g, "<$1strong>");
