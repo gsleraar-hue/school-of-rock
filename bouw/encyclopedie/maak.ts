@@ -263,7 +263,7 @@ function infobox(l: any) {
   } else if (l.type === "werk") {
     const tr = l.tracklijst;
     const duur = tr ? Math.round(tr.tracks.reduce((s: number, x: any) => s + (x.ms || 0), 0) / 60000) : 0;
-    rows += rij(nt("Soort", "Type"), l.nr ? nt(`${l.nr}e studioalbum`, `${ord(l.nr)} studio album`) : SOORT[l.soort] || nt("Werk", "Work")) + rij(nt("Artiest", "Artist"), (l.links.artiest || []).map((id: string) => a(id)).join(", ") || esc(l.sub)) + rij(nt("Jaar", "Year"), l.year ? String(l.year) : "") + rij(nt("Schrijver/producer", "Writer/producer"), (l.links.maker || []).map((id: string) => a(id)).join(", "));
+    rows += rij(nt("Soort", "Type"), l.nr ? nt("Studioalbum", "Studio album") : SOORT[l.soort] || nt("Werk", "Work")) + rij(nt("Artiest", "Artist"), (l.links.artiest || []).map((id: string) => a(id)).join(", ") || esc(l.sub)) + rij(nt("Jaar", "Year"), l.year ? String(l.year) : "") + rij(nt("Schrijver/producer", "Writer/producer"), (l.links.maker || []).map((id: string) => a(id)).join(", "));
     if (tr) rows += rij("Genre", esc(genreEn(tr.genre || ""))) + rij(nt("Nummers", "Tracks"), `${tr.tracks.length}${duur ? ` (${duur} min.)` : ""}`) + rij(nt("Vorige", "Previous"), l.vorige ? a(l.vorige) : "") + rij(nt("Volgende", "Next"), l.volgende ? a(l.volgende) : "");
   } else if (l.type === "techniek") {
     rows += rij(nt("Jaar", "Year"), l.year ? String(Math.floor(l.year)) : "") + rij(nt("Plaats", "Place"), esc(l.place || "")) + rij(nt("Bedenker", "Inventor"), esc(l.who || "")) + rij(nt("Categorie", "Category"), esc(l.sub || "")) + rij(nt("Genres", "Genres"), links("genre"));
@@ -280,8 +280,8 @@ function stubLead(l: any) {
   const hoofdst = [...new Set((l.refs || []).filter((x: any) => x.kind === "hoofdstuk").map((x: any) => x.label.replace(/:.*/, "")))] as string[];
   if (l.album) {
     const art = (l.links.artiest || []).map((id: string) => a(id)).join(", ") || esc(l.artist || "");
-    return nt(`<p><b>${esc(l.name)}</b> is ${l.nr ? `het ${l.nr}e studioalbum` : "een studioalbum"} van ${art}${l.year ? `, uitgebracht in ${l.year}` : ""}.${l.tracklijst ? ` Het album telt ${l.tracklijst.tracks.length} nummers.` : ""}</p>`,
-      `<p><b>${esc(l.name)}</b> is ${l.nr ? `the ${ord(l.nr)} studio album` : "a studio album"} by ${art}${l.year ? `, released in ${l.year}` : ""}.${l.tracklijst ? ` The album has ${l.tracklijst.tracks.length} tracks.` : ""}</p>`);
+    return nt(`<p><b>${esc(l.name)}</b> is een studioalbum van ${art}${l.year ? `, uitgebracht in ${l.year}` : ""}.${l.tracklijst ? ` Het album telt ${l.tracklijst.tracks.length} nummers.` : ""}</p>`,
+      `<p><b>${esc(l.name)}</b> is a studio album by ${art}${l.year ? `, released in ${l.year}` : ""}.${l.tracklijst ? ` The album has ${l.tracklijst.tracks.length} tracks.` : ""}</p>`);
   }
   const wat = l.type === "artiest" ? (isGroep(l) ? nt("een muziekgroep", "a band") : nt("een artiest", "an artist")) : (LANG === "en" ? "a " : "") + label(l).toLowerCase();
   let s = `<b>${esc(l.name)}</b>${l.born ? ` (${jaren(l)})` : ""} is ${wat}`;
