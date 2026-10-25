@@ -211,9 +211,14 @@ function linkify(tekst: string, zelf: string, gezien: Set<string>) {
   }
   return uit + linkBasis(tekst.slice(pos), zelf, gezien);
 }
+// Titels waarin een los woord (bijv. Voodoo) geen link naar een ander lemma mag krijgen
+const BESCHERMD = ["Miles Runs the Voodoo Down"];
+const BESCHERMD_RE = new RegExp("(?<![\\p{L}\\d])(" + BESCHERMD.map(reEsc).join("|") + ")(?![\\p{L}\\d])", "gu");
 function linkBasis(tekst: string, zelf: string, gezien: Set<string>) {
   let uit = "", pos = 0;
+  const bescherm = [...tekst.matchAll(BESCHERMD_RE)].map((b) => [b.index!, b.index! + b[0].length]);
   for (const m of tekst.matchAll(LINKRE)) {
+    if (bescherm.some(([a, b]) => m.index! >= a && m.index! < b)) continue;
     const id = exact.get(m[0]) || klein.get(m[0].toLowerCase());
     if (!id || id === zelf || gezien.has(id)) continue;
     if (VEILIG_DUBBEL.has(m[0])) {
