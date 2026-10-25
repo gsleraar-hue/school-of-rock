@@ -438,50 +438,17 @@ function hoofdpagina() {
 function bewerkPagina() {
   const MAP = LANG === "en" ? "bewerkt-en" : "bewerkt";
   const b = `<h1>${LANG === "en" ? "Pagina bewerken (Engels)" : "Pagina bewerken"}</h1>
-<div id="bw-instel" hidden><p>Eenmalig: plak een GitHub-sleutel (fine-grained token voor gsleraar-hue/school-of-rock met Contents: lezen en schrijven). De sleutel blijft alleen in deze browser.</p><p><input id="bw-token" type="password" style="width:100%" placeholder="github_pat_..."><button id="bw-bewaar-token">Sleutel opslaan</button></p></div>
+<div id="bw-instel" hidden><p>Eenmalig: plak een GitHub-sleutel (fine-grained token voor gsleraar-hue/school-of-rock en gsleraar-hue/hitstory-beeld, met Contents: lezen en schrijven). De sleutel blijft alleen in deze browser.</p><p><input id="bw-token" type="password" style="width:100%" placeholder="github_pat_..."><button id="bw-bewaar-token">Sleutel opslaan</button></p></div>
+<div id="bw-kies" hidden></div>
 <div id="bw-form" hidden>
 <p><a id="bw-terug" href="#">← terug naar de pagina</a> · <a href="#" id="bw-uit">sleutel verwijderen</a></p>
-<p><label>Naam<br><input id="bw-naam" style="width:100%"></label></p>
-<p><label>Tekst (lege regel tussen alinea's)<br><textarea id="bw-tekst" rows="18" style="width:100%"></textarea></label></p>
-<p><label>Luistertip<br><textarea id="bw-luister" rows="3" style="width:100%"></textarea></label></p>
-<p><button id="bw-opslaan">Opslaan en publiceren</button> <span id="bw-status"></span></p>
+<div id="bw-velden"></div>
+<p><button id="bw-opslaan">Opslaan en publiceren</button> <button id="bw-weg" type="button" hidden>Lemma verwijderen</button> <span id="bw-status"></span></p>
 <p style="opacity:.7">Na opslaan duurt het ongeveer twee minuten voordat de wijziging online staat.</p>
-</div>`;
-  const js = `<script>(function(){
-var R="gsleraar-hue/school-of-rock",$=function(i){return document.getElementById(i)},id=new URLSearchParams(location.search).get("id")||"";
-var tok=function(){try{return localStorage.getItem("hs_token")||""}catch(e){return ""}};
-function st(t){$("bw-status").textContent=t}
-function api(p,o){o=o||{};o.headers=Object.assign({Authorization:"Bearer "+tok(),Accept:"application/vnd.github+json"},o.headers||{});return fetch("https://api.github.com/repos/"+R+p,o)}
-function b64(s){return btoa(unescape(encodeURIComponent(s)))}
-function toon(){var ok=!!tok();$("bw-instel").hidden=ok;$("bw-form").hidden=!ok||!id;if(ok&&id)laad()}
-async function laad(){
-  var t=location.pathname.replace("bewerk.html","")+id+".html";$("bw-terug").href=t;
-  var h=await (await fetch(t,{cache:"no-store"})).text();var k='id="hs-bron">',i=h.indexOf(k),m=null;if(i>=0){var e=h.indexOf("<"+"/script>",i);m=h.slice(i+k.length,e)}
-  var d=m?JSON.parse(m):{name:"",text:"",listen:""};
-  var r=await api("/contents/bouw/encyclopedie/${MAP}/"+id+".json?ref=main");
-  if(r.ok){var j=JSON.parse(decodeURIComponent(escape(atob((await r.json()).content.split(String.fromCharCode(10)).join("")))));d=Object.assign(d,j)}
-  $("bw-naam").value=d.name||"";$("bw-tekst").value=d.text||"";$("bw-luister").value=d.listen||"";
-  document.title="Bewerk: "+(d.name||id)
-}
-$("bw-bewaar-token").onclick=function(){var v=$("bw-token").value.trim();if(v){localStorage.setItem("hs_token",v);toon()}};
-$("bw-uit").onclick=function(e){e.preventDefault();localStorage.removeItem("hs_token");toon()};
-$("bw-opslaan").onclick=async function(){
-  try{
-    st("Bezig met opslaan…");var pad="/contents/bouw/encyclopedie/${MAP}/"+id+".json";
-    var body={name:$("bw-naam").value.trim(),text:$("bw-tekst").value.split(String.fromCharCode(13)).join("").trim(),listen:$("bw-luister").value.trim()};
-    var p,pogingen=0;
-    do{
-      var g=await api(pad+"?ref=main&t="+Date.now(),{cache:"no-store"}),sha=g.ok?(await g.json()).sha:undefined;
-      var p=await api(pad,{method:"PUT",body:JSON.stringify({message:"Bewerkt via HitStory: "+id,content:b64(JSON.stringify(body,null,1)),branch:"main",sha:sha})});
-      pogingen++;if(p.status===409)await new Promise(function(r){setTimeout(r,1500)})
-    }while(p.status===409&&pogingen<4);
-    if(!p.ok)throw new Error("opslaan mislukt ("+p.status+")");
-    
-    st("Opgeslagen. De bouw loopt; over ongeveer twee minuten staat het online.")
-  }catch(e){st("Fout: "+e.message)}
-};
-toon()})()</script>`;
-  return page(ROOT0, "Bewerken", "Bewerkpagina voor de eigenaar.", b, js, false);
+</div>
+<style>.bwrij{display:flex;gap:.6em;flex-wrap:wrap}.bwrij>p{flex:1;min-width:8em}#bw-velden fieldset{margin:1em 0}</style>`;
+  const client = Deno.readTextFileSync(ED + "bewerk-client.js").replace("__MAP__", MAP).replace("__EN__", LANG === "en" ? "true" : "false");
+  return page(ROOT0, "Bewerken", "Bewerkpagina voor de eigenaar.", b, `<script>${client}</script>`, false);
 }
 
 function allePagina() {
