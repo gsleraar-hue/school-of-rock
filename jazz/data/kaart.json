@@ -11241,6 +11241,309 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/de/f3/a1/def3a1f0-859f-3033-8025-f722bd9a6323/00602465441420.rgb.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "pim-jacobs",
+   "name": "Pim Jacobs",
+   "born": 1934,
+   "died": 1996,
+   "year": 1954,
+   "stroming": "nederlandse-jazz",
+   "alsoIn": [],
+   "place": {
+    "name": "Hilversum",
+    "lat": 52.22,
+    "lon": 5.18
+   },
+   "influences": [],
+   "films": [
+    "Marriage in Modern Jazz – met Rita Reys (1960)",
+    "Jazz Pictures at an Exhibition – met Kenny Clarke (1961)",
+    "Congratulations in Jazz (1965)"
+   ],
+   "text": "Pianist Pim Jacobs uit Hilversum richtte in 1954 het Pim Jacobs Trio op, dat jarenlang bij de bekendste Nederlandse jazzgroepen hoorde. Hij trouwde in 1960 met zangeres Rita Reys en begeleidde met zijn trio gasten als Ella Fitzgerald, Sarah Vaughan en Tony Bennett. Op televisie presenteerde hij Dzjes zien, waarin onder anderen Astrud Gilberto en Wes Montgomery optraden. Hij schreef ook de muziek voor de film Glas van Bert Haanstra. Pim Jacobs overleed in 1996, 61 jaar oud.",
+   "listen": "Hoor hoe het trio en de zangeres elkaar rustig laten ademen, zonder dat iemand zich opdringt.",
+   "tracks": [
+    {
+     "film": "Marriage in Modern Jazz",
+     "title": "Summertime",
+     "artist": "Rita Reys & Pim Jacobs Trio",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/47/39/ec/4739ecfe-6168-a99b-6c48-e378a627ead4/mzaf_12040053596667351756.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8a/48/cd/8a48cd90-2807-098c-e061-1507ffcdf1a0/24UMGIM61885.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Marriage in Modern Jazz",
+     "title": "Have You Met Miss Jones",
+     "artist": "Rita Reys & Pim Jacobs Trio",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1c/7c/54/1c7c540e-be3f-ef41-e0d8-ddff588ef466/mzaf_3806485439470134983.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8a/48/cd/8a48cd90-2807-098c-e061-1507ffcdf1a0/24UMGIM61885.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Marriage in Modern Jazz",
+     "title": "Willow Weep for Me",
+     "artist": "Rita Reys & Pim Jacobs Trio",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/85/90/e8/8590e857-4c32-a75c-fb96-f2280b46d376/mzaf_13725962759700277349.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8a/48/cd/8a48cd90-2807-098c-e061-1507ffcdf1a0/24UMGIM61885.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "eric-vloeimans",
+   "name": "Eric Vloeimans",
+   "born": 1963,
+   "died": null,
+   "year": 1988,
+   "stroming": "nederlandse-jazz",
+   "alsoIn": [],
+   "place": {
+    "name": "Huizen",
+    "lat": 52.3,
+    "lon": 5.24
+   },
+   "influences": [
+    "donald-byrd"
+   ],
+   "films": [
+    "Gatecrashin' (2007)",
+    "Hyper (2008)",
+    "Oliver's Cinema (2013)"
+   ],
+   "text": "Trompettist Eric Vloeimans uit Huizen begon als klassiek trompettist in Rotterdam en stapte over naar de jazz. In 1988 studeerde hij met lof af en vervolgde hij zijn studie in New York bij Donald Byrd. Hij speelde daar ook in de bigbands van Frank Foster en Mercer Ellington. Zijn toon is warm en melodieus, tussen jazz en pop in. Hij speelde met onder anderen Willem Breuker en Ernst Reijseger, en kreeg in 2001 de VPRO/Boy Edgar Prijs. Later werkte hij ook samen met barokorkest Holland Baroque.",
+   "listen": "Hoor hoe de trompet zacht en zangerig speelt, vaak met een ingehouden, bijna fluisterende toon.",
+   "tracks": [
+    {
+     "film": "Gatecrashin'",
+     "title": "Images of Washington",
+     "artist": "Eric Vloeimans",
+     "year": 2007,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/28/2c/20/282c20e2-d61b-d173-2b49-6f9553b97773/mzaf_12189735362275008551.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f4/7c/76/f47c765e-f9d4-4953-297f-b4a50dea8f17/198846588018.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Gatecrashin'",
+     "title": "V-Flow",
+     "artist": "Eric Vloeimans",
+     "year": 2007,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8e/d8/46/8ed846cd-c803-e0d7-87dc-5fbe697dcfa3/mzaf_10204615553603270054.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f4/7c/76/f47c765e-f9d4-4953-297f-b4a50dea8f17/198846588018.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Oliver's Cinema",
+     "title": "Fellini's Waltz",
+     "artist": "Eric Vloeimans",
+     "year": 2013,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/79/23/9d/79239dfc-3268-1366-3443-eb500caa7492/mzaf_11582387799568233998.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/82/66/7e/82667e6c-dd8b-8d32-b7e4-7f2894735ecc/608917611120.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "snarky-puppy",
+   "name": "Snarky Puppy",
+   "born": 2004,
+   "died": null,
+   "year": 2004,
+   "stroming": "fusion",
+   "alsoIn": [
+    "jazzfunk"
+   ],
+   "place": {
+    "name": "Denton, Texas",
+    "lat": 33.21,
+    "lon": -97.13
+   },
+   "influences": [],
+   "films": [
+    "Family Dinner – Volume 1 (2013)",
+    "We Like It Here (2014)",
+    "Sylva (2015)"
+   ],
+   "text": "Snarky Puppy ontstond in 2004 in Denton, Texas, toen bassist Michael League na twee jaar op de universiteit van North Texas een tienkoppige band begon. In de loop der jaren speelden ongeveer veertig muzikanten mee, bij elkaar 'The Fam'. De groep speelt jazz, funk, rock en wereldmuziek, vaak zonder zang. We Like It Here uit 2014 werd live opgenomen in Utrecht. Het nummer Something won in 2014 een Grammy en de band won er in totaal vijf.",
+   "listen": "Hoor hoe de band tien stemmen tegelijk laat spelen en toch strak samen blijft.",
+   "tracks": [
+    {
+     "film": "We Like It Here",
+     "title": "Lingus",
+     "artist": "Snarky Puppy",
+     "year": 2014,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ca/af/6b/caaf6bff-0066-68fc-6865-feea79f74355/mzaf_15966489191812358741.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d8/c0/af/d8c0af7c-f1ca-576d-646c-5fa254809dda/824833007056.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "We Like It Here",
+     "title": "Shofukan",
+     "artist": "Snarky Puppy",
+     "year": 2014,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/eb/b1/57/ebb1576e-fbd3-834c-5f79-14cc74f5cc83/mzaf_11869149220171255927.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d8/c0/af/d8c0af7c-f1ca-576d-646c-5fa254809dda/824833007056.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Family Dinner - Volume 1",
+     "title": "Something",
+     "artist": "Snarky Puppy & Lalah Hathaway",
+     "year": 2013,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/53/c7/a6/53c7a690-61c1-620c-1e14-b1104025f55b/mzaf_11282299546854586769.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d2/91/9d/d2919dcf-50dd-a78c-5792-6421b088cb11/191773762698.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gogo-penguin",
+   "name": "GoGo Penguin",
+   "born": 2012,
+   "died": null,
+   "year": 2014,
+   "stroming": "pianotrio",
+   "alsoIn": [
+    "nu-jazz",
+    "triphop"
+   ],
+   "place": {
+    "name": "Manchester",
+    "lat": 53.48,
+    "lon": -2.24
+   },
+   "influences": [
+    "esbjorn-svensson"
+   ],
+   "films": [
+    "Fanfares (2012)",
+    "v2.0 (2014)",
+    "Man Made Object (2016)"
+   ],
+   "text": "GoGo Penguin is een pianotrio uit Manchester, in 2012 opgericht door pianist Chris Illingworth, bassist Nick Blacka en drummer Rob Turner. Hun muziek heeft drumpatronen uit de elektronica, rustige pianolijnen en zware bas. Critici vergeleken hen met het Esbjörn Svensson Trio en met Massive Attack. Hun tweede album v2.0 stond in 2014 op de shortlist voor de Mercury Prize. In 2015 tekenden ze bij Blue Note. In 2021 volgde Jon Scott Rob Turner op achter de drums.",
+   "listen": "Hoor hoe de drummer speelt als een drumcomputer, terwijl de piano er zacht overheen golft.",
+   "tracks": [
+    {
+     "film": "v2.0",
+     "title": "Murmuration",
+     "artist": "GoGo Penguin",
+     "year": 2014,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ba/df/c0/badfc0c5-c4fb-fe29-43e8-4579c74991d1/mzaf_10241293028750915976.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/bd/b9/a4/bdb9a434-4ec4-3dcc-b72c-c7f02ed1f2de/5050580625426_cover.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "v2.0",
+     "title": "Hopopono",
+     "artist": "GoGo Penguin",
+     "year": 2014,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/30/f1/19/30f11961-e050-b1f2-d52b-34cb93cac1d0/mzaf_238416260702611248.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/bd/b9/a4/bdb9a434-4ec4-3dcc-b72c-c7f02ed1f2de/5050580625426_cover.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "v2.0",
+     "title": "One Percent",
+     "artist": "GoGo Penguin",
+     "year": 2014,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0f/4f/77/0f4f7715-5815-9d1b-fc7b-efa69c1a2276/mzaf_16375827611146448200.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/bd/b9/a4/bdb9a434-4ec4-3dcc-b72c-c7f02ed1f2de/5050580625426_cover.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gregory-porter",
+   "name": "Gregory Porter",
+   "born": 1971,
+   "died": null,
+   "year": 2010,
+   "stroming": "vocal-jazz",
+   "alsoIn": [
+    "soul-jazz"
+   ],
+   "place": {
+    "name": "Bakersfield → Brooklyn",
+    "lat": 40.69,
+    "lon": -73.94
+   },
+   "influences": [
+    "nat-king-cole"
+   ],
+   "films": [
+    "Water (2010)",
+    "Be Good (2012)",
+    "Liquid Spirit (2013)"
+   ],
+   "text": "Zanger Gregory Porter groeide op in Bakersfield, Californië, waar zijn moeder predikant was. Hij kreeg een sportbeurs voor American football, maar een schouderblessure maakte daar een eind aan. In 2004 verhuisde hij naar Brooklyn, werkte als kok in het restaurant van zijn broer en zong op buurtpodia. In 2013 tekende hij bij Blue Note. Zijn album Liquid Spirit won in 2014 een Grammy en haalde de Britse top tien. In 2017 won hij nog een Grammy met Take Me to the Alley.",
+   "listen": "Hoor zijn diepe, warme stem en de gospel eronder, die je vanzelf doet meezingen.",
+   "tracks": [
+    {
+     "film": "Liquid Spirit",
+     "title": "Liquid Spirit",
+     "artist": "Gregory Porter",
+     "year": 2013,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/de/6f/55/de6f55d7-42d6-41a9-95ce-de05de886e98/mzaf_1088332556193198261.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/df/74/b9/df74b975-e9e6-3b38-421d-a1949938cecc/00602537431601.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Liquid Spirit",
+     "title": "Hey Laura",
+     "artist": "Gregory Porter",
+     "year": 2013,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/db/e4/2d/dbe42d8d-5347-2c7e-e1b5-4f73678a2b21/mzaf_17017151512151046028.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/df/74/b9/df74b975-e9e6-3b38-421d-a1949938cecc/00602537431601.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Liquid Spirit",
+     "title": "No Love Dying",
+     "artist": "Gregory Porter",
+     "year": 2013,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e0/93/93/e09393df-1363-38a5-d46b-066dd5034381/mzaf_14034058025352565307.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/df/74/b9/df74b975-e9e6-3b38-421d-a1949938cecc/00602537431601.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "kokoroko",
+   "name": "Kokoroko",
+   "born": 2017,
+   "died": null,
+   "year": 2019,
+   "stroming": "uk-jazz-nieuw",
+   "alsoIn": [
+    "jazzfunk"
+   ],
+   "place": {
+    "name": "Londen",
+    "lat": 51.51,
+    "lon": -0.13
+   },
+   "influences": [],
+   "films": [
+    "Abusey Junction (2018)",
+    "Could We Be More (2022)",
+    "Tuff Times Never Last (2025)"
+   ],
+   "text": "Kokoroko is een Londense band van zeven muzikanten, geleid door trompettiste Sheila Maurice-Grey en percussionist Onome Edgeworth. Ze spelen een mengeling van funk en highlife, de dansmuziek uit Ghana. Hun nummer Abusey Junction kreeg in 2019 miljoenen kijkers op YouTube en won een prijs van dj Gilles Peterson. De naam komt uit het Urhobo en betekent 'wees sterk'. In 2020 speelden ze in de Proms in de Royal Albert Hall, en in 2022 kwam hun eerste album Could We Be More uit.",
+   "listen": "Hoor de trompetten die als een gesprek over een warme, rustig stromende groove heen spelen.",
+   "tracks": [
+    {
+     "film": "Abusey Junction",
+     "title": "Abusey Junction",
+     "artist": "Kokoroko",
+     "year": 2018,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/db/73/df/db73df30-c180-02b8-4079-617929b6994f/mzaf_17673661665377165558.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ed/76/24/ed7624b8-4079-8881-47f1-c72b03ede03e/5060180323844.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Could We Be More",
+     "title": "Those Good Times",
+     "artist": "Kokoroko",
+     "year": 2022,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fb/c0/65/fbc0655a-fb61-3b97-6202-44e821d741d2/mzaf_17158687141122759298.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1c/10/12/1c101284-5781-406d-f456-5855551c036d/5060180325343.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Could We Be More",
+     "title": "Tojo",
+     "artist": "Kokoroko",
+     "year": 2022,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b4/64/ec/b464ecdd-fb84-79f8-d1d6-1cf597013b65/mzaf_2075522547000953269.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1c/10/12/1c101284-5781-406d-f456-5855551c036d/5060180325343.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
