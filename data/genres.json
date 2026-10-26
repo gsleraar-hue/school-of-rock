@@ -12260,6 +12260,108 @@
     }
    ],
    "mixtapes": []
+  },
+  {
+   "id": "keltische-folk",
+   "name": "Keltische folk",
+   "family": "roots",
+   "year": 1962,
+   "peak": [
+    1975,
+    1995
+   ],
+   "place": {
+    "name": "Dublin",
+    "lat": 53.35,
+    "lon": -6.26
+   },
+   "parents": [
+    "britse-volksmuziek",
+    "folk-revival"
+   ],
+   "text": "Keltische folk is Ierse volksmuziek gespeeld als band. The Chieftains begonnen in 1962 in Dublin met Ierse doedelzak, fluit, viool en harp. In 1970 richtte een familie uit Gweedore in Donegal Clannad op, die oude liederen in het Iers zong, met zachte harmonieën en later synthesizers. Hun Theme from Harry's Game haalde in 1982 de vijfde plek in Engeland en liet horen dat Keltische klank ook popmuziek kon zijn.",
+   "listen": "Hoor in Theme from Harry's Game hoe de Iers gezongen stemmen als een koor boven een langzame synthesizer zweven.",
+   "tracks": [
+    {
+     "artist": "The Dubliners",
+     "title": "Whiskey in the Jar",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6c/43/ee/6c43eeb7-2450-1bfb-7ecc-7bf7507859a9/mzaf_4718328666263991494.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fc/6e/93/fc6e93c2-7c32-8cdf-ab90-b8ccb85e7e22/5099946429452.jpg/600x600bb.jpg",
+     "id": 693592631,
+     "store": "https://music.apple.com/nl/album/whiskey-in-the-jar/693592342?i=693592631"
+    },
+    {
+     "artist": "The Chieftains",
+     "title": "Bonaparte's Retreat",
+     "year": 1976,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/86/91/ce/8691ce65-b66d-f6b3-09d9-0056a4ca5208/mzaf_8551214365253815645.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/56/89/c7/5689c703-6478-bddc-5df5-74b243d6429e/21UMGIM31085.rgb.jpg/600x600bb.jpg",
+     "id": 1752907104,
+     "store": "https://music.apple.com/nl/album/bonapartes-retreat/1752906857?i=1752907104"
+    },
+    {
+     "artist": "Clannad",
+     "title": "Theme from Harry's Game",
+     "year": 1982,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ef/6f/e4/ef6fe44f-1079-0a6b-8c44-af25f456d10f/mzaf_9298718213085823927.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c0/e8/8a/c0e88a79-1501-985b-9960-25f021fb217d/0859381166009.jpg/600x600bb.jpg",
+     "id": 1626520138,
+     "store": "https://music.apple.com/nl/album/theme-from-harrys-game-2003-remaster/1626520137?i=1626520138"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "keltische-new-age",
+   "name": "Keltische new age",
+   "family": "pop",
+   "year": 1987,
+   "peak": [
+    1988,
+    2001
+   ],
+   "place": {
+    "name": "Dublin",
+    "lat": 53.38,
+    "lon": -6.21
+   },
+   "parents": [
+    "keltische-folk",
+    "ambient"
+   ],
+   "text": "Enya zat van 1980 tot 1982 bij Clannad en ging daarna solo, met producer Nicky Ryan en tekstschrijver Roma Ryan. In hun studio in Dublin legden zij haar stem in lagen over elkaar, boven zachte synthesizers. Orinoco Flow stond in 1988 drie weken op nummer 1 in Engeland en Enya won vier Grammy's voor beste new age album. Zo groeide de Keltische klank uit tot een wereldwijd populaire, rustgevende muziekstijl.",
+   "listen": "Hoor in Orinoco Flow hoe Enya's eigen stem als een koor over zichzelf heen is gelegd boven een zacht synthesizerkleed.",
+   "tracks": [
+    {
+     "artist": "Enya",
+     "title": "Orinoco Flow (Sail Away)",
+     "year": 1988,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3b/1f/9a/3b1f9a60-05c5-0459-93d6-6f8aa83a7458/mzaf_14414948555331884515.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/bf/4e/31/bf4e31d1-9ffb-0838-4c05-1319d281b330/mzi.nzgmjkjb.jpg/600x600bb.jpg",
+     "id": 305695424,
+     "store": "https://music.apple.com/nl/album/orinoco-flow/305695149?i=305695424"
+    },
+    {
+     "artist": "Enya",
+     "title": "Only Time",
+     "year": 2000,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/09/3d/72/093d72d4-bb33-59ec-49b4-027e3f536b25/mzaf_6156149592845384615.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/b0/84/b3/b084b388-41b6-8767-23dc-341a76fcd64d/mzi.bwmjkjwa.jpg/600x600bb.jpg",
+     "id": 96216872,
+     "store": "https://music.apple.com/nl/album/only-time/96217801?i=96216872"
+    },
+    {
+     "artist": "Loreena McKennitt",
+     "title": "The Mummers' Dance",
+     "year": 1997,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d7/0b/f9/d70bf9f4-fa18-269a-1b44-3a452769605e/mzaf_15117393718962241283.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/f7/20/f9/f720f918-b872-6151-2027-b273ac95877e/dj.pcrumpsg.jpg/600x600bb.jpg",
+     "id": 67630776,
+     "store": "https://music.apple.com/nl/album/the-mummers-dance/67631410?i=67630776"
+    }
+   ],
+   "mixtapes": []
   }
  ]
 }
