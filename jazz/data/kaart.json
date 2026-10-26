@@ -12618,6 +12618,368 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/0d/bd/70/mzi.fhugnmuo.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "ben-webster",
+   "name": "Ben Webster",
+   "born": 1909,
+   "died": 1973,
+   "year": 1940,
+   "stroming": "swing",
+   "alsoIn": [
+    "kansas-city"
+   ],
+   "place": {
+    "name": "Kansas City",
+    "lat": 39.1,
+    "lon": -94.58
+   },
+   "influences": [
+    "coleman-hawkins"
+   ],
+   "films": [
+    "Cotton Tail – met Duke Ellington (1940)",
+    "Coleman Hawkins Encounters Ben Webster (1959)",
+    "Soulville (1957)"
+   ],
+   "text": "Tenorsaxofonist Ben Webster uit Kansas City speelde in de jaren dertig bij onder anderen Count Basie, Cab Calloway en Fletcher Henderson. In 1940 werd hij solist bij Duke Ellington, waar hij schitterde op Cotton Tail. Hij begon als navolger van Coleman Hawkins, maar werd door Johnny Hodges naar een zachtere toon geleid. Zijn ballades speelde hij met een ademende, fluisterende klank. In 1964 verhuisde hij naar Europa, waar hij tot aan zijn dood in 1973 speelde.",
+   "listen": "Hoor de ademende, fluisterende toon die in een ballade bijna alleen uit lucht lijkt te bestaan.",
+   "tracks": [
+    {
+     "film": "Coleman Hawkins Encounters Ben Webster",
+     "title": "Blues for Yolande",
+     "artist": "Coleman Hawkins & Ben Webster",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/19/79/57/19795778-0294-355e-67bd-c141f2a4eb0a/mzaf_18129147709675477884.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/53/90/62/5390623d-af4d-1ee4-f4bd-511f39f4401a/00602567829423.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Coleman Hawkins Encounters Ben Webster",
+     "title": "It Never Entered My Mind",
+     "artist": "Coleman Hawkins & Ben Webster",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/59/5c/19/595c199f-a461-861b-7875-f8dd6066002c/mzaf_16507934953110774325.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/53/90/62/5390623d-af4d-1ee4-f4bd-511f39f4401a/00602567829423.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Coleman Hawkins Encounters Ben Webster",
+     "title": "Prisoner of Love",
+     "artist": "Coleman Hawkins & Ben Webster",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e1/4a/2f/e14a2fce-52f3-21df-cf14-643d23f342e3/mzaf_3598615485158799285.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/53/90/62/5390623d-af4d-1ee4-f4bd-511f39f4401a/00602567829423.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "joe-pass",
+   "name": "Joe Pass",
+   "born": 1929,
+   "died": 1994,
+   "year": 1973,
+   "stroming": "hard-bop",
+   "alsoIn": [
+    "swing"
+   ],
+   "place": {
+    "name": "New Brunswick → Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+   },
+   "influences": [
+    "charlie-christian",
+    "django-reinhardt"
+   ],
+   "films": [
+    "Virtuoso (1973)",
+    "Take Love Easy – met Ella Fitzgerald (1974)",
+    "Portraits of Duke Ellington (1983)"
+   ],
+   "text": "Gitarist Joe Pass groeide op in New Jersey en Pennsylvania en kreeg zijn eerste gitaar op zijn negende. Hij speelde al als veertienjarige op dansavonden en bruiloften. In 1973 nam hij Virtuoso op, een album voor gitaar alleen. Daarop speelt hij melodie, akkoorden en baslijn tegelijk, zoals een pianist. Hij speelde ook met Oscar Peterson en nam duoalbums op met Ella Fitzgerald. Pass overleed in 1994 en geldt als een van de grootste jazzgitaristen.",
+   "listen": "Hoor hoe één gitaar tegelijk de melodie, de akkoorden en de bas speelt.",
+   "tracks": [
+    {
+     "film": "Virtuoso",
+     "title": "Night and Day",
+     "artist": "Joe Pass",
+     "year": 1973,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/99/c2/61/99c26146-0be4-e531-3053-32222bfdaa90/mzaf_8650286946378169173.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a8/8e/24/a88e2462-6fa8-8a66-5120-839893c4afbe/24CRGIM45645.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Virtuoso",
+     "title": "Stella by Starlight",
+     "artist": "Joe Pass",
+     "year": 1973,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d4/b2/fe/d4b2fe14-5bda-807a-66fd-0bcac975dfdb/mzaf_8527294879148050616.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a8/8e/24/a88e2462-6fa8-8a66-5120-839893c4afbe/24CRGIM45645.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Virtuoso",
+     "title": "Cherokee",
+     "artist": "Joe Pass",
+     "year": 1973,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/00/64/51/006451e2-e8fd-2118-2665-37496797ed6f/mzaf_214993811276372408.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a8/8e/24/a88e2462-6fa8-8a66-5120-839893c4afbe/24CRGIM45645.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gene-ammons",
+   "name": "Gene Ammons",
+   "born": 1925,
+   "died": 1974,
+   "year": 1956,
+   "stroming": "soul-jazz",
+   "alsoIn": [
+    "hard-bop",
+    "bebop"
+   ],
+   "place": {
+    "name": "Chicago",
+    "lat": 41.88,
+    "lon": -87.63
+   },
+   "influences": [],
+   "films": [
+    "The Happy Blues (1956)",
+    "Boss Tenor (1960)",
+    "Jug (1961)"
+   ],
+   "text": "Tenorsaxofonist Gene Ammons, bijgenaamd 'Jug', werd in Chicago geboren als zoon van boogiewoogiepianist Albert Ammons. In 1944 speelde hij in de band van Billy Eckstine, naast Charlie Parker en Dexter Gordon. Later vormde hij een tweetal met Sonny Stitt. Zijn muziek was toegankelijk en vol soul en rhythm-and-blues, met een grote, warme toon. Zijn album Boss Tenor uit 1960 is zijn bekendste. Twee gevangenisstraffen voor drugsbezit onderbraken zijn loopbaan. Hij overleed in 1974.",
+   "listen": "Hoor de brede, warme tenorsaxofoon die swingt als een soulzanger.",
+   "tracks": [
+    {
+     "film": "Boss Tenor",
+     "title": "Canadian Sunset",
+     "artist": "Gene Ammons",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/37/b5/65/37b56526-0d6c-548c-9bd8-bf472ad56b49/mzaf_6456308839165180439.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/5b/58/a6/5b58a667-83f8-2498-2eac-c6386bc7004f/00888072349179.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Boss Tenor",
+     "title": "Hittin' the Jug",
+     "artist": "Gene Ammons",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/97/a8/2e/97a82e85-c81b-3f14-3c05-dede67de778a/mzaf_2032836598197588436.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/5b/58/a6/5b58a667-83f8-2498-2eac-c6386bc7004f/00888072349179.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Boss Tenor",
+     "title": "Blue Ammons",
+     "artist": "Gene Ammons",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/9e/f5/5d/9ef55d4e-8b5d-df50-7d54-b2b2e3c60230/mzaf_10621631582273638155.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/5b/58/a6/5b58a667-83f8-2498-2eac-c6386bc7004f/00888072349179.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "sonny-clark",
+   "name": "Sonny Clark",
+   "born": 1931,
+   "died": 1963,
+   "year": 1957,
+   "stroming": "hard-bop",
+   "alsoIn": [
+    "bebop"
+   ],
+   "place": {
+    "name": "Pittsburgh → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "bud-powell"
+   ],
+   "films": [
+    "Dial S for Sonny (1957)",
+    "Cool Struttin' (1958)",
+    "Leapin' and Lopin' (1962)"
+   ],
+   "text": "Pianist Sonny Clark groeide op in een mijnstadje bij Pittsburgh. In 1957 verhuisde hij naar New York, na een periode in Californië. Hij was daar de huispianist van Blue Note en speelde mee met onder anderen Grant Green, Dexter Gordon en John Coltrane. Zijn album Cool Struttin' uit 1958 is een klassieker. Hij speelde lichtvoetig en bluesy, met de invloed van Bud Powell. Sonny Clark overleed in 1963, 31 jaar oud, en werd pas later echt beroemd.",
+   "listen": "Hoor de lichte, bluesy piano die zachtjes slentert alsof hij een rondje loopt.",
+   "tracks": [
+    {
+     "film": "Cool Struttin'",
+     "title": "Cool Struttin'",
+     "artist": "Sonny Clark",
+     "year": 1958,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/45/cc/a1/45cca1f8-80d0-1a93-a0e6-c2c9a0208557/mzaf_7277892042801157412.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d6/a3/1d/d6a31d82-038d-a73f-5452-0380d8bd9bae/00724349532755.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Cool Struttin'",
+     "title": "Blue Minor",
+     "artist": "Sonny Clark",
+     "year": 1958,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2b/42/78/2b4278f3-35e4-97f6-697d-f77a1688f3e8/mzaf_9463117501711068711.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d6/a3/1d/d6a31d82-038d-a73f-5452-0380d8bd9bae/00724349532755.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Cool Struttin'",
+     "title": "Sippin' at Bells",
+     "artist": "Sonny Clark",
+     "year": 1958,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3a/ab/5d/3aab5de2-fc0e-0cfd-50c8-4c9c5f9649cb/mzaf_9421040562842765159.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d6/a3/1d/d6a31d82-038d-a73f-5452-0380d8bd9bae/00724349532755.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "christian-mcbride",
+   "name": "Christian McBride",
+   "born": 1972,
+   "died": null,
+   "year": 1994,
+   "stroming": "neotraditioneel",
+   "alsoIn": [
+    "soul-jazz"
+   ],
+   "place": {
+    "name": "Philadelphia",
+    "lat": 39.95,
+    "lon": -75.17
+   },
+   "influences": [],
+   "films": [
+    "Gettin' to It (1994)",
+    "Sci-Fi (2000)",
+    "The Good Feeling (2011)"
+   ],
+   "text": "Bassist Christian McBride uit Philadelphia werd als tiener een wonderkind: op zijn zeventiende speelde hij al in de groep van saxofonist Bobby Watson. Daarna speelde hij met onder anderen Freddie Hubbard, Joe Henderson en Herbie Hancock. In 1994 verscheen zijn eerste album Gettin' to It. Hij speelde op meer dan vierhonderd platen mee en leidt tegenwoordig ook een bigband. Hij won elf keer een Grammy en speelde zowel met jazzgrootheden als met James Brown en Sting.",
+   "listen": "Hoor de grote, ronde basklank die de groep draagt en tegelijk zingt.",
+   "tracks": [
+    {
+     "film": "Gettin' to It",
+     "title": "Gettin' to It",
+     "artist": "Christian McBride",
+     "year": 1994,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/70/ba/13/70ba13db-87ea-ad20-b5a5-0123bf5b5e52/mzaf_11731215490777584171.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/02/8d/0b/028d0b5c-aca5-e771-284b-c9c520109150/00731452398925.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Gettin' to It",
+     "title": "Sitting on a Cloud",
+     "artist": "Christian McBride",
+     "year": 1994,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/7c/7d/56/7c7d5689-ba21-e669-a48d-c17603c44637/mzaf_5173118006967120247.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/02/8d/0b/028d0b5c-aca5-e771-284b-c9c520109150/00731452398925.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "The Good Feeling",
+     "title": "Shake 'n Blake",
+     "artist": "Christian McBride Big Band",
+     "year": 2011,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a1/d2/a1/a1d2a1f4-9503-fb44-ccb0-758539e86ad6/mzaf_10869740291003515494.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b4/df/9c/b4df9cab-b9c8-e25f-24ef-2132d65ea4af/125086.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "terence-blanchard",
+   "name": "Terence Blanchard",
+   "born": 1962,
+   "died": null,
+   "year": 1982,
+   "stroming": "neotraditioneel",
+   "alsoIn": [],
+   "place": {
+    "name": "New Orleans",
+    "lat": 29.95,
+    "lon": -90.07
+   },
+   "influences": [
+    "art-blakey",
+    "miles-davis"
+   ],
+   "films": [
+    "The Malcolm X Jazz Suite (1993)",
+    "A Tale of God's Will: A Requiem for Katrina (2007)",
+    "Fire Shut Up in My Bones (2021)"
+   ],
+   "text": "Trompettist Terence Blanchard uit New Orleans speelde als student bij Lionel Hampton en voegde zich in 1982, net voor zijn twintigste, bij Art Blakey's Jazz Messengers. Hij schreef meer dan tachtig film- en televisiescores en werkt vaak met regisseur Spike Lee. Voor BlacKkKlansman en Da 5 Bloods werd hij genomineerd voor een Oscar. Zijn album A Tale of God's Will uit 2007 is een requiem voor de ramp van Katrina. In 2021 voerde de Metropolitan Opera zijn opera Fire Shut Up in My Bones op.",
+   "listen": "Hoor de trompet die over een traag, plechtig orkest rouwt en toch warm blijft.",
+   "tracks": [
+    {
+     "film": "A Tale of God's Will",
+     "title": "Ghost of Congo Square",
+     "artist": "Terence Blanchard",
+     "year": 2007,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/27/e9/2e/27e92ec6-76e9-2d29-d76e-06a91018aecd/mzaf_7014907816159941764.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/f2/0c/2e/f20c2e8a-863f-1408-d69c-05b1b654c89f/00094639153152.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "A Tale of God's Will",
+     "title": "Levees",
+     "artist": "Terence Blanchard",
+     "year": 2007,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ee/2d/1e/ee2d1e3e-5e04-d1c9-e6f8-98e76eeae592/mzaf_2473754512838182541.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/f2/0c/2e/f20c2e8a-863f-1408-d69c-05b1b654c89f/00094639153152.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "The Malcolm X Jazz Suite",
+     "title": "Malcolm's Theme",
+     "artist": "Terence Blanchard",
+     "year": 1993,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/be/fa/db/befadba2-fa5c-8074-14de-4c3f7f1605a7/mzaf_13356297668676203789.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/2d/ba/c1/mzi.oasivypt.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "joe-lovano",
+   "name": "Joe Lovano",
+   "born": 1952,
+   "died": null,
+   "year": 1991,
+   "stroming": "neotraditioneel",
+   "alsoIn": [
+    "cool"
+   ],
+   "place": {
+    "name": "Cleveland → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "john-coltrane",
+    "dizzy-gillespie"
+   ],
+   "films": [
+    "Landmarks (1991)",
+    "Streams of Expression (2006)",
+    "Trio Fascination (1998)"
+   ],
+   "text": "Tenorsaxofonist Joe Lovano uit Cleveland is de zoon van saxofonist Tony Lovano, die hem de standards leerde. Hij studeerde aan Berklee en speelde bij organist Jack McDuff en in het orkest van Woody Herman. Jarenlang was hij lid van het trio van drummer Paul Motian en gitarist Bill Frisell. Zijn eigen albums voor Blue Note, zoals Landmarks uit 1991, wonnen lof en later een Grammy. Op Streams of Expression uit 2006 speelde hij ook een suite over Birth of the Cool. Zijn toon is ruw, vol en onvoorspelbaar.",
+   "listen": "Hoor de brede, ruwe tenorsaxofoon die verrassende wendingen in de melodie maakt.",
+   "tracks": [
+    {
+     "film": "Landmarks",
+     "title": "Emperor Jones",
+     "artist": "Joe Lovano",
+     "year": 1991,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/76/18/a7/7618a7a1-5a94-5345-4293-ceb5d6eac962/mzaf_1146723540654754439.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/d6/ec/d2/d6ecd260-a78e-2b3c-6956-c54af301e7b6/00077779610853.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Landmarks",
+     "title": "Street Talk",
+     "artist": "Joe Lovano",
+     "year": 1991,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview71/v4/59/04/e1/5904e1f4-3f2f-2bfd-4c24-3d3c096bd747/mzaf_4721616985180213024.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/d6/ec/d2/d6ecd260-a78e-2b3c-6956-c54af301e7b6/00077779610853.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Landmarks",
+     "title": "Landmarks Along the Way",
+     "artist": "Joe Lovano",
+     "year": 1991,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a1/5c/06/a15c06ce-cf1b-02df-2ee1-e961e140fbc0/mzaf_15392405043666121473.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/d6/ec/d2/d6ecd260-a78e-2b3c-6956-c54af301e7b6/00077779610853.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
