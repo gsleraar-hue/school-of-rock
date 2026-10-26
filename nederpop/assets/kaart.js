@@ -35,6 +35,7 @@
     else state.fams.add(b.dataset.f);
     famBox.querySelectorAll('.k-fam').forEach(x => x.setAttribute('aria-pressed', String(state.fams.has(x.dataset.f))));
     applyVisibility();
+    focusFams();
   });
   const sel = $('#k-path');
   sel.innerHTML = '<option value="">Alle genres</option>' + mixtapes.map(m => `<option value="${m.n}">Mixtape ${m.n} · ${m.title}</option>`).join('');
@@ -148,7 +149,7 @@
   // ---------- Stamboom: tijd horizontaal, families als banen ----------
   const PX_PER_YEAR = 15, ROW = 22, LANE_PAD = 14, LEFT = 290;
   // Nederpop · tijdlijn: 1949-2026 breed uitgetrokken, daarvoor en daarna samengedrukt
-  const SEG = [[1948,75],[1950,5],[1956,75],[1960,180],[1962,110],[1968,180],[1972,75],[1974,110],[1976,75],[1978,110],[1980,75],[1982,110],[1986,75],[1988,5],[1990,145],[1992,110],[1996,75],[1998,145],[2000,180],[2002,145],[2004,215],[2006,110],[2008,5],[2010,110],[2012,75],[2014,110],[2016,75],[2020,145],[2022,5],[2024,75],[2027,75]];
+  const SEG = [[1948,75],[1950,5],[1956,75],[1960,180],[1962,110],[1968,220],[1970,180],[1972,75],[1974,110],[1976,75],[1978,110],[1980,75],[1982,110],[1986,75],[1988,5],[1990,145],[1992,110],[1996,75],[1998,145],[2000,180],[2002,145],[2004,215],[2006,110],[2008,5],[2010,110],[2012,75],[2014,110],[2016,75],[2020,145],[2022,5],[2024,75],[2027,75]];
   const SEGX = []; { let x = 0; SEG.forEach(([y], i) => { SEGX.push(x); if (i < SEG.length - 1) x += (SEG[i + 1][0] - y) * SEG[i][1]; }); }
   const tx = y => { y = Math.max(SEG[0][0], y); let i = SEG.length - 2; while (i > 0 && y < SEG[i][0]) i--; return LEFT + SEGX[i] + (y - SEG[i][0]) * SEG[i][1]; };
   const xToYear = x => { x -= LEFT; let i = SEG.length - 2; while (i > 0 && x < SEGX[i]) i--; return SEG[i][0] + (x - SEGX[i]) / SEG[i][1]; };
@@ -401,6 +402,20 @@
     }
   }
 
+  // familieknop: ga naar de gekozen familie(s) in plaats van de kaart af te laten zoeken
+  function focusFams() {
+    if (state.mode === 'tech') return;
+    if (state.fams.size === fams.length) { fit(true); return; }
+    const gs = G.filter(g => state.fams.has(g.family));
+    if (!gs.length) return;
+    const P = gs.map(g => pos(g)), xs = P.map(p => p.x), ys = P.map(p => p.y);
+    const x0 = d3.min(xs) - 60, x1 = d3.max(xs) + 120, y0 = d3.min(ys) - 40, y1 = d3.max(ys) + 40;
+    const k = Math.max(state.mode === 'world' ? .8 : .6, Math.min(state.mode === 'world' ? 5 : 1.6, (W - 190) / (x1 - x0), (H - 20) / (y1 - y0)));
+    const t = state.mode === 'world'
+      ? d3.zoomIdentity.translate(W / 2 - (x0 + x1) / 2 * k, H / 2 - (y0 + y1) / 2 * k).scale(k)
+      : d3.zoomIdentity.translate(170 - x0 * k, H / 2 - (y0 + y1) / 2 * k).scale(k);
+    svg.transition().duration(650).call(zoom.transform, t);
+  }
   function fit(animate) { const t = fitTransform(); (animate ? svg.transition().duration(700) : svg).call(zoom.transform, t); }
   function fitTransform() {
     let t;
