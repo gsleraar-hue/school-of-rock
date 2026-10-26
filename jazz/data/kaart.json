@@ -13585,6 +13585,258 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/a2/48/78/a2487863-33c2-6c73-d117-01c5f7fdb79a/616892557449.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "ralph-towner",
+   "name": "Ralph Towner",
+   "born": 1940,
+   "died": 2026,
+   "year": 1974,
+   "stroming": "ecm",
+   "alsoIn": [],
+   "place": {
+    "name": "Chehalis → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "bill-evans"
+   ],
+   "films": [
+    "Diary (1974)",
+    "Solstice (1975)",
+    "Distant Hills – met Oregon (1974)"
+   ],
+   "text": "Ralph Towner groeide op in Washington, in een muzikale familie, en begon als klassiek pianist. Hij studeerde klassieke gitaar in Wenen en speelde eind jaren zestig in New York jazzpiano, met Bill Evans als groot voorbeeld. Daarna koos hij voor de twaalfsnarige en de klassieke gitaar. In 1970 richtte hij met onder anderen Paul McCandless en Glen Moore de groep Oregon op. Zijn solo-album Diary uit 1974 en Solstice uit 1975, met Jan Garbarek, verschenen bij ECM. Hij overleed in 2026.",
+   "listen": "Hoor de klassieke gitaar die zacht en helder klinkt, met noten die lang blijven hangen.",
+   "tracks": [
+    {
+     "film": "Diary",
+     "title": "Icarus",
+     "artist": "Ralph Towner",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/74/e3/7a/74e37a41-4707-d9ce-7c5e-b0f644e1dce8/mzaf_12632241276608576878.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ed/c0/19/edc01998-a55a-b125-e1af-aea7eacd5961/25UM1IM98127.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Diary",
+     "title": "Entry in a Diary",
+     "artist": "Ralph Towner",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/41/87/99/418799e2-5b17-930d-be6f-e9d91db3c8fb/mzaf_5047372056888363877.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ed/c0/19/edc01998-a55a-b125-e1af-aea7eacd5961/25UM1IM98127.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Solstice",
+     "title": "Oceanus",
+     "artist": "Ralph Towner, Jan Garbarek, Eberhard Weber & Jon Christensen",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8e/e4/72/8ee472a6-79c4-5a3a-d821-c99009b8593e/mzaf_16295816296869052359.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/99/88/be/9988be0a-88b0-f99f-afca-eb81698f4c2b/00602547809179.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "terje-rypdal",
+   "name": "Terje Rypdal",
+   "born": 1947,
+   "died": null,
+   "year": 1975,
+   "stroming": "ecm",
+   "alsoIn": [
+    "fusion"
+   ],
+   "place": {
+    "name": "Oslo",
+    "lat": 59.91,
+    "lon": 10.75
+   },
+   "influences": [],
+   "films": [
+    "Terje Rypdal (1971)",
+    "Odyssey (1975)",
+    "Waves (1978)"
+   ],
+   "text": "Gitarist Terje Rypdal werd in Oslo geboren, als zoon van een componist en orkestleider. Hij begon als rockgitarist en koos in 1968 voor de jazz. Hij speelde in de groep van Jan Garbarek en later bij George Russell. Een belangrijke stap was in 1969 het festival voor free jazz in Baden-Baden, met de band van Lester Bowie. Hij nam veel op voor ECM. Zijn gitaar klinkt lang, zwevend en vol galm, als een koude, noordelijke lucht. Zijn nummers Last Nite en Mystery Man klinken in de film Heat.",
+   "listen": "Hoor de gitaar met veel galm die lange, zwevende tonen over de band legt, als mist.",
+   "tracks": [
+    {
+     "film": "Odyssey",
+     "title": "Midnite",
+     "artist": "Terje Rypdal",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/01/4d/31/014d31c5-68d0-15ac-d314-d5ee02bcd92d/mzaf_16056001340595812727.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/fd/57/54/fd575404-0404-ba1e-8303-84cbd4f3204a/00042283535527.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Odyssey",
+     "title": "Darkness Falls",
+     "artist": "Terje Rypdal",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c2/59/d9/c259d90c-6870-16ca-086a-5b73fbc18d8c/mzaf_936660301216511499.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/fd/57/54/fd575404-0404-ba1e-8303-84cbd4f3204a/00042283535527.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Waves",
+     "title": "Waves",
+     "artist": "Terje Rypdal",
+     "year": 1978,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a5/42/2a/a5422a5b-0700-c9ed-3261-1a13eae5b669/mzaf_5596241090610117913.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/87/fe/a3/87fea34a-29ad-47e0-494f-e315cc3a6e94/00602547915887.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "nils-petter-molvaer",
+   "name": "Nils Petter Molvær",
+   "born": 1960,
+   "died": null,
+   "year": 1997,
+   "stroming": "nu-jazz",
+   "alsoIn": [
+    "ecm"
+   ],
+   "place": {
+    "name": "Sula → Oslo",
+    "lat": 59.91,
+    "lon": 10.75
+   },
+   "influences": [
+    "miles-davis"
+   ],
+   "films": [
+    "Khmer (1997)",
+    "Solid Ether (2000)",
+    "NP3 (2002)"
+   ],
+   "text": "Trompettist Nils Petter Molvær groeide op op het Noorse eiland Sula en vertrok op zijn negentiende naar het conservatorium in Trondheim. Hij speelde in de groep Masqualero, die bij ECM opnam. Zijn eerste soloalbum Khmer uit 1997 mengde jazz, rock, elektronische klanken en hiphopbeats, heel anders dan de gewone, zachte ECM-jazz. Zijn gedempte, soms elektronisch bewerkte trompet draagt de invloed van Miles Davis. Molvær geldt als een pionier van de 'future jazz'.",
+   "listen": "Hoor de gedempte trompet die over elektronische ritmes en diepe bas zweeft.",
+   "tracks": [
+    {
+     "film": "Khmer",
+     "title": "Khmer",
+     "artist": "Nils Petter Molvær",
+     "year": 1997,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b0/ed/b1/b0edb1f2-3be7-e68c-9519-7853cc0c1573/mzaf_7017943963306620727.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/31/6e/b3/316eb321-831a-b59f-159a-0a8fa45b3a9b/00731453779822.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Khmer",
+     "title": "Tlon",
+     "artist": "Nils Petter Molvær",
+     "year": 1997,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5a/cd/38/5acd3812-9697-2d35-1dc3-813580a8641b/mzaf_13983412004955606932.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/31/6e/b3/316eb321-831a-b59f-159a-0a8fa45b3a9b/00731453779822.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Khmer",
+     "title": "On Stream",
+     "artist": "Nils Petter Molvær",
+     "year": 1997,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/29/5a/43/295a4356-b8c0-621a-6adf-60ba8bbcfd5a/mzaf_608911211865549398.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/31/6e/b3/316eb321-831a-b59f-159a-0a8fa45b3a9b/00731453779822.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "paquito-drivera",
+   "name": "Paquito D'Rivera",
+   "born": 1948,
+   "died": null,
+   "year": 1973,
+   "stroming": "afro-cubaans",
+   "alsoIn": [],
+   "place": {
+    "name": "Havana → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "Irakere (1978)",
+    "Havana Cafe (1991)",
+    "Portraits of Cuba (1996)"
+   ],
+   "text": "Paquito D'Rivera werd in 1948 in Havana geboren. Zijn vader speelde klassieke saxofoon en liet hem naar Duke Ellington en Benny Goodman luisteren. Op zijn vijfde begon hij met saxofoonles. Samen met pianist Chucho Valdés richtte hij het Orquesta Cubana de Música Moderna op en in 1973 de groep Irakere, die jazz, rock, klassiek en Cubaanse muziek mengde. In 1980 koos hij voor de Verenigde Staten. Zijn toon is zacht en vloeiend, en hij combineert vaak latin jazz met klassieke muziek.",
+   "listen": "Hoor de zachte altsaxofoon en klarinet die Cubaanse ritmes met klassieke melodieën vermengen.",
+   "tracks": [
+    {
+     "film": "Havana Cafe",
+     "title": "Havana Cafe",
+     "artist": "Paquito D'Rivera",
+     "year": 1991,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3a/a4/f2/3aa4f207-4e01-3f5d-f312-46767d640a1f/mzaf_17891249720804913038.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/51/d8/a5/51d8a508-ef70-819e-499d-e91509c5c0e9/4895241439353_3000.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Havana Cafe",
+     "title": "Contradanza",
+     "artist": "Paquito D'Rivera",
+     "year": 1991,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f5/bd/3b/f5bd3bb3-b27e-2c83-5b69-835895f8f0c5/mzaf_14238497528855182359.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/51/d8/a5/51d8a508-ef70-819e-499d-e91509c5c0e9/4895241439353_3000.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Portraits of Cuba",
+     "title": "Portraits of Cuba",
+     "artist": "Paquito D'Rivera",
+     "year": 1996,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3d/0c/05/3d0c05a8-a558-8119-2e0f-ef6b56f9d8bb/mzaf_9600234456813477658.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/62/89/a4/6289a44b-00a9-76bb-1e5a-a7871a82918e/ticket.osphkclm.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "mongo-santamaria",
+   "name": "Mongo Santamaría",
+   "born": 1917,
+   "died": 2003,
+   "year": 1963,
+   "stroming": "afro-cubaans",
+   "alsoIn": [
+    "soul-jazz"
+   ],
+   "place": {
+    "name": "Havana → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "chano-pozo"
+   ],
+   "films": [
+    "Afro Roots (1959)",
+    "Watermelon Man! (1963)",
+    "Mongo at the Village Gate (1963)"
+   ],
+   "text": "Mongo Santamaría leerde in Havana op straat de conga's bespelen. In 1950 verhuisde hij naar New York, waar hij conguero werd van Tito Puente en vanaf 1957 speelde in de groep van Cal Tjader. Hij werd een leidende figuur in de pachanga- en boogaloodanskrazes van de jaren zestig. Zijn grootste hit was zijn versie van Watermelon Man van Herbie Hancock, die in 1998 in de Grammy Hall of Fame kwam. Later speelde hij salsa en latin jazz, en hij speelde met de Fania All-Stars.",
+   "listen": "Hoor de conga's die het ritme dragen en de blazers die er stampend overheen spelen.",
+   "tracks": [
+    {
+     "film": "Watermelon Man",
+     "title": "Watermelon Man",
+     "artist": "Mongo Santamaria",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c7/bb/9f/c7bb9fb6-fbf0-5a9b-015f-6871799eb7b4/mzaf_12597095710713282033.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/ef/35/b6/ef35b63c-f58f-f32b-aa81-b744dbc023e3/00025218477529.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Watermelon Man",
+     "title": "Yeh-Yeh",
+     "artist": "Mongo Santamaria",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ed/65/15/ed651598-5581-f938-2121-1b6b98580075/mzaf_4391243855080706926.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/ef/35/b6/ef35b63c-f58f-f32b-aa81-b744dbc023e3/00025218477529.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Watermelon Man",
+     "title": "Cut That Cane",
+     "artist": "Mongo Santamaria",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/89/b9/da/89b9da62-493c-9743-e1c1-3f7dda2279f1/mzaf_7867589726096899009.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/ef/35/b6/ef35b63c-f58f-f32b-aa81-b744dbc023e3/00025218477529.rgb.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
@@ -14171,6 +14423,32 @@
     "wayne-shorter",
     "jaco-pastorius",
     "airto-moreira"
+   ],
+   "tracks": [
+    {
+     "film": "Weather Report",
+     "title": "Milky Way",
+     "artist": "Weather Report",
+     "year": 1971,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/90/59/0f/90590fac-5364-ad52-8ea9-85a6d6bdf573/mzaf_9412946888250176679.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/7a/23/c2/mzi.pmhnubnn.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Sweetnighter",
+     "title": "Boogie Woogie Waltz",
+     "artist": "Weather Report",
+     "year": 1973,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/09/4a/18/094a187b-3302-0e4a-0db5-a2961d179191/mzaf_11286799604457038616.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/80/7c/f9/mzi.etotkitn.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Heavy Weather",
+     "title": "A Remark You Made",
+     "artist": "Weather Report",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b8/08/ca/b808ca43-d2e1-3b0f-dc8f-05bd41846408/mzaf_12534738902725129132.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4a/e1/48/4ae14866-5846-6205-ed32-458742999633/886443431515.jpg/600x600bb.jpg"
+    }
    ]
   },
   {
