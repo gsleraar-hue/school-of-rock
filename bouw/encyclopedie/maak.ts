@@ -27,7 +27,7 @@ if (exists(ED + "bewerkt-en")) for (const t of Deno.readDirSync(ED + "bewerkt-en
   if (!f.name.endsWith(".json")) continue;
   const id = t.name + "/" + f.name.replace(/\.json$/, ""), o = r(ED + "bewerkt-en/" + t.name + "/" + f.name);
   if (typeof o.name === "string" && o.name.trim()) WL.names[id] = o.name.trim();
-  if (typeof o.text === "string" || typeof o.listen === "string") TR[id] = { ...(TR[id] || {}), ...(typeof o.text === "string" ? { text: o.text } : {}), ...(typeof o.listen === "string" ? { listen: o.listen } : {}) };
+  if (typeof o.text === "string" || typeof o.listen === "string") TR[id] = { ...(TR[id] || {}), ...(typeof o.text === "string" ? { text: o.text } : {}), ...(typeof o.listen === "string" ? { listen: o.listen } : {}), ...(o.wiki === true ? { wiki: true } : {}) };
   BEWERKT_EN++;
 }
 const EN_STUBS = true; // beginnetjes (zonder tekst) krijgen ook een Engelse pagina (kan sinds de luisterboeken naar sor-audio zijn verhuisd)
@@ -48,7 +48,7 @@ function maakEn(): any[] {
     if (WL.who[l.id]) o.who = WL.who[l.id];
     if (l.defs && WL.defs[l.id]) o.defs = l.defs.map((d: any, i: number) => ({ ...d, text: WL.defs[l.id][i] ?? d.text }));
     const tr = TR[l.id];
-    o.text = schoon(tr?.text || ""); o.listen = schoon(tr?.listen || "");
+    o.text = schoon(tr?.text || ""); o.listen = schoon(tr?.listen || ""); if (tr?.wiki) o.wiki = true;
     if (l.extra?.length) o.extra = tr?.extra?.length ? l.extra.map((e: any, i: number) => ({ ...e, titel: tr.extra[i]?.titel ?? e.titel, text: schoon(tr.extra[i]?.text ?? e.text) })) : [];
     o.refs = (l.refs || []).map((x: any) => ({ ...x, label: WL.labels[x.label] || x.label, zin: undefined }));
     o.stub = l.stub && !tr;
@@ -63,7 +63,7 @@ function vermeldEn(L: any[], byId: Map<string, any>, gebouwd: Set<string>) {
     l.vermeld = l.vermeld.map((v: any) => {
       const bron = byId.get(v.id);
       if (!bron || !gebouwd.has(v.id)) return null;
-      const zin = String(bron.text || "").split(/\n\n+/).flatMap((p: string) => p.split(/(?<=[.!?])\s+/)).find((z: string) => z.toLowerCase().includes(naam));
+      const zin = plat(String(bron.text || "")).split(/\n\n+/).flatMap((p: string) => p.split(/(?<=[.!?])\s+/)).find((z: string) => z.toLowerCase().includes(naam));
       return zin ? { id: v.id, zin } : null;
     }).filter(Boolean);
   }
@@ -166,9 +166,39 @@ const bronNaam = (u: string) => {
 const DUBBEL = new Set((exists(W + "encyclopedie/dubbelzinnig.json") ? r(W + "encyclopedie/dubbelzinnig.json") : []).map((x: string) => x.toLowerCase()));
 // Bandnamen die ook gewone woorden zijn, maar met hoofdletter midden in een zin vrijwel altijd de band: die linken we met een voorzichtige regel (zie linkBasis)
 const VEILIG_DUBBEL = new Set(["Queen", "Cream", "Chic", "Madness", "Muse", "Kiss"]);
+// Wiki-principe: heeft een lemma wiki=true, dan staan de links in text en listen als [[Naam]] of [[lemma-id|getoonde tekst]] en wordt er niet meer automatisch gelinkt.
+// De bewerkpagina toont de huidige (automatische) links in diezelfde notatie, zodat je ze kunt weghalen of toevoegen.
+let MODUS: "html" | "wiki" = "html";
+const WIKI_RE = /\[\[([^\[\]|]+?)(?:\|([^\[\]]+?))?\]\]/g;
+const plat = (t: string) => String(t || "").replace(WIKI_RE, (_m, a, b) => b ?? a);
+let NAAMIDX = new Map<string, string>();
+const uitT = (t: string) => MODUS === "wiki" ? t : esc(t);
+const anker = (id: string, t: string) => MODUS === "wiki" ? (NAAMIDX.get(t.toLowerCase()) === id ? `[[${t}]]` : `[[${id}|${t}]]`) : `<a href="${href(id)}">${esc(t)}</a>`;
+function linkWiki(tekst: string, zelf: string, gezien: Set<string>) {
+  let uit = "", pos = 0;
+  for (const m of tekst.matchAll(WIKI_RE)) {
+    const doel = m[1].trim(), tonen = (m[2] ?? m[1]).trim(), id = byId.has(doel) ? doel : NAAMIDX.get(doel.toLowerCase());
+    uit += esc(tekst.slice(pos, m.index));
+    if (id && id !== zelf) { gezien.add(id); uit += `<a href="${href(id)}">${esc(tonen)}</a>`; } else uit += esc(tonen);
+    pos = m.index! + m[0].length;
+  }
+  return uit + esc(tekst.slice(pos));
+}
+// De tekst van een lemma met de automatische links als [[...]] (voor de bewerkpagina), in dezelfde volgorde als lemmaPage
+function wikiTekst(l: any) {
+  if (l.wiki) return { text: String(l.text || ""), listen: String(l.listen || "") };
+  const gezien = new Set<string>(); MODUS = "wiki";
+  try {
+    if (l.type === "begrip") for (const d of l.defs || []) linkify(d.text, l.id, gezien);
+    const text = String(l.text || "").split(/\n\n+/).filter(Boolean).map((p) => linkify(p, l.id, gezien)).join("\n\n");
+    for (const e of l.extra || []) linkify(e.text, l.id, gezien);
+    return { text, listen: l.listen ? linkify(l.listen, l.id, gezien) : "" };
+  } finally { MODUS = "html"; }
+}
 const reEsc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 function initLinks() {
-  exact = new Map(); klein = new Map();
+  exact = new Map(); klein = new Map(); NAAMIDX = new Map();
+  for (const l of L) { const k = l.name.trim().toLowerCase(); if (!NAAMIDX.has(k)) NAAMIDX.set(k, l.id); }
   for (const l of L) {
     const n = l.name.trim();
     if (l.type === "artiest" && VEILIG_DUBBEL.has(n) && !exact.has(n)) { exact.set(n, l.id); continue; }
@@ -205,7 +235,7 @@ function linkify(tekst: string, zelf: string, gezien: Set<string>) {
       const id = alb.get(m[0])!;
       if (id === zelf || gezien.has(id)) continue;
       gezien.add(id);
-      uit += linkBasis(tekst.slice(pos, m.index), zelf, gezien) + `<a href="${href(id)}">${esc(m[0])}</a>`;
+      uit += linkBasis(tekst.slice(pos, m.index), zelf, gezien) + anker(id, m[0]);
       pos = m.index! + m[0].length;
     }
   }
@@ -227,10 +257,10 @@ function linkBasis(tekst: string, zelf: string, gezien: Set<string>) {
       if (!/[a-zà-ÿ,(]$/.test(voor) || /^\s+[A-ZÀ-Ý]/.test(na)) continue;
     }
     gezien.add(id);
-    uit += esc(tekst.slice(pos, m.index)) + `<a href="${href(id)}">${esc(m[0])}</a>`;
+    uit += uitT(tekst.slice(pos, m.index)) + anker(id, m[0]);
     pos = m.index! + m[0].length;
   }
-  return uit + esc(tekst.slice(pos));
+  return uit + uitT(tekst.slice(pos));
 }
 // Naam vet bij de eerste vermelding in de inleiding, zoals op Wikipedia
 const vet = (html: string, naam: string) => { const i = html.indexOf(esc(naam)); return i < 0 ? `<b>${esc(naam)}</b> · ` + html : html.slice(0, i) + `<b>${esc(naam)}</b>` + html.slice(i + esc(naam).length); };
@@ -345,9 +375,10 @@ function lemmaPage(l: any) {
   const secties: [string, string, string][] = []; // [id, kop, html]
   let lead = "";
   const alineas = String(l.text || "").split(/\n\n+/).filter(Boolean);
+  const lk = (t: string) => l.wiki ? linkWiki(t, l.id, gezien) : linkify(t, l.id, gezien);
   if (l.type === "begrip") lead = (l.defs || []).map((d: any, i: number) => `<p>${i ? "" : `<b>${esc(l.name)}</b>: `}${linkify(d.text, l.id, gezien)}${d.src ? ` <span class="klein">(${esc(d.src)})</span>` : ""}</p>`).join("");
   if (alineas.length) {
-    const html = alineas.map((p) => linkify(p, l.id, gezien));
+    const html = alineas.map((p) => lk(p));
     if (l.type === "artiest" && html.length === 3) {
       lead += `<p>${vet(html[0], l.name)}</p>`;
       secties.push(["muziek", nt("Muziek en doorbraak", "Music and breakthrough"), `<p>${html[1]}</p>`], ["invloed", nt("Invloed", "Influence"), `<p>${html[2]}</p>`]);
@@ -358,7 +389,7 @@ function lemmaPage(l: any) {
   if (l.extra?.length) secties.push(["geschiedenis", nt("Uit de tijdlijnen", "From the timelines"), l.extra.map((e: any) => `<h3>${esc(e.titel)} (${e.jaar})</h3><p>${linkify(e.text, l.id, gezien)}</p>`).join("")]);
   const tracks = (l.tracks || []).filter((t: any) => t.audio).slice(0, 12);
   if (l.listen || tracks.length) {
-    let h = l.listen ? `<div class="tip"><b>${nt("Luistertip.", "Listening tip.")}</b> ${linkify(l.listen, l.id, gezien)}</div>` : "";
+    let h = l.listen ? `<div class="tip"><b>${nt("Luistertip.", "Listening tip.")}</b> ${lk(l.listen)}</div>` : "";
     if (tracks.length) h += `<ul class="frags">${tracks.map((t: any, i: number) => `<li><button data-t="${i}" aria-label="${nt("Speel", "Play")} ${esc(t.title)}"></button>${t.cover ? `<img src="${esc(hoes(t.cover))}" alt="" loading="lazy">` : "<span></span>"}<div class="w"><b>${esc(t.title)}</b> <span>· ${esc(t.artist)}${t.year ? ", " + t.year : ""}</span></div>${t.store ? `<a class="ap" href="${esc(winkel(t.store))}" target="_blank" rel="noopener">Apple Music ↗</a>` : "<span></span>"}</li>`).join("")}</ul><script type="application/json" id="frags-data">${JSON.stringify(tracks.map((t: any) => ({ audio: t.audio, artist: t.artist, title: t.title, cover: hoes(t.cover), year: t.year }))).replace(/</g, "\\u003c")}</script>`;
     secties.push(["luisteren", nt("Luisteren", "Listening"), h]);
   }
@@ -406,7 +437,7 @@ function lemmaPage(l: any) {
   if (l.stub) b += `<div class="stub"><span>${nt("beginnetje", "stub")}</span><div>${nt(`Dit artikel is nog kort. Er komt nog een uitgebreidere tekst over ${esc(l.name)}.`, `This article is still short. A longer text about ${esc(l.name)} is coming.`)}</div></div>`;
   const cats = [TYPE[l.type][1], ...(l.links.genre || []).map((id: string) => byId.get(id)?.name).filter(Boolean)];
   b += `<div class="cats">${nt("Categorieën", "Categories")}: <a href="../alle.html#${l.type}">${esc(cats[0])}</a>${(l.links.genre || []).slice(0, 8).map((id: string) => a(id)).join("")}</div>`;
-  const desc = korteTekst(l.defs?.[0]?.text || alineas[0] || nt(`${l.name} in HitStory, de popencyclopedie van School of Rock.`, `${l.name} in HitStory, the pop encyclopedia of School of Rock.`));
+  const desc = korteTekst(l.defs?.[0]?.text || plat(alineas[0] || "") || nt(`${l.name} in HitStory, de popencyclopedie van School of Rock.`, `${l.name} in HitStory, the pop encyclopedia of School of Rock.`));
   const afb = l.foto ? BEELD + l.foto.src : l.tracklijst?.cover ? hoes(l.tracklijst.cover) : "";
   const url = SITE + baseVan(LANG) + "/" + l.id + ".html", E0 = SITE + baseVan(LANG) + "/";
   const jr = (x: any) => /^\d{4}(-\d\d(-\d\d)?)?$/.test(String(x ?? "")) ? String(x) : undefined;
@@ -432,9 +463,9 @@ const VOL = (l: any) => !l.stub && String(l.text || "").length >= VOL_MIN;
 function hoofdpagina() {
   const tel: Record<string, number> = {};
   for (const l of L) tel[l.type] = (tel[l.type] || 0) + 1;
-  const uitgelicht = L.filter((l) => l.type === "artiest" && l.bron.includes("eigen") && VOL(l)).map((l) => ({ id: l.id, n: l.name, f: l.foto ? BEELD + l.foto.src : "", t: String(l.text).split(/\n\n/)[0] }));
-  const genres = L.filter((l) => l.type === "genre" && VOL(l) && l.links.artiest?.length).map((l) => ({ id: l.id, n: l.name, f: "", t: l.text }));
-  const wist = L.filter((l) => (l.type === "techniek" || l.type === "werk") && VOL(l)).map((l) => ({ id: l.id, n: l.name, t: String(l.text).split(/(?<=\.)\s/)[0] }));
+  const uitgelicht = L.filter((l) => l.type === "artiest" && l.bron.includes("eigen") && VOL(l)).map((l) => ({ id: l.id, n: l.name, f: l.foto ? BEELD + l.foto.src : "", t: plat(String(l.text).split(/\n\n/)[0]) }));
+  const genres = L.filter((l) => l.type === "genre" && VOL(l) && l.links.artiest?.length).map((l) => ({ id: l.id, n: l.name, f: "", t: plat(l.text) }));
+  const wist = L.filter((l) => (l.type === "techniek" || l.type === "werk") && VOL(l)).map((l) => ({ id: l.id, n: l.name, t: plat(String(l.text)).split(/(?<=\.)\s/)[0] }));
   let b = `<div class="welkom"><p class="kicker">${L.length.toLocaleString(nt("nl-NL", "en-GB"))} ${nt("artikelen", "articles")}</p><h1>${nt("Van work songs tot hyperpop", "From work songs to hyperpop")}</h1><p class="lede">${nt("Artiesten, genres, albums, begrippen en uitvindingen uit de mixtapes, kaarten en het magazine van School of Rock.", "Artists, genres, albums, terms and inventions from the mixtapes, maps and magazine of School of Rock.")}</p></div>`;
   b += `<div class="portalen">${Object.keys(TYPE).map((t) => `<a href="alle.html#${t}"><b>${(tel[t] || 0).toLocaleString(nt("nl-NL", "en-GB"))}</b>${TYPE[t][1]}</a>`).join("")}</div><br>`;
   b += `<div class="hp"><div><section class="vak geel"><h2>${nt("Uitgelicht artikel", "Featured article")}</h2><div class="in" id="dag"></div></section><section class="vak groen"><h2>${nt("Uitgelicht genre", "Featured genre")}</h2><div class="in" id="genre"></div></section></div>`;
@@ -497,7 +528,7 @@ function init(taal: Taal) {
 }
 let ALLES: any[] = [];
 // Bewerkmodus (alleen voor de eigenaar, nl en en met eigen bewerkmap): elke pagina draagt zijn eigen tekst als JSON; een knop verschijnt alleen als er een GitHub-sleutel in de browser staat
-const bewerkKnop = (l: any) => '<script type="application/json" id="hs-bron">' + JSON.stringify({ id: l.id, name: l.name, text: l.text || "", listen: l.listen || "" }).replace(/</g, "\u003c") + '</script>' +
+const bewerkKnop = (l: any) => '<script type="application/json" id="hs-bron">' + JSON.stringify({ id: l.id, name: l.name, text: l.text || "", listen: l.listen || "", wiki: l.wiki ? true : undefined, ...(() => { const w = wikiTekst(l); return { wtext: w.text, wlisten: w.listen }; })() }).replace(/</g, "\u003c") + '</script>' +
   '<script>try{if(localStorage.getItem("hs_token")){var m=document.querySelector("main.blad");if(m){var a=document.createElement("a");a.href=document.querySelector("meta[name=sor-root]").content+"/' + baseVan(LANG) + '/bewerk.html?id="+encodeURIComponent("' + l.id + '");a.textContent="✎ Bewerk deze pagina";a.style.cssText="float:right;font:600 13px Inter,sans-serif;padding:4px 10px;border:1px solid currentColor;border-radius:6px;text-decoration:none";m.insertBefore(a,m.firstChild)}}}catch(e){}</script>';
 
 for (const taal of ["nl", "en"] as Taal[]) {

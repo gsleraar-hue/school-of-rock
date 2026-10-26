@@ -20,6 +20,7 @@ try {
     }
     if (o.verwijderd) { l.weg = true; weg++; continue; }
     for (const k of TEKST) if (typeof o[k] === "string") { if (o[k].trim()) l[k] = o[k].trim(); else if (k !== "name") delete l[k]; }
+    if (o.wiki === true) l.wiki = true; // vaste links in [[...]]-notatie (zie maak.ts)
     for (const k of GETAL) if (k in o) { if (o[k] === null || o[k] === "") delete l[k]; else if (!isNaN(+o[k])) l[k] = +o[k]; }
     for (const k of LIJST) if (Array.isArray(o[k])) { if (o[k].length) l[k] = o[k]; else delete l[k]; }
     if ("foto" in o) { if (o.foto && o.foto.src) l.foto = o.foto; else delete l.foto; }

@@ -12,7 +12,7 @@
   var TYPES = { artiest: "Artiest", genre: "Genre", werk: "Album of nummer", begrip: "Begrip", techniek: "Techniek" };
   var REL = { artiest: ["genre", "werk", "invloed"], genre: ["artiest", "wortels", "daarna"], werk: ["artiest", "genre", "maker"], techniek: ["genre", "artiest"], begrip: ["genre"] };
   var RELNAAM = { genre: "Genres", werk: "Werken", invloed: "Beïnvloed door", artiest: "Artiesten", wortels: "Wortels", daarna: "Leidde tot", maker: "Schrijver/producer" };
-  var zoek = null, byId = {}, d = {}, j = {}, orig = null, type = "", isNieuw = false, state = {};
+  var zoek = null, byNaam = {}, w0 = { text: "", listen: "" }, byId = {}, d = {}, j = {}, orig = null, type = "", isNieuw = false, state = {};
 
   function st(t, fout) { $("bw-status").textContent = t; $("bw-status").style.color = fout ? "#c0392b" : ""; }
   function api(rep, p, o) { o = o || {}; o.headers = Object.assign({ Authorization: "Bearer " + tok(), Accept: "application/vnd.github+json" }, o.headers || {}); return fetch("https://api.github.com/repos/" + rep + p, o); }
@@ -27,7 +27,7 @@
   async function laadZoek() {
     if (zoek) return;
     zoek = await (await fetch(base + "zoek.json")).json();
-    zoek.forEach(function (x) { byId[x[0]] = x; });
+    zoek.forEach(function (x) { byId[x[0]] = x; var k = x[1].trim().toLowerCase(); if (!byNaam[k]) byNaam[k] = x[0]; });
   }
   function naamVan(i) { return byId[i] ? byId[i][1] : i; }
 
@@ -49,6 +49,8 @@
       orig = JSON.parse(JSON.stringify(d));
     }
     if (!d.links) d.links = {};
+    // Wiki-principe: de tekst wordt getoond met de links als [[Naam]]; staat het lemma nog in automatische modus, dan komen die links uit de bouw (wtext/wlisten)
+    w0 = d.wiki || isNieuw ? { text: d.text || "", listen: d.listen || "" } : { text: d.wtext != null ? d.wtext : (d.text || ""), listen: d.wlisten != null ? d.wlisten : (d.listen || "") };
     bouw();
     $("bw-form").hidden = false;
     document.title = (isNieuw ? "Nieuw lemma" : "Bewerk: " + (d.name || id));
@@ -61,8 +63,9 @@
     var h = "";
     if (isNieuw) h += '<p><b>Nieuw lemma</b>: ' + TYPES[type] + '. Adres: <code id="bw-adres"></code></p>';
     h += veld("Naam", inp("f-name", d.name));
-    h += veld("Tekst (lege regel tussen alinea's; namen van andere lemma's worden automatisch gelinkt)", '<textarea id="f-text" rows="16" style="width:100%">' + esc(d.text) + "</textarea>");
-    h += veld("Luistertip", '<textarea id="f-listen" rows="3" style="width:100%">' + esc(d.listen) + "</textarea>");
+    h += veld("Tekst (lege regel tussen alinea's)", '<textarea id="f-text" class="bw-wiki" rows="16" style="width:100%">' + esc(w0.text) + "</textarea>");
+    h += veld("Luistertip", '<textarea id="f-listen" class="bw-wiki" rows="3" style="width:100%">' + esc(w0.listen) + "</textarea>");
+    h += '<p class="bwv" style="font-size:13px">Links werken zoals op Wikipedia: <code>[[Naam]]</code> is een link naar dat lemma, <code>[[Naam|andere tekst]]</code> toont andere tekst, en een link weghalen kan door de dubbele haken te wissen. Is een naam niet uniek, gebruik dan het adres: <code>[[artiest/queen|Queen]]</code>. Selecteer woorden en klik: <button type="button" id="bw-linkmaak">Maak link</button> <button type="button" id="bw-linkweg">Haal links weg</button></p>';
     if (!EN) {
       if (type === "artiest") {
         h += veld("Soort", '<select id="f-soortArtiest"><option value="">(automatisch)</option><option value="groep">Groep</option><option value="persoon">Persoon</option></select>');
@@ -102,6 +105,7 @@
     tekenLijsten();
     if ($("f-disco-plus")) $("f-disco-plus").onclick = function () { lees(); state.disco.push({ jaar: "", titel: "" }); tekenLijsten(); };
     if ($("f-defs-plus")) $("f-defs-plus").onclick = function () { lees(); state.defs.push({ text: "", src: "" }); tekenLijsten(); };
+    wikiKnoppen();
     $("f-extra-plus").onclick = function () { lees(); state.extra.push({ titel: "", jaar: "", text: "" }); tekenLijsten(); };
     if ($("f-foto-up")) {
       $("f-foto-up").onchange = function () { upload(this.files[0], "img", function (src, naam) { $("f-foto-src").value = src; if (!$("f-foto-maker").value) $("f-foto-maker").value = "Eigen foto"; fotoPrev(); }); };
@@ -109,6 +113,34 @@
       $("f-foto-weg").onclick = function () { $("f-foto-src").value = ""; $("f-foto-maker").value = ""; $("f-foto-licentie").value = ""; $("f-foto-bron").value = ""; fotoPrev(); };
     }
     if ($("f-cover-up")) $("f-cover-up").onchange = function () { upload(this.files[0], "hoes", function (src) { $("f-cover").value = BEELD + src; }); };
+  }
+  // Link maken / weghalen in de laatst gebruikte tekstvak
+  var wikiVak = null;
+  function wikiKnoppen() {
+    var vakken = document.querySelectorAll(".bw-wiki");
+    for (var i = 0; i < vakken.length; i++) vakken[i].addEventListener("focus", function () { wikiVak = this; });
+    wikiVak = $("f-text");
+    function sel() { var a = wikiVak.selectionStart, b = wikiVak.selectionEnd; return [a, b]; }
+    $("bw-linkmaak").onclick = function () {
+      var s = sel(), v = wikiVak.value, t = v.slice(s[0], s[1]);
+      if (!t) { st("Selecteer eerst de woorden die een link moeten worden.", true); return; }
+      wikiVak.value = v.slice(0, s[0]) + "[[" + t + "]]" + v.slice(s[1]); wikiVak.focus(); wikiVak.setSelectionRange(s[0], s[1] + 4);
+    };
+    // zit een eind van de selectie midden in een link, dan wordt die hele link meegenomen
+    function omlink(v, p) { var o = v.lastIndexOf("[[", p), c = v.lastIndexOf("]]", p); return o > c ? [o, v.indexOf("]]", o) + 2] : null; }
+    $("bw-linkweg").onclick = function () {
+      var s = sel(), v = wikiVak.value, a = s[0], b = s[1], l1 = omlink(v, a);
+      if (a === b) { if (!l1 || l1[1] < 2) { st("Zet de cursor in een link of selecteer tekst met links.", true); return; } a = l1[0]; b = l1[1]; }
+      else { if (l1 && l1[1] > 1) a = l1[0]; var l2 = omlink(v, b); if (l2 && l2[1] > 1) b = l2[1]; }
+      var nw = v.slice(a, b).replace(/\[\[([^\[\]|]+?)\|([^\[\]]+?)\]\]/g, "$2").replace(/\[\[([^\[\]]+?)\]\]/g, "$1");
+      wikiVak.value = v.slice(0, a) + nw + v.slice(b); wikiVak.focus(); wikiVak.setSelectionRange(a, a + nw.length);
+    };
+  }
+  function wikiCheck(t) {
+    var onb = [], re = /\[\[([^\[\]|]+?)(?:\|([^\[\]]+?))?\]\]/g, m;
+    while ((m = re.exec(t))) { var doel = m[1].trim(); if (!byId[doel] && !byNaam[doel.toLowerCase()]) onb.push(doel); }
+    var los = t.replace(re, "").match(/\[\[|\]\]/);
+    return { onb: onb, los: !!los };
   }
   function fotoPrev() { var s = $("f-foto-src").value.trim(); $("f-foto-prev").src = s ? (/^https?:/.test(s) ? s : BEELD + s) : ""; $("f-foto-prev").hidden = !s; }
 
@@ -184,7 +216,14 @@
   function num(v) { v = String(v).trim(); return v === "" ? null : (isNaN(+v) ? v : +v); }
   function verzamel() {
     lees();
-    var cur = { name: $("f-name").value.trim(), text: $("f-text").value.split(CR).join("").trim(), listen: $("f-listen").value.trim() };
+    var wt = $("f-text").value.split(CR).join("").trim(), wl = $("f-listen").value.trim();
+    var chk = wikiCheck(wt + NL + wl);
+    if (chk.los) throw new Error("er staat een losse [[ of ]] in de tekst; elke link moet als [[Naam]] zijn afgesloten");
+    if (chk.onb.length) throw new Error("onbekend lemma in [[ ]]: " + chk.onb.slice(0, 5).join(", ") + (chk.onb.length > 5 ? "…" : "") + " (haal de haken weg of gebruik de naam of het adres van een bestaand lemma)");
+    // Alleen als je de tekst of luistertip aanpast (of het lemma al in wiki-modus stond) gaat het lemma over op vaste links; anders blijft de automatische linking
+    var wijzig = isNieuw || !!d.wiki || wt !== w0.text.split(CR).join("").trim() || wl !== w0.listen.trim();
+    var cur = { name: $("f-name").value.trim(), text: wijzig ? wt : (d.text || ""), listen: wijzig ? wl : (d.listen || "") };
+    if (wijzig) cur.wiki = true;
     if (!EN) {
       var s = function (i) { return $(i) ? $(i).value.trim() : undefined; };
       ["soortArtiest", "place", "sub", "who", "artist", "soort"].forEach(function (k) { var v = s("f-" + k); if (v !== undefined) cur[k] = v; });
