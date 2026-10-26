@@ -7160,7 +7160,8 @@
    "parents": [
     "hard-rock",
     "prog-rock",
-    "symfonische-rock"
+    "symfonische-rock",
+    "power-metal"
    ],
    "text": "Symfonische metal combineert zware gitaren en drums met orkestklanken, koren en een klassiek geschoolde zangstem. Nederland werd een centrum van de stijl: Within Temptation, in 1996 opgericht rond zangeres Sharon den Adel, en Epica, opgericht in 2002, spelen op festivals over de hele wereld.",
    "listen": "Hoor in Mother Earth hoe orkest en koor boven de vervormde gitaren uitkomen, met de heldere stem van Sharon den Adel.",
@@ -8983,7 +8984,9 @@
    },
    "parents": [
     "chicago-house",
-    "garage-house"
+    "garage-house",
+    "kwaito",
+    "gqom"
    ],
    "text": "Amapiano ontstond halverwege de jaren 2010 in de townships rond Pretoria en Johannesburg uit Zuid-Afrikaanse house en jazz. Kenmerkend is de log drum, een diepe, rubberachtige bas die als melodie werkt, onder rustige pianoakkoorden en een trage housebeat. In de jaren 2020 ging amapiano de wereld over; Water (2023) van Tyla won een Grammy.",
    "listen": "Hoor in Water de log drum: de diepe, rollende bas onder het trage ritme en de zachte zang.",
@@ -11142,6 +11145,312 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/0d/06/5f/0d065fa0-66e0-df6c-1550-8181d2513e7e/20UMGIM03282.rgb.jpg/600x600bb.jpg",
      "id": 1497018390,
      "store": "https://music.apple.com/nl/album/im-not-lisa/1497017959?i=1497018390"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "mbaqanga",
+   "name": "Mbaqanga",
+   "family": "wereld",
+   "year": 1960,
+   "peak": [
+    1960,
+    1990
+   ],
+   "place": {
+    "name": "Johannesburg",
+    "lat": -26.2,
+    "lon": 28.05
+   },
+   "parents": [
+    "swing",
+    "west-afrika"
+   ],
+   "text": "Mbaqanga, de muziek van de township, ontstond rond 1960 in Johannesburg en Soweto. Zwarte musici combineerden Zuid-Afrikaanse volksmuziek met Amerikaanse swing en jazz, zodat er een vrolijk, swingend geluid kwam met elektrische bas, saxofoon en koorzang. Mahlathini, de Leeuw van Soweto, zong met een diepe, grommende stem, en de Mahotella Queens zongen hoog en dicht ertegenaan. In 1986 maakte Paul Simon met Graceland het genre wereldwijd bekend, ook al speelde de apartheid de muziek nog tegen.",
+   "listen": "Luister in Kazet hoe Mahlathini's diepe stem het antwoord krijgt van de hoge, strakke koorzang van de Queens, boven een springerige bas.",
+   "tracks": [
+    {
+     "artist": "Mahlathini and The Mahotella Queens",
+     "title": "Kazet",
+     "year": 1988,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/23/15/d6/2315d6c0-4662-aae9-eb54-d8ffbce999f9/mzaf_5943213765022592384.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/49/1d/6d/491d6d65-0351-0405-a91c-838a92c2e8ab/3307516682926.png/600x600bb.jpg",
+     "id": 1569884285,
+     "store": "https://music.apple.com/nl/album/kazet/1569884284?i=1569884285"
+    },
+    {
+     "artist": "Mahlathini and The Mahotella Queens",
+     "title": "Awuthule Kancane",
+     "year": 1988,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/75/8b/80/758b8016-8ee8-6f95-1f0b-20a62f9ef3cb/mzaf_16879349701443496453.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/49/1d/6d/491d6d65-0351-0405-a91c-838a92c2e8ab/3307516682926.png/600x600bb.jpg",
+     "id": 1569884556,
+     "store": "https://music.apple.com/nl/album/awuthule-kancane/1569884284?i=1569884556"
+    },
+    {
+     "artist": "Mahlathini",
+     "title": "Sihambile",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/04/07/b3/0407b3e7-684f-359e-cf29-88d61e2bef2f/mzaf_9736339973620395889.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/b3/1c/96/mzi.autockle.jpg/600x600bb.jpg",
+     "id": 203751563,
+     "store": "https://music.apple.com/nl/album/sihambile/203750887?i=203751563"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "kwaito",
+   "name": "Kwaito",
+   "family": "wereld",
+   "year": 1992,
+   "peak": [
+    1994,
+    2005
+   ],
+   "place": {
+    "name": "Johannesburg",
+    "lat": -26.2,
+    "lon": 28.05
+   },
+   "parents": [
+    "mbaqanga",
+    "chicago-house",
+    "hiphop"
+   ],
+   "text": "Kwaito is de muziek van de eerste vrije generatie in Zuid-Afrika. Na het einde van de apartheid in 1994 maakten jongeren in de townships van Johannesburg een traag, dansbaar geluid uit house, hiphop en lokale zang. Het tempo ligt lager dan bij house, de bas is zwaar en de zang gaat vaak over in praten in straattaal. Boom Shaka, Bongo Maffin en Brenda Fassie werden de gezichten van dit nieuwe Zuid-Afrika. De naam komt uit het Afrikaans en betekent zoveel als boos of heet.",
+   "listen": "Luister in It's About Time naar het trage tempo, de zware bas en de zang die half rap is en half zingen.",
+   "tracks": [
+    {
+     "artist": "Boom Shaka",
+     "title": "It's About Time",
+     "year": 1994,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/c7/f7/0c/c7f70c53-7ee4-6a1a-911f-2265d3b277e8/mzaf_3018928743496489923.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/44/62/14/44621443-0d1c-b513-1474-cfb3321b1f29/cover.jpg/600x600bb.jpg",
+     "id": 1695775885,
+     "store": "https://music.apple.com/nl/album/its-about-time/1695775797?i=1695775885"
+    },
+    {
+     "artist": "Bongo Maffin",
+     "title": "Thathisigubhu",
+     "year": 1998,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fd/cc/eb/fdcceb46-62d9-1c11-ae50-479a79889450/mzaf_10494579251448079310.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/05/31/81/053181d4-2b10-0dfa-ebd4-ba544444a7b6/cover.jpg/600x600bb.jpg",
+     "id": 1680807390,
+     "store": "https://music.apple.com/nl/album/thathisigubhu/1680806826?i=1680807390"
+    },
+    {
+     "artist": "Brenda Fassie",
+     "title": "Vuli Ndlela",
+     "year": 1998,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/0d/78/c6/0d78c686-7703-2c1d-5b56-05da9d5fe0c7/mzaf_5385003271083249345.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/b3/1c/96/mzi.autockle.jpg/600x600bb.jpg",
+     "id": 203750892,
+     "store": "https://music.apple.com/nl/album/vuli-ndlela/203750887?i=203750892"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "gqom",
+   "name": "Gqom",
+   "family": "wereld",
+   "year": 2010,
+   "peak": [
+    2015,
+    2020
+   ],
+   "place": {
+    "name": "Durban",
+    "lat": -29.86,
+    "lon": 31.02
+   },
+   "parents": [
+    "kwaito",
+    "chicago-house"
+   ],
+   "text": "Gqom is de donkere, harde dansmuziek van Durban. Rond 2010 maakten jonge producers in de townships beats op goedkope laptops met standaardprogramma's, en deelden ze die via mobiele telefoons. Het ritme is kaal en hard, de bas zwaar, en de zang bestaat vaak uit korte kreten. Babes Wodumo en Distruction Boyz brachten het in 2016 en 2017 naar de hitlijsten, en producers in Londen en Berlijn pikten het geluid op. De naam komt uit het Zulu en betekent ongeveer trommelslag.",
+   "listen": "Hoor in Wololo hoe de beat nauwelijks melodie bevat en hoe Babes Wodumo er met korte, uitgelaten kreten overheen zingt.",
+   "tracks": [
+    {
+     "artist": "Babes Wodumo",
+     "title": "Wololo",
+     "year": 2016,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/11/96/10/11961075-cba8-4d96-964e-11f9a0fdfc33/mzaf_6117335891599506225.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c9/18/88/c91888b8-4e20-77fe-5825-54a8a60d0525/196006707330.jpg/600x600bb.jpg",
+     "id": 1609599703,
+     "store": "https://music.apple.com/nl/album/wololo-feat-mampintsha/1609599350?i=1609599703"
+    },
+    {
+     "artist": "Distruction Boyz",
+     "title": "Shut Up and Groove",
+     "year": 2017,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b4/70/b3/b470b32c-917b-6af4-e8ec-b3443bdf5fec/mzaf_4135132017729591518.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/70/b9/f9/70b9f920-2fdb-fe11-945b-0c7e62075bc0/DB_Cover_3000x3000.jpg/600x600bb.jpg",
+     "id": 1292642680,
+     "store": "https://music.apple.com/nl/album/shut-up-and-groove/1292642658?i=1292642680"
+    },
+    {
+     "artist": "DJ Lag",
+     "title": "Ice Drop",
+     "year": 2017,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3d/c7/3c/3dc73c4d-e4d1-6a21-0811-a4fa4b33a396/mzaf_10269505381209555044.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/81/f2/07/81f2078a-ecb3-2d77-7fe0-fae7c80b12f6/5055869518352.png/600x600bb.jpg",
+     "id": 1163002537,
+     "store": "https://music.apple.com/nl/album/ice-drop/1163002523?i=1163002537"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "dangdut",
+   "name": "Dangdut",
+   "family": "wereld",
+   "year": 1970,
+   "peak": [
+    1975,
+    2005
+   ],
+   "place": {
+    "name": "Jakarta",
+    "lat": -6.2,
+    "lon": 106.85
+   },
+   "parents": [
+    "indopop",
+    "bollywood"
+   ],
+   "text": "Dangdut is de populaire dansmuziek van Indonesië. De naam is een klanknabootsing van de trommel, de tabla, die dang en dut klinkt. De muziek mengt Maleise en Arabische melodieën, Indiase filmmuziek en rock. Rhoma Irama, de koning van de dangdut, gaf het genre rond 1970 een elektrische gitaar en een boodschap, en Elvy Sukaesih werd de koningin. De heupbewegingen van Inul Daratista leidden in 2003 tot een landelijk debat over wat fatsoenlijk is.",
+   "listen": "Hoor in Begadang hoe de tabla het ritme geeft, en hoe de elektrische gitaar daar een melodie met een Arabische kleur overheen speelt.",
+   "tracks": [
+    {
+     "artist": "Rhoma Irama",
+     "title": "Begadang",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3f/87/ee/3f87ee96-e8f8-40fd-0645-5087e7323745/mzaf_14471486545017314959.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/91/c0/d3/91c0d3c3-934e-cfb4-cc38-c120dca96378/190296740596.jpg/600x600bb.jpg",
+     "id": 1557261225,
+     "store": "https://music.apple.com/nl/album/begadang/1557261216?i=1557261225"
+    },
+    {
+     "artist": "Elvy Sukaesih",
+     "title": "Bisik-Bisik Tetangga",
+     "year": 1980,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d4/42/9c/d4429c50-5869-bad2-fcf9-1aa1b2637180/mzaf_10776455928550720184.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/10/fa/00/10fa0068-dd5b-6028-519e-77917cfe9271/cover.jpg/600x600bb.jpg",
+     "id": 867542943,
+     "store": "https://music.apple.com/nl/album/bisik-bisik-tetangga/867542922?i=867542943"
+    },
+    {
+     "artist": "Inul Daratista",
+     "title": "Goyang Inul",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f9/6d/bf/f96dbff7-096e-5909-4303-f9887700d88a/mzaf_12327834654947492828.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/07/e4/4e/07e44ea2-43b2-f7ae-fb5a-ab57089ca855/190296750236.jpg/600x600bb.jpg",
+     "id": 1566334085,
+     "store": "https://music.apple.com/nl/album/goyang-inul/1566334062?i=1566334085"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "mandopop-cantopop",
+   "name": "Mandopop en Cantopop",
+   "family": "wereld",
+   "year": 1970,
+   "peak": [
+    1980,
+    2005
+   ],
+   "place": {
+    "name": "Hongkong",
+    "lat": 22.32,
+    "lon": 114.17
+   },
+   "parents": [
+    "tin-pan-alley",
+    "folk-revival"
+   ],
+   "text": "Mandopop en Cantopop zijn de popmuziek in het Mandarijn en het Kantonees. Het Kantonese Cantopop ontstond in de jaren zeventig in Hongkong, toen Sam Hui in zijn eigen taal ging zingen en niet meer in het Engels. Teresa Teng uit Taiwan werd met haar zachte, heldere stem de grootste zangeres van het Mandarijn, en Leslie Cheung de ster van de jaren tachtig. In de jaren 2000 werd Jay Chou de grote naam, met zijn mengsel van R&B, hiphop en Chinese melodieën.",
+   "listen": "Hoor in 月亮代表我的心 hoe Teresa Teng zacht en bijna fluisterend zingt, met strijkers die de melodie dragen.",
+   "tracks": [
+    {
+     "artist": "鄧麗君",
+     "title": "月亮代表我的心",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/40/ed/a4/40eda410-3dc0-daac-9303-371cb500b5ad/mzaf_5169877897617199468.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9e/2f/14/9e2f14b7-cd5c-2c77-9d58-0c62dd6e75e0/10UMGIM12404.rgb.jpg/600x600bb.jpg",
+     "id": 1443430112,
+     "store": "https://music.apple.com/nl/album/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E6%88%91%E7%9A%84%E5%BF%83/1443429959?i=1443430112"
+    },
+    {
+     "artist": "張國榮",
+     "title": "Monica",
+     "year": 1984,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fb/e0/51/fbe05121-12e1-8670-1332-20564956792b/mzaf_16128383441010596227.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f0/5f/ee/f05fee53-0b84-443f-a603-af21aa6e7943/825646271481.jpg/600x600bb.jpg",
+     "id": 892863605,
+     "store": "https://music.apple.com/nl/album/monica/892863602?i=892863605"
+    },
+    {
+     "artist": "Jay Chou",
+     "title": "稻香",
+     "year": 2008,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/66/c2/3e/66c23e69-9388-ccf9-f04d-d81cc3a7e510/mzaf_17533062306115009421.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/53/6c/72/536c7219-e177-a912-9322-e1abf70e8733/23UM1IM58828.rgb.jpg/600x600bb.jpg",
+     "id": 1721460924,
+     "store": "https://music.apple.com/nl/album/%E7%A8%BB%E9%A6%99/1721460694?i=1721460924"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "power-metal",
+   "name": "Power metal",
+   "family": "rock",
+   "year": 1987,
+   "peak": [
+    1995,
+    2005
+   ],
+   "place": {
+    "name": "Hamburg",
+    "lat": 53.55,
+    "lon": 9.99
+   },
+   "parents": [
+    "heavy-metal-80s"
+   ],
+   "text": "Power metal is heavy metal die snel, hoog en hoopvol klinkt. Helloween uit Hamburg maakte er in 1987 met Keeper of the Seven Keys de basis voor: razendsnelle gitaren, dubbele basdrums en een zanger die tot in de hoge noten klimt. De teksten gaan over helden, draken en fantasiewerelden. Blind Guardian en Sonata Arctica brachten het genre in de jaren negentig naar een groot publiek, vooral in Duitsland en Finland.",
+   "listen": "Hoor in Future World hoe de gitaren een vrolijke melodie spelen en hoe de zanger het refrein zingt als een lied dat je kunt meebrullen.",
+   "tracks": [
+    {
+     "artist": "Helloween",
+     "title": "Future World",
+     "year": 1987,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/da/a6/f2/daa6f2b5-ff89-572a-0da4-5b9b7b2a304c/mzaf_15165816219040887341.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/6f/24/be/6f24be90-4438-24cb-4750-9f38ba89041d/5414939554476.jpg/600x600bb.jpg",
+     "id": 1438860677,
+     "store": "https://music.apple.com/nl/album/future-world/1438860190?i=1438860677"
+    },
+    {
+     "artist": "Blind Guardian",
+     "title": "Mirror Mirror",
+     "year": 1998,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b1/ff/f0/b1fff0aa-650d-e68e-b800-6b056628d143/mzaf_16800945971794313045.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c9/57/82/c95782cd-7a4c-38a1-1ae5-beed05f5c192/cover.jpg/600x600bb.jpg",
+     "id": 1463553571,
+     "store": "https://music.apple.com/nl/album/mirror-mirror-remastered-2007/1463553298?i=1463553571"
+    },
+    {
+     "artist": "Sonata Arctica",
+     "title": "FullMoon",
+     "year": 1999,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/28/3e/37/283e37b5-7462-dd33-49aa-b36141060d70/mzaf_6717981944565236816.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/65/7b/bc/657bbcbf-edc2-20b1-d972-4564da0c21a1/5400863111434_cover.jpg/600x600bb.jpg",
+     "id": 1660479178,
+     "store": "https://music.apple.com/nl/album/fullmoon/1660478878?i=1660479178"
     }
    ],
    "mixtapes": []
