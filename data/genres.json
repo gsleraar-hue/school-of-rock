@@ -585,6 +585,24 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/01/73/b8/mzi.zgopcaqd.jpg/600x600bb.jpg",
      "id": 414022812,
      "store": "https://music.apple.com/nl/album/blue-yodel/414022807?i=414022812"
+    },
+    {
+     "artist": "Johnny Cash",
+     "title": "Folsom Prison Blues",
+     "year": 1955,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/03/56/77/035677d1-82c6-8b76-62b2-5d6603494564/mzaf_2593567873523907444.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c2/41/e9/c241e9f2-d484-0948-2064-29f5326a8a4a/00015047805471_Cover.jpg/600x600bb.jpg",
+     "id": 1890342789,
+     "store": "https://music.apple.com/nl/album/folsom-prison-blues-remastered-2022/1890342379?i=1890342789"
+    },
+    {
+     "artist": "Dolly Parton",
+     "title": "Jolene",
+     "year": 1973,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fc/bf/b6/fcbfb6fa-5293-1bb8-f250-7feaf5183892/mzaf_10820724967096911306.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0b/f8/1e/0bf81e88-de6e-aba3-9fd4-e7407bfbcc31/886445438048.jpg/600x600bb.jpg",
+     "id": 1062400330,
+     "store": "https://music.apple.com/nl/album/jolene/1062400323?i=1062400330"
     }
    ],
    "mixtapes": [
@@ -2257,6 +2275,15 @@
      "cover": "https://sorock.nl/img/765afe5608f8b0.jpg",
      "id": 1571968519,
      "store": "https://music.apple.com/nl/album/enter-sandman/1571968136?i=1571968519"
+    },
+    {
+     "artist": "Judas Priest",
+     "title": "Breaking the Law",
+     "year": 1980,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d1/13/15/d113155f-6fbb-d883-740d-faee46fadc1f/mzaf_4958056101472605211.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/3e/ce/c7/3ecec7e6-66a3-7ca8-d70f-5a4512aa21ba/dj.stjulnox.jpg/600x600bb.jpg",
+     "id": 207346225,
+     "store": "https://music.apple.com/nl/album/breaking-the-law/207346194?i=207346225"
     }
    ],
    "mixtapes": [
@@ -3568,6 +3595,24 @@
      "cover": "https://sorock.nl/img/68612bdec1fdf2.jpg",
      "id": 1517625227,
      "store": "https://music.apple.com/nl/album/i-got-you/1517624757?i=1517625227"
+    },
+    {
+     "artist": "Sam Cooke",
+     "title": "A Change Is Gonna Come",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/dd/08/64/dd0864ee-53df-5002-9f87-57d088c4c530/mzaf_11314498153689779283.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/00/41/47/004147b7-823c-eddb-3311-a36eb9ad284b/15ABKIM00035.rgb.jpg/600x600bb.jpg",
+     "id": 1440762757,
+     "store": "https://music.apple.com/nl/album/a-change-is-gonna-come/1440762537?i=1440762757"
+    },
+    {
+     "artist": "Al Green",
+     "title": "Let's Stay Together",
+     "year": 1971,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a1/cc/b3/a1ccb365-d4a7-f371-7e6c-c4b745b41acc/mzaf_2282300440028225493.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d8/ec/4f/d8ec4f92-0691-9151-1738-9fbe2e19a270/886445144888.jpg/600x600bb.jpg",
+     "id": 976362823,
+     "store": "https://music.apple.com/nl/album/lets-stay-together/976362815?i=976362823"
     }
    ],
    "mixtapes": [
@@ -3635,6 +3680,24 @@
      "cover": "https://sorock.nl/img/f5a82fe20d3c5d.jpg",
      "id": 1585226005,
      "store": "https://music.apple.com/nl/album/i-want-you-back/1585225624?i=1585226005"
+    },
+    {
+     "artist": "The Temptations",
+     "title": "My Girl",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/99/b3/ef/99b3ef00-3e74-5dfa-0d2e-4128ef5a9f0c/mzaf_12879689053309664622.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/84/2d/f1/842df19d-e5f4-3b9f-9405-6779bbc43fe0/06UMGIM07353.rgb.jpg/600x600bb.jpg",
+     "id": 1423301921,
+     "store": "https://music.apple.com/nl/album/my-girl/1423301162?i=1423301921"
+    },
+    {
+     "artist": "Four Tops",
+     "title": "Reach Out I'll Be There",
+     "year": 1966,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/67/97/94/679794bd-6043-f114-0e93-432d9bd875c9/mzaf_555830736718425242.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/b0/09/c2/mzi.cclevwpn.tif/600x600bb.jpg",
+     "id": 503794344,
+     "store": "https://music.apple.com/nl/album/reach-out-ill-be-there/503794255?i=503794344"
     }
    ],
    "mixtapes": [
@@ -3697,6 +3760,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c0/1e/94/c01e940d-993c-4d37-e7ca-64394d94427b/mzi.ltlxcpsw.jpg/600x600bb.jpg",
      "id": 265640785,
      "store": "https://music.apple.com/nl/album/soul-man/265640765?i=265640785"
+    },
+    {
+     "artist": "Isaac Hayes",
+     "title": "Theme from Shaft",
+     "year": 1971,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/68/67/12/6867124d-77b4-3c78-c21e-f01a220acc92/mzaf_12437438528270320850.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/b9/f3/91/b9f39109-11d3-8852-86b5-d1d4db746a32/21CRGIM28856.rgb.jpg/600x600bb.jpg",
+     "id": 1576786566,
+     "store": "https://music.apple.com/nl/album/theme-from-shaft/1576786384?i=1576786566"
     }
    ],
    "mixtapes": [
@@ -3759,6 +3831,24 @@
      "cover": "https://sorock.nl/img/bd8cfe2df897e0.jpg",
      "id": 1440808985,
      "store": "https://music.apple.com/nl/album/superstition/1440808973?i=1440808985"
+    },
+    {
+     "artist": "Curtis Mayfield",
+     "title": "Superfly",
+     "year": 1972,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a9/92/75/a992751f-6e72-7949-aeb9-93ae9c9b6d3b/mzaf_13143551383453411022.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/67/a6/de/67a6deb8-83bf-8320-c103-470516350e2c/s06.ozzybqaa.jpg/600x600bb.jpg",
+     "id": 40059077,
+     "store": "https://music.apple.com/nl/album/superfly/40059051?i=40059077"
+    },
+    {
+     "artist": "Earth, Wind & Fire",
+     "title": "September",
+     "year": 1978,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/78/d4/95/78d49529-bd72-c490-5392-3a7f3d24755b/mzaf_6924139238970009441.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/3b/0d/c63b0ddb-ba2d-49fc-f255-9c925dd4e6e1/886447605004.jpg/600x600bb.jpg",
+     "id": 1456446747,
+     "store": "https://music.apple.com/nl/album/september/1456445670?i=1456446747"
     }
    ],
    "mixtapes": [
@@ -4900,6 +4990,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/44/56/71/445671c3-a899-7888-d632-663521df8506/20UMGIM87814.rgb.jpg/600x600bb.jpg",
      "id": 1535211864,
      "store": "https://music.apple.com/nl/album/pacific-202/1535211465?i=1535211864"
+    },
+    {
+     "artist": "Orbital",
+     "title": "Chime",
+     "year": 1989,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/7a/d6/4d/7ad64dcb-70ed-42f4-9873-6a72fc9b0415/mzaf_9390676459500466365.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1d/cf/b2/1dcfb2fb-0f7f-65e6-21df-8a06c8f4b78a/5061017251538.jpg/600x600bb.jpg",
+     "id": 1730810411,
+     "store": "https://music.apple.com/nl/album/chime-12-version-remastered/1730810410?i=1730810411"
     }
    ],
    "mixtapes": [
@@ -5195,6 +5294,15 @@
      "cover": "https://sorock.nl/img/9e6833b75251b6.jpg",
      "id": 434543347,
      "store": "https://music.apple.com/nl/album/scary-monsters-and-nice-sprites/434543345?i=434543347"
+    },
+    {
+     "artist": "Swedish House Mafia",
+     "title": "Don't You Worry Child",
+     "year": 2012,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f0/b8/81/f0b88108-6ee2-bf12-6e6c-3e908aabbb56/mzaf_1314931483187521108.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9c/da/c3/9cdac3b4-f584-bafd-1a4f-d548c99bd435/5099972323359.jpg/600x600bb.jpg",
+     "id": 6798410339,
+     "store": "https://music.apple.com/nl/album/dont-you-worry-child-feat-john-martin/6798410313?i=6798410339"
     }
    ],
    "mixtapes": [
@@ -5487,6 +5595,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/ae/b0/1c/aeb01c4a-6bb4-739f-2dfc-8a10181af733/cover.jpg/600x600bb.jpg",
      "id": 1324673103,
      "store": "https://music.apple.com/nl/album/do-the-reggay/1324671933?i=1324673103"
+    },
+    {
+     "artist": "Toots & The Maytals",
+     "title": "Do the Reggay",
+     "year": 1968,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f3/93/bb/f393bb4c-4313-9834-0b47-069f0a2ecca1/mzaf_5884484091029851863.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/c5/c4/2a/c5c42a9c-8296-7c24-24f0-3adca28779e3/00602567848370.rgb.jpg/600x600bb.jpg",
+     "id": 1434925766,
+     "store": "https://music.apple.com/nl/album/do-the-reggay/1434925210?i=1434925766"
     }
    ],
    "mixtapes": [
@@ -7400,6 +7517,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/ac/7f/06/mzi.cmuaapze.jpg/600x600bb.jpg",
      "id": 434543347,
      "store": "https://music.apple.com/nl/album/scary-monsters-and-nice-sprites/434543345?i=434543347"
+    },
+    {
+     "artist": "Burial",
+     "title": "Archangel",
+     "year": 2007,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/29/5c/a2/295ca2c1-3417-8a17-3d14-e746358c0662/mzaf_9103159415217093922.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d3/05/10/d3051051-937f-e7c4-636e-7e1950d60a7b/5024545486520.png/600x600bb.jpg",
+     "id": 1056902910,
+     "store": "https://music.apple.com/nl/album/archangel/1056902908?i=1056902910"
     }
    ],
    "mixtapes": [
@@ -7565,6 +7691,24 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/18/6e/c6/186ec634-8a11-959d-12f5-47ac99f551ce/asset.jpg/600x600bb.jpg",
      "id": 854911644,
      "store": "https://music.apple.com/nl/album/gee/854911623?i=854911644"
+    },
+    {
+     "artist": "NewJeans",
+     "title": "Ditto",
+     "year": 2022,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/85/72/66/8572665a-d35f-ce5d-43c5-9ae4b69b4b46/mzaf_2317272666428796662.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/f6/29/42/f629426e-92fe-535c-cbe4-76e70850819b/196922287107_Cover.jpg/600x600bb.jpg",
+     "id": 1657231962,
+     "store": "https://music.apple.com/nl/album/ditto/1657231957?i=1657231962"
+    },
+    {
+     "artist": "Stray Kids",
+     "title": "God's Menu",
+     "year": 2020,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/29/8b/19/298b194d-c062-6a13-eb3b-c0f91388ba90/mzaf_13266351117531950466.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/a8/99/a9/a899a9bb-bddc-1ce6-61d0-bea282420aa3/192641939464_Cover.jpg/600x600bb.jpg",
+     "id": 1608251966,
+     "store": "https://music.apple.com/nl/album/gods-menu/1608251775?i=1608251966"
     }
    ],
    "mixtapes": [
@@ -8720,6 +8864,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a4/14/ab/a414ab4b-5f90-6ded-2f53-36ffb610ad6c/24UMGIM35045.rgb.jpg/600x600bb.jpg",
      "id": 1743413442,
      "store": "https://music.apple.com/nl/album/la-boh%C3%A8me/1743413418?i=1743413442"
+    },
+    {
+     "artist": "Serge Gainsbourg & Jane Birkin",
+     "title": "Je t'aime... moi non plus",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1b/4e/52/1b4e5293-6098-7c9b-c6e1-4d2e1f804df2/mzaf_1343527234843145491.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d8/c7/00/d8c700a1-b419-711e-764b-4ede941a6639/15UMGIM70412.rgb.jpg/600x600bb.jpg",
+     "id": 1443220646,
+     "store": "https://music.apple.com/nl/album/je-taime-moi-non-plus/1443220479?i=1443220646"
     }
    ],
    "mixtapes": []
@@ -9202,6 +9355,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fb/16/2b/fb162bd3-1487-499c-a052-e2929de18d42/888880306159.jpg/600x600bb.jpg",
      "id": 1439049786,
      "store": "https://music.apple.com/nl/album/tsop-the-sound-of-philadelphia-extended-version/1439049484?i=1439049786"
+    },
+    {
+     "artist": "Barry White",
+     "title": "Can't Get Enough of Your Love, Babe",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c4/43/6f/c4436f65-a05d-269f-4296-8b1a2ad8764c/mzaf_14284696055773732625.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/bd/d3/13/bdd31357-d06f-ee3d-6c9c-9490d4117c95/06UMGIM04017.rgb.jpg/600x600bb.jpg",
+     "id": 1431053629,
+     "store": "https://music.apple.com/nl/album/cant-get-enough-of-your-love-babe/1431053185?i=1431053629"
     }
    ],
    "mixtapes": []
@@ -9344,6 +9506,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d1/f2/6f/d1f26f20-1cb7-8690-9ddf-a9142d59e9d4/8718522341588.png/600x600bb.jpg",
      "id": 1565941233,
      "store": "https://music.apple.com/nl/album/out-of-the-blue-original-1999-extended/1565941211?i=1565941233"
+    },
+    {
+     "artist": "Underworld",
+     "title": "Born Slippy .NUXX",
+     "year": 1996,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/88/10/e5/8810e531-74d7-cde1-601f-fcc081c257be/mzaf_15377413203089720426.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/5d/43/f8/5d43f8ad-f2eb-332b-d10a-2f766bb2bdfc/00602547476135.rgb.jpg/600x600bb.jpg",
+     "id": 1443229244,
+     "store": "https://music.apple.com/nl/album/born-slippy-nuxx-remastered/1443228545?i=1443229244"
     }
    ],
    "mixtapes": [
@@ -9743,6 +9914,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/4c/ba/64/4cba64ec-3070-f314-285f-604b3f6d9583/859724974773_cover.jpg/600x600bb.jpg",
      "id": 1339666429,
      "store": "https://music.apple.com/nl/album/its-a-long-way-to-tipperary/1339664402?i=1339666429"
+    },
+    {
+     "artist": "The Buffalo Bills",
+     "title": "Lida Rose",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/af/04/44/af0444ac-93a9-b075-fee1-6c85fa5086bf/mzaf_7663195824542538069.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/5d/90/a3/5d90a30c-e918-7045-195e-57e7839b27ba/00602547869005.rgb.jpg/600x600bb.jpg",
+     "id": 1442948788,
+     "store": "https://music.apple.com/nl/album/lida-rose-will-i-ever-tell-you/1442948380?i=1442948788"
     }
    ],
    "mixtapes": []
@@ -9782,6 +9962,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/31/e9/48/31e9484a-661e-e417-f27c-2089cdde6f06/5605231018722.png/600x600bb.jpg",
      "id": 1394671971,
      "store": "https://music.apple.com/nl/album/estranha-forma-de-vida/1394670831?i=1394671971"
+    },
+    {
+     "artist": "Mariza",
+     "title": "Ó Gente da Minha Terra",
+     "year": 2001,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a2/e9/71/a2e97188-0f4d-4087-45aa-d52e21dd2964/mzaf_17538461529448848362.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/00/cc/ad/00ccad94-90c8-c135-b6d0-7eaa96b8ac9f/5099932764550_1500x1500_300dpi.jpg/600x600bb.jpg",
+     "id": 688588640,
+     "store": "https://music.apple.com/nl/album/%C3%B3-gente-da-minha-terra/688588587?i=688588640"
     }
    ],
    "mixtapes": []
@@ -9812,6 +10001,24 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/74/59/50/74595042-95c9-fc58-1da6-67bca7a29178/5206999030379.jpg/600x600bb.jpg",
      "id": 1842559119,
      "store": "https://music.apple.com/nl/album/synnefiasmeni-kyriaki-feat-giannis-salasidis/1842559117?i=1842559119"
+    },
+    {
+     "artist": "Markos Vamvakaris",
+     "title": "Karadouzeni",
+     "year": 1935,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/79/cb/c0/79cbc022-0c15-7ce4-dec0-f307f60bcdef/mzaf_1366897196073400000.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2003/m09/d13/h03/s03.dehrotab.jpg/600x600bb.jpg",
+     "id": 2474664,
+     "store": "https://music.apple.com/nl/album/karadouzeni/2474713?i=2474664"
+    },
+    {
+     "artist": "Rosa Eskenazi",
+     "title": "Ime Prezakias",
+     "year": 1936,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f4/9b/cc/f49bcc63-7f28-4b41-b389-bb99d4347ae3/mzaf_7977864929425206240.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/f0/be/ee/f0beee5b-b221-161d-b529-f5eaa1333f0a/4051972103042_1448.jpg/600x600bb.jpg",
+     "id": 569466034,
+     "store": "https://music.apple.com/nl/album/ime-prezakias/569465986?i=569466034"
     }
    ],
    "mixtapes": []
@@ -10009,6 +10216,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/92/c0/fc/92c0fcb5-6038-8e9d-e59c-2dabb66afa7a/8717931684644.png/600x600bb.jpg",
      "id": 1681050404,
      "store": "https://music.apple.com/nl/album/spaceman/1681050401?i=1681050404"
+    },
+    {
+     "artist": "Martin Garrix",
+     "title": "Animals",
+     "year": 2013,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8f/ca/53/8fca53bf-328f-4006-fb9c-eef2feee7790/mzaf_17242236602085711440.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6e/1e/f0/6e1ef055-195a-bb73-d5a8-5926058366a5/8712944577525.png/600x600bb.jpg",
+     "id": 1670593167,
+     "store": "https://music.apple.com/nl/album/animals/1670593166?i=1670593167"
     }
    ],
    "mixtapes": []
@@ -10156,6 +10372,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/9c/b7/9a/9cb79ae5-cf89-3e9a-bd6d-c1a504e8b808/5060331221166_Cover.jpg/600x600bb.jpg",
      "id": 1494039356,
      "store": "https://music.apple.com/nl/album/global-lunch/1494039350?i=1494039356"
+    },
+    {
+     "artist": "Skylar Spence",
+     "title": "Fiona Coyne",
+     "year": 2014,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/86/f6/8b/86f68b0a-a0ae-0165-05f3-8af4ea001f47/mzaf_10033985226496075119.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music5/v4/64/ea/0a/64ea0a0b-9ab9-f834-528a-86e8a9b7fdc8/AlbumArtHI.jpg/600x600bb.jpg",
+     "id": 1006871433,
+     "store": "https://music.apple.com/nl/album/fiona-coyne/1006871419?i=1006871433"
     }
    ],
    "mixtapes": []
@@ -10250,6 +10475,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/cf/3a/db/cf3adbe6-8ea1-f60f-60fd-713eefda3962/193483317984.jpg/600x600bb.jpg",
      "id": 1447555306,
      "store": "https://music.apple.com/nl/album/estamos-bien/1447554595?i=1447555306"
+    },
+    {
+     "artist": "Bad Bunny",
+     "title": "MÍA",
+     "year": 2018,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/72/ad/b6/72adb69d-18a8-a7cd-4534-bba34deb9486/mzaf_14761776520883767907.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/cf/3a/db/cf3adbe6-8ea1-f60f-60fd-713eefda3962/193483317984.jpg/600x600bb.jpg",
+     "id": 1447555315,
+     "store": "https://music.apple.com/nl/album/m%C3%ADa-feat-drake/1447554595?i=1447555315"
     }
    ],
    "mixtapes": []
