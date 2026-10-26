@@ -13283,6 +13283,308 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/42/23/f4/4223f4f4-c5e7-425a-645a-b6565c915cf8/14UMGIM16857.rgb.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "larry-coryell",
+   "name": "Larry Coryell",
+   "born": 1943,
+   "died": 2017,
+   "year": 1970,
+   "stroming": "fusion",
+   "alsoIn": [],
+   "place": {
+    "name": "Galveston → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "wes-montgomery"
+   ],
+   "films": [
+    "Spaces (1970)",
+    "Introducing the Eleventh House (1974)",
+    "Barefoot Boy (1971)"
+   ],
+   "text": "Gitarist Larry Coryell werd in Galveston, Texas, geboren en groeide op in Washington. Hij noemde Wes Montgomery en Kenny Burrell als zijn grote voorbeelden. Samen met Gábor Szabó was hij een pionier in het mengen van jazz, country en rock, en daarom noemde men hem de 'godfather of fusion'. Op zijn album Spaces uit 1970 speelden John McLaughlin, Chick Corea en Billy Cobham mee. Met zijn groep The Eleventh House maakte hij in 1974 harde, elektrische fusion. Hij overleed in 2017.",
+   "listen": "Hoor twee gitaren die als rockers tegen elkaar op rennen, met een jazzy onderlaag.",
+   "tracks": [
+    {
+     "film": "Spaces",
+     "title": "Spaces (Infinite)",
+     "artist": "Larry Coryell",
+     "year": 1970,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/3b/02/67/3b0267cb-39c3-c296-560d-022a48feb8bc/mzaf_12411787880446827592.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/58/a9/92/58a992fc-e72a-f983-a4dc-392a19447d74/00015707934558.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Spaces",
+     "title": "Wrong Is Right",
+     "artist": "Larry Coryell",
+     "year": 1970,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/16/2d/d6/162dd6b6-e881-11df-4753-da0f91b808dc/mzaf_4819909812362848300.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/58/a9/92/58a992fc-e72a-f983-a4dc-392a19447d74/00015707934558.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Introducing the Eleventh House",
+     "title": "Birdfingers",
+     "artist": "Larry Coryell",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/0f/38/be/0f38bebf-884f-fdeb-19be-1853e9bcb554/mzaf_3754483689570046589.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/1a/85/74/1a8574ac-910d-5a6d-9fc6-d3e64aa0a0cc/00015707934251.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "jan-hammer",
+   "name": "Jan Hammer",
+   "born": 1948,
+   "died": null,
+   "year": 1976,
+   "stroming": "fusion",
+   "alsoIn": [
+    "jazzfunk"
+   ],
+   "place": {
+    "name": "Praag → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "Oh, Yeah? (1976)",
+    "Melodies (1977)",
+    "Miami Vice Theme (1985)"
+   ],
+   "text": "Toetsenist Jan Hammer werd in Praag geboren, als zoon van een bekende zangeres. Hij begon op zijn vierde met piano en verhuisde na de Russische inval van 1968 naar Amerika. Begin jaren zeventig speelde hij in het Mahavishnu Orchestra van John McLaughlin. Hij gebruikte de synthesizer als een gitaar, met buigende, schreeuwende tonen. In de jaren tachtig schreef hij de muziek voor de televisieserie Miami Vice, waarvoor hij Grammy's won. Hij werkte ook samen met Jeff Beck en Al Di Meola.",
+   "listen": "Hoor de synthesizer die klinkt als een gitaar en zich over de maat heen buigt.",
+   "tracks": [
+    {
+     "film": "Oh, Yeah?",
+     "title": "Magical Dog",
+     "artist": "Jan Hammer",
+     "year": 1976,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6f/f9/c1/6ff9c166-d6dd-081d-e390-0ae3a290d092/mzaf_9319618608742734098.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/a2/3c/9e/a23c9ef2-b636-07cb-fe59-e2652fd4282d/884977493528.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Oh, Yeah?",
+     "title": "Oh, Yeah?",
+     "artist": "Jan Hammer",
+     "year": 1976,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2f/80/14/2f80143e-fc02-bc86-4e9a-5bdfd6d79920/mzaf_8485366644438688275.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/a2/3c/9e/a23c9ef2-b636-07cb-fe59-e2652fd4282d/884977493528.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Oh, Yeah?",
+     "title": "Evolve",
+     "artist": "Jan Hammer",
+     "year": 1976,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c7/58/5c/c7585cb0-1f2b-f4a6-5dbf-09d48c5d633e/mzaf_14022225772428603127.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/a2/3c/9e/a23c9ef2-b636-07cb-fe59-e2652fd4282d/884977493528.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "sergio-mendes",
+   "name": "Sérgio Mendes",
+   "born": 1941,
+   "died": 2024,
+   "year": 1966,
+   "stroming": "bossa-nova",
+   "alsoIn": [
+    "jazzfunk"
+   ],
+   "place": {
+    "name": "Niterói → Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+   },
+   "influences": [
+    "antonio-carlos-jobim"
+   ],
+   "films": [
+    "Herb Alpert Presents Sergio Mendes & Brasil '66 (1966)",
+    "Equinox (1967)",
+    "Look Around (1968)"
+   ],
+   "text": "Pianist Sérgio Mendes uit Niterói, bij Rio de Janeiro, begon als klassiek pianist en speelde in de jaren vijftig in nachtclubs, waar bossa nova net opkwam. Antônio Carlos Jobim was zijn leermeester. In de Verenigde Staten richtte hij Brasil '66 op, waarmee hij in 1966 een hit had met Mas que nada. Hij mengde bossa nova met pop en funk en maakte 35 albums. Voor het lied Real in Rio uit de film Rio kreeg hij in 2012 een Oscarnominatie. Hij overleed in 2024.",
+   "listen": "Hoor de vrolijke koorzang over lichte samba-ritmes, bijna als een popliedje.",
+   "tracks": [
+    {
+     "film": "Herb Alpert Presents Sergio Mendes & Brasil '66",
+     "title": "Day Tripper",
+     "artist": "Sérgio Mendes & Brasil '66",
+     "year": 1966,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1d/0f/e2/1d0fe25d-2852-59cd-4837-828714ca35d2/mzaf_3728588272916439223.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/41/f4/b5/41f4b5db-982b-afe4-55e2-88a18e91c62a/00602547748515.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Equinox",
+     "title": "Constant Rain",
+     "artist": "Sérgio Mendes & Brasil '66",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a3/27/09/a3270999-81c2-0bd2-e160-bca5262fa2e5/mzaf_9542518786822147807.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/cc/10/3e/cc103e82-40d5-9482-1013-71523e32f175/00082839412223.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Equinox",
+     "title": "Cinnamon and Clove",
+     "artist": "Sérgio Mendes & Brasil '66",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bc/36/46/bc3646a3-2d6a-6477-596c-8100a39a8bc8/mzaf_10578610754638004247.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/cc/10/3e/cc103e82-40d5-9482-1013-71523e32f175/00082839412223.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "tito-puente",
+   "name": "Tito Puente",
+   "born": 1923,
+   "died": 2000,
+   "year": 1958,
+   "stroming": "afro-cubaans",
+   "alsoIn": [],
+   "place": {
+    "name": "Spanish Harlem, New York",
+    "lat": 40.8,
+    "lon": -73.94
+   },
+   "influences": [
+    "machito"
+   ],
+   "films": [
+    "Dance Mania (1958)",
+    "Cuban Carnival (1956)",
+    "Tito Puente Swings, The Exotic Sounds of Les Baxter (1957)"
+   ],
+   "text": "Tito Puente groeide op in Spanish Harlem, in New York, in een Puerto Ricaanse familie. Hij begon op piano, schakelde op zijn tiende over op slagwerk en speelde timbales in het orkest van Machito. Met zijn eigen orkest maakte hij dansmuziek: mambo en latin jazz. Hij werd 'El Rey de los Timbales' genoemd, de koning van de timbales. Zijn album Dance Mania uit 1958 is een klassieker. Hij speelde ook vibrafoon en schreef Oye como va, dat later een hit werd voor Santana.",
+   "listen": "Hoor de scherpe slagen op de timbales en de blazers die als een muur klinken.",
+   "tracks": [
+    {
+     "film": "Dance Mania",
+     "title": "El Cayuco",
+     "artist": "Tito Puente",
+     "year": 1958,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d2/88/d1/d288d190-5631-040e-1d03-5a1aee2eba08/mzaf_8483273999058632206.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/af/98/c4/mzi.wecpgnuh.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Dance Mania",
+     "title": "Complicación",
+     "artist": "Tito Puente",
+     "year": 1958,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/02/43/12/02431209-bc38-87e7-cd7e-65ceeeb1f61a/mzaf_9819017854610664306.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/af/98/c4/mzi.wecpgnuh.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Dance Mania",
+     "title": "Hong Kong Mambo",
+     "artist": "Tito Puente",
+     "year": 1958,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b6/b8/b4/b6b8b4aa-4055-6f35-c9dd-f3cfa14fc74b/mzaf_15533249960108920188.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/af/98/c4/mzi.wecpgnuh.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "miriam-makeba",
+   "name": "Miriam Makeba",
+   "born": 1932,
+   "died": 2008,
+   "year": 1960,
+   "stroming": "south-african-jazz",
+   "alsoIn": [
+    "vocal-jazz"
+   ],
+   "place": {
+    "name": "Johannesburg → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "Miriam Makeba (1960)",
+    "An Evening with Belafonte/Makeba (1965)",
+    "Pata Pata (1967)"
+   ],
+   "text": "Zangeres Miriam Makeba werd in 1932 in Johannesburg geboren. In de jaren vijftig zong ze bij de Manhattan Brothers en de Skylarks, en ze kreeg in 1959 een rol in de film Come Back, Africa. Harry Belafonte hielp haar in de Verenigde Staten. Haar eerste soloalbum kwam in 1960. Toen ze terug wilde naar Zuid-Afrika voor de begrafenis van haar moeder, werd haar dat verboden. Ze zong tegen de apartheid en werd 'Mama Africa' genoemd. Haar hit Pata Pata uit 1967 kent bijna iedereen.",
+   "listen": "Hoor haar klikklanken in het Xhosa en de dansbare, vrolijke ritmes eronder.",
+   "tracks": [
+    {
+     "film": "Pata Pata",
+     "title": "Pata Pata",
+     "artist": "Miriam Makeba",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f7/e4/00/f7e4009f-24bc-ee9c-9bae-6698c2af6d49/mzaf_19456610575289973.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f2/23/c6/f223c6b4-0a30-240c-9f58-f72672ef86df/885686972533.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Pata Pata",
+     "title": "Click Song Number One",
+     "artist": "Miriam Makeba",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/09/4a/87/094a87b0-883b-9bb6-4031-2367a5f8b015/mzaf_502109897593447884.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/65/8d/ea/658deacc-0f1e-e822-8550-08a1b55b3a8a/4062548001204_3000.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Pata Pata",
+     "title": "Ha Po Zamani",
+     "artist": "Miriam Makeba",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d7/f5/67/d7f567a1-c26e-04fd-8871-3a48bb4e1284/mzaf_1977495705782606360.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/65/8d/ea/658deacc-0f1e-e822-8550-08a1b55b3a8a/4062548001204_3000.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "hailu-mergia",
+   "name": "Hailu Mergia",
+   "born": 1946,
+   "died": null,
+   "year": 1977,
+   "stroming": "ethio-jazz",
+   "alsoIn": [
+    "jazzfunk"
+   ],
+   "place": {
+    "name": "Addis Abeba",
+    "lat": 9.03,
+    "lon": 38.74
+   },
+   "influences": [],
+   "films": [
+    "Tche Belew – met de Walias (2014)",
+    "Wede Harer Guzo (1978)",
+    "Lala Belu (2018)"
+   ],
+   "text": "Hailu Mergia werd in 1946 in Debre Birhan in Ethiopië geboren, verhuisde op zijn tiende naar Addis Abeba en leerde zichzelf op zijn veertiende accordeon spelen. In de jaren zeventig speelde hij toetsen in de Walias Band, een van de belangrijkste groepen uit de gouden tijd van de Ethiopische muziek. Hij maakte van volksliedjes funkige, moderne melodieën. Later woonde hij in Washington. Zijn albums Tche Belew en Lala Belu brachten zijn geluid van accordeon en orgel naar een nieuw publiek.",
+   "listen": "Hoor de accordeon en het orgel die samen een zwevende Ethiopische melodie spelen, met een funkgroove eronder.",
+   "tracks": [
+    {
+     "film": "Tche Belew",
+     "title": "Tche Belew",
+     "artist": "Hailu Mergia & The Walias",
+     "year": 2014,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/34/23/cb/3423cbaf-ad37-faa7-cbcd-7ede8e74ca1a/mzaf_8666423626007332934.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/6c/bc/0c6cbcfa-fd02-e0f9-ca94-7bd0381157b4/cover.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Tche Belew",
+     "title": "Yemiasleks Fikir",
+     "artist": "Hailu Mergia & The Walias",
+     "year": 2014,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4e/86/47/4e86477c-0d43-0856-1c72-db3a2da0a215/mzaf_4527364905432796038.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/6c/bc/0c6cbcfa-fd02-e0f9-ca94-7bd0381157b4/cover.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Lala Belu",
+     "title": "Lala Belu",
+     "artist": "Hailu Mergia",
+     "year": 2018,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4d/d7/d8/4dd7d89d-0ed6-e156-3331-3a8c3ad233ea/mzaf_12057609166343867281.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/a2/48/78/a2487863-33c2-6c73-d117-01c5f7fdb79a/616892557449.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
