@@ -2485,7 +2485,8 @@
    },
    "parents": [
     "british-beat",
-    "alternative-rock"
+    "alternative-rock",
+    "madchester"
    ],
    "text": "Rond 1993 kozen Britse bands bewust een andere kant op dan de Amerikaanse grunge: terug naar de Beatles, The Kinks, The Who en de mods. In augustus 1995 brachten Blur uit Londen en Oasis uit Manchester op dezelfde dag een single uit. Blur won de strijd om de eerste plaats, Oasis die om de albumverkoop.",
    "listen": "Hoor dat Don't Look Back in Anger de akkoordenreeks van Pachelbels Canon gebruikt en dat het pianointro Imagine citeert.",
@@ -11451,6 +11452,314 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/65/7b/bc/657bbcbf-edc2-20b1-d972-4564da0c21a1/5400863111434_cover.jpg/600x600bb.jpg",
      "id": 1660479178,
      "store": "https://music.apple.com/nl/album/fullmoon/1660478878?i=1660479178"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "metalcore",
+   "name": "Metalcore",
+   "family": "rock",
+   "year": 1998,
+   "peak": [
+    2003,
+    2010
+   ],
+   "place": {
+    "name": "Boston",
+    "lat": 42.36,
+    "lon": -71.06
+   },
+   "parents": [
+    "hardcore-punk",
+    "heavy-metal-80s"
+   ],
+   "text": "Metalcore verbindt de riffs van heavy metal met de woede en de breakdowns van hardcore punk. De stroming ontstond eind jaren negentig in het noordoosten van de Verenigde Staten, bij bands als Converge uit Massachusetts. De zang wisselt tussen schreeuwen en melodieuze refreinen, en de gitaren vallen midden in een snel stuk weg in een trage, loodzware breakdown. In de jaren 2000 werd metalcore met Killswitch Engage en Bullet for My Valentine een groot genre voor tieners.",
+   "listen": "Hoor in My Last Serenade hoe de zanger in één nummer van schreeuwen naar zingen springt, en hoe de gitaren daarna in een trage breakdown vallen.",
+   "tracks": [
+    {
+     "artist": "Converge",
+     "title": "Concubine",
+     "year": 2001,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/80/3d/f6/803df665-8378-a873-5e5f-3a6ac47dd6f7/mzaf_11665017209930318206.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8d/73/a9/8d73a92a-8383-b03c-acaa-f232cf09cf18/888880843210.jpg/600x600bb.jpg",
+     "id": 493658145,
+     "store": "https://music.apple.com/nl/album/concubine/493658129?i=493658145"
+    },
+    {
+     "artist": "Killswitch Engage",
+     "title": "My Last Serenade",
+     "year": 2002,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/06/c0/41/06c041c2-a418-791c-527b-23255fd7a60f/mzaf_3602294403478600217.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/66/f2/ca/mzi.njwendie.jpg/600x600bb.jpg",
+     "id": 214476982,
+     "store": "https://music.apple.com/nl/album/my-last-serenade/214476864?i=214476982"
+    },
+    {
+     "artist": "Bullet for My Valentine",
+     "title": "Tears Don't Fall",
+     "year": 2005,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a4/41/6b/a4416bb1-92e3-207d-b90c-e309766884c5/mzaf_15455665197371006002.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/53/79/98/mzi.fdjseqdg.jpg/600x600bb.jpg",
+     "id": 457150798,
+     "store": "https://music.apple.com/nl/album/tears-dont-fall/457150770?i=457150798"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "dream-pop",
+   "name": "Dreampop",
+   "family": "rock",
+   "year": 1984,
+   "peak": [
+    1984,
+    1995
+   ],
+   "place": {
+    "name": "Grangemouth",
+    "lat": 56.01,
+    "lon": -3.72
+   },
+   "parents": [
+    "postpunk",
+    "gothic-rock",
+    "ambient"
+   ],
+   "text": "Dreampop klinkt als een droom: zacht, vol galm en met zang die boven de muziek zweeft. Cocteau Twins uit het Schotse Grangemouth legde in 1984 met Treasure de basis. Gitarist Robin Guthrie bouwde muren van echo, en zangeres Elizabeth Fraser zong teksten die bijna niet te verstaan zijn, soms in verzonnen woorden. Mazzy Star haalde in 1993 met Fade into You de hitlijsten, en Beach House maakte er in de jaren 2000 een tweede leven van.",
+   "listen": "Hoor in Fade into You hoe de slidegitaar langzaam voortkruipt en Hope Sandoval bijna fluisterend zingt.",
+   "tracks": [
+    {
+     "artist": "Cocteau Twins",
+     "title": "Pearly-Dewdrops' Drops",
+     "year": 1984,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8c/95/fe/8c95fe3c-5ec4-de16-24a0-763b9ec229cc/mzaf_4683389687995446553.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/a0/ad/b0/a0adb015-8774-adc2-7605-334d79a2ad68/5014436405020.png/600x600bb.jpg",
+     "id": 1540671730,
+     "store": "https://music.apple.com/nl/album/pearly-dewdrops-drops-12-version/1540671508?i=1540671730"
+    },
+    {
+     "artist": "Mazzy Star",
+     "title": "Fade into You",
+     "year": 1993,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4c/db/e8/4cdbe88c-b737-617d-0c1c-35ba36445750/mzaf_4038354414747356567.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0f/03/ea/0f03ead1-d1eb-27fd-0734-b257b515692f/13UABIM59278.rgb.jpg/600x600bb.jpg",
+     "id": 1440848810,
+     "store": "https://music.apple.com/nl/album/fade-into-you/1440848808?i=1440848810"
+    },
+    {
+     "artist": "Beach House",
+     "title": "Myth",
+     "year": 2012,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/85/f7/ea/85f7eab2-d520-ce3c-1c59-948e76f20955/mzaf_2706079730951370650.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/ce/2c/15/ce2c15e8-b1b9-722d-2675-566bb632ff2b/cover.jpg/600x600bb.jpg",
+     "id": 671860758,
+     "store": "https://music.apple.com/nl/album/myth/671860588?i=671860758"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "post-grunge",
+   "name": "Post-grunge",
+   "family": "rock",
+   "year": 1994,
+   "peak": [
+    1996,
+    2004
+   ],
+   "place": {
+    "name": "Seattle",
+    "lat": 47.61,
+    "lon": -122.33
+   },
+   "parents": [
+    "grunge",
+    "hard-rock"
+   ],
+   "text": "Post-grunge is rock die het zware, rauwe gitaargeluid van grunge overneemt, maar zonder de duisternis, en met glad geproduceerde refreinen voor de radio. Na de dood van Kurt Cobain in 1994 namen bands als Bush uit Londen de plaats in van Nirvana. Creed en Nickelback maakten het in de jaren negentig en 2000 tot het meest gedraaide rockgeluid van Amerika. Critici verweten het genre dat het de kracht van grunge had omgezet in iets voorspelbaars.",
+   "listen": "Hoor in How You Remind Me hoe de gitaren zwaar en laag klinken, terwijl het refrein zo gebouwd is dat je het meteen kunt meezingen.",
+   "tracks": [
+    {
+     "artist": "Bush",
+     "title": "Glycerine",
+     "year": 1994,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/05/b0/68/05b068dd-5598-40e5-6b73-f7987af31198/mzaf_12640864476328724282.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ad/10/83/ad1083d4-6a79-8f5e-aad5-665a58df2615/17UMGIM79375.rgb.jpg/600x600bb.jpg",
+     "id": 1440946422,
+     "store": "https://music.apple.com/nl/album/glycerine-remastered/1440946044?i=1440946422"
+    },
+    {
+     "artist": "Creed",
+     "title": "With Arms Wide Open",
+     "year": 1999,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5f/ac/89/5fac89f6-ea5b-b80c-7ccc-93b823f51039/mzaf_18380480894650685393.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/50/fc/b5/50fcb509-7a4b-020b-0ccf-9ecfb3e6accb/14CMGIM00782.rgb.jpg/600x600bb.jpg",
+     "id": 1440631605,
+     "store": "https://music.apple.com/nl/album/with-arms-wide-open/1440631060?i=1440631605"
+    },
+    {
+     "artist": "Nickelback",
+     "title": "How You Remind Me",
+     "year": 2001,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d4/e2/23/d4e223c1-58e1-8bcf-72c1-c760b3f540db/mzaf_8753858293203555793.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ad/16/b7/ad16b7c9-2779-d2e5-0fca-83aeff09f4b6/mzi.exqcjkkz.jpg/600x600bb.jpg",
+     "id": 214475478,
+     "store": "https://music.apple.com/nl/album/how-you-remind-me/214475427?i=214475478"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "madchester",
+   "name": "Madchester",
+   "family": "rock",
+   "year": 1988,
+   "peak": [
+    1989,
+    1991
+   ],
+   "place": {
+    "name": "Manchester",
+    "lat": 53.48,
+    "lon": -2.24
+   },
+   "parents": [
+    "alternative-rock",
+    "acid-house"
+   ],
+   "text": "Madchester was de dansscène van Manchester rond 1989. Rockbands als Happy Mondays en The Stone Roses combineerden gitaarpop met de beats van acid house, en het publiek ging naar de Hacienda in plaats van naar het rockpodium. Shaun Ryder zong als een nonchalante verteller over het ritme van de Mondays, en The Stone Roses brachten in 1989 een debuutalbum uit dat in Engeland als een van de beste ooit geldt. De stroming bereidde de weg voor Britpop.",
+   "listen": "Hoor in Fools Gold hoe een lange, funky basloop en een danceritme negen minuten lang doorlopen, terwijl de zanger er bijna terloops overheen zingt.",
+   "tracks": [
+    {
+     "artist": "The Stone Roses",
+     "title": "Fools Gold",
+     "year": 1989,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/64/35/41/64354101-6abc-aada-f151-b83038f15aee/mzaf_4196605231786932289.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/98/5a/ee/985aeefa-baf8-05a0-de15-ead0911ba73b/dj.mlaphaop.jpg/600x600bb.jpg",
+     "id": 325190300,
+     "store": "https://music.apple.com/nl/album/fools-gold/325190080?i=325190300"
+    },
+    {
+     "artist": "Happy Mondays",
+     "title": "Step On",
+     "year": 1990,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/b8/29/21/b8292173-387f-ac0d-c8a3-f298db7c31ee/mzaf_8229200969202511048.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/41/d3/ec/41d3ec6f-7bff-0e77-adde-a246675914bb/5060555219239.jpg/600x600bb.jpg",
+     "id": 1654809917,
+     "store": "https://music.apple.com/nl/album/step-on/1654809763?i=1654809917"
+    },
+    {
+     "artist": "Inspiral Carpets",
+     "title": "This Is How It Feels",
+     "year": 1990,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d7/ba/c3/d7bac32b-1ec4-8a75-01f7-6bfa6c171929/mzaf_16838650954675535007.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/d5/bd/24/d5bd2400-cb89-7555-ec4d-12dfb3a7999a/0094638536253.jpg/600x600bb.jpg",
+     "id": 1439711237,
+     "store": "https://music.apple.com/nl/album/this-is-how-it-feels/1439711231?i=1439711237"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "yacht-rock",
+   "name": "Yacht rock",
+   "family": "rock",
+   "year": 1976,
+   "peak": [
+    1977,
+    1982
+   ],
+   "place": {
+    "name": "Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+   },
+   "parents": [
+    "softrock-aor",
+    "soul",
+    "smooth-jazz"
+   ],
+   "text": "Yacht rock is de gladde westkustrock van de late jaren zeventig en vroege jaren tachtig. Studiomusici in Los Angeles speelden een soepele mix van pop, soul en jazz: strakke ritmesecties, elektrische piano en zang die zacht en zonder moeite klinkt. Steely Dan, The Doobie Brothers met Michael McDonald, en Christopher Cross scoorden grote hits. De naam bestond toen nog niet; die kwam pas in 2005, uit een humoristische webserie over deze muziek.",
+   "listen": "Hoor in What a Fool Believes hoe de elektrische piano een rollende riff speelt, waarna Michael McDonalds soulvolle stem zachtjes meegolft.",
+   "tracks": [
+    {
+     "artist": "Steely Dan",
+     "title": "Peg",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6e/6a/fe/6e6afe03-4de1-e257-291e-d7737f283aa9/mzaf_16291204637208970374.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c2/3c/54/c23c5414-20d1-7aea-f0f5-187974c58d65/23UMGIM79990.rgb.jpg/600x600bb.jpg",
+     "id": 1706428468,
+     "store": "https://music.apple.com/nl/album/peg/1706428459?i=1706428468"
+    },
+    {
+     "artist": "The Doobie Brothers",
+     "title": "What a Fool Believes",
+     "year": 1978,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f0/54/e1/f054e109-be6b-bbc0-3073-d836becfd284/mzaf_13331870109542542770.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7a/dd/74/7add74c3-49dc-1b4b-7555-9adc57c4c0e7/603497878000.jpg/600x600bb.jpg",
+     "id": 1110557400,
+     "store": "https://music.apple.com/nl/album/what-a-fool-believes-2016-remastered/1110557228?i=1110557400"
+    },
+    {
+     "artist": "Christopher Cross",
+     "title": "Sailing",
+     "year": 1980,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8d/30/a0/8d30a08a-1c56-a046-2b2a-8ce58500a742/mzaf_934022994371514133.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e8/c0/83/e8c083b0-1154-5793-b91e-6c07cf4740c9/603497819379.jpg/600x600bb.jpg",
+     "id": 1765027374,
+     "store": "https://music.apple.com/nl/album/sailing-2019-remaster/1765026986?i=1765027374"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "blue-eyed-soul",
+   "name": "Blue-eyed soul",
+   "family": "soul",
+   "year": 1964,
+   "peak": [
+    1964,
+    1985
+   ],
+   "place": {
+    "name": "Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+   },
+   "parents": [
+    "soul",
+    "rhythm-and-blues"
+   ],
+   "text": "Blue-eyed soul is soul gezongen door witte zangers en zangeressen. De naam kwam in de jaren zestig van radiodj's die zwarte muziek draaiden. The Righteous Brothers zongen in 1964 You've Lost That Lovin' Feelin' in de wall of sound van producer Phil Spector. Dusty Springfield nam in 1968 in Memphis het album Dusty in Memphis op, met de studiomuzikanten die ook voor Aretha Franklin speelden. Daryl Hall en John Oates brachten het genre in de jaren zeventig naar de popcharts.",
+   "listen": "Hoor in Son of a Preacher Man hoe Dusty Springfield haar stem klein houdt en het orgel en de achtergrondzangeressen de gospelkleur geven.",
+   "tracks": [
+    {
+     "artist": "The Righteous Brothers",
+     "title": "You've Lost That Lovin' Feelin'",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/74/30/96/74309690-6a4c-61e9-7f8c-653d5534152f/mzaf_16501552273061560810.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e7/3b/e0/e73be06c-e94d-6521-08c0-144728408dff/00602567436393.rgb.jpg/600x600bb.jpg",
+     "id": 1428758750,
+     "store": "https://music.apple.com/nl/album/youve-lost-that-lovin-feelin-single-version/1428755889?i=1428758750"
+    },
+    {
+     "artist": "Dusty Springfield",
+     "title": "Son of a Preacher Man",
+     "year": 1968,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/33/a2/a0/33a2a0a2-5fbc-316d-6b93-90dee2785d4c/mzaf_4831114874586419234.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/4d/8b/6e/4d8b6e4e-4424-693b-a1d5-6d1d53d944d0/00044006329727.rgb.jpg/600x600bb.jpg",
+     "id": 1440717885,
+     "store": "https://music.apple.com/nl/album/son-of-a-preacher-man/1440717710?i=1440717885"
+    },
+    {
+     "artist": "Daryl Hall & John Oates",
+     "title": "Sara Smile",
+     "year": 1976,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fe/a5/a8/fea5a884-bed6-9142-4e99-137b1f6d6731/mzaf_8281164733305332761.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/71/ac/b7/71acb762-887e-15e2-a68a-5db2d324ee71/744659975424.jpg/600x600bb.jpg",
+     "id": 217709579,
+     "store": "https://music.apple.com/nl/album/sara-smile/217709553?i=217709579"
     }
    ],
    "mixtapes": []
