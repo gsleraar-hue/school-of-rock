@@ -51,6 +51,7 @@
     else state.fams.add(b.dataset.f);
     famBox.querySelectorAll('.k-fam').forEach(x => x.setAttribute('aria-pressed', String(state.fams.has(x.dataset.f))));
     applyVisibility();
+    focusFams();
   });
   const compBox = $('#k-comps');
   compBox.checked = state.comps;
@@ -352,6 +353,20 @@
     topSel.select('text').attr('visibility', t => show.has(t.pos) ? null : 'hidden');
   }
 
+  // familieknop: ga naar de gekozen familie(s) in plaats van de kaart af te laten zoeken
+  function focusFams() {
+    if (state.mode !== 'tree' && state.mode !== 'world') return;
+    if (state.fams.size === fams.length) { fit(true); return; }
+    const gs = G.filter(g => state.fams.has(g.family) && pos(g) && (typeof isComp !== 'function' || !isComp(g) || state.comps));
+    if (!gs.length) return;
+    const P = gs.map(g => pos(g)), xs = P.map(p => p.x), ys = P.map(p => p.y);
+    const x0 = d3.min(xs) - 60, x1 = d3.max(xs) + 120, y0 = d3.min(ys) - 40, y1 = d3.max(ys) + 40;
+    const k = Math.max(state.mode === 'world' ? .8 : .6, Math.min(state.mode === 'world' ? 5 : 1.6, (W - 190) / (x1 - x0), (H - 20) / (y1 - y0)));
+    const t = state.mode === 'world'
+      ? d3.zoomIdentity.translate(W / 2 - (x0 + x1) / 2 * k, H / 2 - (y0 + y1) / 2 * k).scale(k)
+      : d3.zoomIdentity.translate(170 - x0 * k, H / 2 - (y0 + y1) / 2 * k).scale(k);
+    svg.transition().duration(650).call(zoom.transform, t);
+  }
   function fit(animate) { const t = fitTransform(); (animate ? svg.transition().duration(700) : svg).call(zoom.transform, t); }
   function fitTransform() {
     if (state.mode === 'top') {
