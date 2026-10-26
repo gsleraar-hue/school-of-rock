@@ -15375,6 +15375,359 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c4/ad/ca/c4adcac5-d1ab-b171-af59-7d6df0b397e6/00888072049338.rgb.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "lennie-tristano",
+   "name": "Lennie Tristano",
+   "born": 1919,
+   "died": 1978,
+   "year": 1949,
+   "stroming": "cool",
+   "alsoIn": [
+    "bebop",
+    "free-jazz"
+   ],
+   "place": {
+    "name": "Chicago → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "Intuition – met zijn kwintet (1949)",
+    "Lennie Tristano (1955)",
+    "The New Tristano (1962)"
+   ],
+   "text": "Pianist Lennie Tristano studeerde muziek in Chicago en verhuisde in 1946 naar New York. Hij speelde met bebopmusici en vormde kleine groepen waarin de instrumenten als in een fuga door elkaar spelen. Zijn kwintet nam in 1949 de eerste vrije groepsimprovisaties op. In 1951 volgden de eerste opnamen waarop hij zichzelf over eerdere sporen heen speelde. Hij gaf vooral les, en zijn leerlingen Lee Konitz en Warne Marsh droegen zijn ideeën uit. Zijn spel klinkt koel en gestructureerd. Hij overleed in 1978.",
+   "listen": "Hoor de lange, ononderbroken lijnen waarin piano en saxofoon bijna op dezelfde manier spelen.",
+   "tracks": [
+    {
+     "film": "Lennie Tristano",
+     "title": "Line Up",
+     "artist": "Lennie Tristano",
+     "year": 1955,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8c/59/9f/8c599fb6-4bfb-c89c-a635-43d6da701302/mzaf_2593157868512074940.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2005/m03/d14/h21/s06.dmxuetbf.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Lennie Tristano",
+     "title": "East Thirty-Second",
+     "artist": "Lennie Tristano",
+     "year": 1955,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ee/16/88/ee168841-1f80-e8f5-405c-eb6ed39a03b3/mzaf_410125985538620878.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2005/m03/d14/h21/s06.dmxuetbf.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Lennie Tristano",
+     "title": "Requiem",
+     "artist": "Lennie Tristano",
+     "year": 1955,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5e/36/94/5e3694af-37b2-5338-b1a7-a6465d46bbc8/mzaf_15591680999411475891.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2005/m03/d14/h21/s06.dmxuetbf.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "anouar-brahem",
+   "name": "Anouar Brahem",
+   "born": 1957,
+   "died": null,
+   "year": 1995,
+   "stroming": "ecm",
+   "alsoIn": [],
+   "place": {
+    "name": "Tunis",
+    "lat": 36.8,
+    "lon": 10.18
+   },
+   "influences": [],
+   "films": [
+    "Khomsa (1995)",
+    "Astrakan Café (2000)",
+    "Le Pas du Chat Noir (2002)"
+   ],
+   "text": "Anouar Brahem werd in de oude stad van Tunis geboren en studeerde oed aan het conservatorium van Tunesië. In 1981 ging hij naar Parijs, waar hij filmmuziek en muziek voor theater schreef. Later tekende hij bij ECM. Hij combineert klassieke Arabische muziek, volksmuziek en jazz, vaak in een kleine groep met saxofonist of pianist. Op Thimar speelde hij met John Surman en Dave Holland. Hij hielp de oed, een Arabische luit, een belangrijk instrument in de jazz te maken. Zijn muziek klinkt rustig en droomachtig.",
+   "listen": "Hoor de oed, een luit met een zachte, sprekende klank, die langzaam een melodie ontvouwt.",
+   "tracks": [
+    {
+     "film": "Khomsa",
+     "title": "Souffle un Vent de Sable",
+     "artist": "Anouar Brahem",
+     "year": 1995,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/1e/b7/ec/1eb7ecb1-2621-b132-1c90-43e32122e075/mzaf_1073650906269059492.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/ed/cd/01/edcd01c1-18c7-90aa-8343-3674c39e9a63/00731452709325.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Astrakan Café",
+     "title": "Blue Jewels",
+     "artist": "Anouar Brahem",
+     "year": 2000,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6d/f1/1f/6df11f11-fb22-a67b-42b3-9f2c12c422da/mzaf_18269442108842094003.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/1d/da/7b/1dda7b00-a114-0876-0766-683f847702e6/15UMGIM67083.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Le Pas du Chat Noir",
+     "title": "Le Pas du Chat Noir",
+     "artist": "Anouar Brahem",
+     "year": 2002,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/25/c0/0a/25c00abf-7d8f-da46-f949-e27c9356942c/mzaf_7544032063546308193.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/42/6d/78/426d78ad-35e5-a59f-d7b0-cb951d135b5e/00044001637322.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "ambrose-akinmusire",
+   "name": "Ambrose Akinmusire",
+   "born": 1982,
+   "died": null,
+   "year": 2011,
+   "stroming": "la-jazz-nieuw",
+   "alsoIn": [
+    "free-jazz"
+   ],
+   "place": {
+    "name": "Oakland",
+    "lat": 37.8,
+    "lon": -122.27
+   },
+   "influences": [],
+   "films": [
+    "Prelude... to Cora (2007)",
+    "When the Heart Emerges Glistening (2011)",
+    "The Imagined Savior Is Far Easier to Paint (2014)"
+   ],
+   "text": "Trompettist Ambrose Akinmusire groeide op in Oakland, Californië, en speelde in de jazzband van zijn middelbare school, waar saxofonist Steve Coleman hem opmerkte. In 2007 won hij de Thelonious Monk-wedstrijd en de Carmine Caruso-wedstrijd voor trompet. Hij speelde daarna met Vijay Iyer, Esperanza Spalding en Jason Moran. In 2011 tekende hij bij Blue Note en bracht hij When the Heart Emerges Glistening uit. Zijn muziek is avant-garde, met trage, gevoelige trompetklanken en onverwachte vormen.",
+   "listen": "Hoor de trompet die heel zacht en gebroken speelt, met lange stiltes tussen de klanken.",
+   "tracks": [
+    {
+     "film": "When the Heart Emerges Glistening",
+     "title": "Confessions to My Unborn Daughter",
+     "artist": "Ambrose Akinmusire",
+     "year": 2011,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b8/bf/3f/b8bf3fdb-65ac-c079-17af-1d27fe14c5c2/mzaf_16303622133243083669.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/40/80/6d/40806de3-85d6-24cc-f431-81d0126ea6ac/05099902828152.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "When the Heart Emerges Glistening",
+     "title": "Henya",
+     "artist": "Ambrose Akinmusire",
+     "year": 2011,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/01/9b/c6/019bc6c8-682e-e369-97d3-3a5a10546d11/mzaf_11088741434943871904.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/40/80/6d/40806de3-85d6-24cc-f431-81d0126ea6ac/05099902828152.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "When the Heart Emerges Glistening",
+     "title": "My Name Is Oscar",
+     "artist": "Ambrose Akinmusire",
+     "year": 2011,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f2/cd/e0/f2cde0d6-90ca-6976-8b05-c37c175e746c/mzaf_7543513146944414946.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/40/80/6d/40806de3-85d6-24cc-f431-81d0126ea6ac/05099902828152.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "nicholas-payton",
+   "name": "Nicholas Payton",
+   "born": 1973,
+   "died": null,
+   "year": 1995,
+   "stroming": "neotraditioneel",
+   "alsoIn": [
+    "jazzfunk"
+   ],
+   "place": {
+    "name": "New Orleans",
+    "lat": 29.95,
+    "lon": -90.07
+   },
+   "influences": [],
+   "films": [
+    "From This Moment (1995)",
+    "Payton's Place (1998)",
+    "Sonic Trance (2003)"
+   ],
+   "text": "Trompettist Nicholas Payton uit New Orleans is de zoon van bassist en sousafoonspeler Walter Payton. Hij begon op zijn vierde met trompet, speelde op zijn negende mee in de Young Tuxedo Brass Band en was op zijn tiende professioneel. Na tournees met Marcus Roberts en Elvin Jones tekende hij bij Verve en maakte in 1995 zijn eerste album. In 1997 won hij een Grammy voor zijn solospel op een album met Doc Cheatham. Later maakte hij elektronische en funkachtige platen, zoals Sonic Trance uit 2003.",
+   "listen": "Hoor de warme trompet die met de swing van New Orleans speelt, maar ook een funkgroove aankan.",
+   "tracks": [
+    {
+     "film": "Payton's Place",
+     "title": "Zigaboogaloo",
+     "artist": "Nicholas Payton",
+     "year": 1998,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/de/88/32/de8832c4-06a0-6e38-acad-8646abaa9dec/mzaf_11573046193698053035.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/da/7e/fc/da7efc2a-7106-c4a4-117b-047051eb492b/00731455732726.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Payton's Place",
+     "title": "Back to the Source",
+     "artist": "Nicholas Payton",
+     "year": 1998,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a8/89/82/a88982a0-be34-3510-b903-abbd4bd35439/mzaf_13720022575909117821.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/da/7e/fc/da7efc2a-7106-c4a4-117b-047051eb492b/00731455732726.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Payton's Place",
+     "title": "Time Traveling",
+     "artist": "Nicholas Payton",
+     "year": 1998,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/16/4a/8f/164a8fd6-12ca-0db4-e74a-fa6f94c94328/mzaf_5060497495974366328.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/da/7e/fc/da7efc2a-7106-c4a4-117b-047051eb492b/00731455732726.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "jamie-cullum",
+   "name": "Jamie Cullum",
+   "born": 1979,
+   "died": null,
+   "year": 2003,
+   "stroming": "vocal-jazz",
+   "alsoIn": [
+    "smooth",
+    "nu-jazz"
+   ],
+   "place": {
+    "name": "Wiltshire → Londen",
+    "lat": 51.51,
+    "lon": -0.13
+   },
+   "influences": [],
+   "films": [
+    "Heard It All Before (1999)",
+    "Pointless Nostalgic (2002)",
+    "Twentysomething (2003)"
+   ],
+   "text": "Zanger en pianist Jamie Cullum uit Essex groeide op in Wiltshire en zakte voor zijn pianoexamen van graad vier. Zijn eerste album Heard It All Before maakte hij in 1999 voor 480 pond, in een oplage van 500 stuks. Hij studeerde Engelse literatuur en film in Reading. Zijn album Twentysomething uit 2003 bracht hem een groot publiek, met jazzstandards en popnummers in een nieuw jasje. Sinds 2010 presenteert hij elke week een jazzprogramma op BBC Radio 2. Op het podium speelt hij energiek en gaat hij zelfs op de piano staan.",
+   "listen": "Hoor hoe hij een popliedje in een jazzjasje zingt, met een stuwende piano eronder.",
+   "tracks": [
+    {
+     "film": "Twentysomething",
+     "title": "What a Difference a Day Made",
+     "artist": "Jamie Cullum",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a9/7f/63/a97f63c5-5938-1df2-0eea-a86b6b0f67fb/mzaf_13513486942093767724.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/99/c0/51/99c051dc-5bac-e032-a265-b8a3347d6880/06UMGIM43189.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Twentysomething",
+     "title": "Twentysomething",
+     "artist": "Jamie Cullum",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/76/48/4c/76484ce0-13eb-2283-fe8d-38ebd8804664/mzaf_2686390239363034119.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/99/c0/51/99c051dc-5bac-e032-a265-b8a3347d6880/06UMGIM43189.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Twentysomething",
+     "title": "I Get a Kick Out of You",
+     "artist": "Jamie Cullum",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ba/3d/5b/ba3d5bdd-2196-6583-dd9f-6dadfae51c43/mzaf_11278461836193672166.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/99/c0/51/99c051dc-5bac-e032-a265-b8a3347d6880/06UMGIM43189.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "bireli-lagrene",
+   "name": "Biréli Lagrène",
+   "born": 1966,
+   "died": null,
+   "year": 1980,
+   "stroming": "gypsy-jazz",
+   "alsoIn": [
+    "fusion",
+    "swing"
+   ],
+   "place": {
+    "name": "Soufflenheim",
+    "lat": 48.83,
+    "lon": 7.96
+   },
+   "influences": [
+    "django-reinhardt"
+   ],
+   "films": [
+    "Routes to Django: Live at the Krokodil (1981)",
+    "Live in Marciac (1994)",
+    "Gipsy Project & Friends (2002)"
+   ],
+   "text": "Gitarist Biréli Lagrène werd in Soufflenheim, in de Elzas, geboren in een Roma-familie. Zijn vader en grootvader waren gitaristen, en hij speelde al op zijn zevende jazz in de stijl van Django Reinhardt. In 1980, nog een tiener, nam hij zijn eerste album op, Routes to Django. Daarna speelde hij met Al Di Meola, Paco de Lucía en John McLaughlin, en met Stéphane Grappelli. Hij speelt swing, fusion en post-bop, maar zijn gitaar blijft snel, licht en sprankelend.",
+   "listen": "Hoor de razendsnelle gitaar die als in de tijd van Django Reinhardt over de akkoorden danst.",
+   "tracks": [
+    {
+     "film": "Gipsy Project & Friends",
+     "title": "Djangology",
+     "artist": "Biréli Lagrène Gipsy Project",
+     "year": 2002,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/af/f3/1c/aff31c32-b7b6-5443-a789-d641b8d7ff85/mzaf_4321859514128307539.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/e4/70/0e/e4700e15-198b-05d4-7200-8a2479abff86/0886443462427.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Gipsy Project & Friends",
+     "title": "Minor Swing",
+     "artist": "Biréli Lagrène Gipsy Project",
+     "year": 2002,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/29/32/32/29323265-4c4f-6854-5382-772c2be8d090/mzaf_6801981194203224925.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/e4/70/0e/e4700e15-198b-05d4-7200-8a2479abff86/0886443462427.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Gipsy Project & Friends",
+     "title": "Les Yeux Noirs",
+     "artist": "Biréli Lagrène Gipsy Project",
+     "year": 2002,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/40/5c/86/405c86b2-176d-7282-66ac-95bae2bfe716/mzaf_1520546936765181220.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/e4/70/0e/e4700e15-198b-05d4-7200-8a2479abff86/0886443462427.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "peggy-lee",
+   "name": "Peggy Lee",
+   "born": 1920,
+   "died": 2002,
+   "year": 1956,
+   "stroming": "vocal-jazz",
+   "alsoIn": [
+    "swing"
+   ],
+   "place": {
+    "name": "Jamestown → Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+   },
+   "influences": [],
+   "films": [
+    "Black Coffee (1956)",
+    "Things Are Swingin' (1958)",
+    "Is That All There Is? (1969)"
+   ],
+   "text": "Zangeres Peggy Lee werd in Jamestown, North Dakota, geboren en begon bij de lokale radio. Ze zong bij de bigband van Benny Goodman en had met Why Don't You Do Right? in 1943 haar eerste grote hit. Bij Capitol volgden Fever in 1958 en Is That All There Is? in 1969. Ze nam meer dan elfhonderd opnamen op en schreef meer dan tweehonderdzeventig liedjes. Ze sprak ook stemmen in voor Lady and the Tramp. Haar stem klinkt laag, zacht en ingehouden. Ze overleed in 2002.",
+   "listen": "Hoor de lage, ingehouden stem die bijna fluistert en daardoor meer zegt dan een luide uitroep.",
+   "tracks": [
+    {
+     "film": "Black Coffee with Peggy Lee",
+     "title": "Black Coffee",
+     "artist": "Peggy Lee",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4e/c2/0d/4ec20da2-97e1-2079-7a61-5f17af09a014/mzaf_9060940311619057709.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b2/ef/9e/b2ef9e9f-dfcd-3f0f-c50b-2b529f9fbb9f/06UMGIM19587.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Black Coffee with Peggy Lee",
+     "title": "Easy Living",
+     "artist": "Peggy Lee",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ac/e7/28/ace728aa-d25b-0046-7d9c-64936e78a249/mzaf_1984860919283265728.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b2/ef/9e/b2ef9e9f-dfcd-3f0f-c50b-2b529f9fbb9f/06UMGIM19587.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Is That All There Is?",
+     "title": "Is That All There Is?",
+     "artist": "Peggy Lee",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bd/bd/df/bdbddfce-0bd6-fbe1-d2c4-5464ea6fc795/mzaf_7957582854505013290.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c4/82/0a/c4820ac5-a12f-7f0d-40ba-a5ec1f85c486/19UMGIM73115.rgb.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
