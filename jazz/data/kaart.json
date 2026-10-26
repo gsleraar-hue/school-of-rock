@@ -11903,6 +11903,361 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/1d/99/da/1d99da12-f3b9-6887-2af1-c1087e69db61/194491654573.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "bobby-mcferrin",
+   "name": "Bobby McFerrin",
+   "born": 1950,
+   "died": null,
+   "year": 1982,
+   "stroming": "vocal-jazz",
+   "alsoIn": [
+    "fusion"
+   ],
+   "place": {
+    "name": "New York → Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+   },
+   "influences": [
+    "keith-jarrett"
+   ],
+   "films": [
+    "Bobby McFerrin (1982)",
+    "Spontaneous Inventions (1986)",
+    "Simple Pleasures (1988)"
+   ],
+   "text": "Zanger Bobby McFerrin is de zoon van Robert McFerrin, de eerste Afro-Amerikaanse man die bij de Metropolitan Opera zong. Zijn eerste album kwam in 1982 uit, nadat hij zes jaar zijn eigen stijl had gezocht. Hij zingt zonder begeleiding, springt snel tussen hoge en lage tonen, zingt melodie en akkoorden tegelijk en maakt ritmes met zijn stem. Don't Worry, Be Happy uit 1988 is het enige nummer zonder instrumenten dat de Amerikaanse lijst aanvoerde. Hij werkte samen met Chick Corea en Yo-Yo Ma.",
+   "listen": "Hoor hoe hij in zijn eentje de bas, het ritme en de melodie tegelijk zingt.",
+   "tracks": [
+    {
+     "film": "Spontaneous Inventions",
+     "title": "Thinkin' About Your Body",
+     "artist": "Bobby McFerrin",
+     "year": 1986,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/6a/b0/92/6ab0920d-6b5b-4260-85c1-bda02cef98d4/mzaf_12535895386988408311.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/78/c3/63/78c363f1-ad17-024e-3af5-9c621009747d/13ULAIM49139.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Spontaneous Inventions",
+     "title": "Another Night in Tunisia",
+     "artist": "Bobby McFerrin",
+     "year": 1986,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/83/66/7c/83667cb4-ac2f-903e-ae2d-3f3527244a73/mzaf_13432933669976048203.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/78/c3/63/78c363f1-ad17-024e-3af5-9c621009747d/13ULAIM49139.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Simple Pleasures",
+     "title": "Don't Worry, Be Happy",
+     "artist": "Bobby McFerrin",
+     "year": 1988,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/89/57/92/895792e3-563f-d840-5c09-65a872c8f702/mzaf_5070569243041448906.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/be/15/97/be159727-1ea2-73bb-c9a8-03e320bb064d/13UABIM59265.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "jacob-collier",
+   "name": "Jacob Collier",
+   "born": 1994,
+   "died": null,
+   "year": 2016,
+   "stroming": "nu-jazz",
+   "alsoIn": [],
+   "place": {
+    "name": "Finchley, Londen",
+    "lat": 51.6,
+    "lon": -0.19
+   },
+   "influences": [],
+   "films": [
+    "In My Room (2016)",
+    "Djesse Vol. 1 (2018)",
+    "Djesse Vol. 2 (2019)"
+   ],
+   "text": "Jacob Collier uit Londen werd in 2013 bekend met filmpjes op YouTube, waarin hij alle partijen van een nummer zelf zong en speelde en ze naast elkaar in beeld zette. Herbie Hancock en Quincy Jones hoorden hem in 2014. Zijn eerste album In My Room nam hij in 2016 helemaal alleen op in de achterkamer van zijn ouderlijk huis. Het leverde hem twee Grammy's op. Daarna maakte hij de vierdelige reeks Djesse, waarop veel gasten spelen, en liet hij het publiek in zijn concerten meezingen.",
+   "listen": "Hoor hoe zijn stem zichzelf in vele lagen begeleidt, met akkoorden die steeds onverwacht draaien.",
+   "tracks": [
+    {
+     "film": "In My Room",
+     "title": "You and I",
+     "artist": "Jacob Collier",
+     "year": 2016,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5a/7d/d3/5a7dd30d-2dcc-40e0-cfd5-9f8de5cf1142/mzaf_7411865986762934202.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7d/5b/02/7d5b02e7-25fc-0972-43e7-e2149b04ec13/26UMGIM56306.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "In My Room",
+     "title": "Flintstones",
+     "artist": "Jacob Collier",
+     "year": 2016,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/32/ba/0c/32ba0c7a-16c0-a23e-072e-3ca4690dc15d/mzaf_10724726905119153229.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7d/5b/02/7d5b02e7-25fc-0972-43e7-e2149b04ec13/26UMGIM56306.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Djesse Vol. 1",
+     "title": "All Night Long",
+     "artist": "Jacob Collier",
+     "year": 2018,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/56/e8/83/56e883ae-8013-2711-3961-46837bce03f7/mzaf_3735858220138236691.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/6a/53/9c/6a539cc4-3d95-3a01-ce5c-954bf465d9e3/00602577265020.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "charles-lloyd",
+   "name": "Charles Lloyd",
+   "born": 1938,
+   "died": null,
+   "year": 1966,
+   "stroming": "modaal",
+   "alsoIn": [
+    "spiritual-jazz",
+    "fusion"
+   ],
+   "place": {
+    "name": "Memphis → Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+   },
+   "influences": [],
+   "films": [
+    "Dream Weaver (1966)",
+    "Forest Flower: Charles Lloyd at Monterey (1966)",
+    "Love-In (1967)"
+   ],
+   "text": "Saxofonist en fluitist Charles Lloyd groeide op in Memphis en studeerde in Los Angeles muziek, waar hij 's avonds speelde met Ornette Coleman, Billy Higgins en Eric Dolphy. In 1960 werd hij muzikaal leider van Chico Hamilton. Zijn eigen kwartet, met Keith Jarrett op piano en Jack DeJohnette op drums, speelde in 1966 op het jazzfestival van Monterey. Dat concert verscheen als Forest Flower. Lloyd trad daarna ook op voor het rockpubliek, en hij blijft nog steeds spelen, sinds 2007 met pianist Jason Moran.",
+   "listen": "Hoor de lange, zachte lijnen van de saxofoon boven een piano die steeds verder meebeweegt.",
+   "tracks": [
+    {
+     "film": "Forest Flower",
+     "title": "Forest Flower: Sunrise",
+     "artist": "Charles Lloyd Quartet",
+     "year": 1966,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/1e/d7/bc/1ed7bcce-c558-cb33-dc3a-6313ea684e81/mzaf_5416237624554685236.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/25/d8/03/25d80318-cc01-269e-f679-dd90cbbc8787/s05.xzigvdyg.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Forest Flower",
+     "title": "Sorcery",
+     "artist": "Charles Lloyd Quartet",
+     "year": 1966,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e5/b7/b2/e5b7b243-f795-dda4-fbc6-63cf0327534d/mzaf_175168508056601699.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/25/d8/03/25d80318-cc01-269e-f679-dd90cbbc8787/s05.xzigvdyg.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Forest Flower",
+     "title": "Song of Her",
+     "artist": "Charles Lloyd Quartet",
+     "year": 1966,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/0a/7b/bb/0a7bbbd7-60fc-8469-1e3c-e35a09a0c0e4/mzaf_9689963467767800619.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/25/d8/03/25d80318-cc01-269e-f679-dd90cbbc8787/s05.xzigvdyg.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "lee-konitz",
+   "name": "Lee Konitz",
+   "born": 1927,
+   "died": 2020,
+   "year": 1949,
+   "stroming": "cool",
+   "alsoIn": [
+    "bebop"
+   ],
+   "place": {
+    "name": "Chicago → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "Birth of the Cool – Miles Davis (1949)",
+    "Subconscious-Lee (1950)",
+    "Motion (1961)"
+   ],
+   "text": "Altsaxofonist Lee Konitz uit Chicago speelde in 1949 mee op de Birth of the Cool-opnames van Miles Davis. Hij studeerde bij pianist Lennie Tristano en speelde lange, vloeiende lijnen met ongewone accenten. In een tijd waarin bijna alle altsaxofonisten Charlie Parker nadeden, hield hij een eigen toon: licht, droog en zonder vibrato. Paul Desmond en Art Pepper lieten zich door hem inspireren. Konitz speelde bebop, cooljazz en avant-garde, en bleef spelen tot 2020, het jaar waarin hij overleed.",
+   "listen": "Hoor de lichte altsaxofoon die lange, slingerende lijnen speelt zonder zwaar vibrato.",
+   "tracks": [
+    {
+     "film": "Subconscious-Lee",
+     "title": "Subconscious-Lee",
+     "artist": "Lee Konitz",
+     "year": 1950,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/78/2f/f8/782ff858-c879-d589-6908-e163a339a8e9/mzaf_9156406179958468945.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/54/b6/c7/mzi.lyxlzano.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Motion",
+     "title": "I Remember You",
+     "artist": "Lee Konitz",
+     "year": 1961,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/94/3e/b4/943eb4e0-bdaa-de99-b504-df28bba786e1/mzaf_11909184361214889597.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/15/01/c9/1501c940-0caa-2f16-f04c-9d43b25a489c/00044006551029.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Motion",
+     "title": "You'd Be So Nice to Come Home To",
+     "artist": "Lee Konitz",
+     "year": 1961,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d0/82/18/d082183d-5191-671c-aec2-2d587c48d04e/mzaf_7317076731676412174.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/e0/48/c0/e048c055-af9e-f087-745f-5a764e55869a/8718564805024.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "paul-desmond",
+   "name": "Paul Desmond",
+   "born": 1924,
+   "died": 1977,
+   "year": 1959,
+   "stroming": "cool",
+   "alsoIn": [
+    "west-coast"
+   ],
+   "place": {
+    "name": "San Francisco",
+    "lat": 37.77,
+    "lon": -122.42
+   },
+   "influences": [
+    "lee-konitz"
+   ],
+   "films": [
+    "Take Ten (1963)",
+    "Bossa Antigua (1964)",
+    "Desmond Blue (1962)"
+   ],
+   "text": "Altsaxofonist Paul Desmond werd in San Francisco geboren en speelde in het kwartet van Dave Brubeck. Hij schreef Take Five, het best verkochte jazznummer aller tijden, in een maatsoort van vijf tellen. Zijn toon was droog, licht en zangerig, een tegenpool van het hete geluid van veel andere altsaxofonisten. Buiten Brubeck nam hij onder meer op met Gerry Mulligan, Chet Baker en gitarist Jim Hall. Desmond overleed in 1977 aan longkanker.",
+   "listen": "Hoor de droge, lichte altsaxofoon die heel rustig door de maat zweeft.",
+   "tracks": [
+    {
+     "film": "Take Ten",
+     "title": "Take Ten",
+     "artist": "Paul Desmond",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bf/c8/92/bfc89205-26c3-2c04-8009-76d5165f097e/mzaf_2260773872711673022.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/55/ad/50/mzi.hjburyvf.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Take Ten",
+     "title": "Alone Together",
+     "artist": "Paul Desmond",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0c/f5/31/0cf53103-f023-53a3-1324-9049def553d9/mzaf_10239653495091226954.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/55/ad/50/mzi.hjburyvf.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Bossa Antigua",
+     "title": "Bossa Antigua",
+     "artist": "Paul Desmond",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/13/15/55/131555cd-9f11-c22c-0fa6-8659cfe4911e/mzaf_7702711128073182211.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2a/77/9c/2a779c4d-ee51-d157-f322-1179c3b52ac3/090266868926.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "ramsey-lewis",
+   "name": "Ramsey Lewis",
+   "born": 1935,
+   "died": 2022,
+   "year": 1965,
+   "stroming": "soul-jazz",
+   "alsoIn": [
+    "jazzfunk"
+   ],
+   "place": {
+    "name": "Chicago",
+    "lat": 41.88,
+    "lon": -87.63
+   },
+   "influences": [],
+   "films": [
+    "The In Crowd (1965)",
+    "Wade in the Water (1966)",
+    "Sun Goddess (1974)"
+   ],
+   "text": "Pianist Ramsey Lewis groeide op in een sociale woonwijk in Chicago en begon op zijn vierde met pianoles. Met zijn trio, met bassist Eldee Young en drummer Redd Holt, tekende hij bij Chess Records. In 1965 nam hij live in Washington The 'In' Crowd op, een hit die een Grammy won. Zijn pianospel was stevig, gospelachtig en bluesy en bereikte ook een poppubliek. Op Sun Goddess uit 1974 speelde hij met Earth, Wind & Fire. Hij overleed in 2022.",
+   "listen": "Hoor het publiek in de zaal klappen en meezwaaien met de zwingende, bluesy piano.",
+   "tracks": [
+    {
+     "film": "The In Crowd",
+     "title": "The In Crowd",
+     "artist": "Ramsey Lewis Trio",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/87/d8/56/87d856d8-bd5f-dc3a-d55c-6c2d42be48a8/mzaf_10279167410576647764.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/b6/c2/7e/b6c27e1e-9dd5-53b7-83e5-4854be1e1e64/00076732918524.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Wade in the Water",
+     "title": "Wade in the Water",
+     "artist": "Ramsey Lewis",
+     "year": 1966,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/98/cc/1d/98cc1ddc-90c4-2239-7b41-532d62a4372d/mzaf_5150008053713793213.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/2d/83/02/2d830279-cb33-5809-8d6f-90a450348727/00602577039768.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Sun Goddess",
+     "title": "Sun Goddess",
+     "artist": "Ramsey Lewis & Earth, Wind & Fire",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/08/dd/a1/08dda144-7513-bfb2-910e-c270d7aa11c9/mzaf_16457355881814981555.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/26/0a/98/260a984d-f13d-a9f3-4b52-387119ad72aa/mzi.tnxxthub.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "roy-ayers",
+   "name": "Roy Ayers",
+   "born": 1940,
+   "died": 2025,
+   "year": 1972,
+   "stroming": "jazzfunk",
+   "alsoIn": [
+    "acid-jazz"
+   ],
+   "place": {
+    "name": "Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+   },
+   "influences": [
+    "lionel-hampton"
+   ],
+   "films": [
+    "He's Coming (1972)",
+    "Everybody Loves the Sunshine (1976)",
+    "Lifeline (1977)"
+   ],
+   "text": "Vibrafonist Roy Ayers groeide op in Los Angeles. Lionel Hampton gaf hem op zijn vijfde zijn eerste slaghamers. Hij begon in de bebop, speelde vanaf 1966 bij fluitist Herbie Mann en richtte in de jaren zeventig Roy Ayers Ubiquity op. Daarmee maakte hij jazz met funk en soul, waaruit Everybody Loves the Sunshine groeide. Rappers en dj's samplen zijn muziek erg vaak. Hij werd een voorbeeld voor acid jazz en neo-soul en overleed in 2025.",
+   "listen": "Hoor de zwevende vibrafoon die boven een zachte funkgroove klinkt, als zonlicht door een raam.",
+   "tracks": [
+    {
+     "film": "He's Coming",
+     "title": "We Live in Brooklyn, Baby",
+     "artist": "Roy Ayers Ubiquity",
+     "year": 1972,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/99/32/06/99320689-6683-626e-6457-509aeec06fb7/mzaf_6040815798370473484.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/11/d0/64/11d06417-8aa7-3890-4019-2abf664ecda7/09UMGIM03488.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Everybody Loves the Sunshine",
+     "title": "Everybody Loves the Sunshine",
+     "artist": "Roy Ayers Ubiquity",
+     "year": 1976,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2f/7a/dd/2f7add2b-fb36-eea7-6ac1-db7fb01fd16c/mzaf_13195968331425689934.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e1/0e/28/e10e28c1-bed6-3143-cb91-265ba590bc35/15UMGIM65435.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Lifeline",
+     "title": "Running Away",
+     "artist": "Roy Ayers Ubiquity",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e2/27/e6/e227e606-598e-859b-49c9-7fab3fd964ad/mzaf_6685793644740871508.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/6d/d6/26/6dd626ab-d3c1-5a14-2479-18a3f815f164/00602517448230.rgb.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
