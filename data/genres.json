@@ -459,6 +459,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d8/3e/91/d83e91f8-5807-8e31-8ac7-7ce3ac751da3/06UMGIM13861.rgb.jpg/600x600bb.jpg",
      "id": 1434888983,
      "store": "https://music.apple.com/nl/album/one-oclock-jump/1434888980?i=1434888983"
+    },
+    {
+     "artist": "Frank Sinatra",
+     "title": "I've Got You Under My Skin",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/03/c5/63/03c563f3-da9c-39dd-6b38-042428511477/mzaf_1362176521401549303.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9d/ae/86/9dae867b-e8dc-5e83-9079-bacd32aa1da7/15UMGIM78881.rgb.jpg/600x600bb.jpg",
+     "id": 1440842601,
+     "store": "https://music.apple.com/nl/album/ive-got-you-under-my-skin/1440841946?i=1440842601"
     }
    ],
    "mixtapes": [
@@ -8293,6 +8302,24 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/bf/00/5f/bf005f59-85bb-1cdd-d663-f575d3b75a88/cover.jpg/600x600bb.jpg",
      "id": 269911848,
      "store": "https://music.apple.com/nl/album/jealousy/269911847?i=269911848"
+    },
+    {
+     "artist": "Femi Kuti",
+     "title": "Beng Beng Beng",
+     "year": 1995,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f9/f5/88/f9f5880c-d6c3-6b9c-1307-2a255ee94f52/mzaf_18125556395749525658.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9c/27/64/9c2764c8-0358-78a1-c6cd-d1608c136a89/06UMGIM55232.rgb.jpg/600x600bb.jpg",
+     "id": 1817151875,
+     "store": "https://music.apple.com/nl/album/beng-beng-beng/1817151873?i=1817151875"
+    },
+    {
+     "artist": "Antibalas",
+     "title": "Che Che Cole",
+     "year": 2004,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/9a/d6/fd/9ad6fd16-ef6e-809a-3cc5-f09eb483248b/mzaf_13125834669729534351.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e0/52/7d/e0527d00-1f0a-de55-3219-a6c780305ff7/mzi.untwqpyo.jpg/600x600bb.jpg",
+     "id": 435774139,
+     "store": "https://music.apple.com/nl/album/che-che-cole/435774033?i=435774139"
     }
    ],
    "mixtapes": []
@@ -12206,21 +12233,27 @@
      "title": "Allah-hoo, Allah-hoo",
      "year": 1978,
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ea/6e/fc/ea6efcb0-6c08-05df-0248-92e65de64dac/mzaf_2615312492938875138.plus.aac.p.m4a",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/3e/02/9e/mzi.nyqtruml.jpg/600x600bb.jpg"
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/3e/02/9e/mzi.nyqtruml.jpg/600x600bb.jpg",
+     "id": 168741483,
+     "store": "https://music.apple.com/nl/album/allah-hoo-allah-hoo/168741477?i=168741483"
     },
     {
      "artist": "Nusrat Fateh Ali Khan",
      "title": "Kali Kali Zulfon Ke Phande Nah Dalo",
      "year": 1988,
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/af/e0/df/afe0df59-78fa-5d05-9a9d-77d5c38f4900/mzaf_358432704297962608.plus.aac.p.m4a",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/20/0d/65/200d657f-a60f-1dd8-3429-9f03008a6458/5037005000907_cover.jpg/600x600bb.jpg"
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/20/0d/65/200d657f-a60f-1dd8-3429-9f03008a6458/5037005000907_cover.jpg/600x600bb.jpg",
+     "id": 1653719609,
+     "store": "https://music.apple.com/nl/album/kali-kali-zulfon-ke-phande-nah-dalo/1653719596?i=1653719609"
     },
     {
      "artist": "Sabri Brothers",
      "title": "Aaj Rang Hai",
      "year": 1987,
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b3/cd/8d/b3cd8d25-0236-2b6f-1fe1-16b3b9e7c91e/mzaf_18146694584650830931.plus.aac.p.m4a",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music127/v4/80/32/87/80328765-43b1-551e-e59b-8b3251f645ab/884385072025.jpg/600x600bb.jpg"
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music127/v4/80/32/87/80328765-43b1-551e-e59b-8b3251f645ab/884385072025.jpg/600x600bb.jpg",
+     "id": 282134026,
+     "store": "https://music.apple.com/nl/album/aaj-rang-hai/282134025?i=282134026"
     }
    ],
    "mixtapes": []
@@ -12248,20 +12281,77 @@
      "title": "Ketawang Puspawarna",
      "year": 1971,
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a2/8b/63/a28b6346-c327-d84f-7b9f-39fd91218b62/mzaf_10653807096411484089.plus.aac.p.m4a",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/1b/66/c2/mzi.juvritpx.jpg/600x600bb.jpg"
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/1b/66/c2/mzi.juvritpx.jpg/600x600bb.jpg",
+     "id": 128048667,
+     "store": "https://music.apple.com/nl/album/ketawang-puspawarna/128049636?i=128048667"
     },
     {
      "artist": "Gamelan of the Yogyakarta Royal Palace",
      "title": "Ladrang Liwung (pelog pathet barang)",
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/16/ce/a2/16cea27c-887f-db43-ff9c-fc929e4ccc76/mzaf_1754839382072066187.plus.aac.p.m4a",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/52/3a/d1/523ad1db-8fe9-73f5-7b35-7cfe42949e8b/mzi.yksgvblo.jpg/600x600bb.jpg"
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/52/3a/d1/523ad1db-8fe9-73f5-7b35-7cfe42949e8b/mzi.yksgvblo.jpg/600x600bb.jpg",
+     "id": 201383418,
+     "store": "https://music.apple.com/nl/album/ladrang-liwung-laras-pelog-pathet-barang/201382190?i=201383418"
     },
     {
      "artist": "Gong Kebyar de Sebatu",
      "title": "Taruna Djaja",
      "year": 1972,
      "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/9b/b7/6a/9bb76a5c-2fe5-af23-ed74-1da20421108c/mzaf_4912496466489309926.plus.aac.p.m4a",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/56/08/03/560803b0-86c1-493d-0c1d-6a56daa24553/00028947960522.rgb.jpg/600x600bb.jpg"
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/56/08/03/560803b0-86c1-493d-0c1d-6a56daa24553/00028947960522.rgb.jpg/600x600bb.jpg",
+     "id": 1452621437,
+     "store": "https://music.apple.com/nl/album/dance-music-taruna-djaja/1452621427?i=1452621437"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "woestijnblues",
+   "name": "Woestijnblues",
+   "family": "wereld",
+   "year": 1979,
+   "peak": [
+    2001,
+    2015
+   ],
+   "place": {
+    "name": "Kidal",
+    "lat": 18.44,
+    "lon": 1.41
+   },
+   "parents": [
+    "west-afrika",
+    "delta-blues"
+   ],
+   "text": "Woestijnblues, ook assouf genoemd, is de muziek van de Toearegs uit de Sahara in Mali en Niger. Tinariwen ontstond eind jaren zeventig onder Toeareg-ballingen in Algerije en Libië, die elektrische gitaren oppikten en zongen over ballingschap en verlangen naar de woestijn. De muziek draait om trance-achtige gitaarriffs, antwoordzang en handgeklap. De naam blues past omdat Ali Farka Touré uit Mali en de Amerikaanse bluesmuzikanten vaak naar elkaar verwijzen. In 2012 won Tinariwen een Grammy.",
+   "listen": "Hoor in Cler Achel hoe de gitaar een korte riff steeds herhaalt, terwijl de zang en het handgeklap van het koor erover heen golven.",
+   "tracks": [
+    {
+     "artist": "Tinariwen",
+     "title": "Cler Achel",
+     "year": 2007,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e9/35/7b/e9357b95-73a4-3516-f319-653dc430997e/mzaf_15999048262225923161.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/62/aa/3d/62aa3d0d-6755-89fd-0d57-2a030b11767d/00888072093249.rgb.jpg/600x600bb.jpg",
+     "id": 1458138458,
+     "store": "https://music.apple.com/nl/album/cler-achel/1458138077?i=1458138458"
+    },
+    {
+     "artist": "Ali Farka Touré",
+     "title": "Soukora",
+     "year": 1994,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8f/f0/50/8ff05069-4297-735d-1dc4-34bad5d9a95e/mzaf_18420165729146217572.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/46/21/52/462152eb-c0f4-39a8-e1c0-758481a867ba/0859381180500.jpg/600x600bb.jpg",
+     "id": 1528519972,
+     "store": "https://music.apple.com/nl/album/soukora-with-ry-cooder-with-ry-cooder/1528519970?i=1528519972"
+    },
+    {
+     "artist": "Bombino",
+     "title": "Amidinine",
+     "year": 2013,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/00/d6/b3/00d6b32a-0a4c-1e4e-5817-2aaef9cad9c1/mzaf_4308719138152677624.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2a/3f/2f/2a3f2f74-f3af-b0bd-74b0-d4c28eb2f335/881626013847_cover.jpg/600x600bb.jpg",
+     "id": 1884112696,
+     "store": "https://music.apple.com/nl/album/amidinine/1884112419?i=1884112696"
     }
    ],
    "mixtapes": []
