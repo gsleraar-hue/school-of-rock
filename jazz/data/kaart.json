@@ -16037,6 +16037,259 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/a0/2a/46/a02a4697-0e74-95bc-d3f3-40bb56a6916c/cover.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "yussef-dayes",
+   "name": "Yussef Dayes",
+   "born": 1992,
+   "died": null,
+   "year": 2016,
+   "stroming": "uk-jazz-nieuw",
+   "alsoIn": [
+    "jazzfunk"
+   ],
+   "place": {
+    "name": "Zuid-Londen",
+    "lat": 51.51,
+    "lon": -0.13
+   },
+   "influences": [
+    "billy-cobham"
+   ],
+   "films": [
+    "Black Focus – als Yussef Kamaal (2016)",
+    "What Kinda Music – met Tom Misch (2020)",
+    "Black Classical Music (2023)"
+   ],
+   "text": "Drummer Yussef Dayes werd in Zuid-Londen geboren, als jongste van vier broers. Zijn vader gaf hem op zijn vierde zijn eerste drumstel. Op zijn tiende volgde hij in Bath een cursus bij drummer Billy Cobham. Met zijn broers vormde hij de band United Vibrations en in 2016 maakte hij als duo Yussef Kamaal met toetsenist Kamaal Williams het album Black Focus. In 2020 volgde What Kinda Music met zanger en gitarist Tom Misch. Zijn eerste soloalbum Black Classical Music kwam in 2023 uit.",
+   "listen": "Hoor de drums die razendsnel en toch los spelen, met een Afro- en reggae-onderlaag.",
+   "tracks": [
+    {
+     "film": "Black Classical Music",
+     "title": "Black Classical Music",
+     "artist": "Yussef Dayes",
+     "year": 2023,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/69/f8/69/69f86985-1a90-cf51-8417-2dbeac732eb0/mzaf_14161935545287647203.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/8d/09/c0/8d09c054-0bcb-c172-92fa-268a89aac299/197338790748.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Black Classical Music",
+     "title": "Afro Cubanism",
+     "artist": "Yussef Dayes",
+     "year": 2023,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/de/ae/6f/deae6f6b-0a31-1425-b45b-49450f3ac28b/mzaf_6741912546526677372.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/8d/09/c0/8d09c054-0bcb-c172-92fa-268a89aac299/197338790748.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Black Classical Music",
+     "title": "Turquoise Galaxy",
+     "artist": "Yussef Dayes",
+     "year": 2023,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b8/1a/ba/b81abaa7-4e6e-a01e-cc58-1a2e8873a683/mzaf_4544874842295358320.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/8d/09/c0/8d09c054-0bcb-c172-92fa-268a89aac299/197338790748.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "badbadnotgood",
+   "name": "BADBADNOTGOOD",
+   "born": 2010,
+   "died": null,
+   "year": 2014,
+   "stroming": "jazzrap",
+   "alsoIn": [
+    "nu-jazz"
+   ],
+   "place": {
+    "name": "Toronto",
+    "lat": 43.65,
+    "lon": -79.38
+   },
+   "influences": [],
+   "films": [
+    "III (2014)",
+    "IV (2016)",
+    "Talk Memory (2021)"
+   ],
+   "text": "BADBADNOTGOOD is een Canadese instrumentale band uit Toronto, in 2010 opgericht door bassist Chester Hansen, toetsenist Matthew Tavares en drummer Alexander Sowinski, die elkaar leerden kennen op de jazzopleiding van Humber College. Ze delen een liefde voor hiphop, onder meer van MF Doom en Odd Future. In 2016 kwam saxofonist Leland Whitty erbij. Ze werkten met Tyler, The Creator, Kendrick Lamar en Ghostface Killah en werden vijf keer genomineerd voor een Grammy, waarvan ze er twee wonnen.",
+   "listen": "Hoor een jazztrio dat speelt als een hiphopproducer, met trage beats en een zwevende saxofoon.",
+   "tracks": [
+    {
+     "film": "III",
+     "title": "Triangle",
+     "artist": "BADBADNOTGOOD",
+     "year": 2014,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/17/20/d4/1720d49f-f7ae-e009-c63f-d513361064d0/mzaf_12664665740843092566.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/22/ed/ac/22edacd7-3f23-aa34-8f12-385744085a48/196626352569.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "III",
+     "title": "Hedron",
+     "artist": "BADBADNOTGOOD",
+     "year": 2014,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/05/e8/4d/05e84d6b-b52e-54ab-0eaa-b5cbff28ab27/mzaf_4171017688211267311.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/22/ed/ac/22edacd7-3f23-aa34-8f12-385744085a48/196626352569.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "IV",
+     "title": "Time Moves Slow",
+     "artist": "BADBADNOTGOOD",
+     "year": 2016,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/06/a8/65/06a86591-20cb-4c6e-ec2e-a88fee4e3838/mzaf_7792648677040532413.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/cf/7a/c1/cf7ac163-867a-3d6a-6613-abb7d594aad0/196626360007.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "medeski-martin-wood",
+   "name": "Medeski Martin & Wood",
+   "born": 1991,
+   "died": null,
+   "year": 1996,
+   "stroming": "jazzfunk",
+   "alsoIn": [
+    "fusion",
+    "acid-jazz"
+   ],
+   "place": {
+    "name": "New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "Notes from the Underground (1992)",
+    "Shack-man (1996)",
+    "Combustication (1998)"
+   ],
+   "text": "Medeski Martin & Wood is een Amerikaanse groep uit 1991, met John Medeski op toetsen, Billy Martin op drums en Chris Wood op bas. Drummer Bob Moses bracht ze bij elkaar. Hun eerste optredens waren in de Village Gate in New York. Medeski speelde piano, Hammondorgel, clavinet en mellotron, en Wood plakte papier achter zijn snaren voor een 'snaredrum'-effect. Hun stijl, soms 'avant-groove' genoemd, is beïnvloed door funk en hiphop. Ze speelden vaak met gitarist John Scofield.",
+   "listen": "Hoor het orgel dat als een funkband swingt, terwijl bas en drums rare, springerige patronen spelen.",
+   "tracks": [
+    {
+     "film": "Combustication",
+     "title": "Sugar Craft",
+     "artist": "Medeski, Martin & Wood",
+     "year": 1998,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/98/7f/bb/987fbb8c-46d5-07e4-b4cc-fcc0955a90ec/mzaf_2160522166692989929.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/ff/2a/5c/ff2a5cf6-96fa-caed-0a2d-cfd0b4ed7fd3/00602537642687.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Combustication",
+     "title": "Coconut Boogaloo",
+     "artist": "Medeski, Martin & Wood",
+     "year": 1998,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5a/11/90/5a1190aa-0074-f29c-28d4-5afe2a375081/mzaf_11718392619042902627.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/ff/2a/5c/ff2a5cf6-96fa-caed-0a2d-cfd0b4ed7fd3/00602537642687.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Shack-man",
+     "title": "Bubblehouse",
+     "artist": "Medeski, Martin & Wood",
+     "year": 1996,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6f/d0/f2/6fd0f2cc-c2b3-c3b6-bc7a-a8c62e4ca3be/mzaf_1411758652031952383.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/86/33/3b/mzi.xmspaivh.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "the-bad-plus",
+   "name": "The Bad Plus",
+   "born": 2000,
+   "died": null,
+   "year": 2003,
+   "stroming": "pianotrio",
+   "alsoIn": [
+    "nu-jazz"
+   ],
+   "place": {
+    "name": "Minneapolis",
+    "lat": 44.98,
+    "lon": -93.27
+   },
+   "influences": [],
+   "films": [
+    "The Bad Plus (2001)",
+    "These Are the Vistas (2003)",
+    "Give (2004)"
+   ],
+   "text": "The Bad Plus is een jazzgroep uit Minneapolis, in 2000 gevormd door pianist Ethan Iverson, bassist Reid Anderson en drummer David King. Ze speelden al sinds 1989 samen. Na een optreden in de Village Vanguard tekende Columbia hen in 2002. Op hun album These Are the Vistas uit 2003 spelen ze jazzversies van Nirvana's Smells Like Teen Spirit en Blondies Heart of Glass. In 2011 voerden ze Stravinsky's Rite of Spring op. In 2021 werd de groep een kwartet met gitarist Ben Monder en saxofonist Chris Speed.",
+   "listen": "Hoor een pianotrio dat popnummers speelt alsof het jazzstandards zijn, met veel ruwe energie.",
+   "tracks": [
+    {
+     "film": "These Are the Vistas",
+     "title": "Big Eater",
+     "artist": "The Bad Plus",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6e/14/72/6e147292-566e-936e-b524-ccf647c44579/mzaf_4884782827025679139.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/22/10/91/mzi.kslxrbbw.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "These Are the Vistas",
+     "title": "Smells Like Teen Spirit",
+     "artist": "The Bad Plus",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/76/31/d0/7631d01b-ab17-f21b-b268-d249c753e817/mzaf_17970895853266650254.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/22/10/91/mzi.kslxrbbw.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "These Are the Vistas",
+     "title": "Heart of Glass",
+     "artist": "The Bad Plus",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d1/3f/0b/d13f0b6b-65ba-8d7f-6e98-838a0db96355/mzaf_17927353652163177047.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/3e/f3/dc/mzi.gyllnxrp.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "chucho-valdes",
+   "name": "Chucho Valdés",
+   "born": 1941,
+   "died": null,
+   "year": 1973,
+   "stroming": "afro-cubaans",
+   "alsoIn": [
+    "fusion"
+   ],
+   "place": {
+    "name": "Havana",
+    "lat": 23.11,
+    "lon": -82.37
+   },
+   "influences": [],
+   "films": [
+    "Irakere (1978)",
+    "Solo: Live in New York (2001)",
+    "Jazz Batá 2 (2018)"
+   ],
+   "text": "Pianist en bandleider Chucho Valdés werd in Havana geboren; zijn vader Bebo Valdés en zijn zoon zijn ook pianist. Zijn eerste opnamen als leider stammen uit januari 1964 en bevatten Paquito D'Rivera. In 1967 was hij medeoprichter van het Orquesta Cubana de Música Moderna en in 1973 van de groep Irakere, een van de bekendste Cubaanse latin jazzbands. Daarmee verbond hij songo, jazz en rock. Solo won hij zeven Grammy's en vier Latin Grammy's.",
+   "listen": "Hoor de piano die Cubaanse ritmes met jazzakkoorden speelt, met een stuwende linkerhand.",
+   "tracks": [
+    {
+     "film": "Solo: Live in New York",
+     "title": "Rumba Guajira",
+     "artist": "Chucho Valdés",
+     "year": 2001,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/41/9e/18/419e180e-8bc1-a694-0820-e096c014ba9e/mzaf_2332631501016697762.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/08/cc/86/08cc86e9-1ed4-8c61-7ce1-457766c1cb47/00724349345652.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Solo: Live in New York",
+     "title": "Muñequita Linda",
+     "artist": "Chucho Valdés",
+     "year": 2001,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/3b/db/4b/3bdb4ba4-653f-104c-9159-7eda5f5984c2/mzaf_10210706900523716053.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/08/cc/86/08cc86e9-1ed4-8c61-7ce1-457766c1cb47/00724349345652.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Solo: Live in New York",
+     "title": "Son",
+     "artist": "Chucho Valdés",
+     "year": 2001,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2a/fb/71/2afb711b-6521-1fcb-a515-d159db44dd6a/mzaf_4550983576266797166.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/08/cc/86/08cc86e9-1ed4-8c61-7ce1-457766c1cb47/00724349345652.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
