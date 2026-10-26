@@ -12258,6 +12258,366 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/6d/d6/26/6dd626ab-d3c1-5a14-2479-18a3f815f164/00602517448230.rgb.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "sonny-stitt",
+   "name": "Sonny Stitt",
+   "born": 1924,
+   "died": 1982,
+   "year": 1946,
+   "stroming": "bebop",
+   "alsoIn": [
+    "hard-bop",
+    "soul-jazz"
+   ],
+   "place": {
+    "name": "Saginaw → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "charlie-parker"
+   ],
+   "films": [
+    "Sonny Side Up – met Dizzy Gillespie en Sonny Rollins (1959)",
+    "Stitt Plays Bird (1964)",
+    "Personal Appearance (1957)"
+   ],
+   "text": "Saxofonist Sonny Stitt werd in Boston geboren en groeide op in Saginaw, Michigan. Hij werd een leerling van Charlie Parker en werd in zijn beginjaren soms een kopie van hem genoemd. Later vond hij op de tenorsaxofoon een eigen, warme toon. Hij nam meer dan honderd albums op en werd 'Lone Wolf' genoemd omdat hij zelden lang met dezelfde muzikanten speelde. In 1964 bracht hij Stitt Plays Bird uit, een eerbetoon aan Parker. Hij overleed in 1982.",
+   "listen": "Hoor hoe snel en vloeiend hij de bebop-lijnen speelt, met een warme toon.",
+   "tracks": [
+    {
+     "film": "Stitt Plays Bird",
+     "title": "Now's the Time",
+     "artist": "Sonny Stitt",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e5/51/f8/e551f89f-dccb-0763-2163-cdd93ca955ce/mzaf_16960577053999047795.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/20/d7/9c/20d79cdd-bcff-4b1f-75ff-83ae3704ae3d/603497848140.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Stitt Plays Bird",
+     "title": "Au Privave",
+     "artist": "Sonny Stitt",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/80/19/27/8019277c-dfa5-c768-e072-468798946014/mzaf_4885165630605165300.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/20/d7/9c/20d79cdd-bcff-4b1f-75ff-83ae3704ae3d/603497848140.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Stitt Plays Bird",
+     "title": "Ko-Ko",
+     "artist": "Sonny Stitt",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/dc/dd/18/dcdd184c-8556-86e2-3af5-cd1870bd9ce9/mzaf_16810483379339730723.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/20/d7/9c/20d79cdd-bcff-4b1f-75ff-83ae3704ae3d/603497848140.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stanley-turrentine",
+   "name": "Stanley Turrentine",
+   "born": 1934,
+   "died": 2000,
+   "year": 1960,
+   "stroming": "soul-jazz",
+   "alsoIn": [
+    "hard-bop",
+    "jazzfunk"
+   ],
+   "place": {
+    "name": "Pittsburgh",
+    "lat": 40.44,
+    "lon": -80
+   },
+   "influences": [],
+   "films": [
+    "Look Out! (1960)",
+    "Sugar (1970)",
+    "Ain't No Way (1968)"
+   ],
+   "text": "Tenorsaxofonist Stanley Turrentine uit Pittsburgh speelde als tiener in rhythm-and-bluesbands en nam in 1953 de plaats van John Coltrane in de band van Earl Bostic. In 1959 speelde hij bij Max Roach en vanaf 1960 nam hij op voor Blue Note. Hij trouwde met organiste Shirley Scott, met wie hij vaak speelde. Zijn toon was dik, rimpelend en vol blues. Op Sugar, uit 1970 voor het label CTI, speelde hij met een funky, elektrische groep.",
+   "listen": "Hoor de dikke, zingende toon van de tenorsaxofoon, die vol blues zit.",
+   "tracks": [
+    {
+     "film": "Look Out!",
+     "title": "Look Out",
+     "artist": "Stanley Turrentine",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/9d/4f/95/9d4f95c4-b585-5ff1-cac1-b4dc296dd8f7/mzaf_14219039684060045999.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/c9/3f/39/c93f39b4-91a3-4c36-04c7-03da7a9b1694/05099951437657.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Look Out!",
+     "title": "Little Sheri",
+     "artist": "Stanley Turrentine",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/0b/41/d9/0b41d942-98b8-444f-fb60-d18976fca0a4/mzaf_10723708433940028785.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/c9/3f/39/c93f39b4-91a3-4c36-04c7-03da7a9b1694/05099951437657.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Sugar",
+     "title": "Sugar",
+     "artist": "Stanley Turrentine",
+     "year": 1970,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a2/04/f0/a204f0fc-b8b9-72da-a997-f89c425faad8/mzaf_13159395385546472405.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/64/6c/d9/mzi.lvagijcn.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "grant-green",
+   "name": "Grant Green",
+   "born": 1935,
+   "died": 1979,
+   "year": 1961,
+   "stroming": "hard-bop",
+   "alsoIn": [
+    "soul-jazz",
+    "jazzfunk"
+   ],
+   "place": {
+    "name": "St. Louis → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "charlie-christian"
+   ],
+   "films": [
+    "Feelin' the Spirit (1962)",
+    "Idle Moments (1965)",
+    "Live at the Lighthouse (1972)"
+   ],
+   "text": "Gitarist Grant Green uit St. Louis begon op zijn dertiende in een gospelgroep. In 1959 hoorde saxofonist Lou Donaldson hem spelen en nam hem mee naar New York. Van 1961 tot 1965 was Green de huisgitarist van Blue Note. Hij speelde losse noten als een saxofonist, in plaats van akkoorden. Op Idle Moments uit 1965 speelde onder anderen Joe Henderson mee. Zijn gitaarlijnen worden vaak gesampled, en zijn stijl ligt aan de basis van veel jazzfunk.",
+   "listen": "Hoor de losse, ronde gitaarnoten die zingen als een saxofoon.",
+   "tracks": [
+    {
+     "film": "Idle Moments",
+     "title": "Idle Moments",
+     "artist": "Grant Green",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/0d/7f/a5/0d7fa531-da62-a252-33e2-4fc154640360/mzaf_4241185349807912010.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/c8/c5/af/c8c5af5d-6bb8-de2d-962f-1aed2e134302/00724349900356.tif/600x600bb.jpg"
+    },
+    {
+     "film": "Idle Moments",
+     "title": "Jean de Fleur",
+     "artist": "Grant Green",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b1/bf/a4/b1bfa4d0-3adf-f308-7a8a-8a645bc26650/mzaf_934793051506959535.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/c8/c5/af/c8c5af5d-6bb8-de2d-962f-1aed2e134302/00724349900356.tif/600x600bb.jpg"
+    },
+    {
+     "film": "Feelin' the Spirit",
+     "title": "Just a Closer Walk with Thee",
+     "artist": "Grant Green",
+     "year": 1962,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c0/01/f3/c001f347-73d3-0d88-e278-26113d65c5c7/mzaf_1134304493457260557.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/56/2a/b6/562ab69f-757b-c4a3-57e2-0d050b2908ea/00724386447159.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "herbie-mann",
+   "name": "Herbie Mann",
+   "born": 1930,
+   "died": 2003,
+   "year": 1962,
+   "stroming": "soul-jazz",
+   "alsoIn": [
+    "bossa-nova",
+    "jazzfunk"
+   ],
+   "place": {
+    "name": "Brooklyn → New York",
+    "lat": 40.65,
+    "lon": -73.95
+   },
+   "influences": [],
+   "films": [
+    "Herbie Mann at the Village Gate (1962)",
+    "Memphis Underground (1969)",
+    "Push Push (1971)"
+   ],
+   "text": "Herbie Mann uit Brooklyn was een van de eerste jazzmusici die zich helemaal op de dwarsfluit toelegde. Hij speelde ook klarinet en saxofoon. Met Comin' Home Baby, live opgenomen in de Village Gate in New York, had hij een hit. Hij haalde invloeden uit Brazilië, Afrika en het Midden-Oosten en geldt als een pionier van wereldmuziek. Op Memphis Underground uit 1969 speelde hij met muzikanten uit het zuiden. Zijn single Hi-Jack stond in 1975 drie weken bovenaan de dancelijst.",
+   "listen": "Hoor de zwevende dwarsfluit boven een zware, groovende ritmesectie.",
+   "tracks": [
+    {
+     "film": "Herbie Mann at the Village Gate",
+     "title": "Comin' Home Baby",
+     "artist": "Herbie Mann",
+     "year": 1962,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/27/ae/1f/27ae1ff5-be40-9292-fd9e-1ff8296e5f7e/mzaf_1416431858864328668.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/d5/88/0a/d5880abc-54b4-0f32-52a2-e017d6ecc20b/cover.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Memphis Underground",
+     "title": "Memphis Underground",
+     "artist": "Herbie Mann",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/18/2e/2c/182e2c32-2b8d-1810-5973-10e6a7e30616/mzaf_2775782948146943963.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2005/m07/d22/h04/mzi.dvpjxqtg.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Memphis Underground",
+     "title": "Hold On, I'm Comin'",
+     "artist": "Herbie Mann",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/da/ab/a0/daaba07f-2a9f-ab0b-0d70-4210ee4a7af1/mzaf_3416674168245314889.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2005/m07/d22/h04/mzi.dvpjxqtg.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "norah-jones",
+   "name": "Norah Jones",
+   "born": 1979,
+   "died": null,
+   "year": 2002,
+   "stroming": "smooth",
+   "alsoIn": [
+    "vocal-jazz"
+   ],
+   "place": {
+    "name": "New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "Come Away with Me (2002)",
+    "Feels Like Home (2004)",
+    "Not Too Late (2007)"
+   ],
+   "text": "Zangeres en pianiste Norah Jones werd in New York geboren, als dochter van de Indiase sitarspeler Ravi Shankar, en groeide op in Texas. In 2002 bracht ze Come Away with Me uit, een mengeling van jazz, country, blues en folk. Het album werd meer dan 27 miljoen keer verkocht en won vijf Grammy's, waaronder album van het jaar. Ze zingt zacht en laag, bijna fluisterend, en speelt zelf piano. Ze bracht jazz in de top van de popmuziek.",
+   "listen": "Hoor haar zachte stem en de rustige pianobegeleiding, alsof ze alleen voor jou zingt.",
+   "tracks": [
+    {
+     "film": "Come Away with Me",
+     "title": "Don't Know Why",
+     "artist": "Norah Jones",
+     "year": 2002,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a6/5a/a9/a65aa9fe-7eb7-70d4-d1a8-8757db1f0a89/mzaf_3340636523536486480.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/80/7b/02/807b023b-fb9e-de08-4c62-dd45d7d2317e/22UMGIM10696.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Come Away with Me",
+     "title": "Come Away with Me",
+     "artist": "Norah Jones",
+     "year": 2002,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9d/a3/e0/9da3e061-4232-d2b1-ff70-754629f37bef/mzaf_8831322408586665295.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/a0/a0/8d/a0a08df2-390b-ad05-0d32-6673bcf7a2a9/13UABIM02784.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Come Away with Me",
+     "title": "Seven Years",
+     "artist": "Norah Jones",
+     "year": 2002,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/44/f1/f3/44f1f388-5b94-0e92-638e-b3cb6e12b158/mzaf_2102989040936688174.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/a0/a0/8d/a0a08df2-390b-ad05-0d32-6673bcf7a2a9/13UABIM02784.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "clark-terry",
+   "name": "Clark Terry",
+   "born": 1920,
+   "died": 2015,
+   "year": 1948,
+   "stroming": "swing",
+   "alsoIn": [
+    "hard-bop",
+    "bigband"
+   ],
+   "place": {
+    "name": "St. Louis → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "Duke with a Difference (1957)",
+    "Oscar Peterson Trio + One (1964)",
+    "Color Changes (1960)"
+   ],
+   "text": "Trompettist Clark Terry uit St. Louis speelde in de bigbands van Count Basie en Duke Ellington en later in de Tonight Show Band, en vanaf 1964 met Oscar Peterson. Hij was een pionier van de bugel in de jazz. Zijn zingen van nonsenstekst, in Mumbles, werd beroemd. Hij gaf als leraar les aan Miles Davis en Quincy Jones en nam op meer dan negenhonderd platen mee. Zijn trompetspel was warm, grappig en vol humor.",
+   "listen": "Hoor de warme bugel en het gemompel in Mumbles, waarmee hij het publiek laat lachen.",
+   "tracks": [
+    {
+     "film": "Oscar Peterson Trio + One",
+     "title": "Mumbles",
+     "artist": "Clark Terry & Oscar Peterson Trio",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5c/11/c0/5c11c077-3aa9-44b1-d150-e47db2212b3e/mzaf_13064728128909744432.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5f/39/b6/5f39b6b8-58b7-91b1-6944-15abf81d90e5/25UM1IM91912.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Oscar Peterson Trio + One",
+     "title": "Brotherhood of Man",
+     "artist": "Oscar Peterson Trio & Clark Terry",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4e/b9/61/4eb96172-d70c-5394-4819-b974c5164735/mzaf_11025058954929909129.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5f/39/b6/5f39b6b8-58b7-91b1-6944-15abf81d90e5/25UM1IM91912.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Oscar Peterson Trio + One",
+     "title": "Incoherent Blues",
+     "artist": "Oscar Peterson Trio & Clark Terry",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a7/f1/d0/a7f1d0e9-d76c-a3be-58e8-f28d717a9bfd/mzaf_11760654843401835597.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5f/39/b6/5f39b6b8-58b7-91b1-6944-15abf81d90e5/25UM1IM91912.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gil-scott-heron",
+   "name": "Gil Scott-Heron",
+   "born": 1949,
+   "died": 2011,
+   "year": 1971,
+   "stroming": "jazzrap",
+   "alsoIn": [
+    "soul-jazz",
+    "spiritual-jazz"
+   ],
+   "place": {
+    "name": "New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "Pieces of a Man (1971)",
+    "Winter in America (1974)",
+    "I'm New Here (2010)"
+   ],
+   "text": "Gil Scott-Heron was dichter, zanger en schrijver. Met pianist Brian Jackson maakte hij platen waarop jazz, blues en soul worden gecombineerd met teksten over politiek en het leven in de stad. Zijn gedicht The Revolution Will Not Be Televised, op een jazzy beat, geldt als een grote invloed op de hiphop. Zijn albums Pieces of a Man en Winter in America uit de vroege jaren zeventig klonken vooruit naar rap en neo-soul. Hij overleed in 2011.",
+   "listen": "Hoor hoe hij tussen praten en zingen in beweegt, op een stevige jazzbas en conga's.",
+   "tracks": [
+    {
+     "film": "Pieces of a Man",
+     "title": "The Revolution Will Not Be Televised",
+     "artist": "Gil Scott-Heron",
+     "year": 1971,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/58/5c/da/585cdae0-5666-3c2f-3162-23b2dd043f03/mzaf_11553477277296058924.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f8/e8/5b/f8e85bc3-8854-a257-9622-524e0dbc7b76/29667527484.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Pieces of a Man",
+     "title": "Lady Day and John Coltrane",
+     "artist": "Gil Scott-Heron",
+     "year": 1971,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/91/b4/a4/91b4a482-0439-f68f-62ad-0cf21e5de128/mzaf_14125085454262733546.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f8/e8/5b/f8e85bc3-8854-a257-9622-524e0dbc7b76/29667527484.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Winter in America",
+     "title": "The Bottle",
+     "artist": "Gil Scott-Heron & Brian Jackson",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3b/12/19/3b1219fc-9c5d-b575-47fd-cd4f2fc937a4/mzaf_8599547028614284272.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/0d/bd/70/mzi.fhugnmuo.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
