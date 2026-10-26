@@ -10568,6 +10568,349 @@
     }
    ],
    "mixtapes": []
+  },
+  {
+   "id": "death-metal",
+   "name": "Death metal",
+   "family": "rock",
+   "year": 1985,
+   "peak": [
+    1989,
+    1995
+   ],
+   "place": {
+    "name": "Tampa",
+    "lat": 27.95,
+    "lon": -82.46
+   },
+   "parents": [
+    "heavy-metal-80s",
+    "hardcore-punk"
+   ],
+   "text": "Death metal ontstond halverwege de jaren tachtig, toen bands in Florida de snelheid van hardcore punk en de duisternis van heavy metal tot het uiterste dreven. De gitaren zijn laag gestemd en razendsnel, de drums spelen blastbeats en de zanger grunt in plaats van zingt. De teksten gaan over dood, horror en verval. Death uit Florida, Morbid Angel en Obituary maakten van Tampa het centrum, en Cannibal Corpse werd in de jaren negentig de bekendste naam.",
+   "listen": "Hoor in Zombie Ritual hoe de gitaren in korte, hakkende riffs lopen en hoe de grunt meer een ritme is dan een melodie.",
+   "tracks": [
+    {
+     "artist": "Death",
+     "title": "Zombie Ritual",
+     "year": 1987,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0e/22/5c/0e225c6f-907b-72f5-f9a9-12cca8077ce9/mzaf_78350264644305244.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/ee/d2/c4/mzi.kxpcacls.jpg/600x600bb.jpg",
+     "id": 369043991,
+     "store": "https://music.apple.com/nl/album/zombie-ritual/369043988?i=369043991"
+    },
+    {
+     "artist": "Morbid Angel",
+     "title": "Immortal Rites",
+     "year": 1989,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bc/fa/58/bcfa5885-cb8d-a29f-1ed9-2895e18943b2/mzaf_11326697227266304788.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/bd/5e/a8/bd5ea89a-799a-eabe-2264-31d5abcb27f5/dj.pyxanmgj.jpg/600x600bb.jpg",
+     "id": 63616703,
+     "store": "https://music.apple.com/nl/album/immortal-rites/63616899?i=63616703"
+    },
+    {
+     "artist": "Obituary",
+     "title": "Slowly We Rot",
+     "year": 1989,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a3/e2/7b/a3e27bc2-3182-5110-0e53-d3a867a0699d/mzaf_8788515382124544999.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/86/e2/92/mzi.unbklruw.jpg/600x600bb.jpg",
+     "id": 214477938,
+     "store": "https://music.apple.com/nl/album/slowly-we-rot/214477843?i=214477938"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "black-metal",
+   "name": "Black metal",
+   "family": "rock",
+   "year": 1991,
+   "peak": [
+    1992,
+    1996
+   ],
+   "place": {
+    "name": "Oslo",
+    "lat": 59.91,
+    "lon": 10.75
+   },
+   "parents": [
+    "heavy-metal-80s",
+    "hardcore-punk"
+   ],
+   "text": "De naam komt van Venom, dat in 1982 het album Black Metal uitbracht. De stroming zoals we haar kennen ontstond rond 1991 in Noorwegen, met Mayhem, Darkthrone en Emperor. Het geluid is bewust ruw: snerpende gitaren die tremolo spelen, snelle drums en een schreeuwende, keelachtige zang, opgenomen met weinig middelen. Een deel van de scene stak kerken in brand, en in 1993 werd Mayhem-gitarist Euronymous vermoord door een andere musicus uit de scene.",
+   "listen": "Luister in Freezing Moon naar de gitaren die als een zwerm sneeuw en ijs voortrazen, boven een ritme dat steeds sneller en trager wordt.",
+   "tracks": [
+    {
+     "artist": "Venom",
+     "title": "Black Metal",
+     "year": 1982,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/59/d8/cf/59d8cfc4-9633-8adb-90df-53f1104ca07b/mzaf_9911008227367628161.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/8f/a0/64/8fa06407-2c2b-e697-88bf-e3b5085efda0/5414939528477.jpg/600x600bb.jpg",
+     "id": 1436231858,
+     "store": "https://music.apple.com/nl/album/black-metal/1436231855?i=1436231858"
+    },
+    {
+     "artist": "Mayhem",
+     "title": "Freezing Moon",
+     "year": 1994,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/10/7d/6f/107d6f95-e4b7-f635-f20f-be7eb1bbbaeb/mzaf_476205720887936854.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/29/17/e9/2917e9cf-2052-d447-57f5-b0fd721b063c/7071155278067.jpg/600x600bb.jpg",
+     "id": 1451406170,
+     "store": "https://music.apple.com/nl/album/freezing-moon/1451406150?i=1451406170"
+    },
+    {
+     "artist": "Darkthrone",
+     "title": "Transilvanian Hunger",
+     "year": 1994,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b4/a1/e0/b4a1e06f-3e47-d133-63ba-9082e71748ae/mzaf_15932776361626013223.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/fc/f6/af/fcf6af9b-65ba-5fe2-f90f-19dbebc121fe/801056854926.jpg/600x600bb.jpg",
+     "id": 948942601,
+     "store": "https://music.apple.com/nl/album/transilvanian-hunger/948942596?i=948942601"
+    },
+    {
+     "artist": "Emperor",
+     "title": "I Am the Black Wizards",
+     "year": 1994,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fb/bc/02/fbbc02fa-61da-08c2-bf12-7056e91ca807/mzaf_6300047128800593693.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7d/51/de/7d51de5a-0183-1bbd-71f7-b756c511bbca/5400863126605_cover.jpg/600x600bb.jpg",
+     "id": 1670679973,
+     "store": "https://music.apple.com/nl/album/i-am-the-black-wizards/1670679463?i=1670679973"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "post-rock",
+   "name": "Post-rock",
+   "family": "rock",
+   "year": 1991,
+   "peak": [
+    1996,
+    2002
+   ],
+   "place": {
+    "name": "Glasgow",
+    "lat": 55.86,
+    "lon": -4.25
+   },
+   "parents": [
+    "krautrock",
+    "ambient",
+    "postpunk",
+    "indie-shoegaze"
+   ],
+   "text": "Post-rock gebruikt rockinstrumenten, maar niet de vorm van het rocknummer. Er is vaak geen zanger, en geen couplet en refrein: het stuk groeit langzaam van een zacht begin tot een enorm hard slot. Talk Talk maakte eind jaren tachtig de voorloper met Spirit of Eden, Slint uit Louisville speelde in 1991 Spiderland, en groepen als Tortoise, Mogwai en Godspeed You! Black Emperor maakten er in de jaren negentig een stroming van. De naam bedacht de criticus Simon Reynolds.",
+   "listen": "Luister in Mogwai Fear Satan hoe de band een tijd bijna stil blijft, en hoe de muziek daarna in een muur van gitaren uitbarst.",
+   "tracks": [
+    {
+     "artist": "Talk Talk",
+     "title": "I Believe in You",
+     "year": 1988,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/96/0c/99/960c99e3-6faf-d860-96cd-572b2ea24dad/mzaf_1567352031245574015.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/36/84/e8/3684e84e-5b87-f5d3-3e93-500c9807aefd/724385712951.jpg/600x600bb.jpg",
+     "id": 701395527,
+     "store": "https://music.apple.com/nl/album/i-believe-in-you/701395363?i=701395527"
+    },
+    {
+     "artist": "Slint",
+     "title": "Washer",
+     "year": 1991,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/15/4e/0f/154e0f9a-c7a6-0c17-b3b3-30807c54110e/mzaf_14235099614483192655.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c8/90/c1/c890c1f3-6e1b-dd55-8638-6d82b0f90e52/cover.jpg/600x600bb.jpg",
+     "id": 1117724469,
+     "store": "https://music.apple.com/nl/album/washer/1117723921?i=1117724469"
+    },
+    {
+     "artist": "Tortoise",
+     "title": "Djed",
+     "year": 1996,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b7/12/06/b712067e-b5b4-4cc6-86bd-f74d4ef0d980/mzaf_1122951809241046000.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/c5/73/76/c573764d-2671-f9d2-9b27-1ed6a8e9332e/dj.xmzefjpr.jpg/600x600bb.jpg",
+     "id": 308750201,
+     "store": "https://music.apple.com/nl/album/djed/308750184?i=308750201"
+    },
+    {
+     "artist": "Mogwai",
+     "title": "Mogwai Fear Satan",
+     "year": 1997,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4f/41/29/4f4129a7-4583-7d12-662c-304a912966e5/mzaf_5167845745102464976.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d7/d4/63/d7d4637b-da08-5f7e-e3f9-8a59e7ca6268/5024545987782_cover.jpg/600x600bb.jpg",
+     "id": 1649442462,
+     "store": "https://music.apple.com/nl/album/mogwai-fear-satan/1649441701?i=1649442462"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "honky-tonk",
+   "name": "Honky-tonk",
+   "family": "country",
+   "year": 1940,
+   "peak": [
+    1946,
+    1960
+   ],
+   "place": {
+    "name": "Beaumont",
+    "lat": 30.08,
+    "lon": -94.13
+   },
+   "parents": [
+    "country"
+   ],
+   "text": "Honky-tonk is country voor de kroeg. In de jaren veertig kwamen arbeiders in Texas, vaak olieboren, op zaterdagavond bij elkaar in bars waar niemand een orkest kon verstaan. De muziek werd daarom luider: elektrische gitaar, steelgitaar en een stevige beat. Ernest Tubb en Lefty Frizzell zongen over drank, ontrouw en eenzaamheid, en Hank Williams gaf het genre zijn bekendste liederen. Later ging George Jones het verder op die manier.",
+   "listen": "Hoor in Walking the Floor Over You hoe de elektrische gitaar de melodie speelt en hoe Tubb zijn verdriet bijna terloops vertelt.",
+   "tracks": [
+    {
+     "artist": "Ernest Tubb",
+     "title": "Walking the Floor Over You",
+     "year": 1941,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/c5/c9/e7/mzi.aepvzcqf.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/dd/61/f1/dd61f159-9259-193a-a61d-f62e454c8511/cover.jpg/600x600bb.jpg",
+     "id": 541863350,
+     "store": "https://music.apple.com/nl/album/walking-the-floor-over-you/541863318?i=541863350"
+    },
+    {
+     "artist": "Hank Williams & The Drifting Cowboys",
+     "title": "Your Cheatin' Heart",
+     "year": 1953,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e3/31/98/e33198d6-8923-700d-7672-5e59a2fb6cb1/mzaf_2052527261181136470.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/60/e0/6b/60e06b70-46e1-4a7f-66a0-32c3a9fd92a5/21UM1IM08064.rgb.jpg/600x600bb.jpg",
+     "id": 1592563638,
+     "store": "https://music.apple.com/nl/album/your-cheatin-heart/1592563635?i=1592563638"
+    },
+    {
+     "artist": "Lefty Frizzell",
+     "title": "If You've Got the Money, I've Got the Time",
+     "year": 1950,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b3/75/14/b37514d3-abb5-8ae1-da19-60db87286780/mzaf_9184260227827545289.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/d5/b9/9b/mzi.ljxxiqnn.tif/600x600bb.jpg",
+     "id": 422044246,
+     "store": "https://music.apple.com/nl/album/if-youve-got-the-money-ive-got-the-time/422044211?i=422044246"
+    },
+    {
+     "artist": "George Jones",
+     "title": "White Lightning",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/99/22/b6/9922b6ed-26e3-824c-5e4a-ace726432cb1/mzaf_2824607541875950135.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/63/53/d3/6353d3d9-c76d-59d2-c068-00505c3c2be7/071083121180_cover.jpg/600x600bb.jpg",
+     "id": 1714866910,
+     "store": "https://music.apple.com/nl/album/white-lightning/1714866900?i=1714866910"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "nashville-sound",
+   "name": "Nashville sound",
+   "family": "country",
+   "year": 1957,
+   "peak": [
+    1958,
+    1968
+   ],
+   "place": {
+    "name": "Nashville",
+    "lat": 36.16,
+    "lon": -86.78
+   },
+   "parents": [
+    "country",
+    "honky-tonk"
+   ],
+   "text": "Eind jaren vijftig verloor country publiek aan rock-'n-roll. Producers in Nashville, zoals Chet Atkins en Owen Bradley, antwoordden met een gladdere klank: strijkers, achtergrondkoren en een zachte piano in plaats van viool en steelgitaar. Patsy Cline en Jim Reeves konden zo ook buiten de countrywereld hits scoren. Het geluid heette het Nashville sound, en het maakte van de stad een muziekindustrie. Liefhebbers van de oude stijl vonden dat het zijn ziel kwijt was.",
+   "listen": "Hoor in Crazy hoe Patsy Cline zachter zingt dan een country-ster uit de jaren veertig, met strijkers en een koor in de achtergrond.",
+   "tracks": [
+    {
+     "artist": "Patsy Cline",
+     "title": "Crazy",
+     "year": 1961,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2e/d4/9f/2ed49f47-cbce-c644-f69b-df4eaeafdeff/mzaf_17889384985762062881.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c4/e4/63/c4e463f7-6bf5-fa4b-a01e-2af6ae17b9c2/19UMGIM97633.rgb.jpg/600x600bb.jpg",
+     "id": 1485036818,
+     "store": "https://music.apple.com/nl/album/crazy-feat-the-jordanaires/1485036494?i=1485036818"
+    },
+    {
+     "artist": "Jim Reeves",
+     "title": "He'll Have to Go",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/26/a9/26/mzm.jxiljgsz.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/79/f9/ed/mzi.kkvamrrl.jpg/600x600bb.jpg",
+     "id": 437288816,
+     "store": "https://music.apple.com/nl/album/hell-have-to-go/437288808?i=437288816"
+    },
+    {
+     "artist": "Eddy Arnold",
+     "title": "Make the World Go Away",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/7f/d9/7d/7fd97d3b-6b03-ba9c-0e6d-12204820f7b1/mzaf_12157565038225702729.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/38/c1/71/38c171e8-56b8-8d56-1c97-54371d7e7676/884977796100.jpg/600x600bb.jpg",
+     "id": 402517368,
+     "store": "https://music.apple.com/nl/album/make-the-world-go-away/402517281?i=402517368"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "outlaw-country",
+   "name": "Outlaw country",
+   "family": "country",
+   "year": 1972,
+   "peak": [
+    1973,
+    1980
+   ],
+   "place": {
+    "name": "Austin",
+    "lat": 30.27,
+    "lon": -97.74
+   },
+   "parents": [
+    "honky-tonk",
+    "country-rock"
+   ],
+   "text": "Waylon Jennings en Willie Nelson vonden begin jaren zeventig dat de studio's in Nashville te veel bepaalden. Ze eisten zelf de baas te zijn over hun platen, en trokken naar Austin, waar hippies en cowboys in dezelfde zalen kwamen. Ze droegen lang haar, speelden met hun eigen band en zongen over ruwe onderwerpen. De verzamelplaat Wanted! The Outlaws (1976) werd het eerste countryalbum dat platina haalde.",
+   "listen": "Hoor in Blue Eyes Crying in the Rain hoe Willie Nelson heel eenvoudig zingt, bijna zonder begeleiding, met een gitaar die als een gesprek klinkt.",
+   "tracks": [
+    {
+     "artist": "Waylon Jennings",
+     "title": "Honky Tonk Heroes (Like Me)",
+     "year": 1973,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/21/1d/f6211d3d-642b-0bdc-091b-e04eac9d02c4/mzaf_16009886428683033195.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e7/8b/07/e78b0739-74ca-14ee-854d-a1aa12426659/886445321500.jpg/600x600bb.jpg",
+     "id": 1007489594,
+     "store": "https://music.apple.com/nl/album/honky-tonk-heroes/1007489519?i=1007489594"
+    },
+    {
+     "artist": "Willie Nelson",
+     "title": "Blue Eyes Crying in the Rain",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/99/78/0c/99780ca8-8933-d32d-ee0e-ad09318437f6/mzaf_11775962149562399481.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/88/d6/67/88d6676e-67ce-f907-d4fe-eae50f805f63/074643348225.jpg/600x600bb.jpg",
+     "id": 404365979,
+     "store": "https://music.apple.com/nl/album/blue-eyes-crying-in-the-rain/404365971?i=404365979"
+    },
+    {
+     "artist": "Kris Kristofferson",
+     "title": "Sunday Mornin' Comin' Down",
+     "year": 1970,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d2/35/b9/d235b9d5-2267-d205-c54f-b806233fcd1d/mzaf_16487063321804108910.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/da/2b/96/da2b96b8-a339-2d6b-76bb-9d74f590b2ce/886445340648.jpg/600x600bb.jpg",
+     "id": 1011273597,
+     "store": "https://music.apple.com/nl/album/sunday-mornin-comin-down/1011273584?i=1011273597"
+    },
+    {
+     "artist": "Jessi Colter",
+     "title": "I'm Not Lisa",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/07/f8/45/07f84586-c8cf-5e06-b998-60598e6e24f4/mzaf_9372603807546742491.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/0d/06/5f/0d065fa0-66e0-df6c-1550-8181d2513e7e/20UMGIM03282.rgb.jpg/600x600bb.jpg",
+     "id": 1497018390,
+     "store": "https://music.apple.com/nl/album/im-not-lisa/1497017959?i=1497018390"
+    }
+   ],
+   "mixtapes": []
   }
  ]
 }
