@@ -11544,6 +11544,365 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1c/10/12/1c101284-5781-406d-f456-5855551c036d/5060180325343.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "quincy-jones",
+   "name": "Quincy Jones",
+   "born": 1933,
+   "died": 2024,
+   "year": 1957,
+   "stroming": "bigband",
+   "alsoIn": [
+    "jazzfunk",
+    "smooth"
+   ],
+   "place": {
+    "name": "Chicago → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "count-basie"
+   ],
+   "films": [
+    "Walking in Space (1969)",
+    "The Dude (1981)",
+    "Back on the Block (1989)"
+   ],
+   "text": "Quincy Jones groeide op in Chicago en Seattle, begon als trompettist en werd arrangeur en bandleider. Hij schreef voor Count Basie en Frank Sinatra, maakte filmmuziek en produceerde Off the Wall en Thriller voor Michael Jackson. Op zijn album Back on the Block uit 1989 speelden oude jazzmuzikanten als Miles Davis, Dizzy Gillespie en Ella Fitzgerald naast rappers. Dat album won een Grammy voor album van het jaar. Quincy Jones overleed in 2024. Hij bouwde een brug tussen jazz, soul, pop en hiphop.",
+   "listen": "Hoor hoe de strijkers, blazers en funkritmes door elkaar lopen als in een filmscore.",
+   "tracks": [
+    {
+     "film": "Walking in Space",
+     "title": "Walking in Space",
+     "artist": "Quincy Jones",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/23/78/39/23783965-eb35-acbf-06e4-e7ba8af2d19c/mzaf_2867062668745113133.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d3/d0/31/d3d03106-6056-9f8a-fbf3-e78d15c5cee1/06UMGIM16570.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "The Dude",
+     "title": "Ai No Corrida",
+     "artist": "Quincy Jones",
+     "year": 1981,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c0/89/1c/c0891cd7-fe30-7ff2-e98c-1fb674980fe3/mzaf_461680974745336940.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/09/10/1b/09101b1c-be8a-9bc1-d566-3e4a38a2f394/00602567822455.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Back on the Block",
+     "title": "Birdland",
+     "artist": "Quincy Jones",
+     "year": 1989,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/74/c2/a7/74c2a787-8191-753b-ab7c-06bf9aa95327/mzaf_5474746988343384439.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/30/60/68/30606819-9851-202d-35fe-00c94d936c93/00602498837887.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "vince-guaraldi",
+   "name": "Vince Guaraldi",
+   "born": 1928,
+   "died": 1976,
+   "year": 1962,
+   "stroming": "west-coast",
+   "alsoIn": [
+    "bossa-nova"
+   ],
+   "place": {
+    "name": "San Francisco",
+    "lat": 37.77,
+    "lon": -122.42
+   },
+   "influences": [],
+   "films": [
+    "Jazz Impressions of Black Orpheus (1962)",
+    "A Charlie Brown Christmas (1965)",
+    "From All Of Us To All Of You (1966)"
+   ],
+   "text": "Pianist Vince Guaraldi werd geboren in San Francisco en speelde in de jaren vijftig in de groepen van Cal Tjader. In 1962 had hij een radiohit met Cast Your Fate to the Wind, dat in 1963 een Grammy won. Zijn muziek voor de tekenfilm A Charlie Brown Christmas uit 1965, met Linus and Lucy en Christmas Time Is Here, werd het best verkopende jazzalbum aller tijden. Guaraldi overleed in 1976 tijdens een optreden in een nachtclub, 47 jaar oud.",
+   "listen": "Hoor de lichte, huppelende piano die swingt zonder te haasten, alsof het stuk door sneeuw loopt.",
+   "tracks": [
+    {
+     "film": "Jazz Impressions of Black Orpheus",
+     "title": "Cast Your Fate to the Wind",
+     "artist": "Vince Guaraldi Trio",
+     "year": 1962,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2b/49/b3/2b49b31c-0805-92c4-6668-a0fecf51c800/mzaf_4070420222146937026.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/16/50/8a/16508a51-ecef-c206-9c20-8c2695a29b44/00025218485722.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "A Charlie Brown Christmas",
+     "title": "Linus and Lucy",
+     "artist": "Vince Guaraldi Trio",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b1/f2/bf/b1f2bf13-906e-9ac9-60f0-2d9bd4328c26/mzaf_13058864085819952372.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/a3/ba/9d/a3ba9d71-f095-621c-330b-c44c5b48ad12/cover.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "A Charlie Brown Christmas",
+     "title": "Christmas Time Is Here",
+     "artist": "Vince Guaraldi Trio",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a7/48/f0/a748f0f4-a87b-3d9e-ea93-f7a17f712425/mzaf_8097686241562913403.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/a3/ba/9d/a3ba9d71-f095-621c-330b-c44c5b48ad12/cover.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "kenny-burrell",
+   "name": "Kenny Burrell",
+   "born": 1931,
+   "died": null,
+   "year": 1963,
+   "stroming": "hard-bop",
+   "alsoIn": [
+    "soul-jazz"
+   ],
+   "place": {
+    "name": "Detroit → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "charlie-christian",
+    "django-reinhardt"
+   ],
+   "films": [
+    "Midnight Blue (1963)",
+    "Guitar Forms (1965)",
+    "Organ Grinder Swing – met Jimmy Smith (1965)"
+   ],
+   "text": "Gitarist Kenny Burrell uit Detroit begon op zijn twaalfde na het horen van Charlie Christian. In 1951 nam hij als student op met het sextet van Dizzy Gillespie. Hij toerde met Oscar Peterson en verhuisde naar New York. Zijn album Midnight Blue uit 1963 voor Blue Note, met tenorsaxofonist Stanley Turrentine, is een klassieker van bluesy jazz. Met organist Jimmy Smith maakte hij in 1965 Organ Grinder Swing. Later werd hij hoogleraar jazzstudies aan UCLA.",
+   "listen": "Hoor de lage, warme gitaartoon en hoe de saxofoon er rustig overheen speelt.",
+   "tracks": [
+    {
+     "film": "Midnight Blue",
+     "title": "Chitlins Con Carne",
+     "artist": "Kenny Burrell",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/eb/64/d3/eb64d301-3edd-24c0-db67-e19c700d5ad5/mzaf_11464149330740387707.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/57/05/fd/5705fdb5-73a9-9275-591f-2fb823ed01cc/00724349533554.tif/600x600bb.jpg"
+    },
+    {
+     "film": "Midnight Blue",
+     "title": "Midnight Blue",
+     "artist": "Kenny Burrell",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ab/45/7d/ab457d26-5a27-138b-4f00-59fc1b77d373/mzaf_4196873360148872174.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/57/05/fd/5705fdb5-73a9-9275-591f-2fb823ed01cc/00724349533554.tif/600x600bb.jpg"
+    },
+    {
+     "film": "Midnight Blue",
+     "title": "Soul Lament",
+     "artist": "Kenny Burrell",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5d/22/61/5d226199-08b1-13f5-201b-163e275a169c/mzaf_4900568940521664170.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/57/05/fd/5705fdb5-73a9-9275-591f-2fb823ed01cc/00724349533554.tif/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "joshua-redman",
+   "name": "Joshua Redman",
+   "born": 1969,
+   "died": null,
+   "year": 1993,
+   "stroming": "neotraditioneel",
+   "alsoIn": [],
+   "place": {
+    "name": "Berkeley → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "john-coltrane",
+    "ornette-coleman"
+   ],
+   "films": [
+    "Joshua Redman (1993)",
+    "Wish (1993)",
+    "MoodSwing (1994)"
+   ],
+   "text": "Saxofonist Joshua Redman uit Berkeley is de zoon van saxofonist Dewey Redman. Hij studeerde in 1991 met lof af aan Harvard en had een plek bij de rechtenopleiding van Yale, maar koos voor de muziek nadat hij in 1991 de Thelonious Monk-wedstrijd won. Op zijn album Wish uit 1993 speelden gitarist Pat Metheny, bassist Charlie Haden en drummer Billy Higgins mee. Zijn spel is vol, warm en zingend. Hij trok een nieuw publiek naar de jazz van zijn eigen generatie.",
+   "listen": "Hoor de ronde, krachtige toon van de saxofoon die lange lijnen zingt boven de bas.",
+   "tracks": [
+    {
+     "film": "Wish",
+     "title": "Turnaround",
+     "artist": "Joshua Redman",
+     "year": 1993,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b3/a2/87/b3a287e0-c999-3910-8628-76a2b595dc16/mzaf_18097888238015010398.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/87/9a/ab879a6f-d941-e1b0-d3a9-e912a722c765/mzi.ltvdkbxi.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Wish",
+     "title": "Soul Dance",
+     "artist": "Joshua Redman",
+     "year": 1993,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/42/66/20/426620dd-901d-ee6e-4606-ebb2fc3304a4/mzaf_17297115923632639874.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/87/9a/ab879a6f-d941-e1b0-d3a9-e912a722c765/mzi.ltvdkbxi.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Wish",
+     "title": "Tears in Heaven",
+     "artist": "Joshua Redman",
+     "year": 1993,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4a/9a/ad/4a9aad3c-4cb1-4b3d-dd80-56d5a5ac7925/mzaf_14088770535128278677.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/87/9a/ab879a6f-d941-e1b0-d3a9-e912a722c765/mzi.ltvdkbxi.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "diana-krall",
+   "name": "Diana Krall",
+   "born": 1964,
+   "died": null,
+   "year": 1993,
+   "stroming": "vocal-jazz",
+   "alsoIn": [
+    "smooth"
+   ],
+   "place": {
+    "name": "Nanaimo → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "nat-king-cole"
+   ],
+   "films": [
+    "Stepping Out (1993)",
+    "Love Scenes (1997)",
+    "When I Look in Your Eyes (1999)"
+   ],
+   "text": "Zangeres en pianiste Diana Krall uit Nanaimo, Canada, kreeg een beurs voor Berklee en kwam in de jaren tachtig in contact met bassist Ray Brown, die haar leermeester werd. Haar eerste album Stepping Out verscheen in 1993. Met Love Scenes in 1997 en When I Look in Your Eyes in 1999 werd ze wereldberoemd. Ze zingt laag, rustig en in een trage, bluesy stijl, en speelt zelf piano. Acht van haar albums kwamen op nummer één in de Amerikaanse jazzlijst.",
+   "listen": "Hoor de lage stem die bijna fluistert en het kleine trio dat haar zacht begeleidt.",
+   "tracks": [
+    {
+     "film": "Love Scenes",
+     "title": "Peel Me a Grape",
+     "artist": "Diana Krall",
+     "year": 1997,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b4/19/78/b419787f-b306-b2df-7479-26e9589de85c/mzaf_14162986803350500721.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f5/74/3c/f5743c30-7c70-03bc-1aa2-84002cb1bd96/06UMGIM12711.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "When I Look in Your Eyes",
+     "title": "When I Look in Your Eyes",
+     "artist": "Diana Krall",
+     "year": 1999,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2c/e2/c1/2ce2c185-8260-504d-3069-27409906c209/mzaf_13117472480772912059.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/4c/28/b7/4c28b703-8e47-cc33-471f-5a720ec10688/06UMGIM01629.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "When I Look in Your Eyes",
+     "title": "East of the Sun",
+     "artist": "Diana Krall",
+     "year": 1999,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0d/fe/61/0dfe61c0-20ed-d490-c0e5-1a44872b0a66/mzaf_7781211745346872224.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/4c/28/b7/4c28b703-8e47-cc33-471f-5a720ec10688/06UMGIM01629.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "makaya-mccraven",
+   "name": "Makaya McCraven",
+   "born": 1983,
+   "died": null,
+   "year": 2018,
+   "stroming": "nu-jazz",
+   "alsoIn": [
+    "jazzrap"
+   ],
+   "place": {
+    "name": "Parijs → Chicago",
+    "lat": 41.88,
+    "lon": -87.63
+   },
+   "influences": [],
+   "films": [
+    "In the Moment (2015)",
+    "Universal Beings (2018)",
+    "In These Times (2022)"
+   ],
+   "text": "Drummer Makaya McCraven werd in Parijs geboren, groeide op in Massachusetts en verhuisde in 2007 naar Chicago. Hij neemt live sessies op met muzikanten uit verschillende steden en bewerkt die daarna als een producer: hij knipt, herhaalt en verlaagt het tempo, zoals een hiphopproducer met samples. Zijn dubbelalbum Universal Beings uit 2018 bracht muzikanten uit New York, Londen, Los Angeles en Chicago samen, onder wie Shabaka Hutchings. In 2022 volgde In These Times.",
+   "listen": "Hoor de drums die als een hiphopbeat ritmisch herhalen terwijl live muzikanten er overheen spelen.",
+   "tracks": [
+    {
+     "film": "Universal Beings",
+     "title": "Holy Lands",
+     "artist": "Makaya McCraven",
+     "year": 2018,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ac/e3/88/ace38840-d0a9-adbe-8042-3629bc3389ac/mzaf_7257687586682205250.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b6/87/00/b68700f0-f6d8-7890-fd16-6808377bddeb/0603784912073.png/600x600bb.jpg"
+    },
+    {
+     "film": "Universal Beings",
+     "title": "Atlantic Black",
+     "artist": "Makaya McCraven",
+     "year": 2018,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/29/d7/0129d705-a3f9-c7af-9d10-f721f8650512/mzaf_14754621421473894566.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b6/87/00/b68700f0-f6d8-7890-fd16-6808377bddeb/0603784912073.png/600x600bb.jpg"
+    },
+    {
+     "film": "In These Times",
+     "title": "The Fours",
+     "artist": "Makaya McCraven",
+     "year": 2022,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3b/a1/d5/3ba1d594-5904-821f-4345-f994deebbc63/mzaf_1329759715607251648.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/db/7e/cf/db7ecf77-2c69-3ec8-31df-3d4e1397c59a/191404127179.png/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "moses-boyd",
+   "name": "Moses Boyd",
+   "born": 1991,
+   "died": null,
+   "year": 2017,
+   "stroming": "uk-jazz-nieuw",
+   "alsoIn": [
+    "nu-jazz"
+   ],
+   "place": {
+    "name": "Catford, Londen",
+    "lat": 51.51,
+    "lon": -0.13
+   },
+   "influences": [],
+   "films": [
+    "Absolute Zero (2017)",
+    "Displaced Diaspora (2018)",
+    "Dark Matter (2020)"
+   ],
+   "text": "Drummer Moses Boyd groeide op in Catford, in Zuid-Londen, en leerde drummen op school. Via het programma Tomorrow's Warriors kwam hij in de Londense jazzscene. In 2014 vormde hij met saxofonist Binker Golding het duo Binker & Moses. Met zijn eigen groep Exodus, met onder anderen tubaspeler Theon Cross, maakte hij het album Dark Matter, dat in 2020 genomineerd werd voor de Mercury Prize. Hij werkte ook samen met onder anderen Beyoncé en Little Simz.",
+   "listen": "Hoor hoe de drums jazz, dancemuziek en Afro-Caribische ritmes met elkaar vermengen.",
+   "tracks": [
+    {
+     "film": "Dark Matter",
+     "title": "Stranger Than Fiction",
+     "artist": "Moses Boyd",
+     "year": 2020,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b2/83/50/b2835099-41f1-96e6-9599-99268ea527a0/mzaf_16504308925872370582.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/1d/99/da/1d99da12-f3b9-6887-2af1-c1087e69db61/194491654573.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Dark Matter",
+     "title": "BTB",
+     "artist": "Moses Boyd",
+     "year": 2020,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/12/6c/61/126c6156-9c16-df60-e2b2-598abd83deb1/mzaf_8565068936454403381.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/1d/99/da/1d99da12-f3b9-6887-2af1-c1087e69db61/194491654573.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Dark Matter",
+     "title": "Y.O.Y.O",
+     "artist": "Moses Boyd",
+     "year": 2020,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7a/14/1a/7a141a1e-ab50-309c-b5b6-46bf6b210281/mzaf_139310464761906223.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/1d/99/da/1d99da12-f3b9-6887-2af1-c1087e69db61/194491654573.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
