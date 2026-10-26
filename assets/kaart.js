@@ -149,7 +149,7 @@
   const PX_PER_YEAR = 15, ROW = 22, LANE_PAD = 14, LEFT = 290;
   // tijdas naar dichtheid: per vijf jaar meer ruimte waar veel genres en uitvindingen ontstaan, lege stukken smal
   const SPLIT = Math.max(YMIN, 1880);
-  const SEG = (() => { const ys = [...G.map(g => g.year), ...((tech && tech.items) || []).map(d => d.year)], out = []; for (let y = YMIN; y < YMAX + 5; y += 5) { const n = ys.filter(v => v >= y && v < y + 5).length, px = n === 0 ? 2 : Math.min(24, 5 + 1.6 * n); if (!out.length || out[out.length - 1][1] !== px) out.push([y, px]); } return out; })();
+  const SEG = (() => { const ys = [...G.map(g => g.year), ...((tech && tech.items) || []).map(d => d.year)], out = []; for (let y = YMIN; y < YMAX + 5; y += 5) { const n = ys.filter(v => v >= y && v < y + 5).length, px = n === 0 ? (y < 1700 ? 1 : 2) : Math.min(24, 5 + 1.6 * n); if (!out.length || out[out.length - 1][1] !== px) out.push([y, px]); } return out; })();
   const SEGX = []; { let x = 0; SEG.forEach(([y], i) => { SEGX.push(x); if (i < SEG.length - 1) x += (SEG[i + 1][0] - y) * SEG[i][1]; }); }
   const tx = y => { y = Math.max(SEG[0][0], y); let i = SEG.length - 1; while (i > 0 && y < SEG[i][0]) i--; return LEFT + SEGX[i] + (y - SEG[i][0]) * SEG[i][1]; };
   let lanes = [];
@@ -616,7 +616,9 @@
     state.playing = true;
     playBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg>Pauze';
     const tick = () => {
-      state.year += 1; syncYear(); applyVisibility();
+      // lege stukken overslaan: spring vlak voor het volgende genre in plaats van jaar voor jaar te tellen
+      let nx = Infinity; for (const g of G) if (g.year > state.year && g.year < nx && state.fams.has(g.family)) nx = g.year;
+      state.year = nx - state.year > 6 ? nx - 3 : state.year + 1; syncYear(); applyVisibility();
       const born = G.filter(g => g.year === state.year && state.fams.has(g.family));
       if (born.length) {
         nodeSel.filter(d => born.includes(d)).classed('pulse', false).each(function () { void this.getBBox(); }).classed('pulse', true);
