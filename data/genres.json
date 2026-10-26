@@ -10355,6 +10355,219 @@
     }
    ],
    "mixtapes": []
+  },
+  {
+   "id": "tropicalia-mpb",
+   "name": "Tropicália en MPB",
+   "family": "jamaica",
+   "year": 1967,
+   "peak": [
+    1967,
+    1980
+   ],
+   "place": {
+    "name": "Salvador",
+    "lat": -12.97,
+    "lon": -38.51
+   },
+   "parents": [
+    "bossa-nova",
+    "samba",
+    "psychedelic-rock"
+   ],
+   "text": "Tropicália was in 1967 en 1968 de opstand van jonge Braziliaanse musici tegen het eigen cliché. Caetano Veloso en Gilberto Gil combineerden bossanova en samba met elektrische gitaren, psychedelica en experimentele arrangeurs, en zongen over consumptie en over het militaire bewind. Eind 1968 werden ze gearresteerd en in 1969 naar Londen verbannen. Naast deze beweging groeide MPB, música popular brasileira: de brede stroom van zangers als Elis Regina die poëtische teksten en Braziliaanse tradities verbond.",
+   "listen": "Hoor in Alegria, Alegria hoe Caetano Veloso met een elektrische gitaar door een stad vol kranten, reclame en Coca-Cola loopt.",
+   "tracks": [
+    {
+     "artist": "Caetano Veloso",
+     "title": "Alegria, Alegria",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1c/1f/ca/1c1fca83-9096-a56b-cfa3-5125ae2737b1/mzaf_5912019050884300090.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/ae/2f/0f/ae2f0fd0-6b64-7e2a-ca02-d876f3bb8c8d/00602537449491.rgb.jpg/600x600bb.jpg",
+     "id": 1443217552,
+     "store": "https://music.apple.com/nl/album/alegria-alegria/1443216968?i=1443217552"
+    },
+    {
+     "artist": "Gilberto Gil",
+     "title": "Domingo no Parque",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f0/06/90/f0069018-a4ba-231e-42b5-d03cf0a5188b/mzaf_6078893789199854093.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/58/11/a7/5811a72c-4064-5c51-cc7c-ea1855604748/00191018262471_Cover.jpg/600x600bb.jpg",
+     "id": 1576811360,
+     "store": "https://music.apple.com/nl/album/domingo-no-parque/1576811183?i=1576811360"
+    },
+    {
+     "artist": "Os Mutantes",
+     "title": "A Minha Menina",
+     "year": 1968,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8f/ef/05/8fef05f3-d4b3-101a-5bc8-f1c138ba2062/mzaf_4816860518149231638.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d7/fd/d1/d7fdd1ea-9025-6346-0834-48ed931dd62f/00602537449460.rgb.jpg/600x600bb.jpg",
+     "id": 1443152710,
+     "store": "https://music.apple.com/nl/album/a-minha-menina/1443152697?i=1443152710"
+    },
+    {
+     "artist": "Elis Regina & Antônio Carlos Jobim",
+     "title": "Águas de Março",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/46/c9/83/46c98301-28e6-bc75-e495-55638bccca96/mzaf_14687538207891106000.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f1/6e/0c/f16e0cca-3d7a-bd6c-6695-846b583c53b4/18UMGIM64810.rgb.jpg/600x600bb.jpg",
+     "id": 1438430509,
+     "store": "https://music.apple.com/nl/album/%C3%A1guas-de-mar%C3%A7o/1438430508?i=1438430509"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "nueva-cancion",
+   "name": "Nueva canción",
+   "family": "jamaica",
+   "year": 1960,
+   "peak": [
+    1965,
+    1975
+   ],
+   "place": {
+    "name": "Santiago de Chile",
+    "lat": -33.45,
+    "lon": -70.67
+   },
+   "parents": [
+    "folk-revival"
+   ],
+   "text": "Nueva canción, het nieuwe lied, ontstond begin jaren zestig in Chili en Argentinië als verbond van folklore, poëzie en protest. Violeta Parra verzamelde oude liederen van het Chileense platteland en schreef zelf Gracias a la Vida. Víctor Jara maakte het lied politiek, en groepen als Quilapayún en Inti-Illimani brachten Andes-instrumenten zoals de charango en de quena op het podium. Na de staatsgreep van 1973 werd Jara vermoord, en veel musici gingen in ballingschap.",
+   "listen": "Hoor in Te recuerdo Amanda hoe Víctor Jara alleen met een gitaar zingt over een arbeider die naar de fabriek gaat en niet terugkeert.",
+   "tracks": [
+    {
+     "artist": "Violeta Parra",
+     "title": "Gracias a la Vida",
+     "year": 1966,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/46/53/b2/4653b243-3d36-f0c9-8ceb-24ddc6b0bb06/mzaf_1282373472604256755.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5b/62/29/5b6229aa-8508-a8bd-3fa3-f4cfeb06452b/312ac172-b89e-4271-82bb-89c7f942822a.jpg/600x600bb.jpg",
+     "id": 6812939726,
+     "store": "https://music.apple.com/nl/album/gracias-a-la-vida/6812939725?i=6812939726"
+    },
+    {
+     "artist": "Victor Jara",
+     "title": "Te Recuerdo Amanda",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f9/83/60/f9836054-d033-44cc-1589-46f534c43957/mzaf_18097262625653427516.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c8/20/28/c82028dc-65d7-d3bb-ecce-bc046a7f4504/3610159012945.jpg/600x600bb.jpg",
+     "id": 1446644633,
+     "store": "https://music.apple.com/nl/album/te-recuerdo-amanda/1446644362?i=1446644633"
+    },
+    {
+     "artist": "Quilapayún",
+     "title": "El Pueblo Unido Jamás Será Vencido",
+     "year": 1974,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/82/d5/23/82d52323-ad87-e371-ae46-07aa860a011f/mzaf_16240486264250147300.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/49/04/b7/4904b77f-c965-b4db-27c9-92320cbe449d/190296451379.jpg/600x600bb.jpg",
+     "id": 1597495253,
+     "store": "https://music.apple.com/nl/album/el-pueblo-unido-jam%C3%A1s-ser%C3%A1-vencido/1597495240?i=1597495253"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "mbalax",
+   "name": "Mbalax",
+   "family": "wereld",
+   "year": 1975,
+   "peak": [
+    1980,
+    1995
+   ],
+   "place": {
+    "name": "Dakar",
+    "lat": 14.69,
+    "lon": -17.45
+   },
+   "parents": [
+    "son",
+    "west-afrika"
+   ],
+   "text": "Mbalax is de dansmuziek van Senegal. In de jaren zeventig mengden bands in Dakar Cubaanse son met Wolof-zang en de ritmes van de sabar, een hoge trom die met één hand en één stok wordt bespeeld. Dat geeft de muziek haar nerveuze, dansende patroon. Youssou N'Dour maakte mbalax in de jaren tachtig wereldberoemd, en met 7 Seconds, samen met Neneh Cherry, had hij in 1994 een Europese hit.",
+   "listen": "Luister in Immigrés naar de sabar, die het ritme steeds verspringt, en naar de hoge, rekkende stem van N'Dour.",
+   "tracks": [
+    {
+     "artist": "Youssou N'Dour & Étoile de Dakar",
+     "title": "Immigrés",
+     "year": 1984,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a9/4c/d9/a94cd92d-95ca-e726-9f86-b4dc036aefc1/mzaf_8248228846727996042.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/37/2f/35/mzi.mwvvrzdl.jpg/600x600bb.jpg",
+     "id": 451472792,
+     "store": "https://music.apple.com/nl/album/immigr%C3%A9s-bitim-rew/451472765?i=451472792"
+    },
+    {
+     "artist": "Youssou N'Dour",
+     "title": "7 Seconds",
+     "year": 1994,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/be/7a/80/be7a8039-d4a5-5b6f-6343-139355833136/mzaf_2944695472153723330.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/cf/40/2b/mzi.jcrjenvv.jpg/600x600bb.jpg",
+     "id": 456868718,
+     "store": "https://music.apple.com/nl/album/7-seconds-feat-neneh-cherry/456868705?i=456868718"
+    },
+    {
+     "artist": "Orchestra Baobab",
+     "title": "Utrus Horas",
+     "year": 1982,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c0/12/b5/c012b5e5-c818-ccfa-2b32-cbf8f8ac5604/mzaf_12455196036374339505.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/f2/d2/55/f2d255e2-2664-2bd7-2b1c-7aad74113e53/0859381180685.jpg/600x600bb.jpg",
+     "id": 1716606622,
+     "store": "https://music.apple.com/nl/album/utrus-horas/1716606619?i=1716606622"
+    }
+   ],
+   "mixtapes": []
+  },
+  {
+   "id": "juju",
+   "name": "Jùjú",
+   "family": "wereld",
+   "year": 1950,
+   "peak": [
+    1960,
+    1985
+   ],
+   "place": {
+    "name": "Lagos",
+    "lat": 6.52,
+    "lon": 3.38
+   },
+   "parents": [
+    "west-afrika",
+    "highlife"
+   ],
+   "text": "Jùjú is de populaire muziek van de Yoruba in Nigeria. Het begon in de jaren dertig in Lagos met zangers die gitaar en kleine trommels speelden, en I.K. Dairo maakte het in de jaren vijftig en zestig groot. King Sunny Adé bouwde jùjú in de jaren tachtig uit tot een weefsel van talking drums, steelgitaar en meerdere gitaren die door elkaar heen spelen. Zijn album Synchro System (1983) werd genomineerd voor een Grammy.",
+   "listen": "Hoor in Ja Funmi hoe de talking drum met hoge en lage tonen de zang lijkt te beantwoorden, terwijl de gitaren eromheen weven.",
+   "tracks": [
+    {
+     "artist": "King Sunny Ade",
+     "title": "Ja Funmi",
+     "year": 1982,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3c/a2/29/3ca2299b-01a1-9a2f-0a64-42e8c837ff77/mzaf_12707860933878753782.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/b9/c1/4e/b9c14ef4-e95b-7c4d-dd76-55c7a4fd3435/6001208051331_Cover.jpg/600x600bb.jpg",
+     "id": 1631642983,
+     "store": "https://music.apple.com/nl/album/ja-funmi/1631642977?i=1631642983"
+    },
+    {
+     "artist": "King Sunny Ade",
+     "title": "Synchro System",
+     "year": 1983,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/13/37/d8/1337d813-13cd-a60f-8516-6e32e180b725/mzaf_7032781592895919535.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/b9/c1/4e/b9c14ef4-e95b-7c4d-dd76-55c7a4fd3435/6001208051331_Cover.jpg/600x600bb.jpg",
+     "id": 1631642978,
+     "store": "https://music.apple.com/nl/album/synchro-system/1631642977?i=1631642978"
+    },
+    {
+     "artist": "I.K. Dairo & His Blue Spots Band",
+     "title": "Salome",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/af/62/8e/af628ebb-4cd0-a520-8102-779ec8d08c2c/mzaf_15582016646536820227.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e1/87/49/e1874956-3d76-7231-b9f9-1492235be4c3/8433391928356.png/600x600bb.jpg",
+     "id": 1519195138,
+     "store": "https://music.apple.com/nl/album/salome/1519195134?i=1519195138"
+    }
+   ],
+   "mixtapes": []
   }
  ]
 }
