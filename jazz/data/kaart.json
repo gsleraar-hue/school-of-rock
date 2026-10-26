@@ -14144,6 +14144,311 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/ba/9a/c8/mzi.uyvnmeom.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "hank-mobley",
+   "name": "Hank Mobley",
+   "born": 1930,
+   "died": 1986,
+   "year": 1960,
+   "stroming": "hard-bop",
+   "alsoIn": [
+    "soul-jazz"
+   ],
+   "place": {
+    "name": "Elizabeth → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "Soul Station (1960)",
+    "Roll Call (1960)",
+    "Workout (1961)"
+   ],
+   "text": "Tenorsaxofonist Hank Mobley groeide op in Elizabeth, New Jersey, en leerde als zestienjarige zichzelf spelen toen hij ziek thuis lag. Critici noemden zijn toon neutraal tussen de felle stijl van John Coltrane en de zachte stijl van Lester Young. Leonard Feather noemde hem de 'middleweight champion of the tenor saxophone'. Hij speelde in de Jazz Messengers en bij Miles Davis. Zijn album Soul Station uit 1960 voor Blue Note geldt als zijn hoogtepunt. Hij werd lang onderschat en overleed in 1986.",
+   "listen": "Hoor de ontspannen, melodieuze tenorsaxofoon die niets forceert en toch blijft zingen.",
+   "tracks": [
+    {
+     "film": "Soul Station",
+     "title": "Remember",
+     "artist": "Hank Mobley",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e4/cf/25/e4cf2510-44d9-bf21-d480-f75e7f78de62/mzaf_4528587053061785870.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/c0/94/bf/c094bf48-0683-3373-475e-17fe7b266bc7/HANK_MOBLEY.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Soul Station",
+     "title": "This I Dig of You",
+     "artist": "Hank Mobley",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/68/3a/e9/683ae90e-502c-a649-4bfb-e654a0000049/mzaf_6483857961469058605.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/58/3a/00/583a00f1-a679-a355-2cee-e2b4f881d087/19UMGIM32045.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Soul Station",
+     "title": "Dig Dis",
+     "artist": "Hank Mobley",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e0/fc/52/e0fc5275-7edd-cf29-8b52-d9d9e635cbaa/mzaf_7182344438716324913.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/58/3a/00/583a00f1-a679-a355-2cee-e2b4f881d087/19UMGIM32045.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "lou-donaldson",
+   "name": "Lou Donaldson",
+   "born": 1926,
+   "died": 2024,
+   "year": 1958,
+   "stroming": "soul-jazz",
+   "alsoIn": [
+    "hard-bop",
+    "bebop"
+   ],
+   "place": {
+    "name": "Badin → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "charlie-parker"
+   ],
+   "films": [
+    "Blues Walk (1958)",
+    "Alligator Bogaloo (1967)",
+    "Hot Dog (1969)"
+   ],
+   "text": "Altsaxofonist Lou Donaldson werd in Badin, North Carolina, geboren en leerde tijdens zijn dienst bij de marine de bebop kennen. Charlie Parker was zijn grote voorbeeld, maar later koos hij voor een eigen, bluesy en soulvolle stijl. Hij nam jarenlang op voor Blue Note. Met Blues Walk uit 1958 en Alligator Bogaloo uit 1967 had hij succes bij een groot publiek. Hij ontdekte gitarist Grant Green. Donaldson bleef tot ver in zijn tachtiger jaren spelen en overleed in 2024.",
+   "listen": "Hoor de bluesy, zingende altsaxofoon die boven een stevige, dansbare groove speelt.",
+   "tracks": [
+    {
+     "film": "Blues Walk",
+     "title": "Blues Walk",
+     "artist": "Lou Donaldson",
+     "year": 1958,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fd/b0/d6/fdb0d69e-ac44-73bd-5785-097136105064/mzaf_9596545437548569054.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/d9/b7/c7/d9b7c7b5-1fb9-cc01-9af8-18a50f1a4e7a/00077774652551.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Alligator Bogaloo",
+     "title": "Alligator Bogaloo",
+     "artist": "Lou Donaldson",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/71/81/f7/7181f7eb-b716-96b5-5465-58c7b3357bbd/mzaf_3835678377674326458.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/a7/ed/88/a7ed8803-fe2f-5471-6635-247900aefcd4/00602537409655.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Alligator Bogaloo",
+     "title": "Aw Shucks",
+     "artist": "Lou Donaldson",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/8c/d1/1e/8cd11e36-df8d-6c3a-02c2-1f3c053023a4/mzaf_2396010786657351350.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/a7/ed/88/a7ed8803-fe2f-5471-6635-247900aefcd4/00602537409655.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "yusef-lateef",
+   "name": "Yusef Lateef",
+   "born": 1920,
+   "died": 2013,
+   "year": 1961,
+   "stroming": "spiritual-jazz",
+   "alsoIn": [
+    "hard-bop",
+    "modaal"
+   ],
+   "place": {
+    "name": "Chattanooga → Detroit",
+    "lat": 42.33,
+    "lon": -83.05
+   },
+   "influences": [],
+   "films": [
+    "Eastern Sounds (1961)",
+    "The Blue Yusef Lateef (1968)",
+    "Yusef Lateef's Detroit (1969)"
+   ],
+   "text": "Yusef Lateef werd in Chattanooga geboren en groeide op in Detroit. Behalve tenorsaxofoon en dwarsfluit speelde hij hobo en fagot, instrumenten die zelden in de jazz klonken, en ook niet-westerse instrumenten als de bamboefluit en de koto. Hij mengde jazz met oosterse muziek en speelde 'wereldmuziek voordat het woord bestond'. Op Eastern Sounds uit 1961 horen we dat bij elkaar. Hij schreef ook boeken en richtte zijn eigen label op. Hij overleed in 2013.",
+   "listen": "Hoor de dwarsfluit en de hobo die Aziatische melodieën spelen boven een jazzritme.",
+   "tracks": [
+    {
+     "film": "Eastern Sounds",
+     "title": "The Plum Blossom",
+     "artist": "Yusef Lateef",
+     "year": 1961,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/56/2c/d6/562cd6fb-00bc-e02f-a2e3-07e19267e10c/mzaf_13029293341074602904.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/3e/8b/30/3e8b3018-6810-a1a7-3342-0ae789d0c2d9/886788642874.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Eastern Sounds",
+     "title": "Blues for the Orient",
+     "artist": "Yusef Lateef",
+     "year": 1961,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a5/c6/05/a5c60517-b9b7-94d9-31a6-7ccd563f6253/mzaf_6765828303365125498.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/3e/8b/30/3e8b3018-6810-a1a7-3342-0ae789d0c2d9/886788642874.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Eastern Sounds",
+     "title": "Love Theme from Spartacus",
+     "artist": "Yusef Lateef",
+     "year": 1961,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/06/9e/4b/069e4bad-f29f-efd4-7078-6707a144b1b4/mzaf_13181929088350772443.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/5c/55/d7/5c55d774-375f-ae04-5b6b-cf8689b0c797/8718781128548.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "cal-tjader",
+   "name": "Cal Tjader",
+   "born": 1925,
+   "died": 1982,
+   "year": 1958,
+   "stroming": "afro-cubaans",
+   "alsoIn": [
+    "west-coast"
+   ],
+   "place": {
+    "name": "San Mateo → San Francisco",
+    "lat": 37.77,
+    "lon": -122.42
+   },
+   "influences": [],
+   "films": [
+    "Cal Tjader's Latin Concert (1958)",
+    "Soul Sauce (1964)",
+    "La Onda Va Bien (1979)"
+   ],
+   "text": "Vibrafonist Cal Tjader werd in St. Louis geboren als zoon van vaudevillespelers en groeide op in Californië. Hij speelde ook drums, bongo's en conga's. Hij werd de succesvolste muzikant van latin jazz die zelf geen Latijns-Amerikaan was. Mongo Santamaría en Willie Bobo speelden in zijn band. Zijn album Soul Sauce uit 1964, met het nummer Guachi Guara, was een grote hit. Voor het album La Onda Va Bien kreeg hij in 1980 een Grammy. Hij overleed in 1982.",
+   "listen": "Hoor de vibrafoon die boven de conga's en bongo's helder en dansbaar klinkt.",
+   "tracks": [
+    {
+     "film": "Soul Sauce",
+     "title": "Soul Sauce",
+     "artist": "Cal Tjader",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a5/47/33/a5473371-ee23-9919-ca5f-5bf96cbcf4b5/mzaf_8400675267324734386.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/11/3d/e1/113de1bc-ab13-bccf-d3b0-e5f2af7de2c6/00731452166821.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Soul Sauce",
+     "title": "Afro Blue",
+     "artist": "Cal Tjader",
+     "year": 1964,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/da/22/cf/da22cf7e-13c9-0246-0912-017379a24af7/mzaf_4878766047167792659.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/11/3d/e1/113de1bc-ab13-bccf-d3b0-e5f2af7de2c6/00731452166821.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Cal Tjader's Latin Concert",
+     "title": "Mi Guaguanco",
+     "artist": "Cal Tjader",
+     "year": 1958,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/2d/a4/c7/2da4c7c2-1e16-a6e6-797c-2fa3a65e6767/mzaf_1188966264717166693.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/05/70/5f/05705f18-17f6-6ec4-777e-6b96041df583/00025218664325.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "eddie-harris",
+   "name": "Eddie Harris",
+   "born": 1934,
+   "died": 1996,
+   "year": 1961,
+   "stroming": "soul-jazz",
+   "alsoIn": [
+    "hard-bop",
+    "jazzfunk"
+   ],
+   "place": {
+    "name": "Chicago",
+    "lat": 41.88,
+    "lon": -87.63
+   },
+   "influences": [],
+   "films": [
+    "Exodus to Jazz (1961)",
+    "Swiss Movement – met Les McCann (1969)",
+    "Free Speech (1969)"
+   ],
+   "text": "Tenorsaxofonist Eddie Harris groeide op in Chicago en studeerde bij Walter Dyett, net als veel andere Chicagose jazzmusici. Zijn eerste album Exodus to Jazz uit 1961 bevat zijn bewerking van de filmmuziek van Exodus. Hij was een van de eersten die de elektrisch versterkte saxofoon gebruikte. Zijn nummer Freedom Jazz Dance werd in 1966 beroemd door Miles Davis. In 1969 speelde hij op het festival van Montreux met Les McCann. Hij overleed in 1996.",
+   "listen": "Hoor de saxofoon die door een elektrisch apparaat klinkt als een trompet of een synthesizer.",
+   "tracks": [
+    {
+     "film": "Exodus to Jazz",
+     "title": "Exodus",
+     "artist": "Eddie Harris",
+     "year": 1961,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/59/03/48/590348ab-ebbd-31bf-e7bf-4587a4bdc4e7/mzaf_5050771825960482009.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/84/32/f3/8432f3e7-0373-9c88-541c-3c06e76edfa4/00829410752374.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Exodus to Jazz",
+     "title": "Alicia",
+     "artist": "Eddie Harris",
+     "year": 1961,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/bb/b5/07/bbb507f3-791f-93f4-20a3-977de8605169/mzaf_12171015922477359524.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/84/32/f3/8432f3e7-0373-9c88-541c-3c06e76edfa4/00829410752374.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Exodus to Jazz",
+     "title": "Little Girl Blue",
+     "artist": "Eddie Harris",
+     "year": 1961,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f7/c0/f9/f7c0f90b-4ed9-f85a-38be-f07bd247325b/mzaf_12229586439516004379.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/84/32/f3/8432f3e7-0373-9c88-541c-3c06e76edfa4/00829410752374.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "johnny-griffin",
+   "name": "Johnny Griffin",
+   "born": 1928,
+   "died": 2008,
+   "year": 1957,
+   "stroming": "hard-bop",
+   "alsoIn": [
+    "bebop"
+   ],
+   "place": {
+    "name": "Chicago → Parijs",
+    "lat": 48.86,
+    "lon": 2.35
+   },
+   "influences": [],
+   "films": [
+    "A Blowin' Session (1957)",
+    "The Little Giant (1959)",
+    "Change of Pace (1961)"
+   ],
+   "text": "Tenorsaxofonist Johnny Griffin uit Chicago kreeg de bijnaam 'the Little Giant', vanwege zijn lengte en zijn krachtige spel. Op zijn zeventiende speelde hij in de bigband van Lionel Hampton en later speelde hij bij Thelonious Monk en Art Blakey. Op zijn album A Blowin' Session uit 1957 speelden John Coltrane en Hank Mobley mee. Hij speelde ongelooflijk snel. In de jaren zestig verhuisde hij naar Europa. Hij speelde tot kort voor zijn dood in 2008.",
+   "listen": "Hoor de razendsnelle tenorsaxofoon die tussen twee andere saxofoons een strijd aangaat.",
+   "tracks": [
+    {
+     "film": "A Blowin' Session",
+     "title": "Ball Bearing",
+     "artist": "Johnny Griffin",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/aa/67/cb/aa67cb6c-b31a-cedb-d09c-020876559d3c/mzaf_7447911714053594927.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/c6/3e/fa/c63efa23-70b7-ba86-f413-0b4d06bec87e/00724349900950.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "A Blowin' Session",
+     "title": "The Way You Look Tonight",
+     "artist": "Johnny Griffin",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b7/0a/1f/b70a1f76-48c5-25a0-c9d7-bbd22696aaaf/mzaf_1397162794558439684.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/c6/3e/fa/c63efa23-70b7-ba86-f413-0b4d06bec87e/00724349900950.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "A Blowin' Session",
+     "title": "Smoke Stack",
+     "artist": "Johnny Griffin",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f8/bd/06/f8bd069f-f84a-498a-6bee-80d4b7dbffac/mzaf_9689381105641183362.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/c6/3e/fa/c63efa23-70b7-ba86-f413-0b4d06bec87e/00724349900950.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
