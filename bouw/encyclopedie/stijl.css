@@ -140,3 +140,8 @@ body { background: var(--paper); }
 /* Verwijzing naar een Nederlandstalige pagina vanuit de Engelse versie */
 .nltag { font: 600 9px/1 var(--mono); letter-spacing: .06em; color: var(--red); margin-left: 3px; vertical-align: super; text-transform: uppercase; }
 .sitenav .nltag { color: inherit; opacity: .6; }
+
+.bez { border-top: 1px solid var(--line); padding: 8px 0; }
+.bez summary { cursor: pointer; }
+.bezlid { list-style: none; padding: 6px 0 0 18px; margin: 0; columns: 2; }
+@media (max-width: 600px) { .bezlid { columns: 1; } }

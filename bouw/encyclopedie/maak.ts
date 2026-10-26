@@ -326,6 +326,19 @@ function stubLead(l: any) {
   return `<p>${s}</p>`;
 }
 
+// ---------- Bezetting (vaste leden per periode; bezetting.json naast dit script) ----------
+const BEZ: Record<string, any[]> = exists(ED + "bezetting.json") ? r(ED + "bezetting.json") : {};
+const ROL_EN: Record<string, string> = { zang: "vocals", gitaar: "guitar", basgitaar: "bass", drums: "drums", toetsen: "keyboards", fluit: "flute", percussie: "percussion", viool: "violin", saxofoon: "saxophone", blaasinstrumenten: "wind instruments", teksten: "lyrics", licht: "lighting", en: "and", vanaf: "from", tot: "until" };
+const rolTekst = (t: string) => LANG === "en" ? t.replace(/[a-zA-Z]+/g, (w) => ROL_EN[w] || w) : t;
+function bezettingHtml(l: any): string {
+  const blokken = BEZ[l.id]; if (!blokken?.length) return "";
+  werkIdx();
+  const jr = (x: any) => x.tot ? `${x.van}–${x.tot}` : `${x.van}–${nt("heden", "present")}`;
+  const lid = (m: any) => { const id = ART_IDX.get(wNorm(m.naam)); return `<li>${id ? a(id) : esc(m.naam)} <span class="klein">${esc(rolTekst(m.rol))}${m.wat ? ", " + esc(rolTekst(m.wat)) : ""}</span></li>`; };
+  const labelEn = (x: string) => LANG === "en" ? x.replace(/^Periode/, "Period").replace(/reünie/i, "reunion").replace(/-periode/, " era").replace(/-bezetting/, " line-up").replace(/^Klassieke bezetting/, "Classic line-up").replace(/^Originele bezetting/, "Original line-up").replace(/^Reünie/, "Reunion").replace(/^Duo/, "Duo").replace(/^Afscheidsperiode/, "Farewell era").replace(/^Hamburg era/, "Hamburg era") : x;
+  return `<p class="klein">${nt("Alleen de vaste leden; tour- en sessiemuzikanten staan er niet bij.", "Core members only; touring and session musicians are not listed.")}</p>` + blokken.map((x: any) => `<details class="bez"${x.open ? " open" : ""}><summary><b>${esc(labelEn(x.label))}</b> <span class="klein">${jr(x)}</span></summary><ul class="bezlid">${x.leden.map(lid).join("")}</ul></details>`).join("");
+}
+
 // ---------- Lemma-pagina ----------
 function lemmaPage(l: any) {
   const gezien = new Set<string>();
@@ -341,6 +354,7 @@ function lemmaPage(l: any) {
     } else lead += html.map((p, i) => `<p>${i ? p : vet(p, l.name)}</p>`).join("");
   }
   if (!lead) { lead = stubLead(l); for (const id of (l.links.genre || []).slice(0, 3)) gezien.add(id); }
+  { const bz = bezettingHtml(l); if (bz) secties.push(["bezetting", nt("Bezetting", "Line-up"), bz]); }
   if (l.extra?.length) secties.push(["geschiedenis", nt("Uit de tijdlijnen", "From the timelines"), l.extra.map((e: any) => `<h3>${esc(e.titel)} (${e.jaar})</h3><p>${linkify(e.text, l.id, gezien)}</p>`).join("")]);
   const tracks = (l.tracks || []).filter((t: any) => t.audio).slice(0, 12);
   if (l.listen || tracks.length) {

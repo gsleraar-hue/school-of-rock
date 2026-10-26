@@ -1,0 +1,1579 @@
+{
+ "artiest/deep-purple": [
+  {
+   "label": "Mk I",
+   "van": 1968,
+   "tot": 1969,
+   "leden": [
+    {
+     "naam": "Rod Evans",
+     "rol": "zang"
+    },
+    {
+     "naam": "Ritchie Blackmore",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Jon Lord",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Nick Simper",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Ian Paice",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Mk II",
+   "van": 1969,
+   "tot": 1973,
+   "open": true,
+   "leden": [
+    {
+     "naam": "Ian Gillan",
+     "rol": "zang"
+    },
+    {
+     "naam": "Ritchie Blackmore",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Jon Lord",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Roger Glover",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Ian Paice",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Mk III",
+   "van": 1973,
+   "tot": 1975,
+   "leden": [
+    {
+     "naam": "David Coverdale",
+     "rol": "zang"
+    },
+    {
+     "naam": "Glenn Hughes",
+     "rol": "basgitaar en zang"
+    },
+    {
+     "naam": "Ritchie Blackmore",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Jon Lord",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Ian Paice",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Mk IV",
+   "van": 1975,
+   "tot": 1976,
+   "leden": [
+    {
+     "naam": "David Coverdale",
+     "rol": "zang"
+    },
+    {
+     "naam": "Glenn Hughes",
+     "rol": "basgitaar en zang"
+    },
+    {
+     "naam": "Tommy Bolin",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Jon Lord",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Ian Paice",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Mk II (reünie)",
+   "van": 1984,
+   "tot": 1989,
+   "leden": [
+    {
+     "naam": "Ian Gillan",
+     "rol": "zang"
+    },
+    {
+     "naam": "Ritchie Blackmore",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Jon Lord",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Roger Glover",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Ian Paice",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Mk V",
+   "van": 1989,
+   "tot": 1992,
+   "leden": [
+    {
+     "naam": "Joe Lynn Turner",
+     "rol": "zang"
+    },
+    {
+     "naam": "Ritchie Blackmore",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Jon Lord",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Roger Glover",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Ian Paice",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Mk VII",
+   "van": 1994,
+   "tot": 2002,
+   "leden": [
+    {
+     "naam": "Ian Gillan",
+     "rol": "zang"
+    },
+    {
+     "naam": "Steve Morse",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Jon Lord",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Roger Glover",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Ian Paice",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Mk VIII",
+   "van": 2002,
+   "tot": 2022,
+   "leden": [
+    {
+     "naam": "Ian Gillan",
+     "rol": "zang"
+    },
+    {
+     "naam": "Steve Morse",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Don Airey",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Roger Glover",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Ian Paice",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Mk IX",
+   "van": 2022,
+   "tot": null,
+   "leden": [
+    {
+     "naam": "Ian Gillan",
+     "rol": "zang"
+    },
+    {
+     "naam": "Simon McBride",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Don Airey",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Roger Glover",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Ian Paice",
+     "rol": "drums"
+    }
+   ]
+  }
+ ],
+ "artiest/fleetwood-mac": [
+  {
+   "label": "Periode 1",
+   "van": 1967,
+   "tot": 1970,
+   "leden": [
+    {
+     "naam": "Peter Green",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Jeremy Spencer",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Danny Kirwan",
+     "rol": "gitaar en zang",
+     "wat": "vanaf 1968"
+    },
+    {
+     "naam": "John McVie",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Mick Fleetwood",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Periode 2",
+   "van": 1970,
+   "tot": 1971,
+   "leden": [
+    {
+     "naam": "Jeremy Spencer",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Danny Kirwan",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Christine McVie",
+     "rol": "toetsen en zang"
+    },
+    {
+     "naam": "John McVie",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Mick Fleetwood",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Periode 3",
+   "van": 1971,
+   "tot": 1974,
+   "leden": [
+    {
+     "naam": "Bob Welch",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Christine McVie",
+     "rol": "toetsen en zang"
+    },
+    {
+     "naam": "John McVie",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Mick Fleetwood",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Rumours-bezetting",
+   "van": 1975,
+   "tot": 1987,
+   "open": true,
+   "leden": [
+    {
+     "naam": "Stevie Nicks",
+     "rol": "zang"
+    },
+    {
+     "naam": "Lindsey Buckingham",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Christine McVie",
+     "rol": "toetsen en zang"
+    },
+    {
+     "naam": "John McVie",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Mick Fleetwood",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Periode 5",
+   "van": 1987,
+   "tot": 1991,
+   "leden": [
+    {
+     "naam": "Stevie Nicks",
+     "rol": "zang"
+    },
+    {
+     "naam": "Billy Burnette",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Rick Vito",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Christine McVie",
+     "rol": "toetsen en zang"
+    },
+    {
+     "naam": "John McVie",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Mick Fleetwood",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Reünie",
+   "van": 1997,
+   "tot": 2018,
+   "leden": [
+    {
+     "naam": "Stevie Nicks",
+     "rol": "zang"
+    },
+    {
+     "naam": "Lindsey Buckingham",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Christine McVie",
+     "rol": "toetsen en zang"
+    },
+    {
+     "naam": "John McVie",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Mick Fleetwood",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Periode 7",
+   "van": 2018,
+   "tot": 2022,
+   "leden": [
+    {
+     "naam": "Stevie Nicks",
+     "rol": "zang"
+    },
+    {
+     "naam": "Neil Finn",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Mike Campbell",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Christine McVie",
+     "rol": "toetsen en zang",
+     "wat": "tot 2022"
+    },
+    {
+     "naam": "John McVie",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Mick Fleetwood",
+     "rol": "drums"
+    }
+   ]
+  }
+ ],
+ "artiest/yes": [
+  {
+   "label": "Periode 1",
+   "van": 1968,
+   "tot": 1970,
+   "leden": [
+    {
+     "naam": "Jon Anderson",
+     "rol": "zang"
+    },
+    {
+     "naam": "Peter Banks",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Tony Kaye",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Chris Squire",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Bill Bruford",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Periode 2",
+   "van": 1970,
+   "tot": 1971,
+   "leden": [
+    {
+     "naam": "Jon Anderson",
+     "rol": "zang"
+    },
+    {
+     "naam": "Steve Howe",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Tony Kaye",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Chris Squire",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Bill Bruford",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Klassieke bezetting",
+   "van": 1971,
+   "tot": 1972,
+   "open": true,
+   "leden": [
+    {
+     "naam": "Jon Anderson",
+     "rol": "zang"
+    },
+    {
+     "naam": "Steve Howe",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Rick Wakeman",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Chris Squire",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Bill Bruford",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Periode 4",
+   "van": 1972,
+   "tot": 1974,
+   "leden": [
+    {
+     "naam": "Jon Anderson",
+     "rol": "zang"
+    },
+    {
+     "naam": "Steve Howe",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Rick Wakeman",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Chris Squire",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Alan White",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Periode 5",
+   "van": 1974,
+   "tot": 1976,
+   "leden": [
+    {
+     "naam": "Jon Anderson",
+     "rol": "zang"
+    },
+    {
+     "naam": "Steve Howe",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Patrick Moraz",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Chris Squire",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Alan White",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Periode 6",
+   "van": 1976,
+   "tot": 1979,
+   "leden": [
+    {
+     "naam": "Jon Anderson",
+     "rol": "zang"
+    },
+    {
+     "naam": "Steve Howe",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Rick Wakeman",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Chris Squire",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Alan White",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Drama-bezetting",
+   "van": 1980,
+   "tot": 1981,
+   "leden": [
+    {
+     "naam": "Trevor Horn",
+     "rol": "zang"
+    },
+    {
+     "naam": "Steve Howe",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Geoff Downes",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Chris Squire",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Alan White",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "90125-bezetting",
+   "van": 1983,
+   "tot": 1988,
+   "leden": [
+    {
+     "naam": "Jon Anderson",
+     "rol": "zang"
+    },
+    {
+     "naam": "Trevor Rabin",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Tony Kaye",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Chris Squire",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Alan White",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Union",
+   "van": 1991,
+   "tot": 1992,
+   "leden": [
+    {
+     "naam": "Jon Anderson",
+     "rol": "zang"
+    },
+    {
+     "naam": "Steve Howe",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Trevor Rabin",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Rick Wakeman",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Tony Kaye",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Chris Squire",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Bill Bruford",
+     "rol": "drums"
+    },
+    {
+     "naam": "Alan White",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Periode 10",
+   "van": 2012,
+   "tot": 2015,
+   "leden": [
+    {
+     "naam": "Jon Davison",
+     "rol": "zang"
+    },
+    {
+     "naam": "Steve Howe",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Geoff Downes",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Chris Squire",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Alan White",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Periode 11",
+   "van": 2023,
+   "tot": null,
+   "leden": [
+    {
+     "naam": "Jon Davison",
+     "rol": "zang"
+    },
+    {
+     "naam": "Steve Howe",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Geoff Downes",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Billy Sherwood",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Jay Schellen",
+     "rol": "drums"
+    }
+   ]
+  }
+ ],
+ "artiest/black-sabbath": [
+  {
+   "label": "Originele bezetting",
+   "van": 1968,
+   "tot": 1979,
+   "open": true,
+   "leden": [
+    {
+     "naam": "Ozzy Osbourne",
+     "rol": "zang"
+    },
+    {
+     "naam": "Tony Iommi",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Geezer Butler",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Bill Ward",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Dio-periode",
+   "van": 1979,
+   "tot": 1982,
+   "leden": [
+    {
+     "naam": "Ronnie James Dio",
+     "rol": "zang"
+    },
+    {
+     "naam": "Tony Iommi",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Geezer Butler",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Bill Ward",
+     "rol": "drums",
+     "wat": "1979–1980"
+    },
+    {
+     "naam": "Vinny Appice",
+     "rol": "drums",
+     "wat": "vanaf 1980"
+    }
+   ]
+  },
+  {
+   "label": "Born Again",
+   "van": 1983,
+   "tot": 1984,
+   "leden": [
+    {
+     "naam": "Ian Gillan",
+     "rol": "zang"
+    },
+    {
+     "naam": "Tony Iommi",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Geezer Butler",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Bev Bevan",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Tony Martin-periode",
+   "van": 1989,
+   "tot": 1991,
+   "leden": [
+    {
+     "naam": "Tony Martin",
+     "rol": "zang"
+    },
+    {
+     "naam": "Tony Iommi",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Neil Murray",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Cozy Powell",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Reünie",
+   "van": 1997,
+   "tot": 2006,
+   "leden": [
+    {
+     "naam": "Ozzy Osbourne",
+     "rol": "zang"
+    },
+    {
+     "naam": "Tony Iommi",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Geezer Butler",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Bill Ward",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Afscheidsperiode",
+   "van": 2011,
+   "tot": 2017,
+   "leden": [
+    {
+     "naam": "Ozzy Osbourne",
+     "rol": "zang"
+    },
+    {
+     "naam": "Tony Iommi",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Geezer Butler",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Bill Ward",
+     "rol": "drums",
+     "wat": "2011–2012"
+    }
+   ]
+  }
+ ],
+ "artiest/genesis": [
+  {
+   "label": "Periode 1",
+   "van": 1967,
+   "tot": 1970,
+   "leden": [
+    {
+     "naam": "Peter Gabriel",
+     "rol": "zang"
+    },
+    {
+     "naam": "Anthony Phillips",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Tony Banks",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Mike Rutherford",
+     "rol": "basgitaar en gitaar"
+    },
+    {
+     "naam": "John Mayhew",
+     "rol": "drums",
+     "wat": "1969–1970"
+    }
+   ]
+  },
+  {
+   "label": "Gabriel-periode",
+   "van": 1970,
+   "tot": 1975,
+   "open": true,
+   "leden": [
+    {
+     "naam": "Peter Gabriel",
+     "rol": "zang en fluit"
+    },
+    {
+     "naam": "Steve Hackett",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Tony Banks",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Mike Rutherford",
+     "rol": "basgitaar en gitaar"
+    },
+    {
+     "naam": "Phil Collins",
+     "rol": "drums en zang"
+    }
+   ]
+  },
+  {
+   "label": "Quartet-periode",
+   "van": 1975,
+   "tot": 1977,
+   "leden": [
+    {
+     "naam": "Phil Collins",
+     "rol": "zang en drums"
+    },
+    {
+     "naam": "Steve Hackett",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Tony Banks",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Mike Rutherford",
+     "rol": "basgitaar en gitaar"
+    }
+   ]
+  },
+  {
+   "label": "Trio-periode",
+   "van": 1978,
+   "tot": 1996,
+   "leden": [
+    {
+     "naam": "Phil Collins",
+     "rol": "zang en drums"
+    },
+    {
+     "naam": "Tony Banks",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Mike Rutherford",
+     "rol": "gitaar en basgitaar"
+    }
+   ]
+  },
+  {
+   "label": "Ray Wilson-periode",
+   "van": 1996,
+   "tot": 1999,
+   "leden": [
+    {
+     "naam": "Ray Wilson",
+     "rol": "zang"
+    },
+    {
+     "naam": "Tony Banks",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Mike Rutherford",
+     "rol": "gitaar en basgitaar"
+    }
+   ]
+  },
+  {
+   "label": "Reünie",
+   "van": 2006,
+   "tot": 2022,
+   "leden": [
+    {
+     "naam": "Phil Collins",
+     "rol": "zang en drums"
+    },
+    {
+     "naam": "Tony Banks",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Mike Rutherford",
+     "rol": "gitaar en basgitaar"
+    }
+   ]
+  }
+ ],
+ "artiest/king-crimson": [
+  {
+   "label": "Periode 1",
+   "van": 1968,
+   "tot": 1969,
+   "open": true,
+   "leden": [
+    {
+     "naam": "Greg Lake",
+     "rol": "basgitaar en zang"
+    },
+    {
+     "naam": "Robert Fripp",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Ian McDonald",
+     "rol": "blaasinstrumenten en toetsen"
+    },
+    {
+     "naam": "Michael Giles",
+     "rol": "drums"
+    },
+    {
+     "naam": "Peter Sinfield",
+     "rol": "teksten en licht"
+    }
+   ]
+  },
+  {
+   "label": "Periode 2",
+   "van": 1970,
+   "tot": 1972,
+   "leden": [
+    {
+     "naam": "Robert Fripp",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Mel Collins",
+     "rol": "saxofoon en fluit"
+    },
+    {
+     "naam": "Gordon Haskell",
+     "rol": "basgitaar en zang",
+     "wat": "1970"
+    },
+    {
+     "naam": "Boz Burrell",
+     "rol": "basgitaar en zang",
+     "wat": "1971–1972"
+    },
+    {
+     "naam": "Andy McCulloch",
+     "rol": "drums",
+     "wat": "1970"
+    },
+    {
+     "naam": "Ian Wallace",
+     "rol": "drums",
+     "wat": "1971–1972"
+    },
+    {
+     "naam": "Peter Sinfield",
+     "rol": "teksten en licht",
+     "wat": "tot 1971"
+    }
+   ]
+  },
+  {
+   "label": "Periode 3",
+   "van": 1972,
+   "tot": 1974,
+   "leden": [
+    {
+     "naam": "John Wetton",
+     "rol": "basgitaar en zang"
+    },
+    {
+     "naam": "Robert Fripp",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "David Cross",
+     "rol": "viool en toetsen"
+    },
+    {
+     "naam": "Bill Bruford",
+     "rol": "drums"
+    },
+    {
+     "naam": "Jamie Muir",
+     "rol": "percussie",
+     "wat": "1972–1973"
+    }
+   ]
+  },
+  {
+   "label": "Periode 4",
+   "van": 1981,
+   "tot": 1984,
+   "leden": [
+    {
+     "naam": "Adrian Belew",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Robert Fripp",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Tony Levin",
+     "rol": "basgitaar en Chapman Stick"
+    },
+    {
+     "naam": "Bill Bruford",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Double Trio",
+   "van": 1994,
+   "tot": 1999,
+   "leden": [
+    {
+     "naam": "Adrian Belew",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Robert Fripp",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Trey Gunn",
+     "rol": "Warr-gitaar en Chapman Stick"
+    },
+    {
+     "naam": "Tony Levin",
+     "rol": "basgitaar en Chapman Stick"
+    },
+    {
+     "naam": "Pat Mastelotto",
+     "rol": "drums"
+    },
+    {
+     "naam": "Bill Bruford",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Periode 6",
+   "van": 2000,
+   "tot": 2003,
+   "leden": [
+    {
+     "naam": "Adrian Belew",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Robert Fripp",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Trey Gunn",
+     "rol": "Warr-gitaar"
+    },
+    {
+     "naam": "Pat Mastelotto",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Periode 7",
+   "van": 2013,
+   "tot": 2021,
+   "leden": [
+    {
+     "naam": "Jakko Jakszyk",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Robert Fripp",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Mel Collins",
+     "rol": "saxofoon en fluit"
+    },
+    {
+     "naam": "Tony Levin",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Pat Mastelotto",
+     "rol": "drums"
+    },
+    {
+     "naam": "Gavin Harrison",
+     "rol": "drums"
+    },
+    {
+     "naam": "Bill Rieflin",
+     "rol": "drums en toetsen",
+     "wat": "2013–2016 en 2017–2019"
+    },
+    {
+     "naam": "Jeremy Stacey",
+     "rol": "drums en toetsen",
+     "wat": "vanaf 2016"
+    }
+   ]
+  }
+ ],
+ "artiest/pink-floyd": [
+  {
+   "label": "Barrett-periode",
+   "van": 1965,
+   "tot": 1968,
+   "leden": [
+    {
+     "naam": "Syd Barrett",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Roger Waters",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Richard Wright",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Nick Mason",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Klassieke bezetting",
+   "van": 1968,
+   "tot": 1979,
+   "open": true,
+   "leden": [
+    {
+     "naam": "David Gilmour",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Roger Waters",
+     "rol": "basgitaar en zang"
+    },
+    {
+     "naam": "Richard Wright",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Nick Mason",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Trio-periode",
+   "van": 1979,
+   "tot": 1985,
+   "leden": [
+    {
+     "naam": "David Gilmour",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Roger Waters",
+     "rol": "basgitaar en zang"
+    },
+    {
+     "naam": "Nick Mason",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Gilmour-periode",
+   "van": 1987,
+   "tot": 2014,
+   "leden": [
+    {
+     "naam": "David Gilmour",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Nick Mason",
+     "rol": "drums"
+    },
+    {
+     "naam": "Richard Wright",
+     "rol": "toetsen",
+     "wat": "1987–2008"
+    }
+   ]
+  }
+ ],
+ "artiest/the-beatles": [
+  {
+   "label": "Hamburg-periode",
+   "van": 1960,
+   "tot": 1962,
+   "leden": [
+    {
+     "naam": "John Lennon",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Paul McCartney",
+     "rol": "basgitaar en zang"
+    },
+    {
+     "naam": "George Harrison",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Stuart Sutcliffe",
+     "rol": "basgitaar",
+     "wat": "tot 1961"
+    },
+    {
+     "naam": "Pete Best",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Klassieke bezetting",
+   "van": 1962,
+   "tot": 1970,
+   "open": true,
+   "leden": [
+    {
+     "naam": "John Lennon",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Paul McCartney",
+     "rol": "basgitaar en zang"
+    },
+    {
+     "naam": "George Harrison",
+     "rol": "gitaar en zang"
+    },
+    {
+     "naam": "Ringo Starr",
+     "rol": "drums"
+    }
+   ]
+  }
+ ],
+ "artiest/the-who": [
+  {
+   "label": "Klassieke bezetting",
+   "van": 1964,
+   "tot": 1978,
+   "open": true,
+   "leden": [
+    {
+     "naam": "Roger Daltrey",
+     "rol": "zang"
+    },
+    {
+     "naam": "Pete Townshend",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "John Entwistle",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Keith Moon",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Kenney Jones-periode",
+   "van": 1978,
+   "tot": 1982,
+   "leden": [
+    {
+     "naam": "Roger Daltrey",
+     "rol": "zang"
+    },
+    {
+     "naam": "Pete Townshend",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "John Entwistle",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Kenney Jones",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Reünie",
+   "van": 1996,
+   "tot": 2002,
+   "leden": [
+    {
+     "naam": "Roger Daltrey",
+     "rol": "zang"
+    },
+    {
+     "naam": "Pete Townshend",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "John Entwistle",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Zak Starkey",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Duo",
+   "van": 2002,
+   "tot": null,
+   "leden": [
+    {
+     "naam": "Roger Daltrey",
+     "rol": "zang"
+    },
+    {
+     "naam": "Pete Townshend",
+     "rol": "gitaar"
+    }
+   ]
+  }
+ ],
+ "rainbow": [
+  {
+   "label": "Dio-periode",
+   "van": 1975,
+   "tot": 1978,
+   "leden": [
+    {
+     "naam": "Ronnie James Dio",
+     "rol": "zang"
+    },
+    {
+     "naam": "Ritchie Blackmore",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Jimmy Bain",
+     "rol": "basgitaar",
+     "wat": "tot 1977"
+    },
+    {
+     "naam": "Bob Daisley",
+     "rol": "basgitaar",
+     "wat": "1977–1978"
+    },
+    {
+     "naam": "Tony Carey",
+     "rol": "toetsen",
+     "wat": "tot 1977"
+    },
+    {
+     "naam": "Cozy Powell",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Bonnet-periode",
+   "van": 1979,
+   "tot": 1980,
+   "leden": [
+    {
+     "naam": "Graham Bonnet",
+     "rol": "zang"
+    },
+    {
+     "naam": "Ritchie Blackmore",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "Don Airey",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Roger Glover",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Cozy Powell",
+     "rol": "drums"
+    }
+   ]
+  },
+  {
+   "label": "Turner-periode",
+   "van": 1980,
+   "tot": 1984,
+   "leden": [
+    {
+     "naam": "Joe Lynn Turner",
+     "rol": "zang"
+    },
+    {
+     "naam": "Ritchie Blackmore",
+     "rol": "gitaar"
+    },
+    {
+     "naam": "David Rosenthal",
+     "rol": "toetsen"
+    },
+    {
+     "naam": "Roger Glover",
+     "rol": "basgitaar"
+    },
+    {
+     "naam": "Bob Rondinelli",
+     "rol": "drums"
+    }
+   ]
+  }
+ ]
+}
