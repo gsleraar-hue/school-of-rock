@@ -15728,6 +15728,315 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c4/82/0a/c4820ac5-a12f-7f0d-40ba-a5ec1f85c486/19UMGIM73115.rgb.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "frank-sinatra",
+   "name": "Frank Sinatra",
+   "born": 1915,
+   "died": 1998,
+   "year": 1955,
+   "stroming": "vocal-jazz",
+   "alsoIn": [
+    "swing",
+    "bigband"
+   ],
+   "place": {
+    "name": "Hoboken",
+    "lat": 40.74,
+    "lon": -74.03
+   },
+   "influences": [
+    "billie-holiday"
+   ],
+   "films": [
+    "In the Wee Small Hours (1955)",
+    "Songs for Swingin' Lovers! (1956)",
+    "Francis Albert Sinatra & Antonio Carlos Jobim (1967)"
+   ],
+   "text": "Zanger Frank Sinatra werd in Hoboken, New Jersey, geboren in een Italiaanse immigrantenfamilie. In 1939 werd hij zanger bij de band van Harry James en in 1943 tekende hij bij Columbia. Bij Capitol maakte hij met arrangeur Nelson Riddle albums als In the Wee Small Hours uit 1955 en Songs for Swingin' Lovers! uit 1956. In 1960 begon hij zijn eigen label Reprise. Hij nam ook op met Count Basie en Antônio Carlos Jobim. Zijn stem klinkt vrij, intiem en altijd precies op de tekst. Hij overleed in 1998.",
+   "listen": "Hoor hoe hij elke zin vertelt alsof hij het voor jou zingt, met een swingende band eronder.",
+   "tracks": [
+    {
+     "film": "In the Wee Small Hours",
+     "title": "In the Wee Small Hours of the Morning",
+     "artist": "Frank Sinatra",
+     "year": 1955,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/09/54/70/095470d4-babb-0de2-98ff-cb9c5506f477/mzaf_5059154294555985923.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/97/a7/42/97a7424f-8161-052f-ce3c-93730c2d30de/14UMGIM32540.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Songs for Swingin' Lovers!",
+     "title": "I've Got You Under My Skin",
+     "artist": "Frank Sinatra",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/03/c5/63/03c563f3-da9c-39dd-6b38-042428511477/mzaf_1362176521401549303.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9d/ae/86/9dae867b-e8dc-5e83-9079-bacd32aa1da7/15UMGIM78881.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Songs for Swingin' Lovers!",
+     "title": "You Make Me Feel So Young",
+     "artist": "Frank Sinatra",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/88/59/d3/8859d35d-dfcd-dcdb-6e96-6946bad9a90e/mzaf_4450312660922028386.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9d/ae/86/9dae867b-e8dc-5e83-9079-bacd32aa1da7/15UMGIM78881.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "tony-bennett",
+   "name": "Tony Bennett",
+   "born": 1926,
+   "died": 2023,
+   "year": 1962,
+   "stroming": "vocal-jazz",
+   "alsoIn": [
+    "swing"
+   ],
+   "place": {
+    "name": "Astoria, Queens",
+    "lat": 40.77,
+    "lon": -73.93
+   },
+   "influences": [
+    "louis-armstrong"
+   ],
+   "films": [
+    "The Beat of My Heart (1957)",
+    "I Left My Heart in San Francisco (1962)",
+    "The Tony Bennett/Bill Evans Album (1975)"
+   ],
+   "text": "Zanger Tony Bennett werd in Astoria, Queens, geboren als Anthony Benedetto. Hij vocht als infanterist in de laatste fase van de Tweede Wereldoorlog, tekende daarna bij Columbia en had in 1951 zijn eerste nummer één met Because of You. In de jaren vijftig richtte hij zich meer op jazz, met albums als The Beat of My Heart. In 1962 nam hij zijn kenmerkende lied I Left My Heart in San Francisco op. Hij won twintig Grammy's en maakte in 1975 een album met pianist Bill Evans. Hij overleed in 2023.",
+   "listen": "Hoor de krachtige, warme stem die zonder microfoon in de zaal zou kunnen doordringen.",
+   "tracks": [
+    {
+     "film": "I Left My Heart in San Francisco",
+     "title": "I Left My Heart in San Francisco",
+     "artist": "Tony Bennett",
+     "year": 1962,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/7c/02/9f7c02ef-6ad6-35e0-c027-8dac23712a81/mzaf_3721933255468498138.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/eb/4b/a3/eb4ba3b5-c932-222c-1b99-c3ae3f86b497/074640866920.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "I Left My Heart in San Francisco",
+     "title": "Smile",
+     "artist": "Tony Bennett",
+     "year": 1962,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/33/d4/a8/33d4a8ca-de5c-d460-3659-ec4ee52766f9/mzaf_11295843878636219095.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/eb/4b/a3/eb4ba3b5-c932-222c-1b99-c3ae3f86b497/074640866920.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "I Left My Heart in San Francisco",
+     "title": "Once Upon a Time",
+     "artist": "Tony Bennett",
+     "year": 1962,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d4/38/ec/d438ec22-71c0-a888-8e77-6ac7df4f785e/mzaf_13514498719115592097.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/eb/4b/a3/eb4ba3b5-c932-222c-1b99-c3ae3f86b497/074640866920.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stan-kenton",
+   "name": "Stan Kenton",
+   "born": 1911,
+   "died": 1979,
+   "year": 1941,
+   "stroming": "bigband",
+   "alsoIn": [
+    "west-coast",
+    "third-stream"
+   ],
+   "place": {
+    "name": "Wichita → Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+   },
+   "influences": [],
+   "films": [
+    "Innovations in Modern Music (1950)",
+    "Kenton in Hi-Fi (1956)",
+    "Cuban Fire! (1956)"
+   ],
+   "text": "Pianist, componist en arrangeur Stan Kenton werd in Wichita, Kansas, geboren en groeide op in Californië. Bijna veertig jaar leidde hij een vernieuwend en invloedrijk jazzorkest, met harde, dramatische blazersklanken. Hij had hits vanaf het begin van de jaren veertig en zijn muziek keek altijd vooruit. In 1959 richtte hij het Stan Kenton Jazz Camp op, aan de Indiana University, en werd hij een pionier van jazzonderwijs. Zijn albums Kenton in Hi-Fi en Cuban Fire! uit 1956 zijn bekende voorbeelden van zijn stijl. Hij overleed in 1979.",
+   "listen": "Hoor de muur van trombones en trompetten die in een bigband net iets te hard en te groot klinkt.",
+   "tracks": [
+    {
+     "film": "Kenton in Hi-Fi",
+     "title": "Artistry Jumps",
+     "artist": "Stan Kenton",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1d/7b/42/1d7b4276-2dec-f5d8-d61a-a4faca8f609e/mzaf_12680120409241859870.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/9b/e4/34/9be4341c-e0ce-41b5-2d01-f59a76be126d/00077779845156.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Kenton in Hi-Fi",
+     "title": "Painted Rhythm",
+     "artist": "Stan Kenton",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ea/f9/90/eaf99091-caec-c1e4-6ff4-447b4d878a83/mzaf_17944556600684390433.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/9b/e4/34/9be4341c-e0ce-41b5-2d01-f59a76be126d/00077779845156.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Kenton in Hi-Fi",
+     "title": "Southern Scandal",
+     "artist": "Stan Kenton",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/41/28/7c/41287c99-a28c-6a11-2ac7-65514fade163/mzaf_17017040178195794792.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/9b/e4/34/9be4341c-e0ce-41b5-2d01-f59a76be126d/00077779845156.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "lizz-wright",
+   "name": "Lizz Wright",
+   "born": 1980,
+   "died": null,
+   "year": 2003,
+   "stroming": "vocal-jazz",
+   "alsoIn": [
+    "soul-jazz",
+    "smooth"
+   ],
+   "place": {
+    "name": "Hahira → Atlanta",
+    "lat": 33.75,
+    "lon": -84.39
+   },
+   "influences": [],
+   "films": [
+    "Salt (2003)",
+    "Dreaming Wide Awake (2005)",
+    "The Orchard (2008)"
+   ],
+   "text": "Zangeres Lizz Wright werd in Hahira, Georgia, geboren als dochter van een dominee en de muziekdirecteur van hun kerk. Ze zong als kind gospel en speelde piano in de kerk. Na haar studie in Atlanta sloot ze zich aan bij het vocale kwartet In the Spirit en tekende in 2002 bij Verve. Haar eerste album Salt kwam in 2003 uit. Dreaming Wide Awake uit 2005 mengde jazz, pop en folk en stond bovenaan de lijst voor eigentijdse jazz. Haar stem klinkt diep, warm en vol gospel. Critici vergeleken haar met Norah Jones.",
+   "listen": "Hoor de diepe, warme stem waarin de gospel van de kerk nog doorklinkt.",
+   "tracks": [
+    {
+     "film": "Salt",
+     "title": "Open Your Eyes, You Can Fly",
+     "artist": "Lizz Wright",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1b/ee/39/1bee393c-819f-7abe-8d67-bd041c95d354/mzaf_9982097591702844827.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e0/1b/29/e01b2988-1ae3-f768-e272-b0ef8264676e/00731458993322.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Salt",
+     "title": "Walk with Me, Lord",
+     "artist": "Lizz Wright",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d9/39/ac/d939ac80-db33-6c49-c093-e64f5ad613a7/mzaf_6124608369573075519.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e0/1b/29/e01b2988-1ae3-f768-e272-b0ef8264676e/00731458993322.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Dreaming Wide Awake",
+     "title": "A Taste of Honey",
+     "artist": "Lizz Wright",
+     "year": 2005,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/54/47/76/54477683-1bf6-59b4-5526-c544b626a370/mzaf_7584764152995909517.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/2e/aa/48/2eaa48a6-641b-5f3e-6d2f-4c75768a3623/00602498815533.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gerald-clayton",
+   "name": "Gerald Clayton",
+   "born": 1984,
+   "died": null,
+   "year": 2009,
+   "stroming": "neotraditioneel",
+   "alsoIn": [
+    "pianotrio"
+   ],
+   "place": {
+    "name": "Utrecht → Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+   },
+   "influences": [],
+   "films": [
+    "Two-Shade (2009)",
+    "Bond: The Paris Sessions (2010)",
+    "Life Forum (2013)"
+   ],
+   "text": "Pianist en componist Gerald Clayton werd in Nederland geboren en groeide op in Los Angeles, waar zijn vader John Clayton, bassist, speelde. Hij studeerde aan de Thornton School of Music en bij Kenny Barron aan de Manhattan School of Music. Hij speelde met Roy Hargrove, Diana Krall en Ambrose Akinmusire en sinds 2013 met Charles Lloyd. Zijn albums Bond: The Paris Sessions en Life Forum kregen Grammy-nominaties. Zijn spel is helder, precies en zingend, met een ruim gevoel voor vorm en ruimte.",
+   "listen": "Hoor de heldere, zingende piano die ruimte laat tussen de akkoorden van de groep.",
+   "tracks": [
+    {
+     "film": "Life Forum",
+     "title": "Future Reflection",
+     "artist": "Gerald Clayton",
+     "year": 2013,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9a/17/0a/9a170a16-0526-c7a0-f2fa-63b450ab96c4/mzaf_15595934827496394989.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f4/72/9b/f4729b56-a7c9-4be2-b7b9-74f8cadd3188/00888072337701.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Life Forum",
+     "title": "Shadamanthem",
+     "artist": "Gerald Clayton",
+     "year": 2013,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3b/f4/2f/3bf42fd2-6183-e341-c1a5-a2278ea6e426/mzaf_6378159654678019752.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f4/72/9b/f4729b56-a7c9-4be2-b7b9-74f8cadd3188/00888072337701.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Bond - The Paris Sessions",
+     "title": "Bootleg Bruise",
+     "artist": "Gerald Clayton",
+     "year": 2010,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6a/38/f2/6a38f2f0-96c4-75e4-6bc6-16057b2d82db/mzaf_17388551255013950894.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/9c/f2/42/9cf2420c-3862-41f9-84e8-aa64b294211e/00602527618456.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "marilyn-mazur",
+   "name": "Marilyn Mazur",
+   "born": 1955,
+   "died": 2025,
+   "year": 1985,
+   "stroming": "ecm",
+   "alsoIn": [
+    "europese-improvisatie"
+   ],
+   "place": {
+    "name": "Kopenhagen",
+    "lat": 55.68,
+    "lon": 12.57
+   },
+   "influences": [
+    "airto-moreira"
+   ],
+   "films": [
+    "Aura – met Miles Davis (1989)",
+    "Elixir – met Jan Garbarek (2008)",
+    "Shamania (2019)"
+   ],
+   "text": "Slagwerkster Marilyn Mazur werd in New York geboren, als dochter van een Poolse vader en een Afro-Amerikaanse moeder, en groeide op in Denemarken. Op haar negentiende koos ze voor slagwerk, geïnspireerd door Al Foster en Airto Moreira. In 1985 speelde ze mee in het project dat het album Aura van Miles Davis werd en ging ze met hem op tournee. Daarna speelde ze met Gil Evans, Wayne Shorter en Jan Garbarek. Met haar band Shamania, vol vrouwelijke avant-gardemusici, maakte ze eigen muziek. Ze overleed in december 2025.",
+   "listen": "Hoor de bellen, trommels en schalen die zacht en bijna rituele ritmes spelen.",
+   "tracks": [
+    {
+     "film": "Elixir",
+     "title": "Pathway",
+     "artist": "Marilyn Mazur & Jan Garbarek",
+     "year": 2008,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b1/60/65/b160656a-2a8d-2f7e-f4a6-6285390ee9f9/mzaf_7296905663448452485.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/61/59/f1/6159f100-86f0-c5b2-7a38-9945675b814e/00602517373204.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Elixir",
+     "title": "Dunun Song",
+     "artist": "Marilyn Mazur & Jan Garbarek",
+     "year": 2008,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/9f/91/a3/9f91a368-b890-1a06-a769-0f9fba1828ed/mzaf_2544498446390455370.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/61/59/f1/6159f100-86f0-c5b2-7a38-9945675b814e/00602517373204.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Shamania",
+     "title": "New Secret",
+     "artist": "Marilyn Mazur",
+     "year": 2019,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/5f/06/30/5f063030-322a-1df3-0281-8e783ab6877d/mzaf_990000096451737540.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/a0/2a/46/a02a4697-0e74-95bc-d3f3-40bb56a6916c/cover.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
