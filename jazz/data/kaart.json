@@ -14763,6 +14763,310 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/12/74/42/mzi.hsbcdinj.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "kenny-dorham",
+   "name": "Kenny Dorham",
+   "born": 1924,
+   "died": 1972,
+   "year": 1963,
+   "stroming": "hard-bop",
+   "alsoIn": [
+    "bebop"
+   ],
+   "place": {
+    "name": "Fairfield → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "Quiet Kenny (1959)",
+    "Una Mas (1963)",
+    "Trompeta Toccata (1964)"
+   ],
+   "text": "Trompettist en componist Kenny Dorham werd in Fairfield, Texas, geboren. Hij speelde in de bigbands van Lionel Hampton, Billy Eckstine en Dizzy Gillespie, in 1948 bij Charlie Parker en was lid van de eerste Jazz Messengers. Na de dood van Clifford Brown nam hij in 1956 diens plaats in bij Max Roach. Hij schreef Blue Bossa, dat Joe Henderson als eerste opnam. Criticus Gary Giddins noemde zijn naam 'synoniem met onderschat'. Hij overleed in 1972, 48 jaar oud.",
+   "listen": "Hoor de zachte, verdrietige trompet die zonder te schreeuwen een melodie vertelt.",
+   "tracks": [
+    {
+     "film": "Una Mas",
+     "title": "Una Mas",
+     "artist": "Kenny Dorham",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/c6/2d/24/c62d24f5-c18a-2cb2-028c-d978db76a176/mzaf_17170131886615151783.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music2/v4/24/99/97/24999712-b426-1c69-45df-93bd0a79a1d6/cover.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Quiet Kenny",
+     "title": "Lotus Blossom",
+     "artist": "Kenny Dorham",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6d/d4/3e/6dd43ee0-b33e-5841-9ed8-de6d62996914/mzaf_13039887934328955177.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/34/30/8c/34308c72-7054-623d-423c-194b20d64c0c/20CRGIM23233.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Quiet Kenny",
+     "title": "Alone Together",
+     "artist": "Kenny Dorham",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/be/4d/cb/be4dcb1d-81c7-cc46-e03a-aec40a234752/mzaf_16781537983430757607.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/d3/97/b8/d397b82d-a8c9-1600-556a-a3c98d2591c0/00888072349285.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "jj-johnson",
+   "name": "J.J. Johnson",
+   "born": 1924,
+   "died": 2001,
+   "year": 1954,
+   "stroming": "bebop",
+   "alsoIn": [
+    "hard-bop",
+    "third-stream"
+   ],
+   "place": {
+    "name": "Indianapolis → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "The Eminent Jay Jay Johnson (1954)",
+    "Dial J.J. 5 (1957)",
+    "J.J. Inc. (1960)"
+   ],
+   "text": "Trombonist J.J. Johnson begon op zijn negende met piano en koos op zijn veertiende voor de trombone. Hij speelde bij Benny Carter en Count Basie en was een van de eerste trombonisten die bebop speelden, een muziek die ver van de gewone trombonerol stond. Dizzy Gillespie moedigde hem aan. Trompettist Fats Navarro leerde hem hoe hij moest spelen als saxofonist Lester Young. Later schreef hij arrangementen en filmmuziek. Hij overleed in 2001.",
+   "listen": "Hoor hoe de trombone snel en licht als een trompet speelt, zonder te glijden of te brullen.",
+   "tracks": [
+    {
+     "film": "Dial J.J. 5",
+     "title": "Tea Pot",
+     "artist": "J.J. Johnson",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/db/d1/91/dbd19123-0191-6e23-0ae8-02d4cab92805/mzaf_11326565912084104353.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music117/v4/54/82/f5/5482f5d6-f0a9-255b-1888-46f51767022c/886446415710.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Dial J.J. 5",
+     "title": "Barbados",
+     "artist": "J.J. Johnson",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e1/20/11/e1201169-b487-1e3f-2421-d0bc6a408b31/mzaf_14286641702272831239.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music117/v4/54/82/f5/5482f5d6-f0a9-255b-1888-46f51767022c/886446415710.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Dial J.J. 5",
+     "title": "Blue Haze",
+     "artist": "J.J. Johnson",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f8/fa/86/f8fa868d-50fc-dcb1-6ff4-88dc9616b178/mzaf_1462445320778670742.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music117/v4/54/82/f5/5482f5d6-f0a9-255b-1888-46f51767022c/886446415710.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "curtis-fuller",
+   "name": "Curtis Fuller",
+   "born": 1932,
+   "died": 2021,
+   "year": 1959,
+   "stroming": "hard-bop",
+   "alsoIn": [
+    "soul-jazz"
+   ],
+   "place": {
+    "name": "Detroit → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "jj-johnson"
+   ],
+   "films": [
+    "Blues-ette (1959)",
+    "Blue Train – John Coltrane (1957)",
+    "Soul Trombone (1961)"
+   ],
+   "text": "Trombonist Curtis Fuller groeide op in Detroit en werd weeskind. Een non nam hem mee naar een concert van Illinois Jacquet, waarin J.J. Johnson trombone speelde. Daarna begon hij op zijn zestiende zelf, en Johnson werd zijn leraar. Fuller speelde bij Yusef Lateef, verhuisde in 1957 naar New York en speelde mee op Blue Train van John Coltrane. Later speelde hij bij Art Blakey. Zijn album Blues-ette uit 1959 met Benny Golson en Art Farmer is zijn bekendste. Hij overleed in 2021.",
+   "listen": "Hoor de warme, ronde trombone die samen met een saxofoon en trompet als drie stemmen speelt.",
+   "tracks": [
+    {
+     "film": "Blues-ette",
+     "title": "Five Spot After Dark",
+     "artist": "Curtis Fuller",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d0/99/fb/d099fb3b-b6cf-53ef-8d8a-2a8054d3d521/mzaf_7614324225274320707.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/1a/03/4f/1a034f49-2e13-788c-e48e-c88385448e41/cover.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Blues-ette",
+     "title": "Undecided",
+     "artist": "Curtis Fuller",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/09/86/44/0986447b-9d3f-1dd8-8efc-c54fbf9e4cb8/mzaf_15363412668805169785.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/91/c5/58/91c558d5-4799-9e2d-57c3-991aa4cecda2/00888072059177.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Blues-ette",
+     "title": "Blues-ette",
+     "artist": "Curtis Fuller",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/23/5d/cc/235dcc20-d98a-6a43-9940-0f493e504e7c/mzaf_5426568533026765830.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/91/c5/58/91c558d5-4799-9e2d-57c3-991aa4cecda2/00888072059177.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "hank-jones",
+   "name": "Hank Jones",
+   "born": 1918,
+   "died": 2010,
+   "year": 1955,
+   "stroming": "bebop",
+   "alsoIn": [
+    "swing",
+    "hard-bop"
+   ],
+   "place": {
+    "name": "Pontiac → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "The Trio (1955)",
+    "Somethin' Else – met Cannonball Adderley (1958)",
+    "Hank Jones Trio (1991)"
+   ],
+   "text": "Pianist Hank Jones groeide op in Pontiac, Michigan, als oudste broer van trompettist Thad Jones en drummer Elvin Jones. Critici noemden zijn spel welsprekend, lyrisch en zuiver. Hij nam meer dan zestig albums op onder eigen naam en speelde op naar schatting meer dan duizend platen mee, onder meer op Somethin' Else van Cannonball Adderley. In 1962 speelde hij piano toen Marilyn Monroe voor president Kennedy zong. Hij overleed in 2010, bijna 92 jaar oud.",
+   "listen": "Hoor het zuivere, rustige pianospel dat elke noot precies op zijn plek zet.",
+   "tracks": [
+    {
+     "film": "Hank Jones Trio",
+     "title": "Pent Up House",
+     "artist": "Hank Jones",
+     "year": 1991,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7c/f9/17/7cf917a3-d6a6-7137-05ae-66a51bef4202/mzaf_11859076539128750529.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/ad/a1/a4/mzi.aefnygln.tif/600x600bb.jpg"
+    },
+    {
+     "film": "Hank Jones Trio",
+     "title": "Bloomdido",
+     "artist": "Hank Jones",
+     "year": 1991,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/86/b7/1d/86b71d19-ddc8-b644-becb-c3f8dac89770/mzaf_18393245595524899275.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/ad/a1/a4/mzi.aefnygln.tif/600x600bb.jpg"
+    },
+    {
+     "film": "Hank Jones Trio",
+     "title": "Monk's Mood",
+     "artist": "Hank Jones",
+     "year": 1991,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/84/41/ba/8441bada-a3f0-6f3f-01e1-03b135f5066d/mzaf_9571345738086862398.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/ad/a1/a4/mzi.aefnygln.tif/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "bobby-timmons",
+   "name": "Bobby Timmons",
+   "born": 1935,
+   "died": 1974,
+   "year": 1958,
+   "stroming": "soul-jazz",
+   "alsoIn": [
+    "hard-bop"
+   ],
+   "place": {
+    "name": "Philadelphia → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "This Here Is Bobby Timmons (1960)",
+    "Moanin' – met Art Blakey (1958)",
+    "Soul Time (1962)"
+   ],
+   "text": "Pianist en componist Bobby Timmons werd in Philadelphia geboren als zoon van een dominee. Hij speelde in de kerk, en dat hoor je terug in zijn muziek. Hij speelde in de Jazz Messengers van Art Blakey en daartussen bij Cannonball Adderley. Zijn stukken Moanin', Dat Dere en This Here werden hits en zetten de soul-jazz op de kaart. Verslaving aan drank en drugs beschadigde zijn loopbaan. Hij overleed in 1974, 38 jaar oud, en wordt nog steeds onderschat.",
+   "listen": "Hoor de pianoriff met kerkakkoorden die je vanzelf meezingt, zoals in een gospellied.",
+   "tracks": [
+    {
+     "film": "This Here Is Bobby Timmons",
+     "title": "Moanin'",
+     "artist": "Bobby Timmons",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/5e/7b/51/5e7b5198-77dc-9aa8-8e80-dbf90b09584f/mzaf_5644904145285735097.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/4c/c7/92/4cc79253-2f4c-c11e-6433-bce829b46dd8/888608338851.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "This Here Is Bobby Timmons",
+     "title": "This Here",
+     "artist": "Bobby Timmons",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/03/aa/f0/03aaf029-9191-e554-db20-ed779f9961a9/mzaf_5164990228888657434.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/4c/c7/92/4cc79253-2f4c-c11e-6433-bce829b46dd8/888608338851.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "This Here Is Bobby Timmons",
+     "title": "Dat Dere",
+     "artist": "Bobby Timmons",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/04/84/52/048452c2-dd20-3a8c-2a74-1bc88aaaed2f/mzaf_2550033767210807248.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/4c/c7/92/4cc79253-2f4c-c11e-6433-bce829b46dd8/888608338851.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "horace-parlan",
+   "name": "Horace Parlan",
+   "born": 1931,
+   "died": 2017,
+   "year": 1960,
+   "stroming": "hard-bop",
+   "alsoIn": [
+    "soul-jazz"
+   ],
+   "place": {
+    "name": "Pittsburgh → Kopenhagen",
+    "lat": 55.68,
+    "lon": 12.57
+   },
+   "influences": [],
+   "films": [
+    "Us Three (1960)",
+    "Happy Frame of Mind (1963)",
+    "Goin' Home – met Archie Shepp (1977)"
+   ],
+   "text": "Pianist Horace Parlan werd in Pittsburgh geboren en kreeg in zijn geboortejaar polio, waardoor zijn rechterhand deels verlamd raakte. Daardoor ontwikkelde hij een scherpe, stuwende stijl met de linkerhand en korte, ritmische frasen met de rechter. Hij speelde bij Sonny Stitt en daarna twee jaar bij Charles Mingus, onder meer op Mingus Ah Um. In 1973 verhuisde hij naar Kopenhagen. Met Archie Shepp nam hij duoalbums met gospel op, zoals Goin' Home. Hij overleed in 2017.",
+   "listen": "Hoor de scherpe, stuwende linkerhand die het ritme draagt, terwijl de rechterhand korte klanken plaatst.",
+   "tracks": [
+    {
+     "film": "Us Three",
+     "title": "Us Three",
+     "artist": "Horace Parlan",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d5/de/42/d5de42ff-e02e-e9ff-c024-169306bda4a0/mzaf_6377747262696484921.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/6b/83/af/6b83af69-44bd-2af7-e750-6308dfaeb970/Cover.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Us Three",
+     "title": "Wadin'",
+     "artist": "Horace Parlan",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music6/v4/84/9d/aa/849daa39-fe4e-1023-c455-721f0f741134/mzaf_5430688677937564108.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/61/eb/8c/61eb8c6e-c596-496d-c33c-bfc7072000cf/888002384676.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Happy Frame of Mind",
+     "title": "Happy Frame of Mind",
+     "artist": "Horace Parlan",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/75/e7/02/75e7026c-f34c-5c14-3fe8-871e60ff2a0a/mzaf_10835436183376914657.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/02/3b/ce/023bced3-7e06-5dfe-efcb-459f861f5717/00602567476924.rgb.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
