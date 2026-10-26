@@ -14449,6 +14449,320 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/c6/3e/fa/c63efa23-70b7-ba86-f413-0b4d06bec87e/00724349900950.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "jackie-mclean",
+   "name": "Jackie McLean",
+   "born": 1931,
+   "died": 2006,
+   "year": 1962,
+   "stroming": "hard-bop",
+   "alsoIn": [
+    "free-jazz",
+    "modaal"
+   ],
+   "place": {
+    "name": "Harlem, New York",
+    "lat": 40.81,
+    "lon": -73.95
+   },
+   "influences": [
+    "charlie-parker"
+   ],
+   "films": [
+    "Let Freedom Ring (1962)",
+    "One Step Beyond (1963)",
+    "Destination... Out! (1964)"
+   ],
+   "text": "Altsaxofonist Jackie McLean groeide op in Harlem en kreeg als jongen tips van buren als Thelonious Monk, Bud Powell en Charlie Parker. Op zijn twintigste speelde hij mee op een plaat van Miles Davis, en hij speelde ook bij Charles Mingus en Art Blakey. In de jaren zestig nam hij voor Blue Note platen op waarin hij de vrije jazz opzocht, zoals Let Freedom Ring uit 1962. Zijn toon was scherp en klaaglijk. Hij gaf later ook les. Hij overleed in 2006.",
+   "listen": "Hoor de scherpe, klagende altsaxofoon die aan de rand van de toonsoort speelt.",
+   "tracks": [
+    {
+     "film": "Let Freedom Ring",
+     "title": "Melody for Melonae",
+     "artist": "Jackie McLean",
+     "year": 1962,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9d/b8/76/9db87643-6eb7-0499-1cc8-5aa84487b091/mzaf_3177114929898495140.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ff/c0/fd/ffc0fd89-ab91-e09f-c664-6872ce7b798d/13UABIM57242.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Let Freedom Ring",
+     "title": "Omega",
+     "artist": "Jackie McLean",
+     "year": 1962,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6e/62/6c/6e626c35-4611-9afd-691a-cd4d8207c13f/mzaf_391021531708150236.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ff/c0/fd/ffc0fd89-ab91-e09f-c664-6872ce7b798d/13UABIM57242.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "One Step Beyond",
+     "title": "Saturday and Sunday",
+     "artist": "Jackie McLean",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7b/a8/3a/7ba83a46-c469-2e4a-2894-130597fc635e/mzaf_7580807260567455804.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/21/d6/ae/21d6ae56-206a-39d4-97cd-c94be31e9914/05099926513959.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "bobby-hutcherson",
+   "name": "Bobby Hutcherson",
+   "born": 1941,
+   "died": 2016,
+   "year": 1965,
+   "stroming": "hard-bop",
+   "alsoIn": [
+    "modaal",
+    "free-jazz"
+   ],
+   "place": {
+    "name": "Los Angeles → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "milt-jackson"
+   ],
+   "films": [
+    "Dialogue (1965)",
+    "Components (1965)",
+    "Happenings (1966)"
+   ],
+   "text": "Vibrafonist en marimbaspeler Bobby Hutcherson werd in Los Angeles geboren. Hij besloot vibrafoon te gaan spelen toen hij als twaalfjarige Milt Jackson hoorde in Bemsha Swing. Zijn zus zong in het orkest van Gerald Wilson, en haar vriend Eric Dolphy nam hem mee naar New York. Daar speelde hij mee op Dolphy's Out to Lunch. Zijn eigen albums voor Blue Note uit 1965, zoals Dialogue en Components, zijn klassiekers. Zijn compositie Little B's Poem is zijn bekendste. Hij overleed in 2016.",
+   "listen": "Hoor de vibrafoon die lange, doorlopende klanken laat nagalmen en langzaam wegzweeft.",
+   "tracks": [
+    {
+     "film": "Components",
+     "title": "Little B's Poem",
+     "artist": "Bobby Hutcherson",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f2/55/38/f25538ba-88b5-27e8-53ae-81e9f7460233/mzaf_5369918441650637116.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/b1/9f/16/b19f1612-9d23-73cf-c435-8493f1aaf55c/00602547148889.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Dialogue",
+     "title": "Dialogue",
+     "artist": "Bobby Hutcherson",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1d/7e/ac/1d7eac3c-8d82-5bdc-bf79-aeb70077d832/mzaf_5662470325510125784.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/4a/a5/03/4aa50354-3a3b-da8b-2a8b-ebb7d395042d/00724353558659.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Dialogue",
+     "title": "Catta",
+     "artist": "Bobby Hutcherson",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d5/a5/01/d5a5012d-2f17-ec7c-d019-764c52e3b5c3/mzaf_14459203634068430167.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/4a/a5/03/4aa50354-3a3b-da8b-2a8b-ebb7d395042d/00724353558659.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "andrew-hill",
+   "name": "Andrew Hill",
+   "born": 1931,
+   "died": 2007,
+   "year": 1963,
+   "stroming": "free-jazz",
+   "alsoIn": [
+    "modaal"
+   ],
+   "place": {
+    "name": "Chicago → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "Black Fire (1963)",
+    "Point of Departure (1965)",
+    "Andrew!!! (1964)"
+   ],
+   "text": "Pianist en componist Andrew Hill werd in Chicago geboren, waar Earl Hines hem als jongen aanmoedigde. Hij studeerde informeel bij de componist Paul Hindemith. Bijna tien jaar nam hij voor Blue Note op, goed voor een dozijn albums. Op Point of Departure uit 1965 speelden onder anderen Eric Dolphy, Kenny Dorham, Joe Henderson en drummer Tony Williams mee. Zijn muziek heeft bochtige melodieën en rare ritmes, en die liggen niet voor de hand. Hij bleef lang een tip voor kenners en overleed in 2007.",
+   "listen": "Hoor de piano die ongewone akkoorden speelt, terwijl de saxofoon en klarinet daar kronkelend omheen spelen.",
+   "tracks": [
+    {
+     "film": "Point of Departure",
+     "title": "Refuge",
+     "artist": "Andrew Hill",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f1/aa/20/f1aa2067-92ed-853c-7c53-fb0acc46a949/mzaf_136281657566243746.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/5b/3e/15/5b3e151f-eda9-f16a-950e-e47f4114714c/00724349900752.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Point of Departure",
+     "title": "New Monastery",
+     "artist": "Andrew Hill",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f4/fb/bf/f4fbbf37-3a3b-3343-fe87-58bb16eafed2/mzaf_5337430574281971593.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/5b/3e/15/5b3e151f-eda9-f16a-950e-e47f4114714c/00724349900752.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Black Fire",
+     "title": "Pumpkin",
+     "artist": "Andrew Hill",
+     "year": 1963,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/5b/de/2a/5bde2a18-cb0f-7d6d-50c0-82c653ad5664/mzaf_7879439638706599850.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/80/bd/b7/80bdb73f-4252-be84-9579-2bf5548c9143/00724359650159.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "wynton-kelly",
+   "name": "Wynton Kelly",
+   "born": 1931,
+   "died": 1971,
+   "year": 1959,
+   "stroming": "hard-bop",
+   "alsoIn": [
+    "modaal",
+    "soul-jazz"
+   ],
+   "place": {
+    "name": "New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "Kelly Blue (1959)",
+    "Kelly at Midnite (1960)",
+    "Wynton Kelly! (1961)"
+   ],
+   "text": "Pianist Wynton Kelly speelde al op zijn twaalfde professioneel en stond op zijn zestiende op een nummer één in de R&B-lijst. Hij was beroemd als begeleider: hij speelde voor Dinah Washington, Dizzy Gillespie, Wes Montgomery en Sonny Rollins. Vanaf 1959 speelde hij in de band van Miles Davis, ook op Kind of Blue. Zijn spel was licht, bluesy en swingend. Zijn eigen album Kelly Blue uit 1959 is zijn bekendste. Hij overleed in 1971, 39 jaar oud.",
+   "listen": "Hoor de lichte, bluesy piano die swingt en de solisten steeds een zetje geeft.",
+   "tracks": [
+    {
+     "film": "Kelly Blue",
+     "title": "Kelly Blue",
+     "artist": "Wynton Kelly",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/35/69/24/35692476-b181-f95f-6342-2a57365117c1/mzaf_12056933307432031639.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/d1/80/16/d180166c-cc5c-d3d5-2f66-5e168a1092d4/FMATT453.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Kelly Blue",
+     "title": "Softly as in a Morning Sunrise",
+     "artist": "Wynton Kelly",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a9/56/64/a956645a-1231-44b7-a102-b6f8c285f366/mzaf_4355785069982926658.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/d1/80/16/d180166c-cc5c-d3d5-2f66-5e168a1092d4/FMATT453.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Kelly Blue",
+     "title": "On Green Dolphin Street",
+     "artist": "Wynton Kelly",
+     "year": 1959,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e9/20/01/e92001df-e5f7-73ed-9ba2-3b23072d5445/mzaf_2875743829306072378.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/2a/ba/14/2aba147c-3406-3677-6b61-39d7f0f62ef0/00888072305113.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "red-garland",
+   "name": "Red Garland",
+   "born": 1923,
+   "died": 1984,
+   "year": 1956,
+   "stroming": "hard-bop",
+   "alsoIn": [
+    "bebop",
+    "soul-jazz"
+   ],
+   "place": {
+    "name": "Dallas → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "count-basie"
+   ],
+   "films": [
+    "A Garland of Red (1956)",
+    "Groovy (1957)",
+    "Red Garland's Piano (1957)"
+   ],
+   "text": "Pianist Red Garland werd in Dallas geboren en begon op klarinet en saxofoon. In het leger leerde hij piano, en hij was ook amateurbokser: hij verloor een partij van Sugar Ray Robinson. Count Basie was zijn grote voorbeeld. In de jaren vijftig speelde hij bij Miles Davis. Hij maakte het spelen van blokakkoorden bekend, waarbij beide handen samen akkoorden spelen. Zijn albums voor Prestige, zoals A Garland of Red uit 1956, zijn klassiekers. Hij overleed in 1984.",
+   "listen": "Hoor de akkoorden die als blokken onder de melodie vallen, zacht en toch stevig.",
+   "tracks": [
+    {
+     "film": "A Garland of Red",
+     "title": "A Foggy Day",
+     "artist": "Red Garland",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/67/48/6f/67486f10-7bad-bc06-1db2-ef5b3eb20e3e/mzaf_10193849118022786649.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2f/4f/88/2f4f882c-fc03-0596-0d84-1d96da014312/21CRGIM29892.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "A Garland of Red",
+     "title": "My Romance",
+     "artist": "Red Garland",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/08/ca/3e/08ca3ea7-b835-af3c-3159-61039c91fd19/mzaf_6614282791826520612.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2f/4f/88/2f4f882c-fc03-0596-0d84-1d96da014312/21CRGIM29892.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "A Garland of Red",
+     "title": "Constellation",
+     "artist": "Red Garland",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f4/0c/cb/f40ccb04-b0a8-19f4-cb1f-77fc4d24d905/mzaf_652945882642115218.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2f/4f/88/2f4f882c-fc03-0596-0d84-1d96da014312/21CRGIM29892.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "tommy-flanagan",
+   "name": "Tommy Flanagan",
+   "born": 1930,
+   "died": 2001,
+   "year": 1957,
+   "stroming": "hard-bop",
+   "alsoIn": [
+    "bebop",
+    "swing"
+   ],
+   "place": {
+    "name": "Detroit → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "art-tatum",
+    "teddy-wilson"
+   ],
+   "films": [
+    "Overseas (1957)",
+    "Eclypso (1977)",
+    "The Tokyo Recital (1976)"
+   ],
+   "text": "Pianist Tommy Flanagan groeide op in Detroit en werd beïnvloed door Art Tatum, Teddy Wilson en Nat King Cole. Kort na zijn verhuizing naar New York in 1956 speelde hij mee op Saxophone Colossus van Sonny Rollins en later op Giant Steps van John Coltrane. Van 1962 tot 1978 was hij, met een onderbreking, de pianist van Ella Fitzgerald. Daarna maakte hij vooral eigen albums met zijn trio, zoals Eclypso uit 1977. Zijn spel was elegant en bescheiden. Hij overleed in 2001.",
+   "listen": "Hoor het elegante pianospel dat de zangeres of de solist altijd precies de ruimte geeft.",
+   "tracks": [
+    {
+     "film": "Overseas",
+     "title": "Chelsea Bridge",
+     "artist": "Tommy Flanagan",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/74/b9/a2/74b9a2cc-dd3a-3465-d817-31119bc42649/mzaf_10339698303754779307.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features/93/a7/e6/dj.khgexiab.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Overseas",
+     "title": "Relaxin' at Camarillo",
+     "artist": "Tommy Flanagan",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/be/4e/16/be4e1649-d100-0c6e-6634-c2528755f456/mzaf_16286431377473780977.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features/93/a7/e6/dj.khgexiab.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Eclypso",
+     "title": "Eclypso",
+     "artist": "Tommy Flanagan",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/81/16/24/81162405-8e22-cb73-6f8b-1fc46d27f533/mzaf_7008060587639474048.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/12/74/42/mzi.hsbcdinj.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
