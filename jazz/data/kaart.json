@@ -12980,6 +12980,309 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/d6/ec/d2/d6ecd260-a78e-2b3c-6956-c54af301e7b6/00077779610853.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "kenny-garrett",
+   "name": "Kenny Garrett",
+   "born": 1960,
+   "died": null,
+   "year": 1992,
+   "stroming": "neotraditioneel",
+   "alsoIn": [
+    "hard-bop"
+   ],
+   "place": {
+    "name": "Detroit → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "john-coltrane"
+   ],
+   "films": [
+    "Black Hope (1992)",
+    "Pursuance: The Music of John Coltrane (1996)",
+    "Songbook (1997)"
+   ],
+   "text": "Saxofonist Kenny Garrett uit Detroit speelde als achttienjarige in het orkest van Mercer Ellington. Hij speelde daarna bij Art Blakey, Freddie Hubbard en Miles Davis. Zijn eerste eigen album kwam in 1984. Vanaf Black Hope in 1992 nam hij acht albums op voor Warner. Op Pursuance bracht hij een eerbetoon aan John Coltrane. Zijn altsaxofoon klinkt scherp, snel en zangerig, en soms hoor je Aziatische invloeden. Later speelde hij mee in de Five Peace Band van Chick Corea en John McLaughlin.",
+   "listen": "Hoor de scherpe, razendsnelle altsaxofoon en hoe de band eronder meebeweegt.",
+   "tracks": [
+    {
+     "film": "Songbook",
+     "title": "Sing a Song of Song",
+     "artist": "Kenny Garrett",
+     "year": 1997,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d5/e0/0e/d5e00e98-db2e-3573-4e9b-3e18c71125b6/mzaf_2338320970708783915.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/64/a1/d0/64a1d0f6-487c-57e4-2f83-d7ccc5b7a425/dj.evwmijab.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Pursuance: The Music of John Coltrane",
+     "title": "Equinox",
+     "artist": "Kenny Garrett",
+     "year": 1996,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5f/c4/c6/5fc4c61f-aceb-cf6f-86e5-bafb0138e24a/mzaf_3414444281138856141.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/c0/f5/6f/mzi.urlymedl.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Songbook",
+     "title": "Brother Hubbard",
+     "artist": "Kenny Garrett",
+     "year": 1997,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/33/d7/79/33d779e4-a46c-68f8-8de9-aed220d49435/mzaf_14408505913466715720.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/64/a1/d0/64a1d0f6-487c-57e4-2f83-d7ccc5b7a425/dj.evwmijab.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "egberto-gismonti",
+   "name": "Egberto Gismonti",
+   "born": 1947,
+   "died": null,
+   "year": 1977,
+   "stroming": "ecm",
+   "alsoIn": [
+    "bossa-nova"
+   ],
+   "place": {
+    "name": "Carmo → Rio de Janeiro",
+    "lat": -22.91,
+    "lon": -43.17
+   },
+   "influences": [],
+   "films": [
+    "Dança das Cabeças (1977)",
+    "Sol do Meio-Dia (1978)",
+    "Duas Vozes (1984)"
+   ],
+   "text": "Egberto Gismonti uit Brazilië speelt gitaar en piano en schrijft muziek. Hij studeerde in Parijs bij Nadia Boulanger, die hem aanmoedigde om de Braziliaanse muziek in zijn werk te leggen. Hij liet gitaren met meer dan zes snaren bouwen en bespeelt ze alsof ze een toetsenbord zijn, zodat het klinkt alsof er twee gitaristen spelen. Zijn verblijf bij de indianen in het Xingu-gebied in het Amazonegebied is te horen op Dança das Cabeças uit 1977 en Sol do Meio-Dia uit 1978, beide voor het label ECM.",
+   "listen": "Hoor de snaren van de gitaar die samen klinken als een heel orkest, met ritmes uit het regenwoud.",
+   "tracks": [
+    {
+     "film": "Dança das Cabeças",
+     "title": "Dança das Cabeças",
+     "artist": "Egberto Gismonti",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/6e/2e/22/6e2e2270-20a7-3cdb-9872-b3bd5df025e5/mzaf_18317873948861702126.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/4f/e7/4c/4fe74cf8-f083-989a-ae97-ac28d1154c6e/00602547809285.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Sol do Meio-Dia",
+     "title": "Palácio de Pinturas",
+     "artist": "Egberto Gismonti",
+     "year": 1978,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/01/7d/1b/017d1b72-b635-bb2c-83cd-7530eb1e6395/mzaf_16956666916113147197.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/e4/86/29/e4862994-6df9-6ed1-996e-ebe410ef169e/23UMGIM75149.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Sol do Meio-Dia",
+     "title": "Kalimba",
+     "artist": "Egberto Gismonti",
+     "year": 1978,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/d9/e4/ef/d9e4efc0-b99c-36eb-0929-60b997cb3eb5/mzaf_3390631559051537143.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/e4/86/29/e4862994-6df9-6ed1-996e-ebe410ef169e/23UMGIM75149.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "tord-gustavsen",
+   "name": "Tord Gustavsen",
+   "born": 1970,
+   "died": null,
+   "year": 2003,
+   "stroming": "pianotrio",
+   "alsoIn": [
+    "ecm"
+   ],
+   "place": {
+    "name": "Oslo",
+    "lat": 59.91,
+    "lon": 10.75
+   },
+   "influences": [],
+   "films": [
+    "Changing Places (2003)",
+    "The Ground (2005)",
+    "Restored, Returned (2009)"
+   ],
+   "text": "Pianist Tord Gustavsen groeide op in Noorwegen en speelde als kind kerkmuziek. Hij studeerde psychologie, jazz in Trondheim en muziekwetenschap in Oslo. Tussen 2003 en 2007 bracht zijn trio met bassist Harald Johnsen en drummer Jarle Vespestad drie albums uit op ECM, vol rustige, bijna meditatieve muziek. Samen werden er meer dan honderdduizend verkocht. Het album Restored, Returned uit 2009 met zijn kwartet won de Spellemannsprisen, de Noorse Grammy. Zijn spel klinkt kalm, spaarzaam en ver verwijderd van de snelle jazz.",
+   "listen": "Hoor de langzame piano die ruimte laat tussen elke noot, als in een stille kerk.",
+   "tracks": [
+    {
+     "film": "Changing Places",
+     "title": "Deep as Love",
+     "artist": "Tord Gustavsen Trio",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/61/98/f5/6198f56e-d5cd-ebd6-d3ac-f5f2804119e5/mzaf_13549546103891527245.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/97/5e/e3/975ee3e6-5af3-6650-c6dc-8f0c7b5a670e/00044001639722.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Changing Places",
+     "title": "Graceful Touch",
+     "artist": "Tord Gustavsen Trio",
+     "year": 2003,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8b/76/d8/8b76d8e7-945e-ed73-f82c-8cc5bc4d3f67/mzaf_13370725415489322444.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/97/5e/e3/975ee3e6-5af3-6650-c6dc-8f0c7b5a670e/00044001639722.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "The Ground",
+     "title": "Tears Transforming",
+     "artist": "Tord Gustavsen Trio",
+     "year": 2005,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/7a/37/3b/7a373bf1-7853-02fa-7278-65440bc9e614/mzaf_2898806073931097859.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/77/6a/39/776a3976-e7c8-6a72-fd4a-fbd374d990a9/00028947619383.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "jean-luc-ponty",
+   "name": "Jean-Luc Ponty",
+   "born": 1942,
+   "died": null,
+   "year": 1975,
+   "stroming": "fusion",
+   "alsoIn": [],
+   "place": {
+    "name": "Avranches → Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+   },
+   "influences": [
+    "john-coltrane",
+    "miles-davis"
+   ],
+   "films": [
+    "Aurora (1975)",
+    "Imaginary Voyage (1976)",
+    "Enigmatic Ocean (1977)"
+   ],
+   "text": "Violist Jean-Luc Ponty groeide op in een Franse familie van klassieke musici en haalde op zijn achttiende de hoogste prijs van het conservatorium in Parijs. Daarna speelde hij in het Orchestre Lamoureux, en door Miles Davis en John Coltrane raakte hij in de jazz geïnteresseerd. Hij werd de leidende jazzviolist en een pionier van de elektrische viool in de jazzrock. Hij werkte samen met Frank Zappa en Elton John. Zijn albums Aurora en Enigmatic Ocean uit de jaren zeventig staan vol zwevende, elektrische lijnen.",
+   "listen": "Hoor de elektrische viool die als een gitaarsolo boven de synthesizers zingt.",
+   "tracks": [
+    {
+     "film": "Aurora",
+     "title": "Renaissance",
+     "artist": "Jean-Luc Ponty",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4d/8e/16/4d8e166e-4933-8824-a565-9473b92b3a1c/mzaf_9845866477685384551.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/dc/32/9a/dc329a5f-0cf7-d9c5-8500-75bf9b2295c2/dj.zdoffhnm.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Aurora",
+     "title": "Between You and Me",
+     "artist": "Jean-Luc Ponty",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/85/91/4b/85914b12-f69f-fd33-02db-1d47393f7e29/mzaf_7858833658697355988.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/dc/32/9a/dc329a5f-0cf7-d9c5-8500-75bf9b2295c2/dj.zdoffhnm.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Enigmatic Ocean",
+     "title": "Mirage",
+     "artist": "Jean-Luc Ponty",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9e/46/a8/9e46a862-e27d-69f6-d7ed-bdd01a704b4a/mzaf_10674634294290645342.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/a2/9d/cd/a29dcd44-90c7-5eea-7715-87cf392f5848/dj.yfuajgol.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "al-di-meola",
+   "name": "Al Di Meola",
+   "born": 1954,
+   "died": null,
+   "year": 1977,
+   "stroming": "fusion",
+   "alsoIn": [],
+   "place": {
+    "name": "Jersey City → New York",
+    "lat": 40.72,
+    "lon": -74.07
+   },
+   "influences": [],
+   "films": [
+    "Land of the Midnight Sun (1976)",
+    "Elegant Gypsy (1977)",
+    "Friday Night in San Francisco (1981)"
+   ],
+   "text": "Gitarist Al Di Meola groeide op in New Jersey en studeerde aan Berklee. In 1974, op negentienjarige leeftijd, kwam hij in de groep Return to Forever van Chick Corea. Vanaf 1976 volgde een eigen loopbaan, met snelle, technisch moeilijke stukken en veel Latijns-Amerikaanse invloeden. Op Elegant Gypsy uit 1977 staat Race with Devil on Spanish Highway. In 1981 nam hij het live album Friday Night in San Francisco op met John McLaughlin en Paco de Lucía.",
+   "listen": "Hoor de razendsnelle gitaar die over Spaanse ritmes heen vliegt, met precieze, scherpe aanslagen.",
+   "tracks": [
+    {
+     "film": "Elegant Gypsy",
+     "title": "Race with Devil on Spanish Highway",
+     "artist": "Al Di Meola",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/d8/b7/e9d8b722-f0a0-7b4e-16bb-273bca63fcf2/mzaf_15243908663094380859.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/04/2b/fd/042bfd1b-fef6-5cf0-370b-e8df67af73e0/mzi.bvwzkmjh.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Elegant Gypsy",
+     "title": "Midnight Tango",
+     "artist": "Al Di Meola",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/77/f7/1e/77f71e53-7da5-b33d-5c4a-6d08eb7a4a8c/mzaf_15857904538560489665.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/04/2b/fd/042bfd1b-fef6-5cf0-370b-e8df67af73e0/mzi.bvwzkmjh.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Elegant Gypsy",
+     "title": "Flight over Rio",
+     "artist": "Al Di Meola",
+     "year": 1977,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9d/92/11/9d92119b-3b00-685f-bbab-f8de4af29a56/mzaf_390740307055476928.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/04/2b/fd/042bfd1b-fef6-5cf0-370b-e8df67af73e0/mzi.bvwzkmjh.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "astrud-gilberto",
+   "name": "Astrud Gilberto",
+   "born": 1940,
+   "died": 2023,
+   "year": 1964,
+   "stroming": "bossa-nova",
+   "alsoIn": [
+    "vocal-jazz"
+   ],
+   "place": {
+    "name": "Salvador → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "joao-gilberto"
+   ],
+   "films": [
+    "Getz/Gilberto (1964)",
+    "The Astrud Gilberto Album (1965)",
+    "Look to the Rainbow (1966)"
+   ],
+   "text": "Astrud Gilberto werd in 1940 geboren in Salvador, in Bahia, en groeide op met een Duitse vader. Ze was de eerste vrouw van gitarist João Gilberto en bleef zijn achternaam gebruiken na hun scheiding. In 1964 zong ze op Getz/Gilberto de Engelse tekst van The Girl from Ipanema, die in 1965 een Grammy won. Daarna kreeg ze de bijnaam 'Queen of Bossa Nova'. Ze zong zacht, bijna zonder vibrato. Ze was erg populair in Japan en overleed in 2023.",
+   "listen": "Hoor de zachte, bijna kinderlijke stem die zonder te forceren boven de gitaar zweeft.",
+   "tracks": [
+    {
+     "film": "The Astrud Gilberto Album",
+     "title": "Água de Beber",
+     "artist": "Astrud Gilberto",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fa/39/bd/fa39bda4-3333-9e65-8205-c4bd1fc91d7c/mzaf_10598530157926478553.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/81/5a/1f/815a1f4e-9125-34e4-96f6-cae2af1d89da/19UMGIM66435.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "The Astrud Gilberto Album",
+     "title": "Dindi",
+     "artist": "Astrud Gilberto",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d8/ab/73/d8ab7325-9909-de04-6602-86c454395c83/mzaf_14126182995940840622.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/42/23/f4/4223f4f4-c5e7-425a-645a-b6565c915cf8/14UMGIM16857.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "The Astrud Gilberto Album",
+     "title": "Once I Loved",
+     "artist": "Astrud Gilberto",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5b/a1/f7/5ba1f740-f07d-d91e-a45c-ee3f3edad4c8/mzaf_8416760652752024562.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/42/23/f4/4223f4f4-c5e7-425a-645a-b6565c915cf8/14UMGIM16857.rgb.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
