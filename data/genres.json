@@ -468,6 +468,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9d/ae/86/9dae867b-e8dc-5e83-9079-bacd32aa1da7/15UMGIM78881.rgb.jpg/600x600bb.jpg",
      "id": 1440842601,
      "store": "https://music.apple.com/nl/album/ive-got-you-under-my-skin/1440841946?i=1440842601"
+    },
+    {
+     "artist": "Billie Holiday",
+     "title": "Strange Fruit",
+     "year": 1939,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9e/53/3e/9e533e35-caed-ce2f-c09b-8252a9867e2c/mzaf_7969307137033963162.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/69/65/ed/6965ed9b-32bd-6366-a462-d2b6ec83db78/15UMGIM13908.rgb.jpg/600x600bb.jpg",
+     "id": 1469579573,
+     "store": "https://music.apple.com/nl/album/strange-fruit/1469578841?i=1469579573"
     }
    ],
    "mixtapes": [
@@ -738,6 +747,15 @@
      "cover": "https://sorock.nl/img/0bae4b0e23a318.jpg",
      "id": 1425230917,
      "store": "https://music.apple.com/nl/album/johnny-b-goode/1425230909?i=1425230917"
+    },
+    {
+     "artist": "Little Richard",
+     "title": "Tutti Frutti",
+     "year": 1955,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7e/9d/72/7e9d7219-b38a-d9a4-a0d6-34b026f08e88/mzaf_3943454648247497527.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/6a/59/ba/6a59ba83-b62c-0aba-afdf-70112572352d/00888072025745.rgb.jpg/600x600bb.jpg",
+     "id": 1440936639,
+     "store": "https://music.apple.com/nl/album/tutti-frutti/1440936634?i=1440936639"
     }
    ],
    "mixtapes": [
@@ -1353,6 +1371,15 @@
      "year": 1967,
      "id": 1441132565,
      "store": "https://music.apple.com/nl/album/lucy-in-the-sky-with-diamonds/1441132556?i=1441132565"
+    },
+    {
+     "artist": "Jimi Hendrix",
+     "title": "Purple Haze",
+     "year": 1967,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5d/b1/64/5db1640a-955f-02cb-6dfc-ba1941f638c1/mzaf_15094055789238292543.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/14/52/f2/1452f20c-eedb-5988-177d-33e7d7fe6697/dj.gzmeisav.jpg/600x600bb.jpg",
+     "id": 344789907,
+     "store": "https://music.apple.com/nl/album/purple-haze/344789894?i=344789907"
     }
    ],
    "mixtapes": [
@@ -1441,6 +1468,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1b/6a/c1/1b6ac100-8d0e-ec9d-4639-88b11ed2cdad/603497886029.jpg/600x600bb.jpg",
      "id": 1049069476,
      "store": "https://music.apple.com/nl/album/marquee-moon/1049069472?i=1049069476"
+    },
+    {
+     "artist": "Queen",
+     "title": "Bohemian Rhapsody",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/17/fc/1e/17fc1eba-946d-84a9-710b-a0e88ea64209/mzaf_3049006317693088799.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8b/0a/ea/8b0aea60-6f4a-195b-5958-cdf459c2333b/602527644271.jpg/600x600bb.jpg",
+     "id": 6781024437,
+     "store": "https://music.apple.com/nl/album/bohemian-rhapsody/6781024026?i=6781024437"
     }
    ],
    "mixtapes": [
@@ -1620,6 +1656,24 @@
      "cover": "https://sorock.nl/img/e0e60954065261.jpg",
      "id": 1600691241,
      "store": "https://music.apple.com/nl/album/radar-love-remastered/1600691237?i=1600691241"
+    },
+    {
+     "artist": "AC/DC",
+     "title": "Highway to Hell",
+     "year": 1979,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d0/54/a9/d054a909-fe00-757a-b5fb-3760ea7cdf13/mzaf_15087080229874880055.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b9/c8/ef/b9c8ef42-bbc9-64df-11f8-717571f6730f/886443673458.jpg/600x600bb.jpg",
+     "id": 574044008,
+     "store": "https://music.apple.com/nl/album/highway-to-hell/574043989?i=574044008"
+    },
+    {
+     "artist": "Black Sabbath",
+     "title": "Paranoid",
+     "year": 1970,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/79/83/03/798303cf-4f3a-243b-87f8-36958710c910/mzaf_10220862281226465590.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/93/74/16/93741672-cedb-1850-dcd9-113a374336d6/4050538642872.jpg/600x600bb.jpg",
+     "id": 1533659669,
+     "store": "https://music.apple.com/nl/album/paranoid-2012-remaster/1533659667?i=1533659669"
     }
    ],
    "mixtapes": [
@@ -3623,6 +3677,24 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d8/ec/4f/d8ec4f92-0691-9151-1738-9fbe2e19a270/886445144888.jpg/600x600bb.jpg",
      "id": 976362823,
      "store": "https://music.apple.com/nl/album/lets-stay-together/976362815?i=976362823"
+    },
+    {
+     "artist": "Marvin Gaye",
+     "title": "What's Going On",
+     "year": 1971,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/08/f3/f4/08f3f452-b24f-e25b-92bc-15850f1bdc6a/mzaf_14002930736666872327.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/76/36/2d/76362d74-cb7a-8ef9-104e-cde1d858e9a9/20UMGIM95279.rgb.jpg/600x600bb.jpg",
+     "id": 1538081594,
+     "store": "https://music.apple.com/nl/album/whats-going-on/1538081586?i=1538081594"
+    },
+    {
+     "artist": "Nina Simone",
+     "title": "Feeling Good",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/37/1e/4a/371e4a5b-e1ad-2538-b3ad-51ba97ba1927/mzaf_408951216543324718.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/18/db/05/18db0507-f276-d93d-a4a7-e856a3f1590a/13UAAIM08283.rgb.jpg/600x600bb.jpg",
+     "id": 1445668114,
+     "store": "https://music.apple.com/nl/album/feeling-good/1445667726?i=1445668114"
     }
    ],
    "mixtapes": [
@@ -3976,6 +4048,15 @@
      "cover": "https://sorock.nl/img/b00121453859b6.jpg",
      "id": 295784003,
      "store": "https://music.apple.com/nl/album/halo/295783816?i=295784003"
+    },
+    {
+     "artist": "Michael Jackson",
+     "title": "Billie Jean",
+     "year": 1982,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/dc/bc/8a/dcbc8a3e-4ce1-c00d-cc02-eda2212053c7/mzaf_8347559338388601510.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/600x600bb.jpg",
+     "id": 269573364,
+     "store": "https://music.apple.com/nl/album/billie-jean/269572838?i=269573364"
     }
    ],
    "mixtapes": [
@@ -4881,6 +4962,15 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1f/b9/db/1fb9db01-804f-6f37-7e66-ce50016e9473/196626085405.jpg/600x600bb.jpg",
      "id": 1601915657,
      "store": "https://music.apple.com/nl/album/move-your-body/1601915653?i=1601915657"
+    },
+    {
+     "artist": "Madonna",
+     "title": "Vogue",
+     "year": 1990,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/53/b2/ee/53b2ee92-354a-e3e2-e23c-a4c95a26206c/mzaf_18177219075819280580.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9a/c1/fd/9ac1fdc9-bc47-2ed9-f84a-a272caf5a6cf/mzi.rybubacs.jpg/600x600bb.jpg",
+     "id": 83371738,
+     "store": "https://music.apple.com/nl/album/vogue-edit-version/83371916?i=83371738"
     }
    ],
    "mixtapes": [
