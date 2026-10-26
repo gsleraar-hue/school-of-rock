@@ -564,10 +564,14 @@
       </div>
       <div class="kp-body">
         ${b.text ? `<p>${b.text}</p>` : ''}
+        ${(b.tracks || []).filter(t => t.audio).length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${b.tracks.filter(t => t.audio).map((t, i) => `<div class="kp-track${t.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${t.title}">${SOR.playIcon}</button>${t.cover ? `<img src="${SOR.thumb(t.cover)}" alt="" loading="lazy" onerror="this.remove()">` : ''}<div><b>${t.film || t.artist}</b><span>${t.title}${t.year ? ' · ' + t.year : ''}</span>${SOR.storeOf(t) ? `<a class="kp-store" href="${SOR.storeOf(t)}" target="_blank" rel="noopener" aria-label="Luister op Apple Music" title="Luister op Apple Music">${SOR.storeBadge}</a>` : ''}</div></div>`).join('')}</div></div>` : ''}
         <div><p class="kp-h">Musici</p><div class="kp-links">${mem.map(m => chip(m.id)).join('')}</div></div>
         ${others.length ? `<div><p class="kp-h">Dezelfde musici speelden ook in</p><div class="kp-links">${others.map(bandChip).join('')}</div></div>` : ''}
       </div>`;
-    panel.hidden = false; panel.scrollTop = 0; panelTracks = [];
+    panel.hidden = false; panel.scrollTop = 0;
+    panelTracks = (b.tracks || []).filter(t => t.audio);
+    panel.querySelectorAll('.sor-play').forEach(x => x.addEventListener('click', () => SOR.play(trackFor(panelTracks[+x.dataset.t]))));
+    syncButtons();
   }
   function selectBand(b, center) {
     if (!b) return;
