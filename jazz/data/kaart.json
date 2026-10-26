@@ -13837,6 +13837,313 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/ef/35/b6/ef35b63c-f58f-f32b-aa81-b744dbc023e3/00025218477529.rgb.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "thad-jones",
+   "name": "Thad Jones",
+   "born": 1923,
+   "died": 1986,
+   "year": 1965,
+   "stroming": "bigband",
+   "alsoIn": [
+    "hard-bop"
+   ],
+   "place": {
+    "name": "Pontiac → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "Monday Night (1968)",
+    "Central Park North (1969)",
+    "Consummation (1970)"
+   ],
+   "text": "Trompettist Thad Jones werd in Pontiac, Michigan, geboren in een muzikale familie: zijn broers waren pianist Hank Jones en drummer Elvin Jones. Van 1954 tot 1963 speelde hij in het orkest van Count Basie, waarvoor hij ook arrangeerde. Eind 1965 richtte hij in New York met drummer Mel Lewis een bigband op, die sinds februari 1966 elke maandagavond in de Village Vanguard speelde. Hun arrangementen waren vol verrassingen en leverden een eigen bigbandklank op. In 1978 verhuisde Jones naar Kopenhagen.",
+   "listen": "Hoor hoe de blazers vlak achter elkaar antwoorden en de band toch soepel blijft swingen.",
+   "tracks": [
+    {
+     "film": "Central Park North",
+     "title": "Quietude",
+     "artist": "Thad Jones & Mel Lewis",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7f/7d/3c/7f7d3c8d-8dc8-3b79-7765-f56471857a23/mzaf_5593846065899955490.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/80/91/0b/80910b8f-1007-cfab-c896-383bb82f270e/00724357685252.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Central Park North",
+     "title": "Central Park North",
+     "artist": "Thad Jones & Mel Lewis",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/72/cb/a6/72cba665-cf1b-803c-1ba3-00bbbee97f52/mzaf_14138526173544837092.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/80/91/0b/80910b8f-1007-cfab-c896-383bb82f270e/00724357685252.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Central Park North",
+     "title": "Tow Away Zone",
+     "artist": "Thad Jones & Mel Lewis",
+     "year": 1969,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4d/5d/03/4d5d0314-2c2d-ba41-6338-c2d314a092d0/mzaf_16624319473970985071.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/80/91/0b/80910b8f-1007-cfab-c896-383bb82f270e/00724357685252.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "art-pepper",
+   "name": "Art Pepper",
+   "born": 1925,
+   "died": 1982,
+   "year": 1957,
+   "stroming": "west-coast",
+   "alsoIn": [
+    "bebop",
+    "cool"
+   ],
+   "place": {
+    "name": "Gardena → Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+   },
+   "influences": [],
+   "films": [
+    "Art Pepper Meets the Rhythm Section (1957)",
+    "Modern Art (1957)",
+    "Living Legend (1975)"
+   ],
+   "text": "Altsaxofonist Art Pepper uit Gardena, Californië, speelde al als zeventienjarige professioneel en werd lid van het orkest van Stan Kenton. Zijn muziek was vol emotie, en zijn stijl veranderde in de loop der jaren. In 1957 nam hij Art Pepper Meets the Rhythm Section op, met pianist Red Garland, bassist Paul Chambers en drummer Philly Joe Jones, de ritmesectie van Miles Davis. Zijn leven werd gekenmerkt door verslaving en gevangenisstraffen. Hij overleed in 1982, na een terugkeer naar de podia.",
+   "listen": "Hoor de scherpe, emotionele altsaxofoon die in een ballade bijna schreeuwt van gevoel.",
+   "tracks": [
+    {
+     "film": "Art Pepper Meets the Rhythm Section",
+     "title": "You'd Be So Nice to Come Home To",
+     "artist": "Art Pepper",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d8/47/78/d8477849-019c-637e-0602-f7094a822786/mzaf_11340580158657198102.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/43/7b/81/437b81ab-4eca-e592-97cb-baf9e89ab38b/00025218633826.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Art Pepper Meets the Rhythm Section",
+     "title": "Straight Life",
+     "artist": "Art Pepper",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/39/74/56/39745603-c166-0c84-ca11-43cd4304baa3/mzaf_14724206996657377752.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/ce/52/fc/ce52fc91-edd7-3e61-ac98-0def31dc3b13/00888072319929.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Art Pepper Meets the Rhythm Section",
+     "title": "Imagination",
+     "artist": "Art Pepper",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2d/51/7c/2d517cd1-9e1b-6a80-0dd8-76592bc4421d/mzaf_659994138155045137.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/ce/52/fc/ce52fc91-edd7-3e61-ac98-0def31dc3b13/00888072319929.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "jimmy-giuffre",
+   "name": "Jimmy Giuffre",
+   "born": 1921,
+   "died": 2008,
+   "year": 1947,
+   "stroming": "third-stream",
+   "alsoIn": [
+    "west-coast",
+    "free-jazz"
+   ],
+   "place": {
+    "name": "Dallas → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "The Jimmy Giuffre 3 (1956)",
+    "Fusion (1961)",
+    "Thesis (1961)"
+   ],
+   "text": "Jimmy Giuffre uit Dallas speelde klarinet en saxofoon en schreef in 1947 het arrangement van Four Brothers voor Woody Herman. In de jaren vijftig speelde hij met het Lighthouse All Stars en was hij een figuur van de West Coast-jazz. Zijn trio zonder drummer, met gitarist Jim Hall en later met pianist Paul Bley en bassist Steve Swallow, liet de musici los van maat en akkoord. Daarmee liep hij vooruit op de vrije improvisatie. Zijn klarinetgeluid was zacht en ademend. Hij overleed in 2008.",
+   "listen": "Hoor de zachte klarinet die zonder vaste maat samen met piano en bas door elkaar praat.",
+   "tracks": [
+    {
+     "film": "Fusion",
+     "title": "Jesus Maria",
+     "artist": "The Jimmy Giuffre 3",
+     "year": 1961,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/02/3b/63/023b6369-a29e-83fd-0417-7090d9a87528/mzaf_3326060542537741709.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/83/38/6f/83386f20-e36c-c7ca-5649-50ce83a210fa/GRA0185.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Fusion",
+     "title": "Emphasis",
+     "artist": "The Jimmy Giuffre 3",
+     "year": 1961,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/99/b6/ba/99b6ba9a-21a4-e2a8-5929-4fef182770c2/mzaf_8324637736527828000.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/83/38/6f/83386f20-e36c-c7ca-5649-50ce83a210fa/GRA0185.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Fusion",
+     "title": "Used to Be",
+     "artist": "The Jimmy Giuffre 3",
+     "year": 1961,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/be/95/d6/be95d6a0-692c-75e9-5b28-a03ed4d0d7eb/mzaf_16284163110853674958.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/83/38/6f/83386f20-e36c-c7ca-5649-50ce83a210fa/GRA0185.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "sam-rivers",
+   "name": "Sam Rivers",
+   "born": 1923,
+   "died": 2011,
+   "year": 1964,
+   "stroming": "free-jazz",
+   "alsoIn": [
+    "modaal"
+   ],
+   "place": {
+    "name": "El Reno → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [],
+   "films": [
+    "Fuchsia Swing Song (1965)",
+    "Contours (1965)",
+    "Streams (1973)"
+   ],
+   "text": "Saxofonist Sam Rivers werd in El Reno, Oklahoma, geboren en studeerde in Boston muziek. In 1959 speelde hij met de dertienjarige drummer Tony Williams, en in 1964 was hij kort lid van het kwintet van Miles Davis, dat in Tokio live werd opgenomen. Daarna tekende hij bij Blue Note. Zijn eerste album daar, Fuchsia Swing Song, speelt met binnen en buiten de akkoorden. In de jaren zeventig leidde hij met zijn vrouw het New Yorkse loft Studio Rivbea, een centrum van de avant-garde. Hij overleed in 2011.",
+   "listen": "Hoor hoe de tenorsaxofoon steeds net buiten de akkoorden speelt en dan weer binnen valt.",
+   "tracks": [
+    {
+     "film": "Fuchsia Swing Song",
+     "title": "Fuchsia Swing Song",
+     "artist": "Sam Rivers",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/38/d7/60/38d76053-7936-a02b-a6fb-12d4ced298a8/mzaf_11950706010393807528.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c7/b8/2c/c7b82c8b-6231-258e-5c8e-e021283fa960/00602547780690.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Fuchsia Swing Song",
+     "title": "Downstairs Blues Upstairs",
+     "artist": "Sam Rivers",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/20/f5/37/20f537cd-8ae9-64d8-d1ef-7fd739ce5881/mzaf_11597570870889383374.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c7/b8/2c/c7b82c8b-6231-258e-5c8e-e021283fa960/00602547780690.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Contours",
+     "title": "Point of Many Returns",
+     "artist": "Sam Rivers",
+     "year": 1965,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/28/5f/fa/285ffa36-1b27-74bf-d448-891e4237b7fb/mzaf_3136662612744195547.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/af/db/09/afdb0944-d1a4-c971-5c0d-d66153a1ceca/00602577641008.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "lonnie-liston-smith",
+   "name": "Lonnie Liston Smith",
+   "born": 1940,
+   "died": null,
+   "year": 1975,
+   "stroming": "spiritual-jazz",
+   "alsoIn": [
+    "jazzfunk",
+    "acid-jazz"
+   ],
+   "place": {
+    "name": "Richmond → New York",
+    "lat": 40.71,
+    "lon": -74.01
+   },
+   "influences": [
+    "john-coltrane",
+    "pharoah-sanders"
+   ],
+   "films": [
+    "Astral Traveling (1973)",
+    "Expansions (1975)",
+    "Visions of a New World (1975)"
+   ],
+   "text": "Pianist Lonnie Liston Smith groeide op in Richmond, Virginia, in een familie van gospelzangers. Hij speelde met Pharoah Sanders en Miles Davis voordat hij zijn eigen groep Cosmic Echoes begon. Zijn platen uit de jaren zeventig, waaronder Expansions, klinken zacht en zwevend, met elektrische piano en ritmes uit soul en funk. Zijn muziek geldt als een klassieker van spirituele jazz en is later veel gesampled in hiphop en acid jazz.",
+   "listen": "Hoor de zwevende elektrische piano die langzaam boven een zachte, diepe groove blijft hangen.",
+   "tracks": [
+    {
+     "film": "Expansions",
+     "title": "Expansions",
+     "artist": "Lonnie Liston Smith & The Cosmic Echoes",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b8/a9/b4/b8a9b448-41b3-7c97-4efc-40a235eb3384/mzaf_1026684949294829760.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/fb/45/43/fb45432f-5eb4-76c4-27f3-dded1e4f2a8c/29667526388.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Expansions",
+     "title": "Desert Nights",
+     "artist": "Lonnie Liston Smith & The Cosmic Echoes",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f8/20/01/f8200111-7979-45ed-103b-ec4f9c0bc128/mzaf_8691199292652683844.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/fb/45/43/fb45432f-5eb4-76c4-27f3-dded1e4f2a8c/29667526388.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Expansions",
+     "title": "Summer Days",
+     "artist": "Lonnie Liston Smith & The Cosmic Echoes",
+     "year": 1975,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e2/70/b1/e270b1d4-d7ed-0d6d-f778-7e0921fe0338/mzaf_7256796932689567549.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/fb/45/43/fb45432f-5eb4-76c4-27f3-dded1e4f2a8c/29667526388.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "shelly-manne",
+   "name": "Shelly Manne",
+   "born": 1920,
+   "died": 1984,
+   "year": 1956,
+   "stroming": "west-coast",
+   "alsoIn": [
+    "swing",
+    "bebop"
+   ],
+   "place": {
+    "name": "New York → Los Angeles",
+    "lat": 34.05,
+    "lon": -118.24
+   },
+   "influences": [],
+   "films": [
+    "My Fair Lady – met André Previn (1956)",
+    "Shelly Manne & His Men at the Blackhawk (1960)",
+    "The West Coast Sound (1953)"
+   ],
+   "text": "Drummer Shelly Manne werd in Manhattan geboren, in een familie van drummers, en speelde in de jaren dertig en veertig op de clubs van 52nd Street. Hij speelde met Coleman Hawkins en in de orkesten van Stan Kenton en Woody Herman. In de jaren vijftig verhuisde hij naar Los Angeles, waar hij een van de bekendste drummers van de West Coast-jazz werd. Met pianist André Previn nam hij My Fair Lady op, een jazzversie van de musical. Hij speelde ook voor honderden Hollywood-films en televisieprogramma's.",
+   "listen": "Hoor hoe de drums zacht en melodisch spelen, bijna als een extra instrument naast de piano.",
+   "tracks": [
+    {
+     "film": "My Fair Lady",
+     "title": "On the Street Where You Live",
+     "artist": "Shelly Manne",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/e0/fa/13/e0fa131b-e245-2e3e-e8b4-a8eb48ab691e/mzaf_10662531108672237596.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/49/e3/87/49e3879e-c008-5237-5885-473d90fbd47d/21CRGIM26059.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "My Fair Lady",
+     "title": "I Could Have Danced All Night",
+     "artist": "Shelly Manne",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/3e/e1/c2/3ee1c208-9660-9746-75ac-680665b13b72/mzaf_4370494344047125457.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/49/e3/87/49e3879e-c008-5237-5885-473d90fbd47d/21CRGIM26059.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "My Fair Lady",
+     "title": "Get Me to the Church on Time",
+     "artist": "Shelly Manne",
+     "year": 1956,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/81/db/2e/81db2e5f-c52b-8dac-f3eb-7efaa3a7533a/mzaf_2375059257048350133.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/ba/9a/c8/mzi.uyvnmeom.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
@@ -15772,8 +16079,7 @@
     "han-bennink",
     "willem-breuker",
     "evan-parker"
-   ],
-   "tracks": []
+   ]
   },
   {
    "id": "jarrett-europees",
@@ -16177,8 +16483,7 @@
    "members": [
     "toshiko-akiyoshi",
     "sadao-watanabe"
-   ],
-   "tracks": []
+   ]
   },
   {
    "id": "akiyoshi-tabackin",
