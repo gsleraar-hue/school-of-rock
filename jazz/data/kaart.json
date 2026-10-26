@@ -15067,6 +15067,314 @@
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/02/3b/ce/023bced3-7e06-5dfe-efcb-459f861f5717/00602567476924.rgb.jpg/600x600bb.jpg"
     }
    ]
+  },
+  {
+   "id": "carmen-mcrae",
+   "name": "Carmen McRae",
+   "born": 1920,
+   "died": 1994,
+   "year": 1957,
+   "stroming": "vocal-jazz",
+   "alsoIn": [
+    "bebop",
+    "swing"
+   ],
+   "place": {
+    "name": "Harlem, New York",
+    "lat": 40.81,
+    "lon": -73.95
+   },
+   "influences": [
+    "billie-holiday"
+   ],
+   "films": [
+    "Book of Ballads (1958)",
+    "After Glow (1957)",
+    "Carmen Sings Monk (1988)"
+   ],
+   "text": "Zangeres Carmen McRae werd in Harlem geboren als dochter van Jamaicaanse ouders en leerde op haar achtste piano spelen. Op haar zeventiende ontmoette ze Billie Holiday, die haar grootste voorbeeld werd. Ze speelde piano in de band van Benny Carter en bij Count Basie, en werd daarna zangeres. Haar stem klinkt droog en ironisch en ze zingt steeds net achter de maat. Op Carmen Sings Monk zong ze teksten bij stukken van Thelonious Monk. Ze overleed in 1994 en geldt als een van de invloedrijkste jazzzangeressen.",
+   "listen": "Hoor hoe ze net achter de maat zingt en elke zin droog en ironisch uitspreekt.",
+   "tracks": [
+    {
+     "film": "After Glow",
+     "title": "Guess Who I Saw Today",
+     "artist": "Carmen McRae",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c8/81/05/c88105ea-0ce4-b9b6-c6cf-6f329cd0bc7e/mzaf_5657365748142171028.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/95/22/70/95227006-8280-a980-78d5-439540e0b6c8/18UMGIM71036.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "After Glow",
+     "title": "My Funny Valentine",
+     "artist": "Carmen McRae",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/30/1d/be/301dbe49-cc12-e9e6-4631-d853d3bcbb5a/mzaf_17528634213582170374.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/95/22/70/95227006-8280-a980-78d5-439540e0b6c8/18UMGIM71036.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Carmen Sings Monk",
+     "title": "Dear Ruby",
+     "artist": "Carmen McRae",
+     "year": 1988,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/75/fb/b3/75fbb3f9-49ee-09b4-2a72-88b0a19b18df/mzaf_4423534620630975003.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/a3/af/5d/a3af5d46-847d-9eb5-1fc8-d9eedec7939d/090266384129.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "anita-oday",
+   "name": "Anita O'Day",
+   "born": 1919,
+   "died": 2006,
+   "year": 1956,
+   "stroming": "vocal-jazz",
+   "alsoIn": [
+    "swing",
+    "bebop"
+   ],
+   "place": {
+    "name": "Chicago",
+    "lat": 41.88,
+    "lon": -87.63
+   },
+   "influences": [],
+   "films": [
+    "Anita (1956)",
+    "Pick Yourself Up (1956)",
+    "Anita Sings the Most (1957)"
+   ],
+   "text": "Zangeres Anita O'Day uit Chicago begon als deelnemer aan danswedstrijden en werd ontdekt door Gene Krupa, met wiens bigband ze in 1941 een hit had met Let Me Off Uptown. Ze zong ook bij Stan Kenton. Vanaf 1947 maakte ze eigen platen en haar gebruik van marihuana en heroïne leidde tot arrestaties en in 1953 tot een half jaar gevangenis. Tussen 1956 en 1964 maakte ze bij Verve haar bekendste albums, zoals Anita Sings the Most. Ze kon heel snelle nummers volgen. Ze overleed in 2006.",
+   "listen": "Hoor hoe ze razendsnel scat zingt en de melodie net anders laat klinken dan je verwacht.",
+   "tracks": [
+    {
+     "film": "Anita Sings the Most",
+     "title": "Tenderly",
+     "artist": "Anita O'Day",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/82/7b/3c/827b3cb3-bb6d-e767-dff2-a2706483c67c/mzaf_5967670527462113595.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f7/72/aa/f772aacc-bb93-af5d-b087-2c24ad16b1b3/00602547821447.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Anita Sings the Most",
+     "title": "Old Devil Moon",
+     "artist": "Anita O'Day",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9b/41/be/9b41be1c-3eff-733b-97c7-c4d268664dd7/mzaf_12342413248327802700.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f7/72/aa/f772aacc-bb93-af5d-b087-2c24ad16b1b3/00602547821447.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Anita Sings the Most",
+     "title": "Taking a Chance on Love",
+     "artist": "Anita O'Day",
+     "year": 1957,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ce/fa/78/cefa782b-6a00-a45b-cfcd-dedd347132a1/mzaf_17309210857152770399.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f7/72/aa/f772aacc-bb93-af5d-b087-2c24ad16b1b3/00602547821447.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "mel-torme",
+   "name": "Mel Tormé",
+   "born": 1925,
+   "died": 1999,
+   "year": 1960,
+   "stroming": "vocal-jazz",
+   "alsoIn": [
+    "swing",
+    "west-coast"
+   ],
+   "place": {
+    "name": "Chicago",
+    "lat": 41.88,
+    "lon": -87.63
+   },
+   "influences": [],
+   "films": [
+    "Mel Tormé Swings Shubert Alley (1960)",
+    "Lulu's Back in Town (1956)",
+    "Mel Tormé at the Fez (1988)"
+   ],
+   "text": "Zanger Mel Tormé uit Chicago, bijgenaamd 'The Velvet Fog', trad al op zijn vierde op bij het orkest van Coon-Sanders. Hij was ook drummer, arrangeur, acteur en schrijver. Met Bob Wells schreef hij The Christmas Song, dat bijna iedereen kent. Zijn album Mel Tormé Swings Shubert Alley uit 1960 met het orkest van Marty Paich staat vol musicalnummers in jazzversies. Hij won twee Grammy's en werd veertien keer genomineerd. Hij overleed in 1999.",
+   "listen": "Hoor de gladde, warme stem die samen met een klein orkest soepel door de maat glijdt.",
+   "tracks": [
+    {
+     "film": "Mel Tormé Swings Shubert Alley",
+     "title": "Too Close for Comfort",
+     "artist": "Mel Tormé & The Marty Paich Orchestra",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9b/e7/4a/9be74af6-93ad-fd32-dfcb-5e6185e8b733/mzaf_3573107328674311140.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/aa/03/6f/aa036fff-529b-3513-7492-29f5e5111687/00602537008988.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Mel Tormé Swings Shubert Alley",
+     "title": "Just in Time",
+     "artist": "Mel Tormé",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d6/55/a1/d655a115-6081-977c-77e0-2cc5ff52ed44/mzaf_9055570027646818023.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/aa/03/6f/aa036fff-529b-3513-7492-29f5e5111687/00602537008988.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Mel Tormé Swings Shubert Alley",
+     "title": "Old Devil Moon",
+     "artist": "Mel Tormé",
+     "year": 1960,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/81/9d/73/819d7334-c81e-1a4a-a763-9b86898dc082/mzaf_12570251495890560539.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/aa/03/6f/aa036fff-529b-3513-7492-29f5e5111687/00602537008988.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "kurt-elling",
+   "name": "Kurt Elling",
+   "born": 1967,
+   "died": null,
+   "year": 1995,
+   "stroming": "vocal-jazz",
+   "alsoIn": [
+    "neotraditioneel"
+   ],
+   "place": {
+    "name": "Chicago",
+    "lat": 41.88,
+    "lon": -87.63
+   },
+   "influences": [],
+   "films": [
+    "Close Your Eyes (1995)",
+    "Live in Chicago (1999)",
+    "Dedicated to You (2009)"
+   ],
+   "text": "Zanger Kurt Elling werd in Chicago geboren en groeide op in Rockford, als zoon van de kapelmeester van een Lutherse kerk. Hij studeerde godsdienstwetenschap in Chicago, maar kreeg zijn diploma niet, omdat hij één studiepunt tekortkwam en voor de jazz koos. Hij zingt scat en maakt eigen teksten bij bekende jazzstukken. Zijn eerste album Close Your Eyes verscheen in 1995 bij Blue Note. Hij is zeventien keer genomineerd voor een Grammy en won er twee, onder meer voor Dedicated to You.",
+   "listen": "Hoor de diepe stem die lange, gevonden teksten over het stuk heen vertelt en soms scat zingt.",
+   "tracks": [
+    {
+     "film": "Close Your Eyes",
+     "title": "Close Your Eyes",
+     "artist": "Kurt Elling",
+     "year": 1995,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/70/0c/34/700c3409-7e3c-e0bb-acbd-7c43969bfb9f/mzaf_12250496705820809163.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/49/f9/e0/49f9e0d7-7a8c-e2b6-ed77-f348008e3c95/00724383064557.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Close Your Eyes",
+     "title": "Dolores Dream",
+     "artist": "Kurt Elling",
+     "year": 1995,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e6/3a/6e/e63a6e81-0683-5228-eeed-c7d2efa79869/mzaf_17504623109598176093.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/49/f9/e0/49f9e0d7-7a8c-e2b6-ed77-f348008e3c95/00724383064557.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Close Your Eyes",
+     "title": "Ballad of the Sad Young Men",
+     "artist": "Kurt Elling",
+     "year": 1995,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ca/c2/cf/cac2cf47-cd1f-b064-b1d8-425f1a62cc56/mzaf_8400669252676948643.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/49/f9/e0/49f9e0d7-7a8c-e2b6-ed77-f348008e3c95/00724383064557.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "melody-gardot",
+   "name": "Melody Gardot",
+   "born": 1985,
+   "died": null,
+   "year": 2006,
+   "stroming": "vocal-jazz",
+   "alsoIn": [
+    "bossa-nova",
+    "smooth"
+   ],
+   "place": {
+    "name": "Philadelphia",
+    "lat": 39.95,
+    "lon": -75.17
+   },
+   "influences": [],
+   "films": [
+    "Worrisome Heart (2006)",
+    "My One and Only Thrill (2009)",
+    "The Absence (2012)"
+   ],
+   "text": "Zangeres Melody Gardot werd op haar negentiende aangereden door een auto en raakte zwaar gewond aan haar hoofd. Muziek hielp haar herstel, en daarom pleit ze voor muziektherapie. Ze zingt zacht en laag, en treedt op met een zonnebril, om prikkels te verminderen. Haar eerste album Worrisome Heart kwam in 2006 uit. Met My One and Only Thrill uit 2009 brak ze internationaal door. Haar stijl mengt jazz met blues, bossa nova en folk, en klinkt vaak als filmmuziek.",
+   "listen": "Hoor de lage, fluisterende stem boven een zacht strijkorkest, alsof het een film is.",
+   "tracks": [
+    {
+     "film": "Worrisome Heart",
+     "title": "Worrisome Heart",
+     "artist": "Melody Gardot",
+     "year": 2006,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7f/5b/23/7f5b2363-58d0-fd27-45a2-6aefa74d0157/mzaf_2579607902826702493.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/2f/a5/04/2fa50400-5274-0527-0c0c-af92b2c5a1fb/00602517496408.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "My One and Only Thrill",
+     "title": "Baby I'm a Fool",
+     "artist": "Melody Gardot",
+     "year": 2009,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/11/9c/4c/119c4ce3-2b22-8703-4b2f-00bb95f584d8/mzaf_17306033004270706960.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/72/30/d9/7230d932-f912-fa9d-491a-0596d7112cf4/08UMGIM28495.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "My One and Only Thrill",
+     "title": "Our Love Is Easy",
+     "artist": "Melody Gardot",
+     "year": 2009,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3e/4e/60/3e4e6096-9d15-79f9-1dcb-74eadf3ffd6d/mzaf_2745360289671311641.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/72/30/d9/7230d932-f912-fa9d-491a-0596d7112cf4/08UMGIM28495.rgb.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": "madeleine-peyroux",
+   "name": "Madeleine Peyroux",
+   "born": 1974,
+   "died": null,
+   "year": 1996,
+   "stroming": "vocal-jazz",
+   "alsoIn": [
+    "swing"
+   ],
+   "place": {
+    "name": "Parijs",
+    "lat": 48.86,
+    "lon": 2.35
+   },
+   "influences": [
+    "billie-holiday"
+   ],
+   "films": [
+    "Dreamland (1996)",
+    "Careless Love (2004)",
+    "Half the Perfect World (2006)"
+   ],
+   "text": "Zangeres Madeleine Peyroux werd in Georgia geboren en groeide op in New York en Californië. Op haar dertiende verhuisde ze met haar moeder naar Parijs en zong ze op straat in het Quartier Latin. Daar speelde ze in jazzgroepen en trok ze door Europa. Haar debuutalbum Dreamland kwam in 1996 uit en bevatte liedjes van Billie Holiday en Bessie Smith. Haar tweede album Careless Love uit 2004 werd een half miljoen keer verkocht. Ze zingt droog en zacht, met een stem die aan Holiday doet denken.",
+   "listen": "Hoor de droge, zachte stem die oude blues en moderne liedjes even rustig vertelt.",
+   "tracks": [
+    {
+     "film": "Careless Love",
+     "title": "Dance Me to the End of Love",
+     "artist": "Madeleine Peyroux",
+     "year": 2004,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/87/5b/16/875b16b1-a102-2c17-0c15-81f7e61b7b01/mzaf_16245707138114793065.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c4/ad/ca/c4adcac5-d1ab-b171-af59-7d6df0b397e6/00888072049338.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Careless Love",
+     "title": "Don't Wait Too Long",
+     "artist": "Madeleine Peyroux",
+     "year": 2004,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/03/87/88/03878828-459a-bd0e-35d7-dc8bf23a0b5b/mzaf_10983088516368435414.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c4/ad/ca/c4adcac5-d1ab-b171-af59-7d6df0b397e6/00888072049338.rgb.jpg/600x600bb.jpg"
+    },
+    {
+     "film": "Careless Love",
+     "title": "Between the Bars",
+     "artist": "Madeleine Peyroux",
+     "year": 2004,
+     "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8d/fb/d6/8dfbd6ca-a3c5-87a8-1b2a-cb0cd6e5b3fc/mzaf_12510210023795431762.plus.aac.p.m4a",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c4/ad/ca/c4adcac5-d1ab-b171-af59-7d6df0b397e6/00888072049338.rgb.jpg/600x600bb.jpg"
+    }
+   ]
   }
  ],
  "bands": [
