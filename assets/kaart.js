@@ -2,11 +2,17 @@
 (async function () {
   const SOR = window.SOR;
   const $ = s => document.querySelector(s);
+  // Taal: de Engelse pagina (en/kaart.html) heeft <meta name="sor-lang" content="en"> en laadt de -en-bestanden
+  const EN = (document.querySelector('meta[name="sor-lang"]') || {}).content === 'en', SFX = EN ? '-en' : '', RB = EN ? '../' : '';
+  const UI = { 'Alle genres': 'All genres', 'genre': 'genre', 'techniek': 'technology', 'Genrekaart': 'Genre map', 'Sluit': 'Close', 'Techniek': 'Technology', 'Luister': 'Listen', 'Speel': 'Play', 'Luister op Apple Music': 'Listen on Apple Music',
+    'Maakte mogelijk': 'Made possible', 'Speelde ook een rol bij': 'Also played a part in', 'Bouwt voort op': 'Builds on', 'Leidde tot': 'Led to', 'Vorige': 'Previous', 'Volgende': 'Next', 'Leerpad': 'Learning path', 'bloei': 'peak',
+    'Techniek die dit mogelijk maakte': 'Technology that made this possible', 'Techniek die er ook een rol in speelde': 'Technology that also played a part', 'Komt voort uit': 'Grew out of', 'Lees in de reader': 'Read in the reader', 'nu': 'now', 'Pauze': 'Pause', 'in het Nederlands': 'in Dutch' };
+  const tr = s => (EN && UI[s]) || s;
   const [data, mixtapes, order, tech, world] = await Promise.all([
-    SOR.load('data/genres.json'),
-    SOR.load('data/mixtapes.json'),
+    SOR.load('data/genres' + SFX + '.json'),
+    SOR.load('data/mixtapes' + SFX + '.json'),
     SOR.load('data/order.json').catch(() => ({})),
-    SOR.load('data/tech.json').catch(() => null),
+    SOR.load('data/tech' + SFX + '.json').catch(() => null),
     fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(r => r.json()).catch(() => null)
   ]);
 
@@ -38,7 +44,7 @@
     focusFams();
   });
   const sel = $('#k-path');
-  sel.innerHTML = '<option value="">Alle genres</option>' + mixtapes.map(m => `<option value="${m.n}">Mixtape ${m.n} · ${m.title}</option>`).join('');
+  sel.innerHTML = '<option value="">' + tr('Alle genres') + '</option>' + mixtapes.map(m => `<option value="${m.n}">Mixtape ${m.n} · ${m.title}</option>`).join('');
   const dl = $('#k-genres');
   // zoeken op genre, uitvinding of artiest (de artiesten van de luisterfragmenten)
   let searchList = [];
@@ -64,7 +70,7 @@
     '.k-sugg li{padding:7px 12px;color:#EDE9E1;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.k-sugg li small{color:#9C978D;margin-left:6px}.k-sugg li.on,.k-sugg li:hover{background:#3A3833}';
   document.head.appendChild(sCss);
   let sHits = [], sOn = -1, sTimer = 0;
-  const KIND = ['genre', 'techniek', '', ''];
+  const KIND = [tr('genre'), tr('techniek'), '', ''];
   function suggest() {
     const v = SOR.norm(sInput.value);
     if (!v) { sBox.hidden = true; sHits = []; return; }
@@ -111,7 +117,7 @@
 
   // ---------- SVG ----------
   const stage = $('.k-stage');
-  const svg = d3.select(stage).append('svg').attr('role', 'img').attr('aria-label', 'Genrekaart');
+  const svg = d3.select(stage).append('svg').attr('role', 'img').attr('aria-label', tr('Genrekaart'));
   const root = svg.append('g');
   const gBack = root.append('g');      // banen of landen
   const gGrid = root.append('g');      // decennia
@@ -258,13 +264,13 @@
     const tchip = o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`;
     const after = (d.after || []).map(id => tById.get(id)).filter(Boolean), next = TI.filter(o => (o.after || []).includes(d.id));
     const gen = (d.enabled || []).filter(id => byId.has(id)), shp = (d.shaped || []).filter(id => byId.has(id));
-    panel.innerHTML = `<div class="kp-head" style="--c:${lane?.color}"><button class="kp-close" type="button" aria-label="Sluit">×</button><div class="fam">Techniek · ${lane?.name || ''}</div><h2>${d.name}</h2><div class="meta">${d.year}${d.who ? ' · ' + d.who : ''}${d.place?.name ? ' · ' + d.place.name : ''}</div></div>
+    panel.innerHTML = `<div class="kp-head" style="--c:${lane?.color}"><button class="kp-close" type="button" aria-label="${tr('Sluit')}">×</button><div class="fam">${tr('Techniek')} · ${lane?.name || ''}</div><h2>${d.name}</h2><div class="meta">${d.year}${d.who ? ' · ' + d.who : ''}${d.place?.name ? ' · ' + d.place.name : ''}</div></div>
       <div class="kp-body"><p>${d.text}</p>${d.listen ? `<p class="kp-listen">${d.listen}</p>` : ''}
-      ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((x, i) => `<div class="kp-track${x.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${x.artist}">${SOR.playIcon}</button>${x.cover ? `<img src="${SOR.thumb(x.cover)}" alt="" loading="lazy">` : ''}<div><b>${x.artist}</b><span>${x.title}${x.year ? ' · ' + x.year : ''}</span>${SOR.storeOf(x) ? `<a class="kp-store" href="${SOR.storeOf(x)}" target="_blank" rel="noopener" aria-label="Luister op Apple Music" title="Luister op Apple Music">${SOR.storeBadge}</a>` : ''}</div></div>`).join('')}</div></div>` : ''}
-      ${gen.length ? `<div><p class="kp-h">Maakte mogelijk</p><div class="kp-links">${gen.map(chip).join('')}</div></div>` : ''}
-      ${shp.length ? `<div><p class="kp-h">Speelde ook een rol bij</p><div class="kp-links">${shp.map(chip).join('')}</div></div>` : ''}
-      ${after.length ? `<div><p class="kp-h">Bouwt voort op</p><div class="kp-links">${after.map(tchip).join('')}</div></div>` : ''}
-      ${next.length ? `<div><p class="kp-h">Leidde tot</p><div class="kp-links">${next.map(tchip).join('')}</div></div>` : ''}</div>`;
+      ${tracks.length ? `<div><p class="kp-h">${tr('Luister')}</p><div class="kp-tracks">${tracks.map((x, i) => `<div class="kp-track${x.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="${tr('Speel')} ${x.artist}">${SOR.playIcon}</button>${x.cover ? `<img src="${SOR.thumb(x.cover)}" alt="" loading="lazy">` : ''}<div><b>${x.artist}</b><span>${x.title}${x.year ? ' · ' + x.year : ''}</span>${SOR.storeOf(x) ? `<a class="kp-store" href="${SOR.storeOf(x)}" target="_blank" rel="noopener" aria-label="${tr('Luister op Apple Music')}" title="${tr('Luister op Apple Music')}">${SOR.storeBadge}</a>` : ''}</div></div>`).join('')}</div></div>` : ''}
+      ${gen.length ? `<div><p class="kp-h">${tr('Maakte mogelijk')}</p><div class="kp-links">${gen.map(chip).join('')}</div></div>` : ''}
+      ${shp.length ? `<div><p class="kp-h">${tr('Speelde ook een rol bij')}</p><div class="kp-links">${shp.map(chip).join('')}</div></div>` : ''}
+      ${after.length ? `<div><p class="kp-h">${tr('Bouwt voort op')}</p><div class="kp-links">${after.map(tchip).join('')}</div></div>` : ''}
+      ${next.length ? `<div><p class="kp-h">${tr('Leidde tot')}</p><div class="kp-links">${next.map(tchip).join('')}</div></div>` : ''}</div>`;
     panel.hidden = false; panel.scrollTop = 0;
     panel.querySelectorAll('.sor-play').forEach(b => b.addEventListener('click', () => { const x = tracks[+b.dataset.t]; SOR.play({ audio: x.audio, artist: x.artist, title: x.title, cover: x.cover, year: x.year }); }));
   }
@@ -472,24 +478,24 @@
   function renderPanel(d) {
     const f = famById.get(d.family);
     const tracks = (d.tracks || []).filter(t => t.audio);
-    const step = state.path ? `<div class="kp-step"><button type="button" data-step="-1" ${state.step <= 0 ? 'disabled' : ''}>← Vorige</button><span>Leerpad Mixtape ${state.path.n} · ${state.step + 1}/${state.path.list.length}</span><button type="button" data-step="1" ${state.step >= state.path.list.length - 1 ? 'disabled' : ''}>Volgende →</button></div>` : '';
+    const step = state.path ? `<div class="kp-step"><button type="button" data-step="-1" ${state.step <= 0 ? 'disabled' : ''}>← ${tr('Vorige')}</button><span>${tr('Leerpad')} Mixtape ${state.path.n} · ${state.step + 1}/${state.path.list.length}</span><button type="button" data-step="1" ${state.step >= state.path.list.length - 1 ? 'disabled' : ''}>${tr('Volgende')} →</button></div>` : '';
     panel.innerHTML = `
       <div class="kp-head" style="--c:${f?.color}">
-        <button class="kp-close" type="button" aria-label="Sluit">×</button>
+        <button class="kp-close" type="button" aria-label="${tr('Sluit')}">×</button>
         <div class="fam">${f?.name || ''}</div>
         <h2>${d.name}</h2>
-        <div class="meta">${d.year}${d.peak ? ` · bloei ${d.peak[0]}-${d.peak[1]}` : ''} · ${d.place.name}</div>
+        <div class="meta">${d.year}${d.peak ? ` · ${tr('bloei')} ${d.peak[0]}-${d.peak[1]}` : ''} · ${d.place.name}</div>
       </div>
       <div class="kp-body">
         ${step}
         <p>${d.text}</p>
         ${d.listen ? `<p class="kp-listen">${d.listen}</p>` : ''}
-        ${tracks.length ? `<div><p class="kp-h">Luister</p><div class="kp-tracks">${tracks.map((t, i) => `<div class="kp-track${t.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="Speel ${t.artist}">${SOR.playIcon}</button>${t.cover ? `<img src="${SOR.thumb(t.cover)}" alt="" loading="lazy" onerror="this.remove();this.parentNode&&0">` : ''}<div><b>${t.artist}</b><span>${t.title}${t.year ? ' · ' + t.year : ''}</span>${SOR.storeOf(t) ? `<a class="kp-store" href="${SOR.storeOf(t)}" target="_blank" rel="noopener" aria-label="Luister op Apple Music" title="Luister op Apple Music">${SOR.storeBadge}</a>` : ''}</div></div>`).join('')}</div></div>` : ''}
-        ${techFor(d.id).length ? `<div><p class="kp-h">Techniek die dit mogelijk maakte</p><div class="kp-links">${techFor(d.id).map(o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`).join('')}</div></div>` : ''}
-        ${techShaped(d.id).length ? `<div><p class="kp-h">Techniek die er ook een rol in speelde</p><div class="kp-links">${techShaped(d.id).map(o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`).join('')}</div></div>` : ''}
-        ${(d.parents || []).length ? `<div><p class="kp-h">Komt voort uit</p><div class="kp-links">${d.parents.map(chip).join('')}</div></div>` : ''}
-        ${d.children.length ? `<div><p class="kp-h">Leidde tot</p><div class="kp-links">${d.children.map(chip).join('')}</div></div>` : ''}
-        ${(d.mixtapes || []).length ? `<div><p class="kp-h">Lees in de reader</p><div class="kp-read">${d.mixtapes.map(m => { const mx = mixById.get(m.n); return `<a href="mixtape/${String(m.n).padStart(2, '0')}.html#${SOR.slug(m.heading)}"><small>${String(m.n).padStart(2, '0')}</small><b>${m.heading}</b><span>Mixtape ${m.n} · ${mx ? mx.title : ''} · ${m.track || ''}</span></a>`; }).join('')}</div></div>` : ''}
+        ${tracks.length ? `<div><p class="kp-h">${tr('Luister')}</p><div class="kp-tracks">${tracks.map((t, i) => `<div class="kp-track${t.cover ? '' : ' nocover'}"><button class="sor-play" type="button" data-t="${i}" aria-label="${tr('Speel')} ${t.artist}">${SOR.playIcon}</button>${t.cover ? `<img src="${SOR.thumb(t.cover)}" alt="" loading="lazy" onerror="this.remove();this.parentNode&&0">` : ''}<div><b>${t.artist}</b><span>${t.title}${t.year ? ' · ' + t.year : ''}</span>${SOR.storeOf(t) ? `<a class="kp-store" href="${SOR.storeOf(t)}" target="_blank" rel="noopener" aria-label="${tr('Luister op Apple Music')}" title="${tr('Luister op Apple Music')}">${SOR.storeBadge}</a>` : ''}</div></div>`).join('')}</div></div>` : ''}
+        ${techFor(d.id).length ? `<div><p class="kp-h">${tr('Techniek die dit mogelijk maakte')}</p><div class="kp-links">${techFor(d.id).map(o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`).join('')}</div></div>` : ''}
+        ${techShaped(d.id).length ? `<div><p class="kp-h">${tr('Techniek die er ook een rol in speelde')}</p><div class="kp-links">${techShaped(d.id).map(o => `<button class="kp-chip" type="button" data-tech="${o.id}" style="--c:${tLaneById.get(o.lane)?.color}"><i></i>${o.name}</button>`).join('')}</div></div>` : ''}
+        ${(d.parents || []).length ? `<div><p class="kp-h">${tr('Komt voort uit')}</p><div class="kp-links">${d.parents.map(chip).join('')}</div></div>` : ''}
+        ${d.children.length ? `<div><p class="kp-h">${tr('Leidde tot')}</p><div class="kp-links">${d.children.map(chip).join('')}</div></div>` : ''}
+        ${(d.mixtapes || []).length ? `<div><p class="kp-h">${tr('Lees in de reader')}</p><div class="kp-read">${d.mixtapes.map(m => { const mx = mixById.get(m.n); return `<a href="${RB}mixtape/${String(m.n).padStart(2, '0')}.html#${SOR.slug(m.heading)}"><small>${String(m.n).padStart(2, '0')}</small><b>${m.heading}</b><span>Mixtape ${m.n} · ${mx ? mx.title : ''} · ${m.track || ''}${EN ? ' · NL' : ''}</span></a>`; }).join('')}</div></div>` : ''}
         ${(d.mixtapes || []).length ? `<div class="kp-links">${[...new Set(d.mixtapes.map(m => m.n))].map(n => { const mx = mixById.get(n); return mx && mx.spotify ? `<a class="kp-chip" href="${mx.spotify}" target="_blank" rel="noopener"><i style="background:#1DB954"></i>Playlist Mixtape ${n}</a>` : ''; }).join('')}</div>` : ''}
       </div>`;
     panel.hidden = false;
@@ -592,7 +598,7 @@
   // ---------- Tijdlijn: speel de geschiedenis af ----------
   const range = $('#k-range'), yearLbl = $('#k-yearlbl'), yearBig = $('.k-yearbig');
   range.min = YMIN; range.max = YMAX; range.value = YMAX;
-  function syncYear() { range.value = state.year; yearLbl.textContent = state.year >= YMAX ? 'nu' : state.year; yearBig.textContent = state.year >= YMAX ? '' : state.year; }
+  function syncYear() { range.value = state.year; yearLbl.textContent = state.year >= YMAX ? tr('nu') : state.year; yearBig.textContent = state.year >= YMAX ? '' : state.year; }
   range.addEventListener('input', () => { state.year = +range.value; syncYear(); applyVisibility(); });
   $('#k-sound').addEventListener('change', e => { state.sound = e.target.checked; });
   let timer = null, lastSound = 0, speed = 1;
@@ -614,7 +620,7 @@
     clearSelection();
     if (state.year >= YMAX) state.year = YMIN;
     state.playing = true;
-    playBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg>Pauze';
+    playBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg>' + tr('Pauze');
     const tick = () => {
       // lege stukken overslaan: spring vlak voor het volgende genre in plaats van jaar voor jaar te tellen
       let nx = Infinity; for (const g of G) if (g.year > state.year && g.year < nx && state.fams.has(g.family)) nx = g.year;

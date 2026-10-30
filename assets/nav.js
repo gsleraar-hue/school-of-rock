@@ -159,7 +159,7 @@
   function setFull(on) {
     document.documentElement.classList.toggle('k-full', on);
     const b = document.querySelector('.k-full-btn');
-    if (b) { b.textContent = on ? '✕' : '⛶'; b.setAttribute('aria-label', on ? 'Volledig scherm sluiten' : 'Volledig scherm'); b.title = b.getAttribute('aria-label'); }
+    if (b) { b.textContent = on ? '✕' : '⛶'; const en = (document.querySelector('meta[name="sor-lang"]') || {}).content === 'en'; b.setAttribute('aria-label', en ? (on ? 'Close full screen' : 'Full screen') : (on ? 'Volledig scherm sluiten' : 'Volledig scherm')); b.title = b.getAttribute('aria-label'); }
     try {
       if (on && !fsEl()) { const r = document.documentElement; (r.requestFullscreen || r.webkitRequestFullscreen || function () {}).call(r); }
       if (!on && fsEl()) (document.exitFullscreen || document.webkitExitFullscreen).call(document);

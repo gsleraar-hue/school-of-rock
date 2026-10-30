@@ -3,7 +3,7 @@
   if (window.SOR) return; // al geladen: de speler blijft staan bij navigeren binnen de site
   const SCRIPT_SRC = (document.currentScript && document.currentScript.src) || new URL('/assets/player.js', location.href).href;
   const root = () => document.querySelector('meta[name="sor-root"]')?.content || '.';
-  const abs = p => /^https?:\/\//i.test(p) ? p : new URL(root() + '/' + p, location.href).href; // volledige adressen (luisterboek op sor-audio) blijven zoals ze zijn
+  const abs = p => new URL(root() + '/' + p, location.href).href;
   const slug = s => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/&/g, ' en ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const norm = s => slug(s).replace(/-/g, '');
   const store = { get(k) { try { return JSON.parse(localStorage.getItem('sor-' + k)); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem('sor-' + k, JSON.stringify(v)); } catch (e) {} } };
@@ -181,7 +181,9 @@
   let APPLE = null;
   const appleKlaar = fetch(new URL('../data/apple.json', SCRIPT_SRC).href).then(r => r.ok ? r.json() : {}).catch(() => ({})).then(m => { APPLE = m; return m; });
   const appleVan = t => t && t.audio && APPLE ? APPLE[t.audio.split('/').pop().replace(/\.[a-z0-9]+$/i, '')] : null;
-  const storeOf = t => { if (!t || t.book) return ''; if (t.store) return t.store; const v = appleVan(t); return v ? `https://music.apple.com/nl/album/${v[1]}?i=${v[0]}` : ''; };
+  // Engelse pagina's (meta sor-lang = en) verwijzen naar de Britse Apple Music-winkel
+  const landWinkel = u => (document.querySelector('meta[name="sor-lang"]') || {}).content === 'en' ? u.replace('music.apple.com/nl/', 'music.apple.com/gb/') : u;
+  const storeOf = t => { if (!t || t.book) return ''; if (t.store) return landWinkel(t.store); const v = appleVan(t); return v ? landWinkel(`https://music.apple.com/nl/album/${v[1]}?i=${v[0]}`) : ''; };
   function toonStore(track) {
     const st = $('.sp-store'), url = storeOf(track);
     if (url) { st.href = url; st.hidden = false; if (!st.firstChild) st.innerHTML = APPLE_ICON.replace('<path', '<rect x="60" y="40" width="240" height="280" fill="#fff"/><path'); st.setAttribute('aria-label', 'Luister naar ' + (track.title || '') + ' op Apple Music'); }
