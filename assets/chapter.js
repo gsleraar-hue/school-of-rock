@@ -4,6 +4,8 @@
   const RAW = document.body.dataset.mixtape || '';
   const SET = RAW.startsWith('film-') ? 'film' : RAW.startsWith('jazz-') ? 'jazz' : 'pop';
   const N = +RAW.replace(/^(film|jazz)-/, '');
+  // Engelse pagina's (meta sor-lang = en): geen luisterboek (alleen Nederlands), Engelse genrenamen en kaart
+  const EN = (document.querySelector('meta[name="sor-lang"]') || {}).content === 'en';
 
   // Ankers per track, zodat de kaart naar een track kan linken.
   document.querySelectorAll('.flow .head h3').forEach(h => {
@@ -13,7 +15,7 @@
 
   // Luisterboek: dit hoofdstuk beluisteren (de speler loopt door als je verder klikt op de site).
   // Alleen hoofdstukken die in luisterboek.json staan krijgen de knop (nieuwe opnames komen gefaseerd).
-  const LUISTERBOEK = true;
+  const LUISTERBOEK = !EN;
   (function () {
     if (!LUISTERBOEK) return;
     const deck = document.querySelector('.deck'); if (!deck || !SOR.playBook) return;
@@ -136,7 +138,7 @@
       if (!t && cands.length === 1 && /^\d{4}\b/.test(cands[0].title)) t = cands[0];
       if (!t) return;
       const b = document.createElement('button');
-      b.type = 'button'; b.className = 'sor-play'; b.setAttribute('aria-label', 'Speel ' + artist + ' – ' + title);
+      b.type = 'button'; b.className = 'sor-play'; b.setAttribute('aria-label', (EN ? 'Play ' : 'Speel ') + artist + ' – ' + title);
       b.innerHTML = SOR.playIcon;
       b.addEventListener('click', () => SOR.play({ ...t, year: (title.match(/\d{4}/) || [])[0] }));
       // afspeelknop op de hoes (of op de plek van de hoes als die er niet is)
@@ -150,7 +152,7 @@
       SOR.appleKlaar.then(() => {
         const url = SOR.storeOf(t); if (!url) return;
         const a = document.createElement('a'); a.className = 'note-store'; a.href = url; a.target = '_blank'; a.rel = 'noopener';
-        a.title = 'Luister op Apple Music'; a.setAttribute('aria-label', 'Luister naar ' + title + ' op Apple Music'); a.innerHTML = SOR.storeBadge;
+        a.title = EN ? 'Listen on Apple Music' : 'Luister op Apple Music'; a.setAttribute('aria-label', EN ? 'Listen to ' + title + ' on Apple Music' : 'Luister naar ' + title + ' op Apple Music'); a.innerHTML = SOR.storeBadge;
         const plek = rec && rec.querySelector(':scope > div:last-child');
         if (plek) plek.append(' ', a); else note.append(' ', a);
       });
@@ -164,13 +166,13 @@
   });
 
   // Genres uit dit hoofdstuk op de kaart.
-  SOR.load('data/genres.json').then(data => {
+  SOR.load(EN ? 'data/genres-en.json' : 'data/genres.json').then(data => {
     const box = document.querySelector('.deck-genres');
     if (!box) return;
     const fam = new Map(data.families.map(f => [f.id, f]));
     const list = data.genres.filter(g => (g.mixtapes || []).some(m => m.n === N)).sort((a, b) => a.year - b.year);
     if (!list.length) { box.closest('.deck-row').hidden = true; return; }
-    box.innerHTML = list.map(g => `<a class="gchip" href="${SOR.root}/kaart.html#${g.id}" style="--c:${(fam.get(g.family) || {}).color || '#999'}"><i></i>${g.name}<span>${g.year}</span></a>`).join('');
+    box.innerHTML = list.map(g => `<a class="gchip" href="${SOR.root}/${EN ? 'en/' : ''}kaart.html#${g.id}" style="--c:${(fam.get(g.family) || {}).color || '#999'}"><i></i>${g.name}<span>${g.year}</span></a>`).join('');
   }).catch(() => { const r = document.querySelector('.deck-genres'); if (r) r.closest('.deck-row').hidden = true; });
 
   // Spotify-speler en LessonUp-les in de pagina openen.
