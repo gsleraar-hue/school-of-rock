@@ -266,7 +266,7 @@ function linkBasis(tekst: string, zelf: string, gezien: Set<string>) {
 }
 // Naam vet bij de eerste vermelding in de inleiding, zoals op Wikipedia
 // alleen in tekst zoeken, niet binnen een tag (anders wordt "Ye" vet in href="kanye-west.html")
-const buitenTag = (html: string, n: string) => { let i = -1; while ((i = html.indexOf(n, i + 1)) >= 0) { const lt = html.lastIndexOf("<", i), gt = html.lastIndexOf(">", i); if (lt <= gt) return i; } return -1; };
+const buitenTag = (html: string, n: string) => { let i = -1; while ((i = html.indexOf(n, i + 1)) >= 0) { const lt = html.lastIndexOf("<", i), gt = html.lastIndexOf(">", i); if (lt <= gt && !/[\p{L}\d]/u.test(html[i - 1] || "") && !/[\p{L}\d]/u.test(html[i + n.length] || "")) return i; } return -1; };
 const vet = (html: string, naam: string) => { const i = buitenTag(html, esc(naam)); return i < 0 ? `<b>${esc(naam)}</b> · ` + html : html.slice(0, i) + `<b>${esc(naam)}</b>` + html.slice(i + esc(naam).length); };
 
 const CSS = Deno.readTextFileSync(W + "encyclopedie/stijl.css"); // SoR-huisstijl, Wikipedia-opbouw
