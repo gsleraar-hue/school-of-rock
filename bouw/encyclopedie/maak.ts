@@ -31,7 +31,9 @@ if (exists(ED + "bewerkt-en")) for (const t of Deno.readDirSync(ED + "bewerkt-en
   BEWERKT_EN++;
 }
 const EN_STUBS = true; // beginnetjes (zonder tekst) krijgen ook een Engelse pagina (kan sinds de luisterboeken naar sor-audio zijn verhuisd)
-const heeftEn = (l: any) => !!TR[l.id] || l.type === "begrip" && !!WL.defs[l.id] || (EN_STUBS && !l.text);
+// Albums zonder eigen tekst krijgen geen eigen pagina (gebruiker 2026-10-31): ze staan alleen als regel in de discografie, en krijgen een pagina zodra er een tekst is
+const PAGINALOOS = new Set<string>(LNL.filter((l) => l.album && l.stub).map((l) => l.id));
+const heeftEn = (l: any) => !PAGINALOOS.has(l.id) && (!!TR[l.id] || l.type === "begrip" && !!WL.defs[l.id] || (EN_STUBS && !l.text));
 
 // De Nederlandse bron verwijst naar "de cursus" (= School of Rock zelf); in het Engels leest "the course" vreemd
 const schoon = (t: string) => t
@@ -133,7 +135,7 @@ const werkRegel = (w: string, l: any) => {
   const titelHtml = hit ? a(hit.id) : esc(titel);
   return { jaar, key: wNorm(titel), eigenArt: !wie, html: `<li><span class="j">${jaar}</span><i>${titelHtml}</i>${artHtml ? " <span class=\"klein\">· " + artHtml + "</span>" : ""}${extra ? " <span class=\"klein\">(" + esc(extra) + ")</span>" : ""}</li>` };
 };
-const a = (id: string, root?: string) => { const x = byId.get(id); return x ? `<a href="${href(id, root)}">${esc(x.name)}</a>` : ""; };
+const a = (id: string, root?: string) => { const x = byId.get(id); return !x ? "" : PAGINALOOS.has(id) ? esc(x.name) : `<a href="${href(id, root)}">${esc(x.name)}</a>`; };
 // Albumgenre (MusicBrainz): linkt naar het genre-artikel als dat bestaat ("hard bop" = "Hard bop"), anders platte tekst
 const sgNorm = (x: string) => x.toLowerCase().replace(/[^a-z0-9]+/g, "");
 let GENRE_LEMMA = new Map<string, string>(), GENRE_VAN: any = null; // byId wordt per taal opnieuw gevuld
@@ -179,7 +181,7 @@ function linkWiki(tekst: string, zelf: string, gezien: Set<string>) {
   for (const m of tekst.matchAll(WIKI_RE)) {
     const doel = m[1].trim(), tonen = (m[2] ?? m[1]).trim(), id = byId.has(doel) ? doel : NAAMIDX.get(doel.toLowerCase());
     uit += esc(tekst.slice(pos, m.index));
-    if (id && id !== zelf) { gezien.add(id); uit += `<a href="${href(id)}">${esc(tonen)}</a>`; } else uit += esc(tonen);
+    if (id && id !== zelf && !PAGINALOOS.has(id)) { gezien.add(id); uit += `<a href="${href(id)}">${esc(tonen)}</a>`; } else uit += esc(tonen);
     pos = m.index! + m[0].length;
   }
   return uit + esc(tekst.slice(pos));
@@ -214,7 +216,7 @@ function initLinks() {
   for (const l of L) {
     const art = l.album && l.links?.artiest?.[0];
     const n = l.name.trim();
-    if (!art || (n.length < 4 && !/s/.test(n)) || n === byId.get(art)?.name) continue;
+    if (!art || PAGINALOOS.has(l.id) || (n.length < 4 && !/s/.test(n)) || n === byId.get(art)?.name) continue;
     (albumsVan.get(art) || albumsVan.set(art, new Map()).get(art)!).set(n, l.id);
   }
 }
@@ -422,7 +424,7 @@ function lemmaPage(l: any) {
     secties.push(["sor", "In School of Rock", `${LANG === "en" ? '<p class="klein">The chapters, maps and magazine stories of School of Rock are currently available in Dutch only.</p>' : ""}<ul class="vermeld">${sor.map((x: any) => `<li>${nlA(ROOT + "/" + esc(x.href), esc(x.label))} <span class="klein">${kind[x.kind] || x.kind}</span>${x.zin ? `<q>${linkify(x.zin, l.id, new Set(gezien))}</q>` : ""}</li>`).join("")}</ul>`]);
   }
   if (l.vermeld?.length) secties.push(["vermeld", nt("Genoemd in andere artikelen", "Mentioned in other articles"), `<ul class="vermeld">${l.vermeld.map((v: any) => `<li>${a(v.id)} <span class="klein">${esc(label(byId.get(v.id) || {}))}</span><q>${linkify(v.zin, l.id, new Set([...gezien, v.id]))}</q></li>`).join("")}</ul>`]);
-  const zie = [...new Set(["artiest", "maker", "werk", "wortels", "daarna", "genre", "techniek", "invloed", "invloed-op"].flatMap((k) => l.links[k] || []))].filter((id: string) => !gezien.has(id) && byId.has(id) && !(l.type === "artiest" && byId.get(id).album)).slice(0, 30);
+  const zie = [...new Set(["artiest", "maker", "werk", "wortels", "daarna", "genre", "techniek", "invloed", "invloed-op"].flatMap((k) => l.links[k] || []))].filter((id: string) => !gezien.has(id) && byId.has(id) && !PAGINALOOS.has(id) && !(l.type === "artiest" && byId.get(id).album)).slice(0, 30);
   if (zie.length) secties.push(["zieook", nt("Zie ook", "See also"), `<ul class="ziezook">${zie.map((id) => `<li>${a(id)}</li>`).join("")}</ul>`]);
   const bronnen = BRONNEN.get(l.id.toLowerCase()) || BRONNEN.get(l.name.toLowerCase()) || [];
   if (bronnen.length) secties.push(["bronnen", nt("Bronnen", "Sources"), `<ol class="bron">${bronnen.map((u) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(bronNaam(u))}</a></li>`).join("")}</ol>`]);
@@ -520,9 +522,9 @@ function init(taal: Taal) {
   TYPE = TYPE_TAAL[taal]; SOORT = SOORT_TAAL[taal];
   const alles = taal === "en" ? maakEn() : LNL;
   byId = new Map(alles.map((l) => [l.id, l]));
-  GEBOUWD = new Set(taal === "en" ? alles.filter(heeftEn).map((l) => l.id) : alles.map((l) => l.id));
+  GEBOUWD = new Set(taal === "en" ? alles.filter(heeftEn).map((l) => l.id) : alles.filter((l) => !PAGINALOOS.has(l.id)).map((l) => l.id));
   if (taal === "en") vermeldEn(alles, byId, GEBOUWD);
-  L = taal === "en" ? alles.filter((l) => GEBOUWD.has(l.id)) : alles;
+  L = alles.filter((l) => GEBOUWD.has(l.id));
   ALLES = alles;
   initLinks();
 }
@@ -541,7 +543,7 @@ for (const taal of ["nl", "en"] as Taal[]) {
   Deno.writeTextFileSync(OUT + "index.html", hoofdpagina());
   Deno.writeTextFileSync(OUT + "alle.html", allePagina());
   // zoeklijst: in het Engels ook de lemma's zonder Engelse pagina (vierde waarde 1 = link naar de Nederlandse pagina)
-  Deno.writeTextFileSync(OUT + "zoek.json", JSON.stringify(ALLES.map((l) => taal === "en" && !GEBOUWD.has(l.id) ? [l.id, l.name, label(l), 1] : [l.id, l.name, label(l)])));
+  Deno.writeTextFileSync(OUT + "zoek.json", JSON.stringify(ALLES.filter((l) => !PAGINALOOS.has(l.id)).map((l) => taal === "en" && !GEBOUWD.has(l.id) ? [l.id, l.name, label(l), 1] : [l.id, l.name, label(l)])));
   const HASH: Record<string, string> = {};
   const hash = async (t: string) => [...new Uint8Array(await crypto.subtle.digest("SHA-1", new TextEncoder().encode(t)))].slice(0, 6).map((x) => x.toString(16).padStart(2, "0")).join("");
   for (const l of L) { const h = lemmaPage(l).replace("</body>", bewerkKnop(l) + "</body>"); Deno.writeTextFileSync(OUT + l.id + ".html", h); HASH[l.id + ".html"] = await hash(h); }
