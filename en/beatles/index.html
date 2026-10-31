@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="sor-root" content="."><meta name="sor-lang" content="en"><title>The Beatles · timeline | School of Rock</title><meta name="robots" content="noindex"><link rel="icon" href="../../assets/cassette.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap"><link rel="stylesheet" href="../../assets/site.css"><link rel="stylesheet" href="../../assets/kaart.css"><style>label.k-field:has(#k-path){display:none}.k-year{min-width:4.1em;white-space:nowrap}</style><script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script><script src="../../assets/player.js"></script><script src="../../assets/nav.js"></script><style>.nltag{font-size:.6em;margin-left:3px;opacity:.7;vertical-align:super}</style></head><body class="kaart"><header class="sitenav"><a class="brand" href="../index.html"><img src="../../assets/cassette.png" alt=""><span>School of Rock</span></a><nav aria-label="Main menu"><a href="../mixtape/03.html">Mixtape 3: The Beatles</a><a href="./index.html" aria-current="page">Timeline</a><a href="../kaart.html">Genre map</a></nav></header><div class="k-app">
+  <div class="k-top">
+    <div class="k-title"><h1>The Beatles</h1><p>Timeline 1956–1970 · click a moment · play</p></div>
+    <div class="k-seg" role="group" aria-label="View"><button type="button" data-mode="tree" aria-pressed="true">Family tree</button><button type="button" data-mode="world" aria-pressed="false">World</button><button type="button" data-mode="tech" aria-pressed="false" title="Instruments and music technology above the family tree">Technology</button></div>
+    <label class="k-field">Learning path <select id="k-path"></select></label>
+    <label class="k-field">Search <input id="k-search" list="k-genres" placeholder="Song, album or moment" autocomplete="off"><datalist id="k-genres"></datalist></label>
+    <span class="k-spacer"></span><a class="k-help" href="../../beatles/index.html" hreflang="nl" lang="nl" style="text-decoration:none;display:inline-flex;align-items:center">Nederlands</a>
+    <button class="k-help" type="button">Help</button>
+  </div>
+  <div class="k-fams" aria-label="Lanes"></div>
+  <div class="k-main">
+    <div class="k-stage">
+      <div class="k-yearbig" aria-hidden="true"></div>
+      <div class="k-zoom"><button id="k-zin" type="button" aria-label="Zoom in">+</button><button id="k-zout" type="button" aria-label="Zoom out">−</button><button id="k-fit" type="button" aria-label="Show everything">⤢</button></div>
+    </div>
+    <aside class="k-panel" hidden aria-live="polite"></aside>
+  </div>
+  <div class="k-time">
+    <button class="k-playbtn" id="k-play" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>Play the history</button>
+    <span class="k-year" id="k-yearlbl">now</span>
+    <input id="k-range" type="range" step="1" aria-label="Year">
+    <div class="k-speed" role="group" aria-label="Speed">
+      <span>Speed</span>
+      <button type="button" data-speed="0.25" aria-pressed="false">¼×</button>
+      <button type="button" data-speed="0.5" aria-pressed="false">½×</button>
+      <button type="button" data-speed="1" aria-pressed="true">1×</button>
+      <button type="button" data-speed="2" aria-pressed="false">2×</button>
+      <button type="button" data-speed="4" aria-pressed="false">4×</button>
+    </div>
+    <span style="display:flex;flex-direction:column;gap:7px"><label class="k-sound"><input type="checkbox" id="k-sound"> with sound</label><label class="k-sound"><input type="checkbox" id="k-mee" checked> scroll along</label></span>
+  </div>
+  <div class="k-intro" hidden role="dialog" aria-labelledby="k-intro-h">
+    <p class="kicker">Hidden timeline</p>
+    <h2 id="k-intro-h">The Beatles, month by month</h2>
+    <ol>
+      <li><b>Click a moment</b>: a single, an album, a gig, a studio trick or an event. Read what happened and listen along.</li>
+      <li><b>The lines</b> show what grew out of what: from Elvis and Little Richard to the Quarrymen, from Rubber Soul to Revolver, from Pet Sounds to Sgt. Pepper.</li>
+      <li><b>Family tree or world</b>: everything along the timeline, with the years 1956 to 1970 stretched wide, or at the place where it happened, from Liverpool and Hamburg to Rishikesh.</li>
+      <li><b>Play the history</b> and watch the Beatles form, grow and break up. Turn on the sound to listen along.</li>
+    </ol>
+    <button class="btn solid" type="button" data-close-intro>Start</button>
+  </div>
+</div><script src="assets/kaart.js"></script></body></html>

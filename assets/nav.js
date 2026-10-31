@@ -142,7 +142,9 @@
     const hidden = /\/(film|jazz|wereld|beatles|jeugd|jaren80|cloud|blackplanet|vrouwen|rockalbum|nederpop|hitfabriek)\//.test(location.pathname);
     const CASSETTE = { '1': '/wereld/index.html', '2': '/jeugd/index.html', '3': '/beatles/index.html', '5': '/jazz/index.html', '7': '/jaren80/index.html', '13': '/cloud/index.html', '6': '/blackplanet/index.html', '10': '/vrouwen/index.html', '4': '/rockalbum/index.html', '11': '/nederpop/index.html', '12': '/hitfabriek/index.html' };
     let target;
-    if (b.classList.contains('cassette')) target = new URL(root + CASSETTE[document.body.dataset.mixtape], location.href);
+    // Engelse pagina's gaan naar de Engelse tijdlijn (en/<map>/); mixtape 1 (wereld) en 5 (jazz) hebben die nog niet
+    const enPagina = (document.querySelector('meta[name="sor-lang"]') || {}).content === 'en' && !['1', '5'].includes(document.body.dataset.mixtape);
+    if (b.classList.contains('cassette')) target = new URL(root + (enPagina ? '/en' : '') + CASSETTE[document.body.dataset.mixtape], location.href);
     else if (hidden) target = new URL(location.pathname.replace(/\/(film|jazz|wereld|beatles|jeugd|jaren80|cloud|blackplanet|vrouwen|rockalbum|nederpop|hitfabriek)\/.*$/, '/index.html'), location.href);
     else target = new URL(root + '/film/index.html', location.href);
     setTimeout(() => go(target.href, true), 500);

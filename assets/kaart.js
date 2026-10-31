@@ -6,7 +6,7 @@
   const EN = (document.querySelector('meta[name="sor-lang"]') || {}).content === 'en', SFX = EN ? '-en' : '', RB = '';
   const UI = { 'Alle genres': 'All genres', 'genre': 'genre', 'techniek': 'technology', 'Genrekaart': 'Genre map', 'Sluit': 'Close', 'Techniek': 'Technology', 'Luister': 'Listen', 'Speel': 'Play', 'Luister op Apple Music': 'Listen on Apple Music',
     'Maakte mogelijk': 'Made possible', 'Speelde ook een rol bij': 'Also played a part in', 'Bouwt voort op': 'Builds on', 'Leidde tot': 'Led to', 'Vorige': 'Previous', 'Volgende': 'Next', 'Leerpad': 'Learning path', 'bloei': 'peak',
-    'Techniek die dit mogelijk maakte': 'Technology that made this possible', 'Techniek die er ook een rol in speelde': 'Technology that also played a part', 'Komt voort uit': 'Grew out of', 'Lees in de reader': 'Read in the reader', 'nu': 'now', 'Pauze': 'Pause', 'in het Nederlands': 'in Dutch' };
+    'Techniek die dit mogelijk maakte': 'Technology that made this possible', 'Techniek die er ook een rol in speelde': 'Technology that also played a part', 'Komt voort uit': 'Grew out of', 'Lees in de reader': 'Read in the reader', 'nu': 'now', 'Pauze': 'Pause', 'Verder': 'Resume', 'in het Nederlands': 'in Dutch' };
   const tr = s => (EN && UI[s]) || s;
   const [data, mixtapes, order, tech, world] = await Promise.all([
     SOR.load('data/genres' + SFX + '.json'),
