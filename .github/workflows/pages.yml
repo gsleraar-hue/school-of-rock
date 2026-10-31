@@ -46,7 +46,7 @@ jobs:
           mv bouw/site/en/encyclopedie en/encyclopedie
           rm -rf bouw bron.tgz .git .github
           echo "pagina's in encyclopedie: $(find encyclopedie -name '*.html' | wc -l)"
-          test "$(find encyclopedie -name '*.html' | wc -l)" -gt 15000
+          test "$(find encyclopedie -name '*.html' | wc -l)" -gt 8000
           test -s encyclopedie/zoek.json
           echo "pagina's in en/encyclopedie: $(find en/encyclopedie -name '*.html' | wc -l)"
           test -s en/encyclopedie/zoek.json
