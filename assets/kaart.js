@@ -642,7 +642,7 @@
   let seen = false; try { seen = localStorage.getItem('sor-kaart-intro') === '1'; } catch (e) {}
   if (!seen && !location.hash && !location.search.includes('nointro')) intro.hidden = false;
   document.querySelectorAll('[data-close-intro]').forEach(b => b.addEventListener('click', () => { intro.hidden = true; try { localStorage.setItem('sor-kaart-intro', '1'); } catch (e) {} }));
-  $('.k-help').addEventListener('click', () => { intro.hidden = false; });
+  $('button.k-help:not([data-k-list]):not(.k-list-close)').addEventListener('click', () => { intro.hidden = false; });
 
   // ---------- Start ----------
   function resizeStage() { const w = stage.clientWidth, h = stage.clientHeight; if (w !== W || h !== H) { W = w; H = h; layoutWorld(); drawBack(); place(false); } }

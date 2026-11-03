@@ -71,6 +71,9 @@
     document.title = doc.title;
     // meta-tags (o.a. sor-root, dat per map verschilt)
     doc.head.querySelectorAll('meta[name]').forEach(m => { const cur = document.head.querySelector('meta[name="' + m.name + '"]'); if (cur) cur.content = m.content; else document.head.appendChild(m.cloneNode()); });
+    // en wat de nieuwe pagina niet heeft weg (anders blijft sor-lang=en van een Engelse pagina hangen op een Nederlandse)
+    document.head.querySelectorAll('meta[name]').forEach(m => { if (!doc.head.querySelector('meta[name="' + m.name + '"]')) m.remove(); });
+    document.documentElement.lang = doc.documentElement.lang || 'nl';
     // stijlen: wat de nieuwe pagina niet heeft weg, wat nieuw is erbij (en wachten tot het geladen is)
     const key = el => el.tagName === 'LINK' ? 'L:' + new URL(el.getAttribute('href'), location.href).href : 'S:' + el.textContent;
     const want = [...doc.head.querySelectorAll('link[rel="stylesheet"], style')];
