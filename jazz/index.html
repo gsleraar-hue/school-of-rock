@@ -9,14 +9,18 @@
   .hero .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 60%; background: linear-gradient(to top, rgba(28,27,25,.62), rgba(28,27,25,0)); }
   .hero .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 14px; background: var(--yellow); z-index: 1; }
   .hero .top-kicker { position: absolute; top: 28px; left: max(36px, calc((100vw - 1180px) / 2 + 20px)); font: 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--yellow); margin: 0; z-index: 1; }
-  .hero .cassette { position: absolute; top: 18px; right: 22px; width: clamp(80px, 10vw, 128px); height: auto; z-index: 1; }
+  .hero .lang { position: absolute; top: 18px; right: 22px; z-index: 2; display: flex; border: 1px solid rgba(255,255,255,.6); border-radius: 999px; overflow: hidden; font: 700 12px/1 var(--mono); letter-spacing: .08em; }
+  .hero .lang a, .hero .lang span { padding: 7px 12px; color: var(--white); text-decoration: none; }
+  .hero .lang a:hover { background: rgba(255,255,255,.16); }
+  .hero .lang [aria-current] { background: var(--yellow); color: var(--ink); }
+  .hero .cassette { position: absolute; top: 62px; right: 22px; width: clamp(80px, 10vw, 128px); height: auto; z-index: 1; }
   .hero .wrap { position: relative; z-index: 1; width: 100%; }
   .hero h1 { font: 700 clamp(56px, 11vw, 132px)/.9 var(--display); margin: 0; letter-spacing: -.01em; text-wrap: balance; }
   .hero .sub { font: 500 clamp(20px, 3vw, 28px)/1.2 var(--display); color: var(--yellow); margin: 18px 0 0; }
   .hero .by { font: 13px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; margin: 22px 0 0; color: #FFE9E7; }
   .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
   .hero .btn { color: var(--white); }
-  @media (max-width: 820px) { .hero .mosaic { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, 1fr); } .hero .mosaic i { grid-column: auto !important; grid-row: auto !important; } .hero .mosaic i:nth-child(1) { grid-column: span 2 !important; grid-row: span 2 !important; } .hero .mosaic i:nth-child(n+9) { display: none; } .hero { min-height: 0; padding-top: 110px; } .hero .top-kicker { left: 30px; max-width: 55%; } }
+  @media (max-width: 820px) { .hero .mosaic { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, 1fr); } .hero .mosaic i { grid-column: auto !important; grid-row: auto !important; } .hero .mosaic i:nth-child(1) { grid-column: span 2 !important; grid-row: span 2 !important; } .hero .mosaic i:nth-child(n+9) { display: none; } .hero { min-height: 0; padding-top: 150px; } .hero .top-kicker { left: 30px; max-width: 55%; } }
   .ways { padding: 64px 0 8px; }
   .ways .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
   .way { display: grid; gap: 10px; align-content: start; padding: 24px; background: var(--white); border-radius: 4px; text-decoration: none; border-top: 5px solid var(--ink); min-height: 220px; }
@@ -52,8 +56,10 @@
   .mt .body { padding: 16px 18px 18px; display: grid; gap: 6px; }
   .mt .body small { font: 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--red); }
   .mt .body b { font: 600 22px/1.1 var(--display); }
+  .ways .lede + .lede { margin-top: 12px; }
   .mt .body p { margin: 0; font-size: 14px; line-height: 1.45; color: var(--ink-soft); }
 </style><style>
+  .pods { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
   :root { --red: #B5642C; --yellow: #D9894A; }
   .hero .wash { background-color: rgba(18,17,16,.72); }
   .hero .mosaic i, .mt .ph { filter: grayscale(1) contrast(1.08); }
@@ -69,7 +75,7 @@
   .mt.soon { opacity: .55; }
   @media (max-width: 900px) { .shelf.four { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 560px) { .shelf.four { grid-template-columns: 1fr; } }
-</style><script src="../assets/player.js"></script><script src="../assets/nav.js"></script></head><body><header class="sitenav"><a class="brand" href="./index.html"><img src="./assets/icon.svg" alt=""><span>After Hours</span></a><nav aria-label="Hoofdmenu"><a href="./index.html" aria-current="page">Sessies</a><a href="./kaart.html">Kaart</a><a href="../encyclopedie/index.html">Encyclopedie</a><a href="./begrippen.html">Begrippen</a><a href="./pdf/afterhours-reader.pdf">Reader (pdf)</a></nav></header><main><section class="hero">
+</style><script src="../assets/player.js"></script><script src="../assets/nav.js"></script></head><body><header class="sitenav"><a class="brand" href="./index.html"><img src="./assets/icon.svg" alt=""><span>After Hours</span></a><nav aria-label="Hoofdmenu"><a href="./index.html" aria-current="page">Sessies</a><a href="./kaart.html">Kaart</a><a href="./begrippen.html">Begrippen</a><a href="./pdf/afterhours-reader.pdf">Reader (pdf)</a></nav></header><main><section class="hero">
   <div class="mosaic" aria-hidden="true"><i style="background-image:url('https://sorock.nl/jazz/img/5bc4863dc591e8.jpg')"></i><i style="background-image:url('https://sorock.nl/jazz/img/ac91697bbe06d8.jpg')"></i><i style="background-image:url('https://sorock.nl/jazz/img/2ff0af1e586f6a.jpg')"></i><i style="background-image:url('https://sorock.nl/jazz/img/644c12e9c32030.jpg')"></i></div>
   <div class="wash"></div><div class="shade"></div><div class="bar"></div>
   <p class="top-kicker">Jazz · een verborgen kant van School of Rock</p>
@@ -102,4 +108,5 @@
 <a class="mt" href="sessie/02.html"><div class="ph" style="background-image:url('https://sorock.nl/jazz/img/ac91697bbe06d8.jpg')"><span class="num">02</span></div><div class="body"><small>Sessie 2</small><b>Na middernacht</b><p>Moderne jazz: van de jamsessies in Harlem via bebop en cool naar hard bop en Kind of Blue, 1940–1960.</p></div></a>
 <a class="mt" href="sessie/03.html"><div class="ph" style="background-image:url('https://sorock.nl/jazz/img/2ff0af1e586f6a.jpg')"><span class="num">03</span></div><div class="body"><small>Sessie 3</small><b>Vrij spel</b><p>Free jazz, spirituele jazz, fusion en de Europese improvisatie: jazz zonder vaste regels, 1959–1985.</p></div></a>
 <a class="mt" href="sessie/04.html"><div class="ph" style="background-image:url('https://sorock.nl/jazz/img/644c12e9c32030.jpg')"><span class="num">04</span></div><div class="body"><small>Sessie 4</small><b>Overal jazz</b><p>Van de neotraditionalisten via acid jazz en jazzrap naar de nieuwe scenes in Londen, Los Angeles en Nederland, 1980–nu.</p></div></a></div>
+  <p class="group-label">Luister als podcast</p><div class="pods"><a class="btn dark" href="https://open.spotify.com/episode/5P1MjQUGh7hvfRWGt52Hn0" target="_blank" rel="noopener">Sessie 1: Uit New Orleans · Podcast in Spotify</a><a class="btn dark" href="https://open.spotify.com/episode/1xe9aj482QtnbaZnX8EsG2" target="_blank" rel="noopener">Sessie 2: Na middernacht · Podcast in Spotify</a><a class="btn dark" href="https://open.spotify.com/episode/3cmVHVHHgg8Nf6HYihcYxP" target="_blank" rel="noopener">Sessie 3: Vrij spel · Podcast in Spotify</a><a class="btn dark" href="https://open.spotify.com/episode/4aFXmcmZ1FMYMvSlQPZDul" target="_blank" rel="noopener">Sessie 4: Overal jazz · Podcast in Spotify</a></div>
 </section></main><footer class="sitefoot"><div class="wrap"><p>After Hours · Jazz, een verborgen kant van <a href="/index.html">School of Rock</a> · Jan-Wolter Smit · ArtEZ University of the Arts</p><p><a href="/index.html">← Terug naar School of Rock</a></p></div></footer></body></html>
