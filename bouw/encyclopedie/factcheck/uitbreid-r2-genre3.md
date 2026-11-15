@@ -1,0 +1,27 @@
+# Factcheck uitbreid r2-genre3 (25 genres)
+Bronnen per genre (Wikipedia-pagina's via WebFetch, aangevuld met WebSearch):
+- ecm-geluid: https://en.wikipedia.org/wiki/ECM_Records (1969 München, Eicher/Egger/Scheffner, Talent Studios+Kongshaug "many", Coda 1971, Free at Last, New Series 1984/Tabula Rasa, Officium 1994). Köln Concert 24-1-1975 en verkoop: overgenomen uit bestaande SoR-tekst, niet bevestigd.
+- electroclash: https://en.wikipedia.org/wiki/Electroclash (DJ Hell, Gigolo, Munich Machine 1998, 1982/Frank Sinatra 1998, I-F 1998, Tiga 2001, Larry Tee, festival okt 2001, 2002, tours 2003-04, Ladytron wees etiket af). Williamsburg als locatie niet bevestigd, weggelaten.
+- elektronische studio/musique concrete: https://en.wikipedia.org/wiki/Musique_concr%C3%A8te (5-10-1948, GRM 1958, Symphonie 1950-51); https://en.wikipedia.org/wiki/Studio_for_Electronic_Music_(WDR) (besluit 1951, in gebruik ~1953, Stockhausen vanaf 1953, Gesang 1955-56 met kinderstem).
+- emo: https://en.wikipedia.org/wiki/Emo (Rites of Spring 1983, Embrace, Dischord, Revolution Summer 1985, Diary 1994, Jawbreaker, Get Up Kids 1999, Bleed American 2001, Dashboard Unplugged 2002).
+- europese arthouse: https://en.wikipedia.org/wiki/Gabriel_Yared , https://en.wikipedia.org/wiki/Zbigniew_Preisner , https://en.wikipedia.org/wiki/Eleni_Karaindrou (acht films 1984-2008; Eternity and a Day ECM 1998).
+- europese kunstmuziek: algemene kennis + tracks; geen cijfers.
+- europese vrije improvisatie: https://en.wikipedia.org/wiki/Free_improvisation (Bailey "zonder geheugen", niet-idiomatisch); jaartallen/labels uit bestaande SoR-tekst.
+- fado: https://en.wikipedia.org/wiki/Fado (jaren 1820, wijken, Severa 1820-1846, UNESCO 27-11-2011, Mariza/do Carmo); Les amants du Tage 1955 Verneuil, Amália speelde zichzelf: WebSearch (filmsdefrance.com, museudofado.pt).
+- fantasy: https://en.wikipedia.org/wiki/The_Lord_of_the_Rings_(film_series) (85-110 motieven, LPO, London Voices, Salo/Walsh/Boyens); https://en.wikipedia.org/wiki/Harry_Potter_and_the_Philosopher%27s_Stone_(soundtrack) (thema in alle films, Doyle/Hooper/Desplat). Oscars Shore en celesta/Powell-instrumenten uit bestaande SoR-tekst.
+- film d'art: https://en.wikipedia.org/wiki/Film_score (Saint-Saens 1908); verder bestaande SoR-tekst.
+- bollywood: https://en.wikipedia.org/wiki/Hindi_cinema (Alam Ara 1931); Chaiyya Chaiyya 1998 Dil Se, BBC-peiling 2002 plek 9: WebSearch.
+- frans poetisch realisme: https://en.wikipedia.org/wiki/Maurice_Jaubert (1900 Nice, films, dood 19-6-1940, Truffaut), https://en.wikipedia.org/wiki/Georges_Auric (Les Six 1920 Collet, Cocteau, Moulin Rouge 1952).
+- gabber: https://en.wikipedia.org/wiki/Gabber (tempo 140-190, chaver, T99 1991, Thunderdome 40.000/20 jaar/2017, kleding, Mokum, Hardcore Never Dies 2023). 1992 Thunderdome-start en happy-hardcore-titels uit SoR-tekst.
+- gagaku: https://en.wikipedia.org/wiki/Gagaku (701, Heian, kangen/bugaku/togaku/komagaku, instrumenten, Takemitsu). Zeventien pijpjes, UNESCO 2009, "oudste": uit SoR-tekst.
+- garagerock: https://en.wikipedia.org/wiki/Garage_rock (Louie Louie/Berry, Sonics/Psycho B-kant, ? and the Mysterians uit Saginaw (niet Bay City), Nuggets 1972 Lenny Kaye, Standells, Count Five, Trashmen, Seeds, regio's, term jaren 80).
+- garagerock-revival: https://en.wikipedia.org/wiki/Garage_rock_revival (alleen lead bevestigd: post-punk revival, commercieel succes); albums/jaren uit SoR-tekst.
+- giallo: https://en.wikipedia.org/wiki/Giallo (Mondadori 1929, Bava 1963/1964, Argento 1970); https://en.wikipedia.org/wiki/Goblin_(band) (Gaslini-score herschreven, Dawn of the Dead 1978 "The Goblins"). Morricone/Suspiria-instrumenten uit SoR-tekst.
+- glam metal: https://en.wikipedia.org/wiki/Glam_metal (Sunset Strip, Slippery When Wet 1986 8 wk #1 >15 mln, Hysteria 1987 zeven hits, Nevermind, hair metal begin jaren 90).
+- go-go: https://en.wikipedia.org/wiki/Go-go (Soul Searchers, Bustin' Loose feb-mrt 1979, junior congas, Da Butt/School Daze, Junkyard Band 1980, 2020 officiele muziek).
+- goa trance: https://en.wikipedia.org/wiki/Goa_trance (Bamboo Forest Anjuna, Goa Gil, 130-150 bpm, TB-303, subgenres).
+- golden age hiphop: https://en.wikipedia.org/wiki/Golden_age_hip_hop (1986-1996 volgens bronnen, albums, Native Tongues, SP-1200/MPC60, Grand Upright 1991).
+- golden age Hollywood: https://en.wikipedia.org/wiki/Film_score (King Kong 1933, Wagner); Korngold Oscar Robin Hood 1938: WebSearch (Oscar-lijsten).
+- gouden eeuw Hindi: https://en.wikipedia.org/wiki/Hindi_cinema (Alam Ara, Awaara/Shree 420, Pyaasa/Kaagaz Ke Phool, Mughal-e-Azam K. Asif, gouden eeuw eind jaren 40-begin 60).
+- gqom: https://en.wikipedia.org/wiki/Gqom (vroege jaren 2010, Rudeboyz/Griffit Vigo/Naked Boyz, klanknabootsing, Omunye/Smollett, DJ Lag My Power 2019, labels).
+- grime: https://en.wikipedia.org/wiki/Grime_(music_genre) (140 bpm, Rinse FM/Deja Vu, Eskimo uitgebracht 2002, Wot Do U Call It 2004, Boy in da Corner 2003, Skepta 2016, Gang Signs & Prayer 2017 eerste grimealbum #1, Form 696 2005).
