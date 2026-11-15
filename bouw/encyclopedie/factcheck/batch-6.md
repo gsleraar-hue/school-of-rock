@@ -174,7 +174,7 @@
 # Christian McBride Big Band
 - Achttienkoppig ensemble; The Good Feeling (2011) eerste bigbandalbum; Grammy beste grote jazzensemble — https://en.wikipedia.org/wiki/Christian_McBride
 - Bringin' It (2017, Mack Avenue), Grammy beste large jazz ensemble album 2018 — https://www.grammy.com/awards/categories/best-large-jazz-ensemble-album/2018/ ; https://arkivmusic.com/products/bringin-it-52469
-- Shake 'n Blake opent The Good Feeling, geschreven voor Ron Blake — https://www.ccd.pl/the-good-feeling-p3759/
+- Shake 'n Blake opent The Good Feeling, geschreven voor Ron Blake
 - Gettin' To It op Bringin' It — https://www.highresaudio.com/album/view/646jd5/christian-mcbride-big-band-bringin-it
 - Jazz Night in America, Newport 2016-2025; Gettin' to It debuutalbum 1995 — https://en.wikipedia.org/wiki/Christian_McBride
 

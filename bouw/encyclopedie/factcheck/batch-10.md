@@ -55,7 +55,7 @@
 
 # Sonny Stitt
 - Boston 1924, Saginaw, Parker 1943, Miles 1960, Tune-Up! 1972, overleden juli 1982 Washington — https://en.wikipedia.org/wiki/Sonny_Stitt
-- Stitt Plays Bird met Ko-Ko, Au Privave — https://wikimili.com/en/Stitt_Plays_Bird ; https://www.jazzmusicarchives.com/album/sonny-stitt/stitt-plays-bird
+- Stitt Plays Bird met Ko-Ko, Au Privave — https://www.jazzmusicarchives.com/album/sonny-stitt/stitt-plays-bird
 
 # Stanley Turrentine
 - Pittsburgh, 1934-2000, Fulson, Bostic 1953, Roach 1959, Blue Note 1960, Scott 1960-71, CTI Sugar 1970, Grammy-nominaties, Da Costa 1984 — https://en.wikipedia.org/wiki/Stanley_Turrentine
