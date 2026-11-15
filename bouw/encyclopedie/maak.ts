@@ -151,7 +151,7 @@ if (exists(FC)) for (const f of Deno.readDirSync(FC)) {
   for (const regel of Deno.readTextFileSync(FC + f.name).split(/\r?\n/)) {
     const k = regel.match(/^#\s+(.+)$/); if (k) { kop = k[1].trim().toLowerCase(); continue; }
     if (!kop || /^(twijfel|mogelijke fout|niet gevonden)/i.test(kop)) continue;
-    for (const u of regel.match(/https?:\/\/[^\s;,)]+/g) || []) { const l = BRONNEN.get(kop) || BRONNEN.set(kop, []).get(kop)!; if (!l.includes(u)) l.push(u); }
+    for (const u0 of regel.match(/https?:\/\/(?:[^\s;,()]|\([^\s()]*\)|,(?=\S))+/g) || []) { const u = u0.replace(/[.:]+$/, ""); const l = BRONNEN.get(kop) || BRONNEN.set(kop, []).get(kop)!; if (!l.includes(u)) l.push(u); }
   }
 }
 const bronNaam = (u: string) => {
@@ -197,6 +197,8 @@ function wikiTekst(l: any) {
     return { text, listen: l.listen ? linkify(l.listen, l.id, gezien) : "" };
   } finally { MODUS = "html"; }
 }
+// Een album is ook een album als het een tekst heeft (dan staat de vlag album niet meer aan, maar is er wel een tracklijst)
+const ISALB = (l: any) => l.type === "werk" && (l.album || l.soort === "album" || !!l.tracklijst);
 const reEsc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 function initLinks() {
   exact = new Map(); klein = new Map(); NAAMIDX = new Map();
@@ -204,7 +206,7 @@ function initLinks() {
   for (const l of L) {
     const n = l.name.trim();
     if (l.type === "artiest" && VEILIG_DUBBEL.has(n) && !exact.has(n)) { exact.set(n, l.id); continue; }
-    if (n.length < 4 || DUBBEL.has(n.toLowerCase()) || l.album) continue;
+    if (n.length < 4 || DUBBEL.has(n.toLowerCase()) || ISALB(l)) continue;
     if (l.type === "artiest" || l.type === "werk") { if (!exact.has(n)) exact.set(n, l.id); }
     else if (n.length >= 5 && !klein.has(n.toLowerCase())) klein.set(n.toLowerCase(), l.id);
   }
@@ -214,7 +216,7 @@ function initLinks() {
   // of in een alinea waarin de artiest zelf genoemd wordt. Zo wordt "Help!" of "Thriller" niet overal een link.
   albumsVan = new Map(); // artiest-id -> titel -> album-id
   for (const l of L) {
-    const art = l.album && l.links?.artiest?.[0];
+    const art = ISALB(l) && l.links?.artiest?.[0];
     const n = l.name.trim();
     if (!art || PAGINALOOS.has(l.id) || (n.length < 4 && !/s/.test(n)) || n === byId.get(art)?.name) continue;
     (albumsVan.get(art) || albumsVan.set(art, new Map()).get(art)!).set(n, l.id);
